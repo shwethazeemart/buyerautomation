@@ -3,6 +3,7 @@ package stepDefinitions;
 import cucumber.TestContext;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
+import io.cucumber.java.en.Then;
 import pageObjects.LogInPage;
 
 public class LogInPageSteps {
@@ -20,7 +21,7 @@ public class LogInPageSteps {
         logInPage.navigateTo_LogInPage();
     }
 
-    @Given("User enters username {string}")
+    @When("User enters username {string}")
     public void user_enters_username(String loginEmail) {
         logInPage.enter_LoginEmail(loginEmail);
     }
