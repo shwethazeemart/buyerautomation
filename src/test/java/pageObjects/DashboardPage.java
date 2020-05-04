@@ -7,10 +7,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class OrdersPage {
+public class DashboardPage {
     private final WebDriver driver;
 
-    public OrdersPage(WebDriver driver) {
+    public DashboardPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }

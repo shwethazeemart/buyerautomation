@@ -3,13 +3,13 @@ package managers;
 import org.openqa.selenium.WebDriver;
 
 import pageObjects.LogInPage;
-import pageObjects.OrdersPage;
+import pageObjects.DashboardPage;
 
 public class PageObjectManager {
     private WebDriver driver;
 
     private LogInPage logInPage;
-    private OrdersPage ordersPage;
+    private DashboardPage dashboardPage;
 
     public PageObjectManager(WebDriver driver) {
         this.driver = driver;
@@ -19,7 +19,7 @@ public class PageObjectManager {
         return (logInPage == null) ? logInPage = new LogInPage(driver) : logInPage;
     }
 
-    public OrdersPage getOrdersPage() {
-        return (ordersPage == null) ? ordersPage = new OrdersPage(driver) : ordersPage;
+    public DashboardPage getDashboardPage() {
+        return (dashboardPage == null) ? dashboardPage = new DashboardPage(driver) : dashboardPage;
     }
 }
