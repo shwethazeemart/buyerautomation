@@ -51,7 +51,9 @@ public class WebDriverManager {
         case CHROME:
             System.setProperty(CHROME_DRIVER_PROPERTY,
                     FileReaderManager.getInstance().getConfigReader().getDriverPath());
+            
             driver = new ChromeDriver();
+      
             break;
         case INTERNETEXPLORER:
             driver = new InternetExplorerDriver();
