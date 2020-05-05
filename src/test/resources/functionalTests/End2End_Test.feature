@@ -1,5 +1,6 @@
 Feature: Automated End2End Tests 
-	Description: The purpose of this feature is to test End 2 end integration of buyer hub
+
+	Description: The purpose of this feature is to test End 2 end integraation
 
 Scenario Outline: Customer Success fully logins to buyer hub 
 	Given User is on Login Page 
@@ -26,13 +27,13 @@ Scenario Outline: Customer enters wrong password to buyer hub
 		
 Scenario Outline: Customer wants to reset password 
 	Given User is on Login Page 
-	When User clicks on "I've forgotten my password" 
+	When User clicks on "I have forgotten my password" 
 	Then User shown with Reset password screen "Validate Email | Buyer Hub" 
-	When User enters invalid email "<emails>" 
+	When User enters invalid email"<email>" 
 	Then User shown with error message "Must be email." 
-	And User enters valid but unregisterd email "<email>" 
+	And User enters valid but unregistered email"<email>" 
 	When User clicks on Send request 
-	Then User shown with error message  "Email not valid" 
+	Then User shown with errror message "email not valid" 
 	And User enters valid registered email "<email>" 
 	When User clickes on Send Request 
 	Then User shown with password reset email set screen 
@@ -42,5 +43,7 @@ Scenario Outline: Customer wants to reset password
 		| guindyusergmail.com |
 		| user@aacbd.com      |
 		| guindyusergmail.com |
+		
+		
 		
 		

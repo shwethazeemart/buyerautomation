@@ -27,6 +27,15 @@ public class LogInPage {
 	@FindBy(xpath = "//div[@class='form-group']//button[text()='Log in']")
 	private WebElement btn_loginEmail;
 
+	@FindBy(xpath = "//a[@href='/validate-email?userType=BUYER']")
+	private WebElement btn_forgotten;
+
+	@FindBy(xpath = "//input[@formcontrolname='name']")
+	private WebElement Emailaddress;
+
+	@FindBy(xpath = "//app-validate-email[@class='ng-star-inserted']//div[1]")
+	private WebElement btn_Sendreq;
+
 	public String getPageTitle() {
 		return driver.getTitle();
 	}
@@ -49,8 +58,47 @@ public class LogInPage {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 		}
+
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	public void click_ForgottenBtn() {
+		btn_forgotten.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	public void enter_Emailaddress(String loginEmailaddress) {
+		Emailaddress.sendKeys(loginEmailaddress);
+	}
+
+	public void enter_invalidEmailaddress(String logininvalidEmailaddress) {
+		Emailaddress.sendKeys(logininvalidEmailaddress);
+	}
+
+	public void enter_validbutunregisteredemail(String loginunregisteredEmailaddress) {
+		Emailaddress.sendKeys(loginunregisteredEmailaddress);
+	}
+
+	public void click_SendrequestBtn() {
+		btn_Sendreq.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	public void enter_validregisteredemail(String loginvalidregisteredEmailaddress) {
+		Emailaddress.sendKeys(loginvalidregisteredEmailaddress);
 	}
 
 }
