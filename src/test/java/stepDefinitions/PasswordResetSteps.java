@@ -1,5 +1,7 @@
 package stepDefinitions;
 
+import org.hamcrest.MatcherAssert;
+
 import cucumber.TestContext;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -22,25 +24,29 @@ public class PasswordResetSteps {
     }
 
     @Then("User shown with Reset password screen {string}")
-    public void user_shown_with_Reset_password_screen(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void user_shown_with_Reset_password_screen(String passwordResetScreenTitle) {
+
+        String pageTitle = testContext.getWebDriverManager().getDriver().getTitle();
+        System.out.println("current page title on testing:" + pageTitle);
+        System.out.println("Assertion url : " + passwordResetScreenTitle);
+
+        MatcherAssert.assertThat("Should land on dashboard page", passwordResetScreenTitle.equals(pageTitle));
     }
 
     @When("User enters invalid email for password reset {string}")
-    public void user_enters_invalid_email_for_password_reset(String string) {
+    public void user_enters_invalid_email_for_password_reset(String invalidEmail) {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
 
     @Then("User shown with valid email error message {string}")
-    public void user_shown_with_valid_email_error_message(String string) {
+    public void user_shown_with_valid_email_error_message(String errorMessage) {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
 
     @Then("User enters valid but unregisterd email for password reset {string}")
-    public void user_enters_valid_but_unregisterd_email_for_password_reset(String string) {
+    public void user_enters_valid_but_unregisterd_email_for_password_reset(String validUnregisteredEmail) {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
@@ -52,13 +58,13 @@ public class PasswordResetSteps {
     }
 
     @Then("User shown with non registered email error message {string}")
-    public void user_shown_with_non_registered_email_error_message(String string) {
+    public void user_shown_with_non_registered_email_error_message(String errorMessage) {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
 
     @Then("User enters valid registered email {string}")
-    public void user_enters_valid_registered_email(String string) {
+    public void user_enters_valid_registered_email(String validEmail) {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
     }
