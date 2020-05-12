@@ -8,7 +8,12 @@ import java.util.Properties;
 
 import enums.DriverType;
 import enums.EnvironmentType;
-
+/**
+ * 
+ * @author AjanthanSivalingarajah
+ * @since 2020/05/12
+ *
+ */
 public class ConfigFileReader {
     private Properties properties;
 

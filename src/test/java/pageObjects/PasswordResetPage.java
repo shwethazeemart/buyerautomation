@@ -13,26 +13,26 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  * @since 2020/05/12
  *
  */
-public class DashboardPage {
+public class PasswordResetPage {
     private final WebDriver driver;
 
-    public DashboardPage(WebDriver driver) {
+    public PasswordResetPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(id = "filterOrder")
-    private WebElement txtbx_filterOrder;
+    @FindBy(xpath = "//input[@formcontrolname='name']")
+    private WebElement txtbx_emailaddress;
 
-    @FindBy(xpath = "//button[text()=' Search ']")
-    private WebElement btn_search;
+    @FindBy(xpath = "//app-validate-email[@class='ng-star-inserted']//div[1]")
+    private WebElement btn_Sendreq;
 
-    public void enter_Search_OrderId(String searchText) {
-        txtbx_filterOrder.sendKeys(searchText);
+    public void enter_EmailAddress(String email) {
+        txtbx_emailaddress.sendKeys(email);
     }
 
-    public void click_SearchBtn() {
-        btn_search.click();
+    public void click_SendRequestBtn() {
+        btn_Sendreq.click();
         try {
             Thread.sleep(5000);
         } catch (InterruptedException e) {
