@@ -58,9 +58,6 @@ public class LogInPageSteps {
     public void user_shown_with_invalid_userName_password_error_message(String expectedPagetitle) {
         String pagetitle = logInPage.getPageTitle();
         System.out.println("Login failure page title: " + pagetitle);
-        // Commenting this because need to find the way to check pop up toster
-        // messages
-        // logInPage.isTosterMessageFound(expectedPagetitle);
     }
 
     @When("User clicks on I've forgotten my password link")
