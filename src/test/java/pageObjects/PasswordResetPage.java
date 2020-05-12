@@ -14,31 +14,33 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  *
  */
 public class PasswordResetPage {
-    private final WebDriver driver;
+	private final WebDriver driver;
 
-    public PasswordResetPage(WebDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
-    }
+	public PasswordResetPage(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
 
-    @FindBy(xpath = "//input[@formcontrolname='name']")
-    private WebElement txtbx_emailaddress;
+	@FindBy(xpath = "//input[@placeholder='Email address']")
+	private WebElement txtbx_emailaddress;
 
-    @FindBy(xpath = "//app-validate-email[@class='ng-star-inserted']//div[1]")
-    private WebElement btn_Sendreq;
+	@FindBy(xpath = "html[1]/body[1]/app-root[1]/app-validate-email[1]/zm-fullpagecontent[1]/zm-body[1]/div[1]")
+	private WebElement btn_Sendreq;
 
-    public void enter_EmailAddress(String email) {
-        txtbx_emailaddress.sendKeys(email);
-    }
+	public void enter_EmailAddress(String email) {
+		txtbx_emailaddress.clear();
+		txtbx_emailaddress.sendKeys(email);
 
-    public void click_SendRequestBtn() {
-        btn_Sendreq.click();
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-        }
-        new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
-                .executeScript("return document.readyState").equals("complete"));
-    }
+	}
+
+	public void click_SendRequestBtn() {
+		btn_Sendreq.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
 
 }

@@ -28,7 +28,6 @@ Feature: Login Action of Buyer Module
     When User clicks on I've forgotten my password link
     Then User shown with Reset password screen "Validate Email | Buyer Hub"
     When User enters invalid email for password reset "<invalidEmail>"
-    When User clicks on Send request for password reset
     Then User shown with valid email error message "Must be email."
     And User enters valid but unregisterd email for password reset "<noregisteredEmail>"
     When User clicks on Send request for password reset
@@ -37,6 +36,6 @@ Feature: Login Action of Buyer Module
     When User clicks on Send request for password reset
     Then User shown with password reset email sent screen
 
-    Examples:  
+    Examples: 
       | invalidEmail        | noregisteredEmail | regesteredEmail      |
       | guindyusergmail.com | user@aacbd.com    | guindyuser@gmail.com |

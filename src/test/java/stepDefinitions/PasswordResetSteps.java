@@ -35,44 +35,39 @@ public class PasswordResetSteps {
 
     @When("User enters invalid email for password reset {string}")
     public void user_enters_invalid_email_for_password_reset(String invalidEmail) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+       passwordResetPage.enter_EmailAddress(invalidEmail);
+      
     }
 
     @Then("User shown with valid email error message {string}")
     public void user_shown_with_valid_email_error_message(String errorMessage) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+       passwordResetPage.enter_EmailAddress(errorMessage);
     }
 
     @Then("User enters valid but unregisterd email for password reset {string}")
     public void user_enters_valid_but_unregisterd_email_for_password_reset(String validUnregisteredEmail) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        passwordResetPage.enter_EmailAddress(validUnregisteredEmail);
     }
 
     @When("User clicks on Send request for password reset")
     public void user_clicks_on_Send_request_for_password_reset() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+     passwordResetPage.click_SendRequestBtn();   
     }
 
     @Then("User shown with non registered email error message {string}")
     public void user_shown_with_non_registered_email_error_message(String errorMessage) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    	passwordResetPage.enter_EmailAddress(errorMessage);
     }
 
-    @Then("User enters valid registered email {string}")
+    @When("User enters valid registered email {string}")
     public void user_enters_valid_registered_email(String validEmail) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        passwordResetPage.enter_EmailAddress(validEmail);
     }
 
     @Then("User shown with password reset email sent screen")
     public void user_shown_with_password_reset_email_sent_screen() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    	String pagetitle = passwordResetPage.toString();
+        System.out.println("password reset email sent screen: " + pagetitle);
     }
 
 }
