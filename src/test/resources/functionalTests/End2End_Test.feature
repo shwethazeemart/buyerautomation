@@ -32,7 +32,7 @@ Scenario Outline: Customer wants to reset password
 	Then User shown with error message "Must be email." 
 	And User enters valid but unregisterd email "<email>" 
 	When User clicks on Send request 
-	Then User shown with error message  "Email not valid" 
+	Then User shown with error message1  "Email not valid" 
 	And User enters valid registered email "<email>" 
 	When User clickes on Send Request 
 	Then User shown with password reset email set screen 
