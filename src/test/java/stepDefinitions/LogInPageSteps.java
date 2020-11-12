@@ -12,16 +12,18 @@ import pageObjects.LogInPage;
  * 
  * @author AjanthanSivalingarajah
  * @since 2020/05/12
- *
+ *  
  */
 public class LogInPageSteps {
     private TestContext testContext;
     private LogInPage logInPage;
-
+    
+    
     public LogInPageSteps(TestContext testContext) {
         super();
         this.testContext = testContext;
         this.logInPage = testContext.getPageObjectManager().getLogInPage();
+        
     }
 
     @Given("User is on Login Page")
@@ -34,35 +36,22 @@ public class LogInPageSteps {
         logInPage.enter_LoginEmail(loginEmail);
     }
 
-    @Given("User enters password {string}")
-    public void user_enters_password(String loginPassword) {
-        logInPage.enter_LoginPassword(loginPassword);
+    @Given("User enters wrong password {string}")
+    public void user_enters_wrong__password(String loginPassword) {
+        logInPage.enter_wrongPassword(loginPassword);
     }
 
     @When("User Clicks Login button")
     public void user_Clicks_Login_button() {
         logInPage.click_LoginBtn();
     }
-
-    @When("User enters correct username {string}")
-    public void user_enters_correct_username(String loginEmail) {
-        logInPage.enter_LoginEmail(loginEmail);
-    }
-
-    @When("User enters wrong password {string}")
-    public void user_enters_wrong_password(String loginPassword) {
-        logInPage.enter_LoginPassword(loginPassword);
-    }
-
+    
+    
     @Then("User shown with invalid userName,password error message {string}")
-    public void user_shown_with_invalid_userName_password_error_message(String expectedPagetitle) {
-        String pagetitle = logInPage.getPageTitle();
-        System.out.println("Login failure page title: " + pagetitle);
+    public void user_shown_with_invalid_userName_password_error_message(String string) {
+		String errormessage = logInPage.getPageTitle();
+		String pageTitle = errormessage;
+		System.out.println("passwordresetpage failure page title: " + pageTitle);
+    
     }
-
-    @When("User clicks on I've forgotten my password link")
-    public void user_clicks_on_I_ve_forgotten_my_password_link() {
-        logInPage.click_ForgottenPasswordLink();
-    }
-
 }

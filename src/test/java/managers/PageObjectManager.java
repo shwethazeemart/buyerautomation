@@ -3,7 +3,10 @@ package managers;
 import org.openqa.selenium.WebDriver;
 
 import pageObjects.LogInPage;
+import pageObjects.OrdersPage;
 import pageObjects.PasswordResetPage;
+import pageObjects.SucessfullyLoginpage;
+import stepDefinitions.SucessfullyLoginPage;
 import pageObjects.DashboardPage;
 
 /**
@@ -17,7 +20,11 @@ public class PageObjectManager {
 
     private LogInPage logInPage;
     private DashboardPage dashboardPage;
+    
     private PasswordResetPage passwordResetPage;
+    private OrdersPage ordersPage;
+    private SucessfullyLoginpage sucessfullylogInpage;
+    
 
     public PageObjectManager(WebDriver driver) {
         this.driver = driver;
@@ -28,11 +35,21 @@ public class PageObjectManager {
     }
 
     public PasswordResetPage getPasswordResetPage() {
-        return (passwordResetPage == null) ? passwordResetPage = new PasswordResetPage(driver) : passwordResetPage;
+       return (passwordResetPage == null) ? passwordResetPage = new PasswordResetPage(driver) : passwordResetPage;
     }
 
     public DashboardPage getDashboardPage() {
         return (dashboardPage == null) ? dashboardPage = new DashboardPage(driver) : dashboardPage;
     }
+    
+    public OrdersPage getOrdersPage() {
+        return (ordersPage == null) ? ordersPage = new OrdersPage(driver) : ordersPage;
+    }
+    public SucessfullyLoginpage getSucessfullyLoginPage() {
+        return (sucessfullylogInpage == null) ? sucessfullylogInpage = new SucessfullyLoginpage(driver) : sucessfullylogInpage;
+    }
+
+
+	
 
 }
