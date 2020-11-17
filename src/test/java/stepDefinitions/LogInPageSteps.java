@@ -33,7 +33,7 @@ public class LogInPageSteps {
 
     @When("User enters username {string}")
     public void user_enters_username(String loginEmail) {
-        logInPage.enter_LoginEmail(loginEmail);
+        LogInPage.enter_loginEmail(loginEmail);
     }
 
     @Given("User enters wrong password {string}")

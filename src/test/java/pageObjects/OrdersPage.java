@@ -28,15 +28,20 @@ public class OrdersPage {
 			WebElement tosterMsg = driver.findElement(By.xpath("//*[text()='" + msg + "']"));
 		}
 		
+		@FindBy(xpath="//*[contains(text(),'Orders')]")
+		private static WebElement menubar_orders; 
 		
-		@FindBy(xpath = "(//a[@class='nav-link']//span)[2]")
-		private static WebElement menubar_orders;
+		@FindBy(xpath = "//button[text()=' New order']")
+		private static WebElement orderspage_Neworder; 
 		
-		@FindBy(xpath = "//div[@class='btn-group']//button")
-		private static WebElement orderspage_Neworder;
-		
-		@FindBy(xpath = "//li[@class='ng-star-inserted']//a")
+		@FindBy(xpath = "//li[@class='ng-star-inserted']//a") 
 		private static WebElement orderspage_Neworder1;
+		
+		@FindBy(xpath = "(//button[@class='btn btn-info']//i)[2]")
+		private static WebElement orderspage_Neworder2;
+		
+		@FindBy(xpath = "//button[@data-type='plus']")
+		private static WebElement orderspage_Neworder3;
 		
 		@FindBy(xpath = "//div[text()='velu masala2020']")
 		private static WebElement orderspage_velumasala2020;
@@ -59,8 +64,8 @@ public class OrdersPage {
 		@FindBy(xpath = "//button[text()=' Place Order ']")
 		private static WebElement orderspage_PlaceOrder;
 		
-		@FindBy(xpath = "//div[text()='#202011110003']")
-		private static WebElement link_TxtBoxContent;
+		@FindBy(xpath = "//div[@class='d-flex align-items-center']//div")
+		private static WebElement Orderspage_link_TxtBoxContent;
 		
 		@FindBy(xpath = "//button[text()='Back to Orders']")
 		private static WebElement orderspage_BacktoOrderbutton;
@@ -70,6 +75,63 @@ public class OrdersPage {
 		
 		@FindBy(xpath = "(//div[@class='btn-group']//button)[3]")
 		private static WebElement orderspage_Searchbutton;
+		
+		@FindBy(xpath = "//button[@data-type='plus']")
+		private static WebElement orderspage_secondtimeIncreaseAddtoorder;
+		
+		@FindBy(xpath = "//button[@data-type='plus']//i[1]")
+		private static WebElement orderspage_thirdimeIncreaseAddtoorder;
+		
+		@FindBy(xpath = "//button[@data-type='plus']//i[1]")
+		private static WebElement orderspage_fourthtimeIncreaseAddtoorder;
+		 
+		@FindBy(xpath = "(//button[@class='btn btn-info']//i)[2]")
+		private static WebElement orderspage_fthtimeIncreaseAddtoorder;
+		
+		@FindBy(xpath = "(//datatable-body-cell[@ng-reflect-row-index='5']//div)[2]")
+		private static WebElement orderspage_newlycreatedorder;
+		
+		@FindBy(xpath = "//p[text()='Orders']")
+		private static WebElement orderspage_backbuttonordersr;
+		
+		
+		public void navigateTo_LogInPage() {
+			driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl());
+		}
+		@FindBy(xpath = "//input[@type='email']")
+		private WebElement btn_loginEmail;
+		
+		@FindBy(xpath = "//input[@placeholder='Password']")
+		private static WebElement btn_loginpassword;
+		
+		@FindBy(xpath = "//button[text()='Log in']")
+		private static WebElement btn_loginbtn;
+		
+		@FindBy(xpath = "(//li[@role='menuitem']//a)[2]")
+		private static WebElement orderspage_Newrecurringorders;
+		
+		public void enter_LoginEmail(String email) { 
+			btn_loginEmail.sendKeys(email);
+		}
+		
+		/*public void enter_Password(String password) {
+			btn_password.sendKeys(password);
+		}*/
+		
+		public static void enter_loginpassword(String loginpassword) {
+			btn_loginpassword.sendKeys(loginpassword);
+		}
+		
+		public static void click_LoginBtn() {
+			btn_loginbtn.click();
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+			}
+			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+					.executeScript("return document.readyState").equals("complete"));
+		}
+		
 		
 		
 		public static void click_orders() {
@@ -143,6 +205,25 @@ public class OrdersPage {
 					.executeScript("return document.readyState").equals("complete"));
 			
 		}
+		public static void click_IncreaseAddtoorder2() {
+			orderspage_IncreaseAddtoorder1.click();
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+			}
+			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+					.executeScript("return document.readyState").equals("complete"));
+		}
+		public static void click_IncreaseAddtoorder3() {
+			orderspage_IncreaseAddtoorder1.click();
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+			}
+			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+					.executeScript("return document.readyState").equals("complete"));
+		}
+			
 		public static void click_Addtoorder1() {
 			orderspage_Addtoorder1.click();
 			try {
@@ -175,7 +256,7 @@ public class OrdersPage {
 			
 		}
 		public String TxtBoxContent() {
-			 return link_TxtBoxContent.getAttribute("value");
+			return Orderspage_link_TxtBoxContent.getAttribute("value");
 		}
 		
 		public static void click_BacktoOrderbutton() {
@@ -189,7 +270,7 @@ public class OrdersPage {
 		
 		}
 		public static void paste_OrderID(Object orderID) {
-			OrdersPage_OrderID.sendKeys("202011110003");
+			OrdersPage_OrderID.sendKeys("202011130001");
 		}
 		public static void click_Searchbutton() {
 			orderspage_Searchbutton.click();
@@ -206,5 +287,94 @@ public class OrdersPage {
 			return driver.getTitle();
 		}
 
+		public static void click_secondtimeIncreaseAddtoorder() {
+			orderspage_secondtimeIncreaseAddtoorder.click();
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+			}
+			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+					.executeScript("return document.readyState").equals("complete"));
+			
+		}
+
+		public static void click_thirdimeIncreaseAddtoorder() {
+			orderspage_thirdimeIncreaseAddtoorder.click();
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+			}
+			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+					.executeScript("return document.readyState").equals("complete"));
+			
+		}
+
+		public static void click_fourthtimeIncreaseAddtoorder() {
+			orderspage_fourthtimeIncreaseAddtoorder.click();
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+			}
+			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+					.executeScript("return document.readyState").equals("complete"));
+			
+		}
+
+		public static void click_fifthtimeIncreaseAddtoorder() {
+			orderspage_fthtimeIncreaseAddtoorder.click();
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+			}
+			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+					.executeScript("return document.readyState").equals("complete"));
+			
+		}
+
+		public static void click_newlycreatedorder() {
+			orderspage_newlycreatedorder.click();
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+			}
+			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+					.executeScript("return document.readyState").equals("complete"));
+			
+		}
+
+		public static void click_backbuttonorders() {
+			orderspage_backbuttonordersr.click();
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+			}
+			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+					.executeScript("return document.readyState").equals("complete"));
+			
+		}
+
+		public static void click_Newrecurringorders() {
+			orderspage_Newrecurringorders.click();
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+			}
+			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+					.executeScript("return document.readyState").equals("complete"));
 		
-}
+			
+		}
+			
+		}
+
+			
+		
+			
+		
+			
+		
+			
+		
+
+		
+

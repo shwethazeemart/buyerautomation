@@ -22,6 +22,10 @@ public class SucessfullyLoginPage {
     public void user_enters_correct_username(String loginEmail) {
 		sucessfullyLoginPage.enter_LoginEmail(loginEmail);
     }
+	@When("User enters password {string}")
+	public void user_enters_password(String loginpassword) {
+		sucessfullyLoginPage.enter_Loginpassword(loginpassword);
+	}
 
     @When("User enters correct password {string}") 
     public void user_enters_correct_password(String correctPassword) {

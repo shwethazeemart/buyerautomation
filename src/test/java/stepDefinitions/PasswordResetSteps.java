@@ -32,7 +32,14 @@ public class PasswordResetSteps {
 	
 	@When("User enters exact username {string}")
 	public void user_enters_exact_username(String loginEmail) {
-		logInPage.enter_LoginEmail(loginEmail);
+		logInPage.enter_loginEmail(loginEmail);
+	}
+	
+	@Then("User enters valid registered email {string}")
+	public void user_enters_valid_registered_email(String validEmail) {
+		logInPage.enter_validEmailAddress(validEmail);
+
+	
 	}
 	
 	@When("User clicks on I've forgotten my password link")

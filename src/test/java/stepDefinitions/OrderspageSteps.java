@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import cucumber.TestContext;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import pageObjects.LogInPage;
 import pageObjects.OrdersPage;
 
@@ -15,16 +16,48 @@ public class OrderspageSteps<txtBoxContent> {
 	private OrdersPage orderspage;
 	//private txtBoxContent txtBoxContent;
 	private Object OrderID;
+	 private LogInPage logInPage;
 
 
 	public OrderspageSteps(TestContext testContext) {
 		super();
 		this.testContext = testContext;
 		this.orderspage = testContext.getPageObjectManager().getOrdersPage();
-		//this.txtBoxContent = testContext.getPageObjectManager().gettxtBoxContent();
+		this.logInPage = testContext.getPageObjectManager().getLogInPage();
 
 
 	}
+	
+	@Given("User are available in login page")
+	public void user_are_available_in_login_page() {
+		LogInPage.navigateTo_LogInPage();
+	}
+
+	@When("User enter exact username{string}")
+	public void user_enter_exact_username(String LoginEmail) {
+		LogInPage.enter_loginEmail(LoginEmail);
+	}
+
+	@When("User enter exact password{string}")
+	public void user_enter_exact_password(String loginpassword) {
+		LogInPage.enter_loginpassword(loginpassword);
+	}
+
+	@When("User is click login button")
+	public void user_is_click_login_button() {
+		LogInPage.click_LoginBtn();
+	}
+	/*@When("User enter exact username{string}")
+	public void user_enter_exact_username_kovalan_zeemart_asia(String LoginEmail) {
+		LogInPage.enter_LoginEmail(LoginEmail);
+	}
+
+	@When("User enter exact password{string}")
+	public void user_enter_exact_password_123456Zm(String password) {
+		LogInPage.enter_Password(password);
+	}*/
+
+
 
 	@Given("User is on Orders Page")
 	public void user_is_on_Orders_Page() {
@@ -60,6 +93,28 @@ public class OrderspageSteps<txtBoxContent> {
 	public void user_Clicks_increase_the_order_button() {
 		OrdersPage.click_IncreaseAddtoorder();
 	}
+	@Then("User Clicks second time increase the order button")
+	public void user_Clicks_second_time_increase_the_order_button() {
+		OrdersPage.click_secondtimeIncreaseAddtoorder();
+	}
+
+	@Then("User Clicks third time increase the order button")
+	public void user_Clicks_third_time_increase_the_order_button() {
+		OrdersPage.click_thirdimeIncreaseAddtoorder();
+	}
+
+	@Then("User Clicks fourth time increase the order button")
+	public void user_Clicks_fourth_time_increase_the_order_button() {
+		OrdersPage.click_fourthtimeIncreaseAddtoorder();
+	}
+
+	@Then("User Clicks fifth time increase the order button")
+	public void user_Clicks_fifth_time_increase_the_order_button() {
+		OrdersPage.click_fifthtimeIncreaseAddtoorder();
+	}
+
+
+
 	
 	@Then("User was clicks a in Add to order of SKU")
 	public void user_Clicks_in_Add_to_order_of_SKU1() {
@@ -105,6 +160,16 @@ public class OrderspageSteps<txtBoxContent> {
 		//String pageTitle = "202011110003";
 		System.out.println("passwordresetpage failure page title: " + value);
 
+	}
+
+	@Then("User click the newly created order")
+	public void user_click_the_newly_created_order() {
+		OrdersPage.click_newlycreatedorder();
+	}
+
+	@Then("User clicks backbutton orders")
+	public void user_clicks_backbutton_orders() {
+		OrdersPage.click_backbuttonorders();
 	}
 
 

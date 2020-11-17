@@ -24,16 +24,19 @@ public class DashboardPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(how = How.NAME, using = "dashboard")
+	/*@FindBy(how = How.NAME, using = "dashboard")
+	private WebElement btn_Dashboard;*/
+	
+	@FindBy(xpath = "//a[@class='nav-link active']")
 	private WebElement btn_Dashboard;
 
 	public String getPageTitle() {
 		return driver.getTitle();
 	}
 
-	/*public String getBackgroundColor() {
-		 return btn_Dashboard.getAttribute("background-color");
-	}*/
+	public String getBackgroundColor() {
+		return btn_Dashboard.getAttribute("background-color");
+	}
 
 	public static void navigateTo_DashboardPage() {
 		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl());

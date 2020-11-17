@@ -32,6 +32,9 @@ public class SucessfullyLoginpage {
 		@FindBy(xpath = "//input[@type='email']")
 		private WebElement btn_loginEmail;
 		
+		@FindBy(xpath = "//input[@type='password']")
+		private WebElement btn_loginpassword;
+		
 		@FindBy(xpath = "//input[@placeholder='Password']")
 		private WebElement btn_correctPassword;
 
@@ -48,6 +51,9 @@ public class SucessfullyLoginpage {
 
 		public void enter_LoginEmail(String email) {
 			btn_loginEmail.sendKeys(email);
+		}
+		public void enter_Loginpassword(String loginpassword) {
+			btn_loginpassword.sendKeys(loginpassword);
 		}
 
 		public void enter_correctPassword(String loginPassword) {

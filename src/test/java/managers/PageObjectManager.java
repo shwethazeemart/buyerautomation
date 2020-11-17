@@ -2,10 +2,13 @@ package managers;
 
 import org.openqa.selenium.WebDriver;
 
+import cucumber.TestContext;
 import pageObjects.LogInPage;
+import pageObjects.Newrecurringorderspage;
 import pageObjects.OrdersPage;
 import pageObjects.PasswordResetPage;
 import pageObjects.SucessfullyLoginpage;
+import stepDefinitions.NewRecurringOrderspage;
 import stepDefinitions.SucessfullyLoginPage;
 import pageObjects.DashboardPage;
 
@@ -24,6 +27,8 @@ public class PageObjectManager {
     private PasswordResetPage passwordResetPage;
     private OrdersPage ordersPage;
     private SucessfullyLoginpage sucessfullylogInpage;
+    private NewRecurringOrderspage newrecurringorderspage;
+    
     
 
     public PageObjectManager(WebDriver driver) {
@@ -48,6 +53,10 @@ public class PageObjectManager {
     public SucessfullyLoginpage getSucessfullyLoginPage() {
         return (sucessfullylogInpage == null) ? sucessfullylogInpage = new SucessfullyLoginpage(driver) : sucessfullylogInpage;
     }
+
+	public NewRecurringOrderspage getNewRecurringOrderspage() {
+		return (newrecurringorderspage == null) ? newrecurringorderspage = new NewRecurringOrderspage((TestContext) driver) : newrecurringorderspage;
+	}
 
 
 	

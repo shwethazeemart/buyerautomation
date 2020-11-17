@@ -30,6 +30,9 @@ public class PasswordResetPage {
 	private WebElement link_forgotten;
 
 	@FindBy(xpath = "//input[@type='email']")
+	private WebElement btn_validEmail;
+	
+	@FindBy(xpath = "//input[@type='email']")
 	private WebElement btn_loginEmail;
 
 	@FindBy(xpath = "//div[@class='forgot_password']//a[1]")
@@ -48,6 +51,9 @@ public class PasswordResetPage {
 
 
 	public void enter_EmailAddress(String email) {
+		btn_loginEmail.sendKeys(email);
+	}
+	public void enter_validEmailAddress(String email) {
 		btn_loginEmail.sendKeys(email);
 	}
 	public String getPageTitle1() {
