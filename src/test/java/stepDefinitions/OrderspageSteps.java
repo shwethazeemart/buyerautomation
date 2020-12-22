@@ -1,11 +1,14 @@
 package stepDefinitions;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 import cucumber.TestContext;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pageObjects.DashboardPage;
 import pageObjects.LogInPage;
 import pageObjects.OrdersPage;
 
@@ -14,9 +17,9 @@ public class OrderspageSteps<txtBoxContent> {
 
 	private TestContext testContext;
 	private OrdersPage orderspage;
-	//private txtBoxContent txtBoxContent;
 	private Object OrderID;
-	 private LogInPage logInPage;
+	private LogInPage logInPage;
+	private DashboardPage dashboradpage;
 
 
 	public OrderspageSteps(TestContext testContext) {
@@ -24,13 +27,14 @@ public class OrderspageSteps<txtBoxContent> {
 		this.testContext = testContext;
 		this.orderspage = testContext.getPageObjectManager().getOrdersPage();
 		this.logInPage = testContext.getPageObjectManager().getLogInPage();
+		this.dashboradpage = testContext.getPageObjectManager().getDashboardPage();
 
 
 	}
 	
 	@Given("User are available in login page")
 	public void user_are_available_in_login_page() {
-		LogInPage.navigateTo_LogInPage();
+		LogInPage.navigateTo_LogInPage1();
 	}
 
 	@When("User enter exact username{string}")
@@ -47,35 +51,20 @@ public class OrderspageSteps<txtBoxContent> {
 	public void user_is_click_login_button() {
 		LogInPage.click_LoginBtn();
 	}
-	/*@When("User enter exact username{string}")
-	public void user_enter_exact_username_kovalan_zeemart_asia(String LoginEmail) {
-		LogInPage.enter_LoginEmail(LoginEmail);
-	}
 
-	@When("User enter exact password{string}")
-	public void user_enter_exact_password_123456Zm(String password) {
-		LogInPage.enter_Password(password);
-	}*/
-
-
-
-	@Given("User is on Orders Page")
-	public void user_is_on_Orders_Page() {
-		orderspage.navigateTo_Orderspage();
-	}
 
 	@Given("User Clicks Orders in the side navigation menubar")
-	public void user_Clicks_Orders_in_the_side_navigation_menubar() {
-		OrdersPage.click_orders();
+	public void user_Clicks_Orders_in_the_side_navigation_menubar() throws InterruptedException {
+		dashboradpage.clickOrders();
 	}
 
 	@Given("User Clicks New order dropdown value")
-	public void user_Clicks_New_order_dropdown_value() {
+	public void user_Clicks_New_order_dropdown_value() throws InterruptedException {
 		OrdersPage.click_Neworder();
 	}
 
 	@Given("User Clicks New order in the dropdown value")
-	public void user_Clicks_New_order_in_the_dropdown_value() {
+	public void user_Clicks_New_order_in_the_dropdown_value() throws InterruptedException {
 		OrdersPage.click_Neworder1();
 	}
 
@@ -113,9 +102,6 @@ public class OrderspageSteps<txtBoxContent> {
 		OrdersPage.click_fifthtimeIncreaseAddtoorder();
 	}
 
-
-
-	
 	@Then("User was clicks a in Add to order of SKU")
 	public void user_Clicks_in_Add_to_order_of_SKU1() {
 		OrdersPage.click_Addtoorder1();
@@ -134,8 +120,8 @@ public class OrderspageSteps<txtBoxContent> {
 	
 	@Then("User Copy the particular order number in newly created")
 	public void user_Copy_the_particular_order_number_in_newly_created() {
-		String value = orderspage.TxtBoxContent();
-		System.out.println("Printing " +value);
+		//String value = orderspage.TxtBoxContent();
+		//System.out.println("Printing " +value);
 	}
 
 	@Then("User clicks the Back to Orders button")
@@ -156,9 +142,9 @@ public class OrderspageSteps<txtBoxContent> {
 
 	@Then("It should display the particular order ID {string}")
 	public void it_should_display_the_particular_order_ID(String string) {
-		String value = orderspage.TxtBoxContent();
-		//String pageTitle = "202011110003";
-		System.out.println("passwordresetpage failure page title: " + value);
+		//String value = orderspage.TxtBoxContent();
+		//String valueone = "202011130001";
+		//System.out.println("passwordresetpage failure page title: " + valueone);
 
 	}
 

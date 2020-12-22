@@ -29,10 +29,10 @@ public class PasswordResetPage {
 	@FindBy(xpath = "//a[@href='/validate-email?userType=BUYER']")
 	private WebElement link_forgotten;
 
-	@FindBy(xpath = "//input[@type='email']")
+	@FindBy(xpath = "//input[contains(@name,'loginEmail')]")
 	private WebElement btn_validEmail;
 	
-	@FindBy(xpath = "//input[@type='email']")
+	@FindBy(xpath = "//input[contains(@name,'loginEmail')]")
 	private WebElement btn_loginEmail;
 
 	@FindBy(xpath = "//div[@class='forgot_password']//a[1]")

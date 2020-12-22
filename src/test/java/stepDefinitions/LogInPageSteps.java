@@ -28,7 +28,7 @@ public class LogInPageSteps {
 
     @Given("User is on Login Page")
     public void user_is_on_Home_Page() {
-        logInPage.navigateTo_LogInPage();
+        logInPage.navigateTo_LogInPage1();
     }
 
     @When("User enters username {string}")
@@ -45,7 +45,10 @@ public class LogInPageSteps {
     public void user_Clicks_Login_button() {
         logInPage.click_LoginBtn();
     }
-    
+    /*@When("User Clicks Login button")
+    public void user_Clicks_Login_buttonadmin() throws InterruptedException {
+        logInPage.click_LoginBtnadmin();
+    }*/
     
     @Then("User shown with invalid userName,password error message {string}")
     public void user_shown_with_invalid_userName_password_error_message(String string) {

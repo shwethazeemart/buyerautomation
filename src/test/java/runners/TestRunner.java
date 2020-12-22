@@ -11,8 +11,9 @@ import io.cucumber.junit.CucumberOptions;
  * @since 2020/05/12
  *
  */
-@RunWith(Cucumber.class)
-@CucumberOptions(strict = true, features = "src/test/resources/functionalTests", glue = { "stepDefinitions" })
+@RunWith(Cucumber.class) 
+@CucumberOptions(strict = true, features = "src/test/resources/functionalTests", glue = { "stepDefinitions" },
+plugin= {"json:target/cucumber.json"})
 public class TestRunner {
 
-}    
+}             

@@ -29,7 +29,7 @@ public class SucessfullyLoginpage {
 		@FindBy(how = How.NAME, using = "correctPassword")
 		private WebElement txtbx_correctPassword;*/
 		
-		@FindBy(xpath = "//input[@type='email']")
+		@FindBy(xpath = "//input[contains(@name,'loginEmail')]") 
 		private WebElement btn_loginEmail;
 		
 		@FindBy(xpath = "//input[@type='password']")
@@ -72,5 +72,8 @@ public class SucessfullyLoginpage {
 
 
 	}
+/*public void copythewebelemnet{
+	String CopyText=driver.findElement(By.xpath("")).getText();
+}*/
 
 

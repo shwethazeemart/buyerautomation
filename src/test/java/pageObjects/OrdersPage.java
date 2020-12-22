@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
@@ -28,10 +29,15 @@ public class OrdersPage {
 			WebElement tosterMsg = driver.findElement(By.xpath("//*[text()='" + msg + "']"));
 		}
 		
-		@FindBy(xpath="//*[contains(text(),'Orders')]")
-		private static WebElement menubar_orders; 
+		//driver.get("http://dev.buyer.zeemart.asia/sg/pages/orders/allorders");
 		
-		@FindBy(xpath = "//button[text()=' New order']")
+		@FindBy(xpath = "//input[contains(@name,'loginEmail')]") 
+		private WebElement btn_loginEmail;
+		
+		//@FindBy(linkText="Orders")
+		//private static WebElement menubar_Orders;  
+		
+		@FindBy(xpath = "//button[text()=' New order']") 
 		private static WebElement orderspage_Neworder; 
 		
 		@FindBy(xpath = "//li[@class='ng-star-inserted']//a") 
@@ -42,6 +48,9 @@ public class OrdersPage {
 		
 		@FindBy(xpath = "//button[@data-type='plus']")
 		private static WebElement orderspage_Neworder3;
+		
+		@FindBy(xpath = "//span[@id='sideMenu_Orders']")
+		private  WebElement btn_Orders;
 		
 		@FindBy(xpath = "//div[text()='velu masala2020']")
 		private static WebElement orderspage_velumasala2020;
@@ -64,14 +73,18 @@ public class OrdersPage {
 		@FindBy(xpath = "//button[text()=' Place Order ']")
 		private static WebElement orderspage_PlaceOrder;
 		
-		@FindBy(xpath = "//div[@class='d-flex align-items-center']//div")
-		private static WebElement Orderspage_link_TxtBoxContent;
+		//@FindBy(xpath = "//div[@class='d-flex align-items-center']//div")
+		//private static WebElement Orderspage_link_TxtBoxContent;
+		
 		
 		@FindBy(xpath = "//button[text()='Back to Orders']")
 		private static WebElement orderspage_BacktoOrderbutton;
 		
 		@FindBy(xpath = "//div[@class='pr-2']//input[1]")
 		private static WebElement OrdersPage_OrderID;
+		
+		@FindBy(xpath = "//span[@id='sideMenu_Orders']")
+		private static WebElement button_Orders;
 		
 		@FindBy(xpath = "(//div[@class='btn-group']//button)[3]")
 		private static WebElement orderspage_Searchbutton;
@@ -98,8 +111,7 @@ public class OrdersPage {
 		public void navigateTo_LogInPage() {
 			driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl());
 		}
-		@FindBy(xpath = "//input[@type='email']")
-		private WebElement btn_loginEmail;
+		
 		
 		@FindBy(xpath = "//input[@placeholder='Password']")
 		private static WebElement btn_loginpassword;
@@ -134,18 +146,10 @@ public class OrdersPage {
 		
 		
 		
-		public static void click_orders() {
-			menubar_orders.click();
-			try {
-				Thread.sleep(5000);
-			} catch (InterruptedException e) {
-			}
-			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
-					.executeScript("return document.readyState").equals("complete"));		
-		}
 
-		public static void click_Neworder() {
+		public static void click_Neworder() throws InterruptedException {
 			orderspage_Neworder.click();
+			Thread.sleep(5000);
 			try {
 				Thread.sleep(5000);
 			} catch (InterruptedException e) {
@@ -154,7 +158,8 @@ public class OrdersPage {
 					.executeScript("return document.readyState").equals("complete"));
 			
 		}
-		public static void click_Neworder1() {
+		public static void click_Neworder1() throws InterruptedException {
+			Thread.sleep(5000);
 			orderspage_Neworder1.click();
 			try {
 				Thread.sleep(5000);
@@ -255,9 +260,9 @@ public class OrdersPage {
 					.executeScript("return document.readyState").equals("complete"));
 			
 		}
-		public String TxtBoxContent() {
+		/*public String TxtBoxContent() {
 			return Orderspage_link_TxtBoxContent.getAttribute("value");
-		}
+		}*/
 		
 		public static void click_BacktoOrderbutton() {
 			orderspage_BacktoOrderbutton.click();
@@ -363,8 +368,13 @@ public class OrdersPage {
 					.executeScript("return document.readyState").equals("complete"));
 		
 			
-		}
+		} 
+		
+	/*	public static void clickOrders() {
+		
+			button_Orders.click();
 			
+		  }*/
 		}
 
 			

@@ -1,5 +1,7 @@
 package pageObjects;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -32,7 +34,7 @@ public class LogInPage {
 	@FindBy(how = How.NAME, using = "wrongPassword")
 	private WebElement txtbx_wrongPassword;*/
  
-	@FindBy(xpath = "//input[@type='email']")
+	@FindBy(xpath = "//input[contains(@name,'loginEmail')]")
 	private static WebElement btn_loginEmail;
 	
 
@@ -42,14 +44,17 @@ public class LogInPage {
 	@FindBy(xpath = "//input[@placeholder='Password']")
 	private static WebElement btn_loginpassword;
 
-	@FindBy(xpath = "//div[@class='form-group']//button[text()='Log in']")
+	/*@FindBy(xpath = "//div[@class='form-group']//button[text()='Log in']")
+	private static WebElement btn_loginbtn;*/
+    
+	@FindBy(xpath ="//button[@type='submit']")
 	private static WebElement btn_loginbtn;
-
+	
 	public String getPageTitle() {
 		return driver.getTitle();   
 	}
 
-	public static void navigateTo_LogInPage() {
+	public static void navigateTo_LogInPage1() {
 		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl());
 	}
 
@@ -70,6 +75,16 @@ public class LogInPage {
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
 	}
+	/*public void click_LoginBtnadmin() throws InterruptedException {
+		btn_loginbtn.click();
+		Thread.sleep(5000);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}*/
 
 	public void isTosterMessageFound(String msg) {
 		WebElement tosterMsg = driver.findElement(By.xpath("//*[text()='" + msg + "']"));
@@ -96,9 +111,23 @@ public class LogInPage {
 	}
 
 	public static void enter_loginEmail(String loginEmail) {
+		driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
 		btn_loginEmail.sendKeys(loginEmail);
 		
+		 
 	}
+
+	public void enter_RegisteredPassword(String loginPassword) {
+		btn_loginpassword.sendKeys(loginPassword);
+		
+	}
+
+	public static void enter_loginpassowrd(String loginpassword) {
+		btn_loginpassword.sendKeys(loginpassword);
+		
+	}
+
+	
 
 	
 }
