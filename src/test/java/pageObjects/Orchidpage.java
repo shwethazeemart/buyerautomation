@@ -16,7 +16,7 @@ public class Orchidpage {
 
 	public Orchidpage(WebDriver driver) {
 
-
+ 
 		Orchidpage.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
