@@ -56,7 +56,7 @@ public class Orchidpagesteps {
 
 	@When("User is enter exact Email Address in the Email Address field{string}")
 	public void user_is_enter_exact_Email_Address_in_the_Email_Address_field_velumani_zeemart_asia(String Email) {
-	    orchidpage.enter_exact_Email_Address(Email);
+	    //orchidpage.enter_exact_Email_Address(Email);
 	}
 
 	@Then("User is enter full name of the playerone{string}")

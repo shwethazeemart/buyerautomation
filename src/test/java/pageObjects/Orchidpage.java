@@ -1,5 +1,8 @@
 package pageObjects;
 
+import java.util.Iterator;
+import java.util.Set;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -36,8 +39,8 @@ public class Orchidpage {
 	@FindBy(xpath = "//i[@class='eicon-close']")
 	private static WebElement Orchidpage_POPmessage;
 	
-	@FindBy(xpath = "//img[@src='https://www.orchidclub.com/wp-content/uploads/2019/10/OnlineGolfBooking_18Dec20-1.png']")
-	private static WebElement Orchidpage_Onlinebookinglink;
+	//@FindBy(xpath = "//img[@src='https://www.orchidclub.com/wp-content/uploads/2019/10/OnlineGolfBooking_18Dec20-1.png']")
+	//private static WebElement Orchidpage_Onlinebookinglink;
 	
 	@FindBy(xpath = "//input[@type='email']")
 	private static WebElement Orchidpage_EnterEmailaddress;
@@ -125,30 +128,59 @@ public class Orchidpage {
 			
 		//driver.findElement(By.cssSelector("a[title=\"WEEKDAY 18-HOLE&9-HOLE(BUGGY)\"]")).click();		
 	
-		Orchidpage_Onlinebookinglink.click();
+		/*Orchidpage_Onlinebookinglink.click();
 		Thread.sleep(5000);
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 		} 
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
-				.executeScript("return document.readyState").equals("complete"));
+				.executeScript("return document.readyState").equals("complete"));*/
+		String chandle= driver.getWindowHandle();
+		System.out.println("current window Handle is:"+chandle);
+		driver.findElement(By.xpath("//img[@src='https://www.orchidclub.com/wp-content/uploads/2019/10/OnlineGolfBooking_18Dec20-1.png']")).click();
+		System.out.println("After clicking window handle:"+driver.getWindowHandle());
+		driver.findElement(By.xpath("//ul[@id='top-menu']/li[2]/a[1]")).click();
+		Set<String>handles=driver.getWindowHandles();
+		Iterator it=handles.iterator();
+		String newHandle=null;
+		String handle=null;
+		while(it.hasNext()) {
+			handle=it.next().toString();
+			System.out.println(handle);
+			if(chandle.contentEquals(handle)) {
+			}else {
+				newHandle=handle;
+			
+			}
+			}
+		driver.switchTo().window(newHandle);
+		driver.findElement(By.xpath("//input[@type='email']")).sendKeys("velumani@zeemart.asia");
+		} 
 		
-		
-	}
 
-	public void enter_exact_Email_Address(String Email) {
-		Orchidpage_EnterEmailaddress.sendKeys(Email);
+	/*public void enter_exact_Email_Address(String Email) {
+		/*Orchidpage_EnterEmailaddress.sendKeys(Email);
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 		} 
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
+		String chandle= driver.getWindowHandle();
+		System.out.println("current window Handle is:"+chandle);
+		driver.findElement(By.xpath("//input[@type='email']")).click();
+		System.out.println("After clicking window handle:"+driver.getWindowHandle());
+		driver.findElement(By.xpath("//ul[@id='top-menu']/li[2]/a[1]")).click();
 		
-	}
+		
+		
+		
+	}*/
 
 	public void enter_full_name_of_the_playerone(String playerone) {
+		//String newHandle = null;
+		//driver.switchTo().window(newHandle);
 		Orchidpage_Enternameofplayerone.sendKeys(playerone);
 		try {
 			Thread.sleep(5000);
@@ -184,7 +216,7 @@ public class Orchidpage {
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 
-		js.executeScript("arguments[0].value='21Dec2020';", DateBox);
+		js.executeScript("arguments[0].value='25Dec2020';", DateBox);
 
 
 	}
