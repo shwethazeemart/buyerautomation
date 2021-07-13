@@ -3,7 +3,7 @@ Feature: verify Admin panel and test all the page
 
 Scenario Outline: Verify the Suppliers page in view outlets Admin panel    
   
-          Given User are available in login page in buyer hub
+          Given User are available in login page
           When User is enter exact username"<username>" 
           And User is enter exact password"<password>"
           When User are Select country in the autocomplete text box
