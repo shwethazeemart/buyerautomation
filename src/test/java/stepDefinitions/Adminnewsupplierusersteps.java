@@ -41,7 +41,7 @@ public class Adminnewsupplierusersteps {
 		this.adminnewbuyeruserpage=testContext.getPageObjectManager().getAdminnewbuyeruserpageSteps();
 		this.adminnewsupplieruserpage=testContext.getPageObjectManager().getAdminnewsupplieruserpagesteps();
 		this.adminsupplierspage=testContext.getPageObjectManager().getAdminsupplierspageSteps();
-		this.logInPage = testContext.getPageObjectManager().getLogInPage(); 
+		this.logInPage = testContext.getPageObjectManager().getLogInPage1(); 
 		this.dashboradpage = testContext.getPageObjectManager().getDashboardPage();
 	}
 	

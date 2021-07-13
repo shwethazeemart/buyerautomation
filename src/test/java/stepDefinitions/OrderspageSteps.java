@@ -17,7 +17,7 @@ public class OrderspageSteps<txtBoxContent> {
 
 	private TestContext testContext;
 	private OrdersPage orderspage;
-	private Object OrderID;
+	private Object OrderID; 
 	private LogInPage logInPage;
 	private DashboardPage dashboradpage;
 
@@ -26,16 +26,13 @@ public class OrderspageSteps<txtBoxContent> {
 		super();
 		this.testContext = testContext;
 		this.orderspage = testContext.getPageObjectManager().getOrdersPage();
-		this.logInPage = testContext.getPageObjectManager().getLogInPage();
+		this.logInPage = (LogInPage) testContext.getPageObjectManager().getLogInPage2();
 		this.dashboradpage = testContext.getPageObjectManager().getDashboardPage();
 
 
 	}
 	
-	@Given("User are available in login page")
-	public void user_are_available_in_login_page() {
-		LogInPage.navigateTo_LogInPage1();
-	}
+	
 
 	@When("User enter exact username{string}")
 	public void user_enter_exact_username(String LoginEmail) {
@@ -48,7 +45,7 @@ public class OrderspageSteps<txtBoxContent> {
 	}
 
 	@When("User is click login button")
-	public void user_is_click_login_button() {
+	public void user_is_click_login_button() throws InterruptedException {
 		LogInPage.click_LoginBtn();
 	}
 
@@ -131,12 +128,12 @@ public class OrderspageSteps<txtBoxContent> {
 
 	@Then("User paste the newly created order number in Search order ID")
 	public void user_paste_the_newly_created_order_number_in_Search_order_ID() {
-		OrdersPage.paste_OrderID(OrderID);
+		//OrdersPage.paste_OrderID(OrderID);
 	}
 
 	@Then("User Clicks Search button in the orders page")
 	public void user_Clicks_Search_button_in_the_orders_page() {
-		OrdersPage.click_Searchbutton();
+		//OrdersPage.click_Searchbutton();
 
 	}
 
@@ -150,19 +147,35 @@ public class OrderspageSteps<txtBoxContent> {
 
 	@Then("User click the newly created order")
 	public void user_click_the_newly_created_order() {
-		OrdersPage.click_newlycreatedorder();
+		//OrdersPage.click_newlycreatedorder();
 	}
 
 	@Then("User clicks backbutton orders")
 	public void user_clicks_backbutton_orders() {
-		OrdersPage.click_backbuttonorders();
+		//OrdersPage.click_backbuttonorders();
 	}
 
 
 
+	@Then("User clicks on the filter option")
+	public void user_clicks_on_the_filter_option() {
+		OrdersPage.clicks_on_the_filter_option();
+	}
 
+	@Then("User clicks on the order status")
+	public void user_clicks_on_the_order_status() {
+		OrdersPage.clicks_on_the_order_status();
+	}
 
+	@Then("User clicks on the void checkbox")
+	public void user_clicks_on_the_void_checkbox() {
+		OrdersPage.clicks_on_the_void_checkbox();
+	}
 
+	@Then("Use clicks on the Apply button")
+	public void use_clicks_on_the_Apply_button() {
+		OrdersPage.clicks_on_the_Apply_button();
+	}
 
 
 

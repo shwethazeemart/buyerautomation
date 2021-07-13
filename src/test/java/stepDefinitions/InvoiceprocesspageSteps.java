@@ -38,14 +38,14 @@ public class InvoiceprocesspageSteps {
 		super();
 		this.testContext = testContext;
 		this.orderspage = testContext.getPageObjectManager().getOrdersPage();
-		this.logInPage = testContext.getPageObjectManager().getLogInPage();
+		this.logInPage = (LogInPage) testContext.getPageObjectManager().getLogInPage2();
 		this.invoicespage = (InvoicesPage) testContext.getPageObjectManager().getInvoicesPage(); 
 		this.dashboradpage = testContext.getPageObjectManager().getDashboardPage();
 		this.invoiceProcessPage = (InvoiceprocessPage)testContext.getPageObjectManager().getInvoiceprocesspage();
 	}
 
-
-
+	
+	
 	@When("User is enter Registered username{string}")
 	public void user_is_enter_Registered_username(String loginEmail) {
 		LogInPage.enter_loginEmail(loginEmail);
@@ -65,7 +65,7 @@ public class InvoiceprocesspageSteps {
 
 	@Given("User is Clicks Invoices in the side navigation menubar")
 	public void user_is_Clicks_Invoices_in_the_side_navigation_menubar() throws InterruptedException {
-		//dashboradpage.clickInvoices();
+		dashboradpage.clickInvoices();
 	}
 
 	@Then("User are Clicks in Uploads")
@@ -141,6 +141,13 @@ public class InvoiceprocesspageSteps {
 		InvoiceprocessPage.click_Publishbutton();
 
 	}
+	
+	@Then("User are clicks in Today button")
+	public void user_are_clicks_in_Today_button() {
+		InvoiceprocessPage.clicks_Todaybutton();
+	}
+
+
 
 	@Then("It should display invoice in invoices page")
 	public void it_should_display_invoice_in_invoices_page() {
@@ -149,4 +156,5 @@ public class InvoiceprocesspageSteps {
 		System.out.println("passwordresetpage failure page title: " + pageTitle);
 	}	
  
+
 }

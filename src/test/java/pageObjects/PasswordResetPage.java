@@ -9,6 +9,8 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import managers.FileReaderManager;
+
 /**
  * 
  * @author AjanthanSivalingarajah
@@ -16,12 +18,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  *
  */
 public class PasswordResetPage {
-	private final WebDriver driver;
+	private static WebDriver driver;
 
 	public PasswordResetPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
+	/*public static void navigateTo_LogInPage2() {
+		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl(false));
+	}*/
 	public void isTosterMessageFound(String msg) {
 		WebElement tosterMsg = driver.findElement(By.xpath("//*[text()='" + msg + "']"));
 	}
@@ -32,7 +37,7 @@ public class PasswordResetPage {
 	@FindBy(xpath = "//input[contains(@name,'loginEmail')]")
 	private WebElement btn_validEmail;
 	
-	@FindBy(xpath = "//input[contains(@name,'loginEmail')]")
+	@FindBy(xpath = "//input[@formcontrolname='name']")
 	private WebElement btn_loginEmail;
 
 	@FindBy(xpath = "//div[@class='forgot_password']//a[1]")
@@ -46,9 +51,10 @@ public class PasswordResetPage {
 	private WebElement txtbx_unregisteredEmailaddress;
 
 
-	@FindBy(xpath = "//app-validate-email[@class='ng-star-inserted']//div[1]")
+	@FindBy(xpath = "//button[@type='submit']") 
 	private WebElement btn_Sendreq;
 
+	
 
 	public void enter_EmailAddress(String email) {
 		btn_loginEmail.sendKeys(email);
@@ -86,4 +92,6 @@ public class PasswordResetPage {
 				.executeScript("return document.readyState").equals("complete"));
 	}
 
+	
+	
 }

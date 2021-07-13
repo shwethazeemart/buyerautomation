@@ -55,19 +55,23 @@ public class LogInPage {
 	}
 
 	public static void navigateTo_LogInPage1() {
-		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl());
+		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl(true,false,false,false));
+	}
+	public static void navigateTo_LogInPage2() {
+		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl(false,true,false,false));
 	}
 
 	/*public static void enter_LoginEmail(String email) {
 		btn_loginEmail.sendKeys(email); 
 	}*/
-	
+	 
 	public void enter_wrongPassword(String wrongPassword) {
 		btn_wrongPassword.sendKeys(wrongPassword);
 	}
 
-	public static void click_LoginBtn() {
+	public static void click_LoginBtn() throws InterruptedException {
 		btn_loginbtn.click();
+		Thread.sleep(5000);
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {

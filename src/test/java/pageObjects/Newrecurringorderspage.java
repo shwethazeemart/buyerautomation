@@ -24,6 +24,9 @@ public class Newrecurringorderspage {
 		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl());
 	}*/
 	
+	public void navigateTo_LogInPage2() {
+		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl(false,true,false,false));
+	}
 	public void isTosterMessageFound1(String msg) {
 		WebElement tosterMsg = driver.findElement(By.xpath("//*[text()='" + msg + "']"));
 	}
@@ -40,18 +43,18 @@ public class Newrecurringorderspage {
 	@FindBy(xpath = "//select[@formcontrolname='supplierId']") 
 	private static WebElement Newrecurringorderspage_Supplier_sabari250; 
 	
-	@FindBy(xpath = "(//span[contains(@class,'ng-untouched ng-pristine')])[2]") 
+	@FindBy(xpath = "//span[@formgroupname='1']")  
 	private static WebElement Newrecurringorderspage_Deliverdatetuesday; 
 	
-	@FindBy(xpath = "(//span[contains(@class,'ng-untouched ng-pristine')])[3]") 
+	@FindBy(xpath = "//span[@formgroupname='2']") 
 	private static WebElement Newrecurringorderspage_Deliverdatewednesday; 
 	
-	@FindBy(xpath = "//label[@class='mr-2']/following-sibling::label[1]") 
+	@FindBy(xpath = "(//div[@class='w-100 d-flex']//label)[2]") 
 	private static WebElement Newrecurringorderspage_checkboxPublicholiday; 
 	
-	@FindBy(xpath = "//div[@class='col-5 pt-2']//label[1]") 
+	@FindBy(xpath = "(//input[contains(@formcontrolname,'endDate')])[1]") 
 	private static WebElement Newrecurringorderspage_Radiobutton; 
-	
+	 
 	@FindBy(xpath = "//select[@formcontrolname='contactPerson']") 
 	private static WebElement Newrecurringorderspage_Contactperson_velumanieswaran2020; 
 	
@@ -78,6 +81,12 @@ public class Newrecurringorderspage {
 	
 	@FindBy(xpath = "//button[@data-type='plus']") 
 	private static WebElement Newrecurringorderspage_SixthtimeincreaseAddtoorder; 
+	
+	@FindBy(xpath = "//button[@data-type='plus']") 
+	private static WebElement Newrecurringorderspage_seventimeincreaseAddtoorder; 
+	
+	@FindBy(xpath = "//button[@data-type='plus']") 
+	private static WebElement Newrecurringorderspage_eighttimeincreaseAddtoorder; 
 	
 	@FindBy(xpath = "//button[text()='Review order']") 
 	private static WebElement Newrecurringorderspage_Revieworderbtn; 
@@ -114,6 +123,7 @@ public class Newrecurringorderspage {
 	}
 	
 	public static void click_Velumasala2020() throws InterruptedException {
+		Thread.sleep(5000);
 		Newrecurringorderspage_Velumasala2020.click();
 		Thread.sleep(5000);
 		try {
@@ -322,5 +332,28 @@ public class Newrecurringorderspage {
 	
 	public static String getPageTitle() {
 		return driver.getTitle();   
+	}
+
+	public void Clicks_on_seven_time_increase_the_order_button_in_the_first_product() {
+		Newrecurringorderspage_seventimeincreaseAddtoorder.click();
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+		
+	}
+
+	public void Clicks_on_eight_time_increase_the_order_button_in_the_first_product() {
+		Newrecurringorderspage_eighttimeincreaseAddtoorder.click();
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
 	}
 }

@@ -43,7 +43,7 @@ public class AdminsupplierspageSteps {
 		this.adminsupplierspage=testContext.getPageObjectManager().getAdminsupplierspageSteps();
 		
 		this.testContext = testContext;
-		this.logInPage = testContext.getPageObjectManager().getLogInPage(); 
+		this.logInPage = testContext.getPageObjectManager().getLogInPage1(); 
 		this.dashboradpage = testContext.getPageObjectManager().getDashboardPage();
 	}
 	
@@ -283,7 +283,15 @@ public class AdminsupplierspageSteps {
 		String pageTitle = displaysupplier;
 		System.out.println("page title: " + pageTitle);
 	}
+	@When("User is clicks the subscription plan of radio button")
+	public void user_is_clicks_the_subscription_plan_of_radio_button() {
+		adminsupplierspage.clicks_the_subscription_plan_of_radio_button();
+	}
 
+	@Then("User is enter subscription email notification{string}")
+	public void user_is_enter_subscription_email_notification_velumani_zeemart_asia(String enteremail) {
+		adminsupplierspage.enter_subscription_email_notification_velumani_zeemart_asia(enteremail);
+	}
 
 
 	

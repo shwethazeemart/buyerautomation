@@ -8,20 +8,30 @@ import pageObjects.LogInPage;
 import pageObjects.Newrecurringorderspage;
 import pageObjects.Orchidpage;
 import pageObjects.OrdersPage;
+import pageObjects.OutletsPagesteps;
 import pageObjects.PasswordResetPage;
+import pageObjects.Reportspage;
 import pageObjects.SucessfullyLoginpage;
 import pageObjects.Userspage;
 import stepDefinitions.AdminInvoiceuploadpageSteps;
+import stepDefinitions.Adminbuyerlinktothecompany;
+import stepDefinitions.AdminbuyersoutletpageSteps;
 //import stepDefinitions.Adminsupplierspage;
 import stepDefinitions.AdminsupplierspageSteps;
+import stepDefinitions.Automationtesting;
 //import stepDefinitions.Invoiceprocesspage;
 import stepDefinitions.InvoiceprocesspageSteps;
 import stepDefinitions.InvoicespageSteps;
 import stepDefinitions.NewRecurrOrderspageSteps;
+import stepDefinitions.Orchidpagesteps;
+import stepDefinitions.Outletspagesteps;
+import stepDefinitions.Reportspagesteps;
 //import stepDefinitions.NewRecurringOrderspage;
 import stepDefinitions.SucessfullyLoginPage;
 import stepDefinitions.UserspageSteps;
 import pageObjects.AdminInvoiceuploadpage;
+import pageObjects.Adminbuyerlinktothecompanypage;
+import pageObjects.Adminbuyeroutletsubscriptionpage;
 import pageObjects.Adminbuyersoutletpage;
 import pageObjects.Admininvoiceprocesspage;
 import pageObjects.Adminnewadminuserpage;
@@ -29,6 +39,7 @@ import pageObjects.Adminnewbuyeruserpage;
 import pageObjects.Adminnewsupplieruserpage;
 import pageObjects.Adminsupplierpage;
 import pageObjects.Adminsuppliersviewoutletspage;
+import pageObjects.Automationtestingpage;
 import pageObjects.DashboardPage;
 import pageObjects.InventoryPage;
 import pageObjects.InvoiceprocessPage;
@@ -44,7 +55,8 @@ import pageObjects.InvoicesPage;
 public class PageObjectManager<admininvoiceuploadpageSteps> {
     private WebDriver driver; 
 
-    private LogInPage logInPage;
+    private LogInPage logInPage1;
+    private LogInPage logInPage2;
     private DashboardPage dashboardPage;
     private PasswordResetPage passwordResetPage;
     private OrdersPage ordersPage;
@@ -62,17 +74,21 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private Adminnewadminuserpage adminnewadminuserpagesteps;
     private Adminsuppliersviewoutletspage adminsuppliersviewoutletspagesteps;
     private Orchidpage orchidpagesteps;
-
-
+    private Adminbuyeroutletsubscriptionpage adminbuyersoutletsubscriptionpageSteps;
+    private OutletsPagesteps outletsPagesteps;
+    private Reportspage reportspage;
+    private Adminbuyerlinktothecompanypage adminbuyerlinktothecompany;
 	private Object userspage;
+    private Automationtestingpage automationtesting;
     
 
     public PageObjectManager(WebDriver driver) {
         this.driver = driver;
     }
+    
 
-    public LogInPage getLogInPage() {
-        return (logInPage == null) ? logInPage = new LogInPage(driver) : logInPage;
+    public LogInPage getLogInPage1() {
+        return (logInPage1 == null) ? logInPage1 = new LogInPage(driver) : logInPage1;
     }
 
     public PasswordResetPage getPasswordResetPage() {
@@ -82,6 +98,9 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     public DashboardPage getDashboardPage() {
         return (dashboardPage == null) ? dashboardPage = new DashboardPage(driver) : dashboardPage;
     }
+    
+
+
     
     public OrdersPage getOrdersPage() {
         return (ordersPage == null) ? ordersPage = new OrdersPage(driver) : ordersPage;
@@ -153,22 +172,49 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 		return (adminsuppliersviewoutletspagesteps == null) ?  (adminsuppliersviewoutletspagesteps = new Adminsuppliersviewoutletspage(driver)) : adminsuppliersviewoutletspagesteps;
 		
 	}
+	
 
 	public Orchidpage getOrchidpagesteps() {
 		return (orchidpagesteps == null) ?  (orchidpagesteps = new Orchidpage(driver)) : orchidpagesteps;
 		
-	}	
+	}
+
+	public Object getLogInPage2() {
+		 return (logInPage2 == null) ? logInPage2 = new LogInPage(driver) : logInPage2;
+	}
+
+
+	public Adminbuyeroutletsubscriptionpage getAdminbuyersoutletsubscriptionpageSteps() {
+		return (adminbuyersoutletsubscriptionpageSteps == null) ?  (adminbuyersoutletsubscriptionpageSteps = new Adminbuyeroutletsubscriptionpage(driver)) : adminbuyersoutletsubscriptionpageSteps;
+		
+	}
+
+
+	public Object getOutletspage() {
+		
+		return (outletsPagesteps==null) ? (outletsPagesteps=new OutletsPagesteps(driver)) : outletsPagesteps; 
+	}
+
+
+	public Object getReportspage() {
+		return (reportspage==null) ? (reportspage=new Reportspage(driver)) : reportspage; 
+	}
+
+
+	public Object getAdminbuyerlinktothecompany() {
+		return (adminbuyerlinktothecompany == null) ?  (adminbuyerlinktothecompany = new Adminbuyerlinktothecompanypage(driver)) : adminbuyerlinktothecompany;
+	}
+
 	
 
- 
- 
+	public Automationtestingpage getAutomationtestingpage() {
+		return (automationtesting == null) ? (automationtesting = new Automationtestingpage(driver)) : automationtesting;
+	}
+	}
+	
+
+
+
 	
 	
-	
-	
-	
-	
-	
-	
-	
-}
+

@@ -23,7 +23,7 @@ public class Adminsupplierpage {
 	}
 
 	public static void navigateTo_LogInPage() {
-		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl());
+		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl(true,false,false,false));
 	}
 
 	public void isTosterMessageFound(String msg) {
@@ -152,6 +152,11 @@ public class Adminsupplierpage {
 	@FindBy(xpath = "//button[contains(@class,'btn btn-success')]")
 	private static WebElement Adminsupplierpage_Savechangesbutton;
 	
+	@FindBy(xpath = "//div[@class='mari-2']//label[1]")
+	private static WebElement Adminsupplierpage_subscription_plan_of_radio_button;
+	
+	@FindBy(xpath = "//input[@formcontrolname='subscriptionEmails']")
+	private static WebElement Adminsupplierpage_enter_subscription_email_notification;
 	
 
 	public void Clicksin_Newsupplierbutton() {
@@ -628,8 +633,32 @@ public class Adminsupplierpage {
 	public static String getPageTitle() {
 		return driver.getTitle();   
 	}
+
+	public void clicks_the_subscription_plan_of_radio_button() {
+		Adminsupplierpage_subscription_plan_of_radio_button.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	public void enter_subscription_email_notification_velumani_zeemart_asia(String enteremail) {
+		Adminsupplierpage_enter_subscription_email_notification.sendKeys(enteremail);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+	}
+	
+		
+	
 	
 	
 			
 	
-}
+

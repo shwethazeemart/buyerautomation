@@ -26,14 +26,14 @@ public class InvoiceprocessPage {
 
 		InvoiceprocessPage.driver = driver;
 		PageFactory.initElements(driver, this);
-	}
+	} 
 
-	public static void navigateTo_LogInPage() {
-		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl());
+	public void navigateTo_LogInPage2() {
+		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl(false,true,false,false));
 	}
 
 	public static void navigateTo_invoiceprocesspage() {
-		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl());
+		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl(false,true,false,false));
 	}
 
 	public void isTosterMessageFound(String msg) {
@@ -47,6 +47,9 @@ public class InvoiceprocessPage {
 
 	@FindBy(xpath = "(//a[@ng-reflect-klass='nav-link pt-0'])[2]")
 	private static WebElement Invoicespage_Uploads;
+	
+	@FindBy(xpath = "//button[text()='Today']")
+	private static WebElement invoiceprocesspageSteps_Todaybutton;
 
 	@FindBy(xpath = "(//button[contains(@class,'btn btn-success')])[3]")
 	private static WebElement btn_processbtn;
@@ -285,6 +288,18 @@ public class InvoiceprocessPage {
 		//DateBox.clear();
 		//DateBox.sendKeys("17Nov2020");
 
+	}
+
+	public static void clicks_Todaybutton() {
+		invoiceprocesspageSteps_Todaybutton.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+
+		
 	}
 
 	/*public  WebElement SelectcalendarByJS() {

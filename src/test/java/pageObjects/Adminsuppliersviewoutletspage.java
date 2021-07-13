@@ -11,21 +11,21 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import managers.FileReaderManager;
-
+ 
 public class Adminsuppliersviewoutletspage {
 
 	
-	private static WebDriver driver;
+	private static WebDriver driver; 
 
 	public Adminsuppliersviewoutletspage(WebDriver driver) {
-
+ 
  
 		Adminsuppliersviewoutletspage.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 
 	public static void navigateTo_LogInPage() {
-		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl());
+		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl(true,false,false,false));
 	}
 
 	public void isTosterMessageFound(String msg) {
@@ -42,8 +42,8 @@ public class Adminsuppliersviewoutletspage {
 	@FindBy(xpath = "//button[text()=' Search ']")
 	private static WebElement Adminsuppliersviewoutletspage_Searchbutton;
 	
-	@FindBy(xpath = "//div[@class='ng-star-inserted']//a[1]")
-	private static WebElement Adminsuppliersviewoutletspage_Actionsdropdown;
+	@FindBy(xpath = "//a[contains(@class, 'zmdropDownBtn')]")
+	private static WebElement Adminsuppliersviewoutletspage_Actionsdropdown; 
 	
 	@FindBy(xpath = "(//a[@routerlinkactive='active']/following-sibling::a)[2]")
 	private static WebElement Adminsuppliersviewoutletspage_Viewoutlets;
@@ -170,7 +170,8 @@ public class Adminsuppliersviewoutletspage {
 		
 	}
 
-	public void Clicks_Actionsdropdown() {
+	public void Clicks_Actionsdropdown() throws InterruptedException {
+		Thread.sleep(5000);
 		Adminsuppliersviewoutletspage_Actionsdropdown.click();
 		try {
 			Thread.sleep(5000);
@@ -196,14 +197,15 @@ public class Adminsuppliersviewoutletspage {
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
-		} 
+		}   
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
 		
 	}
 	
-	public static void Select_Company() throws InterruptedException {
-		driver.findElement(By.xpath("//input[@role='combobox']")).sendKeys("venkatmasala220",Keys.ENTER);
+	public static void Select_Company() throws InterruptedException { 
+		Thread.sleep(5000);
+		driver.findElement(By.xpath("//div[@role='combobox']//input[1]")).sendKeys("venkatmasala220",Keys.ENTER); 
 		Thread.sleep(5000);
 		try {
 			Thread.sleep(5000);
@@ -288,7 +290,7 @@ public class Adminsuppliersviewoutletspage {
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
-		} 
+		}  
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
 		
@@ -326,8 +328,7 @@ public class Adminsuppliersviewoutletspage {
 	public void Clicks_the_increase_counted_Quantity_of_apply_fees() {
 		//WebElement Category_Display_Order;
 		Adminsuppliersviewoutletspage_Increasecountedquantitybox.clear();
-		WebDriverWait wait = new WebDriverWait(driver, 10);
-		wait.until(ExpectedConditions.visibilityOf(Adminsuppliersviewoutletspage_Increasecountedquantitybox)).clear();;
+		
 
 	}
 
@@ -335,9 +336,7 @@ public class Adminsuppliersviewoutletspage {
 		Adminsuppliersviewoutletspage_Increasesecondtimecountedquantity.sendKeys("10");
 		//WebElement Category_Increase_Value;
 
-		WebDriverWait wait = new WebDriverWait(driver, 10);
-
-		wait.until(ExpectedConditions.visibilityOf(	Adminsuppliersviewoutletspage_Increasesecondtimecountedquantity)).click();
+		
 
 		//Category_Display_Order.clear();
 		//Category_Display_Order.sendKeys("1");
@@ -492,7 +491,7 @@ public class Adminsuppliersviewoutletspage {
 	}
 	
 	public static void click_paymentterms() throws InterruptedException {
-		Adminsuppliersviewoutletspage_Paymentterms.click();
+		Adminsuppliersviewoutletspage_Paymentterms.click(); 
 		Thread.sleep(5000);
 		try {
 			Thread.sleep(5000);

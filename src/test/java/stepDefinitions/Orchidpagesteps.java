@@ -35,9 +35,14 @@ public class Orchidpagesteps {
 		this.orchidpage=testContext.getPageObjectManager().getOrchidpagesteps();
 		
 		this.testContext = testContext;
-		this.logInPage = testContext.getPageObjectManager().getLogInPage(); 
+		this.logInPage = (LogInPage) testContext.getPageObjectManager().getLogInPage2(); 
 		this.dashboradpage = testContext.getPageObjectManager().getDashboardPage();
 	}
+	@Given("User is navigateTo LogInPage")
+	public void user_is_navigateTo_LogInPage() {
+		 orchidpage.user_is_navigateTo_LogInPage(); 
+	}
+
 	
 	@When("User is  Clicks in Home link button")
 	public void user_is_Clicks_in_Home_link_button() throws InterruptedException {

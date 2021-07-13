@@ -42,12 +42,13 @@ public class SucessfullyLoginpage {
 		private WebElement btn_loginbtn;
 		
 		public String getPageTitle() {
+			
 			return driver.getTitle();   
 		}
 
-		public void navigateTo_LogInPage() {
-			driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl());
-		}
+		/*public void navigateTo_LogInPage2() {
+			driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl(false));
+		}*/
 
 		public void enter_LoginEmail(String email) {
 			btn_loginEmail.sendKeys(email);

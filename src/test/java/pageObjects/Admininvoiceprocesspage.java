@@ -21,7 +21,7 @@ public class Admininvoiceprocesspage {
 	}
 
 	public static void navigateTo_LogInPage() {
-		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl());
+		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl(true,false,false,false));
 	}
 
 	public void isTosterMessageFound(String msg) {
@@ -65,6 +65,9 @@ public class Admininvoiceprocesspage {
 		
 	@FindBy(xpath = "//button[text()='Publish this invoice']")
 	private static WebElement Admininvoiceprocesspage_publish_this_invoice_button;
+	
+
+
 	
 	public static String getPageTitle() {
 		return driver.getTitle();   
@@ -215,6 +218,7 @@ public class Admininvoiceprocesspage {
 		Admininvoiceprocesspage_publish_this_invoice_button.click();
 		
 	}
+	
 
 
 }

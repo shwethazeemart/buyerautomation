@@ -37,14 +37,14 @@ public class Adminnewadminuserpagesteps {
 		this.admininvoiceprocesspage=(Admininvoiceprocesspage)testContext.getPageObjectManager().getAdmininvoiceprocesspageSteps();
 		this.adminbuyersoutletpage=(Adminbuyersoutletpage)testContext.getPageObjectManager().getAdminbuyersoutletpageSteps();
 		this.adminnewbuyeruserpage=testContext.getPageObjectManager().getAdminnewbuyeruserpageSteps();
-		this.logInPage = testContext.getPageObjectManager().getLogInPage(); 
+		this.logInPage = testContext.getPageObjectManager().getLogInPage1(); 
 		this.dashboradpage = testContext.getPageObjectManager().getDashboardPage();
 		this.adminnewadminuserpage=testContext.getPageObjectManager().getAdminnewadminuserpagesteps();
 	}
 	
 	
 	@When("User Clicks in Admin panel users in the side navigation menubar")
-	public void user_Clicks_in_Admin_panel_users_in_the_side_navigation_menubar() throws InterruptedException {
+	public void user_Clicks_in_Admin_panel_users_in_the_side_navigation_menubar()  {
 	    dashboradpage.clickSuppliernewuser();
 	}
 
@@ -123,11 +123,11 @@ public class Adminnewadminuserpagesteps {
 
 	@When("User is Select role in the dropdown field of new admin user page")
 	public void user_is_Select_role_in_the_dropdown_field_of_new_admin_user_page()  {
-	   adminnewadminuserpage.Select_role();
+	   //adminnewadminuserpage.Select_role();
 	}
 	@Then("User is Clicks manage orders role in new admin user page")
 	public void user_is_Clicks_manage_orders_role_in_new_admin_user_page() {
-	    adminnewadminuserpage.Clicks_manageordersrole();
+	    //adminnewadminuserpage.Clicks_manageordersrole();
 	}
 
 	@Then("User is Clicks save changes button in the new admin user page")

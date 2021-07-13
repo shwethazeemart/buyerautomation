@@ -22,7 +22,10 @@ public class InvoicesPage {
 	}
 
 	public static void navigateTo_Invoicesspage() {
-		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl());
+		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl(false,true,false,false));
+	}
+	public void navigateTo_LogInPage2() {
+		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl(false,true,false,false));
 	}
 
 	public void isTosterMessageFound(String msg) {
@@ -33,20 +36,22 @@ public class InvoicesPage {
 	//@FindBy(xpath="//span[contains(text(),'Invoices')]") 
 	//private static WebElement menubar_Invoices;  
 
-	@FindBy(xpath="(//a[@ng-reflect-klass='nav-link pt-0'])[2]")
+	@FindBy(xpath="(//a[contains(@class,'nav-link pt-0')])[2]")
 	private static WebElement Invoicespage_Uploads; 
 
 	@FindBy(xpath="//button[text()=' Upload invoice ']") 
 	private static WebElement Invoicespage_Uploadinvoice; 
 
-	@FindBy(xpath="//div[@class='popup_outlet_item cursor']") 
+	@FindBy(xpath="//b[text()='velu masala2020']") 
 	private static WebElement Invoicespage_selectoutlet; 
 
 	//@FindBy(xpath="//input[@id='file']")
 	//private static WebElement Invoicespage_Uploadimage; 
 
-	@FindBy(xpath="//button[@class='btn btn-primary']")  
-	private static WebElement Invoicespage_Uploadbutton; 
+	@FindBy(xpath="//button[text()=' Upload ']")  
+	private static WebElement Invoicespage_Uploadbutton;  
+	
+	
 
 	/*public static void clickInvoices() {
 			Actions action = new Actions(driver);
@@ -66,7 +71,7 @@ public class InvoicesPage {
 		Invoicespage_Uploads.click();
 		Thread.sleep(5000);
 		try {
-			Thread.sleep(5000);
+			Thread.sleep(5000); 
 		} catch (InterruptedException e) {
 		}
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
@@ -85,8 +90,9 @@ public class InvoicesPage {
 
 	}
 
-	public static void click_selectoutlet() {
+	public static void click_selectoutlet() throws InterruptedException {
 		Invoicespage_selectoutlet.click();
+		Thread.sleep(5000);
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -95,20 +101,10 @@ public class InvoicesPage {
 				.executeScript("return document.readyState").equals("complete"));	
 
 	}
-	/* public static void (String[] args) {
-			returnInvoicespage_driver.click(); 
-			try {
-				Thread.sleep(5000);
-			} catch (InterruptedException e) {
-			}
-			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
-					.executeScript("return document.readyState").equals("complete"));	
-
-		}*/
+	
 
 	public static void click_Uploadbutton() {
 		Invoicespage_Uploadbutton.click();
-		
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -120,12 +116,10 @@ public class InvoicesPage {
 		return driver.getTitle();
 	}
 
-	public static void Clicks_on_upload_the_image() {
-		//invoiceprocesspageSteps_Paymentsterms.click();
-		//Invoicespage_Uploadimage.click();
+	public static void Clicks_on_upload_the_image() throws InterruptedException {
 		WebElement uploadBox=driver.findElement(By.xpath("//input[@id='file']"));
-		uploadBox.sendKeys("E:\\Zeemart All\\Zeemart payslip\\file_example_PNG_2100kB.png");
-		
+		uploadBox.sendKeys("E:\\Zeemart All\\download.jpg");
+		Thread.sleep(5000);
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -133,9 +127,9 @@ public class InvoicesPage {
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));	
 	}
-	/*public static WebElement Uploadimage() {
-		return Invoicespage_Uploadimage ;
-	}*/ 
+
+	
+	
 }
 
 

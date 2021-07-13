@@ -36,7 +36,7 @@ public class AdminnewbuyeruserpageSteps {
 		this.adminbuyersoutletpage=(Adminbuyersoutletpage)testContext.getPageObjectManager().getAdminbuyersoutletpageSteps();
 		this.adminnewbuyeruserpage=testContext.getPageObjectManager().getAdminnewbuyeruserpageSteps();
 		this.testContext = testContext;
-		this.logInPage = testContext.getPageObjectManager().getLogInPage(); 
+		this.logInPage = testContext.getPageObjectManager().getLogInPage1(); 
 		this.dashboradpage = testContext.getPageObjectManager().getDashboardPage();
 	}
 	
@@ -81,7 +81,7 @@ public class AdminnewbuyeruserpageSteps {
 	}
 
 	@And("User are Enter Email in the Email field{string}")
-	public void user_are_Enter_Email_in_the_Email_field_velumani20101978_gmail_com(String Email) {
+	public void user_are_Enter_Email_in_the_Email_field_velumani20211978_gmail_com(String Email) {
 	    adminnewbuyeruserpage.Enter_Email(Email);
 	}
 
@@ -116,7 +116,8 @@ public class AdminnewbuyeruserpageSteps {
 	public void user_is_Clicks_Save_changes_button() {
 	    //adminnewbuyeruserpage.Clicks_Save_changes_button();
 	}
-
+	
+	
 	@And("User is Clicks Buyers icon")
 	public void user_is_Clicks_Buyers_icon() {
 	    //adminnewbuyeruserpage.Clicks_Buyers_icon();
@@ -134,9 +135,9 @@ public class AdminnewbuyeruserpageSteps {
 
 	@Then("It should display the particular User in Buyers page")
 	public void it_should_display_the_particular_User_in_Buyers_page() {
-		String displayuser =Adminnewbuyeruserpage.getPageTitle();
-		String pageTitle = displayuser;
-		System.out.println("page title: " + pageTitle);
+		//String displayuser =Adminnewbuyeruserpage.getPageTitle();
+		//String pageTitle = displayuser;
+		//System.out.println("page title: " + pageTitle);
 	}
 
 

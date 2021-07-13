@@ -21,8 +21,11 @@ public class Userspage {
 		PageFactory.initElements(driver, this);
 	}
 
+	public void navigateTo_LogInPage2() {
+		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl(false,true,false,false));
+	}
 	public static void navigateTo_Userspage() {
-		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl());
+		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl(false,true,false,false));
 	}
 	
 	public void isTosterMessageFound(String msg) {
@@ -30,7 +33,7 @@ public class Userspage {
 	}
 	
 
-	@FindBy(xpath="//*[@class='button ng-star-inserted']")
+	@FindBy(xpath="//button[@type=' button']")
 	private static WebElement Userspage_Addnewuser; 
 
 	//@FindBy(xpath="//input[@role='combobox']")
@@ -60,8 +63,8 @@ public class Userspage {
 	@FindBy(xpath="//input[@formcontrolname='phone']")
 	private static WebElement Userspage_Mobilephone; 
 	
-	@FindBy(xpath="//div[@class='form-group']//select[1]")
-	private static WebElement Userspage_Owner;  
+	@FindBy(xpath="//select[@formcontrolname='roleGroup']")
+	private static WebElement Userspage_Custom;  
 	
 	//@FindBy(xpath="//button[@type='submit']")
 	//private static WebElement Userspage_Savebutton; 
@@ -80,7 +83,7 @@ public class Userspage {
 	}
 	public static void click_VELUMASALA() {
 		//Userspage_VELUMASALA.click();
-		driver.findElement(By.xpath("(//input[@role='combobox'])[1]")).sendKeys("VELU MASALA",Keys.ENTER);
+		driver.findElement(By.xpath("(//div[@role='combobox']//input)[1]")).sendKeys("VELU MASALA",Keys.ENTER);
 
 		try {
 			Thread.sleep(1000);
@@ -96,7 +99,7 @@ public class Userspage {
 	
 	public static void click_velumasala2020() {
 		//Userspage_velumasala2020.click();
-		driver.findElement(By.xpath("(//input[@role='combobox'])[2]")).sendKeys("velu masala2020",Keys.ENTER);
+		driver.findElement(By.xpath("(//div[@role='combobox']//input)[2]")).sendKeys("velu masala2020",Keys.ENTER);
 
 		try {
 			Thread.sleep(1000);
@@ -190,7 +193,7 @@ public class Userspage {
 	}
 	
 	public static void click_Owner() {
-		Userspage_Owner.click();
+		Userspage_Custom.click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -200,7 +203,7 @@ public class Userspage {
 
 	}
 	public static WebElement getDropDownOwnerElement() {
-		return Userspage_Owner;
+		return Userspage_Custom;
 	}
 
 	public static void click_Savebutton() {

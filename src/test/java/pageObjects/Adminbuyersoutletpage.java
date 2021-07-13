@@ -23,7 +23,7 @@ public class Adminbuyersoutletpage {
 	}
 
 	public static void navigateTo_LogInPage() {
-		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl());
+		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl(true,false,false,false));
 	}
 
 	public void isTosterMessageFound(String msg) {
@@ -103,7 +103,8 @@ public class Adminbuyersoutletpage {
 	
 	@FindBy(xpath = "//button[@class='btn btn-primary']")
 	private static WebElement Adminbuyersoutletpage_Searchbutton;
-
+	
+	
 
 
 
@@ -147,7 +148,7 @@ public class Adminbuyersoutletpage {
 
 
 	public static void Select_Company() throws InterruptedException {
-		driver.findElement(By.xpath("//select[@id='companyId']")).sendKeys("VENKATMASALA",Keys.ENTER);
+		driver.findElement(By.xpath("//select[@id='companyId']")).sendKeys("VELU MASALA",Keys.ENTER);
 		Thread.sleep(5000);
 		try {
 			Thread.sleep(5000);
@@ -418,6 +419,9 @@ public class Adminbuyersoutletpage {
 	public static String getPageTitle() {
 		return driver.getTitle();   
 	}
+
+
+	
 
 	
 }

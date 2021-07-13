@@ -24,24 +24,24 @@ public class InventoryPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	public static void navigateTo_LogInPage() {
-		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl());
+	public void navigateTo_LogInPage2() {
+		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl(false,true,false,false));
 	}
-
-	public static void navigateTo_invoiceprocesspage() {
-		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl());
-	}
+ 
+	/*public static void navigateTo_invoiceprocesspage() { 
+		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl(false));
+	}*/
 
 	public void isTosterMessageFound(String msg) {
 		WebElement tosterMsg = driver.findElement(By.xpath("//*[text()='" + msg + "']"));
 
 	}
 
-	@FindBy(xpath = "//div[text()='Murugan Idli Shop, Chennai']")
+	@FindBy(xpath = "//div[text()='velu masala2020']")
 	private static WebElement btn_outletbtn;
 
 
-	@FindBy(xpath = "(//a[contains(@class,'tab ng-star-inserted')])[2]")
+	@FindBy(xpath = "(//div[@class='pl-1']//a)[2]")
 	private static WebElement btn_Listsbtn;
 
 	@FindBy(xpath = "//div[@class='mt-2 ml-auto']//a[1]")
@@ -50,34 +50,34 @@ public class InventoryPage {
 	@FindBy(xpath = "//input[@formcontrolname='shelveName']")
 	private static WebElement InventoryPage_listname;
 
-	@FindBy(xpath = "(//button[contains(@class,'btn btn-primary')])[3]")
+	@FindBy(xpath = "(//button[@type='submit'])[2]")
 	private static WebElement InventoryPage_Nextbtn;
 
-	@FindBy(xpath = "(//label[contains(@class,'custom-control custom-checkbox')])[2]")
+	@FindBy(xpath = "(//input[@type='checkbox'])[2]")
 	private static WebElement InventoryPage_checkbox;
 
 	@FindBy(xpath = "//button[text()='Done']")
 	private static WebElement InventoryPage_Donebtn;
 
-	@FindBy(xpath = "//div[text()='lingesh']")
-	private static WebElement InventoryPage_lingeshlist;
+	@FindBy(xpath = "//div[text()='sairam']")
+	private static WebElement InventoryPage_sairamlist;
 
 	@FindBy(xpath = "(//button[@type='button'])[3]")
 	private static WebElement InventoryPage_Newstockcountbtn; 
 
-	@FindBy(xpath = "//button[@class='btn btn-success']")
+	@FindBy(xpath = "//button[text()='Start stock count ']")
 	private static WebElement InventoryPage_Startstockcountbtn; 
 
-	@FindBy(xpath = "//input[@class='form-control ng-star-inserted']")
+	@FindBy(xpath = "//input[@type='number']")
 	private static WebElement InventoryPage_Increasecountedquantitybox; 
 
-	@FindBy(xpath = "//input[@class='form-control ng-star-inserted']")
+	@FindBy(xpath = "//input[@type='number']")
 	private static WebElement InventoryPage_Increasesecondtimecountedquantity; 
 
 	@FindBy(xpath = "//input[@class='form-control ng-star-inserted']")
 	private static WebElement InventoryPage_Increasethirdtimecountedquantity;
 
-	@FindBy(xpath = "//input[@class='form-control ng-star-inserted']")
+	@FindBy(xpath = "//input[@class='form-control ng-star-inserted']") 
 	private static WebElement InventoryPage_Increasefourthtimecountedquantity;
 
 	@FindBy(xpath = "//input[@class='form-control ng-star-inserted']")
@@ -108,16 +108,33 @@ public class InventoryPage {
 	private static WebElement InventoryPage_Finalsavebtn;
 
 
-	public void Clicks_in_murugan_idli_shop_outlet() throws InterruptedException {
-		btn_outletbtn.click();
-		Thread.sleep(5000);
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-		} 
-		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
-				.executeScript("return document.readyState").equals("complete"));
-	}
+	
+	@FindBy(xpath = "//div[text()='velu masala2020']")
+	private static WebElement InventoryPage_Velumasala2020_outlets;
+	
+	@FindBy(xpath = "(//div[@class='pl-1']//a)[3]")
+	private static WebElement InventoryPage_Activity_icon;
+	 
+	@FindBy(xpath = "//span[@class='icon_download']//img[1]")
+	private static WebElement InventoryPage_Export_icon;
+	
+	
+	
+	@FindBy(xpath = "//div[text()='velu masala2020']")
+	private static WebElement InventoryPage_velumasala2020_outlet;
+	
+	@FindBy(xpath = "//div[contains(@class,'form-group align-self-center')]//a[1]")
+	private static WebElement InventoryPage_Add_SKU_button;
+	
+	@FindBy(xpath = "//select[@class='custom-select float-left']")
+	private static WebElement InventoryPage_click_Invetorylist;
+	
+	@FindBy(xpath = "(//label[contains(@class, 'custom-control custom-checkbox custom_control_small_txt zmart')])[6]")
+	private static WebElement InventoryPage_checkbox_of_pipers_SKU;
+	
+	@FindBy(xpath = "//button[text()='Done']")
+	private static WebElement InventoryPage_Done_button;
+	
 
 	public void Clicks_in_Lists() throws InterruptedException {
 		btn_Listsbtn.click();
@@ -185,15 +202,7 @@ public class InventoryPage {
 				.executeScript("return document.readyState").equals("complete"));
 	}
 
-	public void Clicks_the_lingesh_list() {
-		InventoryPage_lingeshlist.click();
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-		}
-		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
-				.executeScript("return document.readyState").equals("complete"));
-	}
+
 
 	public void Clicks_the_New_stock_count() {
 		InventoryPage_Newstockcountbtn.click();
@@ -347,25 +356,153 @@ public class InventoryPage {
 	public void Clicks_the_increase_counted_Quantity_of_parisian_Baguetee() {
 		//WebElement Category_Display_Order;
 		InventoryPage_Increasecountedquantitybox.clear();
-		WebDriverWait wait = new WebDriverWait(driver, 10);
-		wait.until(ExpectedConditions.visibilityOf(InventoryPage_Increasecountedquantitybox)).clear();;
-
+		
 	}
 
 	public void Clicks_the_increase_second_time_counted_Quantity_of_parisian_Baguetee() {
 		InventoryPage_Increasesecondtimecountedquantity.sendKeys("10");
 		//WebElement Category_Increase_Value;
 
-		WebDriverWait wait = new WebDriverWait(driver, 10);
-
-		wait.until(ExpectedConditions.visibilityOf(InventoryPage_Increasesecondtimecountedquantity)).click();
-
+		
 		//Category_Display_Order.clear();
 		//Category_Display_Order.sendKeys("1");
 
 		//wait.until(ExpectedConditions.visibilityOf(Category_Increase_Value)).click();
 
 
+	}
+
+	public void Clicks_in_velu_masala2020_outlet() throws InterruptedException {
+		btn_outletbtn.click();
+		Thread.sleep(5000);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public void Clicks_the_sairam_list() {
+		InventoryPage_sairamlist.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	public void clicks_on_the_Cavenagh4_outlets() throws InterruptedException {
+		InventoryPage_Velumasala2020_outlets.click();
+		Thread.sleep(5000);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+
+		
+	}
+
+	public void clicks_on_the_Activity_icon() throws InterruptedException {
+		InventoryPage_Activity_icon.click();
+		Thread.sleep(5000);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+
+	}
+
+	public void clicks_on_the_Export_icon() throws InterruptedException {
+		InventoryPage_Export_icon.click();
+		Thread.sleep(5000);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+
+		
+	}
+	
+	
+	
+	
+
+	public void clicks_on_the_velumasala2020_outlet() throws InterruptedException {
+		InventoryPage_velumasala2020_outlet.click();
+		Thread.sleep(5000);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+
+		
+	}
+
+	public void clicks_on_the_Add_SKU_button() throws InterruptedException {
+		InventoryPage_Add_SKU_button.click();
+		Thread.sleep(5000);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+	
+	public static void click_Inventorylist() {
+		InventoryPage_click_Invetorylist.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+
+	}
+
+	public WebElement getDropDownElementInventorylist() {
+		return InventoryPage_click_Invetorylist;
+	}
+
+	public void clicks_on_the_checkbox_of_pipers_SKU() throws InterruptedException {
+		InventoryPage_checkbox_of_pipers_SKU.click();
+		Thread.sleep(5000);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+		
+	}
+
+	public void clicks_on_the_Done_button() throws InterruptedException {
+		InventoryPage_Done_button.click();
+		Thread.sleep(5000);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	
+		
 	}	
 
-}
+

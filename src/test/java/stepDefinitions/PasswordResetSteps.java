@@ -3,8 +3,10 @@ package stepDefinitions;
 import org.hamcrest.MatcherAssert;
 
 import cucumber.TestContext;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import managers.FileReaderManager;
 import pageObjects.LogInPage;
 import pageObjects.PasswordResetPage;
 
@@ -26,8 +28,16 @@ public class PasswordResetSteps {
 		super(); 
 		this.testContext = testContext;
 		this.PasswordResetPage = testContext.getPageObjectManager().getPasswordResetPage();
-		this.logInPage = testContext.getPageObjectManager().getLogInPage();
+		this.logInPage = (LogInPage) testContext.getPageObjectManager().getLogInPage2();
 		
+	}
+	/*@Given("User are available in login page")
+	public void user_are_available_in_login_page() {
+		LogInPage.navigateTo_LogInPage2();
+	}*/
+	@Given("User is on Login Page")
+	public void user_is_on_Login_Page() {
+		LogInPage.navigateTo_LogInPage2();
 	}
 	
 	@When("User enters exact username {string}")
@@ -97,4 +107,5 @@ public class PasswordResetSteps {
 		System.out.println("passwordresetpage failure page title: " + pageTitle);
 
 	}
+	
 }

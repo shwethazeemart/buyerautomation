@@ -15,14 +15,17 @@ import managers.FileReaderManager;
 public class OrdersPage {
 
 		private static WebDriver driver;
-
-		public OrdersPage(WebDriver driver) {
+ 
+		public OrdersPage(WebDriver driver) { 
 			this.driver = driver;
 			PageFactory.initElements(driver, this);
 		}
+		public void navigateTo_LogInPage2() {
+			driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl(false,true,false,false));
+		}
 
 		public void navigateTo_Orderspage() {
-			driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl());
+			driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl(false,true,false,false)); 
 		}
 		
 		public void isTosterMessageFound(String msg) {
@@ -40,7 +43,7 @@ public class OrdersPage {
 		@FindBy(xpath = "//button[text()=' New order']") 
 		private static WebElement orderspage_Neworder; 
 		
-		@FindBy(xpath = "//li[@class='ng-star-inserted']//a") 
+		@FindBy(xpath = "(//a[@class='dropdown-item fc-blue'])[1]") 
 		private static WebElement orderspage_Neworder1;
 		
 		@FindBy(xpath = "(//button[@class='btn btn-info']//i)[2]")
@@ -52,10 +55,10 @@ public class OrdersPage {
 		@FindBy(xpath = "//span[@id='sideMenu_Orders']")
 		private  WebElement btn_Orders;
 		
-		@FindBy(xpath = "//div[text()='velu masala2020']")
+		@FindBy(xpath = "//div[text()='sabari250']")
 		private static WebElement orderspage_velumasala2020;
 		
-		@FindBy(xpath = "//datatable-body-cell[contains(@class,'datatable-body-cell actionActive')]//div")
+		@FindBy(xpath = "(//div[contains(@class,'addto cursor')])[1]")
 		private static WebElement orderspage_Addtoorder;
 		
 		@FindBy(xpath = "(//button[@data-field='quant[2]'])[2]")
@@ -67,7 +70,7 @@ public class OrdersPage {
 		@FindBy(xpath = "(//order-qty-plus-minus[@class='ng-star-inserted']//div)[2]")
 		private static WebElement orderspage_Addtoorder1;
 		
-		@FindBy(xpath = "//div[@class='submit_button ng-star-inserted']//button[1]")
+		@FindBy(xpath = "//button[text()='Review order']")
 		private static WebElement orderspage_Revieworder;
 		
 		@FindBy(xpath = "//button[text()=' Place Order ']")
@@ -76,7 +79,7 @@ public class OrdersPage {
 		//@FindBy(xpath = "//div[@class='d-flex align-items-center']//div")
 		//private static WebElement Orderspage_link_TxtBoxContent;
 		
-		
+		 
 		@FindBy(xpath = "//button[text()='Back to Orders']")
 		private static WebElement orderspage_BacktoOrderbutton;
 		
@@ -101,18 +104,13 @@ public class OrdersPage {
 		@FindBy(xpath = "(//button[@class='btn btn-info']//i)[2]")
 		private static WebElement orderspage_fthtimeIncreaseAddtoorder;
 		
-		@FindBy(xpath = "(//datatable-body-cell[@ng-reflect-row-index='5']//div)[2]")
-		private static WebElement orderspage_newlycreatedorder;
+		//@FindBy(xpath = "(//datatable-body-cell[@ng-reflect-row-index='5']//div)[2]")
+		//private static WebElement orderspage_newlycreatedorder;
 		
 		@FindBy(xpath = "//p[text()='Orders']")
 		private static WebElement orderspage_backbuttonordersr;
 		
-		
-		public void navigateTo_LogInPage() {
-			driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl());
-		}
-		
-		
+	
 		@FindBy(xpath = "//input[@placeholder='Password']")
 		private static WebElement btn_loginpassword;
 		
@@ -121,6 +119,22 @@ public class OrdersPage {
 		
 		@FindBy(xpath = "(//li[@role='menuitem']//a)[2]")
 		private static WebElement orderspage_Newrecurringorders;
+		
+		
+		@FindBy(xpath = "//a[@class='pull-right export-mclr']")
+		private static WebElement orderspage_filter_option;
+		
+		@FindBy(xpath = "//div[text()=' Order status  ']")
+		private static WebElement orderspage_order_status;
+		
+		@FindBy(xpath = "//span[text()=' Void']")
+		private static WebElement orderspage_void_checkbox;
+		
+		@FindBy(xpath = "//button[text()='Apply']")
+		private static WebElement orderspage_Apply_button;
+		 
+		
+		
 		
 		public void enter_LoginEmail(String email) { 
 			btn_loginEmail.sendKeys(email);
@@ -275,7 +289,7 @@ public class OrdersPage {
 		
 		}
 		public static void paste_OrderID(Object orderID) {
-			OrdersPage_OrderID.sendKeys("202011130001");
+			//OrdersPage_OrderID.sendKeys("202011130001");
 		}
 		public static void click_Searchbutton() {
 			orderspage_Searchbutton.click();
@@ -336,16 +350,7 @@ public class OrdersPage {
 			
 		}
 
-		public static void click_newlycreatedorder() {
-			orderspage_newlycreatedorder.click();
-			try {
-				Thread.sleep(5000);
-			} catch (InterruptedException e) {
-			}
-			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
-					.executeScript("return document.readyState").equals("complete"));
-			
-		}
+		
 
 		public static void click_backbuttonorders() {
 			orderspage_backbuttonordersr.click();
@@ -368,14 +373,55 @@ public class OrdersPage {
 					.executeScript("return document.readyState").equals("complete"));
 		
 			
+		}
+		
+		
+		
+		
+		
+		public static void clicks_on_the_filter_option() {
+			orderspage_filter_option.click();
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+			}
+			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+					.executeScript("return document.readyState").equals("complete"));
+		
+			
+		}
+		public static void clicks_on_the_order_status() {
+			orderspage_order_status.click();
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+			}
+			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+					.executeScript("return document.readyState").equals("complete"));
+			
+		}
+		public static void clicks_on_the_void_checkbox() {
+			orderspage_void_checkbox.click();
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+			}
+			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+					.executeScript("return document.readyState").equals("complete"));
+			
+		}
+		public static void clicks_on_the_Apply_button() {
+			orderspage_Apply_button.click();
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+			}
+			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+					.executeScript("return document.readyState").equals("complete"));
+			
 		} 
 		
-	/*	public static void clickOrders() {
-		
-			button_Orders.click();
-			
-		  }*/
-		}
+	}
 
 			
 		

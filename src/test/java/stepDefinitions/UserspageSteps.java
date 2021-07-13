@@ -32,12 +32,11 @@ public class UserspageSteps {
 		super();
 		this.testContext = testContext;
 		this.orderspage = testContext.getPageObjectManager().getOrdersPage();
-		this.logInPage = testContext.getPageObjectManager().getLogInPage();
+		this.logInPage = (LogInPage) testContext.getPageObjectManager().getLogInPage2();
 		this.invoicespage = (InvoicesPage) testContext.getPageObjectManager().getInvoicesPage();
 		this.dashboradpage = testContext.getPageObjectManager().getDashboardPage();
 		this.userspage = (Userspage)testContext.getPageObjectManager().getUsersPage();
 	}
-
 
 	@And("User Clicks on Users in the side navigation menubar")
 	public void user_Clicks_on_Users_in_the_side_navigation_menubar() throws InterruptedException {
@@ -112,9 +111,9 @@ public class UserspageSteps {
 
 	@Then("User is Select Owner in the permissions dropdown")
 	public void user_is_Select_Owner_in_the_permissions_dropdown() {
-		WebElement Owner = Userspage.getDropDownOwnerElement();
-		Select select=new Select(Owner);
-		select.selectByIndex(1);
+		WebElement Custom = Userspage.getDropDownOwnerElement();
+		Select select=new Select(Custom);
+		select.selectByIndex(0);
 	}
 
 	@Then("User is Clicks Save button") 

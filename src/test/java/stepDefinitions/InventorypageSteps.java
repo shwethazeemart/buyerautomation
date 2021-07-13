@@ -5,6 +5,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import cucumber.TestContext;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageObjects.DashboardPage;
@@ -33,7 +34,7 @@ public class InventorypageSteps {
 		super();
 		this.testContext = testContext;
 		this.orderspage = testContext.getPageObjectManager().getOrdersPage();
-		this.logInPage = testContext.getPageObjectManager().getLogInPage();
+		this.logInPage = (LogInPage) testContext.getPageObjectManager().getLogInPage2();
 		this.invoicespage = (InvoicesPage) testContext.getPageObjectManager().getInvoicesPage(); 
 		this.dashboradpage = testContext.getPageObjectManager().getDashboardPage();
 		this.invoiceProcessPage = (InvoiceprocessPage)testContext.getPageObjectManager().getInvoiceprocesspage();
@@ -41,16 +42,17 @@ public class InventorypageSteps {
 	}
 	
 	
+	
 	@When("User Clicks on Inventory in the side navigation menubar")
-	public void user_Clicks_on_Inventory_in_the_side_navigation_menubar() throws InterruptedException {
+	public void user_Clicks_on_Inventory_in_the_side_navigation_menubar()  {
 		dashboradpage.clickInventory();
-	}
+	} 
 
-	@Then("User is Clicks in murugan idli shop outlet")
-	public void user_is_Clicks_in_murugan_idli_shop_outlet() throws InterruptedException {
-	    inventorypage.Clicks_in_murugan_idli_shop_outlet();
+	@Then("User is Clicks in velu masala2020 outlet")
+	public void user_is_Clicks_in_velu_masala2020_outlet() throws InterruptedException {
+	    inventorypage.Clicks_in_velu_masala2020_outlet();
 		
-	}
+	} 
 
 	@And("User are Clicks in Lists")
 	public void user_are_Clicks_in_Lists() throws InterruptedException {
@@ -90,9 +92,9 @@ public class InventorypageSteps {
 	    inventorypage.Clicks_Done_button();		
 	}
 
-	@Then("User are Clicks the lingesh list")
-	public void user_are_Clicks_the_lingesh_list() {
-	    inventorypage.Clicks_the_lingesh_list();
+	@Then("User are Clicks the sairam list")
+	public void user_are_Clicks_the_sairam_list() {
+	    inventorypage.Clicks_the_sairam_list();
 	}
 
 	@And("User is Clicks the New stock count")
@@ -171,6 +173,51 @@ public class InventorypageSteps {
 	public void user_are_Clicks_final_Save_button() {
 	    //inventorypage.Clicks_final_Save_button();
 	}
+	@Then("User clicks on the Cavenagh4 outlets")
+	public void user_clicks_on_the_Cavenagh4_outlets() throws InterruptedException {
+		inventorypage.clicks_on_the_Cavenagh4_outlets();
+	}
 
+	@Then("User clicks on the Activity icon")
+	public void user_clicks_on_the_Activity_icon() throws InterruptedException {
+		inventorypage.clicks_on_the_Activity_icon();
+	}
+
+	@Then("User clicks on the Export icon")
+	public void user_clicks_on_the_Export_icon() throws InterruptedException {
+		inventorypage.clicks_on_the_Export_icon();
+	}
+	
+	
+	
+	
+	
+	
+	@Then("User clicks on the velumasala2020 outlet")
+	public void user_clicks_on_the_velumasala2020_outlet() throws InterruptedException {
+		inventorypage.clicks_on_the_velumasala2020_outlet();
+	}
+
+	@Then("User clicks on the Add SKU button")
+	public void user_clicks_on_the_Add_SKU_button() throws InterruptedException {
+		inventorypage.clicks_on_the_Add_SKU_button();
+	}
+
+	@Then("User select on the inventory list in dropdown field")
+	public void user_select_on_the_inventory_list_in_dropdown_field() {
+		WebElement velu = inventorypage.getDropDownElementInventorylist();
+		Select select=new Select(velu);
+		select.selectByIndex(2);
+	}
+
+	@Then("User clicks on the checkbox of pipers SKU")
+	public void user_clicks_on_the_checkbox_of_pipers_SKU() throws InterruptedException {
+		inventorypage.clicks_on_the_checkbox_of_pipers_SKU();
+	}
+
+	@Then("User clicks on the Done button")
+	public void user_clicks_on_the_Done_button() throws InterruptedException {
+		inventorypage.clicks_on_the_Done_button(); 
+	}
 	
 }

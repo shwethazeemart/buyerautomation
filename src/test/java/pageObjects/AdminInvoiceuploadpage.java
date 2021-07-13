@@ -23,7 +23,7 @@ public class AdminInvoiceuploadpage {
 	}
 
 	public static void navigateTo_LogInPage() {
-		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl());
+		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl(true,false,false,false));
 	}
 
 	public void isTosterMessageFound(String msg) {

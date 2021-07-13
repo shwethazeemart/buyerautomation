@@ -29,17 +29,17 @@ public class InvoicespageSteps {
 		super();
 		this.testContext = testContext;
 		this.orderspage = testContext.getPageObjectManager().getOrdersPage();
-		this.logInPage = testContext.getPageObjectManager().getLogInPage();
+		this.logInPage = (LogInPage) testContext.getPageObjectManager().getLogInPage2();
 		this.invoicespage = (InvoicesPage) testContext.getPageObjectManager().getInvoicesPage();
 		this.dashboradpage = testContext.getPageObjectManager().getDashboardPage();
 
 	}
 	
-
+	
 	
 	@Then("User Clicks on Invoices in the side navigation menubar")
 	public void user_Clicks_Orders_in_the_side_navigation_menubar() throws InterruptedException {
-		//dashboradpage.clickInvoices();
+		dashboradpage.clickInvoices();
 	}
 
 	@Given("User is Clicks in Uploads")
@@ -53,12 +53,12 @@ public class InvoicespageSteps {
 	}
 
 	@And("User is Clicks on select outlet")
-	public void user_is_Clicks_on_select_outlet() {
+	public void user_is_Clicks_on_select_outlet() throws InterruptedException {
 		InvoicesPage.click_selectoutlet(); 
 	}
 
 	@Then("User is Clicks on upload the image")
-	public void user_is_Clicks_on_upload_the_image() {
+	public void user_is_Clicks_on_upload_the_image() throws InterruptedException {
 		//WebElement uploadBox=InvoicesPage.Uploadimage();
 		InvoicesPage.Clicks_on_upload_the_image();
 	}

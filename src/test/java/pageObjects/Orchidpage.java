@@ -24,9 +24,9 @@ public class Orchidpage {
 		PageFactory.initElements(driver, this);
 	}
 
-	public static void navigateTo_LogInPage() {
-		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl());
-	} 
+/*	public static void navigateTo_LogInPage() {
+		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl(false,false,true));
+	} */
 
 	public void isTosterMessageFound(String msg) {
 		WebElement tosterMsg = driver.findElement(By.xpath("//*[text()='" + msg + "']"));
@@ -331,48 +331,10 @@ public class Orchidpage {
 	public static String getPageTitle() {
 		return driver.getTitle();   
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+	public void user_is_navigateTo_LogInPage() {
+		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl(false,false,true,false));
+		
+	}	
 	
 }

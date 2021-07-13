@@ -34,7 +34,7 @@ public class AdmininvoiceprocesspageSteps {
 		this.admininvoiceuploadpage=(AdminInvoiceuploadpage)testContext.getPageObjectManager().getAdminInvoiceuploadpageSteps();
 		this.admininvoiceprocesspage=(Admininvoiceprocesspage)testContext.getPageObjectManager().getAdmininvoiceprocesspageSteps();
 		this.testContext = testContext;
-		this.logInPage = testContext.getPageObjectManager().getLogInPage(); 
+		this.logInPage = testContext.getPageObjectManager().getLogInPage1(); 
 		this.dashboradpage = testContext.getPageObjectManager().getDashboardPage();
 	}
 	

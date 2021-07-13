@@ -17,19 +17,27 @@ import pageObjects.LogInPage;
 public class LogInPageSteps {
     private TestContext testContext;
     private LogInPage logInPage;
+	private Object logInPage2;
     
     
     public LogInPageSteps(TestContext testContext) {
         super();
         this.testContext = testContext;
-        this.logInPage = testContext.getPageObjectManager().getLogInPage();
+        this.logInPage = testContext.getPageObjectManager().getLogInPage1();
+        this.logInPage2 = testContext.getPageObjectManager().getLogInPage2();
         
     }
 
-    @Given("User is on Login Page")
-    public void user_is_on_Home_Page() {
-        logInPage.navigateTo_LogInPage1();
-    }
+   
+    @Given("User are available in login page")
+	public void user_are_available_in_login_page() {
+		LogInPage.navigateTo_LogInPage1();
+	}
+    
+    @Given("User is on login page") 
+	public void user_is_on_Login_Page() {
+		LogInPage.navigateTo_LogInPage2();
+	}
 
     @When("User enters username {string}")
     public void user_enters_username(String loginEmail) {
@@ -42,7 +50,7 @@ public class LogInPageSteps {
     }
 
     @When("User Clicks Login button")
-    public void user_Clicks_Login_button() {
+    public void user_Clicks_Login_button() throws InterruptedException {
         logInPage.click_LoginBtn();
     }
     /*@When("User Clicks Login button")

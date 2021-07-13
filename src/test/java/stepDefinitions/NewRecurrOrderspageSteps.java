@@ -35,7 +35,7 @@ public class NewRecurrOrderspageSteps {
 		super();
 		this.testContext = testContext;
 		this.orderspage = testContext.getPageObjectManager().getOrdersPage();
-		this.logInPage = testContext.getPageObjectManager().getLogInPage();
+		this.logInPage = (LogInPage) testContext.getPageObjectManager().getLogInPage2();
 		this.invoicespage = (InvoicesPage) testContext.getPageObjectManager().getInvoicesPage(); 
 		this.dashboradpage = testContext.getPageObjectManager().getDashboardPage();
 		this.invoiceProcessPage = (InvoiceprocessPage)testContext.getPageObjectManager().getInvoiceprocesspage();
@@ -44,6 +44,8 @@ public class NewRecurrOrderspageSteps {
 		
 
 	}
+	
+	
 	
 	@When("User is Clicks Orders in the side navigation menubar")
 	public void user_is_Clicks_Orders_in_the_side_navigation_menubar() throws InterruptedException {
@@ -62,16 +64,16 @@ public class NewRecurrOrderspageSteps {
 
 	@When("User select outlet in the dropdown list")
 	public void user_select_outlet_in_the_dropdown_list() {
-		WebElement velumasala2020 = Newrecurringorderspage.getDropDownOwnerElement();
-		Select select=new Select(velumasala2020);
-		select.selectByIndex(1);
+		WebElement PRABAWINES = Newrecurringorderspage.getDropDownOwnerElement();
+		Select select=new Select(PRABAWINES);
+		select.selectByIndex(8);
 	}
 
 	@When("User select supplier in the dropdown list")
 	public void user_select_supplier_in_the_dropdown_list() {
-		WebElement sabari250 = Newrecurringorderspage.getDropDownElementsupplier();
-		Select select=new Select(sabari250);
-		select.selectByVisibleText("sabari250");
+		WebElement MRFruits = Newrecurringorderspage.getDropDownElementsupplier();
+		Select select=new Select(MRFruits);
+		select.selectByVisibleText("MR Fruits");
 	}
 
 	@When("User Clicks on deliver date in tuesday")
@@ -96,9 +98,9 @@ public class NewRecurrOrderspageSteps {
 
 	@When("User select contact person in the dropdown list")
 	public void user_select_contact_person_in_the_dropdown_list() {
-		WebElement velumanieswaran2020 = Newrecurringorderspage.getDropDownOwnerElementcontactperson();
-		Select select=new Select(velumanieswaran2020);
-		select.selectByIndex(4);
+		WebElement kovalan = Newrecurringorderspage.getDropDownOwnerElementcontactperson();
+		Select select=new Select(kovalan);
+		select.selectByIndex(3);
 	}
 
 	@When("User Clicks on the Done button")
@@ -139,6 +141,15 @@ public class NewRecurrOrderspageSteps {
 	@Then("User Clicks on sixth time increase the order button in the first product")
 	public void user_Clicks_on_sixth_time_increase_the_order_button_in_the_first_product() {
 	   newrecurringorderspage.Clicks_on_sixth_time_increase_the_order_button_in_the_first_product();
+	}
+	@Then("User Clicks on seven time increase the order button in the first product")
+	public void user_Clicks_on_seven_time_increase_the_order_button_in_the_first_product() {
+	   newrecurringorderspage.Clicks_on_seven_time_increase_the_order_button_in_the_first_product();
+	}
+	
+	@Then("User Clicks on eight time increase the order button in the first product")
+	public void user_Clicks_on_eight_time_increase_the_order_button_in_the_first_product() {
+	   newrecurringorderspage.Clicks_on_eight_time_increase_the_order_button_in_the_first_product();
 	}
 	
 	@Then("User Clicks on Review Order button")
