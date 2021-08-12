@@ -142,6 +142,7 @@ public class DashboardPage {
 				.executeScript("return document.readyState").equals("complete"));
 	}
 	public void clickInvoices() throws InterruptedException {
+		driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
 		button_Invoices.click();
 		Thread.sleep(5000); 
 		try {

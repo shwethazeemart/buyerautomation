@@ -9,12 +9,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import enums.DriverType;
 import enums.EnvironmentType;
-/**
- * 
- * @author AjanthanSivalingarajah
- * @since 2020/05/12
- *
- */
+
 public class WebDriverManager {
     private WebDriver driver;
     private static DriverType driverType;

@@ -1,10 +1,10 @@
 Feature: verify Admin panel and test all the page
 
 
-Scenario Outline: Verify the Suppliers page in view outlets Admin panel    
+Scenario Outline: Verify the Suppliers page in view outlets Admin hub    
   
           Given User are available in login page
-          When User is enter exact username"<username>" 
+          When User is enter exact username"<username>"  
           And User is enter exact password"<password>"
           When User are Select country in the autocomplete text box
           And User is press the Admin login button 
@@ -18,7 +18,7 @@ Scenario Outline: Verify the Suppliers page in view outlets Admin panel
           When User are Select outlet in the autocomplete textbox
           Then User is Enter the custom outletID"<outletid>"
           And User are Enter custom billingID"<billingid>" 
-          Then User is Clicks the checkbox in default settings
+          Then User is Clicks the checkbox in default settings 
           And User are Enter Email in the Email address field"<Email>"
           Then User is Enter mobile number in the SMS field"<Mobilenumbersms>"  
           And User are Enter mobile number whatsapp field"<mobilenumberwhatsapp>"
@@ -51,7 +51,7 @@ Scenario Outline: Verify the Suppliers page in view outlets Admin panel
          |guna@zeemart.asia|  |2p$2s?QU    ||VENKAT MASALA||CGP_12345 ||ZM-456    ||velumani@zeemart.asia ||+65123456789    ||+65123456789        ||100          ||1               ||1                ||SIN-4178   ||velumani@zeemart.asia||velumani     | |+65123456789 ||In our company sales only masala product|
 
 
-@Smoke
+ 
 Scenario Outline: Verify the Users page new admin user in Admin panel    
   
           Given User are available in login page

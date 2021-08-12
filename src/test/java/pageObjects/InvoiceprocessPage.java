@@ -51,13 +51,13 @@ public class InvoiceprocessPage {
 	@FindBy(xpath = "//button[text()='Today']")
 	private static WebElement invoiceprocesspageSteps_Todaybutton;
 
-	@FindBy(xpath = "(//button[contains(@class,'btn btn-success')])[3]")
+	@FindBy(xpath = "(//button[contains(@class,'btn btn-success')])[1]")
 	private static WebElement btn_processbtn;
 
-	@FindBy(xpath = "//select[contains(@class,'custom-select float-left')]")
-	private static WebElement invoiceprocesspageSteps_velumasala2020;
+	@FindBy(xpath = "//select[contains(@id,'country')]")
+	private static WebElement invoiceprocesspageSteps_sabari250;
 
-	@FindBy(xpath = "//input[contains(@class,'form-control ht_37')]")
+	@FindBy(xpath = "//input[@placeholder='Invoice number']")
 	private static WebElement btn_invoicenumber;
 
 
@@ -70,9 +70,9 @@ public class InvoiceprocessPage {
 	@FindBy(xpath = "//select[contains(@class,'custom-select ng-untouched')]")
 	private static WebElement invoiceprocesspageSteps_Paymentsterms;
 
-	@FindBy(xpath = "(//button[contains(@class,'btn btn-primary')])[2]")
+	@FindBy(xpath = "(//button[@type='button'])[3]")
 	private static WebElement invoiceprocesspageSteps_Validatebutton;
-
+	 
 	@FindBy(xpath = "//button[contains(@class,'btn btn-success')]")
 	private static WebElement invoiceprocesspageSteps_Publishbutton;
 
@@ -93,7 +93,7 @@ public class InvoiceprocessPage {
 	}
 
 	public static void click_velumasala2020() throws InterruptedException {
-		invoiceprocesspageSteps_velumasala2020.click();
+		invoiceprocesspageSteps_sabari250.click();
 		Thread.sleep(5000);
 		try {
 			Thread.sleep(5000);
@@ -104,12 +104,17 @@ public class InvoiceprocessPage {
 
 	}
 	public WebElement getDropDownElement() {
-		return invoiceprocesspageSteps_velumasala2020;
+		return invoiceprocesspageSteps_sabari250;
 	} 
 
 	public static void click_Ordernumber() {
-		driver.findElement(By.xpath("(//input[@role='combobox'])[1]")).click();
-
+		driver.findElement(By.xpath("(//div[@role='combobox']//input)[1]")).click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
 		
 	}
 
@@ -130,7 +135,13 @@ public class InvoiceprocessPage {
 			System.out.println("Values are = " + a.getText());
 		    autoSuggest.get(2).click();
 	}*/
-		driver.findElement(By.xpath("(//input[@role='combobox'])[1]")).sendKeys("202011160003",Keys.ENTER);
+		driver.findElement(By.xpath("(//div[@role='combobox']//input)[1]")).sendKeys("202108100015",Keys.ENTER);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
 
 	/*WebElement autoOptions= driver.findElement(By.xpath("(//input[@role='combobox'])[1]"));
 		autoOptions.sendKeys("202011160002");
@@ -253,12 +264,19 @@ public class InvoiceprocessPage {
 	}
 
 	public static void enter_invoicenumber(Integer invoicenumber) {
-		btn_invoicenumber.sendKeys("INV-20123456");
+		btn_invoicenumber.sendKeys("INV-20123456789");
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+
 
 	}
 	public static void SelectcalendarByJS() {
 
-
+ 
 
 
 		///*JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -283,7 +301,7 @@ public class InvoiceprocessPage {
 
 
 
-		js.executeScript("arguments[0].value='17Nov2020';", DateBox);
+		js.executeScript("arguments[0].value='10Aug2021';", DateBox);
 		//dateBox.sendKeys("17-Nov-2020");
 		//DateBox.clear();
 		//DateBox.sendKeys("17Nov2020");
@@ -300,7 +318,7 @@ public class InvoiceprocessPage {
 				.executeScript("return document.readyState").equals("complete"));
 
 		
-	}
+	} 
 
 	/*public  WebElement SelectcalendarByJS() {
 		return invoiceprocesspageSteps_selectDateByJS;

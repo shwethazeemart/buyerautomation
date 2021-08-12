@@ -19,6 +19,7 @@ import stepDefinitions.AdminbuyersoutletpageSteps;
 //import stepDefinitions.Adminsupplierspage;
 import stepDefinitions.AdminsupplierspageSteps;
 import stepDefinitions.Automationtesting;
+import stepDefinitions.Buyerinvoicelisen;
 //import stepDefinitions.Invoiceprocesspage;
 import stepDefinitions.InvoiceprocesspageSteps;
 import stepDefinitions.InvoicespageSteps;
@@ -40,18 +41,13 @@ import pageObjects.Adminnewsupplieruserpage;
 import pageObjects.Adminsupplierpage;
 import pageObjects.Adminsuppliersviewoutletspage;
 import pageObjects.Automationtestingpage;
+import pageObjects.Buyerinvoicelisenpage;
 import pageObjects.DashboardPage;
 import pageObjects.InventoryPage;
 import pageObjects.InvoiceprocessPage;
 import pageObjects.InvoicesPage;
 
-/**
- * 
- * @author AjanthanSivalingarajah
- * @param <admininvoiceuploadpageSteps>
- * @since 2020/05/12
- *
- */
+
 public class PageObjectManager<admininvoiceuploadpageSteps> {
     private WebDriver driver; 
 
@@ -80,7 +76,7 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private Adminbuyerlinktothecompanypage adminbuyerlinktothecompany;
 	private Object userspage;
     private Automationtestingpage automationtesting;
-    
+    private Buyerinvoicelisenpage buyerinvoicelisen;
 
     public PageObjectManager(WebDriver driver) {
         this.driver = driver;
@@ -209,6 +205,11 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 
 	public Automationtestingpage getAutomationtestingpage() {
 		return (automationtesting == null) ? (automationtesting = new Automationtestingpage(driver)) : automationtesting;
+	}
+
+
+	public Buyerinvoicelisenpage getBuyerinvoicelisen() {
+		return (buyerinvoicelisen == null) ? (buyerinvoicelisen = new Buyerinvoicelisenpage(driver)) : buyerinvoicelisen;
 	}
 	}
 	

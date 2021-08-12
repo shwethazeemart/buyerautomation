@@ -64,16 +64,16 @@ public class NewRecurrOrderspageSteps {
 
 	@When("User select outlet in the dropdown list")
 	public void user_select_outlet_in_the_dropdown_list() {
-		WebElement PRABAWINES = Newrecurringorderspage.getDropDownOwnerElement();
-		Select select=new Select(PRABAWINES);
-		select.selectByIndex(8);
+		WebElement Narenwineshop = Newrecurringorderspage.getDropDownOwnerElement();
+		Select select=new Select(Narenwineshop);
+		select.selectByIndex(4);
 	}
 
 	@When("User select supplier in the dropdown list")
 	public void user_select_supplier_in_the_dropdown_list() {
-		WebElement MRFruits = Newrecurringorderspage.getDropDownElementsupplier();
-		Select select=new Select(MRFruits);
-		select.selectByVisibleText("MR Fruits");
+		WebElement Narenmasala = Newrecurringorderspage.getDropDownElementsupplier();
+		Select select=new Select(Narenmasala);
+		select.selectByVisibleText("Naren masala");
 	}
 
 	@When("User Clicks on deliver date in tuesday")
@@ -100,7 +100,7 @@ public class NewRecurrOrderspageSteps {
 	public void user_select_contact_person_in_the_dropdown_list() {
 		WebElement kovalan = Newrecurringorderspage.getDropDownOwnerElementcontactperson();
 		Select select=new Select(kovalan);
-		select.selectByIndex(3);
+		select.selectByIndex(1);
 	}
 
 	@When("User Clicks on the Done button")
@@ -152,8 +152,45 @@ public class NewRecurrOrderspageSteps {
 	   newrecurringorderspage.Clicks_on_eight_time_increase_the_order_button_in_the_first_product();
 	}
 	
+	@Then("User Clicks on nineth time increase the order button in the first product")
+	public void user_Clicks_on_nineth_time_increase_the_order_button_in_the_first_product() {
+		 newrecurringorderspage.Clicks_on_nineth_time_increase_the_order_button_in_the_first_product();
+	}
+
+	@Then("User Clicks on tenth time increase the order button in the first product")
+	public void user_Clicks_on_tenth_time_increase_the_order_button_in_the_first_product() {
+		 newrecurringorderspage.Clicks_on_tenth_time_increase_the_order_button_in_the_first_product();
+	}
+
+	@Then("User Clicks on eleventh time increase the order button in the first product")
+	public void user_Clicks_on_eleventh_time_increase_the_order_button_in_the_first_product() {
+		 newrecurringorderspage.Clicks_on_eleventh_time_increase_the_order_button_in_the_first_product();
+	}
+
+	@Then("User Clicks on twvelth time increase the order button in the first product")
+	public void user_Clicks_on_twvelth_time_increase_the_order_button_in_the_first_product() {
+		 newrecurringorderspage.Clicks_on_twvelth_time_increase_the_order_button_in_the_first_product();
+	}
+
+	@Then("User Clicks on thirteenth time increase the order button in the first product")
+	public void user_Clicks_on_thirteenth_time_increase_the_order_button_in_the_first_product() {
+		 newrecurringorderspage.Clicks_on_thirteenth_time_increase_the_order_button_in_the_first_product();
+	}
+
+	@Then("User Clicks on fourteenth time increase the order button in the first product")
+	public void user_Clicks_on_fourteenth_time_increase_the_order_button_in_the_first_product() {
+		 newrecurringorderspage.Clicks_on_fourteenth_time_increase_the_order_button_in_the_first_product();
+	}
+
+	@Then("User Clicks on fifteenth time increase the order button in the first product")
+	public void user_Clicks_on_fifteenth_time_increase_the_order_button_in_the_first_product() {
+		 newrecurringorderspage.Clicks_on_fifteenth_time_increase_the_order_button_in_the_first_product();
+	}
+
+
+	
 	@Then("User Clicks on Review Order button")
-	public void user_Clicks_on_Review_Order_button() {
+	public void user_Clicks_on_Review_Order_button() { 
 		newrecurringorderspage.Clicks_on_Review_Oreder_button();
 	}
 
@@ -175,7 +212,7 @@ public class NewRecurrOrderspageSteps {
 	}
 
 
-
+ 
 	
 	
 	

@@ -1,6 +1,6 @@
 Feature: verify login and the Orchid page
 
- Scenario Outline: Verify the Orchid page in view outlets Admin panel    
+ Scenario Outline: Verify the Orchid page in view outlets Admin panel     
   
           Given User is navigateTo LogInPage
           When User is  Clicks in Home link button

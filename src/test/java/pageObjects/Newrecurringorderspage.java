@@ -88,6 +88,29 @@ public class Newrecurringorderspage {
 	@FindBy(xpath = "//button[@data-type='plus']") 
 	private static WebElement Newrecurringorderspage_eighttimeincreaseAddtoorder; 
 	
+	@FindBy(xpath = "//button[@data-type='plus']") 
+	private static WebElement Newrecurringorderspage_ninethtimeincreaseAddtoorder;
+	
+	@FindBy(xpath = "//button[@data-type='plus']") 
+	private static WebElement Newrecurringorderspage_tenthtimeincreaseAddtoorder;
+	
+	@FindBy(xpath = "//button[@data-type='plus']") 
+	private static WebElement Newrecurringorderspage_eleventhtimeincreaseAddtoorder;
+	
+	@FindBy(xpath = "//button[@data-type='plus']") 
+	private static WebElement Newrecurringorderspage_twvelthtimeincreaseAddtoorder;
+	
+	@FindBy(xpath = "//button[@data-type='plus']") 
+	private static WebElement Newrecurringorderspage_thirteenthtimeincreaseAddtoorder;
+	
+	@FindBy(xpath = "//button[@data-type='plus']") 
+	private static WebElement Newrecurringorderspage_fourteenthtimeincreaseAddtoorder;
+	
+	@FindBy(xpath = "//button[@data-type='plus']") 
+	private static WebElement Newrecurringorderspage_fifteenthtimeincreaseAddtoorder;
+	
+	
+	
 	@FindBy(xpath = "//button[text()='Review order']") 
 	private static WebElement Newrecurringorderspage_Revieworderbtn; 
 	
@@ -355,5 +378,81 @@ public class Newrecurringorderspage {
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
 		
+	}
+
+	public void Clicks_on_nineth_time_increase_the_order_button_in_the_first_product() {
+		Newrecurringorderspage_ninethtimeincreaseAddtoorder.click();
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	public void Clicks_on_tenth_time_increase_the_order_button_in_the_first_product() {
+		Newrecurringorderspage_tenthtimeincreaseAddtoorder.click();
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public void Clicks_on_eleventh_time_increase_the_order_button_in_the_first_product() {
+		Newrecurringorderspage_eleventhtimeincreaseAddtoorder.click();
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public void Clicks_on_twvelth_time_increase_the_order_button_in_the_first_product() {
+		Newrecurringorderspage_twvelthtimeincreaseAddtoorder.click();
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public void Clicks_on_thirteenth_time_increase_the_order_button_in_the_first_product() {
+		Newrecurringorderspage_thirteenthtimeincreaseAddtoorder.click();
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+		
+	}
+
+	public void Clicks_on_fourteenth_time_increase_the_order_button_in_the_first_product() {
+		Newrecurringorderspage_fourteenthtimeincreaseAddtoorder.click();
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public void Clicks_on_fifteenth_time_increase_the_order_button_in_the_first_product() {
+		Newrecurringorderspage_fifteenthtimeincreaseAddtoorder.click();
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
 	}
 }

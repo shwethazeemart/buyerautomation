@@ -36,7 +36,7 @@ public class Admininvoiceprocesspage {
 	@FindBy(xpath = "(//a[@class='dropdown-item fntcs'])[2]")
 	private static WebElement Admininvoiceprocesspage_Newestfirst;
 
-	@FindBy(xpath = "(//button[@class='btn btn-success ng-star-inserted'])[1]")
+	@FindBy(xpath = "(//button[text()='Process'])[2]")
 	private static WebElement Admininvoiceprocesspage_processbutton;
 
 	@FindBy(xpath = "//input[@placeholder='Enter Order No.']")
@@ -173,7 +173,7 @@ public class Admininvoiceprocesspage {
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 
-		js.executeScript("arguments[0].value='02Dec2020';", DateBox);
+		js.executeScript("arguments[0].value='09August2021';", DateBox);
 
 
 	}

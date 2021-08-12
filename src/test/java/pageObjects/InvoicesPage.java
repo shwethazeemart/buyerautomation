@@ -48,7 +48,7 @@ public class InvoicesPage {
 	//@FindBy(xpath="//input[@id='file']")
 	//private static WebElement Invoicespage_Uploadimage; 
 
-	@FindBy(xpath="//button[text()=' Upload ']")  
+	@FindBy(xpath="//button[text()='Done']")  
 	private static WebElement Invoicespage_Uploadbutton;  
 	
 	

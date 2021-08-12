@@ -82,7 +82,7 @@ public class InvoiceprocesspageSteps {
 	public void user_are_Select_supplier_in_the_dropdown_lists() {
 		WebElement velumasala2020 = invoiceProcessPage.getDropDownElement();
 		Select select=new Select(velumasala2020);
-		select.selectByIndex(1);
+		select.selectByIndex(2);
 	}
 	@And("User is set the invoice number\"INV-{int}\"")
 	public void user_is_set_the_invoice_number_INV(Integer invoicenumber) {

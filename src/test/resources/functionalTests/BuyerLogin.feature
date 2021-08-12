@@ -1,5 +1,5 @@
 Feature: verify Buyer page and the test all the page
-
+ 
 Scenario Outline: Customer wants to reset password
     Given User is on Login Page
     When User enters exact username "<username>"
@@ -7,7 +7,7 @@ Scenario Outline: Customer wants to reset password
     Then User shown with Reset password screen "Validate Email | Buyer Hub"
     When User enters invalid email for password reset page "<invalidEmail>"
     Then User shown with invalid email error message "Must be email"
-    And User enters valid but unregisterd email for password reset "<noregisteredEmail>"
+    And User enters valid but unregisterd email for password reset "<noregisteredEmail>" 
     When User clicks on Send request for password reset
     Then User shown with non registered email error message "Email not valid"
     And User enters valid registered email "<regesteredEmail>"
