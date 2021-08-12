@@ -8,87 +8,95 @@ import java.util.Properties;
 
 import enums.DriverType;
 import enums.EnvironmentType;
-/**
- * 
- * @author AjanthanSivalingarajah
- * @since 2020/05/12
- *
- */
+
+
 public class ConfigFileReader {
-    private Properties properties;
+	private Properties properties;
 
-    private final String propertyFilePath = "configs//Configuration.properties";
+	private final String propertyFilePath = "configs//Configuration.properties";
 
-    public ConfigFileReader() {
-        try (BufferedReader reader = new BufferedReader(new FileReader(propertyFilePath))) {
-            properties = new Properties();
-            try {
-                properties.load(reader);
-                reader.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-            throw new RuntimeException("Configuration.properties not found at " + propertyFilePath);
-        } catch (IOException e) {
-            e.printStackTrace();
-            throw new RuntimeException("Configuration.properties not closable", e);
-        }
-    }
+	public ConfigFileReader() {
+		try (BufferedReader reader = new BufferedReader(new FileReader(propertyFilePath))) {
+			properties = new Properties();
+			try {
+				properties.load(reader);
+				reader.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+			throw new RuntimeException("Configuration.properties not found at " + propertyFilePath);
+		} catch (IOException e) {
+			e.printStackTrace();
+			throw new RuntimeException("Configuration.properties not closable", e);
+		}
+	}
 
-    public String getDriverPath() {
-        String driverPath = properties.getProperty("driverPath");
-        if (driverPath != null)
-            return driverPath;
-        else
-            throw new RuntimeException("driverPath not specified in the Configuration.properties file.");
-    }
+	public String getDriverPath() {
+		String driverPath = properties.getProperty("driverPath");
+		if (driverPath != null)
+			return driverPath;
+		else
+			throw new RuntimeException("driverPath not specified in the Configuration.properties file.");
+	}
 
-    public long getImplicitlyWait() {
-        String implicitlyWait = properties.getProperty("implicitlyWait");
-        if (implicitlyWait != null)
-            return Long.parseLong(implicitlyWait);
-        else
-            throw new RuntimeException("implicitlyWait not specified in the Configuration.properties file.");
-    }
+	public long getImplicitlyWait() {
+		String implicitlyWait = properties.getProperty("implicitlyWait");
+		if (implicitlyWait != null)
+			return Long.parseLong(implicitlyWait);
+		else
+			throw new RuntimeException("implicitlyWait not specified in the Configuration.properties file.");
+	}
 
-    public String getApplicationUrl() {
-        String url = properties.getProperty("url");
-        if (url != null)
-            return url;
-        else
-            throw new RuntimeException("url not specified in the Configuration.properties file.");
-    }
+	public String getApplicationUrl(boolean getAdmin, boolean getbuyer, boolean getorchid,boolean getAutomatiotesting) {
+		String url = "";
+		String[] urls = properties.getProperty("url").split(",");
+		String adminurl = urls[0];
+		String buyerurl = urls[1];
+		String orchid = urls[2];
+		String automation = urls[3];
+		if (getAdmin) {
+			url = adminurl;
+		} else if (getbuyer) {
+			url = buyerurl;
+		} else if (getorchid) {
+			url = orchid;
+		}else if (getAutomatiotesting) {
+			url = automation;
+		}
 
-    public DriverType getBrowser() {
-        String browserName = properties.getProperty("browser");
-        if (browserName == null || browserName.equals("chrome"))
-            return DriverType.CHROME;
-        else if (browserName.equalsIgnoreCase("firefox"))
-            return DriverType.FIREFOX;
-        else if (browserName.equals("iexplorer"))
-            return DriverType.INTERNETEXPLORER;
-        else
-            throw new RuntimeException(
-                    "Browser Name Key value in Configuration.properties is not matched : " + browserName);
-    }
+		return url;
+	}
 
-    public EnvironmentType getEnvironment() {
-        String environmentName = properties.getProperty("environment");
-        if (environmentName == null || environmentName.equalsIgnoreCase("local"))
-            return EnvironmentType.LOCAL;
-        else if (environmentName.equals("remote"))
-            return EnvironmentType.REMOTE;
-        else
-            throw new RuntimeException(
-                    "Environment Type Key value in Configuration.properties is not matched : " + environmentName);
-    }
+	public DriverType getBrowser() {
+		String browserName = properties.getProperty("browser");
+		if (browserName == null || browserName.equals("chrome"))
+			return DriverType.CHROME;
+		else if (browserName.equalsIgnoreCase("firefox"))
+			return DriverType.FIREFOX;
+		else if (browserName.equals("iexplorer"))
+			return DriverType.INTERNETEXPLORER;
+		else
+			throw new RuntimeException(
+					"Browser Name Key value in Configuration.properties is not matched : " + browserName);
+	}
 
-    public Boolean getBrowserWindowSize() {
-        String windowSize = properties.getProperty("windowMaximize");
-        if (windowSize != null)
-            return Boolean.valueOf(windowSize);
-        return true;
-    }
+	public EnvironmentType getEnvironment() {
+		String environmentName = properties.getProperty("environment");
+		if (environmentName == null || environmentName.equalsIgnoreCase("local"))
+			return EnvironmentType.LOCAL;
+		else if (environmentName.equals("remote"))
+			return EnvironmentType.REMOTE;
+		else
+			throw new RuntimeException(
+					"Environment Type Key value in Configuration.properties is not matched : " + environmentName);
+	}
+
+	public Boolean getBrowserWindowSize() {
+		String windowSize = properties.getProperty("windowMaximize");
+		if (windowSize != null)
+			return Boolean.valueOf(windowSize);
+		return true;
+	}
 }
