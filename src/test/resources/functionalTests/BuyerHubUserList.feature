@@ -1,4 +1,4 @@
-Feature: Verify buyer panel and test user list
+Feature: Verify buyer panel and test user lists
 
 Scenario Outline: Verify the Users page in view User list
 
