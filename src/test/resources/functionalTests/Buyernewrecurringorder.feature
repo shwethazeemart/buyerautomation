@@ -26,17 +26,11 @@ Scenario Outline: Verify the New recurring orders page of Buyer panel
           Then User Clicks on seven time increase the order button in the first product
           Then User Clicks on eight time increase the order button in the first product
           Then User Clicks on nineth time increase the order button in the first product
-          Then User Clicks on tenth time increase the order button in the first product
-          Then User Clicks on eleventh time increase the order button in the first product
-          Then User Clicks on twvelth time increase the order button in the first product
-          Then User Clicks on thirteenth time increase the order button in the first product
-          Then User Clicks on fourteenth time increase the order button in the first product
-          Then User Clicks on fifteenth time increase the order button in the first product
           Then User Clicks on Review Order button
           Then User Clicks on Save recurring order
           Then It should display the particular order in recurring orders page
           
           Examples:
-             |username                      |  |password    |
-             |kovalan@zeemart.asia          |  |!123456Zm   |     
+             |username                               |  |password    |
+             |velumanieswaran2020@gmail.com          |  |!123456Zm   |     
          

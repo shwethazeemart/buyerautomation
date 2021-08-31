@@ -47,7 +47,7 @@ public class LogInPage {
 	/*@FindBy(xpath = "//div[@class='form-group']//button[text()='Log in']")
 	private static WebElement btn_loginbtn;*/
     
-	@FindBy(xpath ="//button[@type='submit']")
+	@FindBy(xpath ="//button[text()='Log in']")
 	private static WebElement btn_loginbtn;
 	
 	public String getPageTitle() {
