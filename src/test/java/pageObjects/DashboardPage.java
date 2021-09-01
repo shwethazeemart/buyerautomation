@@ -1,11 +1,19 @@
 package pageObjects;
 
+import java.util.concurrent.TimeUnit;
+
+import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import managers.FileReaderManager;
 
 /**
  * 
@@ -13,32 +21,253 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  * @since 2020/05/12
  *
  */
+
+//driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
 public class DashboardPage {
-    private final WebDriver driver;
+	private static WebDriver driver;
+	
+	
 
-    public DashboardPage(WebDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
-    }
+	public DashboardPage(WebDriver driver) {
+		DashboardPage.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
+	
 
-    @FindBy(id = "filterOrder")
-    private WebElement txtbx_filterOrder;
+	/*public class DashboardPage2 {
+		private static WebDriver driver;
 
-    @FindBy(xpath = "//button[text()=' Search ']")
-    private WebElement btn_search;
+		public DashboardPage2(WebDriver driver) {
+			DashboardPage.driver = driver;
+			PageFactory.initElements(driver, this);
+		}*/
 
-    public void enter_Search_OrderId(String searchText) {
-        txtbx_filterOrder.sendKeys(searchText);
-    }
+	/*@FindBy(how = How.NAME, using = "dashboard")
+	private WebElement btn_Dashboard;*/
 
-    public void click_SearchBtn() {
-        btn_search.click();
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-        }
-        new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
-                .executeScript("return document.readyState").equals("complete"));
-    }
+	@FindBy(xpath = "//a[@class='nav-link active']")
+	private WebElement btn_Dashboard;
+
+
+	@FindBy(xpath = "//span[@id='sideMenu_Orders']")
+	private  WebElement button_Orders;
+
+	@FindBy(xpath = "//span[contains(@Id,'sideMenu_Invoices')]")
+	private  WebElement button_Invoices;
+
+	@FindBy(xpath = "//span[@id='sideMenu_Invoices']")
+	private  WebElement button_AdminInvoices;
+
+	@FindBy(xpath = "//a[@ng-reflect-router-link='/buyers']//span[1]")
+	private static WebElement button_AdminBuyers;
+
+	@FindBy(xpath = "//span[@id='sideMenu_Users']")
+	private  WebElement button_Adminnewbuyeruser;
+
+	@FindBy(xpath = "//span[@id='sideMenu_Users']")
+	private  WebElement button_Adminnewsupplieruser;
+
+	@FindBy(xpath = "//span[@id='sideMenu_Suppliers']")
+	private  WebElement button_AdminSuppliers;
+	 
+	//span[contains(@id,'sideMenu_Buyers')]
+	@FindBy(xpath = "//span[contains(@Id,'sideMenu_Users')] ")
+	private  WebElement button_Users;
+
+
+	@FindBy(xpath = "//span[contains(@Id,'sideMenu_Inventory')]")
+	private  WebElement button_Inventory;
+
+	@FindBy(xpath = "//span[contains(@Id,'sideMenu_Outlets')] ")
+	private  WebElement button_Outlets;
+
+
+	@FindBy(xpath = "//html/body/div[2]/header/div[1]/div[2]/nav/ul/li[1]/a")
+	private static WebElement Orchidpage_Homelinkbutton;
+
+	@FindBy(xpath = "//span[text()='Reports ']")
+	private static WebElement button_Reports;
+
+
+	public String getPageTitle() {
+		return driver.getTitle();
+	}
+
+	public String getBackgroundColor() {
+		return btn_Dashboard.getAttribute("background-color");
+	}
+
+	public static void navigateTo_DashboardPage() {
+		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl(true,false,false,false));
+	}
+	public static void navigateTo_DashboardPage2() {
+		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl(false,true,false,false));
+	}
+	
+	
+	// @FindBy(xpath = "//button[text()=' Search ']")
+	// private WebElement btn_search;
+
+	// public void navigateTo_DashboardPage() {
+	// driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl());
+	// }
+	// public void enter_Search_OrderId(String searchText) {
+	// txtbx_filterOrder.sendKeys(searchText);
+	// }
+
+	public void click_DashboardBtn() {
+		btn_Dashboard.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 50).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	//	public void clickOrders() {
+	//		btn_Orders.click();
+	//		//return this;
+	//		
+	//	}
+	public void clickOrders() throws InterruptedException {
+
+		button_Orders.click();
+		Thread.sleep(5000);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 50).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+	public void clickInvoices() throws InterruptedException {
+		driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
+		button_Invoices.click();
+		Thread.sleep(5000); 
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 50).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+
+	}
+	public void clickUsers() throws InterruptedException {
+
+		button_Users.click();
+		Thread.sleep(5000);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 50).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+ 
+	public void clickInventory() {
+		button_Inventory.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 50).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+	public void clickAdminInvoices() throws InterruptedException {
+		driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
+		button_AdminInvoices.click();
+		Thread.sleep(5000);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 50).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	public void click_AdminBuyers() throws InterruptedException {
+		driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
+		button_AdminBuyers.click();
+		Thread.sleep(5000);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 50).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+
+	public void clickBuyersnewuser() throws InterruptedException {
+		driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
+		button_Adminnewbuyeruser.click();
+		Thread.sleep(5000);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 50).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+
+	public void clickAdminSuppliers() throws InterruptedException {
+		driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
+
+		button_AdminSuppliers.click();
+		Thread.sleep(5000);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 50).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+	public void clickSuppliernewuser()  {
+		driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
+		button_Adminnewsupplieruser.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 50).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+	public void Clicksinhomepage() throws InterruptedException {
+		//driver.findElement(By.cssSelector("a[title=\"HOME\"]")).click();		
+		Orchidpage_Homelinkbutton.click();
+		Thread.sleep(5000);
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));	
+	}
+
+	public void clickOutlets()  {
+		button_Outlets.click();
+		//Thread.sleep(5000);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 50).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	public void clickReports() throws InterruptedException {
+		button_Reports.click();
+		Thread.sleep(5000);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 50).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}  
 
 }
+
+

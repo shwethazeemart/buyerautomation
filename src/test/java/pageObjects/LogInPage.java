@@ -1,5 +1,7 @@
 package pageObjects;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -18,63 +20,118 @@ import managers.FileReaderManager;
  *
  */
 public class LogInPage {
-    private final WebDriver driver;
+	private static WebDriver driver;
 
-    public LogInPage(WebDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
-    }
+	public LogInPage(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
+	
+	/*@FindBy(how = How.NAME, using = "loginEmail")
+	private static WebElement txtbx_loginEmail;
 
-    @FindBy(how = How.NAME, using = "loginEmail")
-    private WebElement txtbx_loginEmail;
 
-    @FindBy(how = How.NAME, using = "loginPassword")
-    private WebElement txtbx_loginPassword;
+	@FindBy(how = How.NAME, using = "wrongPassword")
+	private WebElement txtbx_wrongPassword;*/
+ 
+	@FindBy(xpath = "//input[contains(@name,'loginEmail')]")
+	private static WebElement btn_loginEmail;
+	
 
-    @FindBy(xpath = "//div[@class='form-group']//button[text()='Log in']")
-    private WebElement btn_loginEmail;
+	@FindBy(xpath = "//input[@placeholder='Password']")
+	private WebElement btn_wrongPassword;
+	
+	@FindBy(xpath = "//input[@placeholder='Password']")
+	private static WebElement btn_loginpassword;
 
-    @FindBy(xpath = "//a[@href='/validate-email?userType=BUYER']")
-    private WebElement link_forgotten;
+	/*@FindBy(xpath = "//div[@class='form-group']//button[text()='Log in']")
+	private static WebElement btn_loginbtn;*/
+    
+	@FindBy(xpath ="//button[@type='submit']")
+	private static WebElement btn_loginbtn;
+	
+	public String getPageTitle() {
+		return driver.getTitle();   
+	}
 
-    public String getPageTitle() {
-        return driver.getTitle();
-    }
+	public static void navigateTo_LogInPage1() {
+		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl(true,false,false,false));
+	}
+	public static void navigateTo_LogInPage2() {
+		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl(false,true,false,false));
+	}
 
-    public void navigateTo_LogInPage() {
-        driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl());
-    }
+	/*public static void enter_LoginEmail(String email) {
+		btn_loginEmail.sendKeys(email); 
+	}*/
+	 
+	public void enter_wrongPassword(String wrongPassword) {
+		btn_wrongPassword.sendKeys(wrongPassword);
+	}
 
-    public void enter_LoginEmail(String loginEmail) {
-        txtbx_loginEmail.sendKeys(loginEmail);
-    }
+	public static void click_LoginBtn() throws InterruptedException {
+		btn_loginbtn.click();
+		Thread.sleep(5000);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+	/*public void click_LoginBtnadmin() throws InterruptedException {
+		btn_loginbtn.click();
+		Thread.sleep(5000);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}*/
 
-    public void enter_LoginPassword(String loginPassword) {
-        txtbx_loginPassword.sendKeys(loginPassword);
-    }
+	public void isTosterMessageFound(String msg) {
+		WebElement tosterMsg = driver.findElement(By.xpath("//*[text()='" + msg + "']"));
+	}
 
-    public void click_LoginBtn() {
-        btn_loginEmail.click();
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-        }
-        new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
-                .executeScript("return document.readyState").equals("complete"));
-    }
+	public void enter_correctPassword(String loginPassword) {
+		// TODO Auto-generated method stub
+		
+	}
 
-    public void click_ForgottenPasswordLink() {
-        link_forgotten.click();
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-        }
-        new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
-                .executeScript("return document.readyState").equals("complete"));
-    }
+	public void enter_validEmailAddress(String validEmail) {
+		// TODO Auto-generated method stub
+		
+	}
 
-    public void isTosterMessageFound(String msg) {
-        WebElement tosterMsg = driver.findElement(By.xpath("//*[text()='" + msg + "']"));
+	public static void enter_Password(String password) {
+		// TODO Auto-generated method stub
+		
+	}
 
-    }
+	public static void enter_loginpassword(String loginpassword) {
+		btn_loginpassword.sendKeys(loginpassword);
+		
+	}
+
+	public static void enter_loginEmail(String loginEmail) {
+		driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
+		btn_loginEmail.sendKeys(loginEmail);
+		
+		 
+	}
+
+	public void enter_RegisteredPassword(String loginPassword) {
+		btn_loginpassword.sendKeys(loginPassword);
+		
+	}
+
+	public static void enter_loginpassowrd(String loginpassword) {
+		btn_loginpassword.sendKeys(loginpassword);
+		
+	}
+
+	
+
+	
 }
