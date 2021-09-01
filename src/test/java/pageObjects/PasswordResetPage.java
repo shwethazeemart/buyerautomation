@@ -18,7 +18,9 @@ import managers.FileReaderManager;
  *
  */
 public class PasswordResetPage {
+
 	private static WebDriver driver;
+
 
 	public PasswordResetPage(WebDriver driver) {
 		this.driver = driver;
@@ -71,6 +73,7 @@ public class PasswordResetPage {
 
 	public void enter_PasswordResetPage1(String unregisteredEmailaddress) {
 		txtbx_unregisteredEmailaddress.sendKeys(unregisteredEmailaddress);
+
 	}
 
 	public void click_SendRequestBtn() {
@@ -82,6 +85,8 @@ public class PasswordResetPage {
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
 	}
+
+
 	public void click_ForgottenPasswordLink() {
 		link_forgotten.click();
 		try {
@@ -91,6 +96,7 @@ public class PasswordResetPage {
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
 	}
+
 
 	
 	
