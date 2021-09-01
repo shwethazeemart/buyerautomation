@@ -19,6 +19,7 @@ import pageObjects.PasswordResetPage;
 
 
 public class PasswordResetSteps {
+
 	private TestContext testContext;
 	private PasswordResetPage PasswordResetPage;
 	private LogInPage logInPage;
