@@ -64,8 +64,8 @@ public class Buyerreportinvoicevariancepage {
 	@FindBy(xpath = "//div[@class='filter-apply']//a[1]")
 	private static WebElement Buyerreportinvoicevariancepage_Resetbutton;
 	
-	//@FindBy(xpath = "//input[@placeholder='Product code or name']")
-	//private static WebElement Buyerreportinvoicevariancepage_Outside;
+	@FindBy(xpath = "//div[@class='flex__bwn px-r5']/following-sibling::div[1]")
+	private static WebElement Buyerreportinvoicevariancepage_Outside;
 	
 	@FindBy(xpath = "//div[@class='pl-2']//a[1]")
 	private static WebElement Buyerreportinvoicevariancepage_Exportdownloadbutton;
@@ -211,8 +211,9 @@ public class Buyerreportinvoicevariancepage {
 			
 		}
 		public static void Clickonoutside() {
-			WebElement reportsInvoiceVariance = driver.findElement(By.className("page__header"));
-			reportsInvoiceVariance.click();
+			//WebElement reportsInvoiceVariance = driver.findElement(By.className("page__header"));
+			//reportsInvoiceVariance.click();
+			Buyerreportinvoicevariancepage_Outside.click();
 			try { 
 				Thread.sleep(5000);
 			} catch (InterruptedException e) {
@@ -232,7 +233,7 @@ public class Buyerreportinvoicevariancepage {
 					.executeScript("return document.readyState").equals("complete"));
 			
 		}
-	
+		
 	
 	
 	

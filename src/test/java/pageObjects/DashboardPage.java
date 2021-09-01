@@ -80,6 +80,9 @@ public class DashboardPage {
 
 	@FindBy(xpath = "//span[contains(@Id,'sideMenu_Outlets')] ")
 	private  WebElement button_Outlets;
+	
+	@FindBy(xpath = "//span[contains(@Id,'sideMenu_Payments')] ")
+	private  WebElement button_payments;
 
 
 	@FindBy(xpath = "//html/body/div[2]/header/div[1]/div[2]/nav/ul/li[1]/a")
@@ -174,6 +177,23 @@ public class DashboardPage {
 		new WebDriverWait(driver, 50).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
 	}
+	
+	
+	public void clickPayments() {
+		button_payments.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 50).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+	
+	
+	
+	
+	
+	
 	public void clickAdminInvoices() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
 		button_AdminInvoices.click();

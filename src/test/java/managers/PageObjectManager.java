@@ -50,7 +50,10 @@ import pageObjects.Buyerinvoicelisenpage;
 import pageObjects.Buyeroutletsmanagedetailspage;
 import pageObjects.Buyeroutletsmanagesettingspage;
 import pageObjects.Buyeroutletsviewsupplierspage;
+import pageObjects.Buyerpaymentspaymentplanspage;
+import pageObjects.Buyerpaymentstransactonspage;
 import pageObjects.Buyerreportinvoicevariancepage;
+import pageObjects.Buyerreportpriceupdatespage;
 import pageObjects.Buyerreportspenpercategorypage;
 import pageObjects.Buyerreportspenperoutletpage;
 import pageObjects.Buyerreportspenperskupage;
@@ -104,6 +107,10 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private Buyerreportspenpercategorypage Buyerreportspenpercategory;
     private Buyerreportspenpertagpage Buyerreportspenpertag;
     private Buyerreportinvoicevariancepage Buyerreportinvoicevariance;
+    private Buyerreportpriceupdatespage Buyerreportpriceupdates;
+    private Buyerpaymentstransactonspage Buyerpaymentstransactons;
+    private Buyerpaymentspaymentplanspage Buyerpaymentspaymentplans;
+    
     
     public PageObjectManager(WebDriver driver) {
         this.driver = driver;
@@ -304,8 +311,27 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 	public Buyerreportinvoicevariancepage getBuyerreportinvoicevariancepage() {
 		return (Buyerreportinvoicevariance == null) ? (Buyerreportinvoicevariance = new Buyerreportinvoicevariancepage(driver)) : Buyerreportinvoicevariance;
 	}
+
+
+	public Buyerreportpriceupdatespage getBuyerreportpriceupdatespage() {
+		return (Buyerreportpriceupdates == null) ? (Buyerreportpriceupdates = new Buyerreportpriceupdatespage(driver)) : Buyerreportpriceupdates;
+	}
+
+
+	public Buyerpaymentstransactonspage getBuyerpaymentstransactonspage() {
+		return (Buyerpaymentstransactons == null) ? (Buyerpaymentstransactons = new Buyerpaymentstransactonspage(driver)) : Buyerpaymentstransactons;
+	}
+
+
+	public Buyerpaymentspaymentplanspage getBuyerpaymentspaymentplanspage() {
+		return (Buyerpaymentspaymentplans == null) ? (Buyerpaymentspaymentplans = new Buyerpaymentspaymentplanspage(driver)) : Buyerpaymentspaymentplans;
+	}
+	
+	
 	
 	}
+	
+	
 	
 	
 

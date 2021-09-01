@@ -73,7 +73,7 @@ public class Buyerreportinvoicevariance {
 	public void user_select_from_dropdown_value_of_velumasala() {
 		WebElement velumasala2020 = Buyerreportinvoicevariancepage.getDropDownElementvelumasala();
 		Select select=new Select(velumasala2020);
-		select.selectByIndex(2);
+		select.selectByIndex(3); 
 	}
  
 	@Then("User click on filter in invoice variance")
@@ -97,7 +97,7 @@ public class Buyerreportinvoicevariance {
 
 	@Then("User click on export download button in invoice variance")
 	public void user_click_on_export_download_button_in_invoice_variance() throws InterruptedException {
-	   //Buyerreportinvoicevariancepage.Clickexportdownloadbutton();
+	   Buyerreportinvoicevariancepage.Clickexportdownloadbutton();
 	}
 
 
@@ -108,12 +108,12 @@ public class Buyerreportinvoicevariance {
 
 	@Then("User click on reset button in invoice variance")
 	public void user_click_on_reset_button_in_invoice_variance() throws InterruptedException {
-	    Buyerreportinvoicevariancepage.Clickonresetbutton();
+	    //Buyerreportinvoicevariancepage.Clickonresetbutton();
 	}
 
 	@Then("User click on outside in invoice variance")
 	public void user_click_on_outside_in_invoice_variance() {
-	    //Buyerreportinvoicevariancepage.Clickonoutside();
+	    Buyerreportinvoicevariancepage.Clickonoutside();
 	}
 
 	@Then("User click on Reports back button in invoice variance")
