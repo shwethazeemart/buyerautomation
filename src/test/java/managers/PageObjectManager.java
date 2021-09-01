@@ -19,6 +19,7 @@ import stepDefinitions.AdminbuyersoutletpageSteps;
 //import stepDefinitions.Adminsupplierspage;
 import stepDefinitions.AdminsupplierspageSteps;
 import stepDefinitions.Automationtesting;
+import stepDefinitions.Buyerinventoryoutletslisen;
 import stepDefinitions.Buyerinvoicelisen;
 //import stepDefinitions.Invoiceprocesspage;
 import stepDefinitions.InvoiceprocesspageSteps;
@@ -41,7 +42,23 @@ import pageObjects.Adminnewsupplieruserpage;
 import pageObjects.Adminsupplierpage;
 import pageObjects.Adminsuppliersviewoutletspage;
 import pageObjects.Automationtestingpage;
+import pageObjects.Buyerdashboardlisenpage;
+import pageObjects.BuyerinventorySKUlisenpage;
+import pageObjects.Buyerinventoryactivitylisenpage;
+import pageObjects.Buyerinventoryoutletslisenpage;
 import pageObjects.Buyerinvoicelisenpage;
+import pageObjects.Buyeroutletsmanagedetailspage;
+import pageObjects.Buyeroutletsmanagesettingspage;
+import pageObjects.Buyeroutletsviewsupplierspage;
+import pageObjects.Buyerpaymentspaymentplanspage;
+import pageObjects.Buyerpaymentstransactonspage;
+import pageObjects.Buyerreportinvoicevariancepage;
+import pageObjects.Buyerreportpriceupdatespage;
+import pageObjects.Buyerreportspenpercategorypage;
+import pageObjects.Buyerreportspenperoutletpage;
+import pageObjects.Buyerreportspenperskupage;
+import pageObjects.Buyerreportspenpersupplierpage;
+import pageObjects.Buyerreportspenpertagpage;
 import pageObjects.DashboardPage;
 import pageObjects.InventoryPage;
 import pageObjects.InvoiceprocessPage;
@@ -77,7 +94,24 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 	private Object userspage;
     private Automationtestingpage automationtesting;
     private Buyerinvoicelisenpage buyerinvoicelisen;
-
+    private Buyerinventoryoutletslisenpage Buyerinventoryoutletslisen;
+    private BuyerinventorySKUlisenpage BuyerinventorySKUlisen;
+    private Buyerdashboardlisenpage Buyerdashboardlisen;
+    private Buyerinventoryactivitylisenpage Buyerinventoryactivitylisen;
+    private Buyeroutletsmanagedetailspage Buyeroutletsmanagedetails;
+    private Buyeroutletsmanagesettingspage Buyeroutletsmanagesettings;
+    private Buyeroutletsviewsupplierspage Buyeroutletsviewsuppliers;
+    private Buyerreportspenperoutletpage Buyerreportspenperoutlet;
+    private Buyerreportspenpersupplierpage Buyerreportspenpersupplier;
+    private Buyerreportspenperskupage Buyerreportspenpersku;
+    private Buyerreportspenpercategorypage Buyerreportspenpercategory;
+    private Buyerreportspenpertagpage Buyerreportspenpertag;
+    private Buyerreportinvoicevariancepage Buyerreportinvoicevariance;
+    private Buyerreportpriceupdatespage Buyerreportpriceupdates;
+    private Buyerpaymentstransactonspage Buyerpaymentstransactons;
+    private Buyerpaymentspaymentplanspage Buyerpaymentspaymentplans;
+    
+    
     public PageObjectManager(WebDriver driver) {
         this.driver = driver;
     }
@@ -211,7 +245,94 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 	public Buyerinvoicelisenpage getBuyerinvoicelisen() {
 		return (buyerinvoicelisen == null) ? (buyerinvoicelisen = new Buyerinvoicelisenpage(driver)) : buyerinvoicelisen;
 	}
+
+
+	public Buyerinventoryoutletslisenpage getBuyerinventoryoutletslisenpage() {
+		return (Buyerinventoryoutletslisen == null) ? (Buyerinventoryoutletslisen = new Buyerinventoryoutletslisenpage(driver)) : Buyerinventoryoutletslisen;
 	}
+
+ 
+	public BuyerinventorySKUlisenpage getBuyerinventorySKUlisenpage() {
+		return (BuyerinventorySKUlisen == null) ? (BuyerinventorySKUlisen = new BuyerinventorySKUlisenpage(driver)) : BuyerinventorySKUlisen;
+	}
+
+
+	public Buyerdashboardlisenpage getBuyerdashboardlisenpage() {
+		return (Buyerdashboardlisen == null) ? (Buyerdashboardlisen = new Buyerdashboardlisenpage(driver)) : Buyerdashboardlisen;
+
+	} 
+
+
+	public Buyerinventoryactivitylisenpage getBuyerinventoryactivitylisenpage() {
+		return (Buyerinventoryactivitylisen == null) ? (Buyerinventoryactivitylisen = new Buyerinventoryactivitylisenpage(driver)) : Buyerinventoryactivitylisen;
+	}
+
+
+	public Buyeroutletsmanagedetailspage getBuyeroutletsmanagedetailspage() {
+		return (Buyeroutletsmanagedetails == null) ? (Buyeroutletsmanagedetails = new Buyeroutletsmanagedetailspage(driver)) : Buyeroutletsmanagedetails;
+	}
+
+
+	public Buyeroutletsmanagesettingspage getBuyeroutletsmanagesettingspage() {
+		return (Buyeroutletsmanagesettings == null) ? (Buyeroutletsmanagesettings = new Buyeroutletsmanagesettingspage(driver)) : Buyeroutletsmanagesettings;
+	}
+
+
+	public Buyeroutletsviewsupplierspage getBuyeroutletsviewsupplierspage() {
+		return (Buyeroutletsviewsuppliers == null) ? (Buyeroutletsviewsuppliers = new Buyeroutletsviewsupplierspage(driver)) : Buyeroutletsviewsuppliers;
+	}
+
+
+	public Buyerreportspenperoutletpage getBuyerreportspenperoutletpage() {
+		return (Buyerreportspenperoutlet == null) ? (Buyerreportspenperoutlet = new Buyerreportspenperoutletpage(driver)) : Buyerreportspenperoutlet;
+	}
+
+
+	public Buyerreportspenpersupplierpage getBuyerreportspenpersupplierpage() {
+		return (Buyerreportspenpersupplier == null) ? (Buyerreportspenpersupplier = new Buyerreportspenpersupplierpage(driver)) : Buyerreportspenpersupplier;
+	}
+
+
+	public Buyerreportspenperskupage getbuyerreportspenpersku() {
+		return (Buyerreportspenpersku == null) ? (Buyerreportspenpersku = new Buyerreportspenperskupage(driver)) : Buyerreportspenpersku;
+	}
+
+
+	public Buyerreportspenpercategorypage getBuyerreportspenpercategorypage() {
+		return (Buyerreportspenpercategory == null) ? (Buyerreportspenpercategory = new Buyerreportspenpercategorypage(driver)) : Buyerreportspenpercategory;
+	}
+
+
+	public Buyerreportspenpertagpage getBuyerreportspenpertagpage() {
+		return (Buyerreportspenpertag == null) ? (Buyerreportspenpertag = new Buyerreportspenpertagpage(driver)) : Buyerreportspenpertag;
+	}
+
+
+	public Buyerreportinvoicevariancepage getBuyerreportinvoicevariancepage() {
+		return (Buyerreportinvoicevariance == null) ? (Buyerreportinvoicevariance = new Buyerreportinvoicevariancepage(driver)) : Buyerreportinvoicevariance;
+	}
+
+
+	public Buyerreportpriceupdatespage getBuyerreportpriceupdatespage() {
+		return (Buyerreportpriceupdates == null) ? (Buyerreportpriceupdates = new Buyerreportpriceupdatespage(driver)) : Buyerreportpriceupdates;
+	}
+
+
+	public Buyerpaymentstransactonspage getBuyerpaymentstransactonspage() {
+		return (Buyerpaymentstransactons == null) ? (Buyerpaymentstransactons = new Buyerpaymentstransactonspage(driver)) : Buyerpaymentstransactons;
+	}
+
+
+	public Buyerpaymentspaymentplanspage getBuyerpaymentspaymentplanspage() {
+		return (Buyerpaymentspaymentplans == null) ? (Buyerpaymentspaymentplans = new Buyerpaymentspaymentplanspage(driver)) : Buyerpaymentspaymentplans;
+	}
+	
+	
+	
+	}
+	
+	
+	
 	
 
 
