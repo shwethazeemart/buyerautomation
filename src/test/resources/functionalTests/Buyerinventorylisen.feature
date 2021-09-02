@@ -1,6 +1,6 @@
 Feature: Verify Buyer Inventory Outlets lisen page and test all the page
 
-Scenario Outline: Verify the Inventory lisen page of Buyer panel 
+Scenario Outline: Verify the Inventory Outlets lisen page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
           And User enter exact password"<password>"

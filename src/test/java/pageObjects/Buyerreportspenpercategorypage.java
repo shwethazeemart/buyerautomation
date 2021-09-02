@@ -64,7 +64,7 @@ public class Buyerreportspenpercategorypage {
 	@FindBy(xpath = "//div[text()=' Suppliers  ']")
 	private static WebElement Buyerreportspenpercategorypage_Suppliers;
 	
-	@FindBy(xpath = "//input[@type='checkbox']")
+	@FindBy(xpath = "(//input[@type='checkbox'])[2]")
 	private static WebElement Buyerreportspenpercategorypage_Checkboxofsabari;
 	
 	@FindBy(xpath = "//button[text()='Search']")

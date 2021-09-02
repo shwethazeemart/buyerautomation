@@ -1,6 +1,6 @@
 Feature: Verify Buyer Invoice upload page and test all the page
 
-@Smoke
+
 Scenario Outline: Verify the Invoices process page of Buyer panel 
           Given User is on Login Page
           When User is enter Registered username"<username>"

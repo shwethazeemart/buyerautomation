@@ -42,7 +42,7 @@ public class Buyerreportspenperoutletpage {
 	@FindBy(xpath = "//div[text()=' Suppliers  ']")
 	private static WebElement Buyerreportspenperoutletpage_Suppliers;
 	
-	@FindBy(xpath = "//input[@type='checkbox']")
+	@FindBy(xpath = "(//input[@type='checkbox'])[2]")
 	private static WebElement Buyerreportspenperoutletpage_Sabaricheckbox;
 	
 	@FindBy(xpath = "//button[text()='Apply']")
