@@ -64,16 +64,16 @@ public class NewRecurrOrderspageSteps {
 
 	@When("User select outlet in the dropdown list")
 	public void user_select_outlet_in_the_dropdown_list() {
-		WebElement Narenwineshop = Newrecurringorderspage.getDropDownOwnerElement();
-		Select select=new Select(Narenwineshop);
-		select.selectByIndex(4);
+		WebElement velumasala2020 = Newrecurringorderspage.getDropDownOwnerElement();
+		Select select=new Select(velumasala2020);
+		select.selectByIndex(3);
 	}
 
 	@When("User select supplier in the dropdown list")
 	public void user_select_supplier_in_the_dropdown_list() {
-		WebElement Narenmasala = Newrecurringorderspage.getDropDownElementsupplier();
-		Select select=new Select(Narenmasala);
-		select.selectByVisibleText("Naren masala");
+		WebElement sabari250 = Newrecurringorderspage.getDropDownElementsupplier();
+		Select select=new Select(sabari250);
+		select.selectByVisibleText("sabari250");
 	}
 
 	@When("User Clicks on deliver date in tuesday")
@@ -98,10 +98,10 @@ public class NewRecurrOrderspageSteps {
 
 	@When("User select contact person in the dropdown list")
 	public void user_select_contact_person_in_the_dropdown_list() {
-		WebElement kovalan = Newrecurringorderspage.getDropDownOwnerElementcontactperson();
-		Select select=new Select(kovalan);
-		select.selectByIndex(1);
-	}
+		WebElement velumani2 = Newrecurringorderspage.getDropDownOwnerElementcontactperson();
+		Select select=new Select(velumani2);
+		select.selectByIndex(3);
+	} 
 
 	@When("User Clicks on the Done button")
 	public void user_Clicks_on_the_Done_button() {
@@ -201,7 +201,7 @@ public class NewRecurrOrderspageSteps {
 
 	@Then("User Clicks on Save recurring order")
 	public void user_Clicks_on_Save_recurring_order() {
-	    //newrecurringorderspage.Clicks_on_Save_recurring_order(); 
+	    newrecurringorderspage.Clicks_on_Save_recurring_order(); 
 	}
 
 	@Then("It should display the particular order in recurring orders page")

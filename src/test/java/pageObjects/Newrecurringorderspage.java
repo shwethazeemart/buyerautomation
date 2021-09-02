@@ -177,6 +177,7 @@ public class Newrecurringorderspage {
 	}
 
 	public void Clicks_on_deliver_date_in_tuesday() throws InterruptedException {
+		Thread.sleep(5000);
 		Newrecurringorderspage_Deliverdatetuesday.click();
 		Thread.sleep(5000);
 		try { 
