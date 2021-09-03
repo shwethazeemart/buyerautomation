@@ -49,21 +49,21 @@ public class ConfigFileReader {
 			throw new RuntimeException("implicitlyWait not specified in the Configuration.properties file.");
 	}
 
-	public String getApplicationUrl(boolean getAdmin, boolean getbuyer, boolean getorchid,boolean getAutomatiotesting) {
+	public String getApplicationUrl(boolean getAdmin, boolean getbuyer, boolean getorchid,boolean getSupplier) {
 		String url = "";
 		String[] urls = properties.getProperty("url").split(",");
 		String adminurl = urls[0];
 		String buyerurl = urls[1];
 		String orchid = urls[2];
-		String automation = urls[3];
+		String supplierurl = urls[3];
 		if (getAdmin) {
 			url = adminurl;
 		} else if (getbuyer) {
 			url = buyerurl;
 		} else if (getorchid) {
 			url = orchid;
-		}else if (getAutomatiotesting) {
-			url = automation;
+		}else if (getSupplier) {
+			url = supplierurl; 
 		}
 
 		return url;
