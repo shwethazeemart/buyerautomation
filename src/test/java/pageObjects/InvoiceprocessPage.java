@@ -263,7 +263,7 @@ public class InvoiceprocessPage {
 		return driver.getTitle();
 	}
 
-	public static void enter_invoicenumber(Integer invoicenumber) {
+	public static void enter_invoicenumber(String invoicenumber) {
 		btn_invoicenumber.sendKeys("INV-20123456789");
 		try {
 			Thread.sleep(5000);

@@ -1,6 +1,6 @@
 Feature: Verify Buyer Invoice page and test all the page
  
-@Smoke
+
 Scenario Outline:Buyer Invoice lisen page verify the all field 
     Given User is on Login Page
     When User enters exact username "<username>"

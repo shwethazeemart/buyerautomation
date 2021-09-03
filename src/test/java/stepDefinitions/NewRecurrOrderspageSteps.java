@@ -100,7 +100,7 @@ public class NewRecurrOrderspageSteps {
 	public void user_select_contact_person_in_the_dropdown_list() {
 		WebElement velumani2 = Newrecurringorderspage.getDropDownOwnerElementcontactperson();
 		Select select=new Select(velumani2);
-		select.selectByIndex(3);
+		select.selectByIndex(1);
 	} 
 
 	@When("User Clicks on the Done button")
