@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import managers.FileReaderManager;
@@ -45,11 +46,11 @@ public class Buyerpaymentspaymentplanspage {
 	@FindBy(xpath = "//select[@formcontrolname='supplierId']")
 	private static WebElement Buyerpaymentspaymentplanspage_Selectsupplier;
 	
-	@FindBy(xpath = "//select[@formcontrolname='soaPaymentStatus']")
-	private static WebElement Buyerpaymentspaymentplanspage_Selectpaymentstatusunpaid;
+	//@FindBy(xpath = "//select[@formcontrolname='soaPaymentStatus']")
+	//private static WebElement Buyerpaymentspaymentplanspage_Selectpaymentstatusunpaid;
 	
-	@FindBy(xpath = "//select[@formcontrolname='soaPaymentStatus']")
-	private static WebElement Buyerpaymentspaymentplanspage_Selectpaymentstatusfailed;
+	//@FindBy(xpath = "//select[@formcontrolname='soaPaymentStatus']")
+	//private static WebElement Buyerpaymentspaymentplanspage_Selectpaymentstatusfailed;
 	
 	@FindBy(xpath = "//select[@formcontrolname='soaPaymentStatus']")
 	private static WebElement Buyerpaymentspaymentplanspage_Selectpaymentstatuspaid;
@@ -108,7 +109,7 @@ public class Buyerpaymentspaymentplanspage {
 		return Buyerpaymentspaymentplanspage_Selectsupplier;
 	}
 
-	public static void Selectpaymentstatusunpaid() throws InterruptedException {
+	/*public static void Selectpaymentstatusunpaid() throws InterruptedException {
 		Thread.sleep(5000);
 		Buyerpaymentspaymentplanspage_Selectpaymentstatusunpaid.click();
 		Thread.sleep(5000);
@@ -122,9 +123,9 @@ public class Buyerpaymentspaymentplanspage {
 	}
 	public static WebElement getDropDownElementUnpaid() {
 		return Buyerpaymentspaymentplanspage_Selectpaymentstatusunpaid;
-	}
+	}*/
 	
-	public static void Selectpaymentstatusfailed() throws InterruptedException {
+	/*public static void Selectpaymentstatusfailed() throws InterruptedException {
 		Thread.sleep(5000);
 		Buyerpaymentspaymentplanspage_Selectpaymentstatusfailed.click();
 		Thread.sleep(5000);
@@ -138,9 +139,9 @@ public class Buyerpaymentspaymentplanspage {
 	}
 	public static WebElement getDropDownElementFailed() {
 		return Buyerpaymentspaymentplanspage_Selectpaymentstatusfailed;
-	}
+	}*/
 
-	public static void Selectpaymentstatuspaid() throws InterruptedException {
+	/*public static void Selectpaymentstatuspaid() throws InterruptedException {
 		Buyerpaymentspaymentplanspage_Selectpaymentstatuspaid.click();
 		Thread.sleep(5000);
 		try { 
@@ -153,9 +154,9 @@ public class Buyerpaymentspaymentplanspage {
 	}
 	public static WebElement getDropDownElementPaid() {
 		return Buyerpaymentspaymentplanspage_Selectpaymentstatuspaid;
-	}
+	}*/
 	public static void Clickonlistedsupplier() throws InterruptedException {
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		Buyerpaymentspaymentplanspage_Listedsupplier.click();
 		try { 
 			Thread.sleep(5000);
@@ -175,9 +176,24 @@ public class Buyerpaymentspaymentplanspage {
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
 	}
+	public static void Clickpaymentstatus() throws InterruptedException {
+		Thread.sleep(5000);
+		//WebElement paymentPlans = driver.findElement(By.xpath("//select[@formcontrolname='soaPaymentStatus']"));
+		//paymentPlans.click();
+		Buyerpaymentspaymentplanspage_Selectpaymentstatuspaid.click();
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+	public static WebElement getDropDownElementPaid() {
+		return Buyerpaymentspaymentplanspage_Selectpaymentstatuspaid;
+	}
 
 
  
-
 
 }

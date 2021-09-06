@@ -66,24 +66,31 @@ public class Buyerpaymentspaymentplans {
 	}
 
 	@Then("User select payment status in unpaid")
-	public void user_select_payment_status_in_unpaid() {
-		WebElement Unpaid = Buyerpaymentspaymentplanspage.getDropDownElementUnpaid();
-		Select select=new Select(Unpaid);
-		select.selectByIndex(2);
+	public void user_select_payment_status_in_unpaid() throws InterruptedException {
+		WebElement paymentPlans = Buyerpaymentspaymentplanspage.getDropDownElementPaid();
+		//Select select=new Select(Unpaid);
+		//select.selectByIndex(2);
+		//Buyerpaymentspaymentplanspage.Clickpaymentstatus();
+		Select oSel = new Select(paymentPlans);
+	       
+		if(oSel.isMultiple()){
+			
+			oSel.selectByIndex(1); 
+		}
 	}
 
 	@Then("User select payment status in failed")
 	public void user_select_payment_status_in_failed() {
-		WebElement Failed = Buyerpaymentspaymentplanspage.getDropDownElementFailed();
-		Select select=new Select(Failed);
-		select.selectByIndex(3);
+		//WebElement Failed = Buyerpaymentspaymentplanspage.getDropDownElementFailed();
+		//Select select=new Select(Failed);
+		//select.selectByIndex(3);
 	}
 
 	@Then("User select payment status in paid")
 	public void user_select_payment_status_in_paid() {
-		WebElement Paid = Buyerpaymentspaymentplanspage.getDropDownElementFailed();
-		Select select=new Select(Paid);
-		select.selectByIndex(1);
+		//WebElement Paid = Buyerpaymentspaymentplanspage.getDropDownElementFailed();
+		//Select select=new Select(Paid);
+		//select.selectByIndex(1);
 	}
 
 	@Then("User click on listed supplier in payment plans")

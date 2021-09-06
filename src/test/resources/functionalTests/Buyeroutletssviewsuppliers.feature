@@ -1,6 +1,6 @@
 Feature: Verify Buyer Outlet View suppliers page and test all the page
 
-Scenario Outline: Verify the Outlet suppliers page of Buyer panel 
+Scenario Outline: Verify the Outlets view suppliers page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>" 
           And User enter exact password"<password>"

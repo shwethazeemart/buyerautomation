@@ -1,6 +1,6 @@
-Feature: Verify Buyer Reports spending per Category page and test all the page
+Feature: Verify Buyer Reports spending per tag page and test all the page
 
-Scenario Outline: Verify the Reports spending per Category page of Buyer panel 
+Scenario Outline: Verify the Reports spending per tag page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
           And User enter exact password"<password>"

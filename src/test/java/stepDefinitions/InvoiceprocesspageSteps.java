@@ -82,12 +82,12 @@ public class InvoiceprocesspageSteps {
 	public void user_are_Select_supplier_in_the_dropdown_lists() {
 		WebElement velumasala2020 = invoiceProcessPage.getDropDownElement();
 		Select select=new Select(velumasala2020);
-		select.selectByIndex(2);
+		select.selectByIndex(1);
 	}
-	@And("User is set the invoice number\"INV-{int}\"")
-	public void user_is_set_the_invoice_number_INV(Integer invoicenumber) {
+	@And("User is set the invoice number{string}")
+	public void user_is_set_the_invoice_number_INV(String invoicenumber) {
 		InvoiceprocessPage.enter_invoicenumber(invoicenumber);
-	}
+	} 
 
 
 	@Then("User are Clicks in Validate button")
