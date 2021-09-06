@@ -1,9 +1,13 @@
 package stepDefinitions;
 
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+
 import cucumber.TestContext;
 import io.cucumber.java.en.Then;
 import pageObjects.Buyeroutletsmanagedetailspage;
 import pageObjects.Buyeroutletsviewsupplierspage;
+import pageObjects.Buyerpaymentstransactonspage;
 import pageObjects.Buyerreportspenperoutletpage;
 import pageObjects.DashboardPage;
 import pageObjects.LogInPage;
@@ -44,7 +48,7 @@ public class Buyerreportspenperoutlet {
 	}
 
 	@Then("User select date from calendar")
-	public void user_select_date_from_calendar() {
+	public void user_select_date_from_calendar() throws InterruptedException {
 	    Buyerreportspenperoutletpage.clickoncalendarfromdate();
 
 	}
@@ -141,9 +145,95 @@ public class Buyerreportspenperoutlet {
 	
 	
 	
+	@Then("User click on Today date from calendar")
+	public void user_click_on_Today_date_from_calendar() throws InterruptedException {
+	    Buyerreportspenperoutletpage.Clickontodaydatefromcalendar();
+	}
+
+	@Then("User click on Yesterday date from calendar")
+	public void user_click_on_Yesterday_date_from_calendar() throws InterruptedException {
+	    Buyerreportspenperoutletpage.Clickonyesterdaydatefromcalendar();
+	}
+
+	@Then("User click on This week date from calendar")
+	public void user_click_on_This_week_date_from_calendar() throws InterruptedException {
+	   Buyerreportspenperoutletpage.Clickonthisweekfromcalendar();
+	}
+
+	@Then("User click on This month from calendar")
+	public void user_click_on_This_month_from_calendar() throws InterruptedException {
+	    Buyerreportspenperoutletpage.Clickonthismonthfromcalendar();
+	}
+
+	@Then("User click on Last year from calendar")
+	public void user_click_on_Last_year_from_calendar() throws InterruptedException {
+	    Buyerreportspenperoutletpage.ClickonLastyearfromcalendar();
+	}
+
+	@Then("User click on Custom range from calendar")
+	public void user_click_on_Custom_range_from_calendar() throws InterruptedException {
+	    Buyerreportspenperoutletpage.Clickoncustomrangefromcalendar();
+	}
+
+	@Then("User click on YTD from calendar")
+	public void user_click_on_YTD_from_calendar() throws InterruptedException {
+	    Buyerreportspenperoutletpage.ClickonYTDfromcalendar();
+	}
+
+	@Then("User click on velu masala download button")
+	public void user_click_on_velu_masala_download_button() throws InterruptedException {
+	    Buyerreportspenperoutletpage.Clickonvelumasaladownloadbutton();
+	}
+
+	@Then("User click on velu masala summary button")
+	public void user_click_on_velu_masala_summary_button() {
+	   //Buyerreportspenperoutletpage.Clickonvelumasalasummarybutton();
+	}
+
+	@Then("User click on velu masala detailed button")
+	public void user_click_on_velu_masala_detailed_button() {
+	    //Buyerreportspenperoutletpage.Clickonvelumasaladetailedbutton();
+	} 
+
+	@Then("User click on velu masala List of invoices button")
+	public void user_click_on_velu_masala_List_of_invoices_button() {
+	   //Buyerreportspenperoutletpage.Clickonvelumasalalistofinvoicesbutton();
+	}
+
+	@Then("User click on velu masala outlet icon")
+	public void user_click_on_velu_masala_outlet_icon() throws InterruptedException {
+	    Buyerreportspenperoutletpage.Clickonvelumasalaoutleticon();
+	}
+
+	@Then("User select dropdown in month")
+	public void user_select_dropdown_in_month() {
+		//WebElement Viewbymonth = Buyerreportspenperoutletpage.getDropDownElementmonth();
+		//Select select=new Select(Viewbymonth);
+		//select.selectByIndex(2);
+	}
+
+	@Then("User click download button of export")
+	public void user_click_download_button_of_export() {
+	    Buyerreportspenperoutletpage.Clickonexportdownloadbutton();
+	}
+
 	
 	
-	
+	@Then("User click on back button of spending report")
+	public void user_click_on_back_button_of_spending_report() {
+	    Buyerreportspenperoutletpage.Clickonbackbuttonofspendingreport();
+	}
+
+	@Then("User click on back button of reports")
+	public void user_click_on_back_button_of_reports() {
+	    Buyerreportspenperoutletpage.Clickbackbuttonofreports(); 
+	}
+
+
+	@Then("User click on apply in custom range")
+	public void user_click_on_apply_in_custom_range() {
+	    Buyerreportspenperoutletpage.Clickonapplybuttonincustomrange();
+	}
 	
 	
 	

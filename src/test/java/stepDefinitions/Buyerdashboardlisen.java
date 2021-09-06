@@ -56,7 +56,7 @@ public class Buyerdashboardlisen {
 
 	@Then("User click on New order close icon")
 	public void user_click_on_New_order_close_icon() {
-	    Buyerdashboardlisenpage.ClickonNewordercloseicon();
+	    //Buyerdashboardlisenpage.ClickonNewordercloseicon();
 	}
 
 	@Then("User click on upload invoice icon")
@@ -149,9 +149,101 @@ public class Buyerdashboardlisen {
 	}
 
 
+	
+	
+	
+	
+	@Then("User click on sabari supplier")
+	public void user_click_on_sabari_supplier() {
+	    Buyerdashboardlisenpage.Clickonsabarisupplier();
+	}
+
+	@Then("User click on show favourites check box")
+	public void user_click_on_show_favourites_check_box() {
+	    Buyerdashboardlisenpage.Clickshowfavouritescheckbox();
+	}
+
+	@Then("User click on show favourites uncheck box")
+	public void user_click_on_show_favourites_uncheck_box() {
+	    Buyerdashboardlisenpage.Clickonshowfavouritesuncheckbox();
+	}
+
+	@Then("User click on filter in order page")
+	public void user_click_on_filter_in_order_page() {
+	   Buyerdashboardlisenpage.Clickonfilter();
+	}
+
+	@Then("User click on Tags")
+	public void user_click_on_Tags() {
+	    Buyerdashboardlisenpage.ClickonTags();
+	}
+
+	@Then("User click on selectall")
+	public void user_click_on_selectall() {
+         Buyerdashboardlisenpage.Clickonselectiocn();
+
+	}
+
+	@Then("User click on outside of order page")
+	public void user_click_on_outside_of_order_page() throws InterruptedException {
+	    Buyerdashboardlisenpage.Clickonoutsideoforderpage();
+	}
+
+	@Then("User click on categories")
+	public void user_click_on_categories() {
+	   Buyerdashboardlisenpage.Clickoncategories();
+	}
+
+	@Then("User click on cretifications")
+	public void user_click_on_cretifications() {
+	    Buyerdashboardlisenpage.Clickoncertifications();
+	    
+	}
+
+	@Then("User click on Search box SKU name")
+	public void user_click_on_Search_box_SKU_name() {
+	    Buyerdashboardlisenpage.Clickonsearchbox();
+	}
+
+	@Then("User enter sku in search box{string}")
+	public void user_enter_sku_in_search_box_100pipers(String name) {
+	    Buyerdashboardlisenpage.Enternameinsearchbox(name);
+	}
+
+	@Then("User click on close icon in order page")
+	public void user_click_on_close_icon_in_order_page() {
+	    Buyerdashboardlisenpage.Clickoncloseiconinorderpage();
+	}
+
+	@Then("User click on velumasala")
+	public void user_click_on_velumasala() {
+	    Buyerdashboardlisenpage.Clickonvelumasala();
+	}
+
+	@Then("User click on upload image in drag and dorp filed")
+	public void user_click_on_upload_image_in_drag_and_dorp_filed() throws InterruptedException {
+	    Buyerdashboardlisenpage.Clickonuploadimage();
+	}
+
+	@Then("User click on Done button in drag and drop filed")
+	public void user_click_on_Done_button_in_drag_and_drop_filed() throws InterruptedException {
+	    Buyerdashboardlisenpage.ClickDonebutton();
+	}
+
 
 	
-	
+	@Then("User click on Apply button in order page")
+	public void user_click_on_Apply_button_in_order_page() {
+         Buyerdashboardlisenpage.Clickonapplybutton();
+	}
+
+	@Then("User click on Reset button in order page")
+	public void user_click_on_Reset_button_in_order_page() {
+	   //Buyerdashboardlisenpage.Clickonresetbutton();
+	}
+
+
+
 	
 	
 	

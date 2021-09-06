@@ -83,6 +83,63 @@ public class Buyerreportspenperoutletpage {
 	
 	
 	
+	@FindBy(xpath = "//span[contains(@name,'daterange')]")
+	private static WebElement Buyerreportspenperoutletpage_Calendaricon;
+	
+	
+	@FindBy(xpath = "//li[text()='Today']")
+	private static WebElement Buyerreportspenperoutletpage_Todaydatefromcalendar;
+	
+	@FindBy(xpath = "//li[text()='Yesterday']")
+	private static WebElement Buyerreportspenperoutletpage_Yesterdaydatefromcalendar;
+	
+	@FindBy(xpath = "//li[text()='This Week']")
+	private static WebElement Buyerreportspenperoutletpage_Thisweekfromcalendar;
+	
+	@FindBy(xpath = "//li[text()='This Month']")
+	private static WebElement Buyerreportspenperoutletpage_Thismonthfromcalendar;
+	
+	@FindBy(xpath = "//li[@data-range-key='Custom Range']")
+	private static WebElement Buyerreportspenperoutletpage_Customrangefromcalendar;
+	
+	@FindBy(xpath = "//li[@data-range-key='YTD']")
+	private static WebElement Buyerreportspenperoutletpage_YTDfromcalendar;
+	
+	@FindBy(xpath = "(//span[@class='icon_download']//img)[2]")
+	private static WebElement Buyerreportspenperoutletpage_Velumasaladownloadbutton;
+	
+	//@FindBy(xpath = "//span[contains(@name,'daterange')]")
+	//private static WebElement Buyerreportspenperoutletpage_Velumasalasummarybutton;
+	
+	//@FindBy(xpath = "//span[contains(@name,'daterange')]")
+	//private static WebElement Buyerreportspenperoutletpage_Velumasaladetailedbutton;
+	
+	//@FindBy(xpath = "//span[contains(@name,'daterange')]")
+	//private static WebElement Buyerreportspenperoutletpage_Velumasalalistinvoicesbutton;
+	
+	@FindBy(xpath = "(//div[contains(@class,'datatable-body-cell-label')])[10]")
+	private static WebElement Buyerreportspenperoutletpage_Velumasalaoutleticon;
+	
+	@FindBy(xpath = "//div[@class='d-flex']//a[1]")
+	private static WebElement Buyerreportspenperoutletpage_Exportdownloadbutton;
+	
+	@FindBy(xpath = "//select[contains(@id,'country')]")
+	private static WebElement Buyerreportspenperoutletpage_Selectmonthdropdown;
+	
+	@FindBy(xpath = "//p[text()='Spending report']")
+	private static WebElement Buyerreportspenperoutletpage_Spendingreportbackbutton;
+	
+	@FindBy(xpath = "//p[text()='Reports']")
+	private static WebElement Buyerreportspenperoutletpage_Reportsbackbutton;
+	
+	@FindBy(xpath = "(//button[text()='Apply'])[2]")
+	private static WebElement Buyerreportspenperoutletpage_Applycustomrangebutton;
+	
+	@FindBy(xpath = "//li[text()='Last Year']")
+	private static WebElement Buyerreportspenperoutletpage_Lastyearfromcalendar;
+	
+	 
+	
 	
 	
 	
@@ -98,11 +155,20 @@ public class Buyerreportspenperoutletpage {
 				.executeScript("return document.readyState").equals("complete"));
 		
 	}
-	public static void clickoncalendarfromdate() {
-		WebElement DateBox=driver.findElement(By.xpath("//span[contains(@name,'daterange')]"));
+	public static void clickoncalendarfromdate() throws InterruptedException{
+		Thread.sleep(5000);
+		Buyerreportspenperoutletpage_Calendaricon.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+		//WebElement DateBox=driver.findElement(By.xpath("//span[contains(@name,'daterange')]"));
 
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].value='30Jul2021-30Aug2021';", DateBox);
+		//JavascriptExecutor js = (JavascriptExecutor) driver;
+		//js.executeScript("arguments[0].value='30Jul2021-30Aug2021';", DateBox);
 		
 		
 	}
@@ -273,12 +339,207 @@ public class Buyerreportspenperoutletpage {
 				.executeScript("return document.readyState").equals("complete"));
 		
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public static void Clickontodaydatefromcalendar() throws InterruptedException {
+		Thread.sleep(5000);
+		Buyerreportspenperoutletpage_Todaydatefromcalendar.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+	public static void Clickonyesterdaydatefromcalendar() throws InterruptedException {
+		Thread.sleep(5000);
+		Buyerreportspenperoutletpage_Yesterdaydatefromcalendar.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+	public static void Clickonthisweekfromcalendar() throws InterruptedException {
+		Thread.sleep(5000);
+		Buyerreportspenperoutletpage_Thisweekfromcalendar.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+	public static void Clickonthismonthfromcalendar() throws InterruptedException {
+		Thread.sleep(5000);
+		Buyerreportspenperoutletpage_Thismonthfromcalendar.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+	public static void Clickoncustomrangefromcalendar() throws InterruptedException {
+		Thread.sleep(5000);
+		Buyerreportspenperoutletpage_Customrangefromcalendar.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+	public static void ClickonYTDfromcalendar() throws InterruptedException{
+		Thread.sleep(5000);
+		Buyerreportspenperoutletpage_YTDfromcalendar.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+	public static void Clickonvelumasaladownloadbutton() throws InterruptedException {
+		Thread.sleep(5000);
+		Buyerreportspenperoutletpage_Velumasaladownloadbutton.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+	public static void Clickonvelumasalasummarybutton() {
+		WebElement summary = driver.findElement(By.linkText("Summary"));
+		summary.click();
+		//Buyerreportspenperoutletpage_Velumasalasummarybutton.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+	public static void Clickonvelumasaladetailedbutton() {
+		WebElement detailed = driver.findElement(By.linkText("Detailed"));
+		detailed.click();
+		//Buyerreportspenperoutletpage_Velumasaladetailedbutton.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+	public static void Clickonvelumasalalistofinvoicesbutton() {
+		WebElement listOfInvoices = driver.findElement(By.linkText("List of invoices"));
+		listOfInvoices.click();
+		//Buyerreportspenperoutletpage_Velumasalalistinvoicesbutton.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+	public static void Clickonvelumasalaoutleticon() throws InterruptedException {
+		Thread.sleep(5000);
+		Buyerreportspenperoutletpage_Velumasalaoutleticon.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+	public static void Clickonexportdownloadbutton() {
+		Buyerreportspenperoutletpage_Exportdownloadbutton.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
 
 	
+	public static void Selectsoutletmonth() throws InterruptedException {
+		Buyerreportspenperoutletpage_Selectmonthdropdown.click();
+		Thread.sleep(5000);
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
 
+	}
+	public static WebElement getDropDownElementmonth() {
+		return Buyerreportspenperoutletpage_Selectmonthdropdown;
 	
-	
-	
+	}
+	public static void Clickonbackbuttonofspendingreport() {
+		Buyerreportspenperoutletpage_Spendingreportbackbutton.click();
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+
+		
+	}
+	public static void Clickbackbuttonofreports() {
+		Buyerreportspenperoutletpage_Reportsbackbutton.click();
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+	public static void Clickonapplybuttonincustomrange() {
+		Buyerreportspenperoutletpage_Applycustomrangebutton.click();
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+	public static void ClickonLastyearfromcalendar() throws InterruptedException {
+		Thread.sleep(5000);
+		Buyerreportspenperoutletpage_Lastyearfromcalendar.click();
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
 	
 	
 	
