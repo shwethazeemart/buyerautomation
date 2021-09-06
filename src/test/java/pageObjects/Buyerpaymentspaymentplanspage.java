@@ -1,11 +1,14 @@
 package pageObjects;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -52,8 +55,8 @@ public class Buyerpaymentspaymentplanspage {
 	//@FindBy(xpath = "//select[@formcontrolname='soaPaymentStatus']")
 	//private static WebElement Buyerpaymentspaymentplanspage_Selectpaymentstatusfailed;
 	
-	@FindBy(xpath = "//select[@formcontrolname='soaPaymentStatus']")
-	private static WebElement Buyerpaymentspaymentplanspage_Selectpaymentstatuspaid;
+	//@FindBy(xpath = "//select[@formcontrolname='soaPaymentStatus']")
+	//private static WebElement Buyerpaymentspaymentplanspage_Selectpaymentstatuspaid;
 	
 	@FindBy(xpath = "(//div[contains(@class,'datatable-row-center datatable-row-group')]//datatable-body-cell)[2]")
 	private static WebElement Buyerpaymentspaymentplanspage_Listedsupplier;
@@ -121,6 +124,9 @@ public class Buyerpaymentspaymentplanspage {
 				.executeScript("return document.readyState").equals("complete"));
 
 	}
+	
+	
+	
 	public static WebElement getDropDownElementUnpaid() {
 		return Buyerpaymentspaymentplanspage_Selectpaymentstatusunpaid;
 	}*/
@@ -155,6 +161,26 @@ public class Buyerpaymentspaymentplanspage {
 	public static WebElement getDropDownElementPaid() {
 		return Buyerpaymentspaymentplanspage_Selectpaymentstatuspaid;
 	}*/
+	
+	
+	public static void Selectpaymentstatuspaid() throws InterruptedException {
+		Thread.sleep(5000);
+		List<WebElement> list =driver.findElements(By.xpath("(//div[@class='pr-2']//select)[3]"));
+        System.out.println(list.size());
+        for(int i=0; i<list.size(); i++){
+        	System.out.println(list.get(i).getText()); 
+        	if(list.get(i).getText().contains("Paid")) {
+        		list.get(i).click();
+        		break;
+        	}
+        	
+        	
+        }
+		
+	}
+	
+	
+	
 	public static void Clickonlistedsupplier() throws InterruptedException {
 		Thread.sleep(10000);
 		Buyerpaymentspaymentplanspage_Listedsupplier.click();
@@ -177,10 +203,10 @@ public class Buyerpaymentspaymentplanspage {
 				.executeScript("return document.readyState").equals("complete"));
 	}
 	public static void Clickpaymentstatus() throws InterruptedException {
-		Thread.sleep(5000);
+		/*Thread.sleep(5000);
 		//WebElement paymentPlans = driver.findElement(By.xpath("//select[@formcontrolname='soaPaymentStatus']"));
 		//paymentPlans.click();
-		Buyerpaymentspaymentplanspage_Selectpaymentstatuspaid.click();
+		//Buyerpaymentspaymentplanspage_Selectpaymentstatuspaid.click();
 		try { 
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -190,10 +216,10 @@ public class Buyerpaymentspaymentplanspage {
 		
 	}
 	public static WebElement getDropDownElementPaid() {
-		return Buyerpaymentspaymentplanspage_Selectpaymentstatuspaid;
-	}
+		//return Buyerpaymentspaymentplanspage_Selectpaymentstatuspaid;
+	}*/
 
 
  
-
+	}
 }

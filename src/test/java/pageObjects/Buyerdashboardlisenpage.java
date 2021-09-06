@@ -98,6 +98,59 @@ public class Buyerdashboardlisenpage {
 
 
 
+	
+	
+	
+	@FindBy(xpath = "//div[text()='sabari250']")
+	private static WebElement Buyerdashboardlisenpage_Sabarisupplier;
+
+	
+	@FindBy(xpath = "//input[@type='checkbox']")
+	private static WebElement Buyerdashboardlisenpage_Showfavouritescheckbox;
+	
+	@FindBy(xpath = "//input[@type='checkbox']")
+	private static WebElement Buyerdashboardlisenpage_Showfavouritesuncheckbox;
+	
+	@FindBy(xpath = "//a[contains(@class,'pull-right export-mclr')]")
+	private static WebElement Buyerdashboardlisenpage_Filtericon;
+	
+	@FindBy(xpath = "//div[text()=' Tags  ']")
+	private static WebElement Buyerdashboardlisenpage_Tagsicon;
+	
+	//@FindBy(xpath = "(//div[@class='supplier_tab_inner_info']/following-sibling::a)[1]")
+	//private static WebElement Buyerdashboardlisenpage_Selecticon;
+	
+	@FindBy(xpath = "//div[@class='flex__pads pb-0']")
+	private static WebElement Buyerdashboardlisenpage_Outsideorderpage;
+	
+	@FindBy(xpath = "//div[text()=' Categories  ']")
+	private static WebElement Buyerdashboardlisenpage_Categoriesicon;
+	
+	@FindBy(xpath = "//div[text()=' Certifications  ']")
+	private static WebElement Buyerdashboardlisenpage_Certificationsicon;
+	
+	@FindBy(xpath = "//input[@placeholder='SKU name']")
+	private static WebElement Buyerdashboardlisenpage_Searchboxicon;
+	
+	@FindBy(xpath = "//input[@placeholder='SKU name']")
+	private static WebElement Buyerdashboardlisenpage_Enternamesearchbox;
+	
+	@FindBy(xpath = "//img[@src='../assets/zmcore/img/close-blue.svg']")
+	private static WebElement Buyerdashboardlisenpage_Closeiconinorderpage;
+	
+	@FindBy(xpath = "//b[text()='velu masala2020']")
+	private static WebElement Buyerdashboardlisenpage_Velumasalaicon;
+	
+	@FindBy(xpath = "//button[text()='Done']")
+	private static WebElement Buyerdashboardlisenpage_Donebutton;
+	
+	@FindBy(xpath = "//button[text()='Apply']")
+	private static WebElement Buyerdashboardlisenpage_Applybutton;
+	
+	@FindBy(xpath = "//a[@class='filter-reset ml-3']")
+	private static WebElement Buyerdashboardlisenpage_Resetbutton;
+	
+	
 
 
 
@@ -324,6 +377,206 @@ public class Buyerdashboardlisenpage {
 		}
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+	
+	
+	
+	
+
+	public static void Clickonsabarisupplier() {
+		Buyerdashboardlisenpage_Sabarisupplier.click();
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	public static void Clickshowfavouritescheckbox() {
+		Buyerdashboardlisenpage_Showfavouritescheckbox.click();
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public static void Clickonshowfavouritesuncheckbox() {
+		Buyerdashboardlisenpage_Showfavouritesuncheckbox.click();
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public static void Clickonfilter() {
+		Buyerdashboardlisenpage_Filtericon.click();
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public static void ClickonTags() {
+		Buyerdashboardlisenpage_Tagsicon.click();
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public static void Clickonselectiocn() {
+		//Buyerdashboardlisenpage_Selecticon.click();
+		WebElement selectAll = driver.findElement(By.linkText("Select All"));
+		selectAll.click();
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public static void Clickonoutsideoforderpage() throws InterruptedException {
+		Thread.sleep(5000);
+		Buyerdashboardlisenpage_Outsideorderpage.click();
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public static void Clickoncategories() {
+		Buyerdashboardlisenpage_Categoriesicon.click();
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public static void Clickoncertifications() {
+		Buyerdashboardlisenpage_Certificationsicon.click();
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public static void Clickonsearchbox() {
+		Buyerdashboardlisenpage_Searchboxicon.click();
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public static void Enternameinsearchbox(String name) {
+		Buyerdashboardlisenpage_Enternamesearchbox.sendKeys(name);
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public static void Clickoncloseiconinorderpage() {
+		Buyerdashboardlisenpage_Closeiconinorderpage.click();
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public static void Clickonvelumasala() {
+		Buyerdashboardlisenpage_Velumasalaicon.click();
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public static void Clickonuploadimage() throws InterruptedException {
+		WebElement uploadBox=driver.findElement(By.xpath("//input[@id='file']"));
+		uploadBox.sendKeys("E:\\Zeemart All\\download.jpg");
+		Thread.sleep(5000);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) { 
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));	
+		
+		
+	}
+
+	public static void ClickDonebutton() throws InterruptedException {
+		Thread.sleep(5000);
+		Buyerdashboardlisenpage_Donebutton.click();
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public static void Clickonapplybutton() {
+		Buyerdashboardlisenpage_Applybutton.click();
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public static void Clickonresetbutton() {
+		Buyerdashboardlisenpage_Resetbutton.click();
+		//WebElement reset = driver.findElement(By.linkText("Reset"));
+		//reset.click();
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
 		
 	}
 

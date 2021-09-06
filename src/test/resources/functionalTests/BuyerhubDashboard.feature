@@ -7,9 +7,31 @@ Scenario Outline: Verify the Dashboard lisen page of Buyer panel
           And User is click login button 
           Then User Clicks on Dashboard in the side navigation menubar 
           And User click on New order icon
-          Then User click on New order close icon
+          Then User click on sabari supplier
+          And User click on show favourites check box
+          Then User click on show favourites uncheck box
+          And User click on filter in order page
+          Then User click on Tags
+          And User click on selectall
+          Then User click on Apply button in order page
+          And User click on Reset button in order page
+          Then User click on outside of order page
+          And User click on filter in order page
+          And User click on categories
+          And User click on selectall
+          Then User click on Apply button in order page
+          And User click on Reset button in order page
+          Then User click on outside of order page
+          And User click on filter in order page
+          Then User click on cretifications
+          Then User click on outside of order page
+          And User click on Search box SKU name
+          Then User enter sku in search box"<name>"
+          Then User click on close icon in order page
           And User click on upload invoice icon
-          Then User click on upload invoice close icon
+          Then User click on velumasala
+          And User click on upload image in drag and dorp filed
+          Then User click on Done button in drag and drop filed
           And User select dropdown spending overview list of velu masala
           Then User click on YTD icon
           And User click on Last year icon
@@ -27,6 +49,6 @@ Scenario Outline: Verify the Dashboard lisen page of Buyer panel
           Then User click on view all spending by supplier
           
            Examples:
-         |username                            |  |password    |
-         |velumanieswaran2020@gmail.com       |  |!123456Zm   |
+         |username                            |  |password    ||name     |
+         |velumanieswaran2020@gmail.com       |  |!123456Zm   ||100pipers|
           
