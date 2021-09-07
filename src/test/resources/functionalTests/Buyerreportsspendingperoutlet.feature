@@ -59,6 +59,21 @@ Scenario Outline: Verify the Reports spending per outlet page of Buyer panel
           And User click on velu masala detailed button
           Then User click on velu masala List of invoices button
           And User click on velu masala outlet icon
+          Then User select date from calendar
+          And User click on Today date from calendar
+          Then User select date from calendar
+          Then User click on Yesterday date from calendar
+          Then User select date from calendar
+          And User click on This week date from calendar
+          Then User select date from calendar
+          Then User click on This month from calendar
+          Then User select date from calendar
+          And User click on Last year from calendar
+          Then User select date from calendar
+          Then User click on Custom range from calendar
+          Then User click on apply in custom range
+          Then User select date from calendar
+          Then User click on YTD from calendar
           And User select dropdown in month 
           Then User click download button of export
           Then User click on back button of spending report

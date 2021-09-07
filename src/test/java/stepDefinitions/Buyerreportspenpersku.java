@@ -1,5 +1,8 @@
 package stepDefinitions;
 
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+
 import cucumber.TestContext;
 import io.cucumber.java.en.Then;
 import pageObjects.Buyeroutletsmanagedetailspage;
@@ -114,7 +117,99 @@ public class Buyerreportspenpersku {
 
 	
 	
+	@Then("User click on hundred pipers sku")
+	public void user_click_on_hundred_pipers_sku() {
+	   Buyerreportspenperskupage.Clickonhundredpipers();
+	}
+
+	@Then("User click on bag in hundred pipers")
+	public void user_click_on_bag_in_hundred_pipers() throws InterruptedException {
+	   Buyerreportspenperskupage.Clickonbag();
+	}
+
+	@Then("User click on box in hundred pipers")
+	public void user_click_on_box_in_hundred_pipers() throws InterruptedException {
+	    Buyerreportspenperskupage.Clickonbox();
+	}
+
+	@Then("User click on bdl in hundred pipers")
+	public void user_click_on_bdl_in_hundred_pipers() throws InterruptedException {
+	    Buyerreportspenperskupage.Clickonbdl();
+	}
+
+	@Then("User click on filter in hundred pipers")
+	public void user_click_on_filter_in_hundred_pipers() {
+	    Buyerreportspenperskupage.Clickonfilterinhundredpipers();
+	}
+
+	@Then("User click on outlets in hundred pipers")
+	public void user_click_on_outlets_in_hundred_pipers() {
+	    Buyerreportspenperskupage.Clickonoutletsinhundredpipers();
+	}
+
+	@Then("User click on select all icon in hundred pipers")
+	public void user_click_on_select_all_icon_in_hundred_pipers() {
+	    Buyerreportspenperskupage.Clickonselectallicon();
+	}
+
+	@Then("User click on apply button in hundred pipers")
+	public void user_click_on_apply_button_in_hundred_pipers() {
+	   Buyerreportspenperskupage.Clickonapplybuttoninhundredpipers();
+	}
+
+	@Then("User click on reset button in hundred pipers")
+	public void user_click_on_reset_button_in_hundred_pipers() {
+	    Buyerreportspenperskupage.Clickonresetbuttoninhundredpipers();
+	}
+
+	@Then("User click on Outside in hundred pipers")
+	public void user_click_on_Outside_in_hundred_pipers() {
+	    Buyerreportspenperskupage.Clickonoutsideiconinhundredpipers();
+	}
+
+	@Then("User click on export button in hundred pipers")
+	public void user_click_on_export_button_in_hundred_pipers() {
+	    Buyerreportspenperskupage.Clickonexportbuttoninhundredpipers();
+	}
+
+	@Then("User click on price history icon in hundred pipers")
+	public void user_click_on_price_history_icon_in_hundred_pipers() {
+	    Buyerreportspenperskupage.Clickonpricehistory();
+	}
+
+	@Then("User select dropdown in velumasala twentytwenty")
+	public void user_select_dropdown_in_velumasala_twentytwenty() {
+		WebElement velumasala2020 = Buyerreportspenperskupage.getDropDownElementvelumasala2020();
+		Select select=new Select(velumasala2020);
+		select.selectByIndex(2);
+	}
+
+	@Then("User click on bdl in price history")
+	public void user_click_on_bdl_in_price_history() throws InterruptedException {
+	    Buyerreportspenperskupage.Clickonbdlinpricehistory();
+	}
+
+	@Then("User click on bag in price history")
+	public void user_click_on_bag_in_price_history() throws InterruptedException {
+	    Buyerreportspenperskupage.Clickbaginpricehistory();
+	}
+
+	@Then("User click on box in price history")
+	public void user_click_on_box_in_price_history() throws InterruptedException {
+	    Buyerreportspenperskupage.Clickonboxpricehistory();
+	}
+
+	@Then("User select date from calendar in hundred pipers")
+	public void user_select_date_from_calendar_in_hundred_pipers() {
+	    Buyerreportspenperskupage.Selectdatefromcalendarinhundredpipers();
+	}
 	
+	@Then("User select dropdown in month in hundred pipers")
+	public void user_select_dropdown_in_month_in_hundred_pipers() {
+		WebElement Viewbymonth = Buyerreportspenperskupage.getDropDownElementviewbymonth();
+		Select select=new Select(Viewbymonth);
+		select.selectByIndex(1);
+	}
 	
 	
 	

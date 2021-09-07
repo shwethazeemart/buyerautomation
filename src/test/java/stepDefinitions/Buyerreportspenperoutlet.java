@@ -207,20 +207,20 @@ public class Buyerreportspenperoutlet {
 
 	@Then("User select dropdown in month")
 	public void user_select_dropdown_in_month() {
-		//WebElement Viewbymonth = Buyerreportspenperoutletpage.getDropDownElementmonth();
-		//Select select=new Select(Viewbymonth);
-		//select.selectByIndex(2);
+		WebElement ViewbyDay = Buyerreportspenperoutletpage.getDropDownElementmonth();
+		Select select=new Select(ViewbyDay);
+		select.selectByIndex(1);
 	}
 
 	@Then("User click download button of export")
-	public void user_click_download_button_of_export() {
+	public void user_click_download_button_of_export() throws InterruptedException {
 	    Buyerreportspenperoutletpage.Clickonexportdownloadbutton();
 	}
 
 	
 	
 	@Then("User click on back button of spending report")
-	public void user_click_on_back_button_of_spending_report() {
+	public void user_click_on_back_button_of_spending_report() throws InterruptedException {
 	    Buyerreportspenperoutletpage.Clickonbackbuttonofspendingreport();
 	}
 
@@ -237,7 +237,7 @@ public class Buyerreportspenperoutlet {
 	
 	
 	
-	
+	 
 	
 	
 	

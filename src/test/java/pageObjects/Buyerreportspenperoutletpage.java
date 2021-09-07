@@ -42,7 +42,7 @@ public class Buyerreportspenperoutletpage {
 	@FindBy(xpath = "//div[text()=' Suppliers  ']")
 	private static WebElement Buyerreportspenperoutletpage_Suppliers;
 	
-	@FindBy(xpath = "(//input[@type='checkbox'])[2]")
+	@FindBy(xpath = "//input[@type='checkbox']")
 	private static WebElement Buyerreportspenperoutletpage_Sabaricheckbox;
 	
 	@FindBy(xpath = "//button[text()='Apply']")
@@ -105,7 +105,7 @@ public class Buyerreportspenperoutletpage {
 	@FindBy(xpath = "//li[@data-range-key='YTD']")
 	private static WebElement Buyerreportspenperoutletpage_YTDfromcalendar;
 	
-	@FindBy(xpath = "(//span[@class='icon_download']//img)[2]")
+	@FindBy(xpath = "(//img[@src='./assets/zmcore/img/download-icon.svg'])[2]")
 	private static WebElement Buyerreportspenperoutletpage_Velumasaladownloadbutton;
 	
 	//@FindBy(xpath = "//span[contains(@name,'daterange')]")
@@ -132,7 +132,7 @@ public class Buyerreportspenperoutletpage {
 	@FindBy(xpath = "//p[text()='Reports']")
 	private static WebElement Buyerreportspenperoutletpage_Reportsbackbutton;
 	
-	@FindBy(xpath = "(//button[text()='Apply'])[2]")
+	@FindBy(xpath = "//button[contains(@class,'applyBtn btn')]") 
 	private static WebElement Buyerreportspenperoutletpage_Applycustomrangebutton;
 	
 	@FindBy(xpath = "//li[text()='Last Year']")
@@ -472,7 +472,8 @@ public class Buyerreportspenperoutletpage {
 				.executeScript("return document.readyState").equals("complete"));
 		
 	}
-	public static void Clickonexportdownloadbutton() {
+	public static void Clickonexportdownloadbutton() throws InterruptedException {
+		Thread.sleep(5000);
 		Buyerreportspenperoutletpage_Exportdownloadbutton.click();
 		try {
 			Thread.sleep(5000);
@@ -498,7 +499,8 @@ public class Buyerreportspenperoutletpage {
 		return Buyerreportspenperoutletpage_Selectmonthdropdown;
 	
 	}
-	public static void Clickonbackbuttonofspendingreport() {
+	public static void Clickonbackbuttonofspendingreport() throws InterruptedException {
+		Thread.sleep(5000);
 		Buyerreportspenperoutletpage_Spendingreportbackbutton.click();
 		try { 
 			Thread.sleep(5000);
