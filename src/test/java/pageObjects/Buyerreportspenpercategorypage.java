@@ -64,15 +64,26 @@ public class Buyerreportspenpercategorypage {
 	@FindBy(xpath = "//div[text()=' Suppliers  ']")
 	private static WebElement Buyerreportspenpercategorypage_Suppliers;
 	
-	@FindBy(xpath = "(//input[@type='checkbox'])[2]")
+	@FindBy(xpath = "//input[@type='checkbox']")
 	private static WebElement Buyerreportspenpercategorypage_Checkboxofsabari;
 	
 	@FindBy(xpath = "//button[text()='Search']")
 	private static WebElement Buyerreportspenpercategorypage_Searchicon;
 	
+	
+	
+	@FindBy(xpath = "(//div[contains(@class,'datatable-body-cell-label')])[3]")
+	private static WebElement Buyerreportspenpercategorypage_Beercategory;
+	
+	@FindBy(xpath = "//select[contains(@id,'country')]")
+	private static WebElement Buyerreportspenpercategorypage_Selectmonthdropdown;
+	
+	@FindBy(xpath = "//div[contains(@class,'flex__bwn flex__pad')]")
+	private static WebElement Buyerreportspenpercategorypage_OutsideBeercategory;
+	
 	 
 	
-	
+	 
 	
 	public static void Clickspendingpercategory() {
 		WebElement spendingPerCategoryFind = driver.findElement(By.className("spendingperBox"));
@@ -105,13 +116,14 @@ public class Buyerreportspenpercategorypage {
 		
 	}
 	public static void Selectdatefromcalendar() {
+		
 		WebElement DateBox=driver.findElement(By.xpath("//input[@formcontrolname='categoryDateRange']"));
-
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].value='30Jul2021-30Aug2021';", DateBox);
+		js.executeScript("arguments[0].value='01Sep2021-30Sep2021';", DateBox);
 		
 	}
-	public static void Clickfilter() {
+	public static void Clickfilter() throws InterruptedException {
+		Thread.sleep(5000);
 		 Buyerreportspenpercategorypage_Filter.click();
 			try {
 				Thread.sleep(5000);
@@ -208,6 +220,51 @@ public class Buyerreportspenpercategorypage {
 	
 	
 	
+	
+	
+	public static void ClickonBeercategory() {
+		Buyerreportspenpercategorypage_Beercategory.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+	public static void Selectdatefromcalendarinbeer() throws InterruptedException {
+		Thread.sleep(5000);
+		WebElement DateBox=driver.findElement(By.xpath("//span[@name='daterange']"));
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].value='07Sep2020-07Sep2021';", DateBox);
+	}
+	
+	
+	public static void Selectsoutletmonth() throws InterruptedException {
+		Thread.sleep(5000);
+		Buyerreportspenpercategorypage_Selectmonthdropdown.click();
+		Thread.sleep(5000);
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+
+	}
+	public static WebElement getDropDownElementmonth() {
+		return Buyerreportspenpercategorypage_Selectmonthdropdown;
+	}
+	public static void Clickonoutsidecategoryinbeer() {
+		Buyerreportspenpercategorypage_OutsideBeercategory.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
 	
 	
 	

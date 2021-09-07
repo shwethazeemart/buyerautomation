@@ -55,14 +55,14 @@ public class Buyerpaymentspaymentplans {
 	public void user_select_companies_from_dropdown_list_in_payment_plans() {
 		WebElement TNWineShop = Buyerpaymentspaymentplanspage.getDropDownElementtnwineshop();
 		Select select=new Select(TNWineShop);
-		select.selectByIndex(4);
+		select.selectByIndex(5);
 	}
 
 	@Then("User selecct suppliers from dropdown list in payment plans")
 	public void user_selecct_suppliers_from_dropdown_list_in_payment_plans() {
 		WebElement MRFruits = Buyerpaymentspaymentplanspage.getDropDownElementmrfruits();
 		Select select=new Select(MRFruits);
-		select.selectByIndex(1);
+		select.selectByIndex(6);
 	}
 
 	@Then("User select payment status in unpaid")
