@@ -58,7 +58,7 @@ public class Buyerpaymentspaymentplanspage {
 	//@FindBy(xpath = "//select[@formcontrolname='soaPaymentStatus']")
 	//private static WebElement Buyerpaymentspaymentplanspage_Selectpaymentstatuspaid;
 	
-	@FindBy(xpath = "(//div[contains(@class,'datatable-row-center datatable-row-group')]//datatable-body-cell)[2]")
+	@FindBy(xpath = "(//div[contains(@class,'datatable-body-cell-label')])[1]")
 	private static WebElement Buyerpaymentspaymentplanspage_Listedsupplier;
 	
 	@FindBy(xpath = "//p[text()='Payments']")
@@ -166,10 +166,11 @@ public class Buyerpaymentspaymentplanspage {
 	public static void Selectpaymentstatuspaid() throws InterruptedException {
 		Thread.sleep(5000);
 		List<WebElement> list =driver.findElements(By.xpath("(//div[@class='pr-2']//select)[3]"));
-        System.out.println(list.size());
-        for(int i=0; i<list.size(); i++){
+        System.out.println(list.indexOf(list));
+        int s=list.indexOf(list);
+        for(int i=0; i<s; i++){
         	System.out.println(list.get(i).getText()); 
-        	if(list.get(i).getText().contains("Paid")) {
+        	//if(list.get(i).getText().contains("Paid")) {
         		list.get(i).click();
         		break;
         	}
@@ -177,7 +178,7 @@ public class Buyerpaymentspaymentplanspage {
         	
         }
 		
-	}
+	
 	
 	
 	
