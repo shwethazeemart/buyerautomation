@@ -62,6 +62,9 @@ public class Buyerreportspenpersupplierpage {
 	@FindBy(xpath = "//div[@class='flex__bwn flex__pad']/following-sibling::div[1]")
 	private static WebElement Buyerreportspenpersupplierpage_Outside;
 	
+	@FindBy(xpath = "(//div[contains(@class,'datatable-body-cell-label')])[10]")
+	private static WebElement Buyerreportspenpersupplierpage_Sabaritwofiftysupplier;
+	
 	
 	 
 	
@@ -176,39 +179,56 @@ public class Buyerreportspenpersupplierpage {
 				.executeScript("return document.readyState").equals("complete"));
 		
 	}
+	public static void Clickonsabaritwofiftysupplier() {
+		Buyerreportspenpersupplierpage_Sabaritwofiftysupplier.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
 	
 	
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+		
 }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+

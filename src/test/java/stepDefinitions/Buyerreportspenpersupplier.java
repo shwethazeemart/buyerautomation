@@ -100,7 +100,10 @@ public class Buyerreportspenpersupplier {
 	    Buyerreportspenpersupplierpage.Clickonoutside();
 	}
 
-
+	@Then("User click on sabari two fifty supplier")
+	public void user_click_on_sabari_two_fifty_supplier() {
+		Buyerreportspenpersupplierpage.Clickonsabaritwofiftysupplier();
+	}
 
 	
 	
