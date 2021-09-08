@@ -73,6 +73,20 @@ public class Buyerreportspenpertagpage {
 	
 	
 	
+	@FindBy(xpath = "(//div[contains(@class,'datatable-body-cell-label')])[1]")
+	private static WebElement Buyerreportspenpertagpage_Masalatag;
+	
+	@FindBy(xpath = "(//a[@class='export-mclr'])[1]")
+	private static WebElement Buyerreportspenpertagpage_Exportbuttoninmasala;
+	
+	@FindBy(xpath = "(//a[@class='export-mclr'])[2]")
+	private static WebElement Buyerreportspenpertagpage_Filtertaginmasala;
+	
+	@FindBy(xpath = "//div[@class='d-flex nav__back']/following-sibling::div[1]")
+	private static WebElement Buyerreportspenpertagpage_Outsidetaginmasala;
+	
+	
+		
 
 	public static void Clickonspendingpertag() {
 		WebElement spendingPerTagSee = driver.findElement(By.className("yellowBox"));
@@ -200,6 +214,52 @@ public class Buyerreportspenpertagpage {
 	}
 	public static void Clickonexportdownloadbutton() {
 		Buyerreportspenpertagpage_Exportdownloadbutton.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+	
+	
+	
+	
+	
+	public static void Clickonmasalatag() {
+		Buyerreportspenpertagpage_Masalatag.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+		
+	}
+	public static void Clickonexportbuttoninmasala() {
+		Buyerreportspenpertagpage_Exportbuttoninmasala.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+	public static void Clickonfiltertaginmasala() {
+		Buyerreportspenpertagpage_Filtertaginmasala.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+	public static void Clickonoutsidetaginmasala() {
+		Buyerreportspenpertagpage_Outsidetaginmasala.click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {

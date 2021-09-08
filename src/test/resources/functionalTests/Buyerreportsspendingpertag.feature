@@ -53,7 +53,22 @@ Scenario Outline: Verify the Reports spending per tag page of Buyer panel
           Then User click on apply in custom range
           Then User select date from calendar
           Then User click on YTD from calendar
+          And User click on Export download button in masala
+          Then User click on filter tag in masala
+          And User click on outlets in tag
+          Then User click on Check box of velumasala in tag
+          Then User click on apply button in tag
+          And User click on reset button in tag
+          Then User click on outside tag in masala
+          Then User click on filter tag in masala
+          And User click on Suppliers in tag
+          Then User click on check box of sabari in tag
+          Then User click on apply button in tag
+          And User click on reset button in tag
+          Then User click on outside tag in masala
+          Then User click on back button of spending report
+          Then User click on back button of reports
           
-          Examples: 
+  Examples: 
       | username                      | | password   ||name     |
       | velumanieswaran2020@gmail.com | |!123456Zm   ||masala     | 
