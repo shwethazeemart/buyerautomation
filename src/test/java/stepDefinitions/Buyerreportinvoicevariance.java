@@ -66,7 +66,7 @@ public class Buyerreportinvoicevariance {
 
 	@Then("User select date from calendar in invoice variance")
 	public void user_select_date_from_calendar_in_invoice_variance() {
-	    Buyerreportinvoicevariancepage.Selectdatefromcalendar();
+	    //Buyerreportinvoicevariancepage.Selectdatefromcalendar();
 	}
 
 	@Then("User select from dropdown value of velumasala")
@@ -85,7 +85,7 @@ public class Buyerreportinvoicevariance {
 	public void user_select_supplier_in_dropdown_list() {
 		WebElement sabari250 = Buyerreportinvoicevariancepage.getDropDownElementsabari();
 		Select select=new Select(sabari250);
-		select.selectByIndex(2); 
+		select.selectByIndex(1); 
 	}
 
 	@Then("User select match status in dropdown list")

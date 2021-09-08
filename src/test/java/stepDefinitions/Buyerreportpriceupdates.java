@@ -67,12 +67,12 @@ public class Buyerreportpriceupdates {
 
 	@Then("User click on calendar in price updates")
 	public void user_click_on_calendar_in_price_updates() {
-	    Buyerreportpriceupdatespage.Clickoncalendaricon();
+	    //Buyerreportpriceupdatespage.Clickoncalendaricon();
 	}
 
 	@Then("User click on YTD from calendar in price updates")
 	public void user_click_on_YTD_from_calendar_in_price_updates() {
-	    Buyerreportpriceupdatespage.ClickonYTDfromcalendar();
+	    //Buyerreportpriceupdatespage.ClickonYTDfromcalendar();
 	}
 
 	@Then("User select from dropdown value of outlet velumasala in price updates")
@@ -91,7 +91,7 @@ public class Buyerreportpriceupdates {
 	public void user_select_supplier_in_dropdown_list_of_sabari() {
 		WebElement sabari250 = Buyerreportpriceupdatespage.getDropDownElementsabari();
 		Select select=new Select(sabari250);
-		select.selectByIndex(2);
+		select.selectByIndex(1);
 	}
 
 	@Then("User click on Apply button in price updates")
@@ -128,7 +128,10 @@ public class Buyerreportpriceupdates {
 	
 	
 	
-	
+	@Then("User click on Download button first page")
+	public void user_click_on_Download_button_first_page() {
+		Buyerreportpriceupdatespage.Clickondownloadbuttonfirstpage(); 
+	}
 	
 	
 	
