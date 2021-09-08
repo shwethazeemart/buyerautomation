@@ -118,8 +118,8 @@ public class Buyerinvoicelisenpage {
 	@FindBy(xpath = "//input[@formcontrolname='invoiceNumber']") 
 	private static WebElement Buyerinvoicelisenpage_clearinvoicenumberinfirsttime;
 	
-	@FindBy(xpath = "//div[contains(@class,'input-group mb-2')]/following-sibling::button[1]")
-	private static WebElement Buyerinvoicelisenpage_clicksearchinsecondtime;
+	@FindBy(xpath = "//div[text()=' Outlet  ']")
+	private static WebElement Buyerinvoicelisenpage_Outleticon;
 	
 	
 	
@@ -129,6 +129,32 @@ public class Buyerinvoicelisenpage {
 
 	//@FindBy(xpath = "//span[text()='To:']")
 	//private static WebElement Buyerinvoicelisenpage_clickcalendartodate;
+	
+	
+	
+	@FindBy(xpath = "//div[contains(@class,'input-group mb-2')]/following-sibling::button[1]")
+	private static WebElement Buyerinvoicelisenpage_clicksearchinsecondtime;
+	
+	@FindBy(xpath = "//input[@placeholder='Search ']/following-sibling::a[1]")
+	private static WebElement Buyerinvoicelisenpage_Selectallicon;
+	
+	@FindBy(xpath = "//div[@class='main__tabber']//ul")
+	private static WebElement Buyerinvoicelisenpage_Outsideicon;
+	
+	@FindBy(xpath = "//div[text()=' Supplier  ']")
+	private static WebElement Buyerinvoicelisenpage_Suppliericon;
+	
+	@FindBy(xpath = "//div[text()=' Invoices & credit notes  ']")
+	private static WebElement Buyerinvoicelisenpage_Invoiceandcreditnoteicon;
+	
+	@FindBy(xpath = "//div[text()=' Payment status  ']")
+	private static WebElement Buyerinvoicelisenpage_Paymentsstatus;
+	
+	@FindBy(xpath = "//div[text()=' Export status  ']")
+	private static WebElement Buyerinvoicelisenpage_Exportstatusinvoicepage;
+	
+	
+	
 	
 	public void enter_exactPassword(String loginPassword) {
 		Buyerinvoicelisenpage_exactPassword.sendKeys(loginPassword);
@@ -429,14 +455,86 @@ public class Buyerinvoicelisenpage {
 		//driver.findElement(By.xpath("//span[text()='From:']"));
 	}
 
-	/*public void clickoncalendartodate() {
-		//Buyerinvoicelisenpage_clickcalendartodate.click();
-		WebElement DateBox=driver.findElement(By.xpath("//input[@placeholder='Select date']"));
+	public void Clickonoutlet() {
+		Buyerinvoicelisenpage_Outleticon.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}  
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver) 
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
 
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].value='10Aug2021';", DateBox);
-		driver.findElement(By.xpath("//span[text()='To:']"));
-	}*/
+	public void Clickonselectall() {
+		Buyerinvoicelisenpage_Selectallicon.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}  
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver) 
+				.executeScript("return document.readyState").equals("complete"));
+		
+		
+	}
+
+	public void Clickonoutsideoption() {
+		Buyerinvoicelisenpage_Outsideicon.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}  
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver) 
+				.executeScript("return document.readyState").equals("complete"));
+		
+		
+	}
+
+	public void Clickonsupplier() {
+		Buyerinvoicelisenpage_Suppliericon.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}  
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver) 
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public void Clickoninvoiceandcreditnote() {
+		Buyerinvoicelisenpage_Invoiceandcreditnoteicon.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}  
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver) 
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public void Clickonpaymentsstatus() {
+		Buyerinvoicelisenpage_Paymentsstatus.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}  
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver) 
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public void ClickonExportstatusininvoicepage() {
+		Buyerinvoicelisenpage_Exportstatusinvoicepage.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}  
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver) 
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	
 	
 		
 	

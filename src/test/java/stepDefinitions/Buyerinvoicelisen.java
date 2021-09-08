@@ -209,7 +209,42 @@ public class Buyerinvoicelisen {
 
 
 
+	
+	@Then("User click on outlet")
+	public void user_click_on_outlet() {
+		buyerinvoicelisen.Clickonoutlet();
+	}
 
+	@Then("User click on select all")
+	public void user_click_on_select_all() {
+		buyerinvoicelisen.Clickonselectall();
+	}
+
+	@Then("User click on outside option")
+	public void user_click_on_outside_option() {
+		buyerinvoicelisen.Clickonoutsideoption();
+	}
+
+	@Then("User click on supplier")
+	public void user_click_on_supplier() {
+		buyerinvoicelisen.Clickonsupplier();
+	}
+
+	@Then("User click on invoice and creditnote")
+	public void user_click_on_invoice_and_creditnote() {
+		buyerinvoicelisen.Clickoninvoiceandcreditnote();
+	}
+
+	@Then("User click on payments status")
+	public void user_click_on_payments_status() {
+		buyerinvoicelisen.Clickonpaymentsstatus();
+		
+	}
+
+	@Then("User click on Export status in invoice page")
+	public void user_click_on_Export_status_in_invoice_page() {
+		buyerinvoicelisen.ClickonExportstatusininvoicepage();
+	}
 
 
 
