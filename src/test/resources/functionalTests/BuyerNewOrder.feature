@@ -1,6 +1,5 @@
 Feature: Verify Buyer Order page and test all the page
- 
-@Smoke
+
 Scenario Outline: Verify the Orders page of Buyer panel
          Given User is on Login Page
          When User enter exact username"<username>"

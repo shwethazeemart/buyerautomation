@@ -9,8 +9,8 @@ import io.cucumber.junit.CucumberOptions;
   
 
 @RunWith(Cucumber.class)  
-@CucumberOptions(strict = true, features = "src/test/resources/functionalTests/Buyerreportsspendingpercategory.feature", glue = { "stepDefinitions" },monochrome=true,dryRun=false,
+@CucumberOptions(strict = true, features = "src/test/resources/functionalTests/Buyerorderslisen.feature", glue = { "stepDefinitions" },monochrome=true,dryRun=false,
 plugin= {"json:target/cucumber.json"})
 public class TestRunner {
    
-}                        
+}                         

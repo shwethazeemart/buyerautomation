@@ -109,13 +109,31 @@ public class Buyerreportspenpertag {
 	    Buyerreportspenpertagpage.Clickonexportdownloadbutton();
 	}
  
+	
 
 
+	@Then("User click on masala Tag")
+	public void user_click_on_masala_Tag() {
+		Buyerreportspenpertagpage.Clickonmasalatag();
+	}
+
+	@Then("User click on Export download button in masala")
+	public void user_click_on_Export_download_button_in_masala() {
+		Buyerreportspenpertagpage.Clickonexportbuttoninmasala();   
+	}
+
+	@Then("User click on filter tag in masala")
+	public void user_click_on_filter_tag_in_masala() {
+		Buyerreportspenpertagpage.Clickonfiltertaginmasala();
+		
+	}
+
 	
+	@Then("User click on outside tag in masala")
+	public void user_click_on_outside_tag_in_masala() {
+		Buyerreportspenpertagpage.Clickonoutsidetaginmasala();
 	
-	
-	
-	
+	}
 	
 	
 	
