@@ -55,7 +55,7 @@ public class Buyerinventoryoutletslisenpage {
 	@FindBy(xpath = "//div[text()='velu masala2020']")
 	private static WebElement Buyerinventoryoutletslisenpage_velumasala;
 
-	@FindBy(xpath = "//div[text()='sstmasala']")
+	@FindBy(xpath = "//div[text()='sstmasala2020']")
 	private static WebElement Buyerinventoryoutletslisenpage_starterplanofsstmasala;
 
 	@FindBy(xpath = "//input[@placeholder='Search outlets']")
@@ -70,7 +70,7 @@ public class Buyerinventoryoutletslisenpage {
 	@FindBy(xpath = "//label[text()=' Has items below par ']")
 	private static WebElement Buyerinventoryoutletslisenpage_checkbox;
 	
-	@FindBy(xpath = "//img[@src='./assets/zmcore/img/close-blue-x.svg']")
+	@FindBy(xpath = "//button[@class='close pull-right']")
 	private static WebElement Buyerinventoryoutletslisenpage_newlistcloseicon;
 	
 	@FindBy(xpath = "//img[@src='assets/zmcore/img/close-blue.svg']")

@@ -67,7 +67,7 @@ public class Buyerpaymentspaymentplans {
 
 	@Then("User select payment status in unpaid")
 	public void user_select_payment_status_in_unpaid() throws InterruptedException {
-		//Buyerpaymentspaymentplanspage.Selectpaymentstatusunpaid(); 
+		Buyerpaymentspaymentplanspage.SelectpaymentstatusUnpaid(); 
 	}
 		/*WebElement paymentPlans = Buyerpaymentspaymentplanspage.getDropDownElementPaid();
 		//Select select=new Select(Unpaid);
@@ -82,7 +82,8 @@ public class Buyerpaymentspaymentplans {
 	}*/
 
 	@Then("User select payment status in failed")
-	public void user_select_payment_status_in_failed() {
+	public void user_select_payment_status_in_failed() throws InterruptedException {
+		Buyerpaymentspaymentplanspage.Selectpaymentstatusfailed();
 		/*//WebElement Failed = Buyerpaymentspaymentplanspage.getDropDownElementFailed();
 		//Select select=new Select(Failed);
 		//select.selectByIndex(3);*/

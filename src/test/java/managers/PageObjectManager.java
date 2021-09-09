@@ -48,6 +48,7 @@ import pageObjects.BuyerinventorySKUlisenpage;
 import pageObjects.Buyerinventoryactivitylisenpage;
 import pageObjects.Buyerinventoryoutletslisenpage;
 import pageObjects.Buyerinvoicelisenpage;
+import pageObjects.Buyerorderslisenpage;
 import pageObjects.Buyeroutletsmanagedetailspage;
 import pageObjects.Buyeroutletsmanagesettingspage;
 import pageObjects.Buyeroutletsviewsupplierspage;
@@ -112,6 +113,7 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private Buyerpaymentstransactonspage Buyerpaymentstransactons;
     private Buyerpaymentspaymentplanspage Buyerpaymentspaymentplans;
     private Buyeredituserlisenpage Buyeredituserlisen;
+    private Buyerorderslisenpage Buyerorderslisen;
     
     
     public PageObjectManager(WebDriver driver) {
@@ -334,10 +336,15 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 		return (Buyeredituserlisen == null) ? (Buyeredituserlisen = new Buyeredituserlisenpage(driver)) : Buyeredituserlisen;
 	}
 
-	
-	
-	
+
+	public Buyerorderslisenpage getBuyerorderslisenpage() {
+		return (Buyerorderslisen == null) ? (Buyerorderslisen = new Buyerorderslisenpage(driver)) : Buyerorderslisen;
 	}
+
+	
+
+	
+	}  
 	
 	
 	

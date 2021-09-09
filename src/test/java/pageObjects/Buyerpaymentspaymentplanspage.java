@@ -162,19 +162,61 @@ public class Buyerpaymentspaymentplanspage {
 		return Buyerpaymentspaymentplanspage_Selectpaymentstatuspaid;
 	}*/
 	
-	
-	public static void Selectpaymentstatuspaid() throws InterruptedException {
+public static void SelectpaymentstatusUnpaid() throws InterruptedException {
+		
 		Thread.sleep(5000);
-		List<WebElement> list =driver.findElements(By.xpath("(//div[@class='pr-2']//select)[3]"));
-        System.out.println(list.indexOf(list));
-        int s=list.indexOf(list);
+		driver.findElement(By.xpath("//div[@class='pr-2'][3]")).click();
+		List<WebElement> list =driver.findElements(By.xpath("//div[@class='pr-2'][3]//select/option"));
+		
+		////div[@class='pr-2'][3]//select
+		
+		
+		
+		//div[@class='pr-2'][3]//select
+		
+		//div[@class='pr-2']//select)[3]
+        System.out.println("Total number of item  : "+list.size() );
+        int s=list.size();
+        Thread.sleep(5000);
         for(int i=0; i<s; i++){
-        	System.out.println(list.get(i).getText()); 
-        	//if(list.get(i).getText().contains("Paid")) {
+        	
+        	if(list.get(i).getText().equalsIgnoreCase("Unpaid")){
+        		System.out.println(list.get(i).getText()); 
         		list.get(i).click();
         		break;
         	}
+        }
         	
+        }
+		
+	
+	
+	
+	
+	public static void Selectpaymentstatuspaid() throws InterruptedException {
+		
+		Thread.sleep(5000);
+		driver.findElement(By.xpath("//div[@class='pr-2'][3]")).click();
+		List<WebElement> list =driver.findElements(By.xpath("//div[@class='pr-2'][3]//select/option"));
+		
+		////div[@class='pr-2'][3]//select
+		
+		
+		
+		//div[@class='pr-2'][3]//select
+		
+		//div[@class='pr-2']//select)[3]
+        System.out.println("Total number of item  : "+list.size() );
+        int s=list.size();
+        Thread.sleep(5000);
+        for(int i=0; i<s; i++){
+        	
+        	if(list.get(i).getText().equalsIgnoreCase("Paid")){
+        		System.out.println(list.get(i).getText()); 
+        		list.get(i).click();
+        		break;
+        	}
+        }
         	
         }
 		
@@ -223,4 +265,29 @@ public class Buyerpaymentspaymentplanspage {
 
  
 	}
-}
+	public static void Selectpaymentstatusfailed() throws InterruptedException {
+		Thread.sleep(5000);
+		driver.findElement(By.xpath("//div[@class='pr-2'][3]")).click();
+		List<WebElement> list =driver.findElements(By.xpath("//div[@class='pr-2'][3]//select/option"));
+		
+		
+		//div[@class='pr-2']//select)[3]
+        System.out.println("Total number of item  : "+list.size() );
+        int s=list.size();
+        Thread.sleep(5000);
+        for(int i=0; i<s; i++){
+        	
+        	if(list.get(i).getText().equalsIgnoreCase("Failed")){
+        		System.out.println(list.get(i).getText()); 
+        		list.get(i).click();
+        		break;
+        	}
+        }
+        	
+        }
+		
+	
+	
+		
+	}
+
