@@ -4,8 +4,10 @@ Scenario Outline: Verify the Payment plans page of Buyer panel
           Given User is on Login Page
           When User enter exact username"<username>"
           And User enter exact password"<password>"
-          And User is click login button 
-          Then User Clicks on Payments in the side navigation menubar 
+          And User is click login button
+          And User name  should be displayed 
+          Then User Enter dashboard menu highlighted with the yellow colour 
+          Then User Clicks on Payments in the side navigation menubar
           Then User click on Payment plans icon
           And User select companies from dropdown list in payment plans
           Then User selecct suppliers from dropdown list in payment plans

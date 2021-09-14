@@ -61,6 +61,7 @@ import pageObjects.Buyerreportspenperoutletpage;
 import pageObjects.Buyerreportspenperskupage;
 import pageObjects.Buyerreportspenpersupplierpage;
 import pageObjects.Buyerreportspenpertagpage;
+import pageObjects.Buyerusernamesettingspage;
 import pageObjects.DashboardPage;
 import pageObjects.InventoryPage;
 import pageObjects.InvoiceprocessPage;
@@ -114,7 +115,7 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private Buyerpaymentspaymentplanspage Buyerpaymentspaymentplans;
     private Buyeredituserlisenpage Buyeredituserlisen;
     private Buyerorderslisenpage Buyerorderslisen;
-    
+    private Buyerusernamesettingspage Buyerusernamesettings;
     
     public PageObjectManager(WebDriver driver) {
         this.driver = driver;
@@ -339,6 +340,11 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 
 	public Buyerorderslisenpage getBuyerorderslisenpage() {
 		return (Buyerorderslisen == null) ? (Buyerorderslisen = new Buyerorderslisenpage(driver)) : Buyerorderslisen;
+	}
+
+
+	public Buyerusernamesettingspage getBuyerusernamesettingspage() {
+		return (Buyerusernamesettings == null) ? (Buyerusernamesettings = new Buyerusernamesettingspage(driver)) : Buyerusernamesettings;
 	}
 
 	

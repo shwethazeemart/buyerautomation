@@ -62,7 +62,7 @@ public class Buyerpaymentspaymentplans {
 	public void user_selecct_suppliers_from_dropdown_list_in_payment_plans() {
 		WebElement MRFruits = Buyerpaymentspaymentplanspage.getDropDownElementmrfruits();
 		Select select=new Select(MRFruits);
-		select.selectByIndex(6);
+		select.selectByIndex(7);
 	}
 
 	@Then("User select payment status in unpaid")
@@ -110,11 +110,16 @@ public class Buyerpaymentspaymentplans {
 
 	 
 	
+	@Then("User name  should be displayed")
+	public void user_name_should_be_displayed() {
+		Buyerpaymentspaymentplanspage.Usernameshouldbedisplayed();
+	}
 	
 	
-	
-	
-	
+	@Then("User Enter dashboard menu highlighted with the yellow colour")
+	public void user_Enter_dashboard_menu_highlighted_with_the_yellow_colour() {
+		Buyerpaymentspaymentplanspage.Dashboardhighlightedwithyellowcolour();
+	}
 	
 	
 	
