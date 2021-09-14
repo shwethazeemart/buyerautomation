@@ -1,7 +1,8 @@
 Feature: Verify Buyer Invoice page and test all the page
  
 
-Scenario Outline:Buyer Invoice lisen page verify the all field 
+Scenario Outline: Buyer Invoice lisen page verify the all field 
+
     Given User is on Login Page
     When User enters exact username "<username>"
     When User enters exact password"<loginPassword>"
@@ -23,6 +24,36 @@ Scenario Outline:Buyer Invoice lisen page verify the all field
     And User click on voided invoice
     Then User click on voided return invoice icon
     And User click on filter icon
+    Then User click on outlet
+    And User click on select all
+    Then User click on Apply button
+    And User click on filter icon
+    Then User click on Reset button
+    And User click on outside option
+    And User click on filter icon
+    Then User click on supplier
+    And User click on select all
+    Then User click on Apply button
+    And User click on filter icon
+    Then User click on Reset button
+    And User click on filter icon
+    Then User click on invoice and creditnote
+    And User click on select all
+    Then User click on Apply button
+    And User click on filter icon
+    Then User click on Reset button
+    And User click on filter icon
+    Then User click on payments status
+    And User click on select all
+    Then User click on Apply button
+    And User click on filter icon
+    Then User click on Reset button
+    And User click on filter icon
+    And User click on Export status in invoice page
+    And User click on select all
+    Then User click on Apply button
+    And User click on filter icon
+    Then User click on Reset button
     Then User click on calendar from date
     Then User click on search icon
     And User enter invoice number in first textbox 

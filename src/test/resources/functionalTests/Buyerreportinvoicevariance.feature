@@ -9,7 +9,21 @@ Scenario Outline: Verify the Reports invoice variance Category page of Buyer pan
           Then User click on Invoice variance icon
           And User click on search box in invoice variance
           Then User Enter the  invoice number in search box"<invoice>"
-          And User select date from calendar in invoice variance
+          Then User select date from calendar
+          And User click on Today date from calendar
+          Then User select date from calendar
+          Then User click on Yesterday date from calendar
+          Then User select date from calendar
+          And User click on This week date from calendar
+          Then User select date from calendar
+          Then User click on This month from calendar
+          Then User select date from calendar
+          And User click on Last year from calendar
+          Then User select date from calendar
+          Then User click on Custom range from calendar
+          Then User click on apply in custom range
+          Then User select date from calendar
+          Then User click on YTD from calendar 
           Then User select from dropdown value of velumasala
           Then User click on filter in invoice variance
           And User select supplier in dropdown list

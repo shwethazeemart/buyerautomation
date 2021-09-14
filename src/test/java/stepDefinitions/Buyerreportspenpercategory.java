@@ -1,5 +1,8 @@
 package stepDefinitions;
 
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+
 import cucumber.TestContext;
 import io.cucumber.java.en.Then;
 import pageObjects.Buyeroutletsmanagedetailspage;
@@ -62,7 +65,7 @@ public class Buyerreportspenpercategory {
 	}
 
 	@Then("User click on filter in category")
-	public void user_click_on_filter_in_category() {
+	public void user_click_on_filter_in_category() throws InterruptedException {
 	    Buyerreportspenpercategorypage.Clickfilter();
 	}
 
@@ -110,7 +113,29 @@ public class Buyerreportspenpercategory {
 	
 	
 	
-	
+	@Then("User click on Beer category")
+	public void user_click_on_Beer_category() {
+		 Buyerreportspenpercategorypage.ClickonBeercategory();
+	}
+
+	@Then("User select date from calendar in Beer")
+	public void user_select_date_from_calendar_in_Beer() throws InterruptedException {
+		 Buyerreportspenpercategorypage.Selectdatefromcalendarinbeer();
+	}
+
+	@Then("User select dropdown in month Beer")
+	public void user_select_dropdown_in_month_Beer() {
+		WebElement ViewbyDay = Buyerreportspenpercategorypage.getDropDownElementmonth();
+		Select select=new Select(ViewbyDay);
+		select.selectByIndex(1);
+	} 
+
+	@Then("User click on outside in category in Beer")
+	public void user_click_on_outside_in_category_in_Beer() {
+		Buyerreportspenpercategorypage.Clickonoutsidecategoryinbeer();
+	}
+
+
 	
 	
 	

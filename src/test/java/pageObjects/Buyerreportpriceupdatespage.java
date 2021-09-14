@@ -75,6 +75,8 @@ public class Buyerreportpriceupdatespage {
 	@FindBy(xpath = "//img[@src='../assets/zmcore/img/left-report-b-icon.svg']/following-sibling::p[1]")
 	private static WebElement Buyerreportpriceupdatespage_Reportsbackbuttoninsku;
 	
+	@FindBy(xpath = "//div[@class='pl-2']//a[1]")
+	private static WebElement Buyerreportpriceupdatespage_Downloadbuttonfirstpage;
 	
 	
 	
@@ -231,6 +233,16 @@ public class Buyerreportpriceupdatespage {
 	}
 	public static void Clickreportbackbuttoninsku() {
 		Buyerreportpriceupdatespage_Reportsbackbuttoninsku.click();
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+	public static void Clickondownloadbuttonfirstpage() {
+		Buyerreportpriceupdatespage_Downloadbuttonfirstpage.click();
 		try { 
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
