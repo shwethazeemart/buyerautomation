@@ -18,6 +18,10 @@ public class Buyerpaymentspaymentplanspage {
 
 
 
+	private static final boolean Dashboardcolouryellow = false;
+
+	private static final char[] colrisnotyellow = null;
+
 	private static WebDriver driver;
 
 	public Buyerpaymentspaymentplanspage(WebDriver driver) {
@@ -63,6 +67,8 @@ public class Buyerpaymentspaymentplanspage {
 	
 	@FindBy(xpath = "//p[text()='Payments']")
 	private static WebElement Buyerpaymentspaymentplanspage_Paymentsbackbutton;
+
+	private static Object Dashboardcolour;
 
 
 
@@ -282,12 +288,70 @@ public static void SelectpaymentstatusUnpaid() throws InterruptedException {
         		list.get(i).click();
         		break;
         	}
-        }
+        } 
         	
         }
+	public static void Usernameshouldbedisplayed() {
+		String s1= driver.findElement(By.xpath("//p[text()='Welcome back, KOVALAN']")).getText();
+		System.out.println("User name should be displayed : "+ s1);
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+	public static void Dashboardhighlightedwithyellowcolour() {
+		String colrisyellow = driver.findElement(By.xpath("//span[contains(@id,'sideMenu_Dashboard')]"))
+			      .getCssValue("color");
+		System.out.println(colrisyellow);
+		  
+		String color_hex;   
+		 color_hex = colrisyellow.replaceAll("[^0-9]","") ;
+		 System.out.println("Size after split : "+color_hex);  
+		 
+		 System.out.println("HexaDecimal Code is : "+Integer.toHexString(Integer.parseInt(color_hex)));
+		 /*String str = "rgba(242,185,12,1)";
+		System.out.println(str.replaceAll("[^0-9]", ""));
+		
+		String str1[] =str.split("rgba()");
+		System.out.println(str1);
+		System.out.println(Integer.toHexString(Integer.parseInt(str.replaceAll("[^0-9]", ""))));
+		
+		System.out.println(Integer.toHexString(24218512));
+		System.out.println(Integer.toHexString(242));
+		System.out.println(Integer.toHexString(185));
+		System.out.println(Integer.toHexString(12));
+		System.out.println(Integer.toHexString(1));*/
+		
+		
+
+
+		 
+//		 System.out.println("Size after split : "+color_hex + " "+Integer.toHexString(Integer.parseInt(color_hex)));
+		// String actual_hex = String.format("#%02", Integer.parseInt(color_hex[0].trim()));
+		//	System.out.println("Hexa decimal Color format is  : " +actual_hex);
+		// String s1=Dash
+		/*if(Dashboardcolouryellow) {
+			System.out.println("colrisyellow"); 
+			
+		} else
+		{
+		System.out.println("Notyellow"); 
+		}*/
+		//WebElement eleSearch = driver.findElement(By.xpath("//span[contains(@id,'sideMenu_Dashboard')]"));
+		//String rgbFormat = eleSearch.getCssValue("background-color");
+		//System.out.println("Dashboard highlighted with the yellow colour: " + rgbFormat);  
+		try { 
+			Thread.sleep(5000); 
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
 		
 	
-	
+	 
 		
 	}
 
