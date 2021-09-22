@@ -51,6 +51,18 @@ public class LogInPage {
 	@FindBy(xpath ="//button[text()='Log in']")
 	private static WebElement btn_loginbtn;
 	
+	
+	@FindBy(xpath = "//input[contains(@name,'loginEmail')]")
+	private static WebElement LogInPage_Entercorrectusername;
+	
+
+	@FindBy(xpath = "//input[@placeholder='Password']")
+	private static WebElement LogInPage_Entercorrectpassword;
+	
+	@FindBy(xpath ="//button[text()='Log in']")
+	private static WebElement LogInPage_Loginbutton;
+	
+	
 	public String getPageTitle() {
 		return driver.getTitle();   
 	}
@@ -60,6 +72,10 @@ public class LogInPage {
 	}
 	public static void navigateTo_LogInPage2() {
 		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl(false,true,false,false));
+	}
+	
+	public static void navigateTo_LogInPage3() {
+		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl(false,false,false,true));
 	}
 
 	/*public static void enter_LoginEmail(String email) {
@@ -112,25 +128,62 @@ public class LogInPage {
 
 	public static void enter_loginpassword(String loginpassword) {
 		btn_loginpassword.sendKeys(loginpassword);
-		
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
 	}
 
 	public static void enter_loginEmail(String loginEmail) {
-		driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
 		btn_loginEmail.sendKeys(loginEmail);
-		
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
 		 
 	}
 
-	public void enter_RegisteredPassword(String loginPassword) {
-		btn_loginpassword.sendKeys(loginPassword);
+	public static void Entercorrcectusername(String loginEmail) {
+		LogInPage_Entercorrectusername.sendKeys(loginEmail);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
 		
 	}
 
-	public static void enter_loginpassowrd(String loginpassword) {
-		btn_loginpassword.sendKeys(loginpassword);
+	public static void Entercorrectpassword(String loginPassword) {
+		LogInPage_Entercorrectpassword.sendKeys(loginPassword);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
 		
 	}
+
+	public static void Clickloginbutton() {
+		LogInPage_Loginbutton.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+		
+	}
+
+	
 
 	
 
