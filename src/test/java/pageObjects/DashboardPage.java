@@ -96,10 +96,7 @@ public class DashboardPage {
 	
 	@FindBy(xpath = "//span[contains(@id,'sideMenu_Customers')]")
 	private static WebElement LogInPage_SupplierCustomers;
-	
-	
-	
-	
+
 
 	public String getPageTitle() {
 		return driver.getTitle();
@@ -301,7 +298,11 @@ public class DashboardPage {
 				.executeScript("return document.readyState").equals("complete"));
 	}  
 
-	/*public void clickSupplierInvoices() {
+	
+	
+
+	public static void Clickoninvoiceinthesidemenu() throws InterruptedException {
+		Thread.sleep(5000);
 		LogInPage_SupplierInvoices.click();
 		try {
 			Thread.sleep(5000);
@@ -309,11 +310,13 @@ public class DashboardPage {
 		}
 		new WebDriverWait(driver, 50).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
-	}*/
-
-	public static void Clickoninvoiceinthesidemenu() throws InterruptedException {
+		
+	}  
+	
+	
+	public static void ClickonCustomersinthesidemenu() throws InterruptedException {
 		Thread.sleep(5000);
-		LogInPage_SupplierInvoices.click();
+		LogInPage_SupplierCustomers.click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -334,8 +337,6 @@ public class DashboardPage {
 				.executeScript("return document.readyState").equals("complete"));
 		
 	}  
-	
-	
 	
 }
 
