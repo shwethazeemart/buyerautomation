@@ -337,6 +337,7 @@ public class DashboardPage {
 				.executeScript("return document.readyState").equals("complete"));
 		
 	}  
+
 	
 }
 
