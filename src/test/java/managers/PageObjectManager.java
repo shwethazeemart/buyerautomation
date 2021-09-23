@@ -13,9 +13,12 @@ import pageObjects.PasswordResetPage;
 import pageObjects.Reportspage;
 import pageObjects.SucessfullyLoginpage;
 
+import pageObjects.SupplierPNF7857page;
+
 import pageObjects.SupplierPNF7855page;
 
 import pageObjects.SupplierPNF7856page;
+
 import pageObjects.SupplierPNF7858page;
 import pageObjects.Userspage;
 import stepDefinitions.AdminInvoiceuploadpageSteps;
@@ -126,7 +129,11 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private SupplierPNF7858page SupplierPNF7858;
     private LogInPage LogInPage3;
 
+
+    private SupplierPNF7857page SupplierPNF7857;
+
     private SupplierPNF7855page SupplierPNF7855;
+
 
     private SupplierPNF7856page SupplierPNF7856;
 
@@ -381,21 +388,14 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 
 
 
+
+	public SupplierPNF7857page getSupplierPNF7857page() {
+		return (SupplierPNF7857 == null) ? (SupplierPNF7857 = new SupplierPNF7857page(driver)) : SupplierPNF7857;
+  
 	public SupplierPNF7855page getSupplierPNF7855page() {
 		return (SupplierPNF7855 == null) ? (SupplierPNF7855 = new SupplierPNF7855page(driver)) : SupplierPNF7855;
+
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	

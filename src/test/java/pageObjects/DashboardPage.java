@@ -97,6 +97,7 @@ public class DashboardPage {
 	@FindBy(xpath = "//span[contains(@id,'sideMenu_Customers')]")
 	private static WebElement LogInPage_SupplierCustomers;
 
+
 	public String getPageTitle() {
 		return driver.getTitle();
 	}
@@ -325,7 +326,6 @@ public class DashboardPage {
 		
 	}  
 	
-
 	public static void ClickonCustomersinthesidemenu() throws InterruptedException {
 		Thread.sleep(5000);
 		LogInPage_SupplierCustomers.click();
@@ -337,7 +337,7 @@ public class DashboardPage {
 				.executeScript("return document.readyState").equals("complete"));
 		
 	}  
-	
+
 	
 }
 
