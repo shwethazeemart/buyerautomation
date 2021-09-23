@@ -9,7 +9,9 @@ import io.cucumber.junit.CucumberOptions;
   
 
 @RunWith(Cucumber.class)  
+
 @CucumberOptions(strict = true, features = "src/test/resources/functionalTests/SupplierPNF-7856.feature", 
+
 glue = { "stepDefinitions" },monochrome=true,dryRun=false,
 plugin= {"json:target/cucumber.json"})
 public class TestRunner {
