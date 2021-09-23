@@ -91,6 +91,11 @@ public class DashboardPage {
 	@FindBy(xpath = "//span[text()='Reports ']")
 	private static WebElement button_Reports;
 
+	@FindBy(xpath = "//span[contains(@id,'sideMenu_Invoices')]")
+	private static WebElement LogInPage_SupplierInvoices;
+	
+	@FindBy(xpath = "//span[contains(@id,'sideMenu_Customers')]")
+	private static WebElement LogInPage_SupplierCustomers;
 
 	public String getPageTitle() {
 		return driver.getTitle();
@@ -105,6 +110,10 @@ public class DashboardPage {
 	}
 	public static void navigateTo_DashboardPage2() {
 		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl(false,true,false,false));
+	}
+	
+	public static void navigateTo_DashboardPage3() {
+		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl(false,false,false,true));
 	}
 	
 	
@@ -288,6 +297,35 @@ public class DashboardPage {
 				.executeScript("return document.readyState").equals("complete"));
 	}  
 
+	
+	
+
+	public static void Clickoninvoiceinthesidemenu() throws InterruptedException {
+		Thread.sleep(5000);
+		LogInPage_SupplierInvoices.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 50).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}  
+	
+	
+	public static void ClickonCustomersinthesidemenu() throws InterruptedException {
+		Thread.sleep(5000);
+		LogInPage_SupplierCustomers.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 50).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}  
+	
+	
 }
 
 

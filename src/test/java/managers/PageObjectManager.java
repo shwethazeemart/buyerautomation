@@ -12,6 +12,8 @@ import pageObjects.OutletsPagesteps;
 import pageObjects.PasswordResetPage;
 import pageObjects.Reportspage;
 import pageObjects.SucessfullyLoginpage;
+import pageObjects.SupplierPNF7856page;
+import pageObjects.SupplierPNF7858page;
 import pageObjects.Userspage;
 import stepDefinitions.AdminInvoiceuploadpageSteps;
 import stepDefinitions.Adminbuyerlinktothecompany;
@@ -42,6 +44,7 @@ import pageObjects.Adminnewsupplieruserpage;
 import pageObjects.Adminsupplierpage;
 import pageObjects.Adminsuppliersviewoutletspage;
 import pageObjects.Automationtestingpage;
+import pageObjects.BuyerPNF7797page;
 import pageObjects.Buyerdashboardlisenpage;
 import pageObjects.Buyeredituserlisenpage;
 import pageObjects.BuyerinventorySKUlisenpage;
@@ -116,6 +119,11 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private Buyeredituserlisenpage Buyeredituserlisen;
     private Buyerorderslisenpage Buyerorderslisen;
     private Buyerusernamesettingspage Buyerusernamesettings;
+    private BuyerPNF7797page BuyerPNF7797;
+    private SupplierPNF7858page SupplierPNF7858;
+    private LogInPage LogInPage3;
+    private SupplierPNF7856page SupplierPNF7856;
+    
     
     public PageObjectManager(WebDriver driver) {
         this.driver = driver;
@@ -347,10 +355,39 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 		return (Buyerusernamesettings == null) ? (Buyerusernamesettings = new Buyerusernamesettingspage(driver)) : Buyerusernamesettings;
 	}
 
+
+	public BuyerPNF7797page getBuyerBuyerPNF7797page() {
+		return (BuyerPNF7797 == null) ? (BuyerPNF7797 = new BuyerPNF7797page(driver)) : BuyerPNF7797;
+	}
+
+
+
+
+	public SupplierPNF7858page getSupplierPNF7858page() {
+		return (SupplierPNF7858 == null) ? (SupplierPNF7858 = new SupplierPNF7858page(driver)) : SupplierPNF7858;
+	}
+
+
+	public LogInPage getLogInPage3() {
+		return (LogInPage3 == null) ? (LogInPage3 = new LogInPage(driver)) : LogInPage3;
+	}
+
+
+	public SupplierPNF7856page getSupplierPNF7856page() {
+		return (SupplierPNF7856 == null) ? (SupplierPNF7856 = new SupplierPNF7856page(driver)) : SupplierPNF7856;
+	}
+	
+	
+	
+	
+	}
+
+
+	
 	
 
 	
-	}  
+	 
 	
 	
 	
