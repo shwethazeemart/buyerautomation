@@ -58,7 +58,7 @@ public class LogInPage {
 
 	@FindBy(xpath = "//input[@placeholder='Password']")
 	private static WebElement LogInPage_Entercorrectpassword;
-	
+	 
 	@FindBy(xpath ="//button[text()='Log in']")
 	private static WebElement LogInPage_Loginbutton;
 	
@@ -171,7 +171,8 @@ public class LogInPage {
 		
 	}
 
-	public static void Clickloginbutton() {
+	public static void Clickloginbutton() throws InterruptedException {
+		Thread.sleep(5000);
 		LogInPage_Loginbutton.click();
 		try {
 			Thread.sleep(5000);

@@ -7,7 +7,7 @@ Scenario Outline: Verify the Supplier customers page
           And User is click login button in supplier panel 
           Then User click on Customers in the side navigation menubar 
           Then User click on New customer icon
-          Then User Enter the UEN number registration field"<UEN>"
+          Then User Enter the UEN number registration field"<UEN>" 
           Then User click on continue button
           Then User upload the image in draganddrop field
           Then User select check box of velumasala

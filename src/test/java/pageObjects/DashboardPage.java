@@ -326,17 +326,7 @@ public class DashboardPage {
 		
 	}  
 	
-	public static void ClickonCustomersinthesidemenu() throws InterruptedException {
-		Thread.sleep(5000);
-		LogInPage_SupplierCustomers.click();
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-		}
-		new WebDriverWait(driver, 50).until(webDriver -> ((JavascriptExecutor) webDriver)
-				.executeScript("return document.readyState").equals("complete"));
-		
-	}  
+	
 
 	
 }
