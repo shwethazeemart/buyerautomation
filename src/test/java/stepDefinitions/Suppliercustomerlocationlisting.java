@@ -9,8 +9,8 @@ import pageObjects.Buyeroutletsmanagesettingspage;
 import pageObjects.DashboardPage;
 import pageObjects.LogInPage;
 import pageObjects.OrdersPage;
-import pageObjects.SupplierPNF7857page;
-import pageObjects.SupplierPNF7858page;
+//import pageObjects.SupplierPNF7857page;
+//import pageObjects.SupplierPNF7858page;
 import pageObjects.Suppliercustomerlocationlistingpage;
 
 public class Suppliercustomerlocationlisting {
@@ -21,9 +21,9 @@ public class Suppliercustomerlocationlisting {
 	private Object OrderID;
 	private Object logInPage;
 	private LogInPage loginPage3;
-	private SupplierPNF7858page supplierPNF7858;
+	//private SupplierPNF7858page supplierPNF7858;
 	private DashboardPage dashboradpage;
-	private SupplierPNF7857page supplierPNF7857;
+	//private SupplierPNF7857page supplierPNF7857;
     private Suppliercustomerlocationlistingpage suppliercustomerlocationlisting;
 	
 	
@@ -32,9 +32,9 @@ public class Suppliercustomerlocationlisting {
 		this.testContext = testContext;
 		this.orderspage = testContext.getPageObjectManager().getOrdersPage();
 		this.logInPage =  testContext.getPageObjectManager().getLogInPage3();
-		this.supplierPNF7858 =testContext.getPageObjectManager().getSupplierPNF7858page();
+		//this.supplierPNF7858 =testContext.getPageObjectManager().getSupplierPNF7858page();
 		this.dashboradpage = testContext.getPageObjectManager().getDashboardPage();
-		this.supplierPNF7857 =testContext.getPageObjectManager().getSupplierPNF7857page();
+		//this.supplierPNF7857 =testContext.getPageObjectManager().getSupplierPNF7857page();
         this.suppliercustomerlocationlisting=testContext.getPageObjectManager().getSuppliercustomerlocationlistingpage();
 	}
 

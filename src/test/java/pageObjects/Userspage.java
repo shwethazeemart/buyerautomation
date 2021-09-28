@@ -66,8 +66,8 @@ public class Userspage {
 	@FindBy(xpath="//select[@formcontrolname='roleGroup']")
 	private static WebElement Userspage_Custom;  
 	
-	//@FindBy(xpath="//button[@type='submit']")
-	//private static WebElement Userspage_Savebutton; 
+	@FindBy(xpath="//button[@type='submit']")
+	private static WebElement Userspage_Savebutton; 
 	
 
 	public static void click_Addnewuser() throws InterruptedException {
@@ -114,10 +114,19 @@ public class Userspage {
 	}*/
 
 	public static void paste_Firstname(String firstname) throws InterruptedException {
-		JavascriptExecutor js = (JavascriptExecutor) driver;
+		Userspage_Firstname.sendKeys(firstname);
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+
+
+		/*JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView();",Userspage_Firstname );
 		Thread.sleep(3000);
-		Userspage_Firstname.sendKeys(firstname);
+		Userspage_Firstname.sendKeys(firstname);*/
 		
 	}
 
@@ -207,7 +216,7 @@ public class Userspage {
 	}
 
 	public static void click_Savebutton() {
-		//Userspage_Savebutton.click();
+		Userspage_Savebutton.click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
