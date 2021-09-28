@@ -57,7 +57,7 @@ public class Buyerorderslisenpage {
 	
 	@FindBy(xpath = "//span[text()='All orders ']")
 	private static WebElement Buyerorderslisenpage_Allordersicon;
-	
+	 
 	@FindBy(xpath = "//span[text()='Needs approval']")
 	private static WebElement Buyerorderslisenpage_Needapprovalicon;
 	
@@ -215,16 +215,18 @@ public class Buyerorderslisenpage {
 		
 	}
 
-	public static void Selectdatefromcalendar() {
+	public static void Selectdatefromcalendar() throws InterruptedException {
+		Thread.sleep(5000);
 		WebElement DateBox=driver.findElement(By.xpath("(//input[@placeholder='Delivery date'])[2]"));
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].value='15Sep2021';", DateBox);
+		js.executeScript("arguments[0].value='29 Sept 2021';", DateBox);
 		
 	}
 
 	
 	public static void click_velumasala2020() throws InterruptedException {
+		Thread.sleep(5000);
 		Buyerorderslisenpage_Velumasala2020.click();
 		Thread.sleep(5000);
 		try { 
@@ -432,7 +434,8 @@ public class Buyerorderslisenpage {
 		
 	}
 
-	public static void Clickoncheckboxoffirstorder() {
+	public static void Clickoncheckboxoffirstorder() throws InterruptedException {
+		Thread.sleep(5000);
 		Buyerorderslisenpage_Checkboxoffirstorder.click();
 		try {
 			Thread.sleep(5000);

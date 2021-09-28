@@ -52,7 +52,7 @@ public class Buyerinventoryoutletslisenpage {
 	@FindBy(xpath = "//button[text()='Create new list']")
 	private static WebElement Buyerinventoryoutletslisenpage_newlistofsstmasala;
 
-	@FindBy(xpath = "//div[text()='velu masala2020']")
+	@FindBy(xpath = "(//div[@class='datatable-body-cell-label']//div)[1]")
 	private static WebElement Buyerinventoryoutletslisenpage_velumasala;
 
 	@FindBy(xpath = "//div[text()='sstmasala2020']")
@@ -76,12 +76,23 @@ public class Buyerinventoryoutletslisenpage {
 	@FindBy(xpath = "//img[@src='assets/zmcore/img/close-blue.svg']")
 	private static WebElement Buyerinventoryoutletslisenpage_starterplancloseicon;
 	
-	//@FindBy(xpath = "//i[contains(@class,'arrow_left')]") 
+	
+	
+	@FindBy(xpath = "//label[text()=' Has items below par ']")
+	private static WebElement Buyerinventoryoutletslisenpage_UncheckboxofHasitem;
+	
+	@FindBy(xpath = "//input[@value='Last count > 31 days ago']")
+	private static WebElement Buyerinventoryoutletslisenpage_CheckboxofLastcount;
+	
+	@FindBy(xpath = "//input[@value='Last count > 31 days ago']")
+	private static WebElement Buyerinventoryoutletslisenpage_UncheckboxofLastcount;
+	
+	//@FindBy(xpath = "//a[contains(@class,'title-clr pl-1 ng-star-inserted')]") 
 	//private static WebElement Buyerinventoryoutletslisenpage_returntooutletpage;
 
-  
+   
 
-
+ 
 	public static void clickoutletsicon() {
 		Buyerinventoryoutletslisenpage_outletsicon.click();
 		try {
@@ -223,13 +234,62 @@ public class Buyerinventoryoutletslisenpage {
 
 	public static void clickreturntooutletpage() throws InterruptedException {
 		Thread.sleep(5000);
-		driver.findElement(By.className("arrow_left")).click();
+		//Buyerinventoryoutletslisenpage_returntooutletpage.click();
+		WebElement inventory = driver.findElement(By.className("arrow_left"));
+		inventory.click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 		} 
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	public static void ClickuncheckboxogHasitem() {
+		Buyerinventoryoutletslisenpage_UncheckboxofHasitem.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public static void Clickoncheckboxoflastcount() {
+		Buyerinventoryoutletslisenpage_CheckboxofLastcount.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	public static void Clickonuncheckboxoflastcount() {
+		Buyerinventoryoutletslisenpage_UncheckboxofLastcount.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	
+	}
+
+	public static void Clickverticallyscrollup() {
+		//WebElement DateBox=driver.findElement(By.xpath("//div[@class='d-flex flex_inv_pad']/following-sibling::div[1]"));
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		
+		js.executeScript("scroll(0, -250);");
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
 	}
 		
 	

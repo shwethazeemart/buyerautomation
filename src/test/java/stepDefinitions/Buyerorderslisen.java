@@ -65,7 +65,7 @@ public class Buyerorderslisen {
 	}
 
 	@Then("User click on select date from calendar")
-	public void user_click_on_select_date_from_calendar() {
+	public void user_click_on_select_date_from_calendar() throws InterruptedException {
 		Buyerorderslisenpage.Selectdatefromcalendar();
 	}
 
@@ -167,7 +167,7 @@ public class Buyerorderslisen {
 	}
 
 	@Then("User click on check box of first order")
-	public void user_click_on_check_box_of_first_order() {
+	public void user_click_on_check_box_of_first_order() throws InterruptedException {
 		Buyerorderslisenpage.Clickoncheckboxoffirstorder();
 	}
 

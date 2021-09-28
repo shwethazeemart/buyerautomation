@@ -301,7 +301,7 @@ public class InvoiceprocessPage {
 
 
 
-		js.executeScript("arguments[0].value='10Aug2021';", DateBox);
+		js.executeScript("arguments[0].value='13 Sept 2021';", DateBox);
 		//dateBox.sendKeys("17-Nov-2020");
 		//DateBox.clear();
 		//DateBox.sendKeys("17Nov2020");

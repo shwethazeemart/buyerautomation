@@ -23,6 +23,6 @@ Scenario Outline: Verify the Users page of Buyer panel
           
     Examples:
          |username                     |  |password    ||First name||Last name ||Job title    ||Email                              ||Mobile phone|
-         |velumanieswaran2020@gmail.com|  |!123456Zm   ||eswaran   ||ganesh    ||ATZ          ||ganeshtamil2009@gmail.com          ||+6512345677 |       
+         |velumanieswaran2020@gmail.com|  |!123456Zm   ||velu      ||ganesh    ||ATZ          ||ganeshvelutamil2008@gmail.com          ||+6512345677 |       
     
     

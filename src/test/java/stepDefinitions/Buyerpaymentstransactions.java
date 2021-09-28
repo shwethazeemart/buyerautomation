@@ -57,7 +57,7 @@ public class Buyerpaymentstransactions {
 	public void user_select_companies_from_dropdown_list() {
 		WebElement SAKTHIMASALA123 = Buyerpaymentstransactonspage.getDropDownElementsakthimasala();
 		Select select=new Select(SAKTHIMASALA123);
-		select.selectByIndex(1);
+		select.selectByIndex(3);
 
 	}
 
