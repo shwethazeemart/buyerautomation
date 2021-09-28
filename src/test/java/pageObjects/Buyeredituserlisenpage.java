@@ -37,7 +37,7 @@ public class Buyeredituserlisenpage {
 	@FindBy(xpath="//button[text()='Delete ']")
 	private static WebElement Buyeredituserlisenpage_Deleteicon;
 	
-	@FindBy(xpath="//img[@src='assets/zmcore/img/close-blue.svg']")
+	@FindBy(xpath="//button[text()='Delete']")
 	private static WebElement Buyeredituserlisenpage_Closedeleteicon;
 	
 	@FindBy(xpath="(//datatable-body-cell[contains(@class,'datatable-body-cell sort-active')])[2]")

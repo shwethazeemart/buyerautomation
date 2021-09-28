@@ -106,15 +106,35 @@ public class Buyerinventoryoutletslisen {
 	public void user_click_on_starter_plan_close_icon() {
 	    Buyerinventoryoutletslisenpage.clickstarterplancloseicon();
 	}
-
+ 
 	@Then("User return to outlet page")
 	public void user_return_to_outlet_page() throws InterruptedException {
-	    //Buyerinventoryoutletslisenpage.clickreturntooutletpage();
+	   Buyerinventoryoutletslisenpage.clickreturntooutletpage();
 	}
 
 
 
+	@Then("User click on uncheckbox of Has items below par")
+	public void user_click_on_uncheckbox_of_Has_items_below_par() {
+		 Buyerinventoryoutletslisenpage.ClickuncheckboxogHasitem();
+	}
 
+	@Then("User click on checkbox of last count")
+	public void user_click_on_checkbox_of_last_count() {
+		Buyerinventoryoutletslisenpage.Clickoncheckboxoflastcount();
+	}
+
+	@Then("User click on uncheckbox of last count")
+	public void user_click_on_uncheckbox_of_last_count() {
+		Buyerinventoryoutletslisenpage.Clickonuncheckboxoflastcount();
+	}
+
+
+
+	@Then("User click vertically scroll up in the page")
+	public void user_click_vertically_scroll_up_in_the_page() {
+		Buyerinventoryoutletslisenpage.Clickverticallyscrollup();
+	}
 
 
 

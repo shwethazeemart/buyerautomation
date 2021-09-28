@@ -13,13 +13,8 @@ import pageObjects.PasswordResetPage;
 import pageObjects.Reportspage;
 import pageObjects.SucessfullyLoginpage;
 
-import pageObjects.SupplierPNF7857page;
 
-import pageObjects.SupplierPNF7855page;
-
-import pageObjects.SupplierPNF7856page;
-
-import pageObjects.SupplierPNF7858page;
+import pageObjects.Suppliercustomerlocationlistingpage;
 import pageObjects.Userspage;
 import stepDefinitions.AdminInvoiceuploadpageSteps;
 import stepDefinitions.Adminbuyerlinktothecompany;
@@ -50,14 +45,16 @@ import pageObjects.Adminnewsupplieruserpage;
 import pageObjects.Adminsupplierpage;
 import pageObjects.Adminsuppliersviewoutletspage;
 import pageObjects.Automationtestingpage;
-import pageObjects.BuyerPNF7797page;
+//import pageObjects.BuyerPNF7797page;
 import pageObjects.Buyerdashboardlisenpage;
 import pageObjects.Buyeredituserlisenpage;
 import pageObjects.BuyerinventorySKUlisenpage;
 import pageObjects.Buyerinventoryactivitylisenpage;
 import pageObjects.Buyerinventoryoutletslisenpage;
 import pageObjects.Buyerinvoicelisenpage;
+import pageObjects.Buyernewweeklyorderpage;
 import pageObjects.Buyerorderslisenpage;
+import pageObjects.Buyeroutletslistingpage;
 import pageObjects.Buyeroutletsmanagedetailspage;
 import pageObjects.Buyeroutletsmanagesettingspage;
 import pageObjects.Buyeroutletsviewsupplierspage;
@@ -125,18 +122,14 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private Buyeredituserlisenpage Buyeredituserlisen;
     private Buyerorderslisenpage Buyerorderslisen;
     private Buyerusernamesettingspage Buyerusernamesettings;
-    private BuyerPNF7797page BuyerPNF7797;
-    private SupplierPNF7858page SupplierPNF7858;
+    //private BuyerPNF7797page BuyerPNF7797;
+    
     private LogInPage LogInPage3;
+    private Suppliercustomerlocationlistingpage Suppliercustomerlocationlisting;
+    private Buyeroutletslistingpage Buyeroutletslisting;
+    private Buyernewweeklyorderpage Buyernewweeklyorder;
 
-
-    private SupplierPNF7857page SupplierPNF7857;
-
-    private SupplierPNF7855page SupplierPNF7855;
-
-
-    private SupplierPNF7856page SupplierPNF7856;
-
+    
     
     
     public PageObjectManager(WebDriver driver) {
@@ -370,32 +363,26 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 	}
 
 
-	public BuyerPNF7797page getBuyerBuyerPNF7797page() {
-		return (BuyerPNF7797 == null) ? (BuyerPNF7797 = new BuyerPNF7797page(driver)) : BuyerPNF7797;
-	}
-
-
-
-
-	public SupplierPNF7858page getSupplierPNF7858page() {
-		return (SupplierPNF7858 == null) ? (SupplierPNF7858 = new SupplierPNF7858page(driver)) : SupplierPNF7858;
-	}
-
-
 	public LogInPage getLogInPage3() {
 		return (LogInPage3 == null) ? (LogInPage3 = new LogInPage(driver)) : LogInPage3;
 	}
 
 
+	public Suppliercustomerlocationlistingpage getSuppliercustomerlocationlistingpage() {
+		return (Suppliercustomerlocationlisting == null) ? (Suppliercustomerlocationlisting = new Suppliercustomerlocationlistingpage(driver)) : Suppliercustomerlocationlisting;
+	}
 
 
-	public SupplierPNF7857page getSupplierPNF7857page() {
-		return (SupplierPNF7857 == null) ? (SupplierPNF7857 = new SupplierPNF7857page(driver)) : SupplierPNF7857;
+	public Buyeroutletslistingpage getBuyeroutletslistingpage() {
+		return (Buyeroutletslisting == null) ? (Buyeroutletslisting = new Buyeroutletslistingpage(driver)) : Buyeroutletslisting;
+	}
+
+
+	public Buyernewweeklyorderpage getBuyernewweeklyorderpage() {
+		return (Buyernewweeklyorder == null) ? (Buyernewweeklyorder = new Buyernewweeklyorderpage(driver)) : Buyernewweeklyorder;
+	}
+
   
-	public SupplierPNF7855page getSupplierPNF7855page() {
-		return (SupplierPNF7855 == null) ? (SupplierPNF7855 = new SupplierPNF7855page(driver)) : SupplierPNF7855;
-
-	}
 	
 	
 	
@@ -406,12 +393,6 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 	
 	
 
-	public SupplierPNF7856page getSupplierPNF7856page() {
-		return (SupplierPNF7856 == null) ? (SupplierPNF7856 = new SupplierPNF7856page(driver)) : SupplierPNF7856;
-	}
-
-	
-	
 	
 	
 	}

@@ -1,4 +1,4 @@
-Feature: Verify Buyer Inventory Outlets lisen page and test all the page
+  Feature: Verify Buyer Inventory Outlets lisen page and test all the page
 
 Scenario Outline: Verify the Inventory Outlets lisen page of Buyer panel 
           Given User is on Login Page
@@ -18,7 +18,11 @@ Scenario Outline: Verify the Inventory Outlets lisen page of Buyer panel
           And User send outlet name in search icon"<outletname>"
           Then User click on status icon
           And User click on checkbox of Has items below par
+          Then User click on uncheckbox of Has items below par
+          Then User click on checkbox of last count 
+          Then User click on uncheckbox of last count
           Then User click on velu masala
+          Then User click vertically scroll up in the page
           And User return to outlet page
            
           
