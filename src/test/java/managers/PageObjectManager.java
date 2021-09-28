@@ -52,6 +52,7 @@ import pageObjects.BuyerinventorySKUlisenpage;
 import pageObjects.Buyerinventoryactivitylisenpage;
 import pageObjects.Buyerinventoryoutletslisenpage;
 import pageObjects.Buyerinvoicelisenpage;
+import pageObjects.Buyernewweeklyorderpage;
 import pageObjects.Buyerorderslisenpage;
 import pageObjects.Buyeroutletslistingpage;
 import pageObjects.Buyeroutletsmanagedetailspage;
@@ -126,7 +127,7 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private LogInPage LogInPage3;
     private Suppliercustomerlocationlistingpage Suppliercustomerlocationlisting;
     private Buyeroutletslistingpage Buyeroutletslisting;
-   
+    private Buyernewweeklyorderpage Buyernewweeklyorder;
 
     
     
@@ -375,6 +376,12 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 	public Buyeroutletslistingpage getBuyeroutletslistingpage() {
 		return (Buyeroutletslisting == null) ? (Buyeroutletslisting = new Buyeroutletslistingpage(driver)) : Buyeroutletslisting;
 	}
+
+
+	public Buyernewweeklyorderpage getBuyernewweeklyorderpage() {
+		return (Buyernewweeklyorder == null) ? (Buyernewweeklyorder = new Buyernewweeklyorderpage(driver)) : Buyernewweeklyorder;
+	}
+
   
 	
 	
