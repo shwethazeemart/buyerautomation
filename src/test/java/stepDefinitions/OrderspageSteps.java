@@ -3,11 +3,16 @@ package stepDefinitions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 
 import cucumber.TestContext;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+//import pageObjects.AdminInvoiceuploadpage;
+//import pageObjects.Adminbuyeroutletsubscriptionpage;
+//import pageObjects.Adminbuyersoutletpage;
+//import pageObjects.Admininvoiceprocesspage;
 import pageObjects.DashboardPage;
 import pageObjects.LogInPage;
 import pageObjects.OrdersPage;
@@ -20,6 +25,8 @@ public class OrderspageSteps<txtBoxContent> {
 	private Object OrderID; 
 	private LogInPage logInPage;
 	private DashboardPage dashboradpage;
+	//private Adminbuyeroutletsubscriptionpage adminbuyerouletsubscriptionpage; 
+	//private Adminbuyersoutletpage adminbuyersoutletpage;
 
 
 	public OrderspageSteps(TestContext testContext) {
@@ -28,8 +35,10 @@ public class OrderspageSteps<txtBoxContent> {
 		this.orderspage = testContext.getPageObjectManager().getOrdersPage();
 		this.logInPage = (LogInPage) testContext.getPageObjectManager().getLogInPage2();
 		this.dashboradpage = testContext.getPageObjectManager().getDashboardPage();
-
-
+		//this.adminbuyersoutletpage=(Adminbuyersoutletpage)testContext.getPageObjectManager().getAdminbuyersoutletpageSteps();
+		this.testContext = testContext;
+		this.logInPage = testContext.getPageObjectManager().getLogInPage1(); 
+		//this.adminbuyerouletsubscriptionpage = testContext.getPageObjectManager().getAdminbuyersoutletsubscriptionpageSteps();
 	}
 	
 	
@@ -122,7 +131,7 @@ public class OrderspageSteps<txtBoxContent> {
 	}
 
 	@Then("User clicks the Back to Orders button")
-	public void user_clicks_the_Back_to_Orders_button() {
+	public void user_clicks_the_Back_to_Orders_button() throws InterruptedException {
 		OrdersPage.click_BacktoOrderbutton();
 	}
 
@@ -156,7 +165,6 @@ public class OrderspageSteps<txtBoxContent> {
 	}
 
 
-
 	@Then("User clicks on the filter option")
 	public void user_clicks_on_the_filter_option() {
 		OrdersPage.clicks_on_the_filter_option();
@@ -178,11 +186,149 @@ public class OrderspageSteps<txtBoxContent> {
 	}
 
 
+	//Start outstanding payment
+	
+	@Then("User navigate to admin hub")
+	public void user_navigate_to_admin_hub() {
+	    OrdersPage.Usernavigatetoadminpanel();
+	}
+
+	@Then("User Enter the supplier in searchbox {string}")
+	public void user_Enter_the_supplier_in_searchbox(String suppliername) {
+	    OrdersPage.Enterthesuppliername(suppliername);
+	}
+
+	@Then("User click on search icon of supplier page")
+	public void user_click_on_search_icon_of_supplier_page() {
+	    OrdersPage.Clicksearchiconofsupplierpage();
+	}
+
+	@Then("User click on actions dropdown of sabari supplier")
+	public void user_click_on_actions_dropdown_of_sabari_supplier() {
+	    OrdersPage.Clickonactionsdropdownsabarisupplier();
+	}
+
+	@Then("User click on view outlets of sabari supplier")
+	public void user_click_on_view_outlets_of_sabari_supplier() {
+	   OrdersPage.Clickonviewoutletsofsabarisupplier();
+	}
+
+	@Then("User click on Actions dropdown of velumasala")
+	public void user_click_on_Actions_dropdown_of_velumasala() {
+	    OrdersPage.Clickonactionsdropdownofvelumasala();
+	}
+
+	@Then("User click on manage settings of velumasala")
+	public void user_click_on_manage_settings_of_velumasala() {
+	   OrdersPage.Clickonmanagesettingofvelumasala();
+	}
+
+	@Then("User click on uncheck of default setting")
+	public void user_click_on_uncheck_of_default_setting() {
+	    OrdersPage.Clickonuncheckofdefaultsetting();
+	}
+
+	@Then("User click on checkbox disable ordering")
+	public void user_click_on_checkbox_disable_ordering() {
+	    OrdersPage.Clickoncheckboxofdisableordering();
+	}
+
+	@Then("User select payment outstanding dropdown value")
+	public void user_select_payment_outstanding_dropdown_value() throws InterruptedException {
+	    //OrdersPage.SelectPaymentoutstanding(); 
+		WebElement Paymentoutstanding =orderspage.getDropDownElementPaymentoutstanding(); 
+		Select select=new Select(Paymentoutstanding);
+		select.selectByIndex(1);
+	}
+
+	@Then("User enter mobile number in the SMS field {string}")
+	public void user_enter_mobile_number_in_the_SMS_field(String smsmobilenumber) {
+	   OrdersPage.Entermobilenumber(smsmobilenumber);
+	}
+
+	@Then("User enter whatsApp number in whatsApp field {string}")
+	public void user_enter_whatsApp_number_in_whatsApp_field(String whatsappnumber) {
+	    OrdersPage.Enterwhatsappnumber(whatsappnumber);
+	}
+
+	@Then("User click on update button finally")
+	public void user_click_on_update_button_finally() {
+	    OrdersPage.Clickupdatebuttonfinally();
+	}
+
+	@Then("User navigate buyer hub")
+	public void user_navigate_buyer_hub() {
+	    OrdersPage.Usernavigatetobuyerpanel();  
+	}
+
+	@Then("User click sabari twofifty supplier")
+	public void user_click_sabari_twofifty_supplier() throws InterruptedException {
+	   OrdersPage.Clickonsabaritwofiftysupplier();
+	}
+
+	@Then("User click on ok button in supplier page")
+	public void user_click_on_ok_button_in_supplier_page() throws InterruptedException {
+	   //OrdersPage.Clickonokbutton();
+	} 
+
+	@Then("User click on close icon in supplier page")
+	public void user_click_on_close_icon_in_supplier_page() throws InterruptedException {
+	   // OrdersPage.Clickoncloseiconinsupplierpage();
+	}
+
+	@Then("User select order setting unverified dropdown value")
+	public void user_select_order_setting_unverified_dropdown_value() {
+		//WebElement Ordersettingunverified =orderspage.getDropDownElementOrdersettingunverified(); 
+		//Select select=new Select(Ordersettingunverified);
+		//select.selectByIndex(2);
+	}
+
+	@Then("User select setting not configured dropdown value")
+	public void user_select_setting_not_configured_dropdown_value() {
+		//WebElement Settingnotconfigured =orderspage.getDropDownElementOrdersettingnotconfiured();
+		//Select select=new Select(Settingnotconfigured);
+		//select.selectByIndex(3);
+	}
+
+	@Then("User click on close icon of ok button page")
+	public void user_click_on_close_icon_of_ok_button_page() {
+	    //OrdersPage.Clickoncloseiconofokbutton();
+	}
+
+	
+	@Then("User click on popup of sabari twofifty supplier")
+	public void user_click_on_popup_of_sabari_twofifty_supplier() {
+	   // OrdersPage.Clickonpopupofsabaritwofiftysupplier();
+	}
+	
+	//outstanding payments
+	
+	@Then("User click on velu masalathree in the supplier page")
+	public void user_click_on_velu_masalathree_in_the_supplier_page() throws InterruptedException {
+	   OrdersPage.Clickonvelumasalathree();
+	}
+
+	@Then("User click on ok button of pop message")
+	public void user_click_on_ok_button_of_pop_message() throws InterruptedException {
+	    OrdersPage.Clickonokbuttoninpop();
+	}
 
 
+	@Then("User click on close icon first pop message")
+	public void user_click_on_close_icon_first_pop_message() {
+	    OrdersPage.Clickcloseiconfirstpop();
+	}
+
+	@Then("User click on velu masalasix in the supplier page")
+	public void user_click_on_velu_masalasix_in_the_supplier_page() throws InterruptedException {
+	    OrdersPage.Clickvelumasalasix();
+	}
 
 
-
+	@Then("User click on velu masalatwofifty in the supplier page")
+	public void user_click_on_velu_masalatwofifty_in_the_supplier_page() throws InterruptedException {
+		OrdersPage.Clickvelumasalatwofifty();
+	}
 
 
 

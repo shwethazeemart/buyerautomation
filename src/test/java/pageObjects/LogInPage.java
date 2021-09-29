@@ -87,6 +87,7 @@ public class LogInPage {
 	}
 
 	public static void click_LoginBtn() throws InterruptedException {
+		Thread.sleep(5000);
 		btn_loginbtn.click();
 		Thread.sleep(5000);
 		try {
