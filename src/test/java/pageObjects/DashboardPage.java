@@ -97,6 +97,8 @@ public class DashboardPage {
 	@FindBy(xpath = "//span[contains(@id,'sideMenu_Customers')]")
 	private static WebElement LogInPage_SupplierCustomers;
 
+	@FindBy(xpath = "//span[contains(@id,'sideMenu_News')]")
+	private  WebElement button_News;
 
 	public String getPageTitle() {
 		return driver.getTitle();
@@ -138,6 +140,18 @@ public class DashboardPage {
 				.executeScript("return document.readyState").equals("complete"));
 	}
 
+	public void clickNews() throws InterruptedException {
+
+		button_News.click();
+		Thread.sleep(5000);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 50).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+	
 	//	public void clickOrders() {
 	//		btn_Orders.click();
 	//		//return this;
