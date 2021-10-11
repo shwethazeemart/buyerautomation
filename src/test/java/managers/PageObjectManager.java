@@ -45,6 +45,7 @@ import pageObjects.Adminnewsupplieruserpage;
 import pageObjects.Adminsupplierpage;
 import pageObjects.Adminsuppliersviewoutletspage;
 import pageObjects.Automationtestingpage;
+import pageObjects.BuyerNewslistingpage;
 //import pageObjects.BuyerPNF7797page;
 import pageObjects.Buyerdashboardlisenpage;
 import pageObjects.Buyeredituserlisenpage;
@@ -128,6 +129,7 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private Suppliercustomerlocationlistingpage Suppliercustomerlocationlisting;
     private Buyeroutletslistingpage Buyeroutletslisting;
     private Buyernewweeklyorderpage Buyernewweeklyorder;
+    private BuyerNewslistingpage BuyerNewslisting;
 
     
     
@@ -380,6 +382,12 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 
 	public Buyernewweeklyorderpage getBuyernewweeklyorderpage() {
 		return (Buyernewweeklyorder == null) ? (Buyernewweeklyorder = new Buyernewweeklyorderpage(driver)) : Buyernewweeklyorder;
+	}
+
+
+	public BuyerNewslistingpage getBuyerNewslistingpage() {
+		return (BuyerNewslisting == null) ? (BuyerNewslisting = new BuyerNewslistingpage(driver)) : BuyerNewslisting;
+		
 	}
 
   
