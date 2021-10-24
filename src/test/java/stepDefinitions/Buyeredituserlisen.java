@@ -39,12 +39,12 @@ public class Buyeredituserlisen {
 
 	@Then("User click on delete icon")
 	public void user_click_on_delete_icon() {
-	     Buyeredituserlisenpage.Clickondeleteicon();
+	     //Buyeredituserlisenpage.Clickondeleteicon();
 	}
 
 	@Then("User click on delete close icon")
 	public void user_click_on_delete_close_icon() {
-	    Buyeredituserlisenpage.Clickondeletecloseicon();
+	    //Buyeredituserlisenpage.Clickondeletecloseicon();
 	}
 
 	@Then("User click on velumanitwo user")

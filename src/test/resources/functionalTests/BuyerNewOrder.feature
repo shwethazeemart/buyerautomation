@@ -34,7 +34,7 @@ Scenario Outline: Verify the News Order page of Buyer panel
              |Order ID        ||username                     |  |password    |
              |202011130001    ||velumanieswaran2020@gmail.com|  |!123456Zm   |
              
-@Smoke
+
  Scenario Outline: Verify the New Order outstanding options page of Buyer panel   
  
          Given User is on Login Page

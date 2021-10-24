@@ -174,7 +174,7 @@ public class LogInPage {
 
 	public static void Clickloginbutton() throws InterruptedException {
 		Thread.sleep(5000);
-		LogInPage_Loginbutton.click();
+		//LogInPage_Loginbutton.click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
