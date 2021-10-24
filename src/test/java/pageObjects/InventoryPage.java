@@ -89,7 +89,7 @@ public class InventoryPage {
 	@FindBy(xpath = "//button[text()='Save stock count']")
 	private static WebElement InventoryPage_Savestockcountbtn;
 
-	@FindBy(xpath = "//button[text()=' Record adjustment ']")
+	@FindBy(xpath = "//button[text()=' Adjustment ']")
 	private static WebElement InventoryPage_Recordadjusmentbtn;
 
 	@FindBy(xpath = "(//select[contains(@class,'custom-select wth100')])[2]")
@@ -135,9 +135,26 @@ public class InventoryPage {
 	@FindBy(xpath = "//button[text()='Done']")
 	private static WebElement InventoryPage_Done_button;
 	
+	@FindBy(xpath = "//select[@formcontrolname='reason']")
+	private static WebElement InventoryPage_Inventoryreasonmissing;
+	
+	@FindBy(xpath = "//select[@formcontrolname='reason']")
+	private static WebElement InventoryPage_Inventoryreasonpromotion;
+	
+	@FindBy(xpath = "//select[@formcontrolname='reason']")
+	private static WebElement InventoryPage_Inventoryreasontransferin;
+	
+	@FindBy(xpath = "//select[@formcontrolname='reason']")
+	private static WebElement InventoryPage_Inventoryreasontransferout;
+	
+	@FindBy(xpath = "//div[text()='vsla']")
+	private static WebElement InventoryPage_vslalist;
+	
+	 
+	
 
 	public void Clicks_in_Lists() throws InterruptedException {
-		btn_Listsbtn.click();
+		btn_Listsbtn.click(); 
 		Thread.sleep(5000);
 		try {
 			Thread.sleep(5000);
@@ -280,7 +297,8 @@ public class InventoryPage {
 
 	}
 
-	public void Click_Record_adjusment_button() {
+	public void Click_Record_adjusment_button() throws InterruptedException {
+		Thread.sleep(5000);
 		InventoryPage_Recordadjusmentbtn.click();
 		try {
 			Thread.sleep(5000);
@@ -501,8 +519,81 @@ public class InventoryPage {
 		
 	}
 
+	public static void click_InventoryReasonmissing() {
+		InventoryPage_Inventoryreasonmissing.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+
+	}
+
+	public WebElement getDropDownElementInventoryReasonmissing() {
+		return InventoryPage_Inventoryreasonmissing;
+	}
 	
+	
+	public static void click_InventoryReasonpromotion() {
+		InventoryPage_Inventoryreasonpromotion.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+
+	}
+
+	public WebElement getDropDownElementInventoryReasonpromotion() {
+		return InventoryPage_Inventoryreasonpromotion;
+	}
 		
+	
+	public static void click_InventoryReasontransferin() {
+		InventoryPage_Inventoryreasontransferin.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+
+	}
+
+	public WebElement getDropDownElementInventoryReasontransferin() {
+		return InventoryPage_Inventoryreasontransferin;
+	}
+	
+	
+	
+	public static void click_InventoryReasontransferout() {
+		InventoryPage_Inventoryreasontransferout.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+
+	}
+
+	public WebElement getDropDownElementInventoryReasontransferout() {
+		return InventoryPage_Inventoryreasontransferout;
+	}
+
+	public void Clickvslalist() {
+		InventoryPage_vslalist.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+	
 	}	
 
 

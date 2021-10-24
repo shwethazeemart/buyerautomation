@@ -129,7 +129,7 @@ public class InventorypageSteps {
 	}
 
 	@Then("User are Click Record adjusment button")
-	public void user_are_Click_Record_adjusment_button() {
+	public void user_are_Click_Record_adjusment_button() throws InterruptedException {
 	   inventorypage.Click_Record_adjusment_button();
 	}
 
@@ -171,7 +171,7 @@ public class InventorypageSteps {
 	
 	@Then("User are Clicks final Save button")
 	public void user_are_Clicks_final_Save_button() {
-	    //inventorypage.Clicks_final_Save_button();
+	    inventorypage.Clicks_final_Save_button();
 	}
 	@Then("User clicks on the Cavenagh4 outlets")
 	public void user_clicks_on_the_Cavenagh4_outlets() throws InterruptedException {
@@ -219,5 +219,43 @@ public class InventorypageSteps {
 	public void user_clicks_on_the_Done_button() throws InterruptedException {
 		inventorypage.clicks_on_the_Done_button(); 
 	}
+	
+	//RecordAdjustment
+	@When("User is Select Reason second drodown value of missing")
+	public void user_is_Select_Reason_second_drodown_value_of_missing() {
+		WebElement missing = inventorypage.getDropDownElementInventoryReasonmissing();
+		Select select=new Select(missing);
+		select.selectByIndex(2);
+	}
+
+	@When("User is Select Reason thirdtime drodown value of Promotion")
+	public void user_is_Select_Reason_thirdtime_drodown_value_of_Promotion() {
+		WebElement promotion = inventorypage.getDropDownElementInventoryReasonpromotion();
+		Select select=new Select(promotion);
+		select.selectByIndex(1);
+	}
+
+	@When("User is Select Reason fourthtime drodown value of Transfer in")
+	public void user_is_Select_Reason_fourthtime_drodown_value_of_Transfer_in() {
+		WebElement transferin = inventorypage.getDropDownElementInventoryReasontransferin();
+		Select select=new Select(transferin);
+		select.selectByIndex(4);
+	}
+
+	@When("User is Select Reason fifthtime drodown value of Transfer out")
+	public void user_is_Select_Reason_fifthtime_drodown_value_of_Transfer_out() {
+		WebElement transferout = inventorypage.getDropDownElementInventoryReasontransferout();
+		Select select=new Select(transferout);
+		select.selectByIndex(5);
+	}
+
+	
+	@Then("User are Clicks the vsla list")
+	public void user_are_Clicks_the_vsla_list() {
+		//inventorypage.Clickvslalist();   
+	}
+
+
+
 	
 }

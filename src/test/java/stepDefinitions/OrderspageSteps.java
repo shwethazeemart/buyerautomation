@@ -299,7 +299,7 @@ public class OrderspageSteps<txtBoxContent> {
 	@Then("User click on popup of sabari twofifty supplier")
 	public void user_click_on_popup_of_sabari_twofifty_supplier() {
 	   // OrdersPage.Clickonpopupofsabaritwofiftysupplier();
-	}
+	} 
 	
 	//outstanding payments
 	

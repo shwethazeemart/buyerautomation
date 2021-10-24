@@ -158,7 +158,7 @@ public class DashboardPage {
 	//		
 	//	}
 	public void clickOrders() throws InterruptedException {
-
+		Thread.sleep(5000);
 		button_Orders.click();
 		Thread.sleep(5000);
 		try {

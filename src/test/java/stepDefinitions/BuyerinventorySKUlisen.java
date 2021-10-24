@@ -126,6 +126,23 @@ public class BuyerinventorySKUlisen {
 	    BuyerinventorySKUlisenpage.Clickonclearicon();
 	}
 
+	@Then("User close on Remove from inventory list Delete icon")
+	public void user_close_on_Remove_from_inventory_list_Delete_icon() {
+		 BuyerinventorySKUlisenpage.Closeiconofremovefrominventory();
+	}
+
+	@Then("User click on consumption report")
+	public void user_click_on_consumption_report() {
+		BuyerinventorySKUlisenpage.Clickonconsumptionreport();
+	}
+
+	@Then("User click on backbutton of consumption report")
+	public void user_click_on_backbutton_of_consumption_report() {
+		BuyerinventorySKUlisenpage.Clickbackbuttonofconsumptionreport();
+	}
+
+
+
 
 
 	

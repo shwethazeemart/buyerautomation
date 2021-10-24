@@ -633,7 +633,6 @@ Scenario Outline: Verify the Orders lisen page of Buyer panel
          And User Clicks New order in the dropdown value
          Then User click on velu masalathree in the supplier page
          Then User click on ok button of pop message
-         Then User click on close icon first pop message
          And User Clicks Orders in the side navigation menubar
          And User Clicks New order dropdown value
          And User Clicks New order in the dropdown value
@@ -818,7 +817,7 @@ Scenario Outline: Verify the Payment plans page of Buyer panel
           
      Examples: 
       | username                      | | password   |
-      | kovalan@zeemart.asia          | |!123456Zm   |
+      | kovalan@zeemart.asia          | |!1234567Zm   |
       
       
       
@@ -844,7 +843,7 @@ Scenario Outline: Verify the Payment transactions page of Buyer panel
       | velumanieswaran2020@gmail.com | |!123456Zm   |      
       
       
-      
+     
 Scenario Outline: Verify the Inventory Outlets lisen page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -917,9 +916,9 @@ Scenario Outline: Verify the Inventory SKU lisen page of Buyer panel
           Then User click on Edit par level
           And User click on Edit par level close icon
           Then User click on Remove from inventory list icon
-          Then User click on Remove from inventory list Delete icon
+          Then User close on Remove from inventory list Delete icon
           Then User click on Add SKU
-          And User Select dropdown list name in velu
+          And User Select dropdown list name in velu 
           Then User click on check box of SKU
           And User click on done button
           Then User click on consumption report
@@ -929,6 +928,7 @@ Scenario Outline: Verify the Inventory SKU lisen page of Buyer panel
      Examples:
          |username                            |  |password    |
          |velumanieswaran2020@gmail.com       |  |!123456Zm   |
+         
          
 Scenario Outline: Verify the Inventory Record adjustment page of Buyer panel 
           Given User is on Login Page
@@ -969,12 +969,7 @@ Scenario Outline: Verify the Inventory Record adjustment page of Buyer panel
           Then User are type the value of Quantity box field"<Quantity>"
           Then User are type Notes in the Notes field"<Notesfour>"
           Then User are Clicks final Save button 
-          Then User are Click Record adjusment button
-          When User is Select Reason sixtime drodown value of Transfer out 
-          When User is Select item in the items name dropdown
-          Then User are type the value of Quantity box field"<Quantity>"
-          Then User are type Notes in the Notes field"<Notesfive>"
-          Then User are Clicks final Save button 
+         
          
          
           
@@ -1052,7 +1047,7 @@ Scenario Outline: Verify the Outlets page of Buyer panel
       | velumanieswaran2020@gmail.com | |!123456Zm   ||lingeshsabari2009@gmail.com|
       
       
-      
+     
  Scenario Outline: Verify the Outlets settings page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>" 
@@ -1125,6 +1120,7 @@ Scenario Outline: Verify the Users Listing page of Buyer panel
           Then User is click on check box of aruloli user
           And User click on clear icon in edit user page
           Then User is click on check box of aruloli user
+          And User click on clear icon in edit user page
           And User click on delete icon 
           Then User click on delete close icon
           Then User click on search box in edit user page

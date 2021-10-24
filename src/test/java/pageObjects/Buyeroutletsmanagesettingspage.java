@@ -50,7 +50,7 @@ public class Buyeroutletsmanagesettingspage {
 	@FindBy(xpath = "//div[@class='selected-list']//div[1]")
 	private static WebElement Buyeroutletsmanagesettingspage_Selectusersearchbox;
 	
-	@FindBy(xpath = "(//input[@class='ng-star-inserted']/following-sibling::label)[2]")
+	@FindBy(xpath = "//label[text()='sai velu-saivel1980@gmail.com']")
 	private static WebElement Buyeroutletsmanagesettingspage_Checkboxofaruloli;
 	
 	//@FindBy(xpath = "(//ul[@class='button_row mt-4']//a)[1]")
@@ -80,7 +80,7 @@ public class Buyeroutletsmanagesettingspage {
 	@FindBy(xpath = "(//input[@type='email'])[3]")
 	private static WebElement Buyeroutletsmanagesettingspage_Enteroutletemail;
 	
-	@FindBy(xpath = "//button[text()='Save']")
+	@FindBy(xpath = "(//button[contains(@type,'button')])[5]")
 	private static WebElement Buyeroutletsmanagesettingspage_Savebutton;
 	
 	@FindBy(xpath = "(//div[@class='pop_up border_rad_2'])[3]")

@@ -31,7 +31,7 @@ public class Buyeredituserlisenpage {
 	}
 	
 
-	@FindBy(xpath="(//input[@type='checkbox'])[2]")
+	@FindBy(xpath="(//input[@type='checkbox'])[4]")
 	private static WebElement Buyeredituserlisenpage_Checkboxofaruloliuser;
 	
 	@FindBy(xpath="//button[text()='Delete ']")

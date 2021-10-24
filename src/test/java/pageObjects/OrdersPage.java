@@ -766,7 +766,8 @@ public class OrdersPage {
 		return orderspage_Settingnotconfigured;
 	}
 	
-	public static void Clickoncloseiconofokbutton() {
+	public static void Clickoncloseiconofokbutton() throws InterruptedException {
+		Thread.sleep(5000);
 		String parentWindow = driver.getWindowHandle();
 		Set<String> windowHandles = driver.getWindowHandles();
 		Iterator<String> iterator = windowHandles.iterator();
@@ -798,6 +799,7 @@ public class OrdersPage {
 	
 	//outstanding payments
 	public static void Clickonvelumasalathree() throws InterruptedException {
+		Thread.sleep(5000);
 		Set<String> handler = driver.getWindowHandles();
 		Iterator<String> it=handler.iterator();
 		String parentWindowId=it.next();
@@ -812,6 +814,12 @@ public class OrdersPage {
 		System.out.println("The display handle1:" +driver.getTitle());
 	
 		orderspage_Velumasalathreeinpop.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
 		
 		 
 	}
@@ -846,6 +854,7 @@ public class OrdersPage {
 		
 	}
 	public static void Clickvelumasalasix() throws InterruptedException {
+		Thread.sleep(5000);
 		Set<String> handler = driver.getWindowHandles();
 		Iterator<String> it=handler.iterator();
 		String parentWindowId=it.next();
@@ -862,6 +871,7 @@ public class OrdersPage {
 		
 	}
 	public static void Clickvelumasalatwofifty() throws InterruptedException {
+		Thread.sleep(5000);
 		Set<String> handler = driver.getWindowHandles();
 		Iterator<String> it=handler.iterator();
 		String parentWindowId=it.next();
@@ -875,6 +885,12 @@ public class OrdersPage {
 		driver.switchTo().window(handle1);
 		System.out.println("The display handle1:" +driver.getTitle());
 		orderspage_Velumasalatwofiftypop.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
 		
 	}
 	 

@@ -15,7 +15,7 @@ public class Supplierdashboard {
 		private OrdersPage orderspage;
 		private Object OrderID;
 		private Object logInPage;
-		private LogInPage loginPage3;
+		//private LogInPage loginPage3;
 		private DashboardPage dashboradpage;
 	    private Suppliercustomerlocationlistingpage suppliercustomerlocationlisting;
 		private Supplierdashboardpage supplierdashboard;
@@ -27,7 +27,7 @@ public class Supplierdashboard {
 			this.logInPage =  testContext.getPageObjectManager().getLogInPage3();
 			this.dashboradpage = testContext.getPageObjectManager().getDashboardPage();
 	        this.suppliercustomerlocationlisting=testContext.getPageObjectManager().getSuppliercustomerlocationlistingpage();
-            //this.supplierdashboard=	testContext.getPageObjectManager().getSupplierdashboardpage();	
+            this.supplierdashboard=	testContext.getPageObjectManager().getSupplierdashboardpage();	
 		}
 
 
@@ -36,28 +36,28 @@ public class Supplierdashboard {
 		    Supplierdashboardpage.Clickondashboardicon();
 		}
 
-		@Then("User checking welcome back icon is displayed")
+		@Then("User clickon welcome back icon is displayed")
 		public void user_checking_welcome_back_icon_is_displayed() {
-		    Supplierdashboardpage.Checkingwelcomebackicon();
+		    Supplierdashboardpage.Clickonwelcomebackicon();
 		}
 
-		@Then("User checking total orders icon is dispalyed")
+		@Then("User clickon total orders icon is dispalyed")
 		public void user_checking_total_orders_icon_is_dispalyed() {
-		    Supplierdashboardpage.Checkingtotalordersicon();
+		    Supplierdashboardpage.Clickontotalordersicon();
 		}
 
-		@Then("User checking number of orders icon is dispalyed")
+		@Then("User clickon number of orders icon is dispalyed")
 		public void user_checking_number_of_orders_icon_is_dispalyed() {
-		    Supplierdashboardpage.Checkingnumberofordersicon();
+		    Supplierdashboardpage.Clickonnumberofordersicon();
 		}
 
-		@Then("User checking delivery orders icon is dispalyed")
+		@Then("User clickon delivery orders icon is dispalyed")
 		public void user_checking_delivery_orders_icon_is_dispalyed() {
-		    Supplierdashboardpage.Checkingdeliveryordersicon();
+		    Supplierdashboardpage.Clickondeliveryordersicon();
 		}
 
 		@Then("User click on this month in total order page")
-		public void user_click_on_this_month_in_total_order_page() {
+		public void user_click_on_this_month_in_total_order_page() throws InterruptedException {
 		    Supplierdashboardpage.Clickonthismonthintotalorderpage();
 		}
 
@@ -97,7 +97,7 @@ public class Supplierdashboard {
 		}
 
 		@Then("User click on this month in sales by category")
-		public void user_click_on_this_month_in_sales_by_category() {
+		public void user_click_on_this_month_in_sales_by_category() throws InterruptedException {
 		    Supplierdashboardpage.Clickonthismonthinsalesbycategory();
 		}
 
@@ -112,12 +112,12 @@ public class Supplierdashboard {
 		}
 
 		@Then("User click on YTD in sales by category")
-		public void user_click_on_YTD_in_sales_by_category() {
-		    Supplierdashboardpage.ClickonYTDinsalescategory();
+		public void user_click_on_YTD_in_sales_by_category() throws InterruptedException {
+		    //Supplierdashboardpage.ClickonYTDinsalescategory();
 		}
 
 		@Then("User click on this month in best performing customers")
-		public void user_click_on_this_month_in_best_performing_customers() {
+		public void user_click_on_this_month_in_best_performing_customers() throws InterruptedException {
 		    Supplierdashboardpage.Clickonthismonthinbestperformingcustomer();
 		}
 
@@ -128,12 +128,12 @@ public class Supplierdashboard {
 
 		@Then("User click on this quarter in best performing customer")
 		public void user_click_on_this_quarter_in_best_performing_customer() {
-		    Supplierdashboardpage.Clickonthisquarterinbestperformingcustomer();
+		    //Supplierdashboardpage.Clickonthisquarterinbestperformingcustomer();
 		}
 
 		@Then("User click on YTD in best performing customer")
 		public void user_click_on_YTD_in_best_performing_customer() {
-		   Supplierdashboardpage.ClickonYTDinbestperformingcustomer();
+		   //Supplierdashboardpage.ClickonYTDinbestperformingcustomer();
 		}
 
 		@Then("User click on view all in best performing customer")
@@ -165,39 +165,11 @@ public class Supplierdashboard {
 		public void user_click_on_view_all_in_slipping_away() {
 		    Supplierdashboardpage.Clickonviewallinslippinyaway();
 		}
-
-
-
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+		@Then("User click on scroll down")
+		public void user_click_on_scroll_down() {
+			Supplierdashboardpage.Clickscrolldown();
+		}
 	
 	
 	

@@ -44,7 +44,7 @@ public class BuyerinventorySKUlisenpage {
 	@FindBy(xpath = "//img[@src='./assets/zmcore/img/close-blue-x.svg']")
 	private static WebElement BuyerinventorySKUlisenpage_stockcountcloseicon;
 	
-	@FindBy(xpath = "//button[text()=' Record adjustment ']")
+	@FindBy(xpath = "//button[text()=' Adjustment ']")
 	private static WebElement BuyerinventorySKUlisenpage_Recordadjustment;
 	
 	@FindBy(xpath = "//img[@src='./assets/zmcore/img/close-blue-x.svg']")
@@ -82,6 +82,18 @@ public class BuyerinventorySKUlisenpage {
 	
 	@FindBy(xpath = "//button[text()=' Clear ']")
 	private static WebElement BuyerinventorySKUlisenpage_Clearicon;
+	
+	@FindBy(xpath = "(//img[@src='./assets/zmcore/img/close-blue.svg'])[3]")
+	private static WebElement BuyerinventorySKUlisenpage_Closeiconofremoveinventory;
+	
+	@FindBy(xpath = "//button[text()=' Consumption report ']")
+	private static WebElement BuyerinventorySKUlisenpage_Consumptionreport;
+	
+	@FindBy(xpath = "//a[contains(@class,'title-clr pl-1')]//i[1]")
+	private static WebElement BuyerinventorySKUlisenpage_BackbuttonConsumptionreport;
+	
+	
+	
 	
 	 
 
@@ -251,6 +263,40 @@ public class BuyerinventorySKUlisenpage {
 
 	public static void Clickonclearicon() {
 		BuyerinventorySKUlisenpage_Clearicon.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+		
+	}
+
+	public static void Closeiconofremovefrominventory() {
+		BuyerinventorySKUlisenpage_Closeiconofremoveinventory.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public static void Clickonconsumptionreport() {
+		BuyerinventorySKUlisenpage_Consumptionreport.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public static void Clickbackbuttonofconsumptionreport() {
+		BuyerinventorySKUlisenpage_BackbuttonConsumptionreport.click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
