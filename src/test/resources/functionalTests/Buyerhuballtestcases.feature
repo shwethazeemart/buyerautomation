@@ -929,7 +929,7 @@ Scenario Outline: Verify the Inventory SKU lisen page of Buyer panel
          |username                            |  |password    |
          |velumanieswaran2020@gmail.com       |  |!123456Zm   |
          
-         
+        
 Scenario Outline: Verify the Inventory Record adjustment page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
