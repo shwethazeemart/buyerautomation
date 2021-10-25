@@ -100,7 +100,7 @@ public class DashboardPage {
 	@FindBy(xpath = "//span[contains(@id,'sideMenu_News')]")
 	private  WebElement button_News;
 	
-	@FindBy(xpath = "//span[contains(@id,'sideMenu_Orders')]")
+	@FindBy(xpath = "//span[contains(@id,'sideMenu_Orders')]") 
 	private static  WebElement button_Supplierorders;
 
 	public String getPageTitle() {

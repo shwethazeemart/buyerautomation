@@ -123,163 +123,150 @@ public class Supplierorderslisting {
 
 	@Then("User click on select all option")
 	public void user_click_on_select_all_option() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    Supplierorderslistingpage.Selectalloption();
 	}
 
 	@Then("User click on reset button")
 	public void user_click_on_reset_button() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    Supplierorderslistingpage.Clickonresetbutton();
 	}
 
 	@Then("User click on deliver status")
 	public void user_click_on_deliver_status() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    Supplierorderslistingpage.Clickondeliverystatus();
 	}
 
 	@Then("User click on invoicing status")
 	public void user_click_on_invoicing_status() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	   Supplierorderslistingpage.Clickoninvoicingstatus();
 	}
 
 	@Then("User click on acknowledgement status")
 	public void user_click_on_acknowledgement_status() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	   Supplierorderslistingpage.Clickonacknowledgementstatus();
 	}
 
 	@Then("User click on checkbox of second order in order page")
 	public void user_click_on_checkbox_of_second_order_in_order_page() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	   Supplierorderslistingpage.Clickoncheckboxofsecondorder();
 	}
 
 	@Then("User click on clear option in order page")
 	public void user_click_on_clear_option_in_order_page() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    Supplierorderslistingpage.Clickonclearoption();
 	}
 
 	@Then("User click on mark as drodown icon")
 	public void user_click_on_mark_as_drodown_icon() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    Supplierorderslistingpage.Clickonmarkasicon();
 	}
 
 	@Then("User click on acknowledged icon")
 	public void user_click_on_acknowledged_icon() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    Supplierorderslistingpage.Clickonacknowledgedicon();
 	}
 
 	@Then("User click on ok button of popup message")
 	public void user_click_on_ok_button_of_popup_message() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    Supplierorderslistingpage.Clickonokbuttonpopupmessage();
 	}
 
 	@Then("User click on shipped icon")
 	public void user_click_on_shipped_icon() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    Supplierorderslistingpage.Clickonshippedicon();
 	}
 
 	@Then("User click on checkbox of third order in order page")
 	public void user_click_on_checkbox_of_third_order_in_order_page() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    Supplierorderslistingpage.Clickoncheckboxthirdorder();
 	}
 
 	@Then("User click on partially shipped")
 	public void user_click_on_partially_shipped() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	   Supplierorderslistingpage.Clickonpartiallyshipped();
 	}
 
 	@Then("User click on download csv button")
 	public void user_click_on_download_csv_button() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    Supplierorderslistingpage.Clickondownloadcsvbutton();
 	}
 
 	@Then("User click on download csv detailed button")
 	public void user_click_on_download_csv_detailed_button() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    Supplierorderslistingpage.Clickondownloadcsvdetailedbutton();
 	}
 
 	@Then("User click on actions dropdown in first order in order page")
 	public void user_click_on_actions_dropdown_in_first_order_in_order_page() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	   Supplierorderslistingpage.Clickonactiondropdowninfirstorder();
 	}
 
 	@Then("User click on void order")
 	public void user_click_on_void_order() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    Supplierorderslistingpage.Clickonvoidorder();
 	}
 
 	
 	@Then("User click on requested by buyer")
 	public void user_click_on_requested_by_buyer() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    Supplierorderslistingpage.Clickonrequestedbybuyer();
 	}
 
 	@Then("User click on void button")
 	public void user_click_on_void_button() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	   Supplierorderslistingpage.Clickonfinalvoidbutton();
+	
+	}
+	
+	@Then("User click on apply button in supplier order page")
+	public void user_click_on_apply_button_in_supplier_order_page() {
+	    Supplierorderslistingpage.Clickonapplybuttoninsupplierorderpage();
+	}
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-}

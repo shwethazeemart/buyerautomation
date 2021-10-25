@@ -25,25 +25,25 @@ Scenario Outline: Verify the Supplier Dashboard listing page
           Then User click on filter icon in order page
           Then User click on orders status
           Then User click on select all option
-          Then User click on apply button
+          Then User click on apply button in supplier order page
           Then User click on filter icon in order page
           Then User click on reset button
           Then User click on filter icon in order page
           Then User click on deliver status
           Then User click on select all option
-          Then User click on apply button
+          Then User click on apply button in supplier order page
           Then User click on filter icon in order page
           Then User click on reset button
           Then User click on filter icon in order page
           Then User click on invoicing status
           Then User click on select all option
-          Then User click on apply button
+         Then User click on apply button in supplier order page
           Then User click on filter icon in order page
           Then User click on reset button
           Then User click on filter icon in order page
           Then User click on acknowledgement status
           Then User click on select all option
-          Then User click on apply button
+          Then User click on apply button in supplier order page
           Then User click on filter icon in order page
           Then User click on reset button
           Then User click on checkbox of second order in order page
