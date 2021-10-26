@@ -16,6 +16,7 @@ import pageObjects.SucessfullyLoginpage;
 
 import pageObjects.Suppliercustomerlocationlistingpage;
 import pageObjects.Supplierdashboardpage;
+import pageObjects.Supplierorderslistingpage;
 import pageObjects.Userspage;
 import stepDefinitions.AdminInvoiceuploadpageSteps;
 import stepDefinitions.Adminbuyerlinktothecompany;
@@ -132,7 +133,7 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 	private Buyernewweeklyorderpage Buyernewweeklyorder;
 	private BuyerNewslistingpage BuyerNewslisting;
     private Supplierdashboardpage Supplierdashboard;
-
+    private Supplierorderslistingpage Supplierorderslisting;
 
 
 	public PageObjectManager(WebDriver driver) {
@@ -394,6 +395,12 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 
 	public Supplierdashboardpage getSupplierdashboardpage() {
 		return (Supplierdashboard == null) ? (Supplierdashboard = new Supplierdashboardpage(driver)) : Supplierdashboard;
+
+	}
+
+
+	public Supplierorderslistingpage getSupplierorderslistingpage() {
+		return (Supplierorderslisting == null) ? (Supplierorderslisting = new Supplierorderslistingpage(driver)) : Supplierorderslisting;
 
 	}
 
