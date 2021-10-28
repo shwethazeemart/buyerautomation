@@ -12,7 +12,7 @@ import io.cucumber.junit.CucumberOptions;
 
 
 
-@CucumberOptions(strict = true, features = "src/test/resources/functionalTests/Supplierinvoiceslistingpage.feature",
+@CucumberOptions(strict = true, features = "src/test/resources/functionalTests/Supplierinvoicesaddcreditnote.feature",
 
 glue = { "stepDefinitions" },monochrome=true,dryRun=false,
 plugin= {"json:target/cucumber.json"})

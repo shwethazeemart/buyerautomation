@@ -16,6 +16,7 @@ import pageObjects.SucessfullyLoginpage;
 
 import pageObjects.Suppliercustomerlocationlistingpage;
 import pageObjects.Supplierdashboardpage;
+import pageObjects.Supplierinvoicesaddcreditnotepage;
 import pageObjects.Supplierinvoiceslistingpage;
 import pageObjects.Supplierorderseinvoicepage;
 import pageObjects.Supplierorderslistingpage;
@@ -137,6 +138,8 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private Supplierorderslistingpage Supplierorderslisting;
     private Supplierorderseinvoicepage Supplierorderseinvoice;
     private Supplierinvoiceslistingpage Supplierinvoiceslisting;
+    private Supplierinvoicesaddcreditnotepage Supplierinvoicesaddcreditnote;
+    
 
 	public PageObjectManager(WebDriver driver) {
 		this.driver = driver;
@@ -415,6 +418,12 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 
 	public Supplierinvoiceslistingpage getSupplierinvoiceslistingpage() {
 		return (Supplierinvoiceslisting == null) ? (Supplierinvoiceslisting = new Supplierinvoiceslistingpage(driver)) : Supplierinvoiceslisting;
+
+	}
+
+
+	public Supplierinvoicesaddcreditnotepage getSupplierinvoicesaddcreditnotepage() {
+		return (Supplierinvoicesaddcreditnote == null) ? (Supplierinvoicesaddcreditnote = new Supplierinvoicesaddcreditnotepage(driver)) : Supplierinvoicesaddcreditnote;
 
 	}
 
