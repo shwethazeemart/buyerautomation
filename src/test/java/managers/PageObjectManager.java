@@ -16,6 +16,7 @@ import pageObjects.SucessfullyLoginpage;
 
 import pageObjects.Suppliercustomerlocationlistingpage;
 import pageObjects.Supplierdashboardpage;
+import pageObjects.Supplierinvoiceslistingpage;
 import pageObjects.Supplierorderseinvoicepage;
 import pageObjects.Supplierorderslistingpage;
 import pageObjects.Userspage;
@@ -126,7 +127,6 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 	private Buyeredituserlisenpage Buyeredituserlisen;
 	private Buyerorderslisenpage Buyerorderslisen;
 	private Buyerusernamesettingspage Buyerusernamesettings;
-	
 
 	private LogInPage LogInPage3;
 	private Suppliercustomerlocationlistingpage Suppliercustomerlocationlisting;
@@ -136,7 +136,7 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private Supplierdashboardpage Supplierdashboard; 
     private Supplierorderslistingpage Supplierorderslisting;
     private Supplierorderseinvoicepage Supplierorderseinvoice;
-
+    private Supplierinvoiceslistingpage Supplierinvoiceslisting;
 
 	public PageObjectManager(WebDriver driver) {
 		this.driver = driver;
@@ -411,6 +411,13 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 		return (Supplierorderseinvoice == null) ? (Supplierorderseinvoice = new Supplierorderseinvoicepage(driver)) : Supplierorderseinvoice;
 
 	}
+
+
+	public Supplierinvoiceslistingpage getSupplierinvoiceslistingpage() {
+		return (Supplierinvoiceslisting == null) ? (Supplierinvoiceslisting = new Supplierinvoiceslistingpage(driver)) : Supplierinvoiceslisting;
+
+	}
+
 
 
 

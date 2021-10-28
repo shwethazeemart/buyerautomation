@@ -50,7 +50,7 @@ public class Buyeroutletsmanagesettingspage {
 	@FindBy(xpath = "//div[@class='selected-list']//div[1]")
 	private static WebElement Buyeroutletsmanagesettingspage_Selectusersearchbox;
 	
-	@FindBy(xpath = "//label[text()='sai velu-saivel1980@gmail.com']")
+	@FindBy(xpath = "//label[text()='velu eshwar-velueshwar1980@gmail.com']")
 	private static WebElement Buyeroutletsmanagesettingspage_Checkboxofaruloli;
 	
 	//@FindBy(xpath = "(//ul[@class='button_row mt-4']//a)[1]")
