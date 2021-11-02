@@ -120,7 +120,7 @@ public class Buyerdashboardlisenpage {
 	//@FindBy(xpath = "(//div[@class='supplier_tab_inner_info']/following-sibling::a)[1]")
 	//private static WebElement Buyerdashboardlisenpage_Selecticon;
 	
-	@FindBy(xpath = "//div[@class='flex__pads pb-0']")
+	@FindBy(xpath = "//div[text()='sabari250']")
 	private static WebElement Buyerdashboardlisenpage_Outsideorderpage;
 	
 	@FindBy(xpath = "//div[text()=' Categories  ']")
@@ -566,7 +566,8 @@ public class Buyerdashboardlisenpage {
 		
 	}
 
-	public static void Clickonresetbutton() {
+	public static void Clickonresetbutton() throws InterruptedException {
+		Thread.sleep(5000);
 		Buyerdashboardlisenpage_Resetbutton.click();
 		//WebElement reset = driver.findElement(By.linkText("Reset"));
 		//reset.click();

@@ -20,6 +20,7 @@ import pageObjects.Supplierinvoicesaddcreditnotepage;
 import pageObjects.Supplierinvoiceslistingpage;
 import pageObjects.Supplierorderseinvoicepage;
 import pageObjects.Supplierorderslistingpage;
+import pageObjects.SupplierUserListPage;
 import pageObjects.Userspage;
 import stepDefinitions.AdminInvoiceuploadpageSteps;
 import stepDefinitions.Adminbuyerlinktothecompany;
@@ -139,6 +140,8 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private Supplierorderseinvoicepage Supplierorderseinvoice;
     private Supplierinvoiceslistingpage Supplierinvoiceslisting;
     private Supplierinvoicesaddcreditnotepage Supplierinvoicesaddcreditnote;
+    private SupplierUserListPage Supplierusersscreenlisting;
+    private SupplierUserListPage SupplierUserList;
     
 
 	public PageObjectManager(WebDriver driver) {
@@ -428,6 +431,23 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 	}
 
 
+	public SupplierUserListPage getSupplierusersscreenlistingpage() {
+		return (Supplierusersscreenlisting == null) ? (Supplierusersscreenlisting = new SupplierUserListPage(driver)) : Supplierusersscreenlisting;
+
+	}
+
+
+	public SupplierUserListPage getSupplierUserListPage() {
+		return (SupplierUserList == null) ? (SupplierUserList = new SupplierUserListPage(driver)) : SupplierUserList;
+
+	}
+	
+	
+	
+	
+	
+	
+	} 
 
 
 
@@ -441,7 +461,9 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 
 
 
-}
+
+
+
 
 
 
