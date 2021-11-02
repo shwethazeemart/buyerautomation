@@ -269,7 +269,7 @@ public class OrdersPage {
 	}
 
 	public static void click_velumasala2020() {
-		orderspage_velumasala2020.click();
+		//orderspage_velumasala2020.click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -893,6 +893,18 @@ public class OrdersPage {
 				.executeScript("return document.readyState").equals("complete"));
 		
 	}
+	public static void click_velumasala2020(String outletname) {
+		orderspage_velumasala2020.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+
+	}
+
+	
 	 
 	
 }

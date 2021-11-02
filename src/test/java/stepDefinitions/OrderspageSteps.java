@@ -73,12 +73,14 @@ public class OrderspageSteps<txtBoxContent> {
 	public void user_Clicks_New_order_in_the_dropdown_value() throws InterruptedException {
 		OrdersPage.click_Neworder1();
 	}
-
-	@Given("User Clicks velu masala2020 in the Suppliers page")
-	public void user_Clicks_velu_masala2020_in_the_Suppliers_page() {
-		OrdersPage.click_velumasala2020();
+    
+	@Then("User click on in the supplier page {string}")
+	public void user_click_on_in_the_supplier_page(String outletname) {
+		OrdersPage.click_velumasala2020(outletname);
 	}
 
+	
+		
 	@Given("User Clicks in Add to order of SKU")
 	public void user_Clicks_in_Add_to_order_of_SKU() {
 		OrdersPage.click_Addtoorder();
@@ -213,6 +215,11 @@ public class OrderspageSteps<txtBoxContent> {
 	   OrdersPage.Clickonviewoutletsofsabarisupplier();
 	}
 
+	@Then("User click on  in the supplier page {string}")
+	public void user_click_on_in_the_supplier_page1(String outletnameone) {
+		OrdersPage.click_velumasala2020(outletnameone);
+	}
+
 	@Then("User click on Actions dropdown of velumasala")
 	public void user_click_on_Actions_dropdown_of_velumasala() {
 	    OrdersPage.Clickonactionsdropdownofvelumasala();
@@ -223,6 +230,7 @@ public class OrderspageSteps<txtBoxContent> {
 	   OrdersPage.Clickonmanagesettingofvelumasala();
 	}
 
+	
 	@Then("User click on uncheck of default setting")
 	public void user_click_on_uncheck_of_default_setting() {
 	    OrdersPage.Clickonuncheckofdefaultsetting();
@@ -318,12 +326,15 @@ public class OrderspageSteps<txtBoxContent> {
 	public void user_click_on_close_icon_first_pop_message() {
 	    OrdersPage.Clickcloseiconfirstpop();
 	}
+	
+	
 
-	@Then("User click on velu masalasix in the supplier page")
-	public void user_click_on_velu_masalasix_in_the_supplier_page() throws InterruptedException {
-	    OrdersPage.Clickvelumasalasix();
+	@Then("User click on in the supplier page")
+	public void user_click_on_in_the_supplier_page() throws InterruptedException {
+		  OrdersPage.Clickvelumasalasix();
 	}
 
+	
 
 	@Then("User click on velu masalatwofifty in the supplier page")
 	public void user_click_on_velu_masalatwofifty_in_the_supplier_page() throws InterruptedException {
