@@ -69,9 +69,10 @@ public class Buyerreportinvoicevariance {
 	    //Buyerreportinvoicevariancepage.Selectdatefromcalendar();
 	}
 
-	@Then("User select from dropdown value of velumasala")
-	public void user_select_from_dropdown_value_of_velumasala() {
-		WebElement velumasala2020 = Buyerreportinvoicevariancepage.getDropDownElementvelumasala();
+		
+	@Then("User select from dropdown value of {string}")
+	public void user_select_from_dropdown_value_of(String outletname) {
+		WebElement velumasala2020 = Buyerreportinvoicevariancepage.getDropDownElementoutletname();
 		Select select=new Select(velumasala2020);
 		select.selectByIndex(3); 
 	}
