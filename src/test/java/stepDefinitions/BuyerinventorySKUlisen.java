@@ -76,24 +76,24 @@ public class BuyerinventorySKUlisen {
 
 	@Then("User click on Add SKU")
 	public void user_click_on_Add_SKU() {
-	    BuyerinventorySKUlisenpage.clickAddSKU();
+	    //BuyerinventorySKUlisenpage.clickAddSKU();
 	}
 
 	@Then("User Select dropdown list name in velu")
 	public void user_Select_dropdown_list_name_in_velu() {
-		WebElement velu = BuyerinventorySKUlisenpage.getDropDownElementSKU();
-		Select select=new Select(velu);
-		select.selectByIndex(3);
+		//WebElement velu = BuyerinventorySKUlisenpage.getDropDownElementSKU();
+		//Select select=new Select(velu);
+		//select.selectByIndex(3);
 	}
 
 	@Then("User click on check box of SKU")
 	public void user_click_on_check_box_of_SKU() {
-	    BuyerinventorySKUlisenpage.ClickcheckboxSKU();
+	    //BuyerinventorySKUlisenpage.ClickcheckboxSKU();
 	}
 
 	@Then("User click on done button")
 	public void user_click_on_done_button() {
-	    BuyerinventorySKUlisenpage.clickdonebutton();
+	   // BuyerinventorySKUlisenpage.clickdonebutton();
 	}
 
 	@Then("User click on the first check box of SKU")

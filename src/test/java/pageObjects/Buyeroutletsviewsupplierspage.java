@@ -48,7 +48,7 @@ public class Buyeroutletsviewsupplierspage {
 	@FindBy(xpath = "//button[text()='Edit tags ']")
 	private static WebElement Buyeroutletsviewsupplierspage_Edittags;
 	
-	@FindBy(xpath = "(//img[@src='./assets/zmcore/img/close-blue.svg'])[2]")
+	@FindBy(xpath = "//h4[text()='Add tags']/following-sibling::button")
 	private static WebElement Buyeroutletsviewsupplierspage_Edittagscloseicon;
 	
 	@FindBy(xpath = "//button[text()='Delete ']")

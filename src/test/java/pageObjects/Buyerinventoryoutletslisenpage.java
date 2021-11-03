@@ -73,7 +73,7 @@ public class Buyerinventoryoutletslisenpage {
 	@FindBy(xpath = "//button[@class='close pull-right']")
 	private static WebElement Buyerinventoryoutletslisenpage_newlistcloseicon;
 	
-	@FindBy(xpath = "//img[@src='assets/zmcore/img/close-blue.svg']")
+	@FindBy(xpath = "//img[@src='assets/zmcore/img/close-blue@22.png']")
 	private static WebElement Buyerinventoryoutletslisenpage_starterplancloseicon;
 	
 	

@@ -267,7 +267,7 @@ Scenario Outline: Verify the Reports spending per outlet page of Buyer panel
       | username                      | | password   |
       | velumanieswaran2020@gmail.com | |!123456Zm   |
       
-   
+         
 Scenario Outline: Verify the Reports spending per SKU page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -707,7 +707,7 @@ Scenario Outline: Verify the New recurring orders page of Buyer panel
            |username                     |  |password    |
            |velumanieswaran2020@gmail.com|  |!123456Zm   |     
            
-           
+                      
 Scenario Outline: Buyer Invoice lisen page verify the all field 
 
     Given User is on Login Page
@@ -1047,7 +1047,7 @@ Scenario Outline: Verify the Outlets page of Buyer panel
       | velumanieswaran2020@gmail.com | |!123456Zm   ||lingeshsabari2009@gmail.com|
       
       
-     
+    
  Scenario Outline: Verify the Outlets settings page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>" 
@@ -1129,6 +1129,7 @@ Scenario Outline: Verify the Users Listing page of Buyer panel
     Examples:
          |username                     |  |password    ||name      |  
          |velumanieswaran2020@gmail.com|  |!123456Zm   ||velu mani2|      
+    
         
  Scenario Outline: Verify the Edit Users page of Buyer panel 
   

@@ -135,7 +135,7 @@ public class Buyerdashboardlisenpage {
 	@FindBy(xpath = "//input[@placeholder='SKU name']")
 	private static WebElement Buyerdashboardlisenpage_Enternamesearchbox;
 	
-	@FindBy(xpath = "//img[@src='../assets/zmcore/img/close-blue.svg']")
+	@FindBy(xpath = "(//div[contains(@class,'modal-header px-40')]//img)[2]")
 	private static WebElement Buyerdashboardlisenpage_Closeiconinorderpage;
 	
 	@FindBy(xpath = "//b[text()='velu masala2020']")

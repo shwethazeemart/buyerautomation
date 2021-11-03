@@ -124,7 +124,7 @@ public class Buyerreportspenpersku {
 
 	@Then("User click on bag in hundred pipers")
 	public void user_click_on_bag_in_hundred_pipers() throws InterruptedException {
-	   Buyerreportspenperskupage.Clickonbag();
+	   //Buyerreportspenperskupage.Clickonbag();
 	}
 
 	@Then("User click on box in hundred pipers")
