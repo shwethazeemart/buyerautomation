@@ -241,15 +241,15 @@ public class Buyerdashboardlisen {
 	}
 
 	@Then("User click on Reset button in order page")
-	public void user_click_on_Reset_button_in_order_page() {
-	   //Buyerdashboardlisenpage.Clickonresetbutton();
+	public void user_click_on_Reset_button_in_order_page() throws InterruptedException {
+	  //Buyerdashboardlisenpage.Clickonresetbutton();
 	}
 
 
 
 	
 	
-	
+	 
 	
 	
 	

@@ -105,6 +105,10 @@ public class DashboardPage {
 	
 	@FindBy(xpath = "//span[contains(@id,'sideMenu_Invoices')]") 
 	private static  WebElement button_Supplierinvoices;
+	
+	@FindBy(xpath = "//a[@href='/sg/pages/usermanagement']") 
+	private static  WebElement button_Supplierusers;
+	
 
 
 	public String getPageTitle() {
@@ -367,6 +371,18 @@ public class DashboardPage {
 		Thread.sleep(5000);
 		button_Supplierinvoices.click();
 		Thread.sleep(5000); 
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 50).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+	
+	public static void ClickonsupplierUsersicon() throws InterruptedException{
+		Thread.sleep(5000);
+		button_Supplierusers.click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
