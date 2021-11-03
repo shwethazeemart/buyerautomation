@@ -13,12 +13,14 @@ Scenario Outline: Verify the Supplier Teams List page
           Then User click on next link to outlet
           Then User click on add new button
           Then User select on outlet in dropdown field
+          Then User click on first dropdown list
           Then User click on save button in popup field
           Then User click on actions dropdown
           Then User click on go to outlet setting
           Then User click on Users side navigation list menubar
           Then User click on teams icon
           Then User click on actions dropdown teams field
+          Then User click on edit details in actions filed
           Then User clear on team name field
           Then User enter on team name in team page"<TeamName>"
           Then User click on save button in team page
@@ -28,5 +30,5 @@ Scenario Outline: Verify the Supplier Teams List page
                  
           
  Examples:
-         |username                              ||password    ||TeamName     |
-         |supplierautomated2@gmail.com          ||!123456Zm   ||Sabaritesting|
+         |username                              ||password    ||TeamName        |
+         |supplierautomated2@gmail.com          ||!123456Zm   ||Saisabaritesting|
