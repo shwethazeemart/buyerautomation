@@ -74,10 +74,12 @@ public class Buyerreportspenpertag {
 	    Buyerreportspenpertagpage.Clickonoutlets();
 	}
 
-	@Then("User click on Check box of velumasala in tag")
-	public void user_click_on_Check_box_of_velumasala_in_tag() {
-	    Buyerreportspenpertagpage.ClickonCheckboxofvelumasala();
+	
+	@Then("User click on Check box of in tag {string}")
+	public void user_click_on_Check_box_of_in_tag(String outlet) {
+		  Buyerreportspenpertagpage.Clickonoutlet();
 	}
+
 
 	@Then("User click on apply button in tag")
 	public void user_click_on_apply_button_in_tag() {
