@@ -143,8 +143,9 @@ public class Buyerreportspenpercategorypage {
 				.executeScript("return document.readyState").equals("complete"));
 		
 	}
+	
 	public static void Clickcheckboxofvelumasala() {
-		Buyerreportspenpercategorypage_Checkboxofvelumasala.click();
+		//Buyerreportspenpercategorypage_Checkboxofvelumasala.click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -263,6 +264,17 @@ public class Buyerreportspenpercategorypage {
 		} 
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+	public static void Clickonoutlet() {
+		Buyerreportspenpercategorypage_Checkboxofvelumasala.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
 		
 	}
 	

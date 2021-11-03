@@ -69,13 +69,14 @@ public class Buyerdashboardlisen {
 	    Buyerdashboardlisenpage.Clickonuploadinvoicecloseicon();
 	}
 
-	@Then("User select dropdown spending overview list of velu masala")
-	public void user_select_dropdown_spending_overview_list_of_velu_masala() {
+	@Then("User select dropdown spending overview list of {string}")
+	public void user_select_dropdown_spending_overview_list_of(String outletname) {
 		WebElement velumasala2020 = Buyerdashboardlisenpage.getDropDownElementvelumasala();
 		Select select=new Select(velumasala2020);
 		select.selectByIndex(3);
 	}
 
+	
 	@Then("User click on YTD icon")
 	public void user_click_on_YTD_icon() throws InterruptedException {
 	  Buyerdashboardlisenpage.ClickonYTDicon();
@@ -100,14 +101,15 @@ public class Buyerdashboardlisen {
 	public void user_click_on_Dashboard_side_navigation_menubar() {
 	    Buyerdashboardlisenpage.Clickondashboardsidenavigationmenubar();
 	}
-
-	@Then("User select dropdown top expenditures list of velu masala")
-	public void user_select_dropdown_top_expenditures_list_of_velu_masala() {
+	
+	@Then("User select dropdown top expenditures list of {string}")
+	public void user_select_dropdown_top_expenditures_list_of(String outletname) {
 		WebElement velumasala2020 = Buyerdashboardlisenpage.getDropDownElementvelumasalatwentytwenty();
 		Select select=new Select(velumasala2020);
 		select.selectByIndex(3);
 	}
 
+	
 	@Then("User click on SKU icon")
 	public void user_click_on_SKU_icon() throws InterruptedException {
 	   Buyerdashboardlisenpage.ClickonSKUicon(); 
@@ -214,12 +216,13 @@ public class Buyerdashboardlisen {
 	public void user_click_on_close_icon_in_order_page() {
 	    Buyerdashboardlisenpage.Clickoncloseiconinorderpage();
 	}
-
-	@Then("User click on velumasala")
-	public void user_click_on_velumasala() {
-	    Buyerdashboardlisenpage.Clickonvelumasala();
+ 
+	@Then("User click on {string}")
+	public void user_click_on(String outletname) {
+		 Buyerdashboardlisenpage.Click_velumasala(outletname);
 	}
-
+	
+	
 	@Then("User click on upload image in drag and dorp filed")
 	public void user_click_on_upload_image_in_drag_and_dorp_filed() throws InterruptedException {
 	    Buyerdashboardlisenpage.Clickonuploadimage();
