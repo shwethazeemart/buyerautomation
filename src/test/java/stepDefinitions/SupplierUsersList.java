@@ -7,6 +7,7 @@ import cucumber.TestContext;
 import io.cucumber.java.en.Then;
 import pageObjects.DashboardPage;
 import pageObjects.OrdersPage;
+import pageObjects.SupplierTeamListPage;
 import pageObjects.SupplierUserListPage;
 import pageObjects.Suppliercustomerlocationlistingpage;
 import pageObjects.Supplierdashboardpage;
@@ -23,6 +24,8 @@ public class SupplierUsersList {
 	private Supplierdashboardpage supplierdashboard;
 	private Supplierorderslistingpage supplierorderslisting;
 	private SupplierUserListPage supplierUserList;
+	
+	
 
 	public SupplierUsersList(TestContext testContext) {
 		super();
@@ -34,11 +37,9 @@ public class SupplierUsersList {
 		this.supplierdashboard=	testContext.getPageObjectManager().getSupplierdashboardpage();
 		this.supplierorderslisting=testContext.getPageObjectManager().getSupplierorderslistingpage();
 		this.supplierUserList=testContext.getPageObjectManager().getSupplierUserListPage();
+		
+		
 	}
-
-
-
-
 
 
 

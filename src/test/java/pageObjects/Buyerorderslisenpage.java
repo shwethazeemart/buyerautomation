@@ -147,7 +147,7 @@ public class Buyerorderslisenpage {
 	
 	
 	
-	@FindBy(xpath = "//img[@src='/assets/zmcore/img/close-blue.svg']")
+	@FindBy(xpath = "//div[@class='modal-header']//img[1]")
 	private static WebElement Buyerorderslisenpage_Closeicon;
 	
 	@FindBy(xpath = "(//div[@class='btn-group ml-auto']//a)[1]")
