@@ -13,8 +13,9 @@ import io.cucumber.junit.CucumberOptions;
 
 
 
-@CucumberOptions(strict = true, features = "src/test/resources/functionalTests/SupplierUserList.feature",
+@CucumberOptions(strict = true, features = "src/test/resources/functionalTests/BuyerNewOrder.feature",
 
+tags ="Smoke",
 
 glue = { "stepDefinitions" },monochrome=true,dryRun=false,
 plugin= {"json:target/cucumber.json"})
