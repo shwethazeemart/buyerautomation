@@ -104,7 +104,7 @@ public class InventoryPage {
 	@FindBy(xpath = "//textarea[@formcontrolname='notes']") 
 	private static WebElement InventoryPage_Notesfieldlingesh;
 
-	@FindBy(xpath = "//button[contains(@class,'px-4 py-2')]")
+	@FindBy(xpath = "//button[text()='Save ']")
 	private static WebElement InventoryPage_Finalsavebtn;
 
 

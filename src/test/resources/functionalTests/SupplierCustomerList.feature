@@ -2,9 +2,9 @@ Feature: Verify Supplier Customers Location listing page
 
 Scenario Outline: Verify the Supplier customers location listing page
          Given User is on available Login Page
-          When User enter correct username"<loginEmail>"
-          And User enter correct password"<loginPassword>"
-          And User is click login button in supplier panel 
+          When User enter exact username"<username>"
+          And User enter exact password"<password>"
+          And User is click login button 
           Then User click on Customers side navigation list menubar
           Then User enter name in search box sakthimasala "<name>" 
           Then User click on checkbox in location page
@@ -26,5 +26,6 @@ Scenario Outline: Verify the Supplier customers location listing page
           Then User click on customers backbutton in new customers page
            
           Examples:
-         |loginEmail                            |  |loginPassword    ||name           | 
-         |supplierautomated2@gmail.com          |  |!123456Zm        ||Sakthimasala100|
+        
+         |username                              ||password    ||name                |
+         |supplierautomated2@gmail.com          ||!123456Zm   ||Sakthimasala100|

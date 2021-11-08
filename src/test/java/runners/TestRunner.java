@@ -8,12 +8,12 @@ import io.cucumber.junit.CucumberOptions;
  
   
 
-@RunWith(Cucumber.class)  
-
+@RunWith(Cucumber.class)
 
 
 
 @CucumberOptions(strict = true, features = "src/test/resources/functionalTests/BuyerNewOrder.feature",
+
 
 tags ="Smoke",
 
@@ -22,4 +22,4 @@ plugin= {"json:target/cucumber.json"})
  
 public class TestRunner {
    
-}                                           
+}                                                 
