@@ -67,21 +67,31 @@ Scenario Outline: Verify the Orders lisen page of Buyer panel
          Then User click on download orders in detailed in order page
          And User click on Mark as recevied button in order page
          Then User click on clear button in order page 
-         And User click on sabari supplier order
+         And User click on supplier order "<Suppliername>"
          Then User click on Repeat order
          And User Clicks Orders in the side navigation menubar
-         And User click on sabari supplier order
+         And User click on supplier order "<Suppliername>"
          Then User click on Receive order
          Then User click on yes marked button
          And User click on Activity
          Then User click on Cancel and linked order
          Then User click on reason of change quantity
          Then User click on confirm cancel button
-         And User click on sabari supplier order in order page
+         And User click on supplier order in order page "<Suppliername>"
          Then User click on PDF download button
          
              
-         
-          Examples:
-             |username                     |  |password    ||orderid     |
-             |velumanieswaran2020@gmail.com|  |!123456Zm   ||202109090012|     
+                  
+        @dev  
+        Examples:
+             |username                     |  |password    ||orderid     | |suppliername   |
+             |buyerautomated3@gmail.com    |  |!123456Zm   ||202109090012| |sabari         |
+             
+         @naren
+         @dev  
+        Examples:
+             |username                     |  |password    ||orderid     | |suppliername   |
+             |buyerautomated1@gmail.com    |  |!123456Zm   ||202109090012| |sabari         |   
+               
+             
+              
