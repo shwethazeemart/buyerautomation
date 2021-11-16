@@ -12,6 +12,8 @@ import managers.FileReaderManager;
  
 public class Buyerreportinvoicevariancepage {
 
+	private static final WebElement Buyerreportinvoicevariancepage_selectoutlet = null;
+
 	private static WebDriver driver;
 
 	public Buyerreportinvoicevariancepage(WebDriver driver) {
@@ -126,22 +128,7 @@ public class Buyerreportinvoicevariancepage {
 				.executeScript("return document.readyState").equals("complete"));
 
 	}
-	public static WebElement getDropDownElementvelumasala() {
-		return Buyerreportinvoicevariancepage_selectvelumasala;
-
-	}
-	public static void Clickfilter() throws InterruptedException {
-		Thread.sleep(5000);
-		Buyerreportinvoicevariancepage_Filter.click();
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-		} 
-		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
-				.executeScript("return document.readyState").equals("complete"));
-		
-		
-	}
+	
 	
 	
 	public static void Selectsupplier() throws InterruptedException {
@@ -232,6 +219,23 @@ public class Buyerreportinvoicevariancepage {
 			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 					.executeScript("return document.readyState").equals("complete"));
 			
+		}
+		
+		public static WebElement getDropDownElementoutletname() {
+			return Buyerreportinvoicevariancepage_selectoutlet;
+
+		}
+		
+		public static void Clickfilter() throws InterruptedException {
+			Thread.sleep(5000);
+			Buyerreportinvoicevariancepage_Filter.click();
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+			} 
+			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+					.executeScript("return document.readyState").equals("complete"));
+		
 		}
 		
 	

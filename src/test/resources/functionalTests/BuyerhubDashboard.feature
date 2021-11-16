@@ -29,16 +29,16 @@ Scenario Outline: Verify the Dashboard lisen page of Buyer panel
           Then User enter sku in search box"<name>"
           Then User click on close icon in order page
           And User click on upload invoice icon
-          Then User click on velumasala
+          Then User click on "<outletname>"
           And User click on upload image in drag and dorp filed
           Then User click on Done button in drag and drop filed
-          And User select dropdown spending overview list of velu masala
+          And User select dropdown spending overview list of "<outletname>"
           Then User click on YTD icon
           And User click on Last year icon
           Then User click on Past twelve week icon
           Then User click on view spending report icon
           Then User click on Dashboard side navigation menubar
-          And User select dropdown top expenditures list of velu masala
+          And User select dropdown top expenditures list of "<outletname>"
           Then User click on SKU icon
           Then User click on category icon 
           And User click on supplier icon
@@ -48,7 +48,22 @@ Scenario Outline: Verify the Dashboard lisen page of Buyer panel
           And User click on Last month icon
           Then User click on view all spending by supplier
           
+
            Examples:
          |username                            |  |password    ||name     |
          |velumanieswaran2020@gmail.com       |  |!123456Zm   ||100pipers|
          
+          @dev
+          Examples:
+         |username                            |  |password    ||name     |  |outletname  |
+         |buyerautomated3@gmail.com           |  |!123456Zm   ||100pipers|  |velu masala |
+         
+          
+          @naren
+          Examples:
+         |username                            |  |password    ||name     |  |outletname  |
+         |buyerautomated1@gmail.com           |  |!123456Zm   ||100pipers|  |velu masala |
+         
+         
+          
+

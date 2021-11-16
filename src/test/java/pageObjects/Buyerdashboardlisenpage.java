@@ -137,7 +137,10 @@ public class Buyerdashboardlisenpage {
 	@FindBy(xpath = "//input[@placeholder='SKU name']")
 	private static WebElement Buyerdashboardlisenpage_Enternamesearchbox;
 	
+
 	@FindBy(xpath = "/html/body/ngb-modal-window/div/div/addordermodal/div[1]/span/img")
+
+	
 	private static WebElement Buyerdashboardlisenpage_Closeiconinorderpage;
 	
 	@FindBy(xpath = "//b[text()='velu masala2020']")
@@ -208,7 +211,7 @@ public class Buyerdashboardlisenpage {
 	}
 
 	public static void click_velumasala()  {
-		Buyerdashboardlisenpage_velumasala.click();
+		//Buyerdashboardlisenpage_velumasala.click();
 		try { 
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -533,7 +536,7 @@ public class Buyerdashboardlisenpage {
 
 	public static void Clickonuploadimage() throws InterruptedException {
 		WebElement uploadBox=driver.findElement(By.xpath("//input[@id='file']"));
-		uploadBox.sendKeys("E:\\Zeemart All\\download.jpg");
+		uploadBox.sendKeys("E:\\Download");
 		Thread.sleep(5000);
 		try {
 			Thread.sleep(5000);
@@ -583,6 +586,17 @@ public class Buyerdashboardlisenpage {
 		
 	}
 
+	public static void Click_velumasala(String outletname) {
+		Buyerdashboardlisenpage_velumasala.click();
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+
+	}
+	}
 
 
 
@@ -620,4 +634,5 @@ public class Buyerdashboardlisenpage {
 
 
 
-}
+
+

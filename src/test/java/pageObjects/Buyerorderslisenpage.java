@@ -147,7 +147,9 @@ public class Buyerorderslisenpage {
 	
 	
 	
+
 	@FindBy(xpath = "//h4[text()='Download receiving list']/following-sibling::button")
+
 	private static WebElement Buyerorderslisenpage_Closeicon;
 	
 	@FindBy(xpath = "(//div[@class='btn-group ml-auto']//a)[1]")

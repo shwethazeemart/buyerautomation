@@ -73,6 +73,7 @@ public class Buyerinventoryoutletslisenpage {
 	@FindBy(xpath = "//button[@class='close pull-right']")
 	private static WebElement Buyerinventoryoutletslisenpage_newlistcloseicon;
 	
+
 	@FindBy(xpath = "//h4[text()='Upgrade to use this feature']/following-sibling::button")
 	private static WebElement Buyerinventoryoutletslisenpage_starterplancloseicon;
 	
