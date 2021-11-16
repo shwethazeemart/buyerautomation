@@ -69,8 +69,8 @@ public class Buyerdashboardlisen {
 	    Buyerdashboardlisenpage.Clickonuploadinvoicecloseicon();
 	}
 
-	@Then("User select dropdown spending overview list of velu masala")
-	public void user_select_dropdown_spending_overview_list_of_velu_masala() {
+	@Then("User select dropdown spending overview list of {string}")
+	public void user_select_dropdown_spending_overview_list_of(String outletname) {
 		WebElement velumasala2020 = Buyerdashboardlisenpage.getDropDownElementvelumasala();
 		Select select=new Select(velumasala2020);
 		select.selectByIndex(3);
@@ -101,8 +101,8 @@ public class Buyerdashboardlisen {
 	    Buyerdashboardlisenpage.Clickondashboardsidenavigationmenubar();
 	}
 
-	@Then("User select dropdown top expenditures list of velu masala")
-	public void user_select_dropdown_top_expenditures_list_of_velu_masala() {
+	@Then("User select dropdown top expenditures list of {string}")
+	public void user_select_dropdown_top_expenditures_list_of(String outletname) {
 		WebElement velumasala2020 = Buyerdashboardlisenpage.getDropDownElementvelumasalatwentytwenty();
 		Select select=new Select(velumasala2020);
 		select.selectByIndex(3);
@@ -147,11 +147,6 @@ public class Buyerdashboardlisen {
 	public void user_click_on_view_all_spending_by_supplier() {
 	    Buyerdashboardlisenpage.Clickonviewspendingbusupplier();
 	}
-
-
-	
-	
-	
 	
 	@Then("User click on sabari supplier")
 	public void user_click_on_sabari_supplier() {
@@ -215,9 +210,9 @@ public class Buyerdashboardlisen {
 	    Buyerdashboardlisenpage.Clickoncloseiconinorderpage();
 	}
 
-	@Then("User click on velumasala")
-	public void user_click_on_velumasala() {
-	    Buyerdashboardlisenpage.Clickonvelumasala();
+	@Then("User click on {string}")
+	public void user_click_on(String outletname) {
+		 Buyerdashboardlisenpage.clickonOutletOne();
 	}
 
 	@Then("User click on upload image in drag and dorp filed")
@@ -237,10 +232,10 @@ public class Buyerdashboardlisen {
          Buyerdashboardlisenpage.Clickonapplybutton();
 	}
 
-	@Then("User click on Reset button in order page")
+	/*@Then("User click on Reset button in order page")
 	public void user_click_on_Reset_button_in_order_page() throws InterruptedException {
 	  //Buyerdashboardlisenpage.Clickonresetbutton();
-	}
+	}*/
 
 
 

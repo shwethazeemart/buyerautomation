@@ -49,13 +49,13 @@ public class Buyerreportpriceupdatespage {
 	private static WebElement Buyerreportpriceupdatespage_YTDfromcalendar;
 	
 	@FindBy(xpath = "//select[contains(@id,'country')]")
-	private static WebElement Buyerreportpriceupdatespage_selectvelumasala;
+	private static WebElement Buyerreportpriceupdatespage_selectoutlet;
 	
 	@FindBy(xpath = "(//a[@class='export-mclr'])[1]")
 	private static WebElement Buyerreportpriceupdatespage_Filtericon;
 	
 	@FindBy(xpath = "//select[contains(@class,'custom-select filter-dropdown')]")
-	private static WebElement Buyerreportpriceupdatespage_Selectsuppliersabari;
+	private static WebElement Buyerreportpriceupdatespage_Selectsuppliername;
 	
 	@FindBy(xpath = "(//button[@type='button'])[3]")
 	private static WebElement Buyerreportpriceupdatespage_Applybutton;
@@ -134,7 +134,7 @@ public class Buyerreportpriceupdatespage {
 	
 	
 	public static void Selectvelumasala() throws InterruptedException {
-		Buyerreportpriceupdatespage_selectvelumasala.click();
+		Buyerreportpriceupdatespage_selectoutlet.click();
 		Thread.sleep(5000);
 		try { 
 			Thread.sleep(5000);
@@ -144,9 +144,8 @@ public class Buyerreportpriceupdatespage {
 				.executeScript("return document.readyState").equals("complete"));
 
 	}
-	public static WebElement getDropDownElementvelumasala() {
-		return Buyerreportpriceupdatespage_selectvelumasala;
-	
+	public static WebElement getDropDownElementoutletname() {
+		return Buyerreportpriceupdatespage_selectoutlet;
 	
 	}
 	public static void Clickonfilter() {
@@ -162,7 +161,7 @@ public class Buyerreportpriceupdatespage {
 	
 
 	public static void Selectsuppliersabari() throws InterruptedException {
-		Buyerreportpriceupdatespage_Selectsuppliersabari.click();
+		Buyerreportpriceupdatespage_Selectsuppliername.click();
 		Thread.sleep(5000);
 		try { 
 			Thread.sleep(5000);
@@ -172,10 +171,11 @@ public class Buyerreportpriceupdatespage {
 				.executeScript("return document.readyState").equals("complete"));
 
 	}
-	public static WebElement getDropDownElementsabari() {
-		return Buyerreportpriceupdatespage_Selectsuppliersabari;
 	
+	public static WebElement getDropDownElementsuppliername() {
+		return Buyerreportpriceupdatespage_Selectsuppliername;
 	}
+	
 	public static void Clickapplybutton() throws InterruptedException {
 		Thread.sleep(5000);
 		Buyerreportpriceupdatespage_Applybutton.click();
@@ -251,12 +251,6 @@ public class Buyerreportpriceupdatespage {
 				.executeScript("return document.readyState").equals("complete"));
 		
 	}
-
 	
-	
-	
-	
-	
-		
 	
 }

@@ -1,6 +1,6 @@
 Feature: Verify Buyer New Order page and test all the page
 
-Scenario Outline: Verify the News Order page of Buyer panel
+Scenario Outline: Verify the New Order page of Buyer panel
          Given User is on Login Page
          When User enter exact username"<username>"
          And User enter exact password"<password>"
@@ -8,7 +8,7 @@ Scenario Outline: Verify the News Order page of Buyer panel
          And User Clicks Orders in the side navigation menubar
          And User Clicks New order dropdown value
          And User Clicks New order in the dropdown value
-         And User Clicks velu masala2020 in the Suppliers page 
+         Then User click on in the supplier page "<outletname>"
          And User Clicks in Add to order of SKU
          Then User Clicks increase the order button
          And User Clicks in Add to order of SKU
@@ -30,12 +30,18 @@ Scenario Outline: Verify the News Order page of Buyer panel
          Then It should display the particular order ID "<order ID>"
          
           
-         Examples:
-             |Order ID        ||username                     |  |password    |
-             |202011130001    ||velumanieswaran2020@gmail.com|  |!123456Zm   |
+        @dev 
+        Examples:
+             |Order ID       ||username                   | |password    | |outletname      |
+             |202110270051   ||buyerautomated3@gmail.com  | |!123456Zm   | |velumasala2020  |
+          
+          
+        @naren  
+        Examples:
+             |Order ID       ||username                   | |password    | |outletname      |
+             |202110270051   ||buyerautomated1@gmail.com  | |!123456Zm   | |velumasala2020  |
              
-
- Scenario Outline: Verify the New Order outstanding options page of Buyer panel   
+Scenario Outline: Verify the New Order outstanding options page of Buyer panel   
  
          Given User is on Login Page
          When User enter exact username"<username>"
@@ -44,24 +50,30 @@ Scenario Outline: Verify the News Order page of Buyer panel
          And User Clicks Orders in the side navigation menubar
          And User Clicks New order dropdown value
          And User Clicks New order in the dropdown value
-         Then User click on velu masalathree in the supplier page
+         Then User click on  in the supplier page "<outletname>"
+         Then User click on ok button of pop message
+         And User Clicks Orders in the side navigation menubar
+         And User Clicks New order dropdown value
+         And User Clicks New order in the dropdown value
+         Then User click on in the supplier page "<outletnameone>"
          Then User click on ok button of pop message
          Then User click on close icon first pop message
          And User Clicks Orders in the side navigation menubar
          And User Clicks New order dropdown value
          And User Clicks New order in the dropdown value
-         Then User click on velu masalasix in the supplier page
-         Then User click on ok button of pop message
-         Then User click on close icon first pop message
-         And User Clicks Orders in the side navigation menubar
-         And User Clicks New order dropdown value
-         And User Clicks New order in the dropdown value
-         Then User click on velu masalatwofifty in the supplier page
+         Then User click on in the supplier page "<outletnametwo>"
          Then User click on ok button of pop message
          Then User click on close icon first pop message
            
          
-         
+           @dev
            Examples:
-             |username                     |  |password    |
-             |velumanieswaran2020@gmail.com|  |!123456Zm   |       
+             |username                     |  |password    |  |outletname      | |outletnameone   |   |outletnametwo      |
+             |buyerautomated3@gmail.com    |  |!123456Zm   |  |velumasalathree | |velumasalasix   |   |velumasalatwofifty |
+    
+    
+           @naren
+           Examples:
+             |username                     |  |password    |  |outletname      | |outletnameone   |   |outletnametwo      |
+             |buyerautomated1@gmail.com    |  |!123456Zm   |  |velumasalathree | |velumasalasix   |   |velumasalatwofifty |
+    

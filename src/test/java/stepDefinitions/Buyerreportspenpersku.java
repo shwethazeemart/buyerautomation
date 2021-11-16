@@ -78,9 +78,9 @@ public class Buyerreportspenpersku {
 	    Buyerreportspenperskupage.Clickonoutlets();
 	}
 
-	@Then("User click on Check box of velumasala in sku")
-	public void user_click_on_Check_box_of_velumasala_in_sku() {
-	    Buyerreportspenperskupage.Clickcheckboxofvelumasala();
+	@Then("User click on Check box of in sku {string}")
+	public void user_click_on_Check_box_of_in_sku(String outlet) {
+		Buyerreportspenperskupage.Clickonoutlet();
 	}
 
 	@Then("User click on apply button in sku")

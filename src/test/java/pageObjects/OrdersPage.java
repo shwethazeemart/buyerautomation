@@ -60,7 +60,7 @@ public class OrdersPage {
 	private  WebElement btn_Orders;
 
 	@FindBy(xpath = "//div[text()='sabari250']")
-	private static WebElement orderspage_velumasala2020;
+	private static WebElement orderspage_Supplieroutlet;
 
 	@FindBy(xpath = "(//div[contains(@class,'addto cursor')])[1]")
 	private static WebElement orderspage_Addtoorder;
@@ -268,8 +268,8 @@ public class OrdersPage {
 
 	}
 
-	public static void click_velumasala2020() {
-		orderspage_velumasala2020.click();
+	public static void clickonoutlet() {
+		orderspage_Supplieroutlet.click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -893,7 +893,17 @@ public class OrdersPage {
 				.executeScript("return document.readyState").equals("complete"));
 		
 	}
-	 
+	public static void clickonoutletOne() {
+		//orderspage_SupplierpageOutletOne.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+
+	}
+	
 	
 }
 

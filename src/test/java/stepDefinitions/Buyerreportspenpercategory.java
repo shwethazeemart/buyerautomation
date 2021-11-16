@@ -74,11 +74,11 @@ public class Buyerreportspenpercategory {
 	    Buyerreportspenpercategorypage.Clickoutlets();
 	}
 
-	@Then("User click on Check box of velumasala in category")
-	public void user_click_on_Check_box_of_velumasala_in_category() {
-	   Buyerreportspenpercategorypage.Clickcheckboxofvelumasala();
-	}
-
+	 @Then("User click on Check box of in category {string}")
+	   public void user_click_on_Check_box_of_in_category(String outlet) {
+		   Buyerreportspenpercategorypage.Clickonoutlet();
+		 }
+	 
 	@Then("User click on apply button in category")
 	public void user_click_on_apply_button_in_category() {
 	    Buyerreportspenpercategorypage.Clickapplybutton();

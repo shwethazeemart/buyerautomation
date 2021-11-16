@@ -191,7 +191,7 @@ public class Buyerreportspenperskupage {
 		
 	}
 	public static void Clickcheckboxofvelumasala() {
-		Buyerreportspenperskupage_Checkboxvelumasala.click();
+		//Buyerreportspenperskupage_Checkboxvelumasala.click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -470,7 +470,17 @@ public class Buyerreportspenperskupage {
 	
 	}
 	
-	
+	public static void Clickonoutlet() {
+		Buyerreportspenperskupage_Checkboxvelumasala.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+
+
+	}
 	
 	
 	

@@ -75,9 +75,9 @@ public class Buyerreportpriceupdates {
 	    //Buyerreportpriceupdatespage.ClickonYTDfromcalendar();
 	}
 
-	@Then("User select from dropdown value of outlet velumasala in price updates")
-	public void user_select_from_dropdown_value_of_outlet_velumasala_in_price_updates() {
-		WebElement velumasala2020 = Buyerreportpriceupdatespage.getDropDownElementvelumasala();
+	@Then("User select from dropdown value of outlet in price updates {string}")
+	public void user_select_from_dropdown_value_of_outlet_in_price_updates(String outletname) {
+		WebElement velumasala2020 = Buyerreportpriceupdatespage.getDropDownElementoutletname();
 		Select select=new Select(velumasala2020);
 		select.selectByIndex(3);
 	}
@@ -87,9 +87,9 @@ public class Buyerreportpriceupdates {
 	    Buyerreportpriceupdatespage.Clickonfilter();
 	}
 
-	@Then("User select supplier in dropdown list of sabari")
-	public void user_select_supplier_in_dropdown_list_of_sabari() {
-		WebElement sabari250 = Buyerreportpriceupdatespage.getDropDownElementsabari();
+	@Then("User select supplier in dropdown list of {string}")
+	public void user_select_supplier_in_dropdown_list_of(String suppiername) {
+		WebElement sabari250 = Buyerreportpriceupdatespage.getDropDownElementsuppliername();
 		Select select=new Select(sabari250);
 		select.selectByIndex(1);
 	}

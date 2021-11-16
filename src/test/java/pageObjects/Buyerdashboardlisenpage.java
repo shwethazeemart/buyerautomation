@@ -52,7 +52,7 @@ public class Buyerdashboardlisenpage {
 	private static WebElement Buyerdashboardlisenpage_Uploadinvoicecloseicon;
 
 	@FindBy(xpath = "//div[text()='Spending overview']/following-sibling::select")
-	private static WebElement Buyerdashboardlisenpage_velumasala;
+	private static WebElement Buyerdashboardlisenpage_OutletOne;
 
 	@FindBy(xpath = "//label[text()=' YTD ']")
 	private static WebElement Buyerdashboardlisenpage_YTDicon;
@@ -205,8 +205,8 @@ public class Buyerdashboardlisenpage {
 
 	}
 
-	public static void click_velumasala()  {
-		Buyerdashboardlisenpage_velumasala.click();
+	public static void clickonOutletOne()  {
+		Buyerdashboardlisenpage_OutletOne.click();
 		try { 
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -216,7 +216,7 @@ public class Buyerdashboardlisenpage {
 
 	}
 	public static WebElement getDropDownElementvelumasala() {
-		return Buyerdashboardlisenpage_velumasala;
+		return Buyerdashboardlisenpage_OutletOne;
 	}
 
 	public static void ClickonYTDicon() throws InterruptedException {

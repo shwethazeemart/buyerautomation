@@ -43,11 +43,17 @@ Scenario Outline: Verify the Reports spending per outlet page of Buyer panel
           
           
           
+       @dev    
       Examples: 
       | username                      | | password   |
-      | velumanieswaran2020@gmail.com | |!123456Zm   |
-      
-      
+      | buyerautomated3@gmail.com     | |!123456Zm   |
+
+
+      @naren    
+      Examples: 
+      | username                      | | password   |
+      | buyerautomated1@gmail.com     | |!123456Zm   |
+
 Scenario Outline: Verify the Reports spending per supplier page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -60,7 +66,7 @@ Scenario Outline: Verify the Reports spending per supplier page of Buyer panel
           Then User select date from calendar in supplier
           And User click on filter in supplier
           Then User click on outlets
-          Then User click on check box velumasala
+         Then User click on check box "<outletname>"
           Then User click on Apply button in supplier
           Then User click on Reset button in supplier
           Then User click on outside in supplier
@@ -68,11 +74,17 @@ Scenario Outline: Verify the Reports spending per supplier page of Buyer panel
           
              
           
+      @dev     
      Examples: 
-      | username                      | | password   ||name     |
-      | velumanieswaran2020@gmail.com | |!123456Zm   ||sabari250|
-      
-      
+      | username                      | | password   ||name     | |outletname  |
+      |buyerautomated3@gmail.com      | |!123456Zm   ||sabari250| |velumasala  |
+
+
+     @naren    
+     Examples: 
+      | username                      | | password   ||name     | |outletname  |
+      |buyerautomated1@gmail.com      | |!123456Zm   ||sabari250| |velumasala  |
+
  Scenario Outline: Verify the Reports spending per SKU page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -85,7 +97,7 @@ Scenario Outline: Verify the Reports spending per supplier page of Buyer panel
           And User select date from calendar in sku
           Then User click on filter in sku
           And User click on outlets in sku
-          Then User click on Check box of velumasala in sku
+         Then User click on Check box of in sku "<outletname>"
           Then User click on apply button in sku
           And User click on reset button in sku
           Then User click on outside in sku
@@ -98,10 +110,15 @@ Scenario Outline: Verify the Reports spending per supplier page of Buyer panel
           Then User click on export download button in sku
           
           
+      @dev     
      Examples: 
-      | username                      | | password   ||name     |
-      | velumanieswaran2020@gmail.com | |!123456Zm   ||100pipers|     
-      
+      | username                      | | password   ||name     |  |outletname  | 
+      | buyerautomated3@gmail.com     | |!123456Zm   ||100pipers|  |velumasala  | 
+
+     @naren  
+     Examples: 
+      | username                      | | password   ||name     |  |outletname  | 
+      | buyerautomated1@gmail.com     | |!123456Zm   ||100pipers|  |velumasala  | 
       
 Scenario Outline: Verify the Reports spending per Category page of Buyer panel 
           Given User is on Login Page
@@ -116,7 +133,7 @@ Scenario Outline: Verify the Reports spending per Category page of Buyer panel
           Then User click on search icon in category
           Then User click on filter in category
           And User click on outlets in category
-          Then User click on Check box of velumasala in category
+          Then User click on Check box of in category "<outletname>" 	
           Then User click on apply button in category
           And User click on reset button in category
           Then User click on outside in category
@@ -127,10 +144,15 @@ Scenario Outline: Verify the Reports spending per Category page of Buyer panel
           And User click on reset button in category
           Then User click on outside in category
           
-          Examples: 
-      | username                      | | password   ||name     |
-      | velumanieswaran2020@gmail.com | |!123456Zm   ||Beer     | 
-      
+         @dev     
+      Examples: 
+      | username                      | | password   ||name     |   |outletname  | 
+      | buyerautomated3@gmail.com     | |!123456Zm   ||Beer     |   |velumasala  | 
+
+      @naren    
+      Examples: 
+      | username                      | | password   ||name     |   |outletname  | 
+      | buyerautomated1@gmail.com     | |!123456Zm   ||Beer     |   |velumasala  | 
       
 Scenario Outline: Verify the Reports spending per tag page of Buyer panel 
           Given User is on Login Page
@@ -144,7 +166,7 @@ Scenario Outline: Verify the Reports spending per tag page of Buyer panel
           And User select date from calendar in tag
           Then User click on filter in tag
           And User click on outlets in tag
-          Then User click on Check box of velumasala in tag
+          Then User click on Check box of in tag "<outletname>"
           Then User click on apply button in tag
           And User click on reset button in tag
           Then User click on outside in tag
@@ -156,11 +178,16 @@ Scenario Outline: Verify the Reports spending per tag page of Buyer panel
           Then User click on outside in tag
           Then User click on Export download button in tag 
           
-          Examples: 
-      | username                      | | password   ||name       |
-      | velumanieswaran2020@gmail.com | |!123456Zm   ||masala     |                        
-      
-      
+         @dev    
+      Examples: 
+      | username                      | | password   ||name       |  |outletname  |
+      |  buyerautomated3@gmail.com    | |!123456Zm   ||masala     |  |velumasala  |                     
+
+      @naren    
+      Examples: 
+      | username                      | | password   ||name       |  |outletname  |
+      |  buyerautomated1@gmail.com    | |!123456Zm   ||masala     |  |velumasala  |                     
+ 
 Scenario Outline: Verify the Reports invoice variance page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -171,7 +198,7 @@ Scenario Outline: Verify the Reports invoice variance page of Buyer panel
           And User click on search box in invoice variance
           Then User Enter the  invoice number in search box"<invoice>"
           And User select date from calendar in invoice variance
-          Then User select from dropdown value of velumasala
+          Then User select from dropdown value of "<outletname>"
           Then User click on filter in invoice variance
           And User select supplier in dropdown list
           Then User select match status in dropdown list
@@ -182,10 +209,15 @@ Scenario Outline: Verify the Reports invoice variance page of Buyer panel
           Then User click on Reports back button in invoice variance
           
           
+     @dev      
      Examples: 
-      | username                      | | password   ||invoice     |
-      | velumanieswaran2020@gmail.com | |!123456Zm   ||vel-1234567 |
-      
+      | username                      | | password   ||invoice     |  |outletname  |
+      | buyerautomated3@gmail.com     | |!123456Zm   ||vel-1234567 |  |velumasala  | 
+
+      @naren
+      Examples: 
+      | username                      | | password   ||invoice     |  |outletname  |
+      | buyerautomated1@gmail.com     | |!123456Zm   ||vel-1234567 |  |velumasala  | 
       
  Scenario Outline: Verify the Reports price updates page of Buyer panel 
           Given User is on Login Page
@@ -198,9 +230,9 @@ Scenario Outline: Verify the Reports invoice variance page of Buyer panel
           Then User Enter the  sku name in search box"<sku>"
           And User click on calendar in price updates
           Then User click on YTD from calendar in price updates
-          Then User select from dropdown value of outlet velumasala in price updates
+          Then User select from dropdown value of outlet in price updates "<outletname>"
           Then User click on filter in price updates
-          And User select supplier in dropdown list of sabari
+          And User select supplier in dropdown list of "<suppliername>"
           Then User click on Apply button in price updates
           Then User click on reset button in price updates
           And User click on outside in price updates
@@ -208,7 +240,13 @@ Scenario Outline: Verify the Reports invoice variance page of Buyer panel
           Then User click on Reports back button in price updates
           Then User click on Reports back button in sku page
           
-          
+      @dev     
      Examples: 
-      | username                      | | password   ||sku       |
-      | velumanieswaran2020@gmail.com | |!123456Zm   ||100pipers |             
+      | username                      | | password   ||sku       |  |outletname  | |suppliername  |
+      | buyerautomated3@gmail.com     | |!123456Zm   ||100pipers |  |velumasala  | |sabari        |
+
+
+     @naren    
+     Examples: 
+      | username                      | | password   ||sku       |  |outletname  | |suppliername  |
+      | buyerautomated3@gmail.com     | |!123456Zm   ||100pipers |  |velumasala  | |sabari        |

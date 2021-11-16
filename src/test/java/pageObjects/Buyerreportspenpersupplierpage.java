@@ -111,7 +111,7 @@ public class Buyerreportspenpersupplierpage {
 		
 	}
 	public static void Clickoncheckboxvelumasala() {
-		Buyerreportspenpersupplierpage_Checkboxvelumasala.click();
+		//Buyerreportspenpersupplierpage_Checkboxvelumasala.click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -189,7 +189,18 @@ public class Buyerreportspenpersupplierpage {
 				.executeScript("return document.readyState").equals("complete"));
 		
 	}
-	
+	public static void Clickonoutlet() {
+		Buyerreportspenpersupplierpage_Checkboxvelumasala.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+
+
+
+	}
 	
 	
 	

@@ -74,9 +74,9 @@ public class Buyerreportspenpertag {
 	    Buyerreportspenpertagpage.Clickonoutlets();
 	}
 
-	@Then("User click on Check box of velumasala in tag")
-	public void user_click_on_Check_box_of_velumasala_in_tag() {
-	    Buyerreportspenpertagpage.ClickonCheckboxofvelumasala();
+	@Then("User click on Check box of in tag {string}")
+	public void user_click_on_Check_box_of_in_tag(String outlet) {
+		  Buyerreportspenpertagpage.Clickonoutlet();
 	}
 
 	@Then("User click on apply button in tag")
@@ -99,8 +99,8 @@ public class Buyerreportspenpertag {
 	   Buyerreportspenpertagpage.Clickonsuppliers();
 	}
 
-	@Then("User click on check box of sabari in tag")
-	public void user_click_on_check_box_of_sabari_in_tag() {
+	@Then("User click on Check box in tag")
+	public void user_click_on_Check_box_in_tag() {
 	   Buyerreportspenpertagpage.Clickoncheckboxofsabari();
 	}
 
@@ -112,30 +112,53 @@ public class Buyerreportspenpertag {
 	
 
 
-	@Then("User click on masala Tag")
-	public void user_click_on_masala_Tag() {
+	@Then("User click on food Tag")
+	public void user_click_on_food_Tag() {
 		Buyerreportspenpertagpage.Clickonmasalatag();
 	}
 
-	@Then("User click on Export download button in masala")
-	public void user_click_on_Export_download_button_in_masala() {
+	@Then("User click on Export download button in food")
+	public void user_click_on_Export_download_button_in_food() {
 		Buyerreportspenpertagpage.Clickonexportbuttoninmasala();   
 	}
 
-	@Then("User click on filter tag in masala")
-	public void user_click_on_filter_tag_in_masala() {
+	@Then("User click on filter tag in food")
+	public void user_click_on_filter_tag_in_food() {
 		Buyerreportspenpertagpage.Clickonfiltertaginmasala();
 		
 	}
 
 	
-	@Then("User click on outside tag in masala")
-	public void user_click_on_outside_tag_in_masala() {
+	@Then("User click on outside tag")
+	public void user_click_on_outside_tag() {
 		Buyerreportspenpertagpage.Clickonoutsidetaginmasala();
 	
 	}
 	
-	
+	@Then("User click on check box of sabari in tag")
+	public void user_click_on_check_box_of_sabari_in_tag() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("User click on filter tag")
+	public void user_click_on_filter_tag() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("User click on check box  in tag")
+	public void user_click_on_check_box_in_tag() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("User click on check box of tag")
+	public void user_click_on_check_box_of_tag() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
 	
 	
 	
