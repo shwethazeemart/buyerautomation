@@ -21,4 +21,5 @@ Scenario Outline: Verify the Payment plans page of Buyer panel
           
      Examples: 
       | username                      | | password   |
-      | kovalan@zeemart.asia          | |!123456Zm   |
+      | kovalan@zeemart.asia          | |!1234567Zm   |
+      

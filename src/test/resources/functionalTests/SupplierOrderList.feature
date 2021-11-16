@@ -1,7 +1,7 @@
 Feature: Verify Supplier Orders listing page  
 
 Scenario Outline: Verify the Supplier Orders listing page
-         Given User is on available Login Page
+          Given User is on available Login Page
           When User enter exact username"<username>"
           And User enter exact password"<password>"
           And User is click login button 

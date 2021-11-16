@@ -360,7 +360,7 @@ Scenario Outline: Verify the Reports spending per SKU page of Buyer panel
       | username                      | | password   ||name     |
       | velumanieswaran2020@gmail.com | |!123456Zm   ||100pipers|     
       
-      
+     
 Scenario Outline: Verify the Reports spending per supplier page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -414,10 +414,10 @@ Scenario Outline: Verify the Reports spending per supplier page of Buyer panel
           Then User click on back button of reports 
           
              
-          
-     Examples: 
+        Examples: 
       | username                      | | password   ||name     |
-      | velumanieswaran2020@gmail.com | |!123456Zm   ||sabari250|
+      | velumanieswaran2020@gmail.com | |!123456Zm   ||sabari250|         
+    
       
                                
 Scenario Outline: Verify the Reports spending per tag page of Buyer panel 
@@ -622,7 +622,7 @@ Scenario Outline: Verify the Orders lisen page of Buyer panel
  
              
 
- Scenario Outline: Verify the New Order outstanding options page of Buyer panel   
+Scenario Outline: Verify the New Order outstanding options page of Buyer panel   
  
          Given User is on Login Page
          When User enter exact username"<username>"
@@ -797,11 +797,10 @@ Scenario Outline: Buyer Invoice lisen page verify the all field
  
 
 Scenario Outline: Verify the Payment plans page of Buyer panel 
-          Given User is on Login Page
+         Given User is on Login Page
           When User enter exact username"<username>"
           And User enter exact password"<password>"
-          And User is click login button
-          And User name  should be displayed 
+          And User is click login button 
           Then User Enter dashboard menu highlighted with the yellow colour 
           Then User Clicks on Payments in the side navigation menubar
           Then User click on Payment plans icon
@@ -823,9 +822,9 @@ Scenario Outline: Verify the Payment plans page of Buyer panel
       
 Scenario Outline: Verify the Payment transactions page of Buyer panel 
           Given User is on Login Page
-          When User enter exact username"<username>"
-          And User enter exact password"<password>"
-          And User is click login button 
+         When User enter exact username"<username>"
+         And User enter exact password"<password>"
+         And User is click login button  
           Then User Clicks on Payments in the side navigation menubar 
           Then User click on Transactions icon
           And User select companies from dropdown list
@@ -929,7 +928,7 @@ Scenario Outline: Verify the Inventory SKU lisen page of Buyer panel
          |username                            |  |password    |
          |velumanieswaran2020@gmail.com       |  |!123456Zm   |
          
-        
+       
 Scenario Outline: Verify the Inventory Record adjustment page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -1009,7 +1008,7 @@ Scenario Outline: Verify the Outlets listing page of Buyer panel
       | username                      | | password   ||confirm||outletname|
       | velumanieswaran2020@gmail.com | |!123456Zm   ||DISABLE||velu masala2020|
       
-    
+   
 Scenario Outline: Verify the Outlets page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>" 
@@ -1026,7 +1025,7 @@ Scenario Outline: Verify the Outlets page of Buyer panel
       | velumanieswaran2020@gmail.com | |!123456Zm   |
       
       
-    
+   
  Scenario Outline: Verify the Outlets manage details page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>" 
@@ -1077,7 +1076,7 @@ Scenario Outline: Verify the Outlets page of Buyer panel
       | velumanieswaran2020@gmail.com | |!123456Zm   ||velu mani2 | |velumani@zeemart.asia||lingeshsabari2009@gmail.com||velumanieswaran2020@gmail.com| 
       
       
-      
+     
  Scenario Outline: Verify the Outlets view suppliers page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>" 
@@ -1156,7 +1155,8 @@ Scenario Outline: Verify the user name page of Buyer panel
          Given User is on Login Page
          When User enter exact username"<username>"
          And User enter exact password"<password>"
-         And User is click login button 
+         And User is click login button
+         And User Clicks on Users in the side navigation menubar  
          Then User click on user name in settings
          And User click on settings in user page
          Then User click on Linked companies in settings page
@@ -1197,7 +1197,7 @@ Scenario Outline: Verify the user name page of Buyer panel
           
     Examples:
          |username                     |  |password    ||First name||Last name ||Job title    ||Email                              ||Mobile phone|
-         |velumanieswaran2020@gmail.com|  |!123456Zm   ||velu      ||ganesh    ||ATZ          ||ganeshvelutamil2008@gmail.com      ||+6512345677 |       
+         |velumanieswaran2020@gmail.com|  |!123456Zm   ||velumani      ||ganesh    ||ATZ      ||ganeshvelutamil2122008@gmail.com      ||+6512345677 |       
     
                                  
                                                   

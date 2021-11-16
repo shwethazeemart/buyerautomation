@@ -10,6 +10,7 @@ Scenario Outline: Verify the Users Listing page of Buyer panel
           Then User is click on check box of aruloli user
           And User click on clear icon in edit user page
           Then User is click on check box of aruloli user
+          And User click on clear icon in edit user page
           And User click on delete icon 
           Then User click on delete close icon
           Then User click on search box in edit user page
@@ -17,5 +18,5 @@ Scenario Outline: Verify the Users Listing page of Buyer panel
          
     Examples:
          |username                     |  |password    ||name      |  
-         |velumanieswaran2020@gmail.com|  |!123456Zm   ||velu mani2|         
+         |velumanieswaran2020@gmail.com|  |!123456Zm   ||velu mani2|       
     

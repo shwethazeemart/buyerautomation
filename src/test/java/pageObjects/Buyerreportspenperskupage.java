@@ -309,7 +309,8 @@ public class Buyerreportspenperskupage {
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
 	}
-	public static void Clickonfilterinhundredpipers() {
+	public static void Clickonfilterinhundredpipers() throws InterruptedException {
+		Thread.sleep(5000);
 		Buyerreportspenperskupage_Filterinhundredpipers.click();
 		try {
 			Thread.sleep(5000);

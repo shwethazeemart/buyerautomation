@@ -41,7 +41,8 @@ public class BuyerinventorySKUlisenpage {
 	@FindBy(xpath = "//button[text()=' New stock count ']")
 	private static WebElement BuyerinventorySKUlisenpage_stockcount;
 	
-	@FindBy(xpath = "//h4[text()='New stock count']/following-sibling::button ")
+
+	@FindBy(xpath = "//h4[text()='New stock count']/following-sibling::button")
 	private static WebElement BuyerinventorySKUlisenpage_stockcountcloseicon;
 	
 	@FindBy(xpath = "//button[text()=' Adjustment ']")
@@ -77,7 +78,8 @@ public class BuyerinventorySKUlisenpage {
 	@FindBy(xpath = "//button[text()=' Remove from inventory ']")
 	private static WebElement BuyerinventorySKUlisenpage_Removefrominventory;
 	
-	@FindBy(xpath = "//h4[text()='Are you sure?']/following-sibling::button") 
+
+	@FindBy(xpath = "//h4[text()='Are you sure?']/following-sibling::button")
 	private static WebElement BuyerinventorySKUlisenpage_Removefrominventorycloseicon;
 	
 	@FindBy(xpath = "//button[text()=' Clear ']")
