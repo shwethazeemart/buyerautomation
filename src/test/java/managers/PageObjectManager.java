@@ -13,6 +13,9 @@ import pageObjects.PasswordResetPage;
 import pageObjects.Reportspage;
 import pageObjects.SucessfullyLoginpage;
 
+import pageObjects.SupplierCatalogueListPage;
+
+
 import pageObjects.SupplierCustomerCompanyPage;
 
 import pageObjects.SupplierTeamListPage;
@@ -147,6 +150,7 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private SupplierTeamListPage SupplierTeamList;
 
     private SupplierCustomerCompanyPage SupplierCustomerCompany;
+    private SupplierCatalogueListPage SupplierCatalogueList;
 
 
 	public PageObjectManager(WebDriver driver) {
@@ -453,16 +457,19 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 
 	}
 	
-	 public SupplierTeamListPage getSupplierTeamListPage() {
-			return (SupplierTeamList == null) ? (SupplierTeamList = new SupplierTeamListPage(driver)) : SupplierTeamList;
-
-		}
+	
 	
 	
 	 public SupplierCustomerCompanyPage getSupplierCustomerCompanyPage() {
 			return (SupplierCustomerCompany == null) ? (SupplierCustomerCompany = new SupplierCustomerCompanyPage(driver)) : SupplierCustomerCompany;
 
 		}
+
+
+	public SupplierCatalogueListPage getSupplierCatalogueListPage() {
+		return (SupplierCatalogueList == null) ? (SupplierCatalogueList = new SupplierCatalogueListPage(driver)) : SupplierCatalogueList;
+
+	}
 	
 	} 
 
