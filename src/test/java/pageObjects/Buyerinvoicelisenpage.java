@@ -46,7 +46,9 @@ public class Buyerinvoicelisenpage {
 	@FindBy(xpath = "//button[text()=' Pay online ']")
 	private static WebElement Buyerinvoicelisenpage_Payonline;
 	
-	@FindBy(xpath = "/html/body/ngb-modal-window/div/div/app-pay-invoice-online/div[1]/span/img")
+
+	@FindBy(xpath = "(//img[@src='../assets/zmcore/img/close-blue@22.png'])[2]")
+
 	private static WebElement Buyerinvoicelisenpage_payonlinecloseicon;
 	///html/body/ngb-modal-window/div/div/app-pay-invoice-online/div[1]/span/img
 	

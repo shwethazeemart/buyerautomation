@@ -64,11 +64,12 @@ public class Buyerreportspenpersupplier {
 	    Buyerreportspenpersupplierpage.Clickonoutlets();
 	}
 
-	@Then("User click on check box velumasala")
-	public void user_click_on_check_box_velumasala() {
-	    Buyerreportspenpersupplierpage.Clickoncheckboxvelumasala();
+	
+	@Then("User click on check box {string}")
+	public void user_click_on_check_box(String outletname) {
+		 Buyerreportspenpersupplierpage.Clickonoutlet();
 	}
-
+	
 	@Then("User click Export download button")
 	public void user_click_Export_download_button() {
 	    Buyerreportspenpersupplierpage.ClickExportdownloadbutton();

@@ -76,7 +76,11 @@ public class BuyerinventorySKUlisen {
 
 	@Then("User click on Add SKU")
 	public void user_click_on_Add_SKU() {
+
 	   // BuyerinventorySKUlisenpage.clickAddSKU();
+
+	    //BuyerinventorySKUlisenpage.clickAddSKU();
+
 	}
 
 	@Then("User Select dropdown list name in velu")
@@ -93,7 +97,11 @@ public class BuyerinventorySKUlisen {
 
 	@Then("User click on done button")
 	public void user_click_on_done_button() {
+
 	    //BuyerinventorySKUlisenpage.clickdonebutton();
+
+	   // BuyerinventorySKUlisenpage.clickdonebutton();
+
 	}
 
 	@Then("User click on the first check box of SKU")

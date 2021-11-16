@@ -31,4 +31,6 @@ Scenario Outline: Verify the Supplier Teams List page
           
  Examples:
          |username                              ||password    ||TeamName        |
+
          |supplierautomated2@gmail.com          ||!123456Zm   ||Saisabaritesting|
+
