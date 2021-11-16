@@ -40,8 +40,9 @@ public class Buyeredituserlisenpage {
 	@FindBy(xpath="//button[text()='Delete']")
 	private static WebElement Buyeredituserlisenpage_Closedeleteicon;
 	
-	@FindBy(xpath="(//datatable-body-cell[contains(@class,'datatable-body-cell sort-active')])[2]")
+	@FindBy(xpath="(//div[contains(@class,'datatable-body-cell-label')])[20] ")
 	private static WebElement Buyeredituserlisenpage_Velumanitwouser;
+	
 	
 	@FindBy(xpath="//input[@formcontrolname='title']")
 	private static WebElement Buyeredituserlisenpage_Jobtitle; 
@@ -115,7 +116,7 @@ public class Buyeredituserlisenpage {
 
 	public static void Clickonvelumanitwouser() {
 		Buyeredituserlisenpage_Velumanitwouser.click();
-		try {
+		try { 
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 		} 

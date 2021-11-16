@@ -1,6 +1,6 @@
 Feature: Verify Buyer Outlets manage settings page and test all the page
 
-Scenario Outline: Verify the Outlets settings page of Buyer panel 
+ Scenario Outline: Verify the Outlets settings page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>" 
           And User enter exact password"<password>"
@@ -27,3 +27,5 @@ Scenario Outline: Verify the Outlets settings page of Buyer panel
     Examples: 
       | username                      | | password   ||Name       | |WeeklyEmail          ||Email                      ||outletemail                  |
       | velumanieswaran2020@gmail.com | |!123456Zm   ||velu mani2 | |velumani@zeemart.asia||lingeshsabari2009@gmail.com||velumanieswaran2020@gmail.com| 
+      
+      

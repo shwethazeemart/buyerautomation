@@ -88,7 +88,7 @@ public class DashboardPage {
 	@FindBy(xpath = "//html/body/div[2]/header/div[1]/div[2]/nav/ul/li[1]/a")
 	private static WebElement Orchidpage_Homelinkbutton;
 
-	@FindBy(xpath = "//span[text()='Reports ']")
+	@FindBy(xpath = "//span[contains(@id,'sideMenu_Reports')]")
 	private static WebElement button_Reports;
 
 	@FindBy(xpath = "//span[contains(@id,'sideMenu_Invoices')]")

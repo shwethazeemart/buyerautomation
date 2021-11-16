@@ -204,7 +204,7 @@ public class OrdersPage {
 	@FindBy(xpath = "//div[@class='swal2-content']/following-sibling::div[1]")
 	private static WebElement orderspage_Popmessage;
 	
-	@FindBy(xpath = "(//div[@class='row']//img)[1]")
+	@FindBy(xpath = "/html/body/ngb-modal-window/div/div/newordermodel/div[1]/div[1]/button/img")
 	private static WebElement orderspage_Closeiconfirstpop;
 	
 	@FindBy(xpath = "//div[text()='VELU MASALA6']")

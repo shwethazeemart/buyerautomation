@@ -91,3 +91,4 @@ Scenario Outline: Verify the Reports spending per SKU page of Buyer panel
      Examples: 
       | username                      | | password   ||name     |
       | velumanieswaran2020@gmail.com | |!123456Zm   ||100pipers|     
+           

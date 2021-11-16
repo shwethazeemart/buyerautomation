@@ -1,5 +1,6 @@
 Feature: Verify Buyer Inventory SKU lisen page and test all the page
 
+         
 Scenario Outline: Verify the Inventory SKU lisen page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -11,7 +12,7 @@ Scenario Outline: Verify the Inventory SKU lisen page of Buyer panel
           And User click on New stock count
           Then User click on New stock count close icon
           And User click on Record Adjustment
-          Then User click on Record Adjustment close icon
+          Then User click on Record Adjustment close icon 
           And User click on Export download button
           Then User click on Add SKU
           And User Select dropdown list name in velu
@@ -21,9 +22,16 @@ Scenario Outline: Verify the Inventory SKU lisen page of Buyer panel
           Then User click on Edit par level
           And User click on Edit par level close icon
           Then User click on Remove from inventory list icon
-          And User click on Remove from inventory list close icon
-          Then User click on clear icon
+          Then User close on Remove from inventory list Delete icon
+          Then User click on Add SKU
+          And User Select dropdown list name in velu 
+          Then User click on check box of SKU
+          And User click on done button
+          Then User click on consumption report
+          Then User click on backbutton of consumption report
+          
           
      Examples:
          |username                            |  |password    |
          |velumanieswaran2020@gmail.com       |  |!123456Zm   |
+         

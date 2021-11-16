@@ -1,6 +1,6 @@
 Feature: Verify Buyer New Order page and test all the page
 
-Scenario Outline: Verify the News Order page of Buyer panel
+Scenario Outline: Verify the New Order page of Buyer panel
          Given User is on Login Page
          When User enter exact username"<username>"
          And User enter exact password"<password>"
@@ -46,7 +46,6 @@ Scenario Outline: Verify the News Order page of Buyer panel
          And User Clicks New order in the dropdown value
          Then User click on velu masalathree in the supplier page
          Then User click on ok button of pop message
-         Then User click on close icon first pop message
          And User Clicks Orders in the side navigation menubar
          And User Clicks New order dropdown value
          And User Clicks New order in the dropdown value
@@ -64,4 +63,4 @@ Scenario Outline: Verify the News Order page of Buyer panel
          
            Examples:
              |username                     |  |password    |
-             |velumanieswaran2020@gmail.com|  |!123456Zm   |       
+             |velumanieswaran2020@gmail.com|  |!123456Zm   |   

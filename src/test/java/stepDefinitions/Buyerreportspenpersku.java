@@ -124,24 +124,24 @@ public class Buyerreportspenpersku {
 
 	@Then("User click on bag in hundred pipers")
 	public void user_click_on_bag_in_hundred_pipers() throws InterruptedException {
-	   Buyerreportspenperskupage.Clickonbag();
+	   //Buyerreportspenperskupage.Clickonbag();
 	}
 
 	@Then("User click on box in hundred pipers")
 	public void user_click_on_box_in_hundred_pipers() throws InterruptedException {
-	    Buyerreportspenperskupage.Clickonbox();
+	    //Buyerreportspenperskupage.Clickonbox();
 	}
 
 	@Then("User click on bdl in hundred pipers")
 	public void user_click_on_bdl_in_hundred_pipers() throws InterruptedException {
-	    Buyerreportspenperskupage.Clickonbdl();
+	    //Buyerreportspenperskupage.Clickonbdl();
 	}
 
 	@Then("User click on filter in hundred pipers")
-	public void user_click_on_filter_in_hundred_pipers() {
+	public void user_click_on_filter_in_hundred_pipers() throws InterruptedException {
 	    Buyerreportspenperskupage.Clickonfilterinhundredpipers();
 	}
-
+ 
 	@Then("User click on outlets in hundred pipers")
 	public void user_click_on_outlets_in_hundred_pipers() {
 	    Buyerreportspenperskupage.Clickonoutletsinhundredpipers();

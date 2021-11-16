@@ -110,10 +110,7 @@ public class Buyerpaymentspaymentplans {
 
 	 
 	
-	@Then("User name  should be displayed")
-	public void user_name_should_be_displayed() {
-		Buyerpaymentspaymentplanspage.Usernameshouldbedisplayed();
-	}
+	
 	
 	
 	@Then("User Enter dashboard menu highlighted with the yellow colour")

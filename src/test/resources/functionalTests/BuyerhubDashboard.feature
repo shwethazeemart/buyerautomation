@@ -10,7 +10,7 @@ Scenario Outline: Verify the Dashboard lisen page of Buyer panel
           Then User click on sabari supplier
           And User click on show favourites check box
           Then User click on show favourites uncheck box
-          And User click on filter in order page
+          And User click on filter in order page 
           Then User click on Tags
           And User click on selectall
           Then User click on Apply button in order page
@@ -51,4 +51,4 @@ Scenario Outline: Verify the Dashboard lisen page of Buyer panel
            Examples:
          |username                            |  |password    ||name     |
          |velumanieswaran2020@gmail.com       |  |!123456Zm   ||100pipers|
-          
+         

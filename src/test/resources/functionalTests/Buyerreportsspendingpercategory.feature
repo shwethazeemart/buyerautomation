@@ -44,4 +44,5 @@ Scenario Outline: Verify the Reports spending per Category page of Buyer panel
           
   Examples: 
       | username                      | | password   ||name     |
-      | velumanieswaran2020@gmail.com | |!123456Zm   ||Beer     | 
+      | velumanieswaran2020@gmail.com | |!123456Zm   ||Beer     |       
+      
