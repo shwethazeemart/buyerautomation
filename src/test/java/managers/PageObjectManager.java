@@ -12,7 +12,7 @@ import pageObjects.OutletsPagesteps;
 import pageObjects.PasswordResetPage;
 import pageObjects.Reportspage;
 import pageObjects.SucessfullyLoginpage;
-
+import pageObjects.SupplierAddNewSkuPage;
 import pageObjects.SupplierCatalogueListPage;
 
 
@@ -148,9 +148,9 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private SupplierUserListPage Supplierusersscreenlisting;
     private SupplierUserListPage SupplierUserList;
     private SupplierTeamListPage SupplierTeamList;
-
     private SupplierCustomerCompanyPage SupplierCustomerCompany;
     private SupplierCatalogueListPage SupplierCatalogueList;
+    private SupplierAddNewSkuPage SupplierAddNewSku;
 
 
 	public PageObjectManager(WebDriver driver) {
@@ -470,6 +470,13 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 		return (SupplierCatalogueList == null) ? (SupplierCatalogueList = new SupplierCatalogueListPage(driver)) : SupplierCatalogueList;
 
 	}
+
+
+	public SupplierAddNewSkuPage getSupplierAddNewSkuPage() {
+		return (SupplierAddNewSku == null) ? (SupplierAddNewSku = new SupplierAddNewSkuPage(driver)) : SupplierAddNewSku;
+
+	}
+
 	
 	} 
 
