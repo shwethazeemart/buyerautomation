@@ -14,3 +14,5 @@ Scenario Outline: Verify the Outlets page of Buyer panel
     Examples: 
       | username                      | | password  |
       | velumanieswaran2020@gmail.com | |!123456Zm   |
+      
+      

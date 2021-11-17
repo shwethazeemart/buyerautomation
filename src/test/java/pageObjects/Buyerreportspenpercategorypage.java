@@ -18,7 +18,7 @@ public class Buyerreportspenpercategorypage {
 
 
 		Buyerreportspenpercategorypage.driver = driver;
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this); 
 	}
 	public void navigateTo_LogInPage2() {
 		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl(false,true,false,false));
@@ -119,7 +119,7 @@ public class Buyerreportspenpercategorypage {
 		
 		WebElement DateBox=driver.findElement(By.xpath("//input[@formcontrolname='categoryDateRange']"));
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].value='01Sep2021-30Sep2021';", DateBox);
+		js.executeScript("arguments[0].value='1 Nov 2021 - 9 Nov 2021';", DateBox);
 		
 	}
 	public static void Clickfilter() throws InterruptedException {

@@ -18,7 +18,7 @@ Scenario Outline: Verify the Outlets listing page of Buyer panel
           Then User click on manage details in velu masala
           Then User click on back button of outlets icon
           Then User click on Actions dropdown in velu masala
-          Then User click on manage setting in velu masala
+          Then User click on manage setting in velu masala 
           Then User click on back button of outlets icon
           Then User click on Actions dropdown in velu masala
           Then User click on view suppliers in velu masala 

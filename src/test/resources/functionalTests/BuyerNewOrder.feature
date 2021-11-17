@@ -1,7 +1,6 @@
 Feature: Verify Buyer New Order page and test all the page
 
 
-
 Scenario Outline: Verify the New Order page of Buyer panel
          Given User is on Login Page
          When User enter exact username"<username>"
@@ -72,6 +71,9 @@ Scenario Outline: Verify the New Order page of Buyer panel
          
            @dev
            Examples:
+             |username                     |  |password    |
+             |velumanieswaran2020@gmail.com|  |!123456Zm   |   
+
              |username                     |  |password    |  |outletname      | |outletnameone   |   |outletnametwo      |
              |buyerautomated3@gmail.com    |  |!123456Zm   |  |velumasalathree | |velumasalasix   |   |velumasalatwofifty |
     
@@ -83,3 +85,4 @@ Scenario Outline: Verify the New Order page of Buyer panel
     
 
  
+

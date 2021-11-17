@@ -1,5 +1,4 @@
 Feature: Verify Buyer Reports Invoice variance page and test all the page
-
 Scenario Outline: Verify the Reports invoice variance Category page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"

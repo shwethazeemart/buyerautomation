@@ -18,6 +18,5 @@ Scenario Outline: Verify the Edit Users page of Buyer panel
           
     Examples:
          |username                     |  |password    ||title      ||Email                            ||mobilephone  | 
-         |velumanieswaran2020@gmail.com|  |!123456Zm   ||AtoZ test  ||velumanieswaran2020@gmail.com    ||+65122456789 |         
-    
-     
+         |velumanieswaran2020@gmail.com|  |!123456Zm   ||AtoZ test  ||velumanieswaran2020@gmail.com    ||+65122456789 |     
+         

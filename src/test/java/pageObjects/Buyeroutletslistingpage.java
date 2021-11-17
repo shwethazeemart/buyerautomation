@@ -56,7 +56,7 @@ public class Buyeroutletslistingpage {
 	@FindBy(xpath = "(//a[@routerlinkactive='active'])[2]")
 	private static WebElement Buyeroutletslistingpage_Managedetails;
 	
-	@FindBy(xpath = "//p[text()='Outlets']")
+	@FindBy(xpath = "//img[@src='../assets/zmcore/img/left-report-b-icon.svg']")
 	private static WebElement Buyeroutletslistingpage_Backbuttonofoutlets;
 	
 	@FindBy(xpath = "(//a[@routerlinkactive='active'])[3] ")

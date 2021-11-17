@@ -83,7 +83,11 @@ public class Buyeroutletsmanagesettingspage {
 	@FindBy(xpath = "(//button[contains(@type,'button')])[5]")
 	private static WebElement Buyeroutletsmanagesettingspage_Savebutton;
 	
+
+	
+
 	@FindBy(xpath = "(//div[@class='modal-content'])[3]")
+
 	private static WebElement Buyeroutletsmanagesettingspage_Outsidesection;
 	
 	

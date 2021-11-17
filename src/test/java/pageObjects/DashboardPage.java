@@ -88,7 +88,7 @@ public class DashboardPage {
 	@FindBy(xpath = "//html/body/div[2]/header/div[1]/div[2]/nav/ul/li[1]/a")
 	private static WebElement Orchidpage_Homelinkbutton;
 
-	@FindBy(xpath = "//span[text()='Reports ']")
+	@FindBy(xpath = "//span[contains(@id,'sideMenu_Reports')]")
 	private static WebElement button_Reports;
 
 	@FindBy(xpath = "//span[contains(@id,'sideMenu_Invoices')]")
@@ -108,6 +108,9 @@ public class DashboardPage {
 	
 	@FindBy(xpath = "//a[@href='/sg/pages/usermanagement']") 
 	private static  WebElement button_Supplierusers;
+	
+	@FindBy(xpath = "//span[contains(@id,'sideMenu_Catalogue')]") 
+	private static  WebElement button_Suppliercatalogue;
 	
 
 
@@ -392,6 +395,18 @@ public class DashboardPage {
 		
 	}
 	
+	
+	public static void ClickonsupplierCatalogueicon() throws InterruptedException{
+		Thread.sleep(5000);
+		button_Suppliercatalogue.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 50).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
 	
 	
 }

@@ -12,6 +12,12 @@ import pageObjects.OutletsPagesteps;
 import pageObjects.PasswordResetPage;
 import pageObjects.Reportspage;
 import pageObjects.SucessfullyLoginpage;
+
+import pageObjects.SupplierCatalogueListPage;
+
+
+import pageObjects.SupplierCustomerCompanyPage;
+
 import pageObjects.SupplierTeamListPage;
 import pageObjects.Suppliercustomerlocationlistingpage;
 import pageObjects.Supplierdashboardpage;
@@ -142,7 +148,10 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private SupplierUserListPage Supplierusersscreenlisting;
     private SupplierUserListPage SupplierUserList;
     private SupplierTeamListPage SupplierTeamList;
-    
+
+    private SupplierCustomerCompanyPage SupplierCustomerCompany;
+    private SupplierCatalogueListPage SupplierCatalogueList;
+
 
 	public PageObjectManager(WebDriver driver) {
 		this.driver = driver;
@@ -451,7 +460,16 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 	
 	
 	
-	
+	 public SupplierCustomerCompanyPage getSupplierCustomerCompanyPage() {
+			return (SupplierCustomerCompany == null) ? (SupplierCustomerCompany = new SupplierCustomerCompanyPage(driver)) : SupplierCustomerCompany;
+
+		}
+
+
+	public SupplierCatalogueListPage getSupplierCatalogueListPage() {
+		return (SupplierCatalogueList == null) ? (SupplierCatalogueList = new SupplierCatalogueListPage(driver)) : SupplierCatalogueList;
+
+	}
 	
 	} 
 

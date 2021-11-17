@@ -45,11 +45,19 @@ public class Buyerusernamesettingspage {
 	@FindBy(xpath = "//a[text()=' Details ']/following-sibling::a")
 	private static WebElement Buyerusernamesettingspage_Linkedcompanies;
 	
+
+	//@FindBy(xpath = "(//div[@class='ng-star-inserted'])[2]")
+	//private static WebElement Buyerusernamesettingspage_Velumasaladropdownicon;
+	
+	
+	@FindBy(xpath = "(//a[@class='dropdown-item'])[2]") 
+	private static WebElement Buyerusernamesettingspage_Managepaymentsettings;
 	//@FindBy(xpath = "(//a[@class='zmdropDownBtn'])[2]")
 	//private static WebElement Buyerusernamesettingspage_Velumasaladropdownicon;
 	
 	//@FindBy(xpath = "(//a[@class='dropdown-item'])[2]")
 	//private static WebElement Buyerusernamesettingspage_Managepaymentsettings;
+
 	
 	@FindBy(xpath = "//p[text()=' My account']")
 	private static WebElement Buyerusernamesettingspage_Backbuttonofmyaccount;
