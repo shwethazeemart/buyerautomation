@@ -12,7 +12,9 @@ import io.cucumber.junit.CucumberOptions;
 
 
 
-@CucumberOptions(strict = true, features = "src/test/resources/functionalTests/SupplierAddNewSku.feature",
+@CucumberOptions(strict = true, features = "src/test/resources/functionalTests/SupplierDirectoryProduct.feature",
+
+tags ="@Smoke",
 
 glue = { "stepDefinitions" },monochrome=true,dryRun=false,
 plugin= {"json:target/cucumber.json"})

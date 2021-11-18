@@ -17,7 +17,7 @@ import pageObjects.SupplierCatalogueListPage;
 
 
 import pageObjects.SupplierCustomerCompanyPage;
-
+import pageObjects.SupplierDirectoryProductPage;
 import pageObjects.SupplierTeamListPage;
 import pageObjects.Suppliercustomerlocationlistingpage;
 import pageObjects.Supplierdashboardpage;
@@ -44,6 +44,7 @@ import stepDefinitions.Outletspagesteps;
 import stepDefinitions.Reportspagesteps;
 //import stepDefinitions.NewRecurringOrderspage;
 import stepDefinitions.SucessfullyLoginPage;
+import stepDefinitions.SupplierDirectoryProduct;
 import stepDefinitions.UserspageSteps;
 import pageObjects.AdminInvoiceuploadpage;
 import pageObjects.Adminbuyerlinktothecompanypage;
@@ -151,6 +152,7 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private SupplierCustomerCompanyPage SupplierCustomerCompany;
     private SupplierCatalogueListPage SupplierCatalogueList;
     private SupplierAddNewSkuPage SupplierAddNewSku;
+    private SupplierDirectoryProductPage supplierdirectoryproduct;
 
 
 	public PageObjectManager(WebDriver driver) {
@@ -477,9 +479,13 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 
 	}
 
+	public SupplierDirectoryProductPage getSupplierDirectoryProductPage() {
+		return (supplierdirectoryproduct == null) ? (supplierdirectoryproduct = new SupplierDirectoryProductPage(driver)) : supplierdirectoryproduct;
+
 	
 	} 
 
+}
 
 
 
