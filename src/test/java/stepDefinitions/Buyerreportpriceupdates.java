@@ -75,10 +75,10 @@ public class Buyerreportpriceupdates {
 	    //Buyerreportpriceupdatespage.ClickonYTDfromcalendar();
 	}
 
-	@Then("User select from dropdown value of outlet in price updates {string}")
-	public void user_select_from_dropdown_value_of_outlet_in_price_updates(String outletname) {
-		WebElement velumasala2020 = Buyerreportpriceupdatespage.getDropDownElementoutletname();
-		Select select=new Select(velumasala2020);
+	@Then("User select from dropdown value of outlet in price updates")
+	public void user_select_from_dropdown_value_of_outlet_in_price_updates() {
+		WebElement outlet = Buyerreportpriceupdatespage.getDropDownElementoutletname();
+		Select select=new Select(outlet);
 		select.selectByIndex(3);
 	}
 

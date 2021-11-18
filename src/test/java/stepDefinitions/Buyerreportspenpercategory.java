@@ -99,8 +99,8 @@ public class Buyerreportspenpercategory {
 	   Buyerreportspenpercategorypage.Clicksuppliers();
 	}
 
-	@Then("User click on check box of sabari in category")
-	public void user_click_on_check_box_of_sabari_in_category() {
+	@Then("User click on Check box in category")
+	public void user_click_on_Check_box_in_category() {
 	    Buyerreportspenpercategorypage.Clickcheckboxofsabari(); 
 	}
 
@@ -135,36 +135,23 @@ public class Buyerreportspenpercategory {
 		Buyerreportspenpercategorypage.Clickonoutsidecategoryinbeer();
 	}
 
+	@Then("User click on check box of category")
+	public void user_click_on_check_box_of_category() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	@Then("User click on Check box")
+	public void user_click_on_Check_box() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("User click on check box category")
+	public void user_click_on_check_box_category() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
 	
 	
 }

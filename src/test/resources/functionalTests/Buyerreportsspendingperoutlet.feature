@@ -24,7 +24,7 @@ Scenario Outline: Verify the Reports spending per outlet page of Buyer panel
           Then User click on YTD from calendar
           And User click on filter
           Then User click on suppliers
-          And User click on check box of sabari
+          And User click on check box  
           Then User click on Apply button
           Then User click on Reset button
           Then User click on outside 
@@ -54,11 +54,11 @@ Scenario Outline: Verify the Reports spending per outlet page of Buyer panel
           Then User click on export page is CSV
           And User click on Export download button
           Then User click on Detailed report
-          And User click on velu masala download button
-          Then User click on velu masala summary button
-          And User click on velu masala detailed button
-          Then User click on velu masala List of invoices button
-          And User click on velu masala outlet icon
+          And User click on download button "<outletname>"
+          Then User click on summary button
+          And User click on detailed button
+          Then User click on List of invoices button
+          And User click on outlet icon
           Then User select date from calendar
           And User click on Today date from calendar
           Then User select date from calendar
@@ -79,7 +79,13 @@ Scenario Outline: Verify the Reports spending per outlet page of Buyer panel
           Then User click on back button of spending report
           Then User click on back button of reports
           
-          
+      @dev    
       Examples: 
-      | username                      | | password   |
-      | velumanieswaran2020@gmail.com | |!123456Zm   |
+      | username                      | | password   |  |outletname      |
+      | buyerautomated3@gmail.com     | |!123456Zm   |  |velu masala2020 |
+      
+      @naren
+       Examples: 
+      | username                      | | password   |  |outletname      |
+      | buyerautomated1@gmail.com     | |!123456Zm   |  |velu masala2020 |
+      

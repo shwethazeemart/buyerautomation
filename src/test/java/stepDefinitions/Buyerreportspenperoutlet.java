@@ -64,8 +64,8 @@ public class Buyerreportspenperoutlet {
 	    
 	}
 
-	@Then("User click on check box of sabari")
-	public void user_click_on_check_box_of_sabari() {
+	@Then("User click on check box")
+	public void user_click_on_check_box() {
 	    Buyerreportspenperoutletpage.Clickonsabaricheckbox();
 	}
 
@@ -180,29 +180,30 @@ public class Buyerreportspenperoutlet {
 	    Buyerreportspenperoutletpage.ClickonYTDfromcalendar();
 	}
 
-	@Then("User click on velu masala download button")
-	public void user_click_on_velu_masala_download_button() throws InterruptedException {
-	    Buyerreportspenperoutletpage.Clickonvelumasaladownloadbutton();
-	}
 
-	@Then("User click on velu masala summary button")
-	public void user_click_on_velu_masala_summary_button() {
+    @Then("User click on download button ")
+    public void user_click_on_download_button() throws InterruptedException {
+	    Buyerreportspenperoutletpage.Clickondownloadbutton();
+	} 
+    
+    @Then("User click on summary button")
+    public void user_click_on_summary_button() {
 	   //Buyerreportspenperoutletpage.Clickonvelumasalasummarybutton();
 	}
 
-	@Then("User click on velu masala detailed button")
-	public void user_click_on_velu_masala_detailed_button() {
+    @Then("User click on detailed button")
+    public void user_click_on_detailed_button() {
 	    //Buyerreportspenperoutletpage.Clickonvelumasaladetailedbutton();
 	} 
 
-	@Then("User click on velu masala List of invoices button")
-	public void user_click_on_velu_masala_List_of_invoices_button() {
+    @Then("User click on List of invoices button")
+    public void user_click_on_List_of_invoices_button() {
 	   //Buyerreportspenperoutletpage.Clickonvelumasalalistofinvoicesbutton();
 	}
 
-	@Then("User click on velu masala outlet icon")
-	public void user_click_on_velu_masala_outlet_icon() throws InterruptedException {
-	    Buyerreportspenperoutletpage.Clickonvelumasalaoutleticon();
+    @Then("User click on outlet icon")
+    public void user_click_on_outlet_icon() throws InterruptedException {
+	    Buyerreportspenperoutletpage.Clickonoutleticon();
 	}
 
 	@Then("User select dropdown in month")
@@ -235,7 +236,12 @@ public class Buyerreportspenperoutlet {
 	    Buyerreportspenperoutletpage.Clickonapplybuttonincustomrange();
 	}
 	
-	
+	@Then("User click on download button {string}")
+	public void user_click_on_download_button(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
 	
 	 
 	
