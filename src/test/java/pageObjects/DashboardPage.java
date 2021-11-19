@@ -430,7 +430,7 @@ public class DashboardPage {
 		
 	}
 
-	}
+	
 	
 	
 
