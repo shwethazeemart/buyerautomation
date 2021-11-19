@@ -22,6 +22,10 @@ import pageObjects.SupplierDirectoryProductPage;
 
 import pageObjects.SupplierReportOutletPage;
 
+
+
+import pageObjects.SupplierReportSkuPage;
+
 import pageObjects.SupplierTeamListPage;
 import pageObjects.Suppliercustomerlocationlistingpage;
 import pageObjects.Supplierdashboardpage;
@@ -160,7 +164,8 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private SupplierDirectoryProductPage supplierdirectoryproduct;
 
     private SupplierReportOutletPage SupplierReportOutlet;
-
+    private SupplierReportSkuPage SupplierReportSku;
+    
 
 
 	public PageObjectManager(WebDriver driver) {
@@ -494,6 +499,13 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 
 	public SupplierReportOutletPage getSupplierReportOutletPage() {
 		return (SupplierReportOutlet == null) ? (SupplierReportOutlet = new SupplierReportOutletPage(driver)) : SupplierReportOutlet;
+
+	}
+
+
+
+	public SupplierReportSkuPage getSupplierReportSkuPage() {
+		return (SupplierReportSku == null) ? (SupplierReportSku = new SupplierReportSkuPage(driver)) : SupplierReportSku;
 
 	}
 
