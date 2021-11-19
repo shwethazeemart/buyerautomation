@@ -1,6 +1,6 @@
 Feature: Verify Supplier Reports Outlet list  
 
-Scenario Outline: Verify the Supplier Outlet list 
+Scenario Outline: Verify the Supplier Reports Outlet list 
          Given User is on available Login Page
           When User enter exact username"<username>"
           And User enter exact password"<password>"
