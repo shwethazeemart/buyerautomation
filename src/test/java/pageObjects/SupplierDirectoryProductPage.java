@@ -12,7 +12,7 @@ import managers.FileReaderManager;
 
 public class SupplierDirectoryProductPage {
 
-	private static WebDriver driver;
+	static WebDriver driver;
 
 	public SupplierDirectoryProductPage(WebDriver driver) {
 
@@ -63,7 +63,7 @@ public class SupplierDirectoryProductPage {
    //private static WebElement SupplierDirectoryProductPage_Clear;
 		
 	
-	@FindBy(xpath = "(//a[@routerlinkactive='active'])[2]")
+	@FindBy(xpath = "//button[text()=' Done & update in catalogue ']")
 	private static WebElement SupplierDirectoryProductPage_DoneUpdateCatalogue;
 	
 	//@FindBy(xpath = "//button[@id='button-basic']")
@@ -162,8 +162,11 @@ public class SupplierDirectoryProductPage {
 		
 	}
 
-	public static void SupplierProductCodeEnter() {
-		SupplierDirectoryProductPage_ProductCodeEnter.sendKeys();
+	
+	public static void ActionsDropdownclick() {
+		WebElement actions = driver.findElement(By.linkText("Actions"));
+		actions.click();
+		//SupplierDirectoryProductPage_ActionsDropdown.click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -173,10 +176,8 @@ public class SupplierDirectoryProductPage {
 		
 	}
 
-	public static void ActionsDropdownclick() {
-		WebElement actions = driver.findElement(By.linkText("Actions"));
-		actions.click();
-		//SupplierDirectoryProductPage_ActionsDropdown.click();
+	public static void SupplierProductCodeEnter(String code) {
+		SupplierDirectoryProductPage_ProductCodeEnter.sendKeys(code);
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {

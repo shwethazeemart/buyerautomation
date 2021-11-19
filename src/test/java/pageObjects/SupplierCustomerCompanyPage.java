@@ -11,7 +11,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import managers.FileReaderManager;
 
 public class SupplierCustomerCompanyPage {
-
 	
 	
 	private static WebDriver driver;

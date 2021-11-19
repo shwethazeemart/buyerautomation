@@ -91,15 +91,10 @@ public void user_click_on_actions_dropdown_field_in_directory_page() {
 	SupplierDirectoryProductPage.ActionsDropdownclick();
 }
 
-//@Then("User enter on Supplier product code in edit sku page {string}")
+
+@Then("User enter on Supplier product code in edit sku page{string}")
 public void user_enter_on_Supplier_product_code_in_edit_sku_page(String code) {
-	SupplierDirectoryProductPage.SupplierProductCodeEnter(); }
-
-
-
-@Then("User enter on Supplier product code in edit sku page\"{int}\"")
-public void user_enter_on_Supplier_product_code_in_edit_sku_page(Integer int1) {
-	SupplierDirectoryProductPage.SupplierProductCodeEnter(); 
+	SupplierDirectoryProductPage.SupplierProductCodeEnter(code); 
 	
 }
  

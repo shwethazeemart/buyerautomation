@@ -12,7 +12,7 @@ import io.cucumber.junit.CucumberOptions;
 
 
 
-@CucumberOptions(strict = true, features = "src/test/resources/functionalTests/SupplierDirectoryProduct.feature",
+@CucumberOptions(strict = true, features = "src/test/resources/functionalTests/SupplierDirectorySetting.feature",
 
 tags ="@Smoke",
 
