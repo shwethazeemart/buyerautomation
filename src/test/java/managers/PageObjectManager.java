@@ -19,11 +19,9 @@ import pageObjects.SupplierCatalogueListPage;
 import pageObjects.SupplierCustomerCompanyPage;
 
 import pageObjects.SupplierDirectoryProductPage;
-
+import pageObjects.SupplierReportAgeingPage;
 import pageObjects.SupplierReportOutletPage;
-
-
-
+import pageObjects.SupplierReportPlanningPage;
 import pageObjects.SupplierReportSkuPage;
 
 import pageObjects.SupplierTeamListPage;
@@ -160,12 +158,11 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private SupplierCustomerCompanyPage SupplierCustomerCompany;
     private SupplierCatalogueListPage SupplierCatalogueList;
     private SupplierAddNewSkuPage SupplierAddNewSku;
-
     private SupplierDirectoryProductPage supplierdirectoryproduct;
-
     private SupplierReportOutletPage SupplierReportOutlet;
     private SupplierReportSkuPage SupplierReportSku;
-    
+    private SupplierReportPlanningPage SupplierReportPlanning;
+    private SupplierReportAgeingPage SupplierReportAgeing;
 
 
 	public PageObjectManager(WebDriver driver) {
@@ -495,7 +492,7 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 
 	public SupplierDirectoryProductPage getSupplierDirectoryProductPage() {
 		return (supplierdirectoryproduct == null) ? (supplierdirectoryproduct = new SupplierDirectoryProductPage(driver)) : supplierdirectoryproduct;
-
+	}
 
 	public SupplierReportOutletPage getSupplierReportOutletPage() {
 		return (SupplierReportOutlet == null) ? (SupplierReportOutlet = new SupplierReportOutletPage(driver)) : SupplierReportOutlet;
@@ -510,11 +507,23 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 	}
 
 
+	public SupplierReportPlanningPage getSupplierReportPlanningPage() {
+		return (SupplierReportPlanning == null) ? (SupplierReportPlanning = new SupplierReportPlanningPage(driver)) : SupplierReportPlanning;
+
+	}
+
+
+	public SupplierReportAgeingPage getSupplierReportAgeingPage() {
+		return (SupplierReportAgeing == null) ? (SupplierReportAgeing = new SupplierReportAgeingPage(driver)) : SupplierReportAgeing;
+
+	}
+
+
 
 	
 	} 
 
-}
+
 
 
 

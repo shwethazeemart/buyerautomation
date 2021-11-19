@@ -49,13 +49,13 @@ public class SupplierReportSku {
 	}
 
 
-
+ 
 
 	@Then("User click on orders received sku")
 	public void user_click_on_orders_received_sku() {
 		SupplierReportSkuPage.OrdersReceviedSkuClick();
 	}
-
+ 
 
 	@Then("User click on search sku orders recevied page")
 	public void user_click_on_search_sku_orders_recevied_page() {
