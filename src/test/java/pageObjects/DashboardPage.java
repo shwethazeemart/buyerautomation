@@ -112,9 +112,16 @@ public class DashboardPage {
 	@FindBy(xpath = "//span[contains(@id,'sideMenu_Catalogue')]") 
 	private static  WebElement button_Suppliercatalogue;
 	
+
+	@FindBy(xpath = "//span[contains(@id,'sideMenu_Directory')]") 
+	private static  WebElement button_Supplierdirectory;
+	
+
+
 	@FindBy(xpath = "//span[contains(@id,'sideMenu_Reports')]") 
 	private static  WebElement button_SupplierReports;
 	
+
 
 
 	public String getPageTitle() {
@@ -410,8 +417,25 @@ public class DashboardPage {
 				.executeScript("return document.readyState").equals("complete"));
 		
 	}
+
+	public static void ClickonDirectoryinthesidemenu() throws InterruptedException {
+		Thread.sleep(5000);
+		button_Supplierdirectory.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 50).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	}
 	
 	
+
+
+
 	public static void ClickonsupplierReportsicon() throws InterruptedException{
 		Thread.sleep(5000);
 		button_SupplierReports.click();
@@ -425,5 +449,6 @@ public class DashboardPage {
 	}
 	
 }
+
 
 
