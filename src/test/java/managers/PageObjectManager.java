@@ -19,7 +19,7 @@ import pageObjects.SupplierCatalogueListPage;
 import pageObjects.SupplierCustomerCompanyPage;
 
 import pageObjects.SupplierDirectoryProductPage;
-
+import pageObjects.SupplierPaymentsTransactionPgae;
 import pageObjects.SupplierReportOutletPage;
 
 
@@ -160,11 +160,10 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private SupplierCustomerCompanyPage SupplierCustomerCompany;
     private SupplierCatalogueListPage SupplierCatalogueList;
     private SupplierAddNewSkuPage SupplierAddNewSku;
-
     private SupplierDirectoryProductPage supplierdirectoryproduct;
-
     private SupplierReportOutletPage SupplierReportOutlet;
     private SupplierReportSkuPage SupplierReportSku;
+    private SupplierPaymentsTransactionPgae SupplierPaymentsTransaction;
     
 
 
@@ -495,7 +494,7 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 
 	public SupplierDirectoryProductPage getSupplierDirectoryProductPage() {
 		return (supplierdirectoryproduct == null) ? (supplierdirectoryproduct = new SupplierDirectoryProductPage(driver)) : supplierdirectoryproduct;
-
+	}
 
 	public SupplierReportOutletPage getSupplierReportOutletPage() {
 		return (SupplierReportOutlet == null) ? (SupplierReportOutlet = new SupplierReportOutletPage(driver)) : SupplierReportOutlet;
@@ -510,11 +509,18 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 	}
 
 
+	public SupplierPaymentsTransactionPgae getSupplierPaymentsTransactionPgae() {
+		return (SupplierPaymentsTransaction == null) ? (SupplierPaymentsTransaction = new SupplierPaymentsTransactionPgae(driver)) : SupplierPaymentsTransaction;
+
+	}
+	
+
+
 
 	
 	} 
 
-}
+
 
 
 
