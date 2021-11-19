@@ -15,16 +15,18 @@ import io.cucumber.junit.CucumberOptions;
 
 
 
+
 @CucumberOptions(strict = true, features = "src/test/resources/functionalTests/SupplierPaymentsTransaction.feature",
+
 
 glue = { "stepDefinitions" },monochrome=true,dryRun=false,
 plugin= {"json:target/cucumber.json"})
  
 public class TestRunner {
-	 
+	  
 }                                               
 
 
                                               
                                                 
-  
+   

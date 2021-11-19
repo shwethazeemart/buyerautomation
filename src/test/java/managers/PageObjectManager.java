@@ -19,11 +19,11 @@ import pageObjects.SupplierCatalogueListPage;
 import pageObjects.SupplierCustomerCompanyPage;
 
 import pageObjects.SupplierDirectoryProductPage;
+
 import pageObjects.SupplierPaymentsTransactionPgae;
+import pageObjects.SupplierReportAgeingPage;
 import pageObjects.SupplierReportOutletPage;
-
-
-
+import pageObjects.SupplierReportPlanningPage;
 import pageObjects.SupplierReportSkuPage;
 
 import pageObjects.SupplierTeamListPage;
@@ -163,8 +163,12 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private SupplierDirectoryProductPage supplierdirectoryproduct;
     private SupplierReportOutletPage SupplierReportOutlet;
     private SupplierReportSkuPage SupplierReportSku;
+
     private SupplierPaymentsTransactionPgae SupplierPaymentsTransaction;
     
+    private SupplierReportPlanningPage SupplierReportPlanning;
+    private SupplierReportAgeingPage SupplierReportAgeing;
+
 
 
 	public PageObjectManager(WebDriver driver) {
@@ -509,12 +513,23 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 	}
 
 
+
 	public SupplierPaymentsTransactionPgae getSupplierPaymentsTransactionPgae() {
 		return (SupplierPaymentsTransaction == null) ? (SupplierPaymentsTransaction = new SupplierPaymentsTransactionPgae(driver)) : SupplierPaymentsTransaction;
 
 	}
 	
 
+	public SupplierReportPlanningPage getSupplierReportPlanningPage() {
+		return (SupplierReportPlanning == null) ? (SupplierReportPlanning = new SupplierReportPlanningPage(driver)) : SupplierReportPlanning;
+
+	}
+
+
+	public SupplierReportAgeingPage getSupplierReportAgeingPage() {
+		return (SupplierReportAgeing == null) ? (SupplierReportAgeing = new SupplierReportAgeingPage(driver)) : SupplierReportAgeing;
+
+	}
 
 
 	
