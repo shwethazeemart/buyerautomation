@@ -14,13 +14,13 @@ import io.cucumber.junit.CucumberOptions;
 
 
 
-@CucumberOptions(strict = true, features = "src/test/resources/functionalTests/SupplierReportPlanning.feature",
+@CucumberOptions(strict = true, features = "src/test/resources/functionalTests/SupplierReportAgeing.feature",
 
 glue = { "stepDefinitions" },monochrome=true,dryRun=false,
 plugin= {"json:target/cucumber.json"})
  
 public class TestRunner {
-	 
+	  
 }                                               
 
 
