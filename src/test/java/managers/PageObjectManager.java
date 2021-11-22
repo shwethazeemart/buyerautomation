@@ -14,12 +14,11 @@ import pageObjects.Reportspage;
 import pageObjects.SucessfullyLoginpage;
 import pageObjects.SupplierAddNewSkuPage;
 import pageObjects.SupplierCatalogueListPage;
-
-
+import pageObjects.SupplierCompanySettingsPage;
 import pageObjects.SupplierCustomerCompanyPage;
 
 import pageObjects.SupplierDirectoryProductPage;
-
+import pageObjects.SupplierPaymentPlansPage;
 import pageObjects.SupplierPaymentsTransactionPgae;
 import pageObjects.SupplierReportAgeingPage;
 import pageObjects.SupplierReportOutletPage;
@@ -163,12 +162,11 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private SupplierDirectoryProductPage supplierdirectoryproduct;
     private SupplierReportOutletPage SupplierReportOutlet;
     private SupplierReportSkuPage SupplierReportSku;
-
     private SupplierPaymentsTransactionPgae SupplierPaymentsTransaction;
-    
     private SupplierReportPlanningPage SupplierReportPlanning;
     private SupplierReportAgeingPage SupplierReportAgeing;
-
+    private SupplierPaymentPlansPage SupplierPaymentPlans;
+    private SupplierCompanySettingsPage SupplierCompanySettings;
 
 
 	public PageObjectManager(WebDriver driver) {
@@ -528,6 +526,18 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 
 	public SupplierReportAgeingPage getSupplierReportAgeingPage() {
 		return (SupplierReportAgeing == null) ? (SupplierReportAgeing = new SupplierReportAgeingPage(driver)) : SupplierReportAgeing;
+
+	}
+
+
+	public SupplierPaymentPlansPage getSupplierPaymentPlansPage() {
+		return (SupplierPaymentPlans == null) ? (SupplierPaymentPlans = new SupplierPaymentPlansPage(driver)) : SupplierPaymentPlans;
+
+	}
+
+
+	public SupplierCompanySettingsPage getSupplierCompanySettingsPage() {
+		return (SupplierCompanySettings == null) ? (SupplierCompanySettings = new SupplierCompanySettingsPage(driver)) : SupplierCompanySettings;
 
 	}
 

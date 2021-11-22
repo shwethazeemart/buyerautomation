@@ -12,11 +12,11 @@ import io.cucumber.junit.CucumberOptions;
 
 
 
+ 
 
 
 
-
-@CucumberOptions(strict = true, features = "src/test/resources/functionalTests/SupplierPaymentsTransaction.feature",
+@CucumberOptions(strict = true, features = "src/test/resources/functionalTests/SupplierCompanySetting.feature",
 
 
 glue = { "stepDefinitions" },monochrome=true,dryRun=false,
@@ -26,7 +26,7 @@ public class TestRunner {
 	  
 }                                               
 
-
-                                              
+   
+                                               
                                                 
    
