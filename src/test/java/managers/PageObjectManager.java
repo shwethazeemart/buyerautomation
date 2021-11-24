@@ -17,8 +17,18 @@ import pageObjects.SupplierCatalogueListPage;
 
 
 import pageObjects.SupplierCustomerCompanyPage;
+
 import pageObjects.SupplierDirectoryProductPage;
+
 import pageObjects.SupplierDirectorySettingPage;
+
+
+import pageObjects.SupplierPaymentsTransactionPgae;
+import pageObjects.SupplierReportAgeingPage;
+import pageObjects.SupplierReportOutletPage;
+import pageObjects.SupplierReportPlanningPage;
+import pageObjects.SupplierReportSkuPage;
+
 import pageObjects.SupplierTeamListPage;
 import pageObjects.Suppliercustomerlocationlistingpage;
 import pageObjects.Supplierdashboardpage;
@@ -154,7 +164,19 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private SupplierCatalogueListPage SupplierCatalogueList;
     private SupplierAddNewSkuPage SupplierAddNewSku;
     private SupplierDirectoryProductPage supplierdirectoryproduct;
+
     private SupplierDirectorySettingPage supplierdirectorysetting;
+
+    private SupplierReportOutletPage SupplierReportOutlet;
+    private SupplierReportSkuPage SupplierReportSku;
+
+    private SupplierPaymentsTransactionPgae SupplierPaymentsTransaction;
+    
+    private SupplierReportPlanningPage SupplierReportPlanning;
+    private SupplierReportAgeingPage SupplierReportAgeing;
+
+
+
 
 	public PageObjectManager(WebDriver driver) {
 		this.driver = driver;
@@ -480,11 +502,45 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 
 	}
 
+
 	public SupplierDirectoryProductPage getSupplierDirectoryProductPage() {
 		return (supplierdirectoryproduct == null) ? (supplierdirectoryproduct = new SupplierDirectoryProductPage(driver)) : supplierdirectoryproduct;
+	}
+
+	public SupplierReportOutletPage getSupplierReportOutletPage() {
+		return (SupplierReportOutlet == null) ? (SupplierReportOutlet = new SupplierReportOutletPage(driver)) : SupplierReportOutlet;
+
+	}
+
+
+
+	public SupplierReportSkuPage getSupplierReportSkuPage() {
+		return (SupplierReportSku == null) ? (SupplierReportSku = new SupplierReportSkuPage(driver)) : SupplierReportSku;
+
+	}
+
+
+
+	public SupplierPaymentsTransactionPgae getSupplierPaymentsTransactionPgae() {
+		return (SupplierPaymentsTransaction == null) ? (SupplierPaymentsTransaction = new SupplierPaymentsTransactionPgae(driver)) : SupplierPaymentsTransaction;
+
+	}
+	
+
+	public SupplierReportPlanningPage getSupplierReportPlanningPage() {
+		return (SupplierReportPlanning == null) ? (SupplierReportPlanning = new SupplierReportPlanningPage(driver)) : SupplierReportPlanning;
+
+	}
+
+
+	public SupplierReportAgeingPage getSupplierReportAgeingPage() {
+		return (SupplierReportAgeing == null) ? (SupplierReportAgeing = new SupplierReportAgeingPage(driver)) : SupplierReportAgeing;
+
+	}
+
 
 	
-	}
+	
 
 
 	public SupplierDirectorySettingPage getSupplierDirectorySettingPage() {
@@ -492,9 +548,9 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 	
 	} 
 
+
+
 }
-
-
 
 
 

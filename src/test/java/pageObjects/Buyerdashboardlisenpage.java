@@ -139,8 +139,6 @@ public class Buyerdashboardlisenpage {
 	
 
 	@FindBy(xpath = "/html/body/ngb-modal-window/div/div/addordermodal/div[1]/span/img")
-
-	
 	private static WebElement Buyerdashboardlisenpage_Closeiconinorderpage;
 	
 	@FindBy(xpath = "//b[text()='velu masala2020']")
@@ -211,7 +209,7 @@ public class Buyerdashboardlisenpage {
 	}
 
 	public static void click_velumasala()  {
-		//Buyerdashboardlisenpage_velumasala.click();
+		Buyerdashboardlisenpage_velumasala.click();
 		try { 
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
