@@ -11,12 +11,15 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)  
 
 
+@CucumberOptions(strict = true, features = "src/test/resources/functionalTests/SupplierDirectorySetting.feature",
+
+
+tags ="@Smoke",
 
  
 
 
 
-@CucumberOptions(strict = true, features = "src/test/resources/functionalTests/SupplierCompanySetting.feature",
 
 
 glue = { "stepDefinitions" },monochrome=true,dryRun=false,

@@ -1,5 +1,5 @@
 Feature: Verify Supplier Directory manage products page  
-@Smoke
+
 
 Scenario Outline: Verify the Supplier manage products page
          Given User is on available Login Page
