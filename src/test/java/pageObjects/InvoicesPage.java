@@ -118,7 +118,7 @@ public class InvoicesPage {
 
 	public static void Clicks_on_upload_the_image() throws InterruptedException {
 		WebElement uploadBox=driver.findElement(By.xpath("//input[@id='file']"));
-		uploadBox.sendKeys("E:\\Zeemart All\\download.jpg");
+		uploadBox.sendKeys("E:\\Download\\download.jpg");
 		Thread.sleep(5000);
 		try {
 			Thread.sleep(5000);

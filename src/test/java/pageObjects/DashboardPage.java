@@ -52,7 +52,7 @@ public class DashboardPage {
 	@FindBy(xpath = "//span[@id='sideMenu_Orders']")
 	private  WebElement button_Orders;
 
-	@FindBy(xpath = "//span[contains(@Id,'sideMenu_Invoices')]")
+	@FindBy(xpath = "//span[@id='sideMenu_Invoices']")
 	private  WebElement button_Invoices;
 
 	@FindBy(xpath = "//span[@id='sideMenu_Invoices']")

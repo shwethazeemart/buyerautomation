@@ -1,6 +1,5 @@
 Feature: Verify Buyer Invoice upload page and test all the page
 
-
 Scenario Outline: Verify the Invoices process page of Buyer panel 
           Given User is on Login Page
           When User is enter Registered username"<username>"
@@ -21,8 +20,15 @@ Scenario Outline: Verify the Invoices process page of Buyer panel
           And User is Select the Payments terms in the dropdown lists
           Then User are Clicks the Publish this invoice
           Then It should display invoice in invoices page
-          
+         
+         @dev 
          Examples:
          |invoicenumber|  |username                     |  |password    |
-         |INV-20123456 |  |velumanieswaran2020@gmail.com|  |!123456Zm   |      
+         |INV-20123456 |  |buyerautomated3@gmail.com    |  |!123456Zm   |    
+         
+         @naren
+         Examples:
+         |invoicenumber|  |username                     |  |password    |
+         |INV-20123456 |  |buyerautomated3@gmail.com    |  |!123456Zm   |      
+           
          

@@ -1,5 +1,4 @@
 Feature: Verify Buyer Invoice screen Entire testcases
- 
 
 Scenario Outline:Buyer Invoice lisen page verify the all field 
     Given User is on Login Page
@@ -32,12 +31,20 @@ Scenario Outline:Buyer Invoice lisen page verify the all field
     
     
     
-  
+    @dev
     Examples: 
       | username                         || loginPassword|
-      | velumanieswaran2020@gmail.com    || !123456Zm    | 
+      | buyerautomated3@gmail.com        || !123456Zm    |
       
+    @naren
+    Examples: 
+      | username                         || loginPassword|
+      | buyerautomated1@gmail.com        || !123456Zm    | 
+       
       
+       
+   
+  
  Scenario Outline: Verify the Invoices upload page of Buyer panel
          Given User is on Login Page
          When User enter exact username"<username>"
@@ -51,11 +58,19 @@ Scenario Outline:Buyer Invoice lisen page verify the all field
          And User is Clicks on Upload button
          Then It should display the particular image number and process button 
          
-     Examples:
-             |username                     |  |password    |
-             |velumanieswaran2020@gmail.com|  |!123456Zm   |
+     
+    @dev
+    Examples: 
+      | username                         || loginPassword|
+      | buyerautomated3@gmail.com        || !123456Zm    |
+            
+      
+    @naren
+    Examples: 
+      | username                         || loginPassword|
+      | buyerautomated1@gmail.com        || !123456Zm    |
              
-             
+               
 Scenario Outline: Verify the Invoices process page of Buyer panel 
           Given User is on Login Page
           When User is enter Registered username"<username>"
@@ -78,6 +93,6 @@ Scenario Outline: Verify the Invoices process page of Buyer panel
           Then It should display invoice in invoices page
           
          Examples:
-         |invoicenumber|  |username                     |  |password    |
-         |INV-20123456 |  |velumanieswaran2020@gmail.com|  |!123456Zm   |      
+         |invoicenumber |  |username                     |  |password    |
+         |INV-908765  s |  |buyerautomated3@gmail.com    |  |!123456Zm   |      
                            

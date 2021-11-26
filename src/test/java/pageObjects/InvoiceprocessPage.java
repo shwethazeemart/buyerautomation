@@ -51,7 +51,7 @@ public class InvoiceprocessPage {
 	@FindBy(xpath = "//button[text()='Today']")
 	private static WebElement invoiceprocesspageSteps_Todaybutton;
 
-	@FindBy(xpath = "(//button[contains(@class,'btn btn-success')])[1]")
+	@FindBy(xpath = "//button[text()='Process']")
 	private static WebElement btn_processbtn;
 
 	@FindBy(xpath = "//select[contains(@id,'country')]")

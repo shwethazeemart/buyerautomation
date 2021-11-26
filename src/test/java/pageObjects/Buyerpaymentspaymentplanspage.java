@@ -292,7 +292,7 @@ public static void SelectpaymentstatusUnpaid() throws InterruptedException {
         	
         }
 	public static void Usernameshouldbedisplayed() {
-		String s1= driver.findElement(By.xpath("//p[text()='Welcome back, KOVALAN']")).getText();
+		String s1= driver.findElement(By.xpath("//p[text()='Welcome back, KOVALAN!']")).getText();
 		System.out.println("User name should be displayed : "+ s1);
 		try { 
 			Thread.sleep(5000);

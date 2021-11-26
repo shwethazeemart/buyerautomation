@@ -255,6 +255,19 @@ public class InventorypageSteps {
 		//inventorypage.Clickvslalist();   
 	}
 
+	@Then("User is Clicks in  outlet {string}")
+	public void user_is_Clicks_in_outlet(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	   
+	}
+
+	@Then("User are Clicks the list\"sairam\"")
+	public void user_are_Clicks_the_list_sairam() {
+	    // Write code here that turns the phrase above into concrete actions
+	  
+	}
+
+
 
 
 	

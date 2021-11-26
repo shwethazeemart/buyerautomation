@@ -1,5 +1,5 @@
 Feature: Verify Buyer Outlets action page and test all the page
-
+@Smoke
 Scenario Outline: Verify the Outlets page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>" 

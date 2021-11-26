@@ -1,5 +1,4 @@
 Feature: Verify Buyer Invoice page and test all the page
- 
 
 Scenario Outline: Buyer Invoice lisen page verify the all field 
 
@@ -63,7 +62,13 @@ Scenario Outline: Buyer Invoice lisen page verify the all field
     
     
     
-  
+    @dev
     Examples: 
       | username                         || loginPassword|
-      | velumanieswaran2020@gmail.com    || !123456Zm    | 
+      | buyerautomated3@gmail.com        || !123456Zm    | 
+      
+    @naren
+    Examples: 
+      | username                         || loginPassword|
+      | buyerautomated1@gmail.com        || !123456Zm    | 
+      

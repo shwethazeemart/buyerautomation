@@ -12,7 +12,6 @@ import pageObjects.OrdersPage;
 
 public class Buyerinventoryoutletslisen {
 
-
 	private TestContext testContext;
 	private OrdersPage orderspage;
 	//private txtBoxContent txtBoxContent;
@@ -23,8 +22,6 @@ public class Buyerinventoryoutletslisen {
 	private DashboardPage dashboradpage;
 	private Buyerinvoicelisenpage buyerinvoicelisen;
 	private Buyerinventoryoutletslisenpage buyerinventoryoutletslisen;
-
-
 
 	public Buyerinventoryoutletslisen(TestContext testContext) {
 		super();
@@ -38,14 +35,10 @@ public class Buyerinventoryoutletslisen {
 		this.buyerinventoryoutletslisen=testContext.getPageObjectManager().getBuyerinventoryoutletslisenpage();
 	}
 
-
-
-
 	@Then("User click on outlets icon")
 	public void user_click_on_outlets_icon() {
 		Buyerinventoryoutletslisenpage.clickoutletsicon();
 	}
-
 
 	@Then("User click on settings")
 	public void user_click_on_settings() {
@@ -112,8 +105,6 @@ public class Buyerinventoryoutletslisen {
 	   Buyerinventoryoutletslisenpage.clickreturntooutletpage();
 	}
 
-
-
 	@Then("User click on uncheckbox of Has items below par")
 	public void user_click_on_uncheckbox_of_Has_items_below_par() {
 		 Buyerinventoryoutletslisenpage.ClickuncheckboxogHasitem();
@@ -128,8 +119,6 @@ public class Buyerinventoryoutletslisen {
 	public void user_click_on_uncheckbox_of_last_count() {
 		Buyerinventoryoutletslisenpage.Clickonuncheckboxoflastcount();
 	}
-
-
 
 	@Then("User click vertically scroll up in the page")
 	public void user_click_vertically_scroll_up_in_the_page() {
