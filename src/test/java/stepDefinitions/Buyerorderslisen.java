@@ -183,7 +183,7 @@ public class Buyerorderslisen {
 
 	@Then("User click on Mark as recevied button in order page")
 	public void user_click_on_Mark_as_recevied_button_in_order_page() {
-		Buyerorderslisenpage.Clickonmarkasreceviedbutton();
+		//Buyerorderslisenpage.Clickonmarkasreceviedbutton();
 	}
 
 	@Then("User click on clear button in order page")

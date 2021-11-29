@@ -33,8 +33,8 @@ public class Buyerreportpriceupdatespage {
 	}
 	
 	
-	@FindBy(xpath = "//h1[text()='Price updates']")
-	private static WebElement Buyerreportpriceupdatespage_Priceupdatesicon;
+	//@FindBy(xpath = "//h1[text()='Price updates']")
+	//private static WebElement Buyerreportpriceupdatespage_Priceupdatesicon;
 	
 	@FindBy(xpath = "//input[@placeholder='Search SKU']")
 	private static WebElement Buyerreportpriceupdatespage_Searchbox;
@@ -82,11 +82,11 @@ public class Buyerreportpriceupdatespage {
 	
 	
 	public static void Clickonpriceupdatesicon() {
-		//WebElement priceUpdatesShowsAll = driver.findElement(By.className("skyBlueBox"));
-		//priceUpdatesShowsAll.click();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 	    js.executeScript("window.scrollBy(0, 1000);");
-		Buyerreportpriceupdatespage_Priceupdatesicon.click();
+		WebElement priceUpdatesShowsAll = driver.findElement(By.className("skyBlueBox"));
+		priceUpdatesShowsAll.click();
+		//Buyerreportpriceupdatespage_Priceupdatesicon.click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {

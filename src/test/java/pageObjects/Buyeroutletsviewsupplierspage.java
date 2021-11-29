@@ -54,7 +54,7 @@ public class Buyeroutletsviewsupplierspage {
 	@FindBy(xpath = "//button[text()='Delete ']")
 	private static WebElement Buyeroutletsviewsupplierspage_Deletebutton;
 	
-	@FindBy(xpath = "(//img[@src='assets/zmcore/img/close-blue.svg'])[2]")
+	@FindBy(xpath = "//h4[text()='Delete selected products?']/following-sibling::button")
 	private static WebElement Buyeroutletsviewsupplierspage_Deletebuttoncloseicon;
 	
 	@FindBy(xpath = "//button[@id='button-basic']")

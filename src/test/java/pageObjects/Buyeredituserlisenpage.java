@@ -31,7 +31,7 @@ public class Buyeredituserlisenpage {
 	}
 	
 
-	@FindBy(xpath="(//input[@type='checkbox'])[7]")
+	@FindBy(xpath="(//input[@type='checkbox'])[6]")
 	private static WebElement Buyeredituserlisenpage_Checkboxofaruloliuser;
 	
 	@FindBy(xpath="//button[text()='Delete ']")
@@ -41,10 +41,8 @@ public class Buyeredituserlisenpage {
 	private static WebElement Buyeredituserlisenpage_Closedeleteicon;
 	
 
- @FindBy(xpath="(//div[contains(@class,'datatable-body-cell-label')])[20] ")
-
-	private static WebElement Buyeredituserlisenpage_Velumanitwouser;
-	
+    @FindBy(xpath="(//div[contains(@class,'datatable-body-cell-label')])[26]")
+    private static WebElement Buyeredituserlisenpage_Velumanitwouser;
 	
 	@FindBy(xpath="//input[@formcontrolname='title']")
 	private static WebElement Buyeredituserlisenpage_Jobtitle; 

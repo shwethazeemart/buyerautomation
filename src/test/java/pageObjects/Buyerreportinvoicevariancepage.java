@@ -36,8 +36,8 @@ public class Buyerreportinvoicevariancepage {
 	
 	
 	
-	@FindBy(xpath = "//h1[text()='Invoice variance']")
-	private static WebElement Buyerreportinvoicevariancepage_Invoicevariance;
+	//@FindBy(xpath = "//h1[text()='Invoice variance']")
+	//private static WebElement Buyerreportinvoicevariancepage_Invoicevariance;
 	
 	@FindBy(xpath = "//input[@placeholder='Search invoice']")
 	private static WebElement Buyerreportinvoicevariancepage_Searchbox;
@@ -80,11 +80,11 @@ public class Buyerreportinvoicevariancepage {
 	
 	 
 	public static void Clickinvoicevarianceicon() {
-		//WebElement invoiceVar = driver.findElement(By.className("violetBox"));
-		//invoiceVar.click();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 	    js.executeScript("window.scrollBy(0, 1000);");
-		Buyerreportinvoicevariancepage_Invoicevariance.click(); 
+		WebElement invoiceVar = driver.findElement(By.className("violetBox"));
+		invoiceVar.click();
+		//Buyerreportinvoicevariancepage_Invoicevariance.click(); 
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {

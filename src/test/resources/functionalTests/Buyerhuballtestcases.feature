@@ -692,7 +692,7 @@ Scenario Outline: Verify the New recurring orders page of Buyer panel
          When User enter exact username"<username>"
          And User enter exact password"<password>"
          And User is click login button  
-         And User Clicks Orders in the side navigation menubar
+         And User is Clicks Orders in the side navigation menubar
          And User Clicks New order dropdown value
          Then User click on New weekly order
          Then User click on dropdown of weekly order

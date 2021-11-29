@@ -86,8 +86,7 @@ public class Buyeroutletsmanagesettingspage {
 
 	
 
-	@FindBy(xpath = "(//div[@class='modal-content'])[3]")
-
+	@FindBy(xpath = "//h4[text()='Add member']")
 	private static WebElement Buyeroutletsmanagesettingspage_Outsidesection;
 	
 	
