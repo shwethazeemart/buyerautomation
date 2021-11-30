@@ -33,11 +33,11 @@ public class OutletsPagesteps {
 	}
 	
 	
-	@FindBy(xpath = "(//div[@class='datatable-body-cell-label']//div)[3]")
+	@FindBy(xpath = "(//a[@class='zmdropDownBtn'])[2]")
 	private static WebElement OutletsPagesteps_actions_dropdown;  
 	
-	@FindBy(xpath = "(//a[@class='dropdown-item'])[3]")
-	private static WebElement OutletsPagesteps_View_suppliers;
+	//@FindBy(xpath = "(//div[@class='zmDropDown']//a)[3]")
+	//private static WebElement OutletsPagesteps_View_suppliers;
 	
 	//@FindBy(xpath = "//div[@class='ng-star-inserted']//a[1]")
 	//private static WebElement OutletsPagesteps_Actions_dropdown;
@@ -59,7 +59,9 @@ public class OutletsPagesteps {
 	}
 
 	public static void clicks_View_suppliers() {
-		OutletsPagesteps_View_suppliers.click();
+		WebElement viewSuppliers = driver.findElement(By.linkText("View suppliers"));
+		viewSuppliers.click();
+		//OutletsPagesteps_View_suppliers.click();		
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {

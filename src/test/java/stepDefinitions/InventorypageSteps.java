@@ -249,23 +249,32 @@ public class InventorypageSteps {
 		select.selectByIndex(5);
 	}
 
+	@Then("User are Clicks the first check box")
+	public void user_are_Clicks_the_first_check_box() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("User is Clicks the increase counted Quantity")
+	public void user_is_Clicks_the_increase_counted_Quantity() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("User are Clicks the increase second time counted Quantity")
+	public void user_are_Clicks_the_increase_second_time_counted_Quantity() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("User are Click adjusment button")
+	public void user_are_Click_adjusment_button() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+
 	
-	@Then("User are Clicks the vsla list")
-	public void user_are_Clicks_the_vsla_list() {
-		//inventorypage.Clickvslalist();   
-	}
-
-	@Then("User is Clicks in  outlet {string}")
-	public void user_is_Clicks_in_outlet(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	   
-	}
-
-	@Then("User are Clicks the list\"sairam\"")
-	public void user_are_Clicks_the_list_sairam() {
-	    // Write code here that turns the phrase above into concrete actions
-	  
-	}
 
 
 

@@ -41,7 +41,7 @@ public class BuyerinventorySKUlisenpage {
 	@FindBy(xpath = "//button[text()=' New stock count ']")
 	private static WebElement BuyerinventorySKUlisenpage_stockcount;
 	
-	@FindBy(xpath = "//img[@src='./assets/zmcore/img/close-blue-x.svg']")
+	@FindBy(xpath = "//h4[text()='New stock count']/following-sibling::button")
 	private static WebElement BuyerinventorySKUlisenpage_stockcountcloseicon;
 	
 	@FindBy(xpath = "//button[text()=' Adjustment ']")
