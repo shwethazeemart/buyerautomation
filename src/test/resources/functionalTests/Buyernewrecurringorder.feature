@@ -28,9 +28,8 @@ Scenario Outline: Verify the New recurring orders page of Buyer panel
           Then User Clicks on nineth time increase the order button in the first product
           Then User Clicks on Review Order button
           Then User Clicks on Save recurring order
-          Then It should display the particular order in recurring orders page
+         
           
           Examples:
              |username                               |  |password    |
              |velumanieswaran2020@gmail.com          |  |!123456Zm   |     
-         

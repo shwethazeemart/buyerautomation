@@ -73,7 +73,8 @@ public class Buyerinventoryoutletslisenpage {
 	@FindBy(xpath = "//button[@class='close pull-right']")
 	private static WebElement Buyerinventoryoutletslisenpage_newlistcloseicon;
 	
-	@FindBy(xpath = "//img[@src='assets/zmcore/img/close-blue.svg']")
+
+	@FindBy(xpath = "//h4[text()='Upgrade to use this feature']/following-sibling::button")
 	private static WebElement Buyerinventoryoutletslisenpage_starterplancloseicon;
 	
 	
@@ -90,7 +91,7 @@ public class Buyerinventoryoutletslisenpage {
 	//@FindBy(xpath = "//a[contains(@class,'title-clr pl-1 ng-star-inserted')]") 
 	//private static WebElement Buyerinventoryoutletslisenpage_returntooutletpage;
 
-   
+	//(//datatable-body-cell[contains(@class,'datatable-body-cell sort-active ng-star-inserted')])[8]
 
  
 	public static void clickoutletsicon() {

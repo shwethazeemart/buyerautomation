@@ -1,5 +1,6 @@
 Feature: Verify Buyer hub entire Reports screen testcases
 
+
 Scenario Outline: Verify the Reports spending per outlet page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -42,17 +43,21 @@ Scenario Outline: Verify the Reports spending per outlet page of Buyer panel
           Then User click on Detailed report
           
           
-          
-       @dev    
+
+      @dev    
       Examples: 
       | username                      | | password   |
       | buyerautomated3@gmail.com     | |!123456Zm   |
-
-
+      
+           
       @naren    
       Examples: 
       | username                      | | password   |
       | buyerautomated1@gmail.com     | |!123456Zm   |
+      
+      
+      
+     
 
 Scenario Outline: Verify the Reports spending per supplier page of Buyer panel 
           Given User is on Login Page
@@ -73,17 +78,20 @@ Scenario Outline: Verify the Reports spending per supplier page of Buyer panel
           And User click Export download button
           
              
-          
-      @dev     
+
+     @dev     
      Examples: 
       | username                      | | password   ||name     | |outletname  |
       |buyerautomated3@gmail.com      | |!123456Zm   ||sabari250| |velumasala  |
-
-
+      
+               
      @naren    
      Examples: 
       | username                      | | password   ||name     | |outletname  |
       |buyerautomated1@gmail.com      | |!123456Zm   ||sabari250| |velumasala  |
+      
+      
+      
 
  Scenario Outline: Verify the Reports spending per SKU page of Buyer panel 
           Given User is on Login Page
@@ -109,17 +117,18 @@ Scenario Outline: Verify the Reports spending per supplier page of Buyer panel
           Then User click on outside in sku
           Then User click on export download button in sku
           
-          
-      @dev     
+  @dev     
      Examples: 
       | username                      | | password   ||name     |  |outletname  | 
       | buyerautomated3@gmail.com     | |!123456Zm   ||100pipers|  |velumasala  | 
-
+      
      @naren  
      Examples: 
       | username                      | | password   ||name     |  |outletname  | 
       | buyerautomated1@gmail.com     | |!123456Zm   ||100pipers|  |velumasala  | 
       
+
+     
 Scenario Outline: Verify the Reports spending per Category page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -133,7 +142,7 @@ Scenario Outline: Verify the Reports spending per Category page of Buyer panel
           Then User click on search icon in category
           Then User click on filter in category
           And User click on outlets in category
-          Then User click on Check box of in category "<outletname>" 	
+          Then User click on Check box of in category "<outletname>"
           Then User click on apply button in category
           And User click on reset button in category
           Then User click on outside in category
@@ -144,12 +153,12 @@ Scenario Outline: Verify the Reports spending per Category page of Buyer panel
           And User click on reset button in category
           Then User click on outside in category
           
-         @dev     
+    @dev     
       Examples: 
       | username                      | | password   ||name     |   |outletname  | 
       | buyerautomated3@gmail.com     | |!123456Zm   ||Beer     |   |velumasala  | 
-
-      @naren    
+      
+@naren    
       Examples: 
       | username                      | | password   ||name     |   |outletname  | 
       | buyerautomated1@gmail.com     | |!123456Zm   ||Beer     |   |velumasala  | 
@@ -177,17 +186,20 @@ Scenario Outline: Verify the Reports spending per tag page of Buyer panel
           And User click on reset button in tag
           Then User click on outside in tag
           Then User click on Export download button in tag 
+
           
-         @dev    
+      
+      @dev    
       Examples: 
       | username                      | | password   ||name       |  |outletname  |
       |  buyerautomated3@gmail.com    | |!123456Zm   ||masala     |  |velumasala  |                     
+      
 
       @naren    
       Examples: 
       | username                      | | password   ||name       |  |outletname  |
-      |  buyerautomated1@gmail.com    | |!123456Zm   ||masala     |  |velumasala  |                     
- 
+      |  buyerautomated1@gmail.com    | |!123456Zm   ||masala     |  |velumasala  |  
+                      
 Scenario Outline: Verify the Reports invoice variance page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -208,17 +220,18 @@ Scenario Outline: Verify the Reports invoice variance page of Buyer panel
           Then User click on export download button in invoice variance
           Then User click on Reports back button in invoice variance
           
-          
-     @dev      
+   @dev      
      Examples: 
       | username                      | | password   ||invoice     |  |outletname  |
       | buyerautomated3@gmail.com     | |!123456Zm   ||vel-1234567 |  |velumasala  | 
-
+      
       @naren
       Examples: 
       | username                      | | password   ||invoice     |  |outletname  |
       | buyerautomated1@gmail.com     | |!123456Zm   ||vel-1234567 |  |velumasala  | 
       
+      
+   
  Scenario Outline: Verify the Reports price updates page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -240,13 +253,18 @@ Scenario Outline: Verify the Reports invoice variance page of Buyer panel
           Then User click on Reports back button in price updates
           Then User click on Reports back button in sku page
           
-      @dev     
+     @dev     
      Examples: 
       | username                      | | password   ||sku       |  |outletname  | |suppliername  |
       | buyerautomated3@gmail.com     | |!123456Zm   ||100pipers |  |velumasala  | |sabari        |
-
-
+            
+      
      @naren    
      Examples: 
       | username                      | | password   ||sku       |  |outletname  | |suppliername  |
       | buyerautomated3@gmail.com     | |!123456Zm   ||100pipers |  |velumasala  | |sabari        |
+       
+      
+      
+      
+          

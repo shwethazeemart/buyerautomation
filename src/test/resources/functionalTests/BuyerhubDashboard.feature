@@ -10,7 +10,7 @@ Scenario Outline: Verify the Dashboard lisen page of Buyer panel
           Then User click on sabari supplier
           And User click on show favourites check box
           Then User click on show favourites uncheck box
-          And User click on filter in order page
+          And User click on filter in order page 
           Then User click on Tags
           And User click on selectall
           Then User click on Apply button in order page
@@ -38,7 +38,7 @@ Scenario Outline: Verify the Dashboard lisen page of Buyer panel
           Then User click on Past twelve week icon
           Then User click on view spending report icon
           Then User click on Dashboard side navigation menubar
-         And User select dropdown top expenditures list of "<outletname>"
+        And User select dropdown top expenditures list of "<outletname>"
           Then User click on SKU icon
           Then User click on category icon 
           And User click on supplier icon
@@ -48,13 +48,18 @@ Scenario Outline: Verify the Dashboard lisen page of Buyer panel
           And User click on Last month icon
           Then User click on view all spending by supplier
           
-          @dev
+      @dev
           Examples:
          |username                            |  |password    ||name     |  |outletname  |
          |buyerautomated3@gmail.com           |  |!123456Zm   ||100pipers|  |velu masala |
 
 
+       
           @naren
           Examples:
          |username                            |  |password    ||name     |  |outletname  |
          |buyerautomated1@gmail.com           |  |!123456Zm   ||100pipers|  |velu masala |
+         
+         
+          
+

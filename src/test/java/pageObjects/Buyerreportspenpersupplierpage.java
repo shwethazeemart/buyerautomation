@@ -59,7 +59,7 @@ public class Buyerreportspenpersupplierpage {
 	@FindBy(xpath = "(//button[@type='button'])[3]")
 	private static WebElement Buyerreportspenpersupplierpage_Applybutton;
 	
-	@FindBy(xpath = "//div[@class='flex__bwn flex__pad']/following-sibling::div[1]")
+	@FindBy(xpath = "//div[text()='Spending report']") 
 	private static WebElement Buyerreportspenpersupplierpage_Outside;
 	
 	@FindBy(xpath = "(//div[contains(@class,'datatable-body-cell-label')])[10]")
@@ -197,49 +197,7 @@ public class Buyerreportspenpersupplierpage {
 		} 
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
-
-
-
 	}
-	
-	
-	
-	
 		
 }
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-

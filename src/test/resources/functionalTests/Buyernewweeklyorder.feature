@@ -18,4 +18,6 @@ Scenario Outline: Verify the New Weekly Order page of Buyer panel
          
          Examples:
            |username                     |  |password    |
-           |velumanieswaran2020@gmail.com|  |!123456Zm   |    
+           |velumanieswaran2020@gmail.com|  |!123456Zm   |     
+           
+           

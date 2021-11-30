@@ -74,6 +74,7 @@ public class Buyerreportspenpercategory {
 	    Buyerreportspenpercategorypage.Clickoutlets();
 	}
 
+
 	 @Then("User click on Check box of in category {string}")
 	   public void user_click_on_Check_box_of_in_category(String outlet) {
 		   Buyerreportspenpercategorypage.Clickonoutlet();
@@ -86,7 +87,7 @@ public class Buyerreportspenpercategory {
 
 	@Then("User click on reset button in category")
 	public void user_click_on_reset_button_in_category() {
-	   Buyerreportspenpercategorypage.Clickresetbutton();
+	   //Buyerreportspenpercategorypage.Clickresetbutton();
 	}
 
 	@Then("User click on outside in category")

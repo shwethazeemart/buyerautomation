@@ -29,3 +29,4 @@ Scenario Outline: Verify the Inventory Outlets lisen page of Buyer panel
           Examples:
          |username                            |  |password    ||outletname     |
          |velumanieswaran2020@gmail.com       |  |!123456Zm   ||velu masala2020|
+         

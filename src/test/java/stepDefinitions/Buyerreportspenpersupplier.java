@@ -64,6 +64,7 @@ public class Buyerreportspenpersupplier {
 	    Buyerreportspenpersupplierpage.Clickonoutlets();
 	}
 
+
 	@Then("User click on check box {string}")
 	public void user_click_on_check_box(String outletname) {
 		 Buyerreportspenpersupplierpage.Clickonoutlet();

@@ -74,11 +74,13 @@ public class OrderspageSteps<txtBoxContent> {
 		OrdersPage.click_Neworder1();
 	}
 
+
 	@Then("User click on in the supplier page {string}")
 	public void user_click_on_in_the_supplier_page(String outletname) {
 		OrdersPage.clickonoutlet();
 	}
-
+	
+		
 	@Given("User Clicks in Add to order of SKU")
 	public void user_Clicks_in_Add_to_order_of_SKU() {
 		OrdersPage.click_Addtoorder();
@@ -213,7 +215,13 @@ public class OrderspageSteps<txtBoxContent> {
 	   OrdersPage.Clickonviewoutletsofsabarisupplier();
 	}
 
-	
+
+	@Then("User click on  in the supplier page {string}")
+	public void user_click_on_in_the_supplier_page1(String outletnameone) {
+		OrdersPage.click_velumasala2020(outletnameone);
+	}
+
+
 	@Then("User click on Actions dropdown of velumasala")
 	public void user_click_on_Actions_dropdown_of_velumasala() {
 	    OrdersPage.Clickonactionsdropdownofvelumasala();
@@ -224,6 +232,7 @@ public class OrderspageSteps<txtBoxContent> {
 	   OrdersPage.Clickonmanagesettingofvelumasala();
 	}
 
+	
 	@Then("User click on uncheck of default setting")
 	public void user_click_on_uncheck_of_default_setting() {
 	    OrdersPage.Clickonuncheckofdefaultsetting();
@@ -318,7 +327,7 @@ public class OrderspageSteps<txtBoxContent> {
 	@Then("User click on close icon first pop message")
 	public void user_click_on_close_icon_first_pop_message() {
 	    OrdersPage.Clickcloseiconfirstpop();
-	}
+	}	
 
 	@Then("User click on in the supplier page")
 	public void user_click_on_in_the_supplier_page() throws InterruptedException {

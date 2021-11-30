@@ -1,4 +1,5 @@
 Feature: verify Buyer page and the test all the page
+
  
 Scenario Outline: Customer wants to reset password
     Given User is on Login Page
@@ -13,11 +14,11 @@ Scenario Outline: Customer wants to reset password
     And User enters valid registered email "<regesteredEmail>"
     Then User get display the popup message
     
-   @dev 
+    @dev 
     Examples: 
       | username                      || invalidEmail        | noregisteredEmail | regesteredEmail               |
       | buyerautomated3@gmail.com     || guindyusergmail.com | user@aacbd.com    | buyerautomated3@gmail.com     | 
-
+      
       @naren
       Examples: 
       | username                      || invalidEmail        | noregisteredEmail | regesteredEmail               |
@@ -30,16 +31,16 @@ Scenario Outline: Customer wants to reset password
     And User Clicks Login button
     Then User shown with invalid userName,password error message "Invalid Username/Password"
 
-
-      @dev 
+    @dev 
     Examples:
      | username                       || password |
      | buyerautomated3@gmail.com      || !123456Z | 
-
+     
     @naren 
     Examples:
      | username                       || password |
      | buyerautomated1@gmail.com      || !123456Z | 
+     
      
      
   Scenario Outline: Customer Success fully logins to buyer hub
@@ -56,12 +57,12 @@ Scenario Outline: Customer wants to reset password
     And User enters valid registered email "<regesteredEmail>"
     When User clicks on Send request for password reset
     Then User shown with password reset email sent screen
-
-      @dev
+    
+    @dev
     Examples:  
       | invalidEmail        | noregisteredEmail | regesteredEmail      |
       | guindyusergmail.com | user@aacbd.com    | guindyuser@gmail.com |
-
+    
       @naren
       Examples:  
       | invalidEmail        | noregisteredEmail | regesteredEmail      |
@@ -74,18 +75,18 @@ Scenario Outline: Customer wants to reset password
     And User Clicks Login button
     Then User routed to dashboard page "Dashboard | Buyer Hub"
 
-   @dev
+    @dev
     Examples: 
       | username                      | | password  |
       |  buyerautomated3@gmail.com    | |!123456Zm   |
-
+      
     @naren  
     Examples: 
       | username                      | | password  |
       |  buyerautomated1@gmail.com    | |!123456Zm   |
-
-
-   
+ 
+ 
+    
 Scenario Outline: Verify the Outlets page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>" 
@@ -96,17 +97,18 @@ Scenario Outline: Verify the Outlets page of Buyer panel
           Then User clicks on View suppliers
           And User clicks on the actions dropdown
           Then User Clicks on the view orders
-           
+        
     @dev      
     Examples: 
       | username                      | | password  |
       | buyerautomated3@gmail.com     | |!123456Zm   |
-
+      
     @naren  
     Examples: 
       | username                      | | password  |
       | buyerautomated1@gmail.com     | |!123456Zm   |
-      
+ 
+           
  Scenario Outline: Verify the Reports page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -124,7 +126,8 @@ Scenario Outline: Verify the Outlets page of Buyer panel
     Examples: 
       | username                      | | password  |
       | buyerautomated1@gmail.com     | |!123456Zm   |
-        
+          
+         
 Scenario Outline: Verify the Inventory page Add SKU of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"

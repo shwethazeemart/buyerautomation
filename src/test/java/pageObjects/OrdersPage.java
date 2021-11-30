@@ -204,7 +204,9 @@ public class OrdersPage {
 	@FindBy(xpath = "//div[@class='swal2-content']/following-sibling::div[1]")
 	private static WebElement orderspage_Popmessage;
 	
-	@FindBy(xpath = "(//div[@class='row']//img)[1]")
+
+	@FindBy(xpath = "//img[@src='assets/zmcore/img/close-blue@22.png']")
+
 	private static WebElement orderspage_Closeiconfirstpop;
 	
 	@FindBy(xpath = "//div[text()='VELU MASALA6']")
@@ -268,8 +270,14 @@ public class OrdersPage {
 
 	}
 
+
 	public static void clickonoutlet() {
 		orderspage_Supplieroutlet.click();
+	}
+
+	public static void click_velumasala2020() {
+		//orderspage_velumasala2020.click();
+
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -893,22 +901,21 @@ public class OrdersPage {
 				.executeScript("return document.readyState").equals("complete"));
 		
 	}
+
 	public static void clickonoutletOne() {
 		//orderspage_SupplierpageOutletOne.click();
+	}
+	public static void click_velumasala2020(String outletname) {
+		//orderspage_velumasala2020.click();
+
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 		}
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
-
 	}
-	
-	
 }
-
-
-
 
 
 

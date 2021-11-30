@@ -45,18 +45,26 @@ public class Buyerusernamesettingspage {
 	@FindBy(xpath = "//a[text()=' Details ']/following-sibling::a")
 	private static WebElement Buyerusernamesettingspage_Linkedcompanies;
 	
-	@FindBy(xpath = "(//a[@class='zmdropDownBtn'])[2]")
-	private static WebElement Buyerusernamesettingspage_Velumasaladropdownicon;
+
+	//@FindBy(xpath = "(//div[@class='ng-star-inserted'])[2]")
+	//private static WebElement Buyerusernamesettingspage_Velumasaladropdownicon;
 	
-	@FindBy(xpath = "(//a[@class='dropdown-item'])[2]")
+	
+	@FindBy(xpath = "(//a[@class='dropdown-item'])[2]") 
 	private static WebElement Buyerusernamesettingspage_Managepaymentsettings;
+	//@FindBy(xpath = "(//a[@class='zmdropDownBtn'])[2]")
+	//private static WebElement Buyerusernamesettingspage_Velumasaladropdownicon;
+	
+	//@FindBy(xpath = "(//a[@class='dropdown-item'])[2]")
+	//private static WebElement Buyerusernamesettingspage_Managepaymentsettings;
+
 	
 	@FindBy(xpath = "//p[text()=' My account']")
 	private static WebElement Buyerusernamesettingspage_Backbuttonofmyaccount;
 	
 	
-	@FindBy(xpath = "(//a[@class='dropdown-item'])[3]")
-	private static WebElement Buyerusernamesettingspage_Manageintegration;
+	//@FindBy(xpath = "(//a[@class='dropdown-item'])[3]")
+	//private static WebElement Buyerusernamesettingspage_Manageintegration;
 	
 	
 	
@@ -86,7 +94,7 @@ public class Buyerusernamesettingspage {
 	}
 	public static void Clickonlinkedcompanies() {
 		Buyerusernamesettingspage_Linkedcompanies.click();
-		try {
+		try { 
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 		} 
@@ -95,7 +103,9 @@ public class Buyerusernamesettingspage {
 		
 	}
 	public static void Clickonvelumasaladropdownicon() {
-		Buyerusernamesettingspage_Velumasaladropdownicon.click();
+		WebElement actions = driver.findElement(By.linkText("Actions"));
+		actions.click();
+		//Buyerusernamesettingspage_Velumasaladropdownicon.click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -105,7 +115,9 @@ public class Buyerusernamesettingspage {
 		
 	}
 	public static void Clickonmanagepaymentsettings() {
-		Buyerusernamesettingspage_Managepaymentsettings.click();
+		WebElement managePaymentSettings = driver.findElement(By.linkText("Manage Payment settings"));
+		managePaymentSettings.click();
+		//Buyerusernamesettingspage_Managepaymentsettings.click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -124,7 +136,9 @@ public class Buyerusernamesettingspage {
 				.executeScript("return document.readyState").equals("complete"));
 	}
 	public static void Clickonmanageintegration() {
-		Buyerusernamesettingspage_Manageintegration.click();
+		WebElement manageIntegration = driver.findElement(By.linkText("Manage integration"));
+		manageIntegration.click();
+		//Buyerusernamesettingspage_Manageintegration.click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {

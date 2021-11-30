@@ -20,3 +20,4 @@ Scenario Outline: Verify the Outlets page of Buyer panel
     Examples: 
       | username                      | | password  |
       | buyerautomated1@gmail.com     | |!123456Zm   |
+

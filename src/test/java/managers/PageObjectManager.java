@@ -12,8 +12,19 @@ import pageObjects.OutletsPagesteps;
 import pageObjects.PasswordResetPage;
 import pageObjects.Reportspage;
 import pageObjects.SucessfullyLoginpage;
-
-
+import pageObjects.SupplierAddNewSkuPage;
+import pageObjects.SupplierCatalogueListPage;
+import pageObjects.SupplierCompanySettingsPage;
+import pageObjects.SupplierCustomerCompanyPage;
+import pageObjects.SupplierDirectoryProductPage;
+import pageObjects.SupplierDirectorySettingPage;
+import pageObjects.SupplierPaymentPlansPage;
+import pageObjects.SupplierPaymentsTransactionPgae;
+import pageObjects.SupplierReportAgeingPage;
+import pageObjects.SupplierReportOutletPage;
+import pageObjects.SupplierReportPlanningPage;
+import pageObjects.SupplierReportSkuPage;
+import pageObjects.SupplierTeamListPage;
 import pageObjects.Suppliercustomerlocationlistingpage;
 import pageObjects.Supplierdashboardpage;
 import pageObjects.Supplierinvoicesaddcreditnotepage;
@@ -39,6 +50,7 @@ import stepDefinitions.Outletspagesteps;
 import stepDefinitions.Reportspagesteps;
 //import stepDefinitions.NewRecurringOrderspage;
 import stepDefinitions.SucessfullyLoginPage;
+import stepDefinitions.SupplierDirectoryProduct;
 import stepDefinitions.UserspageSteps;
 import pageObjects.AdminInvoiceuploadpage;
 import pageObjects.Adminbuyerlinktothecompanypage;
@@ -142,7 +154,23 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private Supplierinvoicesaddcreditnotepage Supplierinvoicesaddcreditnote;
     private SupplierUserListPage Supplierusersscreenlisting;
     private SupplierUserListPage SupplierUserList;
-    
+    private SupplierTeamListPage SupplierTeamList;
+    private SupplierCustomerCompanyPage SupplierCustomerCompany;
+    private SupplierCatalogueListPage SupplierCatalogueList;
+    private SupplierAddNewSkuPage SupplierAddNewSku;
+    private SupplierDirectoryProductPage supplierdirectoryproduct;
+
+    private SupplierDirectorySettingPage supplierdirectorysetting;
+
+    private SupplierReportOutletPage SupplierReportOutlet;
+    private SupplierReportSkuPage SupplierReportSku;
+    private SupplierPaymentsTransactionPgae SupplierPaymentsTransaction;
+    private SupplierReportPlanningPage SupplierReportPlanning;
+    private SupplierReportAgeingPage SupplierReportAgeing;
+    private SupplierPaymentPlansPage SupplierPaymentPlans;
+    private SupplierCompanySettingsPage SupplierCompanySettings;
+
+
 
 	public PageObjectManager(WebDriver driver) {
 		this.driver = driver;
@@ -441,16 +469,94 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 		return (SupplierUserList == null) ? (SupplierUserList = new SupplierUserListPage(driver)) : SupplierUserList;
 
 	}
+
+
+	public SupplierTeamListPage getSupplierTeamListPage() {
+		return (SupplierTeamList == null) ? (SupplierTeamList = new SupplierTeamListPage(driver)) : SupplierTeamList;
+
+	}
 	
 	
 	
 	
+	 public SupplierCustomerCompanyPage getSupplierCustomerCompanyPage() {
+			return (SupplierCustomerCompany == null) ? (SupplierCustomerCompany = new SupplierCustomerCompanyPage(driver)) : SupplierCustomerCompany;
+
+		}
+
+
+	public SupplierCatalogueListPage getSupplierCatalogueListPage() {
+		return (SupplierCatalogueList == null) ? (SupplierCatalogueList = new SupplierCatalogueListPage(driver)) : SupplierCatalogueList;
+
+	}
+
+
+	public SupplierAddNewSkuPage getSupplierAddNewSkuPage() {
+		return (SupplierAddNewSku == null) ? (SupplierAddNewSku = new SupplierAddNewSkuPage(driver)) : SupplierAddNewSku;
+
+	}
+
+
+	public SupplierDirectoryProductPage getSupplierDirectoryProductPage() {
+		return (supplierdirectoryproduct == null) ? (supplierdirectoryproduct = new SupplierDirectoryProductPage(driver)) : supplierdirectoryproduct;
+	}
+
+	public SupplierReportOutletPage getSupplierReportOutletPage() {
+		return (SupplierReportOutlet == null) ? (SupplierReportOutlet = new SupplierReportOutletPage(driver)) : SupplierReportOutlet;
+
+	}
+
+
+
+	public SupplierReportSkuPage getSupplierReportSkuPage() {
+		return (SupplierReportSku == null) ? (SupplierReportSku = new SupplierReportSkuPage(driver)) : SupplierReportSku;
+
+	}
+
+
+
+	public SupplierPaymentsTransactionPgae getSupplierPaymentsTransactionPgae() {
+		return (SupplierPaymentsTransaction == null) ? (SupplierPaymentsTransaction = new SupplierPaymentsTransactionPgae(driver)) : SupplierPaymentsTransaction;
+
+	}
 	
+
+	public SupplierReportPlanningPage getSupplierReportPlanningPage() {
+		return (SupplierReportPlanning == null) ? (SupplierReportPlanning = new SupplierReportPlanningPage(driver)) : SupplierReportPlanning;
+
+	}
+
+
+	public SupplierReportAgeingPage getSupplierReportAgeingPage() {
+		return (SupplierReportAgeing == null) ? (SupplierReportAgeing = new SupplierReportAgeingPage(driver)) : SupplierReportAgeing;
+
+	}
+
+
+	public SupplierPaymentPlansPage getSupplierPaymentPlansPage() {
+		return (SupplierPaymentPlans == null) ? (SupplierPaymentPlans = new SupplierPaymentPlansPage(driver)) : SupplierPaymentPlans;
+
+	}
+
+
+	public SupplierCompanySettingsPage getSupplierCompanySettingsPage() {
+		return (SupplierCompanySettings == null) ? (SupplierCompanySettings = new SupplierCompanySettingsPage(driver)) : SupplierCompanySettings;
+
+	}
+
+
+	
+	
+
+
+	public SupplierDirectorySettingPage getSupplierDirectorySettingPage() {
+		return (supplierdirectorysetting == null) ? (supplierdirectorysetting = new SupplierDirectorySettingPage(driver)) : supplierdirectorysetting;
 	
 	} 
 
 
 
+}
 
 
 

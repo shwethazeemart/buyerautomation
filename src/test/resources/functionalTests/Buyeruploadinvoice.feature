@@ -11,8 +11,10 @@ Scenario Outline: Verify the Invoices upload page of Buyer panel
          And User is Clicks on select outlet
          Then User is Clicks on upload the image
          And User is Clicks on Upload button
-         Then It should display the particular image number and process button 
          
+         
+          
      Examples:
              |username                     |  |password    |
              |velumanieswaran2020@gmail.com|  |!123456Zm   |
+ 

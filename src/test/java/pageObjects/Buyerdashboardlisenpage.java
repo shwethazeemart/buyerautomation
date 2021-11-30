@@ -34,7 +34,9 @@ public class Buyerdashboardlisenpage {
 
 	}
 
-
+	///html/body/ngb-modal-window/div/div/addordermodal/div[1]/span/img
+	///html/body/app-root/app-default/div[2]/app-dashboard/outletselectormodel/div/div/div/div/div[1]/img
+	//(//img[@src='./assets/zmcore/img/close-blue.svg'])[2]
 
 	@FindBy(xpath = "//span[contains(@id,'sideMenu_Dashboard')]")
 	private static WebElement Buyerdashboardlisenpage_Dashboardmenubar;
@@ -42,13 +44,13 @@ public class Buyerdashboardlisenpage {
 	@FindBy(xpath = "//button[text()=' New order ']")
 	private static WebElement Buyerdashboardlisenpage_Neworder;
 
-	@FindBy(xpath = "//img[@src='../assets/zmcore/img/close-blue.svg']")
+	@FindBy(xpath = "/html/body/ngb-modal-window/div/div/addordermodal/div[1]/span/img")
 	private static WebElement Buyerdashboardlisenpage_Newordercloseicon;
 
 	@FindBy(xpath = "//button[text()=' Upload invoice ']")
 	private static WebElement Buyerdashboardlisenpage_Uploadinvoiceicon;
 
-	@FindBy(xpath = "(//img[@src='./assets/zmcore/img/close-blue.svg'])[2]")
+	@FindBy(xpath = "/html/body/app-root/app-default/div[2]/app-dashboard/outletselectormodel/div/div/div/div/div[1]/img")
 	private static WebElement Buyerdashboardlisenpage_Uploadinvoicecloseicon;
 
 	@FindBy(xpath = "//div[text()='Spending overview']/following-sibling::select")
@@ -135,7 +137,8 @@ public class Buyerdashboardlisenpage {
 	@FindBy(xpath = "//input[@placeholder='SKU name']")
 	private static WebElement Buyerdashboardlisenpage_Enternamesearchbox;
 	
-	@FindBy(xpath = "//img[@src='../assets/zmcore/img/close-blue.svg']")
+
+	@FindBy(xpath = "/html/body/ngb-modal-window/div/div/addordermodal/div[1]/span/img")
 	private static WebElement Buyerdashboardlisenpage_Closeiconinorderpage;
 	
 	@FindBy(xpath = "//b[text()='velu masala2020']")
@@ -531,7 +534,7 @@ public class Buyerdashboardlisenpage {
 
 	public static void Clickonuploadimage() throws InterruptedException {
 		WebElement uploadBox=driver.findElement(By.xpath("//input[@id='file']"));
-		uploadBox.sendKeys("E:\\Zeemart All\\download.jpg");
+		uploadBox.sendKeys("E:\\Download");
 		Thread.sleep(5000);
 		try {
 			Thread.sleep(5000);
@@ -581,6 +584,17 @@ public class Buyerdashboardlisenpage {
 		
 	}
 
+	public static void Click_velumasala(String outletname) {
+		//Buyerdashboardlisenpage_velumasala.click();
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+
+	}
+	}
 
 
 
@@ -618,4 +632,5 @@ public class Buyerdashboardlisenpage {
 
 
 
-}
+
+

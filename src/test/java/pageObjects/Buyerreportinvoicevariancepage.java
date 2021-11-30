@@ -13,8 +13,8 @@ import managers.FileReaderManager;
 public class Buyerreportinvoicevariancepage {
 
 	private static final WebElement Buyerreportinvoicevariancepage_selectoutlet = null;
-		
-private static WebDriver driver;
+
+	private static WebDriver driver;
 
 	public Buyerreportinvoicevariancepage(WebDriver driver) {
 
@@ -36,8 +36,8 @@ private static WebDriver driver;
 	
 	
 	
-	//@FindBy(xpath = "//input[@placeholder='Product code or name']")
-	//private static WebElement Buyerreportinvoicevariancepage_Invoicevariance;
+	@FindBy(xpath = "//h1[text()='Invoice variance']")
+	private static WebElement Buyerreportinvoicevariancepage_Invoicevariance;
 	
 	@FindBy(xpath = "//input[@placeholder='Search invoice']")
 	private static WebElement Buyerreportinvoicevariancepage_Searchbox;
@@ -80,8 +80,11 @@ private static WebDriver driver;
 	
 	 
 	public static void Clickinvoicevarianceicon() {
-		WebElement invoiceVar = driver.findElement(By.className("violetBox"));
-		invoiceVar.click();
+		//WebElement invoiceVar = driver.findElement(By.className("violetBox"));
+		//invoiceVar.click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+	    js.executeScript("window.scrollBy(0, 1000);");
+		Buyerreportinvoicevariancepage_Invoicevariance.click(); 
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -235,8 +238,9 @@ private static WebDriver driver;
 			} 
 			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 					.executeScript("return document.readyState").equals("complete"));
-
+		
 		}
+		
 	
 	}
 	

@@ -19,4 +19,5 @@ Scenario Outline: Verify the Payment transactions page of Buyer panel
           
      Examples: 
       | username                      | | password   |
-      | velumanieswaran2020@gmail.com | |!123456Zm   |
+      | velumanieswaran2020@gmail.com | |!123456Zm   |      
+      

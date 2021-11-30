@@ -41,8 +41,10 @@ Scenario Outline: Verify the New Order page of Buyer panel
              |Order ID       ||username                   | |password    | |outletname      |
              |202110270051   ||buyerautomated1@gmail.com  | |!123456Zm   | |velumasala2020  |
              
-Scenario Outline: Verify the New Order outstanding options page of Buyer panel   
- 
+         
+   
+   Scenario Outline: Verify the New Order outstanding options page of Buyer panel   
+
          Given User is on Login Page
          When User enter exact username"<username>"
          And User enter exact password"<password>"
@@ -77,3 +79,6 @@ Scenario Outline: Verify the New Order outstanding options page of Buyer panel
              |username                     |  |password    |  |outletname      | |outletnameone   |   |outletnametwo      |
              |buyerautomated1@gmail.com    |  |!123456Zm   |  |velumasalathree | |velumasalasix   |   |velumasalatwofifty |
     
+
+ 
+

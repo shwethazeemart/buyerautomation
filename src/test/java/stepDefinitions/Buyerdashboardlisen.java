@@ -76,6 +76,7 @@ public class Buyerdashboardlisen {
 		select.selectByIndex(3);
 	}
 
+	
 	@Then("User click on YTD icon")
 	public void user_click_on_YTD_icon() throws InterruptedException {
 	  Buyerdashboardlisenpage.ClickonYTDicon();
@@ -108,6 +109,7 @@ public class Buyerdashboardlisen {
 		select.selectByIndex(3);
 	}
 
+	
 	@Then("User click on SKU icon")
 	public void user_click_on_SKU_icon() throws InterruptedException {
 	   Buyerdashboardlisenpage.ClickonSKUicon(); 
@@ -210,11 +212,20 @@ public class Buyerdashboardlisen {
 	    Buyerdashboardlisenpage.Clickoncloseiconinorderpage();
 	}
 
+
 	@Then("User click on {string}")
 	public void user_click_on(String outletname) {
 		 Buyerdashboardlisenpage.clickonOutletOne();
 	}
 
+ 
+	//@Then("User click on {string}")
+	//public void user_click_on(String outletname) {
+		 //Buyerdashboardlisenpage.Click_velumasala(outletname);
+
+
+	
+	
 	@Then("User click on upload image in drag and dorp filed")
 	public void user_click_on_upload_image_in_drag_and_dorp_filed() throws InterruptedException {
 	    Buyerdashboardlisenpage.Clickonuploadimage();
@@ -236,42 +247,4 @@ public class Buyerdashboardlisen {
 	public void user_click_on_Reset_button_in_order_page() throws InterruptedException {
 	  //Buyerdashboardlisenpage.Clickonresetbutton();
 	}*/
-
-
-
-	
-	
-	 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }

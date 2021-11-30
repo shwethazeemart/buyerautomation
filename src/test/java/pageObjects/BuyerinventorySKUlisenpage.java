@@ -41,13 +41,14 @@ public class BuyerinventorySKUlisenpage {
 	@FindBy(xpath = "//button[text()=' New stock count ']")
 	private static WebElement BuyerinventorySKUlisenpage_stockcount;
 	
+
 	@FindBy(xpath = "//h4[text()='New stock count']/following-sibling::button")
 	private static WebElement BuyerinventorySKUlisenpage_stockcountcloseicon;
 	
 	@FindBy(xpath = "//button[text()=' Adjustment ']")
 	private static WebElement BuyerinventorySKUlisenpage_Recordadjustment;
 	
-	@FindBy(xpath = "//img[@src='./assets/zmcore/img/close-blue-x.svg']")
+	@FindBy(xpath = "//h4[text()='Adjustment record']/following-sibling::button")
 	private static WebElement BuyerinventorySKUlisenpage_Recordadjustmentcloseicon;
 	
 	@FindBy(xpath = "(//img[@src='./assets/zmcore/img/download-icon.svg'])[1]")
@@ -71,19 +72,20 @@ public class BuyerinventorySKUlisenpage {
 	@FindBy(xpath = "//button[text()=' Edit par level ']")
 	private static WebElement BuyerinventorySKUlisenpage_Editparlevel;
 	
-	@FindBy(xpath = "(//img[@class='p-close'])[1]")
+	@FindBy(xpath = "//h4[text()='Edit par level']/following-sibling::button")
 	private static WebElement BuyerinventorySKUlisenpage_Editparlevelcloseicon;
 	
 	@FindBy(xpath = "//button[text()=' Remove from inventory ']")
 	private static WebElement BuyerinventorySKUlisenpage_Removefrominventory;
 	
-	@FindBy(xpath = "(//img[@src='./assets/zmcore/img/close-blue.svg'])[3]")
+
+	@FindBy(xpath = "//h4[text()='Are you sure?']/following-sibling::button")
 	private static WebElement BuyerinventorySKUlisenpage_Removefrominventorycloseicon;
 	
 	@FindBy(xpath = "//button[text()=' Clear ']")
 	private static WebElement BuyerinventorySKUlisenpage_Clearicon;
 	
-	@FindBy(xpath = "(//img[@src='./assets/zmcore/img/close-blue.svg'])[3]")
+	@FindBy(xpath = "//h4[text()='Are you sure?']/following-sibling::button")
 	private static WebElement BuyerinventorySKUlisenpage_Closeiconofremoveinventory;
 	
 	@FindBy(xpath = "//button[text()=' Consumption report ']")
@@ -306,32 +308,6 @@ public class BuyerinventorySKUlisenpage {
 		
 		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }
+	
+	

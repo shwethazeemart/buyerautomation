@@ -69,6 +69,7 @@ public class Buyerreportinvoicevariance {
 	    //Buyerreportinvoicevariancepage.Selectdatefromcalendar();
 	}
 
+
 	@Then("User select from dropdown value of {string}")
 	public void user_select_from_dropdown_value_of(String outletname) {
 		WebElement velumasala2020 = Buyerreportinvoicevariancepage.getDropDownElementoutletname();
@@ -121,34 +122,4 @@ public class Buyerreportinvoicevariance {
 	    Buyerreportinvoicevariancepage.Clickreportsbackbutton();
 	} 
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }
