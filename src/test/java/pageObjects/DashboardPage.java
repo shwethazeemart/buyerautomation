@@ -74,10 +74,9 @@ public class DashboardPage {
 	@FindBy(xpath = "//span[contains(@Id,'sideMenu_Users')] ")
 	private  WebElement button_Users;
 
-
-	@FindBy(xpath = "//span[contains(@Id,'sideMenu_Inventory')]")
+	@FindBy(xpath = "//span[contains(@Id,'sideMenu_Inventory')] ")
 	private  WebElement button_Inventory;
-
+	
 	@FindBy(xpath = "//span[contains(@Id,'sideMenu_Outlets')] ")
 	private  WebElement button_Outlets;
 	
@@ -241,11 +240,6 @@ public class DashboardPage {
 	}
 	
 
-	
-	
-	
-	
-	
 	public void clickAdminInvoices() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
 		button_AdminInvoices.click();

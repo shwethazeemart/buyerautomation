@@ -10,9 +10,9 @@ Scenario Outline: Verify the Inventory Outlets lisen page of Buyer panel
           Then User click on settings
           And User click on settings close icon
           Then User click on Export download icon
-          And User click on new list of sstmasala
+          And User click on new list "<outletnameone>"
           Then User click on new list close icon
-          And User click on starter plan of sstmasala
+          And User click on starter plan "<outletnametwo>"
           Then User click on starter plan close icon
           Then User click on search outlets
           And User send outlet name in search icon"<outletname>"
@@ -21,12 +21,12 @@ Scenario Outline: Verify the Inventory Outlets lisen page of Buyer panel
           Then User click on uncheckbox of Has items below par
           Then User click on checkbox of last count 
           Then User click on uncheckbox of last count
-          Then User click on velu masala
+          Then User click on outletname
           Then User click vertically scroll up in the page
           And User return to outlet page
            
           
           Examples:
-         |username                            |  |password    ||outletname     |
-         |velumanieswaran2020@gmail.com       |  |!123456Zm   ||velu masala2020|
+         |username                       |  |password    ||outletname     ||outletnameone | |outletnametwo |
+         |buyerautomated3@gmail.com      |  |!123456Zm   ||velu masala2020||sstmasala     | |sstmasala2020 |
          
