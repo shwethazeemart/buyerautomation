@@ -1,5 +1,5 @@
   Feature: Verify Buyer Inventory Outlets lisen page and test all the page
-
+@Smoke
 Scenario Outline: Verify the Inventory Outlets lisen page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -25,8 +25,14 @@ Scenario Outline: Verify the Inventory Outlets lisen page of Buyer panel
           Then User click vertically scroll up in the page
           And User return to outlet page
            
-          
+          @dev
           Examples:
          |username                       |  |password    ||outletname     ||outletnameone | |outletnametwo |
          |buyerautomated3@gmail.com      |  |!123456Zm   ||velu masala2020||sstmasala     | |sstmasala2020 |
+         
+           @naren
+          Examples:
+         |username                       |  |password    ||outletname     ||outletnameone | |outletnametwo |
+         |buyerautomated1@gmail.com      |  |!123456Zm   ||velu masala2020||sstmasala     | |sstmasala2020 |
+         
          

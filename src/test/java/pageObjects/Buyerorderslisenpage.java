@@ -88,7 +88,7 @@ public class Buyerorderslisenpage {
 	@FindBy(xpath = "//div[text()=' Outlet  ']")
 	private static WebElement Buyerorderslisenpage_Outletfiltericon;
 	
-	@FindBy(xpath = "//div[text()=' Supplier  ']")
+	@FindBy(xpath = "//span[text()='Supplier']")
 	private static WebElement Buyerorderslisenpage_Suppliericon;
 	
 	@FindBy(xpath = "//div[text()=' Order status  ']")
@@ -101,7 +101,7 @@ public class Buyerorderslisenpage {
 	private static WebElement Buyerorderslisenpage_Ordertype;
 	
 	@FindBy(xpath = "(//input[@class='custom-control-input'])[2]")
-	private static WebElement Buyerorderslisenpage_Checkboxoffirstorder;
+	private static WebElement Buyerorderslisenpage_Checkboxofthirdorder;
 	
 	@FindBy(xpath = "//button[text()=' Download orders ']")
 	private static WebElement Buyerorderslisenpage_Downloadorderbutton;
@@ -143,13 +143,9 @@ public class Buyerorderslisenpage {
 	private static WebElement Buyerorderslisenpage_Sabarisupplierorder;
 	
 	@FindBy(xpath = "//a[contains(@class,'btn pdf_btn')]")
-	private static WebElement Buyerorderslisenpage_PDFdownloadbutton;
-	
-	
-	
+	private static WebElement Buyerorderslisenpage_PDFdownloadbutton;	
 
 	@FindBy(xpath = "//h4[text()='Download receiving list']/following-sibling::button")
-
 	private static WebElement Buyerorderslisenpage_Closeicon;
 	
 	@FindBy(xpath = "(//div[@class='btn-group ml-auto']//a)[1]")
@@ -165,12 +161,6 @@ public class Buyerorderslisenpage {
 	private static WebElement Buyerorderslisenpage_Resetbuttoninorder;
 	
 	
-	
-	
-	
-	
-	
-
 	public static void Clickonneworderdropdown() {
 		Buyerorderslisenpage_Neworderdropdown.click();
 		try {
@@ -436,9 +426,9 @@ public class Buyerorderslisenpage {
 		
 	}
 
-	public static void Clickoncheckboxoffirstorder() throws InterruptedException {
+	public static void Clickoncheckboxofthirdorder() throws InterruptedException {
 		Thread.sleep(5000);
-		Buyerorderslisenpage_Checkboxoffirstorder.click();
+		Buyerorderslisenpage_Checkboxofthirdorder.click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -663,23 +653,6 @@ public class Buyerorderslisenpage {
 				.executeScript("return document.readyState").equals("complete"));
 		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 }

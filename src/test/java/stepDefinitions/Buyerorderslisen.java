@@ -146,8 +146,8 @@ public class Buyerorderslisen {
 		Buyerorderslisenpage.Clickonoutletinfilter();
     }
 
-	@Then("User Click on supplier in order page")
-	public void user_Click_on_supplier_in_order_page() {
+	@Then("User click on supplier order")
+	public void user_click_on_supplier_order() {
 		Buyerorderslisenpage.Clickonsupplier();
 	}
 
@@ -166,10 +166,11 @@ public class Buyerorderslisen {
 		Buyerorderslisenpage.Clickonordertype();
 	}
 
-	@Then("User click on check box of first order")
-	public void user_click_on_check_box_of_first_order() throws InterruptedException {
-		Buyerorderslisenpage.Clickoncheckboxoffirstorder();
+	@When("User click on check box of third order")
+	public void user_click_on_check_box_of_third_order() throws InterruptedException {
+		Buyerorderslisenpage.Clickoncheckboxofthirdorder();
 	}
+	
 
 	@Then("User click on download orders button in order page")
 	public void user_click_on_download_orders_button_in_order_page() {
@@ -191,8 +192,8 @@ public class Buyerorderslisen {
 		Buyerorderslisenpage.Clickonclearbutton();
 	}
 
-	@Then("User click on sabari supplier order")
-	public void user_click_on_sabari_supplier_order() {
+	@Then("User click on the supplier order")
+	public void user_click_on_the_supplier_order() {
 		Buyerorderslisenpage.Clickonsabarisupplierorder();
 	}
 
@@ -231,8 +232,8 @@ public class Buyerorderslisen {
 		//Buyerorderslisenpage.Clickonconfirmcancelbutton();
 	}
 
-	@Then("User click on sabari supplier order in order page")
-	public void user_click_on_sabari_supplier_order_in_order_page() {
+	@Then("User click on supplier order in order page")
+	public void user_click_on_supplier_order_in_order_page() {
 		//Buyerorderslisenpage.Clickonsabarisupplier();
 	}
 
@@ -240,11 +241,6 @@ public class Buyerorderslisen {
 	public void user_click_on_PDF_download_button() {
 		Buyerorderslisenpage.ClickonPDFdownloadbutton();
 	}
-
-
-
-
-
 
 	@Then("User click on close icon in order first page")
 	public void user_click_on_close_icon_in_order_first_page() {
@@ -256,13 +252,10 @@ public class Buyerorderslisen {
 	    Buyerorderslisenpage.Clickonfilterinorderpage();
 	}
 
-
 	@Then("User click on select all icon in order page")
 	public void user_click_on_select_all_icon_in_order_page() {
 	    Buyerorderslisenpage.Clickonselectall();
 	}
-
-
 
 	@Then("User click on Apply button in order in first page")
 	public void user_click_on_Apply_button_in_order_in_first_page() {
@@ -274,49 +267,10 @@ public class Buyerorderslisen {
 	    Buyerorderslisenpage.Clickonresetbuttoninorder();
 	}
 
+	
+
+	
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	
 }

@@ -42,7 +42,7 @@ Scenario Outline: Verify the New Order page of Buyer panel
              |202110270051   ||buyerautomated1@gmail.com  | |!123456Zm   | |velumasala2020  |
              
          
-   
+   @Smoke
    Scenario Outline: Verify the New Order outstanding options page of Buyer panel   
 
          Given User is on Login Page
@@ -74,11 +74,7 @@ Scenario Outline: Verify the New Order page of Buyer panel
              |buyerautomated3@gmail.com    |  |!123456Zm   |  |velumasalathree | |velumasalasix   |   |velumasalatwofifty |
     
     
-           @naren
-           Examples:
-             |username                     |  |password    |  |outletname      | |outletnameone   |   |outletnametwo      |
-             |buyerautomated1@gmail.com    |  |!123456Zm   |  |velumasalathree | |velumasalasix   |   |velumasalatwofifty |
-    
+           
 
  
 

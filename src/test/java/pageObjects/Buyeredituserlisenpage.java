@@ -38,13 +38,10 @@ public class Buyeredituserlisenpage {
 	private static WebElement Buyeredituserlisenpage_Deleteicon;
 	
 	@FindBy(xpath="//button[text()='Delete']")
-	private static WebElement Buyeredituserlisenpage_Closedeleteicon;
-	
+	private static WebElement Buyeredituserlisenpage_Closedeleteicon;	
 
- @FindBy(xpath="(//div[contains(@class,'datatable-body-cell-label')])[20] ")
-
-	private static WebElement Buyeredituserlisenpage_Velumanitwouser;
-	
+    @FindBy(xpath="(//div[contains(@class,'datatable-body-cell-label')])[20] ")
+	private static WebElement Buyeredituserlisenpage_user;	
 	
 	@FindBy(xpath="//input[@formcontrolname='title']")
 	private static WebElement Buyeredituserlisenpage_Jobtitle; 
@@ -116,8 +113,8 @@ public class Buyeredituserlisenpage {
 		
 	}
 
-	public static void Clickonvelumanitwouser() {
-		Buyeredituserlisenpage_Velumanitwouser.click();
+	public static void Clickonuser() {
+		Buyeredituserlisenpage_user.click();
 		try { 
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -129,6 +126,8 @@ public class Buyeredituserlisenpage {
 	}
 
 	public static void Clearjobtitle() {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,250)");
 		Buyeredituserlisenpage_Jobtitle.clear();
 		try {
 			Thread.sleep(5000);
@@ -248,30 +247,7 @@ public class Buyeredituserlisenpage {
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
 		
-	} 
-	
-	
-	
-	
-	
+	}
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+		
 }

@@ -47,9 +47,9 @@ public class Buyeredituserlisen {
 	    //Buyeredituserlisenpage.Clickondeletecloseicon();
 	}
 
-	@Then("User click on velumanitwo user")
-	public void user_click_on_velumanitwo_user() {
-	   Buyeredituserlisenpage.Clickonvelumanitwouser();
+	@Then("User click on user {string}")
+	public void user_click_on_user(String string) {
+	   Buyeredituserlisenpage.Clickonuser();
 	}
 
 	@Then("User clear the job title")
@@ -108,6 +108,7 @@ public class Buyeredituserlisen {
 	   Buyeredituserlisenpage.Clearsearchboxfield(); 
 	}
 
+	
 
 
 	

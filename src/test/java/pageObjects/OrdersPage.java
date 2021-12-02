@@ -59,7 +59,7 @@ public class OrdersPage {
 	@FindBy(xpath = "//span[@id='sideMenu_Orders']")
 	private  WebElement btn_Orders;
 
-	@FindBy(xpath = "//div[text()='sabari250']")
+	@FindBy(xpath = "//div[text()='VELU MASALA1']")
 	private static WebElement orderspage_Supplieroutlet;
 
 	@FindBy(xpath = "(//div[contains(@class,'addto cursor')])[1]")

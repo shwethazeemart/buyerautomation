@@ -96,18 +96,13 @@ public class Buyerdashboardlisenpage {
 	private static WebElement Buyerdashboardlisenpage_Lastmonthicon;
 	
 	@FindBy(xpath = "(//div[@class='supplier_tab_inner_info']/following-sibling::a)[1]")
-	private static WebElement Buyerdashboardlisenpage_Viewspendingbysupplier; 
-
-
-
+	private static WebElement Buyerdashboardlisenpage_Viewspendingbysupplier; 	
 	
-	
-	
-	@FindBy(xpath = "//div[text()='sabari250']")
-	private static WebElement Buyerdashboardlisenpage_Sabarisupplier;
+	@FindBy(xpath = "//h3[text()='Sakthimasala100 ']")
+	private static WebElement Buyerdashboardlisenpage_supplier;
 
 	
-	@FindBy(xpath = "//input[@type='checkbox']")
+	@FindBy(xpath = "//div[text()=' Tags  ']/following::input[1]")
 	private static WebElement Buyerdashboardlisenpage_Showfavouritescheckbox;
 	
 	@FindBy(xpath = "//input[@type='checkbox']")
@@ -316,7 +311,7 @@ public class Buyerdashboardlisenpage {
 
 	}
 
-	public static void Clickonsuppliericon() {
+	public static void ClickonSuppliericon() {
 		Buyerdashboardlisenpage_Suppliericon.click();
 		try { 
 			Thread.sleep(5000);
@@ -387,8 +382,8 @@ public class Buyerdashboardlisenpage {
 	
 	
 
-	public static void Clickonsabarisupplier() {
-		Buyerdashboardlisenpage_Sabarisupplier.click();
+	public static void Clickonsupplier() {
+		Buyerdashboardlisenpage_supplier.click();
 		try { 
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -594,43 +589,11 @@ public class Buyerdashboardlisenpage {
 				.executeScript("return document.readyState").equals("complete"));
 
 	}
+
+	public static void Clickonsuppliericon() {
+		// TODO Auto-generated method stub
+		
 	}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	}

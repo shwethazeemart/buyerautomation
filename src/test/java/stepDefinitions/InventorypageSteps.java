@@ -48,9 +48,9 @@ public class InventorypageSteps {
 		dashboradpage.clickInventory();
 	} 
 
-	@Then("User is Clicks in velu masala2020 outlet")
-	public void user_is_Clicks_in_velu_masala2020_outlet() throws InterruptedException {
-	    inventorypage.Clicks_in_velu_masala2020_outlet();
+	@Then("User is Clicks in  outlet")
+	public void user_is_Clicks_in_outlet() throws InterruptedException {
+	    inventorypage.Clicks_outlet();
 		
 	} 
 
@@ -92,9 +92,9 @@ public class InventorypageSteps {
 	    inventorypage.Clicks_Done_button();		
 	}
 
-	@Then("User are Clicks the sairam list")
-	public void user_are_Clicks_the_sairam_list() {
-	    inventorypage.Clicks_the_sairam_list();
+	@Then("User are Clicks the list")
+	public void user_are_Clicks_the_list() {
+	    inventorypage.Clicks_the_list();
 	}
 
 	@And("User is Clicks the New stock count")
@@ -272,6 +272,10 @@ public class InventorypageSteps {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new io.cucumber.java.PendingException();
 	}
+  
+	
+
+	
 
 
 	

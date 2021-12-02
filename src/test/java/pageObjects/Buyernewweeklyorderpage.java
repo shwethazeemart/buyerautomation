@@ -34,7 +34,7 @@ public class Buyernewweeklyorderpage {
 	@FindBy(xpath = "(//ul[@role='menu']//a)[3]") 
 	private static WebElement Buyernewweeklyorderpage_Newweeklyorder;
 	
-	@FindBy(xpath = "//h3[text()='sstmasala ']") 
+	@FindBy(xpath = "//h3[text()='LOGU masala250 ']") 
 	private static WebElement Buyernewweeklyorderpage_Dropdownofweeklyorder;
 	
 	@FindBy(xpath = "//div[text()='velu masala2020 ']") 
@@ -66,6 +66,8 @@ public class Buyernewweeklyorderpage {
 	}
 
 	public static void Clickondropdownofweeklyorder() {
+		 JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,250)");
 		Buyernewweeklyorderpage_Dropdownofweeklyorder.click();
 		try {
 			Thread.sleep(5000);
@@ -111,7 +113,7 @@ public class Buyernewweeklyorderpage {
 
 	public static void Uploadtheexcelfile() throws InterruptedException {
 		WebElement uploadexcel=driver.findElement(By.xpath("//input[@id='file']"));
-		uploadexcel.sendKeys("E:\\Zeemart All\\Feature file\\Weeklyorder_20211120_20211126 (1).xlsx");
+		uploadexcel.sendKeys("E:\\Zeemart\\New folder\\Weeklyorder_20211120_20211126.xlsx\r\n"+ "\r\n"+ "");
 		Thread.sleep(5000);
 		try {
 			Thread.sleep(5000);

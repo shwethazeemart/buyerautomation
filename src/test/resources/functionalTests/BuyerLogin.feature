@@ -1,5 +1,4 @@
 Feature: verify Buyer page and the test all the page
-
  
 Scenario Outline: Customer wants to reset password
     Given User is on Login Page
@@ -42,7 +41,7 @@ Scenario Outline: Customer wants to reset password
      | buyerautomated1@gmail.com      || !123456Z | 
      
      
-     
+  
   Scenario Outline: Customer Success fully logins to buyer hub
  
     Given User is on Login Page
@@ -67,6 +66,7 @@ Scenario Outline: Customer wants to reset password
       Examples:  
       | invalidEmail        | noregisteredEmail | regesteredEmail      |
       | guindyusergmail.com | user@aacbd.com    | guindyuser@gmail.com |
+      
       
     Scenario Outline: Customer Success fully logins Dashboard to buyer hub
  

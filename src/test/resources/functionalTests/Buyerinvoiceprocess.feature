@@ -1,5 +1,5 @@
 Feature: Verify Buyer Invoice upload page and test all the page
-
+@Smoke
 Scenario Outline: Verify the Invoices process page of Buyer panel 
           Given User is on Login Page
           When User is enter Registered username"<username>"
@@ -29,6 +29,6 @@ Scenario Outline: Verify the Invoices process page of Buyer panel
          @naren
          Examples:
          |invoicenumber|  |username                     |  |password    |
-         |INV-20123456 |  |buyerautomated3@gmail.com    |  |!123456Zm   |      
+         |INV-20123456 |  |buyerautomated1@gmail.com    |  |!123456Zm   |      
            
          
