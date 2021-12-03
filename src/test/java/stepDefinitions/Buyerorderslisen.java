@@ -166,9 +166,9 @@ public class Buyerorderslisen {
 		Buyerorderslisenpage.Clickonordertype();
 	}
 
-	@When("User click on check box of third order")
-	public void user_click_on_check_box_of_third_order() throws InterruptedException {
-		Buyerorderslisenpage.Clickoncheckboxofthirdorder();
+	@When("User click on check box of first order")
+	public void user_click_on_check_box_of_first_order() throws InterruptedException {
+		Buyerorderslisenpage.Clickoncheckboxoffirstorder();
 	}
 	
 
@@ -204,37 +204,37 @@ public class Buyerorderslisen {
 
 	@Then("User click on Receive order")
 	public void user_click_on_Receive_order() {
-		//Buyerorderslisenpage.ClickReceiveorder();
+		Buyerorderslisenpage.ClickReceiveorder();
 	}
 
 	@Then("User click on yes marked button")
 	public void user_click_on_yes_marked_button() {
-		//Buyerorderslisenpage.Clickyesmarkedbutton();
+		Buyerorderslisenpage.Clickyesmarkedbutton();
 	}
 
 	@Then("User click on Activity")
 	public void user_click_on_Activity() {
-		//Buyerorderslisenpage.ClickonActivity();
+		Buyerorderslisenpage.ClickonActivity();
 	}
 
 	@Then("User click on Cancel and linked order")
 	public void user_click_on_Cancel_and_linked_order() {
-		//Buyerorderslisenpage.Clickoncancelandlinkedbutton();
+		Buyerorderslisenpage.Clickoncancelandlinkedbutton();
 	}
 
 	@Then("User click on reason of change quantity")
 	public void user_click_on_reason_of_change_quantity() {
-		//Buyerorderslisenpage.Clickonreason();
+		Buyerorderslisenpage.Clickonreason();
 	}
 
 	@Then("User click on confirm cancel button")
 	public void user_click_on_confirm_cancel_button() {
-		//Buyerorderslisenpage.Clickonconfirmcancelbutton();
+		Buyerorderslisenpage.Clickonconfirmcancelbutton();
 	}
 
 	@Then("User click on supplier order in order page")
 	public void user_click_on_supplier_order_in_order_page() {
-		//Buyerorderslisenpage.Clickonsabarisupplier();
+		Buyerorderslisenpage.Clickonsabarisupplier();
 	}
 
 	@Then("User click on PDF download button")

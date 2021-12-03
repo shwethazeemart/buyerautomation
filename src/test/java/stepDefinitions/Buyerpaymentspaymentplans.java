@@ -4,6 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 import cucumber.TestContext;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import pageObjects.Buyeroutletsmanagedetailspage;
 import pageObjects.Buyeroutletsviewsupplierspage;
@@ -107,21 +108,16 @@ public class Buyerpaymentspaymentplans {
 	public void user_click_on_payments_back_button_in_payment_plans() {
 	  Buyerpaymentspaymentplanspage.Clickpaymentsbackbutton();
 	}
-
-	 
-	
-	
-	
 	
 	@Then("User Enter dashboard menu highlighted with the yellow colour")
 	public void user_Enter_dashboard_menu_highlighted_with_the_yellow_colour() {
 		Buyerpaymentspaymentplanspage.Dashboardhighlightedwithyellowcolour();
 	}
 	
-	
-	
-	
-	
-
+	@And("User name  should be displayed")
+	public void user_name_should_be_displayed() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
 	
 }

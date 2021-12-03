@@ -542,6 +542,10 @@ public class Buyerreportspenperoutletpage {
 				.executeScript("return document.readyState").equals("complete"));
 		
 	}
+	public static void Clickoncheckbox() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 	

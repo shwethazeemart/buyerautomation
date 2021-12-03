@@ -37,9 +37,9 @@ public class Buyeroutletslisting {
 	
 	
 	 
-	@Then("User click on sst masala checkbox")
-	public void user_click_on_sst_masala_checkbox() {
-	   Buyeroutletslistingpage.Clickonsstmasalacheckbox();
+	@Then("User click on checkbox")
+	public void user_click_on_checkbox() {
+	   Buyeroutletslistingpage.Clickoncheckbox();
 	}
 
 	@Then("User click on make inactive")
@@ -62,13 +62,13 @@ public class Buyeroutletslisting {
 	    Buyeroutletslistingpage.Clickonmakeactiveicon();
 	}
 
-	@Then("User click on Actions dropdown in velu masala")
-	public void user_click_on_Actions_dropdown_in_velu_masala() {
-	    Buyeroutletslistingpage.Clickonactionsdropdownvelumasala();
+	@Then("User click on Actions dropdown")
+	public void user_click_on_Actions_dropdown() {
+	    Buyeroutletslistingpage.Clickonactionsdropdown();
 	}
 
-	@Then("User click on manage details in velu masala")
-	public void user_click_on_manage_details_in_velu_masala() {
+	@Then("User click on manage details")
+	public void user_click_on_manage_details() {
 	    Buyeroutletslistingpage.Clickonmanagedetails();
 	}
 
@@ -77,53 +77,18 @@ public class Buyeroutletslisting {
 	    Buyeroutletslistingpage.Clickonbackbuttonofoutlets();
 	}
 
-	@Then("User click on manage setting in velu masala")
-	public void user_click_on_manage_setting_in_velu_masala() {
+	@Then("User click on manage setting")
+	public void user_click_on_manage_setting() {
 	   Buyeroutletslistingpage.Clickonmanagesettings();
 	}
 
-	@Then("User click on view suppliers in velu masala")
-	public void user_click_on_view_suppliers_in_velu_masala() {
+	@Then("User click on view suppliers")
+	public void user_click_on_view_suppliers() {
 	    Buyeroutletslistingpage.Clickonviewsuppliers();
 	}
 
 	@Then("User enter the outlet name in text box {string}")
-	public void user_enter_the_outlet_name_in_text_box(String velumasala2020) {
-	    Buyeroutletslistingpage.Entertheoutletname(velumasala2020);
+	public void user_enter_the_outlet_name_in_text_box(String outletname) {
+	    Buyeroutletslistingpage.Entertheoutletname(outletname);
 	}
-
-
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }

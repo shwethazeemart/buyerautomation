@@ -1,5 +1,5 @@
 Feature: Verify Buyer Outlets manage settings page and test all the page
-
+@Smoke
  Scenario Outline: Verify the Outlets settings page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>" 
@@ -12,7 +12,7 @@ Feature: Verify Buyer Outlets manage settings page and test all the page
           Then User Enter the name in search box"<Name>"
           And User click on Add member button
           Then User click on select user search box
-          Then User click on check box of arul oli
+          Then User click on check box 
           Then User click on outside section
           And User click on Add button
           Then User Clear on weekly email
@@ -26,6 +26,6 @@ Feature: Verify Buyer Outlets manage settings page and test all the page
            
     Examples: 
       | username                      | | password   ||Name       | |WeeklyEmail          ||Email                      ||outletemail                  |
-      | velumanieswaran2020@gmail.com | |!123456Zm   ||velu mani2 | |velumani@zeemart.asia||lingeshsabari2009@gmail.com||velumanieswaran2020@gmail.com| 
+      | buyerautomated3@gmail.com     | |!123456Zm   ||velu mani2 | |velumani@zeemart.asia||lingeshsabari2009@gmail.com||velumanieswaran2020@gmail.com| 
       
       

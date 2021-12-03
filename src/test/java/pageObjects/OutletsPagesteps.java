@@ -43,7 +43,6 @@ public class OutletsPagesteps {
 	private static WebElement OutletsPagesteps_actions_dropdown;  
 	
 	//@FindBy(xpath = "(//a[@class='dropdown-item'])[3]")
-
 	//private static WebElement OutletsPagesteps_View_suppliers;
 	
 	//@FindBy(xpath = "//div[@class='ng-star-inserted']//a[1]")
@@ -55,8 +54,6 @@ public class OutletsPagesteps {
 	
 	
 	public static void clicks_actions_dropdown() throws InterruptedException {
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-	    js.executeScript("window.scrollBy(0, 1000);");
 		OutletsPagesteps_actions_dropdown.click();
 		Thread.sleep(5000);
 		try {
@@ -69,14 +66,9 @@ public class OutletsPagesteps {
 
 	public static void clicks_View_suppliers() {
 		WebElement viewSuppliers = driver.findElement(By.linkText("View suppliers"));
-
 		viewSuppliers.click();
 		//OutletsPagesteps_View_suppliers.click();		
-
-		viewSuppliers.click(); 
-		//OutletsPagesteps_View_suppliers.click();
-
-		try {
+         try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 		}

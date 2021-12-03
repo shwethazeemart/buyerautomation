@@ -1,5 +1,5 @@
 Feature: Verify Buyer Reports Price updates page and test all the page
-
+@Smoke
 Scenario Outline: Verify the Reports price updates Category page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -38,12 +38,7 @@ Scenario Outline: Verify the Reports price updates Category page of Buyer panel
      @dev 
      Examples: 
       | username                      | | password   ||sku       |
-      |buyerautomated3@gmail.com      | |!123456Zm   ||100pipers | 
+      |velumanieswaran2020@gmail.com     | |!123456Zm   ||100pipers | 
       
             
-     @naren
-     Examples: 
-      | username                      | | password   ||sku       |
-      |buyerautomated1@gmail.com      | |!123456Zm   ||100pipers | 
-      
-       
+    

@@ -101,7 +101,7 @@ public class Buyerorderslisenpage {
 	private static WebElement Buyerorderslisenpage_Ordertype;
 	
 	@FindBy(xpath = "(//input[@class='custom-control-input'])[2]")
-	private static WebElement Buyerorderslisenpage_Checkboxofthirdorder;
+	private static WebElement Buyerorderslisenpage_Checkboxoffirstorder;
 	
 	@FindBy(xpath = "//button[text()=' Download orders ']")
 	private static WebElement Buyerorderslisenpage_Downloadorderbutton;
@@ -121,7 +121,7 @@ public class Buyerorderslisenpage {
 	@FindBy(xpath = "//button[text()=' Repeat ']")
 	private static WebElement Buyerorderslisenpage_Repeatorder;
 	
-	@FindBy(xpath = "//button[text()=' Receive ']")
+	@FindBy(xpath = "(//button[contains(@class,'btn rr_btn')])[2]")
 	private static WebElement Buyerorderslisenpage_Receiveorder;
 	
 	@FindBy(xpath = "//button[text()='Yes, mark as received']")
@@ -142,7 +142,7 @@ public class Buyerorderslisenpage {
 	@FindBy(xpath = "(//datatable-body-cell[contains(@class,'datatable-body-cell sort-active ng-star-inserted')])[21]")
 	private static WebElement Buyerorderslisenpage_Sabarisupplierorder;
 	
-	@FindBy(xpath = "//a[contains(@class,'btn pdf_btn')]")
+	@FindBy(xpath = "//a[@download='order_202111190001.pdf']")
 	private static WebElement Buyerorderslisenpage_PDFdownloadbutton;	
 
 	@FindBy(xpath = "//h4[text()='Download receiving list']/following-sibling::button")
@@ -426,9 +426,9 @@ public class Buyerorderslisenpage {
 		
 	}
 
-	public static void Clickoncheckboxofthirdorder() throws InterruptedException {
+	public static void Clickoncheckboxoffirstorder()  throws InterruptedException {
 		Thread.sleep(5000);
-		Buyerorderslisenpage_Checkboxofthirdorder.click();
+		Buyerorderslisenpage_Checkboxoffirstorder.click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -654,5 +654,5 @@ public class Buyerorderslisenpage {
 		
 	}
 
-	
+
 }

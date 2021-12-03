@@ -50,8 +50,8 @@ public class Buyeroutletsmanagesettingspage {
 	@FindBy(xpath = "//div[@class='selected-list']//div[1]")
 	private static WebElement Buyeroutletsmanagesettingspage_Selectusersearchbox;
 	
-	@FindBy(xpath = "//label[text()='velu eshwar-velueshwar1980@gmail.com']")
-	private static WebElement Buyeroutletsmanagesettingspage_Checkboxofaruloli;
+	//@FindBy(xpath = "(//input[@class='ng-star-inserted']/following-sibling::label)[2]")
+	//private static WebElement Buyeroutletsmanagesettingspage_Checkboxfirst;
 	
 	//@FindBy(xpath = "(//ul[@class='button_row mt-4']//a)[1]")
 	//private static WebElement Buyeroutletsmanagesettingspage_Cancelbutton;
@@ -81,13 +81,9 @@ public class Buyeroutletsmanagesettingspage {
 	private static WebElement Buyeroutletsmanagesettingspage_Enteroutletemail;
 	
 	@FindBy(xpath = "(//button[contains(@type,'button')])[5]")
-	private static WebElement Buyeroutletsmanagesettingspage_Savebutton;
-	
-
-	
+	private static WebElement Buyeroutletsmanagesettingspage_Savebutton;	
 
 	@FindBy(xpath = "(//div[@class='modal-content'])[3]")
-
 	private static WebElement Buyeroutletsmanagesettingspage_Outsidesection;
 	
 	
@@ -141,8 +137,10 @@ public class Buyeroutletsmanagesettingspage {
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
 	}
-	public static void Clickcheckboxofaruloli() {
-		Buyeroutletsmanagesettingspage_Checkboxofaruloli.click();
+	public static void Clickcheckboxfirst() {		
+		WebElement buyerAutom = driver.findElement(By.xpath("//label[text()='Buyer_ Automated_1-buyerautomated1@gmail.com']"));
+		buyerAutom.click();
+		//Buyeroutletsmanagesettingspage_Checkboxfirst.click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -163,6 +161,7 @@ public class Buyeroutletsmanagesettingspage {
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
 	}
+	
 	public static void Clickaddbutton() throws InterruptedException {
 		Thread.sleep(5000);
 		WebElement add = driver.findElement(By.linkText("Add"));
@@ -278,41 +277,5 @@ public class Buyeroutletsmanagesettingspage {
 		
 		
 	}
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 }

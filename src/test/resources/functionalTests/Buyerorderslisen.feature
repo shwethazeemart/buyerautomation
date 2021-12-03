@@ -6,7 +6,7 @@ Scenario Outline: Verify the Orders lisen page of Buyer panel
          And User enter exact password"<password>"
          And User is click login button  
          And User Clicks Orders in the side navigation menubar              
-         And User click on check box of third order
+         And User click on check box of first order
          Then User click on download orders button in order page
          Then User click on download orders in detailed in order page 
          And User click on Mark as recevied button in order page

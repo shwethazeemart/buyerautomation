@@ -79,13 +79,11 @@ public class Buyerreportpriceupdatespage {
 	private static WebElement Buyerreportpriceupdatespage_Downloadbuttonfirstpage;
 	
 	
-	
-	
 	public static void Clickonpriceupdatesicon() {
 		//WebElement priceUpdatesShowsAll = driver.findElement(By.className("skyBlueBox"));
 		//priceUpdatesShowsAll.click();
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-	    js.executeScript("window.scrollBy(0, 1000);");
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,250)");
 		Buyerreportpriceupdatespage_Priceupdatesicon.click();
 		try {
 			Thread.sleep(5000);

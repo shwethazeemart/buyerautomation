@@ -1,11 +1,11 @@
 Feature: Verify Buyer Payments Payment plans page and test all the page
-
+@Smoke
 Scenario Outline: Verify the Payment plans page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
           And User enter exact password"<password>"
           And User is click login button
-          And User name  should be displayed 
+          And User name should be displayed 
           Then User Enter dashboard menu highlighted with the yellow colour 
           Then User Clicks on Payments in the side navigation menubar
           Then User click on Payment plans icon

@@ -56,10 +56,7 @@ public class Buyerreportinvoicevariancepage {
 	
 	@FindBy(xpath = "(//select[contains(@class,'custom-select filter-dropdown')])[2]")
 	private static WebElement Buyerreportinvoicevariancepage_Exactmatch;
-	
-	
-	
-	
+		
 	@FindBy(xpath = "(//button[@type='button'])[3]")
 	private static WebElement Buyerreportinvoicevariancepage_Applybutton;
 	
@@ -70,8 +67,7 @@ public class Buyerreportinvoicevariancepage {
 	private static WebElement Buyerreportinvoicevariancepage_Outside;
 	
 	@FindBy(xpath = "//div[@class='pl-2']//a[1]")
-	private static WebElement Buyerreportinvoicevariancepage_Exportdownloadbutton;
-	
+	private static WebElement Buyerreportinvoicevariancepage_Exportdownloadbutton;	
 	
 	@FindBy(xpath = "//img[@src='../assets/zmcore/img/left-report-b-icon.svg']/following-sibling::p[1]")
 	private static WebElement Buyerreportinvoicevariancepage_Reportsbackbutton;
@@ -79,11 +75,11 @@ public class Buyerreportinvoicevariancepage {
 	
 	
 	 
-	public static void Clickinvoicevarianceicon() {
+	public static void Clickinvoicevarianceicon() throws InterruptedException {	
 		//WebElement invoiceVar = driver.findElement(By.className("violetBox"));
 		//invoiceVar.click();
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-	    js.executeScript("window.scrollBy(0, 1000);");
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,250)");
 		Buyerreportinvoicevariancepage_Invoicevariance.click(); 
 		try {
 			Thread.sleep(5000);
@@ -131,9 +127,7 @@ public class Buyerreportinvoicevariancepage {
 				.executeScript("return document.readyState").equals("complete"));
 
 	}
-	
-	
-	
+		
 	public static void Selectsupplier() throws InterruptedException {
 		Thread.sleep(5000);
 		Buyerreportinvoicevariancepage_selectsupplier.click();
