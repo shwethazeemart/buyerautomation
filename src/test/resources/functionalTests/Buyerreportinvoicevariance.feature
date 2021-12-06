@@ -37,5 +37,5 @@ Scenario Outline: Verify the Reports invoice variance Category page of Buyer pan
           
      Examples: 
       | username                      | | password   ||invoice     ||outletname    |
-      | buyerautomated3@gmail.com     | |!123456Zm   ||vel-1234567 ||velumasala2020|
+      |velumanieswaran2020@gmail.com  | |!123456Zm   ||vel-1234567 ||velumasala2020|
       

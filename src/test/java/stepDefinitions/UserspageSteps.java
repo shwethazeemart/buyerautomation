@@ -42,7 +42,7 @@ public class UserspageSteps {
 	public void user_Clicks_on_Users_in_the_side_navigation_menubar() throws InterruptedException {
 		dashboradpage.clickUsers();
 	}
-
+	
 	@Then("User is Clicks in Add new user button")
 	public void user_is_Clicks_in_Add_new_user_button() throws InterruptedException {
 		Userspage.click_Addnewuser(); 
@@ -106,7 +106,7 @@ public class UserspageSteps {
 
 	@And("User is upload Profile photo in that field")
 	public void user_is_upload_Profile_photo_in_that_field() throws InterruptedException {
-		Userspage.click_Profilephoto();
+		//Userspage.click_Profilephoto();
 	}
 
 	@Then("User is Select Owner in the permissions dropdown")

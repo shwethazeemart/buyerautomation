@@ -50,7 +50,7 @@ Scenario Outline: Verify the Dashboard lisen page of Buyer panel
           
            Examples:
          |username                            |  |password    ||name     | |outletname  |
-         |velumanieswaran2020@gmail.com       |  |!123456Zm   ||100pipers| |velu masala |
+         |buyerautomated3@gmail.com           |  |!123456Zm   ||100pipers| |velu masala |
          
         
        

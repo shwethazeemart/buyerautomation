@@ -1,5 +1,5 @@
 Feature: Verify Buyer user name page in settings
-
+@Smoke
 Scenario Outline: Verify the user name page of Buyer panel
          Given User is on Login Page
          When User enter exact username"<username>"
@@ -18,4 +18,4 @@ Scenario Outline: Verify the user name page of Buyer panel
          
      Examples:
              |username                     |  |password    |
-             |velumanieswaran2020@gmail.com|  |!123456Zm   |
+             |buyerautomated3@gmail.com    |  |!123456Zm   |

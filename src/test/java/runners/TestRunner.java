@@ -12,7 +12,7 @@ import io.cucumber.junit.CucumberOptions;
 
 
 
-@CucumberOptions(strict = true, features = "src/test/resources/functionalTests/Buyerreportspriceupdates.feature",
+@CucumberOptions(strict = true, features = "src/test/resources/functionalTests/Buyerreportsspendingpersupplier.feature",
 
 tags ="@Smoke",
 
@@ -21,6 +21,7 @@ glue = { "stepDefinitions" },monochrome=true,dryRun=false,
 plugin= {"json:target/cucumber.json"})
  
 public class TestRunner {
+	
 	  
 }                                               
 
@@ -28,3 +29,10 @@ public class TestRunner {
                                                
                                                 
    
+
+
+
+
+
+
+

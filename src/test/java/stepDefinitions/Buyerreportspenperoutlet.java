@@ -42,6 +42,7 @@ public class Buyerreportspenperoutlet {
 	}
 	
 	
+	
 	@Then("User click on spending per outlet icon")
 	public void user_click_on_spending_per_outlet_icon() {
 	    Buyerreportspenperoutletpage.Clickonspendingoutletcion();
@@ -139,11 +140,6 @@ public class Buyerreportspenperoutlet {
 	public void user_click_on_Detailed_report() {
 		Buyerreportspenperoutletpage.Clickondetailedreport();
 	}
-
-
-	
-	
-	
 	
 	@Then("User click on Today date from calendar")
 	public void user_click_on_Today_date_from_calendar() throws InterruptedException {
@@ -230,7 +226,6 @@ public class Buyerreportspenperoutlet {
 	    Buyerreportspenperoutletpage.Clickbackbuttonofreports(); 
 	}
 
-
 	@Then("User click on apply in custom range")
 	public void user_click_on_apply_in_custom_range() {
 	    Buyerreportspenperoutletpage.Clickonapplybuttonincustomrange();
@@ -241,34 +236,4 @@ public class Buyerreportspenperoutlet {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new io.cucumber.java.PendingException();
 	}
-
-	
-	 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }

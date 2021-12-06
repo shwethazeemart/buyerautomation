@@ -31,13 +31,13 @@ public class Buyeredituserlisenpage {
 	}
 	
 
-	@FindBy(xpath="(//input[@type='checkbox'])[7]")
-	private static WebElement Buyeredituserlisenpage_Checkboxofaruloliuser;
+	@FindBy(xpath="(//div[@class='datatable-body-cell-label']//label)[3]")
+	private static WebElement Buyeredituserlisenpage_Checkboxofuser;
 	
-	@FindBy(xpath="//button[text()='Delete ']")
+	@FindBy(xpath="//button[contains(@class,'btn download_order_btn')]")
 	private static WebElement Buyeredituserlisenpage_Deleteicon;
 	
-	@FindBy(xpath="//button[text()='Delete']")
+	@FindBy(xpath="//h4[text()='Delete selected user(s)?']/following-sibling::button")
 	private static WebElement Buyeredituserlisenpage_Closedeleteicon;	
 
     @FindBy(xpath="(//div[contains(@class,'datatable-body-cell-label')])[20] ")
@@ -79,9 +79,9 @@ public class Buyeredituserlisenpage {
 	
 	
 
-	public static void Clickoncheckboxofaruloliuser() {
-		Buyeredituserlisenpage_Checkboxofaruloliuser.click();
-		try {
+	public static void Clickoncheckboxofuser() {
+		Buyeredituserlisenpage_Checkboxofuser.click();
+		try {			
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 		} 
@@ -249,5 +249,5 @@ public class Buyeredituserlisenpage {
 		
 	}
 
-		
+			
 }

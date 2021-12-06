@@ -38,7 +38,7 @@ Scenario Outline: Verify the Reports price updates Category page of Buyer panel
      @dev 
      Examples: 
       | username                      | | password   ||sku       |
-      |velumanieswaran2020@gmail.com     | |!123456Zm   ||100pipers | 
+      |velumanieswaran2020@gmail.com  | |!123456Zm   ||100pipers | 
       
             
     

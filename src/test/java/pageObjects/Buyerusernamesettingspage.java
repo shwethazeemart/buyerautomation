@@ -33,6 +33,7 @@ public class Buyerusernamesettingspage {
 		
 	}
 	
+	
 	 
 	
 	
@@ -70,9 +71,10 @@ public class Buyerusernamesettingspage {
 	
 	
 
-	public static void Clickusernameinrighthandside() {
-		WebElement veluMani = driver.findElement(By.tagName("zm-sidenav-user-name"));
-		veluMani.click();
+	public static void Clickusernameinrighthandside() throws InterruptedException {
+		Thread.sleep(5000);
+		WebElement buyerAutomated = driver.findElement(By.tagName("zm-user-logedin"));
+		buyerAutomated.click();
 		
 		//Buyerusernamesettingspage_Usernameinrighthandside.click();
 		try {

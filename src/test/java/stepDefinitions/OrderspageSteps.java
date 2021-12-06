@@ -321,8 +321,7 @@ public class OrderspageSteps<txtBoxContent> {
 	@Then("User click on ok button of pop message")
 	public void user_click_on_ok_button_of_pop_message() throws InterruptedException {
 	    OrdersPage.Clickonokbuttoninpop();
-	}
-
+	   	}
 
 	@Then("User click on close icon first pop message")
 	public void user_click_on_close_icon_first_pop_message() {

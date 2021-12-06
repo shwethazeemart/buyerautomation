@@ -162,7 +162,7 @@ public class Buyerdashboardlisenpage {
 				.executeScript("return document.readyState").equals("complete"));
 	}
 
-	public static void Clickonneworder() {
+	public static void Clickonneworder() {		
 		Buyerdashboardlisenpage_Neworder.click();
 		try {
 			Thread.sleep(5000);

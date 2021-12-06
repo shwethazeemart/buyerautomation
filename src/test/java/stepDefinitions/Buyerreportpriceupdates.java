@@ -32,7 +32,9 @@ public class Buyerreportpriceupdates {
     private Buyerreportinvoicevariancepage buyerreportinvoicevariance;
     private Buyerreportpriceupdatespage buyerreportpriceupdates;
     
+    
 	public Buyerreportpriceupdates(TestContext testContext) {
+		
 		super();
 		this.testContext = testContext;
 		this.orderspage = testContext.getPageObjectManager().getOrdersPage();

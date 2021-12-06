@@ -193,6 +193,7 @@ public class Userspage {
 		uploadBox.sendKeys("E:\\Zeemart All\\LIC Bill\\file_example_JPG_5mb.jpg");
 		Thread.sleep(5000);
 		try {
+			
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 		}

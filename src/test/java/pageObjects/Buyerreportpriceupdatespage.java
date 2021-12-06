@@ -13,7 +13,7 @@ import managers.FileReaderManager;
 public class Buyerreportpriceupdatespage {
 
 	private static WebDriver driver;
-
+	
 	public Buyerreportpriceupdatespage(WebDriver driver) {
 
 
@@ -33,8 +33,8 @@ public class Buyerreportpriceupdatespage {
 	}
 	
 	
-	@FindBy(xpath = "//h1[text()='Price updates']")
-	private static WebElement Buyerreportpriceupdatespage_Priceupdatesicon;
+	//@FindBy(xpath = "//h1[text()='Price updates']")
+	//private static WebElement Buyerreportpriceupdatespage_Priceupdatesicon;
 	
 	@FindBy(xpath = "//input[@placeholder='Search SKU']")
 	private static WebElement Buyerreportpriceupdatespage_Searchbox;
@@ -80,12 +80,9 @@ public class Buyerreportpriceupdatespage {
 	
 	
 	public static void Clickonpriceupdatesicon() {
-		//WebElement priceUpdatesShowsAll = driver.findElement(By.className("skyBlueBox"));
-		//priceUpdatesShowsAll.click();
-		JavascriptExecutor jse = (JavascriptExecutor)driver;
-		jse.executeScript("window.scrollBy(0,250)");
-		Buyerreportpriceupdatespage_Priceupdatesicon.click();
-		try {
+		WebElement priceUpdatesShowsAll = driver.findElement(By.className("skyBlueBox"));
+		priceUpdatesShowsAll.click();
+				try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 		} 

@@ -1,5 +1,5 @@
 Feature: Verify Buyer New Weekly Order page and test all the page
-
+@Smoke
 Scenario Outline: Verify the New Weekly Order page of Buyer panel
          Given User is on Login Page
          When User enter exact username"<username>"

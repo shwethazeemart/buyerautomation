@@ -50,7 +50,7 @@ public class Buyeroutletslistingpage {
 	@FindBy(xpath = "//button[text()='Make active']")
 	private static WebElement Buyeroutletslistingpage_Makeonactiveicon;
 	
-	@FindBy(xpath = "(//a[@class='zmdropDownBtn'])[3]")
+	@FindBy(xpath = "(//a[@class='zmdropDownBtn'])[1]")
 	private static WebElement Buyeroutletslistingpage_Actionsdropdown;
 	
 	@FindBy(xpath = "(//a[@routerlinkactive='active'])[2]")

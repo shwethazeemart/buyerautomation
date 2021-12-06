@@ -184,7 +184,7 @@ public class Buyerorderslisen {
 
 	@Then("User click on Mark as recevied button in order page")
 	public void user_click_on_Mark_as_recevied_button_in_order_page() {
-		Buyerorderslisenpage.Clickonmarkasreceviedbutton();
+		//Buyerorderslisenpage.Clickonmarkasreceviedbutton();
 	}
 
 	@Then("User click on clear button in order page")
@@ -196,50 +196,50 @@ public class Buyerorderslisen {
 	public void user_click_on_the_supplier_order() {
 		Buyerorderslisenpage.Clickonsabarisupplierorder();
 	}
-
+	
 	@Then("User click on Repeat order")
 	public void user_click_on_Repeat_order() {
-		Buyerorderslisenpage.Clickonrepeatorder(); 
+		//Buyerorderslisenpage.Clickonrepeatorder(); 
 	}
 
 	@Then("User click on Receive order")
 	public void user_click_on_Receive_order() {
-		Buyerorderslisenpage.ClickReceiveorder();
+		//Buyerorderslisenpage.ClickReceiveorder();
 	}
 
 	@Then("User click on yes marked button")
 	public void user_click_on_yes_marked_button() {
-		Buyerorderslisenpage.Clickyesmarkedbutton();
+		//Buyerorderslisenpage.Clickyesmarkedbutton();
 	}
 
 	@Then("User click on Activity")
 	public void user_click_on_Activity() {
-		Buyerorderslisenpage.ClickonActivity();
+		//Buyerorderslisenpage.ClickonActivity();
 	}
 
 	@Then("User click on Cancel and linked order")
 	public void user_click_on_Cancel_and_linked_order() {
-		Buyerorderslisenpage.Clickoncancelandlinkedbutton();
+		//Buyerorderslisenpage.Clickoncancelandlinkedbutton();
 	}
 
 	@Then("User click on reason of change quantity")
 	public void user_click_on_reason_of_change_quantity() {
-		Buyerorderslisenpage.Clickonreason();
+		//Buyerorderslisenpage.Clickonreason();
 	}
 
 	@Then("User click on confirm cancel button")
 	public void user_click_on_confirm_cancel_button() {
-		Buyerorderslisenpage.Clickonconfirmcancelbutton();
+		//Buyerorderslisenpage.Clickonconfirmcancelbutton();
 	}
 
 	@Then("User click on supplier order in order page")
 	public void user_click_on_supplier_order_in_order_page() {
-		Buyerorderslisenpage.Clickonsabarisupplier();
+		//Buyerorderslisenpage.Clickonsabarisupplier();
 	}
 
 	@Then("User click on PDF download button")
 	public void user_click_on_PDF_download_button() {
-		Buyerorderslisenpage.ClickonPDFdownloadbutton();
+		//Buyerorderslisenpage.ClickonPDFdownloadbutton();
 	}
 
 	@Then("User click on close icon in order first page")
@@ -266,11 +266,5 @@ public class Buyerorderslisen {
 	public void user_click_on_Reset_button_in_order_in_first_page() {
 	    Buyerorderslisenpage.Clickonresetbuttoninorder();
 	}
-
-	
-
-	
-
-
 	
 }

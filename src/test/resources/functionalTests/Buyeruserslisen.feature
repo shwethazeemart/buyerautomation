@@ -1,5 +1,5 @@
 Feature: Verify Buyer Users page and test all the page
-
+@Smoke
 Scenario Outline: Verify the Users page of Buyer panel 
   
           Given User is on Login Page
@@ -21,8 +21,9 @@ Scenario Outline: Verify the Users page of Buyer panel
           Then User is Select Owner in the permissions dropdown
           Then User is Clicks Save button 
           
+    @dev      
     Examples:
-         |username                     |  |password    ||First name||Last name ||Job title    ||Email                              ||Mobile phone|
-         |velumanieswaran2020@gmail.com|  |!123456Zm   ||velu      ||ganesh    ||ATZ          ||ganeshvelutamil2008@gmail.com          ||+6512345677 |       
+         |username                       ||password    ||First name||Last name ||Job title    ||Email                              ||Mobile phone|
+         |velumanieswaran2020@gmail.com  ||!123456Zm   ||velu      ||ganesh    ||ATZ          ||ganeshvelutamil2008@gmail.com      ||+6512345677 |       
     
     

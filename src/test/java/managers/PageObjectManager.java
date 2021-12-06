@@ -372,7 +372,6 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 		return (Buyerreportinvoicevariance == null) ? (Buyerreportinvoicevariance = new Buyerreportinvoicevariancepage(driver)) : Buyerreportinvoicevariance;
 	}
 
-
 	public Buyerreportpriceupdatespage getBuyerreportpriceupdatespage() {
 		return (Buyerreportpriceupdates == null) ? (Buyerreportpriceupdates = new Buyerreportpriceupdatespage(driver)) : Buyerreportpriceupdates;
 	}

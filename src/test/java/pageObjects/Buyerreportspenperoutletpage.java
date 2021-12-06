@@ -33,6 +33,7 @@ public class Buyerreportspenperoutletpage {
 	}
 	
 	
+	
 	//@FindBy(xpath = "//input[@placeholder='Product code or name']")
 	//private static WebElement Buyerreportspenperoutletpage_Spendingperoutlet;
 	
@@ -200,7 +201,7 @@ public class Buyerreportspenperoutletpage {
 		} 
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
-		
+				
 	}
 	public static void Clickapplybutton() {
 		Buyerreportspenperoutletpage_Applybutton.click();

@@ -1,5 +1,5 @@
 Feature: Verify Buyer Reports spending per SKU page and test all the page
-
+@Smoke
 Scenario Outline: Verify the Reports spending per SKU page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -89,12 +89,8 @@ Scenario Outline: Verify the Reports spending per SKU page of Buyer panel
              
      @dev      
      Examples: 
-      | username                      | | password   ||name     |
-      | buyerautomated3@gmail.com     | |!123456Zm   ||100pipers|     
+      | username                          | | password   ||name     |
+      | velumanieswaran2020@gmail.com     | |!123456Zm   ||100pipers|     
       
                
-     @naren    
-     Examples: 
-      | username                      | | password   ||name     |
-      | buyerautomated1@gmail.com     | |!123456Zm   ||100pipers|     
-      
+    

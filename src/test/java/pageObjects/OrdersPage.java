@@ -201,12 +201,10 @@ public class OrdersPage {
 	@FindBy(xpath = "//div[text()='VELU MASALA3']")
 	private static WebElement orderspage_Velumasalathreeinpop;
 	
-	@FindBy(xpath = "//div[@class='swal2-content']/following-sibling::div[1]")
+	@FindBy(xpath = "//button[text()='Verify settings']")
 	private static WebElement orderspage_Popmessage;
 	
-
-	@FindBy(xpath = "//img[@src='assets/zmcore/img/close-blue@22.png']")
-
+	@FindBy(xpath = "//span[@class='swal2-close']//img[1]")
 	private static WebElement orderspage_Closeiconfirstpop;
 	
 	@FindBy(xpath = "//div[text()='VELU MASALA6']")
@@ -827,10 +825,9 @@ public class OrdersPage {
 		} catch (InterruptedException e) {
 		}
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
-				.executeScript("return document.readyState").equals("complete"));
-		
-		 
+				.executeScript("return document.readyState").equals("complete"));		 
 	}
+	
 	public static void Clickonokbuttoninpop() throws InterruptedException {
 		Thread.sleep(5000);
 		Set<String> handler = driver.getWindowHandles();
@@ -848,7 +845,7 @@ public class OrdersPage {
 		driver.switchTo().window(handle3);
 		System.out.println("The display handle3:" +driver.getTitle());
 		orderspage_Popmessage.click();
-		
+
 		//driver.close();
 	}
 	public static void Clickcloseiconfirstpop() {

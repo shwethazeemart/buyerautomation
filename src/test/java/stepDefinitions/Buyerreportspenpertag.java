@@ -29,6 +29,7 @@ public class Buyerreportspenpertag {
     
     
 	public Buyerreportspenpertag(TestContext testContext) {
+		
 		super();
 		this.testContext = testContext;
 		this.orderspage = testContext.getPageObjectManager().getOrdersPage();

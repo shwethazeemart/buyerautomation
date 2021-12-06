@@ -118,10 +118,10 @@ public class Buyerorderslisenpage {
 	@FindBy(xpath = "(//datatable-body-cell[contains(@class,'datatable-body-cell sort-active')])[3]")
 	private static WebElement Buyerorderslisenpage_Sabarisupplier;
 	
-	@FindBy(xpath = "//button[text()=' Repeat ']")
+	@FindBy(xpath = "//button[contains(@class,'btn rr_btn')]")
 	private static WebElement Buyerorderslisenpage_Repeatorder;
 	
-	@FindBy(xpath = "(//button[contains(@class,'btn rr_btn')])[2]")
+	@FindBy(xpath = "//button[text()=' Receive ']")
 	private static WebElement Buyerorderslisenpage_Receiveorder;
 	
 	@FindBy(xpath = "//button[text()='Yes, mark as received']")
@@ -142,7 +142,7 @@ public class Buyerorderslisenpage {
 	@FindBy(xpath = "(//datatable-body-cell[contains(@class,'datatable-body-cell sort-active ng-star-inserted')])[21]")
 	private static WebElement Buyerorderslisenpage_Sabarisupplierorder;
 	
-	@FindBy(xpath = "//a[@download='order_202111190001.pdf']")
+	@FindBy(xpath = "//a[@download='order_202112040013.pdf']")
 	private static WebElement Buyerorderslisenpage_PDFdownloadbutton;	
 
 	@FindBy(xpath = "//h4[text()='Download receiving list']/following-sibling::button")
@@ -482,7 +482,7 @@ public class Buyerorderslisenpage {
 	}
 
 	public static void Clickonsabarisupplierorder() {
-		Buyerorderslisenpage_Sabarisupplier.click();
+		//Buyerorderslisenpage_Sabarisupplier.click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -504,6 +504,7 @@ public class Buyerorderslisenpage {
 		
 	}
 
+	
 	public static void ClickReceiveorder() {
 		Buyerorderslisenpage_Receiveorder.click();
 		try {

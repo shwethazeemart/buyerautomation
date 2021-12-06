@@ -26,6 +26,6 @@ Feature: Verify Buyer Outlets manage settings page and test all the page
            
     Examples: 
       | username                      | | password   ||Name       | |WeeklyEmail          ||Email                      ||outletemail                  |
-      | buyerautomated3@gmail.com     | |!123456Zm   ||velu mani2 | |velumani@zeemart.asia||lingeshsabari2009@gmail.com||velumanieswaran2020@gmail.com| 
+      | velumanieswaran2020@gmail.com | |!123456Zm   ||buyer      | |velumani@zeemart.asia||lingeshsabari2009@gmail.com||velumanieswaran2020@gmail.com| 
       
       

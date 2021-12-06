@@ -12,9 +12,10 @@ import managers.FileReaderManager;
  
 public class Buyerreportinvoicevariancepage {
 
-	private static final WebElement Buyerreportinvoicevariancepage_selectoutlet = null;
+	private static WebElement Buyerreportinvoicevariancepage_selectoutlet = null;
 
 	private static WebDriver driver;
+	
 
 	public Buyerreportinvoicevariancepage(WebDriver driver) {
 
@@ -32,7 +33,7 @@ public class Buyerreportinvoicevariancepage {
 
 	public void isTosterMessageFound(String msg) {
 		WebElement tosterMsg = driver.findElement(By.xpath("//*[text()='" + msg + "']"));
-	}
+			}
 	
 	
 	
@@ -76,11 +77,11 @@ public class Buyerreportinvoicevariancepage {
 	
 	 
 	public static void Clickinvoicevarianceicon() throws InterruptedException {	
-		//WebElement invoiceVar = driver.findElement(By.className("violetBox"));
-		//invoiceVar.click();
-		JavascriptExecutor jse = (JavascriptExecutor)driver;
-		jse.executeScript("window.scrollBy(0,250)");
-		Buyerreportinvoicevariancepage_Invoicevariance.click(); 
+		WebElement invoiceVar = driver.findElement(By.className("violetBox"));
+		invoiceVar.click();
+		//JavascriptExecutor js = (JavascriptExecutor) driver;
+		//js.executeScript("window.scrollBy(0, 1000);");
+		//Buyerreportinvoicevariancepage_Invoicevariance.click(); 
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {

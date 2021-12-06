@@ -1,5 +1,5 @@
 Feature: Verify Buyer Reports spending per supplier page and test all the page
-
+@Smoke
 Scenario Outline: Verify the Reports spending per supplier page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -55,12 +55,7 @@ Scenario Outline: Verify the Reports spending per supplier page of Buyer panel
              
      @dev     
      Examples: 
-      | username                      | | password   ||name     | |outletname     |
-      | buyerautomated3@gmail.com     | |!123456Zm   ||sabari250| |velu masala2020|
+      | username                          | | password   ||name     | |outletname     |
+      | velumanieswaran2020@gmail.com     | |!123456Zm   ||sabari250| |velu masala2020|
       
-     @naren     
-     Examples: 
-      | username                      | | password   ||name     | |outletname     |
-      | buyerautomated1@gmail.com     | |!123456Zm   ||sabari250| |velu masala2020|
-      
-      
+    
