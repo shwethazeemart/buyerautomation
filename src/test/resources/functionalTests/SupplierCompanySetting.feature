@@ -1,6 +1,6 @@
-Feature: Verify Supplier Payment Plans list  
+Feature: Verify Supplier Company Setting list  
 
-Scenario Outline: Verify the Supplier Payments Plans list 
+Scenario Outline: Verify the Supplier Company Settings list 
          Given User is on available Login Page
           When User enter exact username"<username>"
           And User enter exact password"<password>"

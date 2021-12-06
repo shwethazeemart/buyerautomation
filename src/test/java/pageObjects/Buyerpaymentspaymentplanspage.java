@@ -231,7 +231,7 @@ public static void SelectpaymentstatusUnpaid() throws InterruptedException {
 	
 	
 	public static void Clickonlistedsupplier() throws InterruptedException {
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		Buyerpaymentspaymentplanspage_Listedsupplier.click();
 		try { 
 			Thread.sleep(5000);

@@ -12,7 +12,7 @@ import managers.FileReaderManager;
  
 public class Buyerreportinvoicevariancepage {
 
-	private static final WebElement Buyerreportinvoicevariancepage_selectoutlet = null;
+	
 
 	private static WebDriver driver;
 
