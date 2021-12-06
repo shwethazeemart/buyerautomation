@@ -1,6 +1,6 @@
-Feature: Verify Supplier Invoices listing page  
+Feature: Verify Supplier Invoices Add Credit Note page  
 
-Scenario Outline: Verify the Supplier Invoices listing page
+Scenario Outline: Verify the Supplier Invoices Add Credit Note page
          Given User is on available Login Page
           When User enter exact username"<username>"
           And User enter exact password"<password>"

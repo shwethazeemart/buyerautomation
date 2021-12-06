@@ -1,7 +1,7 @@
 Feature: Verify Supplier Directory manage products page  
 
 
-Scenario Outline: Verify the Supplier manage products page
+Scenario Outline: Verify the Supplier Directory manage products page
          Given User is on available Login Page
           When User enter exact username"<username>"
           And User enter exact password"<password>"

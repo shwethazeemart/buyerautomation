@@ -8,6 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import io.cucumber.java.en.Then;
 import managers.FileReaderManager;
 
 public class Buyerreportpriceupdatespage {
@@ -31,61 +32,61 @@ public class Buyerreportpriceupdatespage {
 	public void isTosterMessageFound(String msg) {
 		WebElement tosterMsg = driver.findElement(By.xpath("//*[text()='" + msg + "']"));
 	}
-	
-	
-	@FindBy(xpath = "//h1[text()='Price updates']")
+
+
+	@FindBy(xpath = "//div[contains(@class,'skyBlueBox')]")
 	private static WebElement Buyerreportpriceupdatespage_Priceupdatesicon;
-	
+
 	@FindBy(xpath = "//input[@placeholder='Search SKU']")
 	private static WebElement Buyerreportpriceupdatespage_Searchbox;
-	
+
 	@FindBy(xpath = "//input[@placeholder='Search SKU']")
 	private static WebElement Buyerreportpriceupdatespage_Enterskunameinsearchbox;
-	
+
 	@FindBy(xpath = "//span[contains(@name,'daterange')]")
 	private static WebElement Buyerreportpriceupdatespage_Calendaricon;
-	
+
 	@FindBy(xpath = "//li[@data-range-key='YTD']")
 	private static WebElement Buyerreportpriceupdatespage_YTDfromcalendar;
-	
+
 	@FindBy(xpath = "//select[contains(@id,'country')]")
 	private static WebElement Buyerreportpriceupdatespage_selectoutlet;
-	
+
 	@FindBy(xpath = "(//a[@class='export-mclr'])[1]")
 	private static WebElement Buyerreportpriceupdatespage_Filtericon;
-	
+
 	@FindBy(xpath = "//select[contains(@class,'custom-select filter-dropdown')]")
 	private static WebElement Buyerreportpriceupdatespage_Selectsuppliername;
-	
+
 	@FindBy(xpath = "(//button[@type='button'])[3]")
 	private static WebElement Buyerreportpriceupdatespage_Applybutton;
-	
+
 	@FindBy(xpath = "//a[contains(@class,'filter-reset')]")
 	private static WebElement Buyerreportpriceupdatespage_Resetbutton;
-	
+
 	@FindBy(xpath = "//div[@class='page__header users']/following-sibling::div[1]")
 	private static WebElement Buyerreportpriceupdatespage_Outsideicon;
-	
+
 	@FindBy(xpath = "//div[@class='pl-2']//a[1]")
 	private static WebElement Buyerreportpriceupdatespage_Exportdownloadbutton;
-	
+
 	@FindBy(xpath = "//p[text()='Spending report']")
 	private static WebElement Buyerreportpriceupdatespage_Reportsbackbutton;
-	
+
 	@FindBy(xpath = "//img[@src='../assets/zmcore/img/left-report-b-icon.svg']/following-sibling::p[1]")
 	private static WebElement Buyerreportpriceupdatespage_Reportsbackbuttoninsku;
-	
+
 	@FindBy(xpath = "//div[@class='pl-2']//a[1]")
 	private static WebElement Buyerreportpriceupdatespage_Downloadbuttonfirstpage;
-	
-	
-	
-	
+
+
+
+
 	public static void Clickonpriceupdatesicon() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0, 1000);");
 		//WebElement priceUpdatesShowsAll = driver.findElement(By.className("skyBlueBox"));
 		//priceUpdatesShowsAll.click();
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-	    js.executeScript("window.scrollBy(0, 1000);");
 		Buyerreportpriceupdatespage_Priceupdatesicon.click();
 		try {
 			Thread.sleep(5000);
@@ -102,7 +103,7 @@ public class Buyerreportpriceupdatespage {
 		} 
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
-		
+
 	}
 	public static void Enterskunameinsearchbox(String sku) {
 		Buyerreportpriceupdatespage_Enterskunameinsearchbox.sendKeys(sku);
@@ -112,7 +113,7 @@ public class Buyerreportpriceupdatespage {
 		} 
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
-		
+
 	}
 	public static void Clickoncalendaricon() {
 		Buyerreportpriceupdatespage_Calendaricon.click();
@@ -122,7 +123,7 @@ public class Buyerreportpriceupdatespage {
 		} 
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
-		
+
 	}
 	public static void ClickonYTDfromcalendar() {
 		Buyerreportpriceupdatespage_YTDfromcalendar.click();
@@ -132,10 +133,10 @@ public class Buyerreportpriceupdatespage {
 		} 
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
-		
+
 	}
-	
-	
+
+
 	public static void Selectvelumasala() throws InterruptedException {
 		Buyerreportpriceupdatespage_selectoutlet.click();
 		Thread.sleep(5000);
@@ -149,10 +150,10 @@ public class Buyerreportpriceupdatespage {
 	}
 	public static WebElement getDropDownElementoutletname() {
 		return Buyerreportpriceupdatespage_selectoutlet;
-	
+
 	}
-	
-	
+
+
 	public static void Clickonfilter() {
 		Buyerreportpriceupdatespage_Filtericon.click();
 		try { 
@@ -161,9 +162,9 @@ public class Buyerreportpriceupdatespage {
 		}
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
-		
+
 	}
-	
+
 
 	public static void Selectsuppliersabari() throws InterruptedException {
 		Buyerreportpriceupdatespage_Selectsuppliername.click();
@@ -176,11 +177,11 @@ public class Buyerreportpriceupdatespage {
 				.executeScript("return document.readyState").equals("complete"));
 
 	}
-	
+
 	public static WebElement getDropDownElementsuppliername() {
 		return Buyerreportpriceupdatespage_Selectsuppliername;
 	}
-	
+
 	public static void Clickapplybutton() throws InterruptedException {
 		Thread.sleep(5000);
 		Buyerreportpriceupdatespage_Applybutton.click();
@@ -190,7 +191,7 @@ public class Buyerreportpriceupdatespage {
 		}
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
-		
+
 	}
 	public static void Clickresetbutton() throws InterruptedException {
 		//WebElement reset = driver.findElement(By.linkText("Reset"));
@@ -203,7 +204,7 @@ public class Buyerreportpriceupdatespage {
 		}
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
-		
+
 	}
 	public static void Clickonoutsideicon() {
 		Buyerreportpriceupdatespage_Outsideicon.click();
@@ -213,7 +214,7 @@ public class Buyerreportpriceupdatespage {
 		}
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
-		
+
 	}
 	public static void Clickexportdownloadbutton() {
 		Buyerreportpriceupdatespage_Exportdownloadbutton.click();
@@ -223,7 +224,7 @@ public class Buyerreportpriceupdatespage {
 		}
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
-		
+
 	}
 	public static void Clickreportsbackbutton() {
 		Buyerreportpriceupdatespage_Reportsbackbutton.click();
@@ -233,8 +234,8 @@ public class Buyerreportpriceupdatespage {
 		}
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
-		
-		
+
+
 	}
 	public static void Clickreportbackbuttoninsku() {
 		Buyerreportpriceupdatespage_Reportsbackbuttoninsku.click();
@@ -244,7 +245,7 @@ public class Buyerreportpriceupdatespage {
 		}
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
-		
+
 	}
 	public static void Clickondownloadbuttonfirstpage() {
 		Buyerreportpriceupdatespage_Downloadbuttonfirstpage.click();
@@ -254,14 +255,22 @@ public class Buyerreportpriceupdatespage {
 		}
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
-		
-	}
-	
-		
-	}
-	
-	
-	
-		
-	
 
+	}
+
+
+
+
+
+	@Then("User select from dropdown value of outlet velumasala in price updates")
+	public void user_select_from_dropdown_value_of_outlet_velumasala_in_price_updates() {
+		//Buyerreportpriceupdatespage_Filtericon
+	}
+
+	@Then("User select supplier in dropdown list of sabari")
+	public void user_select_supplier_in_dropdown_list_of_sabari() {
+		//Buyerreportpriceupdatespage_Filtericon
+	}
+
+
+}

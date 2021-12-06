@@ -11,14 +11,7 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)  
 
 
-@CucumberOptions(strict = true, features = "src/test/resources/functionalTests/SupplierDirectorySetting.feature",
-
-
-tags ="@Smoke",
-
- 
-
-
+@CucumberOptions(strict = true, features = "src/test/resources/functionalTests/Buyerhuballtestcases.feature",tags="@Smoke",
 
 
 
@@ -31,5 +24,5 @@ public class TestRunner {
 
    
                                                
-                                                
+                                                 
    

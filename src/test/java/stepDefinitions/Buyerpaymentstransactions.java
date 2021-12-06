@@ -55,17 +55,17 @@ public class Buyerpaymentstransactions {
 
 	@Then("User select companies from dropdown list")
 	public void user_select_companies_from_dropdown_list() {
-		WebElement SAKTHIMASALA123 = Buyerpaymentstransactonspage.getDropDownElementsakthimasala();
-		Select select=new Select(SAKTHIMASALA123);
-		select.selectByIndex(3);
+		//WebElement SAKTHIMASALA123 = Buyerpaymentstransactonspage.getDropDownElementsakthimasala();
+		//Select select=new Select(SAKTHIMASALA123);
+		//select.selectByIndex(3);
 
 	}
 
 	@Then("User selecct suppliers from dropdown list")
 	public void user_selecct_suppliers_from_dropdown_list() {
-		WebElement MRFruits = Buyerpaymentstransactonspage.getDropDownElementmrfruits();
-		Select select=new Select(MRFruits);
-		select.selectByIndex(1);
+		//WebElement MRFruits = Buyerpaymentstransactonspage.getDropDownElementmrfruits();
+		//Select select=new Select(MRFruits);
+		//select.selectByIndex(1);
 	}
 
 	@Then("User click on calendar and select date")

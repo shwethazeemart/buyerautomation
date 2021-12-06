@@ -93,7 +93,7 @@ Scenario Outline: Verify the Reports invoice variance Category page of Buyer pan
       | username                      | | password   ||invoice     |
       | velumanieswaran2020@gmail.com | |!123456Zm   ||vel-1234567 | 
       
-      
+     
 Scenario Outline: Verify the Reports price updates Category page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -118,9 +118,7 @@ Scenario Outline: Verify the Reports price updates Category page of Buyer panel
           Then User click on apply in custom range
           Then User select date from calendar
           Then User click on YTD from calendar
-          Then User select from dropdown value of outlet velumasala in price updates
           Then User click on filter in price updates
-          And User select supplier in dropdown list of sabari
           Then User click on Apply button in price updates
           Then User click on reset button in price updates
           And User click on outside in price updates
@@ -267,7 +265,7 @@ Scenario Outline: Verify the Reports spending per outlet page of Buyer panel
       | username                      | | password   |
       | velumanieswaran2020@gmail.com | |!123456Zm   |
       
-         
+        
 Scenario Outline: Verify the Reports spending per SKU page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -692,7 +690,7 @@ Scenario Outline: Verify the New recurring orders page of Buyer panel
          When User enter exact username"<username>"
          And User enter exact password"<password>"
          And User is click login button  
-         And User Clicks Orders in the side navigation menubar
+         And User is Clicks Orders in the side navigation menubar
          And User Clicks New order dropdown value
          Then User click on New weekly order
          Then User click on dropdown of weekly order
@@ -1197,7 +1195,7 @@ Scenario Outline: Verify the user name page of Buyer panel
           
     Examples:
          |username                     |  |password    ||First name||Last name ||Job title    ||Email                              ||Mobile phone|
-         |velumanieswaran2020@gmail.com|  |!123456Zm   ||velumani      ||ganesh    ||ATZ      ||ganeshvelutamil2122008@gmail.com      ||+6512345677 |       
+         |velumanieswaran2020@gmail.com|  |!123456Zm   ||velumani      ||ganesh    ||ATZ      ||ganeshvelutamil201212008@gmail.com      ||+6512345677 |       
     
                                  
                                                   
