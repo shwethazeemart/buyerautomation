@@ -31,9 +31,11 @@ public class Buyeredituserlisenpage {
 	}
 	
 
+
 	@FindBy(xpath="(//div[@class='datatable-body-cell-label']//label)[3]")
 	private static WebElement Buyeredituserlisenpage_Checkboxofuser;
-	
+
+
 	@FindBy(xpath="//button[contains(@class,'btn download_order_btn')]")
 	private static WebElement Buyeredituserlisenpage_Deleteicon;
 	
@@ -42,11 +44,14 @@ public class Buyeredituserlisenpage {
 
     @FindBy(xpath="(//div[contains(@class,'datatable-body-cell-label')])[20] ")
 	private static WebElement Buyeredituserlisenpage_user;	
-	
-	@FindBy(xpath="//input[@formcontrolname='title']")
+
+    @FindBy(xpath="(//div[contains(@class,'datatable-body-cell-label')])[26]")
+    private static WebElement Buyeredituserlisenpage_Velumanitwouser;
+
+	@FindBy(xpath="//input[contains(@formcontrolname,'title')]  ")
 	private static WebElement Buyeredituserlisenpage_Jobtitle; 
 	
-	@FindBy(xpath="//input[@formcontrolname='title']")
+	@FindBy(xpath="//input[contains(@formcontrolname,'title')]  ")
 	private static WebElement Buyeredituserlisenpage_Enterjobtitle;
 	
 	@FindBy(xpath="//input[@formcontrolname='email']")

@@ -23,7 +23,7 @@ public class Buyeroutletslisting {
     private Buyeroutletslistingpage buyeroutletslisting;
     
 	public Buyeroutletslisting(TestContext testContext) {
-		super();
+		super();		
 		this.testContext = testContext;
 		this.orderspage = testContext.getPageObjectManager().getOrdersPage();
 		this.logInPage = (LogInPage) testContext.getPageObjectManager().getLogInPage2();
@@ -47,7 +47,7 @@ public class Buyeroutletslisting {
 	    Buyeroutletslistingpage.Clickonmakeinactive();
 	}
 
-	@Then("User Enter in Disable text box {string}")
+	@Then("User Enter in Disable text box{string}")
 	public void user_Enter_in_Disable_text_box(String DISABLE) {
 	    Buyeroutletslistingpage.EntertheDisableintextbox(DISABLE);
 	}

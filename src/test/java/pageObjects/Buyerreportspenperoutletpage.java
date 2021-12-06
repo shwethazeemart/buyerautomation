@@ -49,8 +49,8 @@ public class Buyerreportspenperoutletpage {
 	@FindBy(xpath = "//button[text()='Apply']")
 	private static WebElement Buyerreportspenperoutletpage_Applybutton;
 	
-	//@FindBy(xpath = "//input[@placeholder='Product code or name']")
-	//private static WebElement Buyerreportspenperoutletpage_Resetbutton;
+	@FindBy(xpath = "//a[contains(text(),'Reset')]")
+	private static WebElement Buyerreportspenperoutletpage_Resetbutton;
 	
 	@FindBy(xpath = "//div[@class='flex__bwn flex__pad']")
 	private static WebElement Buyerreportspenperoutletpage_Outside;
@@ -216,6 +216,7 @@ public class Buyerreportspenperoutletpage {
 	public static void Clickresetbutton() {
 		WebElement reset = driver.findElement(By.linkText("Reset"));
 		reset.click();
+		Buyerreportspenperoutletpage_Resetbutton.click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {

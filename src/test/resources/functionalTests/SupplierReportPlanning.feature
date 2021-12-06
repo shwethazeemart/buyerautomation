@@ -1,6 +1,6 @@
 Feature: Verify Supplier Reports Supply Planning list  
 
-Scenario Outline: Verify the Supplier Planning list 
+Scenario Outline: Verify the Supplier Reports Planning list 
          Given User is on available Login Page
           When User enter exact username"<username>"
           And User enter exact password"<password>"

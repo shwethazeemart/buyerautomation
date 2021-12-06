@@ -204,7 +204,7 @@ public class OrdersPage {
 	@FindBy(xpath = "//button[text()='Verify settings']")
 	private static WebElement orderspage_Popmessage;
 	
-	@FindBy(xpath = "//span[@class='swal2-close']//img[1]")
+	@FindBy(xpath = "//img[@src='assets/zmcore/img/close-blue@22.png']")
 	private static WebElement orderspage_Closeiconfirstpop;
 	
 	@FindBy(xpath = "//div[text()='VELU MASALA6']")

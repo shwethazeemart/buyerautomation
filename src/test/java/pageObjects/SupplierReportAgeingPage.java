@@ -54,7 +54,7 @@ public class SupplierReportAgeingPage {
 	@FindBy(xpath = "//select[@formcontrolname='currentOutletId']")
 	private static WebElement SupplierReportAgeingPage_SelectOutlet;
 	
-	@FindBy(xpath = "(//div[contains(@class,'datatable-body-cell-label')])[11]")
+	@FindBy(xpath = "(//div[contains(@class,'datatable-body-cell-label')])[12]")
 	private static WebElement SupplierReportAgeingPage_FirstInvoice;
 
 

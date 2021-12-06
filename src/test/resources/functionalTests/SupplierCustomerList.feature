@@ -4,7 +4,6 @@ Scenario Outline: Verify the Supplier customers location listing page
          Given User is on available Login Page
           When User enter exact username"<username>"
           And User enter exact password"<password>"
-
           And User is click login button
           Then User click on Customers side navigation list menubar
           Then User enter name in search box sakthimasala "<name>" 

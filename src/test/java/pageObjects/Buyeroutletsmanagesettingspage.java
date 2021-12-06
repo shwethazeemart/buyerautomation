@@ -50,6 +50,7 @@ public class Buyeroutletsmanagesettingspage {
 	@FindBy(xpath = "//div[@class='selected-list']//div[1]")
 	private static WebElement Buyeroutletsmanagesettingspage_Selectusersearchbox;
 	
+
 	@FindBy(xpath = "//label[text()='velu eshwar-velueshwar1980@gmail.com']")
 	private static WebElement Buyeroutletsmanagesettingspage_Checkboxfirst;
 	
@@ -81,7 +82,10 @@ public class Buyeroutletsmanagesettingspage {
 	private static WebElement Buyeroutletsmanagesettingspage_Enteroutletemail;
 	
 	@FindBy(xpath = "(//button[contains(@type,'button')])[5]")
+
 	private static WebElement Buyeroutletsmanagesettingspage_Savebutton;	
+	
+
 
 	@FindBy(xpath = "//h4[text()='Add member']")
 	private static WebElement Buyeroutletsmanagesettingspage_Outsidesection;

@@ -1,6 +1,6 @@
 Feature: Verify Supplier Directory manage settings page  
-@Smoke
-Scenario Outline: Verify the Supplier manage settings page
+
+Scenario Outline: Verify the Supplier Directory manage settings page
          Given User is on available Login Page
           When User enter exact username"<username>"
           And User enter exact password"<password>"
@@ -13,9 +13,7 @@ Scenario Outline: Verify the Supplier manage settings page
           Then User click on save button in directory page
           
           
-          
-        
-        
+             
    Examples:
          |username                              ||password    | |text         |
          |supplierautomated2@gmail.com          ||!123456Zm   | |Fresh fruits |

@@ -83,7 +83,7 @@ public class Supplierorderseinvoice {
 	}
 	@Then("User click on mark as shipped in first order")
 	public void user_click_on_mark_as_shipped_in_first_order() {
-		Supplierorderseinvoicepage.Clickonmarkasshipped();
+		//Supplierorderseinvoicepage.Clickonmarkasshipped();
 	}
 	@Then("User click on back order button in first order")
 	public void user_click_on_back_order_button_in_first_order() {

@@ -12,6 +12,7 @@ import io.cucumber.junit.CucumberOptions;
 
 
 
+
 @CucumberOptions(strict = true, features = "src/test/resources/functionalTests/Buyerreportsspendingpersupplier.feature",
 
 tags ="@Smoke",
@@ -27,12 +28,3 @@ public class TestRunner {
 
    
                                                
-                                                
-   
-
-
-
-
-
-
-

@@ -142,7 +142,7 @@ public class Buyerorderslisenpage {
 	@FindBy(xpath = "(//datatable-body-cell[contains(@class,'datatable-body-cell sort-active ng-star-inserted')])[21]")
 	private static WebElement Buyerorderslisenpage_Sabarisupplierorder;
 	
-	@FindBy(xpath = "//a[@download='order_202112040013.pdf']")
+	@FindBy(xpath = "//a[contains(text(),'PDF')]  ")
 	private static WebElement Buyerorderslisenpage_PDFdownloadbutton;	
 
 	@FindBy(xpath = "//h4[text()='Download receiving list']/following-sibling::button")

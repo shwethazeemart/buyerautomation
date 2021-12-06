@@ -65,7 +65,7 @@ public class Buyeroutletslistingpage {
 	@FindBy(xpath = "(//a[@routerlinkactive='active']/following-sibling::a)[2]")
 	private static WebElement Buyeroutletslistingpage_Viewsuppliers;
 	
-	@FindBy(xpath = "//input[@placeholder='Search outlet name']")
+	@FindBy(xpath = "//input[contains(@type,'text')] ")
 	private static WebElement Buyeroutletslistingpage_Entertheoutletname;
 	 
 	

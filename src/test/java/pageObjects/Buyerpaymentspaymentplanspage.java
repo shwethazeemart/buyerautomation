@@ -16,8 +16,6 @@ import managers.FileReaderManager;
 
 public class Buyerpaymentspaymentplanspage {
 
-
-
 	private static final boolean Dashboardcolouryellow = false;
 
 	private static final char[] colrisnotyellow = null;
@@ -231,7 +229,7 @@ public static void SelectpaymentstatusUnpaid() throws InterruptedException {
 	
 	
 	public static void Clickonlistedsupplier() throws InterruptedException {
-		Thread.sleep(10000);
+		Thread.sleep(5000);
 		Buyerpaymentspaymentplanspage_Listedsupplier.click();
 		try { 
 			Thread.sleep(5000);

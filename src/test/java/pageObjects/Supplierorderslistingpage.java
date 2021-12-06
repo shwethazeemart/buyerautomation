@@ -48,7 +48,7 @@ public class Supplierorderslistingpage {
 	@FindBy(xpath = "(//button[text()=' Download '])[2]")
 	private static WebElement Supplierorderslistingpage_FinalDownloadbutton;
 	
-	@FindBy(xpath = "//img[@src='/assets/zmcore/img/close-blue.svg']")
+	@FindBy(xpath = "//h4[text()='Download pick list']/following-sibling::button")
 	private static WebElement Supplierorderslistingpage_Closeicondownloadpicklist;
 	
 	@FindBy(xpath = "//input[@placeholder='Order number']")
