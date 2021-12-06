@@ -36,7 +36,7 @@ public class Buyeroutletslistingpage {
 	
 
 	@FindBy(xpath = "(//input[@type='checkbox'])[3]")
-	private static WebElement Buyeroutletslistingpage_Sstmasalacheckbox;
+	private static WebElement Buyeroutletslistingpage_checkbox;
 	
 	@FindBy(xpath = "//button[text()='Make inactive']")
 	private static WebElement Buyeroutletslistingpage_Makeinactive;
@@ -50,8 +50,8 @@ public class Buyeroutletslistingpage {
 	@FindBy(xpath = "//button[text()='Make active']")
 	private static WebElement Buyeroutletslistingpage_Makeonactiveicon;
 	
-	@FindBy(xpath = "(//a[@class='zmdropDownBtn'])[3]")
-	private static WebElement Buyeroutletslistingpage_Actionsdropdownvelumasala;
+	@FindBy(xpath = "(//a[@class='zmdropDownBtn'])[1]")
+	private static WebElement Buyeroutletslistingpage_Actionsdropdown;
 	
 	@FindBy(xpath = "(//a[@routerlinkactive='active'])[2]")
 	private static WebElement Buyeroutletslistingpage_Managedetails;
@@ -73,8 +73,8 @@ public class Buyeroutletslistingpage {
 	
 	
 
-	public static void Clickonsstmasalacheckbox() {
-		Buyeroutletslistingpage_Sstmasalacheckbox.click();
+	public static void Clickoncheckbox() {
+		Buyeroutletslistingpage_checkbox.click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -123,8 +123,8 @@ public class Buyeroutletslistingpage {
 		
 		
 	}
-	public static void Clickonactionsdropdownvelumasala() {
-		Buyeroutletslistingpage_Actionsdropdownvelumasala.click();
+	public static void Clickonactionsdropdown() {
+		Buyeroutletslistingpage_Actionsdropdown.click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -172,8 +172,8 @@ public class Buyeroutletslistingpage {
 		
 		
 	}
-	public static void Entertheoutletname(String velumasala2020) {
-		Buyeroutletslistingpage_Entertheoutletname.sendKeys(velumasala2020);
+	public static void Entertheoutletname(String outletname) {
+		Buyeroutletslistingpage_Entertheoutletname.sendKeys(outletname);
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -183,38 +183,7 @@ public class Buyeroutletslistingpage {
 		
 		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+		
 	
 	
 }

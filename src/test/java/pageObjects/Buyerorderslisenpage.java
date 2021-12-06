@@ -88,7 +88,7 @@ public class Buyerorderslisenpage {
 	@FindBy(xpath = "//div[text()=' Outlet  ']")
 	private static WebElement Buyerorderslisenpage_Outletfiltericon;
 	
-	@FindBy(xpath = "//div[text()=' Supplier  ']")
+	@FindBy(xpath = "//span[text()='Supplier']")
 	private static WebElement Buyerorderslisenpage_Suppliericon;
 	
 	@FindBy(xpath = "//div[text()=' Order status  ']")
@@ -118,7 +118,7 @@ public class Buyerorderslisenpage {
 	@FindBy(xpath = "(//datatable-body-cell[contains(@class,'datatable-body-cell sort-active')])[3]")
 	private static WebElement Buyerorderslisenpage_Sabarisupplier;
 	
-	@FindBy(xpath = "//button[text()=' Repeat ']")
+	@FindBy(xpath = "//button[contains(@class,'btn rr_btn')]")
 	private static WebElement Buyerorderslisenpage_Repeatorder;
 	
 	@FindBy(xpath = "//button[text()=' Receive ']")
@@ -143,10 +143,7 @@ public class Buyerorderslisenpage {
 	private static WebElement Buyerorderslisenpage_Sabarisupplierorder;
 	
 	@FindBy(xpath = "//a[contains(text(),'PDF')]  ")
-	private static WebElement Buyerorderslisenpage_PDFdownloadbutton;
-	
-	
-	
+	private static WebElement Buyerorderslisenpage_PDFdownloadbutton;	
 
 	@FindBy(xpath = "//h4[text()='Download receiving list']/following-sibling::button")
 	private static WebElement Buyerorderslisenpage_Closeicon;
@@ -164,12 +161,6 @@ public class Buyerorderslisenpage {
 	private static WebElement Buyerorderslisenpage_Resetbuttoninorder;
 	
 	
-	
-	
-	
-	
-	
-
 	public static void Clickonneworderdropdown() {
 		Buyerorderslisenpage_Neworderdropdown.click();
 		try {
@@ -435,7 +426,7 @@ public class Buyerorderslisenpage {
 		
 	}
 
-	public static void Clickoncheckboxoffirstorder() throws InterruptedException {
+	public static void Clickoncheckboxoffirstorder()  throws InterruptedException {
 		Thread.sleep(5000);
 		Buyerorderslisenpage_Checkboxoffirstorder.click();
 		try {
@@ -491,7 +482,7 @@ public class Buyerorderslisenpage {
 	}
 
 	public static void Clickonsabarisupplierorder() {
-		Buyerorderslisenpage_Sabarisupplier.click();
+		//Buyerorderslisenpage_Sabarisupplier.click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -513,6 +504,7 @@ public class Buyerorderslisenpage {
 		
 	}
 
+	
 	public static void ClickReceiveorder() {
 		Buyerorderslisenpage_Receiveorder.click();
 		try {
@@ -662,23 +654,6 @@ public class Buyerorderslisenpage {
 				.executeScript("return document.readyState").equals("complete"));
 		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
 }

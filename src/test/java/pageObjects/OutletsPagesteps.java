@@ -33,6 +33,12 @@ public class OutletsPagesteps {
 	}
 	
 	
+
+	//@FindBy(xpath = "(//a[@class='zmdropDownBtn'])[2]")
+	//private static WebElement OutletsPagesteps_actions_dropdown;  
+	
+	//@FindBy(xpath = "(//div[@class='zmDropDown']//a)[3]")
+
 	@FindBy(xpath = "(//a[@class='zmdropDownBtn'])[3]")
 	private static WebElement OutletsPagesteps_actions_dropdown;  
 	
@@ -48,8 +54,6 @@ public class OutletsPagesteps {
 	
 	
 	public static void clicks_actions_dropdown() throws InterruptedException {
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-	    js.executeScript("window.scrollBy(0, 1000);");
 		OutletsPagesteps_actions_dropdown.click();
 		Thread.sleep(5000);
 		try {
@@ -62,9 +66,9 @@ public class OutletsPagesteps {
 
 	public static void clicks_View_suppliers() {
 		WebElement viewSuppliers = driver.findElement(By.linkText("View suppliers"));
-		viewSuppliers.click(); 
-		//OutletsPagesteps_View_suppliers.click();
-		try {
+		viewSuppliers.click();
+		//OutletsPagesteps_View_suppliers.click();		
+         try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 		}
@@ -99,32 +103,3 @@ public class OutletsPagesteps {
 	
 		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-

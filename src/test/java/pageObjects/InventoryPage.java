@@ -60,7 +60,7 @@ public class InventoryPage {
 	private static WebElement InventoryPage_Donebtn;
 
 	@FindBy(xpath = "//div[text()='sairam']")
-	private static WebElement InventoryPage_sairamlist;
+	private static WebElement InventoryPage_list;
 
 	@FindBy(xpath = "(//button[@type='button'])[3]")
 	private static WebElement InventoryPage_Newstockcountbtn; 
@@ -154,6 +154,8 @@ public class InventoryPage {
 	
 
 	public void Clicks_in_Lists() throws InterruptedException {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("scroll(0, -250);");
 		btn_Listsbtn.click(); 
 		Thread.sleep(5000);
 		try {
@@ -390,7 +392,7 @@ public class InventoryPage {
 
 	}
 
-	public void Clicks_in_velu_masala2020_outlet() throws InterruptedException {
+	public void Clicks_outlet() throws InterruptedException {
 		btn_outletbtn.click();
 		Thread.sleep(5000);
 		try {
@@ -402,8 +404,8 @@ public class InventoryPage {
 		
 	}
 
-	public void Clicks_the_sairam_list() {
-		InventoryPage_sairamlist.click();
+	public void Clicks_the_list() {
+		InventoryPage_list.click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -593,7 +595,8 @@ public class InventoryPage {
 				.executeScript("return document.readyState").equals("complete"));
 		
 	}
-	
+
+		
 	}	
 
 

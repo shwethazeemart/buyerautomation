@@ -55,8 +55,8 @@ public class Buyerreportspenpertagpage {
 	@FindBy(xpath = "(//button[@type='button'])[3]")
 	private static WebElement Buyerreportspenpertagpage_Applybutton;
 	
-	//@FindBy(xpath = "//a[contains(@class,'pull-right export-mclr')]")
-	//private static WebElement Buyerreportspenpertagpage_Resetbutton;
+	@FindBy(xpath = "//a[@class='filter-reset ml-3']")
+	private static WebElement Buyerreportspenpertagpage_Resetbutton;
 	
 	@FindBy(xpath = "//div[@class='page__header']/following-sibling::div[1]")
 	private static WebElement Buyerreportspenpertagpage_Outside;
@@ -68,9 +68,7 @@ public class Buyerreportspenpertagpage {
 	private static WebElement Buyerreportspenpertagpage_Checkboxofsabari;
 	
 	@FindBy(xpath = "(//a[@class='export-mclr'])[2]")
-	private static WebElement Buyerreportspenpertagpage_Exportdownloadbutton;
-	
-	
+	private static WebElement Buyerreportspenpertagpage_Exportdownloadbutton;	
 	
 	
 	@FindBy(xpath = "(//div[contains(@class,'datatable-body-cell-label')])[1]")
@@ -91,7 +89,7 @@ public class Buyerreportspenpertagpage {
 	public static void Clickonspendingpertag() {
 		WebElement spendingPerTagSee = driver.findElement(By.className("yellowBox"));
 		spendingPerTagSee.click();
-		try {
+				try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 		} 
@@ -276,29 +274,6 @@ public class Buyerreportspenpertagpage {
 		} 
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
-		
-		
 	}
-	 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 }

@@ -37,8 +37,9 @@ public class Buyerusernamesettings {
 		
 	}
 	
+		
 	@Then("User click on user name in settings")
-	public void user_click_on_user_name_in_settings() {
+	public void user_click_on_user_name_in_settings() throws InterruptedException {
 	   Buyerusernamesettingspage.Clickusernameinrighthandside();
 	}
 

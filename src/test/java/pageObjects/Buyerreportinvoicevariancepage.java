@@ -12,9 +12,11 @@ import managers.FileReaderManager;
  
 public class Buyerreportinvoicevariancepage {
 
-	
+
+	private static WebElement Buyerreportinvoicevariancepage_selectoutlet = null;
 
 	private static WebDriver driver;
+	
 
 	public Buyerreportinvoicevariancepage(WebDriver driver) {
 
@@ -32,7 +34,7 @@ public class Buyerreportinvoicevariancepage {
 
 	public void isTosterMessageFound(String msg) {
 		WebElement tosterMsg = driver.findElement(By.xpath("//*[text()='" + msg + "']"));
-	}
+			}
 	
 	
 	
@@ -56,10 +58,7 @@ public class Buyerreportinvoicevariancepage {
 	
 	@FindBy(xpath = "(//select[contains(@class,'custom-select filter-dropdown')])[2]")
 	private static WebElement Buyerreportinvoicevariancepage_Exactmatch;
-	
-	
-	
-	
+		
 	@FindBy(xpath = "(//button[@type='button'])[3]")
 	private static WebElement Buyerreportinvoicevariancepage_Applybutton;
 	
@@ -70,8 +69,7 @@ public class Buyerreportinvoicevariancepage {
 	private static WebElement Buyerreportinvoicevariancepage_Outside;
 	
 	@FindBy(xpath = "//div[@class='pl-2']//a[1]")
-	private static WebElement Buyerreportinvoicevariancepage_Exportdownloadbutton;
-	
+	private static WebElement Buyerreportinvoicevariancepage_Exportdownloadbutton;	
 	
 	@FindBy(xpath = "//img[@src='../assets/zmcore/img/left-report-b-icon.svg']/following-sibling::p[1]")
 	private static WebElement Buyerreportinvoicevariancepage_Reportsbackbutton;
@@ -131,9 +129,7 @@ public class Buyerreportinvoicevariancepage {
 				.executeScript("return document.readyState").equals("complete"));
 
 	}
-	
-	
-	
+		
 	public static void Selectsupplier() throws InterruptedException {
 		Thread.sleep(5000);
 		Buyerreportinvoicevariancepage_selectsupplier.click();
@@ -228,7 +224,7 @@ public class Buyerreportinvoicevariancepage {
 			return Buyerreportinvoicevariancepage_selectoutlet;
 
 		}
-		
+
 		public static void Clickfilter() throws InterruptedException {
 			Thread.sleep(5000);
 			Buyerreportinvoicevariancepage_Filter.click();
@@ -242,57 +238,5 @@ public class Buyerreportinvoicevariancepage {
 		}
 		
 	
+	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-

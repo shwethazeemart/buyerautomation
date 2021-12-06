@@ -525,12 +525,7 @@ Scenario Outline: Verify the New Order page of Buyer panel
          Examples:
              |Order ID        ||username                     |  |password    |
              |202011130001    ||velumanieswaran2020@gmail.com|  |!123456Zm   |
-             
-
-
-
-
-    
+      
     
 Scenario Outline: Verify the Orders lisen page of Buyer panel
          Given User is on Login Page

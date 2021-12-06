@@ -36,7 +36,7 @@ public class BuyerinventorySKUlisenpage {
 	
 	
 	@FindBy(xpath = "//div[text()='velu masala2020']")
-	private static WebElement BuyerinventorySKUlisenpage_velumasala;
+	private static WebElement BuyerinventorySKUlisenpage_Outlet;
 	
 	@FindBy(xpath = "//button[text()=' New stock count ']")
 	private static WebElement BuyerinventorySKUlisenpage_stockcount;
@@ -99,8 +99,10 @@ public class BuyerinventorySKUlisenpage {
 	
 	 
 
-	public static void clickvelumasala() {
-		BuyerinventorySKUlisenpage_velumasala.click();
+	public static void clicktheOutlet() {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,250)");
+		BuyerinventorySKUlisenpage_Outlet.click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -111,6 +113,8 @@ public class BuyerinventorySKUlisenpage {
 	}
 
 	public static void clicknewstockcount() {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("scroll(0, -250);");
 		BuyerinventorySKUlisenpage_stockcount.click();
 		try {
 			Thread.sleep(5000);
@@ -287,6 +291,8 @@ public class BuyerinventorySKUlisenpage {
 	}
 
 	public static void Clickonconsumptionreport() {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("scroll(0, -250);");
 		BuyerinventorySKUlisenpage_Consumptionreport.click();
 		try {
 			Thread.sleep(5000);
@@ -308,32 +314,10 @@ public class BuyerinventorySKUlisenpage {
 		
 		
 	}
+
+	
+		
+	}
+
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-}

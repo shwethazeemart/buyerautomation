@@ -48,6 +48,7 @@ public class Buyerpaymentstransactions {
 		 dashboradpage.clickPayments();
 	}
 
+	
 	@Then("User click on Transactions icon")
 	public void user_click_on_Transactions_icon() {
 	   Buyerpaymentstransactonspage.Clickontransactions();

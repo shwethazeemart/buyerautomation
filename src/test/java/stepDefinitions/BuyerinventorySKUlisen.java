@@ -44,11 +44,7 @@ public class BuyerinventorySKUlisen {
 	}
 
 
-	@Then("User ckicks on velu masala outlet")
-	public void user_ckicks_on_velu_masala_outlet() {
-	    BuyerinventorySKUlisenpage.clickvelumasala();
-	}
-
+	
 	@Then("User click on New stock count")
 	public void user_click_on_New_stock_count() {
 	   BuyerinventorySKUlisenpage.clicknewstockcount();
@@ -83,8 +79,8 @@ public class BuyerinventorySKUlisen {
 
 	}
 
-	@Then("User Select dropdown list name in velu")
-	public void user_Select_dropdown_list_name_in_velu() {
+	@Then("User Select dropdown list name")
+	public void user_Select_dropdown_list_name() {
 		//WebElement velu = BuyerinventorySKUlisenpage.getDropDownElementSKU();
 		//Select select=new Select(velu);
 		//select.selectByIndex(3);
@@ -149,11 +145,11 @@ public class BuyerinventorySKUlisen {
 		BuyerinventorySKUlisenpage.Clickbackbuttonofconsumptionreport();
 	}
 
+	@Then("User clicks on outlet")
+	public void user_clicks_on_outlet() {
+		BuyerinventorySKUlisenpage.clicktheOutlet();
+	}
 
-
-
-
-	
 	
 
 }

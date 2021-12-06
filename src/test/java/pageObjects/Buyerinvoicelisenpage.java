@@ -34,9 +34,6 @@ public class Buyerinvoicelisenpage {
 
 	}
 
-	
-	
-
 	@FindBy(xpath = "//input[@placeholder='Password']")
 	private static WebElement Buyerinvoicelisenpage_exactPassword;
 	 
@@ -47,7 +44,11 @@ public class Buyerinvoicelisenpage {
 	private static WebElement Buyerinvoicelisenpage_Payonline;
 	
 
+	//@FindBy(xpath = "//span[@class='close']//img[1]")
+
+
 	@FindBy(xpath = "(//img[@src='../assets/zmcore/img/close-blue@22.png'])[2]")
+
 
 	private static WebElement Buyerinvoicelisenpage_payonlinecloseicon;
 	///html/body/ngb-modal-window/div/div/app-pay-invoice-online/div[1]/span/img
@@ -55,7 +56,11 @@ public class Buyerinvoicelisenpage {
 	@FindBy(xpath = "(//button[@type='button'])[3]")
 	private static WebElement Buyerinvoicelisenpage_clickuploadinvoice;
 	
+
+	//@FindBy(xpath = "//button[@class='close']//img[1]")
+
 	@FindBy(xpath = "//img[@src='assets/zmcore/img/close-blue@22.png']")
+
 	private static WebElement Buyerinvoicelisenpage_clickuploadinvoicecloseicon;
 	
 	
@@ -81,13 +86,13 @@ public class Buyerinvoicelisenpage {
 	@FindBy(xpath = "//a[@class='fc_blue clear']")
 	private static WebElement Buyerinvoicelisenpage_clickclearbutton;
 	
-	@FindBy(xpath = "//div[text()=' INV-21-0000013 ']")
+	@FindBy(xpath = "//div[text()=' INV-21-0000019 ']")
 	private static WebElement Buyerinvoicelisenpage_clickoninvoice;
 	
 	@FindBy(xpath = "//img[@src='../assets/zmcore/img/left-report-b-icon.svg']")
 	private static WebElement Buyerinvoicelisenpage_clickonreturninvoiceicon;
 	
-	@FindBy(xpath = "//div[text()=' CN-21-0000014 ']")
+	@FindBy(xpath = "//div[text()=' CN-21-0000021 ']")
 	private static WebElement Buyerinvoicelisenpage_clickoncreditnoteinvoice;
 	
 	@FindBy(xpath = "//img[@src='assets/zmcore/img/left-report-b-icon.svg']")
@@ -537,110 +542,6 @@ public class Buyerinvoicelisenpage {
 				.executeScript("return document.readyState").equals("complete"));
 		
 	}
+}
 
 	
-	
-		
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	}
-		
-	
-		
-	
-		
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

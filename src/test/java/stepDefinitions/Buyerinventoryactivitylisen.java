@@ -56,7 +56,10 @@ public class Buyerinventoryactivitylisen {
 	   Buyerinventoryactivitylisenpage.Clickdownloadbutton();
 	}
 
-
+	@Then("User ckicks on outlet {string}")
+	public void user_ckicks_on_outlet(String outletname) {
+		Buyerinventoryactivitylisenpage.ClickonOutlet();
+	}
 	
 	
 	

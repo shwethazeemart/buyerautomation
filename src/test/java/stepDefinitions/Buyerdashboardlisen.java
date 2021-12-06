@@ -101,7 +101,7 @@ public class Buyerdashboardlisen {
 	public void user_click_on_Dashboard_side_navigation_menubar() {
 	    Buyerdashboardlisenpage.Clickondashboardsidenavigationmenubar();
 	}
-	
+
 	@Then("User select dropdown top expenditures list of {string}")
 	public void user_select_dropdown_top_expenditures_list_of(String outletname) {
 		WebElement velumasala2020 = Buyerdashboardlisenpage.getDropDownElementvelumasalatwentytwenty();
@@ -120,8 +120,8 @@ public class Buyerdashboardlisen {
 	   Buyerdashboardlisenpage.Clickoncategoryicon();
 	}
 
-	@Then("User click on supplier icon")
-	public void user_click_on_supplier_icon() {
+	@Then("User click on the supplier")
+	public void user_click_on_the_supplier() {
 	    Buyerdashboardlisenpage.Clickonsuppliericon();
 	}
 
@@ -149,16 +149,11 @@ public class Buyerdashboardlisen {
 	public void user_click_on_view_all_spending_by_supplier() {
 	    Buyerdashboardlisenpage.Clickonviewspendingbusupplier();
 	}
-
-
 	
-	
-	
-	
-	@Then("User click on sabari supplier")
+	/*@Then("User click on sabari supplier")
 	public void user_click_on_sabari_supplier() {
 	    Buyerdashboardlisenpage.Clickonsabarisupplier();
-	}
+	}*/
 
 	@Then("User click on show favourites check box")
 	public void user_click_on_show_favourites_check_box() {
@@ -216,11 +211,19 @@ public class Buyerdashboardlisen {
 	public void user_click_on_close_icon_in_order_page() {
 	    Buyerdashboardlisenpage.Clickoncloseiconinorderpage();
 	}
- 
+
+
 	@Then("User click on {string}")
 	public void user_click_on(String outletname) {
-		 Buyerdashboardlisenpage.Click_velumasala(outletname);
+		 Buyerdashboardlisenpage.clickonOutletOne();
 	}
+
+ 
+	//@Then("User click on {string}")
+	//public void user_click_on(String outletname) {
+		 //Buyerdashboardlisenpage.Click_velumasala(outletname);
+
+
 	
 	
 	@Then("User click on upload image in drag and dorp filed")
@@ -240,46 +243,26 @@ public class Buyerdashboardlisen {
          Buyerdashboardlisenpage.Clickonapplybutton();
 	}
 
-	@Then("User click on Reset button in order page")
+	/*@Then("User click on Reset button in order page")
 	public void user_click_on_Reset_button_in_order_page() throws InterruptedException {
 	  //Buyerdashboardlisenpage.Clickonresetbutton();
+	*/
+ 	
+	@Then("User click on supplier tab icon")
+	public void user_click_on_supplier_tab_icon() {
+		Buyerdashboardlisenpage.ClickonSuppliericon(); 
+		}
+
+	@Then("User select dropdown spending overview list {string}")
+	public void user_select_dropdown_spending_overview_list(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
 	}
 
+	@Then("User select dropdown top expenditures list {string}")
+	public void user_select_dropdown_top_expenditures_list(String string) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
 
-
-	
-	
-	 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }

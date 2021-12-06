@@ -14,7 +14,7 @@ import managers.FileReaderManager;
 public class Buyerreportpriceupdatespage {
 
 	private static WebDriver driver;
-
+	
 	public Buyerreportpriceupdatespage(WebDriver driver) {
 
 
@@ -36,6 +36,7 @@ public class Buyerreportpriceupdatespage {
 
 	@FindBy(xpath = "//div[contains(@class,'skyBlueBox')]")
 	private static WebElement Buyerreportpriceupdatespage_Priceupdatesicon;
+
 
 	@FindBy(xpath = "//input[@placeholder='Search SKU']")
 	private static WebElement Buyerreportpriceupdatespage_Searchbox;
@@ -79,8 +80,8 @@ public class Buyerreportpriceupdatespage {
 	@FindBy(xpath = "//div[@class='pl-2']//a[1]")
 	private static WebElement Buyerreportpriceupdatespage_Downloadbuttonfirstpage;
 
-
-
+	
+	
 
 	public static void Clickonpriceupdatesicon() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -257,20 +258,4 @@ public class Buyerreportpriceupdatespage {
 				.executeScript("return document.readyState").equals("complete"));
 
 	}
-
-
-
-
-
-	@Then("User select from dropdown value of outlet velumasala in price updates")
-	public void user_select_from_dropdown_value_of_outlet_velumasala_in_price_updates() {
-		//Buyerreportpriceupdatespage_Filtericon
-	}
-
-	@Then("User select supplier in dropdown list of sabari")
-	public void user_select_supplier_in_dropdown_list_of_sabari() {
-		//Buyerreportpriceupdatespage_Filtericon
-	}
-
-
 }

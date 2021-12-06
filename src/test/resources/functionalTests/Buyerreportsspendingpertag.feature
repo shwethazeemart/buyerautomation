@@ -1,5 +1,5 @@
 Feature: Verify Buyer Reports spending per tag page and test all the page
-
+@Smoke
 Scenario Outline: Verify the Reports spending per tag page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -26,18 +26,18 @@ Scenario Outline: Verify the Reports spending per tag page of Buyer panel
           Then User click on YTD from calendar
           Then User click on filter in tag
           And User click on outlets in tag
-          Then User click on Check box of velumasala in tag
+          Then User click on Check box in tag
           Then User click on apply button in tag
           And User click on reset button in tag
           Then User click on outside in tag
           Then User click on filter in tag
           And User click on Suppliers in tag
-          Then User click on check box of sabari in tag
+          Then User click on check box of tag
           Then User click on apply button in tag
           And User click on reset button in tag
           Then User click on outside in tag
           Then User click on Export download button in tag
-          And User click on masala Tag 
+          And User click on food Tag 
           Then User select date from calendar 
           And User click on Today date from calendar
           Then User select date from calendar
@@ -53,22 +53,29 @@ Scenario Outline: Verify the Reports spending per tag page of Buyer panel
           Then User click on apply in custom range
           Then User select date from calendar
           Then User click on YTD from calendar
-          And User click on Export download button in masala
-          Then User click on filter tag in masala
+          And User click on Export download button in food
+          Then User click on filter tag in food
           And User click on outlets in tag
-          Then User click on Check box of velumasala in tag
+          Then User click on Check box in tag
           Then User click on apply button in tag
+          Then User click on filter tag in food
           And User click on reset button in tag
-          Then User click on outside tag in masala
-          Then User click on filter tag in masala
+          Then User click on outside tag 
+          Then User click on filter tag 
           And User click on Suppliers in tag
-          Then User click on check box of sabari in tag
+          Then User click on check box  in tag
           Then User click on apply button in tag
+          Then User click on filter tag 
           And User click on reset button in tag
-          Then User click on outside tag in masala
+          Then User click on outside tag 
           Then User click on back button of spending report
           Then User click on back button of reports
           
+          
+  @dev        
   Examples: 
-      | username                      | | password   ||name     |
-      | velumanieswaran2020@gmail.com | |!123456Zm   ||masala   |    
+      | username                          | | password   ||name       |
+      | velumanieswaran2020@gmail.com     | |!123456Zm   ||masala     | 
+      
+  
+      

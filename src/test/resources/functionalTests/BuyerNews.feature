@@ -13,8 +13,13 @@ Scenario Outline: Verify the News page of Buyer panel
           And User are Clicks on the Whatsapp link
                
           
-       
+        @dev
         Examples:
          |username                            |  |password    |
-         |velumanieswaran2020@gmail.com       |  |!123456Zm   |
+         |buyerautomated3@gmail.com           |  |!123456Zm   |
+         
+            @naren
+        Examples:
+         |username                            |  |password    |
+         |buyerautomated1@gmail.com           |  |!123456Zm   |
           

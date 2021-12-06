@@ -1,11 +1,11 @@
 Feature: Verify Buyer Orders screen lisen page
-
+@Smoke
 Scenario Outline: Verify the Orders lisen page of Buyer panel
          Given User is on Login Page
          When User enter exact username"<username>"
          And User enter exact password"<password>"
          And User is click login button  
-         And User Clicks Orders in the side navigation menubar
+         And User Clicks Orders in the side navigation menubar    
          And User Clicks on New order dropdown value
          Then User click on outside order icon
          And User click on Download option
@@ -61,27 +61,28 @@ Scenario Outline: Verify the Orders lisen page of Buyer panel
          And User click on select all icon in order page
          Then User click on Apply button in order in first page
          And User click on filter in order first page
-         Then User click on Reset button in order in first page
+         Then User click on Reset button in order in first page                     
          And User click on check box of first order
          Then User click on download orders button in order page
-         Then User click on download orders in detailed in order page
+         Then User click on download orders in detailed in order page 
          And User click on Mark as recevied button in order page
          Then User click on clear button in order page 
-         And User click on sabari supplier order
+         And User click on the supplier order 
          Then User click on Repeat order
          And User Clicks Orders in the side navigation menubar
-         And User click on sabari supplier order
+         And User click on supplier order 
          Then User click on Receive order
          Then User click on yes marked button
          And User click on Activity
          Then User click on Cancel and linked order
          Then User click on reason of change quantity
          Then User click on confirm cancel button
-         And User click on sabari supplier order in order page
+         And User click on supplier order in order page 
          Then User click on PDF download button
-         
-             
-         
-          Examples:
-             |username                     |  |password    ||orderid     |
-             |velumanieswaran2020@gmail.com|  |!123456Zm   ||202109090012|     
+
+        @dev  
+        Examples:
+             |username                     |  |password    ||orderid     | |suppliername   |
+             |buyerautomated3@gmail.com    |  |!123456Zm   ||202109090012| |sabari         |
+
+        

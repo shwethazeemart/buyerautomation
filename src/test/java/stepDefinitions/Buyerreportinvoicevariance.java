@@ -50,7 +50,7 @@ public class Buyerreportinvoicevariance {
 	
 	
 	@Then("User click on Invoice variance icon")
-	public void user_click_on_Invoice_variance_icon() {
+	public void user_click_on_Invoice_variance_icon() throws InterruptedException {
 	    Buyerreportinvoicevariancepage.Clickinvoicevarianceicon();
 	}
 
@@ -69,9 +69,9 @@ public class Buyerreportinvoicevariance {
 	    //Buyerreportinvoicevariancepage.Selectdatefromcalendar();
 	}
 
-		
-	@Then("User select from dropdown value of {string}")
-	public void user_select_from_dropdown_value_of(String outletname) {
+
+	@Then("User select from dropdown value {string}")
+	public void user_select_from_dropdown_value(String outletname) {
 		WebElement velumasala2020 = Buyerreportinvoicevariancepage.getDropDownElementoutletname();
 		Select select=new Select(velumasala2020);
 		select.selectByIndex(3); 
@@ -122,34 +122,4 @@ public class Buyerreportinvoicevariance {
 	    Buyerreportinvoicevariancepage.Clickreportsbackbutton();
 	} 
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-}
+	}

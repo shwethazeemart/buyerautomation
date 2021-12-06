@@ -33,6 +33,7 @@ public class Buyerreportspenperoutletpage {
 	}
 	
 	
+	
 	//@FindBy(xpath = "//input[@placeholder='Product code or name']")
 	//private static WebElement Buyerreportspenperoutletpage_Spendingperoutlet;
 	
@@ -106,7 +107,7 @@ public class Buyerreportspenperoutletpage {
 	private static WebElement Buyerreportspenperoutletpage_YTDfromcalendar;
 	
 	@FindBy(xpath = "(//img[@src='./assets/zmcore/img/download-icon.svg'])[2]")
-	private static WebElement Buyerreportspenperoutletpage_Velumasaladownloadbutton;
+	private static WebElement Buyerreportspenperoutletpage_downloadbutton;
 	
 	//@FindBy(xpath = "//span[contains(@name,'daterange')]")
 	//private static WebElement Buyerreportspenperoutletpage_Velumasalasummarybutton;
@@ -118,7 +119,7 @@ public class Buyerreportspenperoutletpage {
 	//private static WebElement Buyerreportspenperoutletpage_Velumasalalistinvoicesbutton;
 	
 	@FindBy(xpath = "(//div[contains(@class,'datatable-body-cell-label')])[10]")
-	private static WebElement Buyerreportspenperoutletpage_Velumasalaoutleticon;
+	private static WebElement Buyerreportspenperoutletpage_Outleticon;
 	
 	@FindBy(xpath = "//div[@class='d-flex']//a[1]")
 	private static WebElement Buyerreportspenperoutletpage_Exportdownloadbutton;
@@ -200,7 +201,7 @@ public class Buyerreportspenperoutletpage {
 		} 
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
-		
+				
 	}
 	public static void Clickapplybutton() {
 		Buyerreportspenperoutletpage_Applybutton.click();
@@ -415,9 +416,9 @@ public class Buyerreportspenperoutletpage {
 				.executeScript("return document.readyState").equals("complete"));
 		
 	}
-	public static void Clickonvelumasaladownloadbutton() throws InterruptedException {
+	public static void Clickondownloadbutton() throws InterruptedException {
 		Thread.sleep(5000);
-		Buyerreportspenperoutletpage_Velumasaladownloadbutton.click();
+		Buyerreportspenperoutletpage_downloadbutton.click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -462,9 +463,9 @@ public class Buyerreportspenperoutletpage {
 				.executeScript("return document.readyState").equals("complete"));
 		
 	}
-	public static void Clickonvelumasalaoutleticon() throws InterruptedException {
+	public static void Clickonoutleticon() throws InterruptedException {
 		Thread.sleep(5000);
-		Buyerreportspenperoutletpage_Velumasalaoutleticon.click();
+		Buyerreportspenperoutletpage_Outleticon.click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -541,6 +542,10 @@ public class Buyerreportspenperoutletpage {
 		}
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+	public static void Clickoncheckbox() {
+		// TODO Auto-generated method stub
 		
 	}
 	

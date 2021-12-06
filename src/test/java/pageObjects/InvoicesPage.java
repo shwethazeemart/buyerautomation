@@ -117,8 +117,8 @@ public class InvoicesPage {
 	}
 
 	public static void Clicks_on_upload_the_image() throws InterruptedException {
-		WebElement uploadBox=driver.findElement(By.xpath("//input[@id='file']"));
-		uploadBox.sendKeys("E:\\Zeemart All\\download.jpg");
+		WebElement uploadBox=driver.findElement(By.xpath("//input[@type='file']"));
+		uploadBox.sendKeys("../../src/images/MicrosoftTeams-image.png");
 		Thread.sleep(5000);
 		try {
 			Thread.sleep(5000);
@@ -126,9 +126,7 @@ public class InvoicesPage {
 		}
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));	
-	}
-
-	
+	}	
 	
 }
 

@@ -48,9 +48,9 @@ public class InventorypageSteps {
 		dashboradpage.clickInventory();
 	} 
 
-	@Then("User is Clicks in velu masala2020 outlet")
-	public void user_is_Clicks_in_velu_masala2020_outlet() throws InterruptedException {
-	    inventorypage.Clicks_in_velu_masala2020_outlet();
+	@Then("User is Clicks in  outlet")
+	public void user_is_Clicks_in_outlet() throws InterruptedException {
+	    inventorypage.Clicks_outlet();
 		
 	} 
 
@@ -92,9 +92,9 @@ public class InventorypageSteps {
 	    inventorypage.Clicks_Done_button();		
 	}
 
-	@Then("User are Clicks the sairam list")
-	public void user_are_Clicks_the_sairam_list() {
-	    inventorypage.Clicks_the_sairam_list();
+	@Then("User are Clicks the list")
+	public void user_are_Clicks_the_list() {
+	    inventorypage.Clicks_the_list();
 	}
 
 	@And("User is Clicks the New stock count")
@@ -249,11 +249,37 @@ public class InventorypageSteps {
 		select.selectByIndex(5);
 	}
 
-	
-	@Then("User are Clicks the vsla list")
-	public void user_are_Clicks_the_vsla_list() {
-		//inventorypage.Clickvslalist();   
+	@Then("User are Clicks the first check box")
+	public void user_are_Clicks_the_first_check_box() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
 	}
+
+	@Then("User is Clicks the increase counted Quantity")
+	public void user_is_Clicks_the_increase_counted_Quantity() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("User are Clicks the increase second time counted Quantity")
+	public void user_are_Clicks_the_increase_second_time_counted_Quantity() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("User are Click adjusment button")
+	public void user_are_Click_adjusment_button() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+  
+	
+
+	
+
+
+	
+
 
 
 

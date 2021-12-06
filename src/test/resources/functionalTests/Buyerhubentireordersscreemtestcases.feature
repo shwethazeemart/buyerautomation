@@ -1,6 +1,6 @@
 Feature: Verify Buyer Orders screen entire testcases
  
-@Smoke
+
 Scenario Outline: Verify the Orders page of Buyer panel
          Given User is on Login Page
          When User enter exact username"<username>"
@@ -9,7 +9,7 @@ Scenario Outline: Verify the Orders page of Buyer panel
          And User Clicks Orders in the side navigation menubar
          And User Clicks New order dropdown value
          And User Clicks New order in the dropdown value
-         And User Clicks velu masala2020 in the Suppliers page 
+         And User Clicks  in the Suppliers page "<outletname>"
          And User Clicks in Add to order of SKU
          Then User Clicks increase the order button
          And User Clicks in Add to order of SKU
@@ -30,10 +30,16 @@ Scenario Outline: Verify the Orders page of Buyer panel
          And User Clicks Search button in the orders page
          Then It should display the particular order ID "<order ID>"
 
+
+          @dev
           Examples:
-             |Order ID        ||username                     |  |password    |
-             |202011130001    ||velumanieswaran2020@gmail.com|  |!123456Zm   |     
-             
+             |Order ID        ||username                     |  |password    | |outletname      |
+             |202011130001    ||buyerautomated3@gmail.com    |  |!123456Zm   | |velumasala2020  |    
+
+          @naren
+          Examples:
+             |Order ID        ||username                     |  |password    | |outletname      |
+             |202011130001    ||buyerautomated1@gmail.com    |  |!123456Zm   | |velumasala2020  |    
              
 Scenario Outline: Verify the New recurring orders page of Buyer panel  
           Given User is on Login Page
@@ -64,8 +70,13 @@ Scenario Outline: Verify the New recurring orders page of Buyer panel
           Then User Clicks on Review Order button
           Then User Clicks on Save recurring order
           Then It should display the particular order in recurring orders page
-          
+
+          @dev
           Examples:
              |username                               |  |password    |
-             |velumanieswaran2020@gmail.com          |  |!123456Zm   |     
-                      
+             |buyerautomated3@gmail.com              |  |!123456Zm   |  
+
+          @naren   
+          Examples:
+             |username                               |  |password    |
+             |buyerautomated1@gmail.com              |  |!123456Zm   |  

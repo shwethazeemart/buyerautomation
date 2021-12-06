@@ -32,10 +32,9 @@ public class Buyerreportspenpercategorypage {
 		WebElement tosterMsg = driver.findElement(By.xpath("//*[text()='" + msg + "']"));
 	}
 	
-	
+		
 	//@FindBy(xpath = "//input[@placeholder='Product code or name']")
-	//private static WebElement Buyerreportspenpercategorypage_Spendingpercategory;
-	
+	//private static WebElement Buyerreportspenpercategorypage_Spendingpercategory;	
 	
 	@FindBy(xpath = "//input[@formcontrolname='category']")
 	private static WebElement Buyerreportspenpercategorypage_Searchboxincategory;

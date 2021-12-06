@@ -50,13 +50,13 @@ public class Buyerinventoryoutletslisenpage {
 	private static WebElement Buyerinventoryoutletslisenpage_exportdownloadicon;
 
 	@FindBy(xpath = "//button[text()='Create new list']")
-	private static WebElement Buyerinventoryoutletslisenpage_newlistofsstmasala;
+	private static WebElement Buyerinventoryoutletslisenpage_newlistofOutletnameOne;
 
 	@FindBy(xpath = "(//div[@class='datatable-body-cell-label']//div)[1]")
 	private static WebElement Buyerinventoryoutletslisenpage_velumasala;
 
 	@FindBy(xpath = "//div[text()='sstmasala2020']")
-	private static WebElement Buyerinventoryoutletslisenpage_starterplanofsstmasala;
+	private static WebElement Buyerinventoryoutletslisenpage_starterplanofOutletnameTwo;
 
 	@FindBy(xpath = "//input[@placeholder='Search outlets']")
 	private static WebElement Buyerinventoryoutletslisenpage_searchoutlets;
@@ -70,7 +70,7 @@ public class Buyerinventoryoutletslisenpage {
 	@FindBy(xpath = "//label[text()=' Has items below par ']")
 	private static WebElement Buyerinventoryoutletslisenpage_checkbox;
 	
-	@FindBy(xpath = "//button[@class='close pull-right']")
+	@FindBy(xpath = "//div[@class='dd-flex']/following-sibling::button[1]")
 	private static WebElement Buyerinventoryoutletslisenpage_newlistcloseicon;
 	
 
@@ -93,7 +93,9 @@ public class Buyerinventoryoutletslisenpage {
 
 	//(//datatable-body-cell[contains(@class,'datatable-body-cell sort-active ng-star-inserted')])[8]
 
- 
+	@FindBy(xpath = "(//datatable-body-cell[contains(@class,'datatable-body-cell sort-active')])[2]")
+	private static WebElement Buyerinventoryoutletslisenpage_Outletname;
+	
 	public static void clickoutletsicon() {
 		Buyerinventoryoutletslisenpage_outletsicon.click();
 		try {
@@ -137,15 +139,7 @@ public class Buyerinventoryoutletslisenpage {
 
 	}
 
-	public static void clicknewlistofsstmasala() {
-		Buyerinventoryoutletslisenpage_newlistofsstmasala.click();
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-		} 
-		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
-				.executeScript("return document.readyState").equals("complete"));
-	}
+	
 
 	public static void clickonvelumasala() {
 		Buyerinventoryoutletslisenpage_velumasala.click();
@@ -157,19 +151,12 @@ public class Buyerinventoryoutletslisenpage {
 				.executeScript("return document.readyState").equals("complete"));
 	}
 
-	public static void clickstarterplanofsstmasala() {
-		Buyerinventoryoutletslisenpage_starterplanofsstmasala.click();
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-		} 
-		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
-				.executeScript("return document.readyState").equals("complete"));
-
-	}
-
-	public static void searchoutlets() {
-		Buyerinventoryoutletslisenpage_searchoutlets.click();
+	
+	public static void searchoutlets() throws InterruptedException {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("scroll(0, -250);");
+		Thread.sleep(5000);	
+		Buyerinventoryoutletslisenpage_searchoutlets.click();		
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -292,10 +279,47 @@ public class Buyerinventoryoutletslisenpage {
 				.executeScript("return document.readyState").equals("complete"));
 		
 	}
+
+	public static void clickOutletnameOne() {
+		Buyerinventoryoutletslisenpage_newlistofOutletnameOne.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+
+
+		public static void clickStarterplanofOutletnameTwo() throws InterruptedException {
+	        Thread.sleep(5000);
+			Buyerinventoryoutletslisenpage_starterplanofOutletnameTwo.click();
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+			} 
+			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+					.executeScript("return document.readyState").equals("complete"));
+
+		}
+
+		public static void Outletnameclick() {
+			Buyerinventoryoutletslisenpage_Outletname.click();
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+			} 
+			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+					.executeScript("return document.readyState").equals("complete"));
+
+		}
 		
 	
 	
 	}
+
+
 
 
 

@@ -14,7 +14,12 @@ Scenario Outline: Verify the Outlets manage details page of Buyer panel
           And User click on manage subscription
           Then User click on manage subscription close icon
           Then User click on save button
-           
+    @dev       
     Examples: 
       | username                      | | password   ||Email                      |
-      | velumanieswaran2020@gmail.com | |!123456Zm   ||lingeshsabari2009@gmail.com|
+      |buyerautomated3@gmail.com      | |!123456Zm   ||lingeshsabari2009@gmail.com|
+      
+    @naren       
+    Examples: 
+      | username                      | | password   ||Email                      |
+      |buyerautomated3@gmail.com      | |!123456Zm   ||lingeshsabari2009@gmail.com|

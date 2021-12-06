@@ -62,6 +62,8 @@ public class BuyerNewslistingpage {
 	}
 
 	public static void Clickthetestnotification() {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,250)");
 		BuyerNewslistingpage_testnotification.click();
 		try {
 			Thread.sleep(5000);

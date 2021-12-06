@@ -32,7 +32,9 @@ public class Buyerreportpriceupdates {
     private Buyerreportinvoicevariancepage buyerreportinvoicevariance;
     private Buyerreportpriceupdatespage buyerreportpriceupdates;
     
+    
 	public Buyerreportpriceupdates(TestContext testContext) {
+		
 		super();
 		this.testContext = testContext;
 		this.orderspage = testContext.getPageObjectManager().getOrdersPage();
@@ -75,11 +77,18 @@ public class Buyerreportpriceupdates {
 	    //Buyerreportpriceupdatespage.ClickonYTDfromcalendar();
 	}
 
+
+	@Then("User select from dropdown value of outlet in price updates")
+	public void user_select_from_dropdown_value_of_outlet_in_price_updates() {
+		WebElement outlet = Buyerreportpriceupdatespage.getDropDownElementoutletname();
+		Select select=new Select(outlet);
+	}
 	
 	@Then("User select from dropdown value of outlet in price updates {string}")
 	public void user_select_from_dropdown_value_of_outlet_in_price_updates(String outletname) {
 		WebElement velumasala2020 = Buyerreportpriceupdatespage.getDropDownElementoutletname();
 		Select select=new Select(velumasala2020);
+
 		select.selectByIndex(3);
 	}
 
@@ -89,7 +98,6 @@ public class Buyerreportpriceupdates {
 	    Buyerreportpriceupdatespage.Clickonfilter();
 	}
 
-	
 	@Then("User select supplier in dropdown list of {string}")
 	public void user_select_supplier_in_dropdown_list_of(String suppiername) {
 		WebElement sabari250 = Buyerreportpriceupdatespage.getDropDownElementsuppliername();

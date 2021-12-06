@@ -41,11 +41,19 @@ public class Buyerinventoryactivitylisenpage {
 	
 	@FindBy(xpath = "//img[@src='assets/zmcore/img/download-icon.svg']")
 	private static WebElement Buyerinventoryactivitylisenpage_Downloadbutton;
+	
+	@FindBy(xpath = "//div[text()='velu masala2020']")
+	private static WebElement Buyerinventoryactivitylisenpage_Outlet;
+
 
 
 	
 	
 	public static void Clickactivityicon() {
+		//WebElement activity = driver.findElement(By.linkText("Activity"));
+		//activity.click();
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("scroll(0, -250);");
 		Buyerinventoryactivitylisenpage_Activityicon.click();
 		try {
 			Thread.sleep(5000);
@@ -73,6 +81,18 @@ public class Buyerinventoryactivitylisenpage {
 				.executeScript("return document.readyState").equals("complete"));
 		
 	}
+
+	public static void ClickonOutlet() {
+		Buyerinventoryactivitylisenpage_Outlet.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
 
 	
 	

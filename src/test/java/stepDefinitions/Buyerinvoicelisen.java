@@ -246,6 +246,12 @@ public class Buyerinvoicelisen {
 		buyerinvoicelisen.ClickonExportstatusininvoicepage();
 	}
 
+	@Then("User click on Reset button in order page")
+	public void user_click_on_Reset_button_in_order_page() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
 
 
 

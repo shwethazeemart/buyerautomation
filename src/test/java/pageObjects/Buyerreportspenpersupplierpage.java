@@ -168,6 +168,7 @@ public class Buyerreportspenpersupplierpage {
 				.executeScript("return document.readyState").equals("complete"));
 		
 		
+		
 	}
 	public static void Clickonoutside() {
 		Buyerreportspenpersupplierpage_Outside.click();
@@ -197,50 +198,7 @@ public class Buyerreportspenpersupplierpage {
 		} 
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
-		
-		
-		
 	}
-	
-	
-	
-	
-	
 		
 }
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-

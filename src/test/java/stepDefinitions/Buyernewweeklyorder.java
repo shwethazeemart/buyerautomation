@@ -51,8 +51,8 @@ public class Buyernewweeklyorder {
 	    Buyernewweeklyorderpage.Clickondropdownofweeklyorder();
 	}
 
-	@Then("User click on velu masala in weekly order")
-	public void user_click_on_velu_masala_in_weekly_order() {
+	@Then("User click on in weekly order")
+	public void user_click_on_in_weekly_order() {
 	    Buyernewweeklyorderpage.Clickonvelumasalainweeklyorder(); 
 	}
 
@@ -76,35 +76,5 @@ public class Buyernewweeklyorder {
 	    Buyernewweeklyorderpage.Clickonuploadandreviewbutton();
 	}
 
-
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 }

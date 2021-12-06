@@ -43,6 +43,7 @@ Scenario Outline: Verify the Reports spending per outlet page of Buyer panel
           Then User click on Detailed report
           
           
+
       @dev    
       Examples: 
       | username                      | | password   |
@@ -57,6 +58,7 @@ Scenario Outline: Verify the Reports spending per outlet page of Buyer panel
       
       
      
+
 Scenario Outline: Verify the Reports spending per supplier page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -69,13 +71,14 @@ Scenario Outline: Verify the Reports spending per supplier page of Buyer panel
           Then User select date from calendar in supplier
           And User click on filter in supplier
           Then User click on outlets
-          Then User click on check box "<outletname>"
+         Then User click on check box "<outletname>"
           Then User click on Apply button in supplier
           Then User click on Reset button in supplier
           Then User click on outside in supplier
           And User click Export download button
           
              
+
      @dev     
      Examples: 
       | username                      | | password   ||name     | |outletname  |
@@ -89,6 +92,7 @@ Scenario Outline: Verify the Reports spending per supplier page of Buyer panel
       
       
       
+
  Scenario Outline: Verify the Reports spending per SKU page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -101,7 +105,7 @@ Scenario Outline: Verify the Reports spending per supplier page of Buyer panel
           And User select date from calendar in sku
           Then User click on filter in sku
           And User click on outlets in sku
-          Then User click on Check box of in sku "<outletname>"
+         Then User click on Check box of in sku "<outletname>"
           Then User click on apply button in sku
           And User click on reset button in sku
           Then User click on outside in sku
@@ -113,7 +117,7 @@ Scenario Outline: Verify the Reports spending per supplier page of Buyer panel
           Then User click on outside in sku
           Then User click on export download button in sku
           
-     @dev     
+  @dev     
      Examples: 
       | username                      | | password   ||name     |  |outletname  | 
       | buyerautomated3@gmail.com     | |!123456Zm   ||100pipers|  |velumasala  | 
@@ -123,7 +127,7 @@ Scenario Outline: Verify the Reports spending per supplier page of Buyer panel
       | username                      | | password   ||name     |  |outletname  | 
       | buyerautomated1@gmail.com     | |!123456Zm   ||100pipers|  |velumasala  | 
       
-      
+
      
 Scenario Outline: Verify the Reports spending per Category page of Buyer panel 
           Given User is on Login Page
@@ -149,17 +153,15 @@ Scenario Outline: Verify the Reports spending per Category page of Buyer panel
           And User click on reset button in category
           Then User click on outside in category
           
-     @dev     
+    @dev     
       Examples: 
       | username                      | | password   ||name     |   |outletname  | 
       | buyerautomated3@gmail.com     | |!123456Zm   ||Beer     |   |velumasala  | 
       
-      @naren    
+@naren    
       Examples: 
       | username                      | | password   ||name     |   |outletname  | 
       | buyerautomated1@gmail.com     | |!123456Zm   ||Beer     |   |velumasala  | 
-      
-      
       
 Scenario Outline: Verify the Reports spending per tag page of Buyer panel 
           Given User is on Login Page
@@ -184,19 +186,20 @@ Scenario Outline: Verify the Reports spending per tag page of Buyer panel
           And User click on reset button in tag
           Then User click on outside in tag
           Then User click on Export download button in tag 
-      
+
+          
       
       @dev    
       Examples: 
       | username                      | | password   ||name       |  |outletname  |
       |  buyerautomated3@gmail.com    | |!123456Zm   ||masala     |  |velumasala  |                     
       
+
       @naren    
       Examples: 
       | username                      | | password   ||name       |  |outletname  |
-      |  buyerautomated1@gmail.com    | |!123456Zm   ||masala     |  |velumasala  |                     
-      
-     
+      |  buyerautomated1@gmail.com    | |!123456Zm   ||masala     |  |velumasala  |  
+                      
 Scenario Outline: Verify the Reports invoice variance page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -217,7 +220,7 @@ Scenario Outline: Verify the Reports invoice variance page of Buyer panel
           Then User click on export download button in invoice variance
           Then User click on Reports back button in invoice variance
           
-     @dev      
+   @dev      
      Examples: 
       | username                      | | password   ||invoice     |  |outletname  |
       | buyerautomated3@gmail.com     | |!123456Zm   ||vel-1234567 |  |velumasala  | 

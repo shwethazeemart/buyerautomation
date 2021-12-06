@@ -12,7 +12,6 @@ import pageObjects.OrdersPage;
 
 public class Buyerinventoryoutletslisen {
 
-
 	private TestContext testContext;
 	private OrdersPage orderspage;
 	//private txtBoxContent txtBoxContent;
@@ -23,8 +22,6 @@ public class Buyerinventoryoutletslisen {
 	private DashboardPage dashboradpage;
 	private Buyerinvoicelisenpage buyerinvoicelisen;
 	private Buyerinventoryoutletslisenpage buyerinventoryoutletslisen;
-
-
 
 	public Buyerinventoryoutletslisen(TestContext testContext) {
 		super();
@@ -38,14 +35,10 @@ public class Buyerinventoryoutletslisen {
 		this.buyerinventoryoutletslisen=testContext.getPageObjectManager().getBuyerinventoryoutletslisenpage();
 	}
 
-
-
-
 	@Then("User click on outlets icon")
 	public void user_click_on_outlets_icon() {
 		Buyerinventoryoutletslisenpage.clickoutletsicon();
 	}
-
 
 	@Then("User click on settings")
 	public void user_click_on_settings() {
@@ -61,24 +54,15 @@ public class Buyerinventoryoutletslisen {
 	public void user_click_on_Export_download_icon() {
 		Buyerinventoryoutletslisenpage.clickexportdownloadicon();
 	}
-
-	@Then("User click on new list of sstmasala")
-	public void user_click_on_new_list_of_sstmasala() {
-		//Buyerinventoryoutletslisenpage.clicknewlistofsstmasala();
-	}
-
+	
 	@Then("User click on velu masala")
 	public void user_click_on_velu_masala() {
 		Buyerinventoryoutletslisenpage.clickonvelumasala();
 	}
 
-	@Then("User click on starter plan of sstmasala")
-	public void user_click_on_starter_plan_of_sstmasala() {
-		Buyerinventoryoutletslisenpage.clickstarterplanofsstmasala();
-	}
-
+	
 	@Then("User click on search outlets")
-	public void user_click_on_search_outlets() {
+	public void user_click_on_search_outlets() throws InterruptedException {
 		Buyerinventoryoutletslisenpage.searchoutlets();
 	}
 
@@ -99,7 +83,7 @@ public class Buyerinventoryoutletslisen {
 
 	@Then("User click on new list close icon")
 	public void user_click_on_new_list_close_icon() {
-	   // Buyerinventoryoutletslisenpage.clicknewlistcloseicon();
+	   Buyerinventoryoutletslisenpage.clicknewlistcloseicon();
 	}
 
 	@Then("User click on starter plan close icon")
@@ -111,8 +95,6 @@ public class Buyerinventoryoutletslisen {
 	public void user_return_to_outlet_page() throws InterruptedException {
 	   Buyerinventoryoutletslisenpage.clickreturntooutletpage();
 	}
-
-
 
 	@Then("User click on uncheckbox of Has items below par")
 	public void user_click_on_uncheckbox_of_Has_items_below_par() {
@@ -129,13 +111,25 @@ public class Buyerinventoryoutletslisen {
 		Buyerinventoryoutletslisenpage.Clickonuncheckboxoflastcount();
 	}
 
-
-
 	@Then("User click vertically scroll up in the page")
 	public void user_click_vertically_scroll_up_in_the_page() {
 		Buyerinventoryoutletslisenpage.Clickverticallyscrollup();
 	}
 
+	@Then("User click on new list {string}")
+	public void user_click_on_new_list(String outletnameone) {
+		Buyerinventoryoutletslisenpage.clickOutletnameOne();
+	}
+
+	@Then("User click on starter plan {string}")
+	public void user_click_on_starter_plan(String outletnametwo) throws InterruptedException {
+		Buyerinventoryoutletslisenpage.clickStarterplanofOutletnameTwo();
+	}
+
+	@Then("User click on outletname")
+	public void user_click_on_outletname() {
+		Buyerinventoryoutletslisenpage.Outletnameclick();
+	}
 
 
 

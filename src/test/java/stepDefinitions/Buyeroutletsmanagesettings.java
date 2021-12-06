@@ -64,9 +64,9 @@ public class Buyeroutletsmanagesettings {
 	    Buyeroutletsmanagesettingspage.Clickonselectuserserachbox();
 	}
 
-	@Then("User click on check box of arul oli")
-	public void user_click_on_check_box_of_arul_oli() {
-	    Buyeroutletsmanagesettingspage.Clickcheckboxofaruloli();
+	@Then("User click on check box ")
+	public void user_click_on_check_box() {
+	    Buyeroutletsmanagesettingspage.Clickcheckboxfirst();
 	}
 
 	@Then("User click on cancel button")

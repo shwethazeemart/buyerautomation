@@ -73,12 +73,12 @@ public class OrderspageSteps<txtBoxContent> {
 	public void user_Clicks_New_order_in_the_dropdown_value() throws InterruptedException {
 		OrdersPage.click_Neworder1();
 	}
-    
+
+
 	@Then("User click on in the supplier page {string}")
 	public void user_click_on_in_the_supplier_page(String outletname) {
-		OrdersPage.click_velumasala2020(outletname);
+		OrdersPage.clickonoutlet();
 	}
-
 	
 		
 	@Given("User Clicks in Add to order of SKU")
@@ -215,10 +215,12 @@ public class OrderspageSteps<txtBoxContent> {
 	   OrdersPage.Clickonviewoutletsofsabarisupplier();
 	}
 
+
 	@Then("User click on  in the supplier page {string}")
 	public void user_click_on_in_the_supplier_page1(String outletnameone) {
 		OrdersPage.click_velumasala2020(outletnameone);
 	}
+
 
 	@Then("User click on Actions dropdown of velumasala")
 	public void user_click_on_Actions_dropdown_of_velumasala() {
@@ -319,22 +321,17 @@ public class OrderspageSteps<txtBoxContent> {
 	@Then("User click on ok button of pop message")
 	public void user_click_on_ok_button_of_pop_message() throws InterruptedException {
 	    OrdersPage.Clickonokbuttoninpop();
-	}
-
+	   	}
 
 	@Then("User click on close icon first pop message")
 	public void user_click_on_close_icon_first_pop_message() {
 	    OrdersPage.Clickcloseiconfirstpop();
-	}
-	
-	
+	}	
 
 	@Then("User click on in the supplier page")
 	public void user_click_on_in_the_supplier_page() throws InterruptedException {
 		  OrdersPage.Clickvelumasalasix();
 	}
-
-	
 
 	@Then("User click on velu masalatwofifty in the supplier page")
 	public void user_click_on_velu_masalatwofifty_in_the_supplier_page() throws InterruptedException {

@@ -34,6 +34,7 @@ public class DashboardPage {
 	}
 	
 
+	
 	/*public class DashboardPage2 {
 		private static WebDriver driver;
 
@@ -52,7 +53,7 @@ public class DashboardPage {
 	@FindBy(xpath = "//span[@id='sideMenu_Orders']")
 	private  WebElement button_Orders;
 
-	@FindBy(xpath = "//span[contains(@Id,'sideMenu_Invoices')]")
+	@FindBy(xpath = "//span[@id='sideMenu_Invoices']")
 	private  WebElement button_Invoices;
 
 	@FindBy(xpath = "//span[@id='sideMenu_Invoices']")
@@ -74,10 +75,9 @@ public class DashboardPage {
 	@FindBy(xpath = "//span[contains(@Id,'sideMenu_Users')] ")
 	private  WebElement button_Users;
 
-
-	@FindBy(xpath = "//span[contains(@Id,'sideMenu_Inventory')]")
+	@FindBy(xpath = "//span[contains(@Id,'sideMenu_Inventory')] ")
 	private  WebElement button_Inventory;
-
+	
 	@FindBy(xpath = "//span[contains(@Id,'sideMenu_Outlets')] ")
 	private  WebElement button_Outlets;
 	
@@ -184,6 +184,7 @@ public class DashboardPage {
 	//		//return this;
 	//		
 	//	}
+	
 	public void clickOrders() throws InterruptedException {
 		Thread.sleep(5000);
 		button_Orders.click();
@@ -195,6 +196,7 @@ public class DashboardPage {
 		new WebDriverWait(driver, 50).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
 	}
+	
 	public void clickInvoices() throws InterruptedException {
 		Thread.sleep(5000);
 		button_Invoices.click();
@@ -208,7 +210,6 @@ public class DashboardPage {
 
 	}
 	public void clickUsers() throws InterruptedException {
-
 		button_Users.click();
 		Thread.sleep(5000);
 		try {
@@ -229,8 +230,7 @@ public class DashboardPage {
 				.executeScript("return document.readyState").equals("complete"));
 	}
 	
-	
-	public void clickPayments() {
+	public void clickPayments() {	
 		button_payments.click();
 		try {
 			Thread.sleep(5000);
@@ -239,12 +239,6 @@ public class DashboardPage {
 		new WebDriverWait(driver, 50).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
 	}
-	
-
-	
-	
-	
-	
 	
 	public void clickAdminInvoices() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
@@ -270,7 +264,6 @@ public class DashboardPage {
 				.executeScript("return document.readyState").equals("complete"));
 	}
 
-
 	public void clickBuyersnewuser() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
 		button_Adminnewbuyeruser.click();
@@ -283,7 +276,6 @@ public class DashboardPage {
 				.executeScript("return document.readyState").equals("complete"));
 	}
 
-
 	public void clickAdminSuppliers() throws InterruptedException {
 		Thread.sleep(5000);
 		button_AdminSuppliers.click();
@@ -295,6 +287,7 @@ public class DashboardPage {
 		new WebDriverWait(driver, 50).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
 	}
+	
 	public void clickSuppliernewuser()  {
 		driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
 		button_Adminnewsupplieruser.click();
@@ -330,7 +323,7 @@ public class DashboardPage {
 
 	public void clickReports() throws InterruptedException {
 		button_Reports.click();
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -338,10 +331,7 @@ public class DashboardPage {
 		new WebDriverWait(driver, 50).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
 	}  
-
 	
-	
-
 	public static void Clickoninvoiceinthesidemenu() throws InterruptedException {
 		Thread.sleep(5000);
 		LogInPage_SupplierInvoices.click();
@@ -354,7 +344,7 @@ public class DashboardPage {
 		
 	}  
 	
-	
+		
 	public static void ClickonCustomersinthesidemenu() throws InterruptedException {
 		Thread.sleep(5000);
 		LogInPage_SupplierCustomers.click();
@@ -367,9 +357,6 @@ public class DashboardPage {
 		
 	}  
 	
-	
-	
-
 	public static void Clickonorders() throws InterruptedException {
 		Thread.sleep(5000);
 		button_Supplierorders.click();
@@ -432,9 +419,6 @@ public class DashboardPage {
 				.executeScript("return document.readyState").equals("complete"));
 		
 	}
-
-
-
 	public static void ClickonsupplierReportsicon() throws InterruptedException{
 		Thread.sleep(5000);
 		button_SupplierReports.click();
@@ -460,6 +444,3 @@ public class DashboardPage {
 	}
 	
 }
-
-
-

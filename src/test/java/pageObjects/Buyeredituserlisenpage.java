@@ -31,19 +31,23 @@ public class Buyeredituserlisenpage {
 	}
 	
 
-	@FindBy(xpath="(//input[@type='checkbox'])[4]")
-	private static WebElement Buyeredituserlisenpage_Checkboxofaruloliuser;
-	
-	@FindBy(xpath="//button[text()='Delete ']")
+
+	@FindBy(xpath="(//div[@class='datatable-body-cell-label']//label)[3]")
+	private static WebElement Buyeredituserlisenpage_Checkboxofuser;
+
+
+	@FindBy(xpath="//button[contains(@class,'btn download_order_btn')]")
 	private static WebElement Buyeredituserlisenpage_Deleteicon;
 	
-	@FindBy(xpath="//button[text()='Delete']")
-	private static WebElement Buyeredituserlisenpage_Closedeleteicon;
-	
+	@FindBy(xpath="//h4[text()='Delete selected user(s)?']/following-sibling::button")
+	private static WebElement Buyeredituserlisenpage_Closedeleteicon;	
+
+    @FindBy(xpath="(//div[contains(@class,'datatable-body-cell-label')])[20] ")
+	private static WebElement Buyeredituserlisenpage_user;	
 
     @FindBy(xpath="(//div[contains(@class,'datatable-body-cell-label')])[26]")
     private static WebElement Buyeredituserlisenpage_Velumanitwouser;
-	
+
 	@FindBy(xpath="//input[contains(@formcontrolname,'title')]  ")
 	private static WebElement Buyeredituserlisenpage_Jobtitle; 
 	
@@ -80,9 +84,9 @@ public class Buyeredituserlisenpage {
 	
 	
 
-	public static void Clickoncheckboxofaruloliuser() {
-		Buyeredituserlisenpage_Checkboxofaruloliuser.click();
-		try {
+	public static void Clickoncheckboxofuser() {
+		Buyeredituserlisenpage_Checkboxofuser.click();
+		try {			
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 		} 
@@ -114,8 +118,8 @@ public class Buyeredituserlisenpage {
 		
 	}
 
-	public static void Clickonvelumanitwouser() {
-		Buyeredituserlisenpage_Velumanitwouser.click();
+	public static void Clickonuser() {
+		Buyeredituserlisenpage_user.click();
 		try { 
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -127,6 +131,8 @@ public class Buyeredituserlisenpage {
 	}
 
 	public static void Clearjobtitle() {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,250)");
 		Buyeredituserlisenpage_Jobtitle.clear();
 		try {
 			Thread.sleep(5000);
@@ -246,30 +252,7 @@ public class Buyeredituserlisenpage {
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
 		
-	} 
-	
-	
-	
-	
-	
+	}
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+			
 }

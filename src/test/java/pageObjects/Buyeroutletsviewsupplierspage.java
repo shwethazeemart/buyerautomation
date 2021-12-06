@@ -13,7 +13,7 @@ import managers.FileReaderManager;
 public class Buyeroutletsviewsupplierspage {
 
 	private static WebDriver driver;
-
+	
 	public Buyeroutletsviewsupplierspage(WebDriver driver) {
 
 
@@ -54,7 +54,9 @@ public class Buyeroutletsviewsupplierspage {
 	@FindBy(xpath = "//button[text()='Delete ']")
 	private static WebElement Buyeroutletsviewsupplierspage_Deletebutton;
 	
-	@FindBy(xpath = "//h4[text()='Delete selected products?']/following-sibling::button")
+
+	
+   @FindBy(xpath = "//h4[text()='Delete selected products?']/following-sibling::button")
 	private static WebElement Buyeroutletsviewsupplierspage_Deletebuttoncloseicon;
 	
 	@FindBy(xpath = "//button[@id='button-basic']")

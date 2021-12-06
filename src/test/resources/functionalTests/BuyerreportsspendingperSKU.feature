@@ -1,5 +1,5 @@
 Feature: Verify Buyer Reports spending per SKU page and test all the page
-
+@Smoke
 Scenario Outline: Verify the Reports spending per SKU page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -26,13 +26,13 @@ Scenario Outline: Verify the Reports spending per SKU page of Buyer panel
           Then User click on YTD from calendar
           Then User click on filter in sku
           And User click on outlets in sku
-          Then User click on Check box of velumasala in sku
+          Then User click on Check box in sku
           Then User click on apply button in sku
           And User click on reset button in sku
           Then User click on outside in sku
           Then User click on filter in sku
           And User click on Suppliers in sku
-          Then User click on check box of sabari in sku
+          Then User click on check box in sku
           Then User click on apply button in sku
           And User click on reset button in sku
           Then User click on outside in sku
@@ -80,15 +80,17 @@ Scenario Outline: Verify the Reports spending per SKU page of Buyer panel
           Then User click on apply in custom range
           Then User select date from calendar
           Then User click on YTD from calendar
-          And User select dropdown in velumasala twentytwenty 
+          And User select dropdown 
           Then User click on bdl in price history
           Then User click on bag in price history
           Then User click on box in price history
           Then User click download button of export
           
              
-          
+     @dev      
      Examples: 
-      | username                      | | password   ||name     |
-      | velumanieswaran2020@gmail.com | |!123456Zm   ||100pipers|     
-           
+      | username                          | | password   ||name     |
+      | velumanieswaran2020@gmail.com     | |!123456Zm   ||100pipers|     
+      
+               
+    

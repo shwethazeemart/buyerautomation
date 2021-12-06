@@ -10,9 +10,14 @@ Scenario Outline: Verify the Outlets page of Buyer panel
           Then User clicks on View suppliers
           And User clicks on the actions dropdown
           Then User Clicks on the view orders
-           
+    
+    @dev       
     Examples: 
       | username                      | | password  |
-      | velumanieswaran2020@gmail.com | |!123456Zm   |
+      | buyerautomated3@gmail.com     | |!123456Zm   |
       
-      
+       @naren      
+    Examples: 
+      | username                      | | password  |
+      | buyerautomated1@gmail.com     | |!123456Zm   |
+
