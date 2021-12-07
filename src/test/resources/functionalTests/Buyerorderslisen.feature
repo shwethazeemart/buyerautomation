@@ -1,5 +1,5 @@
 Feature: Verify Buyer Orders screen lisen page
-@Smoke
+
 Scenario Outline: Verify the Orders lisen page of Buyer panel
          Given User is on Login Page
          When User enter exact username"<username>"
@@ -81,6 +81,11 @@ Scenario Outline: Verify the Orders lisen page of Buyer panel
          Then User click on PDF download button
 
         @dev  
+        Examples:
+             |username                         |  |password    ||orderid     | |suppliername   |
+             |velumanieswaran2020@gmail.com    |  |!123456Zm   ||202109090012| |sabari         |
+
+         @devSecond 
         Examples:
              |username                     |  |password    ||orderid     | |suppliername   |
              |buyerautomated3@gmail.com    |  |!123456Zm   ||202109090012| |sabari         |

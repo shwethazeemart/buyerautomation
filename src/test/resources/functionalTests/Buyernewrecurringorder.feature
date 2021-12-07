@@ -1,5 +1,5 @@
 Feature: Verify Buyer Order page and test all the page
-@Smoke
+
 Scenario Outline: Verify the New recurring orders page of Buyer panel  
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -33,9 +33,9 @@ Scenario Outline: Verify the New recurring orders page of Buyer panel
           @dev  
           Examples:
              |username                               |  |password    |
-             |buyerautomated3@gmail.com              |  |!123456Zm   |     
+             |velumanieswaran2020@gmail.com          |  |!123456Zm   |     
              
-          @naren 
+          @devSecond 
           Examples:
              |username                               |  |password    |
-             |buyerautomated1@gmail.com              |  |!123456Zm   |     
+             |buyerautomated3@gmail.com              |  |!123456Zm   |     

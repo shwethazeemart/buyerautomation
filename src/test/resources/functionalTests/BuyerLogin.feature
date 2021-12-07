@@ -15,13 +15,13 @@ Scenario Outline: Customer wants to reset password
     
     @dev 
     Examples: 
-      | username                      || invalidEmail        | noregisteredEmail | regesteredEmail               |
-      | buyerautomated3@gmail.com     || guindyusergmail.com | user@aacbd.com    | buyerautomated3@gmail.com     | 
+      | username                          || invalidEmail        | noregisteredEmail | regesteredEmail               |
+      | velumanieswaran2020@gmail.com     || guindyusergmail.com | user@aacbd.com    | velumanieswaran2020@gmail.com     | 
       
-      @naren
+     @devSecond 
       Examples: 
       | username                      || invalidEmail        | noregisteredEmail | regesteredEmail               |
-      | buyerautomated1@gmail.com     || guindyusergmail.com | user@aacbd.com    | buyerautomated3@gmail.com     | 
+      | buyerautomated3@gmail.com     || guindyusergmail.com | user@aacbd.com    | buyerautomated3@gmail.com     | 
 
  Scenario Outline: Customer enters wrong password to buyer hub
     Given User is on Login Page
@@ -32,13 +32,13 @@ Scenario Outline: Customer wants to reset password
 
     @dev 
     Examples:
-     | username                       || password |
-     | buyerautomated3@gmail.com      || !123456Z | 
+     | username                            || password |
+     | velumanieswaran2020@gmail.com       || !123456Z | 
      
-    @naren 
+    @devSecond  
     Examples:
      | username                       || password |
-     | buyerautomated1@gmail.com      || !123456Z | 
+     | buyerautomated3@gmail.com      || !123456Z | 
      
      
   
@@ -62,7 +62,7 @@ Scenario Outline: Customer wants to reset password
       | invalidEmail        | noregisteredEmail | regesteredEmail      |
       | guindyusergmail.com | user@aacbd.com    | guindyuser@gmail.com |
     
-      @naren
+      @devSecond 
       Examples:  
       | invalidEmail        | noregisteredEmail | regesteredEmail      |
       | guindyusergmail.com | user@aacbd.com    | guindyuser@gmail.com |
@@ -77,13 +77,13 @@ Scenario Outline: Customer wants to reset password
 
     @dev
     Examples: 
-      | username                      | | password  |
-      |  buyerautomated3@gmail.com    | |!123456Zm   |
+      | username                          | | password  |
+      |  velumanieswaran2020@gmail.com    | |!123456Zm   |
       
-    @naren  
+    @devSecond  
     Examples: 
       | username                      | | password  |
-      |  buyerautomated1@gmail.com    | |!123456Zm   |
+      |  buyerautomated3@gmail.com    | |!123456Zm   |
  
  
     
@@ -100,13 +100,13 @@ Scenario Outline: Verify the Outlets page of Buyer panel
         
     @dev      
     Examples: 
-      | username                      | | password  |
-      | buyerautomated3@gmail.com     | |!123456Zm   |
+      | username                          | | password  |
+      | velumanieswaran2020@gmail.com     | |!123456Zm   |
       
-    @naren  
+    @devSecond   
     Examples: 
       | username                      | | password  |
-      | buyerautomated1@gmail.com     | |!123456Zm   |
+      | buyerautomated3@gmail.com     | |!123456Zm   |
  
            
  Scenario Outline: Verify the Reports page of Buyer panel 
@@ -117,15 +117,15 @@ Scenario Outline: Verify the Outlets page of Buyer panel
           Then User Clicks on Reports in the side navigation menubar 
           And User clicks on the spending per tag
           
-          @dev      
+    @dev      
+    Examples: 
+      | username                          | | password  |
+      | velumanieswaran2020@gmail.com     | |!123456Zm   |
+
+    @devSecond   
     Examples: 
       | username                      | | password  |
       | buyerautomated3@gmail.com     | |!123456Zm   |
-
-    @naren  
-    Examples: 
-      | username                      | | password  |
-      | buyerautomated1@gmail.com     | |!123456Zm   |
           
          
 Scenario Outline: Verify the Inventory page Add SKU of Buyer panel 
@@ -140,15 +140,15 @@ Scenario Outline: Verify the Inventory page Add SKU of Buyer panel
           Then User clicks on the checkbox of pipers SKU
           And User clicks on the Done button
           
-       @dev      
+     @dev      
+    Examples: 
+      | username                          | | password  |
+      | velumanieswaran2020@gmail.com     | |!123456Zm   |
+
+    @devSecond   
     Examples: 
       | username                      | | password  |
       | buyerautomated3@gmail.com     | |!123456Zm   |
-
-    @naren  
-    Examples: 
-      | username                      | | password  |
-      | buyerautomated1@gmail.com     | |!123456Zm   |
                        
 Scenario Outline: Verify the Inventory page Export of Buyer panel 
           Given User is on Login Page
@@ -163,13 +163,13 @@ Scenario Outline: Verify the Inventory page Export of Buyer panel
  
    @dev      
     Examples: 
-      | username                      | | password  |
-      | buyerautomated3@gmail.com     | |!123456Zm   |
+      | username                          | | password  |
+      | velumanieswaran2020@gmail.com     | |!123456Zm   |
 
-    @naren  
+    @devSecond   
     Examples: 
       | username                      | | password  |
-      | buyerautomated1@gmail.com     | |!123456Zm   |
+      | buyerautomated3@gmail.com     | |!123456Zm   |
  
 Scenario Outline: Verify the Inventory page of Buyer panel 
           Given User is on Login Page
@@ -202,13 +202,13 @@ Scenario Outline: Verify the Inventory page of Buyer panel
            
     @dev      
     Examples:
-         |username                            |  |password    ||Listname        ||Quantity||Notes              ||outletname      |
-         |buyerautomated3@gmail.com           |  |!123456Zm   ||sairam          ||   10   ||eswaranolifound10  ||velu masala2020 |
+         |username                                |  |password    ||Listname        ||Quantity||Notes              ||outletname      |
+         |velumanieswaran2020@gmail.com           |  |!123456Zm   ||sairam          ||   10   ||eswaranolifound10  ||velu masala2020 |
 
-    @naren   
+    @devSecond    
     Examples:
          |username                            |  |password    ||Listname        ||Quantity||Notes              ||outletname      |
-         |buyerautomated1@gmail.com           |  |!123456Zm   ||sairam          ||   10   ||eswaranolifound10  ||velu masala2020 |
+         |buyerautomated3@gmail.com           |  |!123456Zm   ||sairam          ||   10   ||eswaranolifound10  ||velu masala2020 |
     
                   
 Scenario Outline: Verify the Users page of Buyer panel 
@@ -233,14 +233,14 @@ Scenario Outline: Verify the Users page of Buyer panel
           Then User is Clicks Save button 
     @dev      
     Examples:
-         |username                     |  |password    ||First name||Last name ||Job title    ||Email                              ||Mobile phone|
-         |buyerautomated3@gmail.com    |  |!123456Zm   ||eswaran   ||ganesh    ||ATZ          ||ganeshtamil2009@gmail.com          ||+6512345677 |       
+         |username                         |  |password    ||First name||Last name ||Job title    ||Email                              ||Mobile phone|
+         |velumanieswaran2020@gmail.com    |  |!123456Zm   ||eswaran   ||ganesh    ||ATZ          ||ganeshtamil2009@gmail.com          ||+6512345677 |       
     
          
-     @naren      
+    @devSecond      
     Examples:
          |username                     |  |password    ||First name||Last name ||Job title    ||Email                              ||Mobile phone|
-         |buyerautomated1@gmail.com    |  |!123456Zm   ||eswaran   ||ganesh    ||ATZ          ||ganeshtamil2009@gmail.com          ||+6512345677 |       
+         |buyerautomated3@gmail.com    |  |!123456Zm   ||eswaran   ||ganesh    ||ATZ          ||ganeshtamil2009@gmail.com          ||+6512345677 |       
     
              
  Scenario Outline: Verify the Invoices page of Buyer panel
@@ -259,12 +259,12 @@ Scenario Outline: Verify the Users page of Buyer panel
       @dev      
     Examples: 
       | username                      | | password  |
-      | buyerautomated3@gmail.com     | |!123456Zm   |
+      | velumanieswaran2020@gmail.com     | |!123456Zm   |
 
-    @naren  
+    @devSecond  
     Examples: 
       | username                      | | password  |
-      | buyerautomated1@gmail.com     | |!123456Zm   |
+      | buyerautomated3@gmail.com     | |!123456Zm   |
  
 Scenario Outline: Verify the Invoices process page of Buyer panel 
           Given User is on Login Page
@@ -289,10 +289,10 @@ Scenario Outline: Verify the Invoices process page of Buyer panel
          
          @dev
          Examples:
-         |invoicenumber|  |username                     |  |password    |
-         |INV-20123456 |  |buyerautomated3@gmail.com    |  |!123456Zm   |  
+         |invoicenumber|  |username                         |  |password    |
+         |INV-20123456 |  |velumanieswaran2020@gmail.com    |  |!123456Zm   |  
          
-          @naren
+         @devSecond 
          Examples:
          |invoicenumber|  |username                     |  |password    |
          |INV-20123456 |  |buyerautomated3@gmail.com    |  |!123456Zm   |      
@@ -330,13 +330,13 @@ Scenario Outline: Verify the New recurring orders page of Buyer panel
           
      @dev      
     Examples: 
-      | username                      | | password  |
-      | buyerautomated3@gmail.com     | |!123456Zm   |
+      | username                          | | password  |
+      | velumanieswaran2020@gmail.com     | |!123456Zm   |
 
-    @naren  
+    @devSecond  
     Examples: 
       | username                      | | password  |
-      | buyerautomated1@gmail.com     | |!123456Zm   |
+      | buyerautomated3@gmail.com     | |!123456Zm   |
  
          
          
@@ -354,13 +354,13 @@ Scenario Outline: Verify the Orders page void status of Buyer panel
   
    @dev      
     Examples: 
-      | username                      | | password  |
-      | buyerautomated3@gmail.com     | |!123456Zm   |
+      | username                          | | password  |
+      | velumanieswaran2020@gmail.com     | |!123456Zm   |
 
-    @naren  
+    @devSecond   
     Examples: 
       | username                      | | password  |
-      | buyerautomated1@gmail.com     | |!123456Zm   |
+      | buyerautomated3@gmail.com     | |!123456Zm   |
  
 
 Scenario Outline: Verify the Orders page of Buyer panel
@@ -394,10 +394,10 @@ Scenario Outline: Verify the Orders page of Buyer panel
 
           @dev
           Examples:
-             |Order ID        ||username                     |  |password    |
-             |202011130001    ||buyerautomated3@gmail.com    |  |!123456Zm   |     
+             |Order ID        ||username                         |  |password    |
+             |202011130001    ||velumanieswaran2020@gmail.com    |  |!123456Zm   |     
 
-           @naren
+          @devSecond 
           Examples:
              |Order ID        ||username                     |  |password    |
              |202011130001    ||buyerautomated3@gmail.com    |  |!123456Zm   |     

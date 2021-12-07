@@ -27,13 +27,13 @@ Scenario Outline: Verify the Outlets view suppliers page of Buyer panel
           
     @dev       
     Examples: 
-      | username                      | | password   ||name      |
-      | buyerautomated3@gmail.com     | |!123456Zm   ||classyyy    |            
+      | username                          | | password   ||name      |
+      | velumanieswaran2020@gmail.com     | |!123456Zm   ||classyyy    |            
       
-    @naren       
+   @devSecond        
     Examples: 
       | username                      | | password   ||name      |
-      | buyerautomated1@gmail.com     | |!123456Zm   ||classyyy    |            
+      | buyerautomated3@gmail.com     | |!123456Zm   ||classyyy    |            
     
       
   

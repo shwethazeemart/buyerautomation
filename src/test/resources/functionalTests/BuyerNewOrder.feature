@@ -32,14 +32,14 @@ Scenario Outline: Verify the New Order page of Buyer panel
           
         @dev 
         Examples:
-             |Order ID       ||username                   | |password    | |outletname      |
-             |202110270051   ||buyerautomated3@gmail.com  | |!123456Zm   | |velumasala2020  |
+             |Order ID       ||username                       | |password    | |outletname      |
+             |202110270051   ||velumanieswaran2020@gmail.com  | |!123456Zm   | |velumasala2020  |
           
           
         @naren  
         Examples:
              |Order ID       ||username                   | |password    | |outletname      |
-             |202110270051   ||buyerautomated1@gmail.com  | |!123456Zm   | |velumasala2020  |
+             |202110270051   ||buyerautomated3@gmail.com  | |!123456Zm   | |velumasala2020  |
              
          
    @Smoke
@@ -70,11 +70,17 @@ Scenario Outline: Verify the New Order page of Buyer panel
          
            @dev
            Examples:
+             |username                         |  |password    |  |outletname      | |outletnameone   |   |outletnametwo      |
+             |velumanieswaran2020@gmail.com    |  |!123456Zm   |  |velumasalathree | |velumasalasix   |   |velumasalatwofifty |
+    
+    
+            @devSecond 
+           Examples:
              |username                     |  |password    |  |outletname      | |outletnameone   |   |outletnametwo      |
              |buyerautomated3@gmail.com    |  |!123456Zm   |  |velumasalathree | |velumasalasix   |   |velumasalatwofifty |
     
     
-           
+          
 
  
 

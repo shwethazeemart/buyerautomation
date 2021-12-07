@@ -1,5 +1,5 @@
 Feature: Verify Buyer Reports spending per Category page and test all the page
-@Smoke
+
 Scenario Outline: Verify the Reports spending per Category page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -46,9 +46,9 @@ Scenario Outline: Verify the Reports spending per Category page of Buyer panel
       |username                          | | password   ||name     |
       |velumanieswaran2020@gmail.com     | |!123456Zm   ||Beer     | 
       
-  @naren       
+ @devSecond       
   Examples: 
       |username                      | | password   ||name     |
-      |buyerautomated1@gmail.com     | |!123456Zm   ||Beer     | 
+      |buyerautomated3@gmail.com     | |!123456Zm   ||Beer     | 
       
          

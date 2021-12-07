@@ -1,5 +1,5 @@
 Feature: Verify Buyer Invoice upload page and test all the page
-@Smoke
+
 Scenario Outline: Verify the Invoices upload page of Buyer panel
          Given User is on Login Page
          When User enter exact username"<username>"
@@ -12,8 +12,13 @@ Scenario Outline: Verify the Invoices upload page of Buyer panel
          Then User is Clicks on upload the image
          And User is Clicks on Upload button
          
+      @dev     
+     Examples:
+             |username                         |  |password    |
+             |velumanieswaran2020@gmail.com    |  |!123456Zm   |
+ 
          
-          
+     @devSecond      
      Examples:
              |username                     |  |password    |
              |buyerautomated3@gmail.com    |  |!123456Zm   |

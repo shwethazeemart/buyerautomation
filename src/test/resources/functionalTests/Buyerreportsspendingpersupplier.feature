@@ -58,7 +58,7 @@ Scenario Outline: Verify the Reports spending per supplier page of Buyer panel
       | username                          | | password   ||name     | |outletname     |
       | velumanieswaran2020@gmail.com     | |!123456Zm   ||sabari250| |velu masala2020|
       
-     @naren     
+    @devSecond     
      Examples: 
       | username                      | | password   ||name     | |outletname     |
       | buyerautomated3@gmail.com     | |!123456Zm   ||sabari250| |velu masala2020|

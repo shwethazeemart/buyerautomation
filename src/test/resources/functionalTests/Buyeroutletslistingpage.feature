@@ -27,12 +27,12 @@ Scenario Outline: Verify the Outlets listing page of Buyer panel
           
     @dev       
     Examples:  
-      | username                      | | password   ||confirm||outletname     |
-      | buyerautomated3@gmail.com     | |!123456Zm   ||DISABLE||velu masala2020|
+      | username                          | | password   ||confirm||outletname     |
+      | velumanieswaran2020@gmail.com     | |!123456Zm   ||DISABLE||velu masala2020|
       
-       @naren      
+     @devSecond       
     Examples:  
       | username                      | | password   ||confirm||outletname     |
-      | buyerautomated1@gmail.com     | |!123456Zm   ||DISABLE||velu masala2020|
+      | buyerautomated3@gmail.com     | |!123456Zm   ||DISABLE||velu masala2020|
      
       

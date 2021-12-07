@@ -1,5 +1,5 @@
 Feature: Verify Buyer Reports spending per outlet page and test all the page
-@Smoke
+
 Scenario Outline: Verify the Reports spending per outlet page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -84,8 +84,8 @@ Scenario Outline: Verify the Reports spending per outlet page of Buyer panel
       | username                      | | password   |  |outletname      |
       | velumanieswaran2020@gmail.com | |!123456Zm   |  |velu masala2020 |
       
-      @naren
+     @devSecond 
        Examples: 
       | username                      | | password   |  |outletname      |
-      | buyerautomated1@gmail.com     | |!123456Zm   |  |velu masala2020 |
+      | buyerautomated3@gmail.com     | |!123456Zm   |  |velu masala2020 |
       
