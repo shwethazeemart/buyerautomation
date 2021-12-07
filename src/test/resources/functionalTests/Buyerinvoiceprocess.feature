@@ -23,12 +23,12 @@ Scenario Outline: Verify the Invoices process page of Buyer panel
          
          @dev 
          Examples:
-         |invoicenumber|  |username                     |  |password    |
-         |INV-20123456 |  |buyerautomated3@gmail.com    |  |!123456Zm   |    
+         |invoicenumber|  |username                         |  |password    |
+         |INV-20123456 |  |velumanieswaran2020@gmail.com    |  |!123456Zm   |    
          
          @naren
          Examples:
          |invoicenumber|  |username                     |  |password    |
-         |INV-20123456 |  |buyerautomated1@gmail.com    |  |!123456Zm   |      
+         |INV-20123456 |  |buyerautomated3@gmail.com    |  |!123456Zm   |      
            
          

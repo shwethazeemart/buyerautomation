@@ -1,5 +1,5 @@
 Feature: Verify Buyer Edit Users page and test all the page
-@Smoke
+
 Scenario Outline: Verify the Edit Users page of Buyer panel 
   
           Given User is on Login Page
@@ -18,8 +18,8 @@ Scenario Outline: Verify the Edit Users page of Buyer panel
     
     @dev      
     Examples:
-         |username                     |  |password    ||title      ||Email                            ||mobilephone  | |username     |
-         |buyerautomated3@gmail.com    |  |!123456Zm   ||AtoZ test  ||velumanieswaran2020@gmail.com    ||+65122456789 | |velumanitwo  | 
+         |username                         |  |password    ||title      ||Email                            ||mobilephone  | |username     |
+         |velumanieswaran2020@gmail.com    |  |!123456Zm   ||AtoZ test  ||velumanieswaran2020@gmail.com    ||+65122456789 | |velumanitwo  | 
          
      @naren     
     Examples:

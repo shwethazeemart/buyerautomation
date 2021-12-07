@@ -45,7 +45,7 @@ Scenario Outline: Verify the Inventory Record adjustment page of Buyer panel
     @dev      
     Examples:
          |username                            |  |password    ||Quantity||Notes              ||Quantityone||Notesone         ||Quantitytwo||Notestwo         ||Notesthree|     |Notesfour|       |Notesfive|
-         |buyerautomated3@gmail.com           |  |!123456Zm   ||   10   ||eswaranvelufound10  ||10     |   |velumanimissing10||10         ||velupromotions10||velutrnasferin10||velutransferout10||veluwastage10|
+         |velumanieswaran2020@gmail.com           |  |!123456Zm   ||   10   ||eswaranvelufound10  ||10     |   |velumanimissing10||10         ||velupromotions10||velutrnasferin10||velutransferout10||veluwastage10|
          
           
     @naren     

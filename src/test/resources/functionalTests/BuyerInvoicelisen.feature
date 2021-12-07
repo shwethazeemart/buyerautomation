@@ -65,7 +65,7 @@ Scenario Outline: Buyer Invoice lisen page verify the all field
     @dev
     Examples: 
       | username                         || loginPassword|
-      | buyerautomated3@gmail.com        || !123456Zm    | 
+      | velumanieswaran2020@gmail.com    || !123456Zm    | 
       
     @naren
     Examples: 

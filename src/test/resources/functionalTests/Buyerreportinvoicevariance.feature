@@ -34,8 +34,15 @@ Scenario Outline: Verify the Reports invoice variance Category page of Buyer pan
           Then User click on export download button in invoice variance
           Then User click on Reports back button in invoice variance
           
-          
+     @dev     
      Examples: 
       | username                      | | password   ||invoice     ||outletname    |
       |velumanieswaran2020@gmail.com  | |!123456Zm   ||vel-1234567 ||velumasala2020|
+      
+      @naren
+      Examples: 
+      | username                      | | password   ||invoice     ||outletname    |
+      |buyerautomated3@gmail.com      | |!123456Zm   ||vel-1234567 ||velumasala2020|
+      
+      
       

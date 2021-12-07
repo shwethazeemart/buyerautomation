@@ -47,8 +47,14 @@ Scenario Outline: Verify the Dashboard lisen page of Buyer panel
           Then User click on Last week icon
           And User click on Last month icon
           Then User click on view all spending by supplier
-          
-           Examples:
+         
+         @dev 
+         Examples:
+         |username                            |  |password    ||name     | |outletname  |
+         |velumanieswaran2020@gmail.com       |  |!123456Zm   ||100pipers| |velu masala |
+         
+        @naren 
+         Examples:
          |username                            |  |password    ||name     | |outletname  |
          |buyerautomated3@gmail.com           |  |!123456Zm   ||100pipers| |velu masala |
          
