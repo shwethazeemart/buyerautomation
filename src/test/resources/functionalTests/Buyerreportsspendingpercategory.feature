@@ -46,9 +46,9 @@ Scenario Outline: Verify the Reports spending per Category page of Buyer panel
       |username                          | | password   ||name     |
       |velumanieswaran2020@gmail.com     | |!123456Zm   ||Beer     | 
       
-  @naren       
+ @devSecond       
   Examples: 
       |username                      | | password   ||name     |
-      |buyerautomated1@gmail.com     | |!123456Zm   ||Beer     | 
+      |buyerautomated3@gmail.com     | |!123456Zm   ||Beer     | 
       
          

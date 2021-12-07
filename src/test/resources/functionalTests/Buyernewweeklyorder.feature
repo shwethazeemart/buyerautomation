@@ -1,5 +1,5 @@
 Feature: Verify Buyer New Weekly Order page and test all the page
-@Smoke
+
 Scenario Outline: Verify the New Weekly Order page of Buyer panel
          Given User is on Login Page
          When User enter exact username"<username>"
@@ -16,6 +16,11 @@ Scenario Outline: Verify the New Weekly Order page of Buyer panel
          Then User click on upload and review order button
     
          @dev
+         Examples:
+           |username                         |  |password    |
+           |velumanieswaran2020@gmail.com    |  |!123456Zm   |     
+           
+          @devSecond 
          Examples:
            |username                     |  |password    |
            |buyerautomated3@gmail.com    |  |!123456Zm   |     

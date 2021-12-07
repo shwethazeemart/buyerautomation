@@ -1,5 +1,5 @@
 Feature: Verify Buyer  Users listing page testcases and test all the page
-@Smoke
+
 Scenario Outline: Verify the Users Listing page of Buyer panel 
   
           Given User is on Login Page
@@ -15,8 +15,14 @@ Scenario Outline: Verify the Users Listing page of Buyer panel
           And User click on clear icon in edit user page
           Then User click on search box in edit user page
           And User enter the name in search box in edit user page"<name>"
-         
+          
+    @dev     
     Examples:
          |username                         |  |password    ||name      |  |username  |
          |velumanieswaran2020@gmail.com    |  |!123456Zm   ||velu mani2|  |velu mani2|
+    
+    @devSecond 
+     Examples:
+         |username                         |  |password    ||name      |  |username  |
+         |buyerautomated3@gmail.com        |  |!123456Zm   ||velu mani2|  |velu mani2|
     

@@ -33,9 +33,9 @@ Scenario Outline: Verify the New recurring orders page of Buyer panel
           @dev  
           Examples:
              |username                                   |  |password    |
-             |velumanieswaran2020@gmail.com              |  |!123456Zm   |     
+             |velumanieswaran2020@gmail.com              |  |!123456Zm   | 
              
-          @naren 
+          @devSecond 
           Examples:
              |username                               |  |password    |
              |buyerautomated3@gmail.com              |  |!123456Zm   |     

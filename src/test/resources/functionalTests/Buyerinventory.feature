@@ -1,5 +1,5 @@
 Feature: Verify Buyer Inventory page and test all the page
-@Smoke
+
 Scenario Outline: Verify the Inventory page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -25,11 +25,16 @@ Scenario Outline: Verify the Inventory page of Buyer panel
           When User is Select item in the items name dropdown
           Then User are type the value of Quantity box field"<Quantity>"
           Then User are type Notes in the Notes field"<Notes>"
-          Then User are Clicks final Save button
+          Then User are Clicks final Save button    
+          
          
-          
-           
-          
+    @dev      
     Examples:
          |username                            |  |password    ||Listname        ||Quantity||Notes              | |outletname     |
          |velumanieswaran2020@gmail.com       |  |!123456Zm   ||sairam          ||   10   ||eswaranolifound10  | |velu masala2020|
+         
+   @devSecond   
+    Examples:
+         |username                        |  |password    ||Listname        ||Quantity||Notes              | |outletname     |
+         |buyerautomated3@gmail.com       |  |!123456Zm   ||sairam          ||   10   ||eswaranolifound10  | |velu masala2020|
+         

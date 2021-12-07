@@ -92,7 +92,7 @@ Scenario Outline: Verify the Reports spending per SKU page of Buyer panel
       | username                          | | password   ||name     |
       | velumanieswaran2020@gmail.com     | |!123456Zm   ||100pipers|     
       
-       @naren      
+      @devSecond      
      Examples: 
       | username                      | | password   ||name     |
       | buyerautomated3@gmail.com     | |!123456Zm   ||100pipers|     

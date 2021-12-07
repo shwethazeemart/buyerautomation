@@ -1,5 +1,5 @@
 Feature: Verify Buyer Invoice page and test all the page
-@Smoke
+
 Scenario Outline: Buyer Invoice lisen page verify the all field 
 
     Given User is on Login Page
@@ -67,7 +67,7 @@ Scenario Outline: Buyer Invoice lisen page verify the all field
       | username                         || loginPassword|
       | velumanieswaran2020@gmail.com    || !123456Zm    | 
       
-    @naren
+    @devSecond 
     Examples: 
       | username                         || loginPassword|
-      | buyerautomated1@gmail.com        || !123456Zm    | 
+      | buyerautomated3@gmail.com        || !123456Zm    | 

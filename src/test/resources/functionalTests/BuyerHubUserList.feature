@@ -1,5 +1,5 @@
 Feature: Verify buyer panel and test user list
-@Smoke
+
 Scenario Outline: Verify the Users page in view User list
 
 					Given User are available in login page
@@ -12,6 +12,13 @@ Scenario Outline: Verify the Users page in view User list
           And user enter the name in search textbox 
           Then List should be altered
           
-Examples:
-         |username|              |password |
-         |kovalan@zeemart.asia|  |!1234567Zm|    
+       @dev   
+       Examples:
+         |username                       |  |password |
+         |velumanieswaran2020@gmail.com  |   |!1234567Zm|    
+          
+          
+       @devSecond    
+       Examples:
+         |username                   |  |password |
+         |buyerautomated3@gmail.com  |   |!1234567Zm|    

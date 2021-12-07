@@ -22,7 +22,7 @@ Scenario Outline: Verify the Inventory Activity lisen page of Buyer panel
          |velumanieswaran2020@gmail.com       |  |!123456Zm   | |velu masala |
      
       
-    @naren   
+    @devSecond    
      Examples:
          |username                            |  |password    | |outletname  |
          |buyerautomated3@gmail.com           |  |!123456Zm   | |velu masala |

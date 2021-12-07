@@ -16,10 +16,10 @@ Scenario Outline: Verify the Outlets manage details page of Buyer panel
           Then User click on save button
     @dev       
     Examples: 
-      | username                      | | password   ||Email                      |
-      |buyerautomated3@gmail.com      | |!123456Zm   ||lingeshsabari2009@gmail.com|
+      | username                          | | password   ||Email                      |
+      |velumanieswaran2020@gmail.com      | |!123456Zm   ||lingeshsabari2009@gmail.com|
       
-    @naren       
+   @devSecond       
     Examples: 
       | username                      | | password   ||Email                      |
       |buyerautomated3@gmail.com      | |!123456Zm   ||lingeshsabari2009@gmail.com|

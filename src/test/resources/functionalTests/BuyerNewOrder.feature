@@ -20,7 +20,7 @@ Scenario Outline: Verify the New Order page of Buyer panel
          And User Clicks in Add to order of SKU
          Then User Clicks increase the order button
          And  User Clicks Review order
-         And User Clicks Place Order
+         And User Clicks Place Order 
          And User clicks the Back to Orders button 
          Then User click the newly created order
          Then User Copy the particular order number in newly created 
@@ -74,9 +74,20 @@ Scenario Outline: Verify the New Order page of Buyer panel
              |velumanieswaran2020@gmail.com    |  |!123456Zm   |  |velumasalathree | |velumasalasix   |   |velumasalatwofifty |
     
     
+
   @naren
   Examples:
              |username                     |  |password    |  |outletname      | |outletnameone   |   |outletnametwo      |
              |buyerautomated3@gmail.com    |  |!123456Zm   |  |velumasalathree | |velumasalasix   |   |velumasalatwofifty |
     
+            @devSecond 
+           Examples:
+             |username                     |  |password    |  |outletname      | |outletnameone   |   |outletnametwo      |
+             |buyerautomated3@gmail.com    |  |!123456Zm   |  |velumasalathree | |velumasalasix   |   |velumasalatwofifty |
+    
+    
+          
+
+ 
+
 
