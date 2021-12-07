@@ -69,9 +69,6 @@ public class Buyerpaymentspaymentplanspage {
 	private static Object Dashboardcolour;
 
 
-
-
-
 	public static void Clickpaymentplansicon() {
 		//Buyerpaymentspaymentplanspage_Paymentplansicon.click();
 		WebElement paymentPlans = driver.findElement(By.linkText("Payment plans"));

@@ -1,5 +1,5 @@
 Feature: Verify Buyer Inventory SKU lisen page and test all the page
-@Smoke         
+        
 Scenario Outline: Verify the Inventory SKU lisen page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -32,7 +32,7 @@ Scenario Outline: Verify the Inventory SKU lisen page of Buyer panel
      @dev     
      Examples:
          |username                        |  |password    | 
-         |buyerautomated3@gmail.com       |  |!123456Zm   |
+         |velumanieswaran2020@gmail.com   |  |!123456Zm   |
          
               
      @naren    

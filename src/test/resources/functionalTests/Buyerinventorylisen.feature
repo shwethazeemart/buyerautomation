@@ -28,11 +28,11 @@ Scenario Outline: Verify the Inventory Outlets lisen page of Buyer panel
           @dev
           Examples:
          |username                       |  |password    ||outletname     ||outletnameone | |outletnametwo |
-         |buyerautomated3@gmail.com      |  |!123456Zm   ||velu masala2020||sstmasala     | |sstmasala2020 |
+         |velumanieswaran2020@gmail.com  |  |!123456Zm   ||velu masala2020||sstmasala     | |sstmasala2020 |
          
            @naren
           Examples:
          |username                       |  |password    ||outletname     ||outletnameone | |outletnametwo |
-         |buyerautomated1@gmail.com      |  |!123456Zm   ||velu masala2020||sstmasala     | |sstmasala2020 |
+         |buyerautomated3@gmail.com      |  |!123456Zm   ||velu masala2020||sstmasala     | |sstmasala2020 |
          
          
