@@ -1,5 +1,5 @@
 Feature: Verify Buyer Outlets manage settings page and test all the page
-@Smoke
+
  Scenario Outline: Verify the Outlets settings page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>" 
@@ -23,9 +23,16 @@ Feature: Verify Buyer Outlets manage settings page and test all the page
           Then User clear outlet email
           And User enter the outletemail"<outletemail>"
           Then User click on save button finally
-           
+          
+    @dev       
     Examples: 
       | username                      | | password   ||Name       | |WeeklyEmail          ||Email                      ||outletemail                  |
       | velumanieswaran2020@gmail.com | |!123456Zm   ||buyer      | |velumani@zeemart.asia||lingeshsabari2009@gmail.com||velumanieswaran2020@gmail.com| 
+      
+      
+     @devSecond      
+    Examples: 
+      | username                      | | password   ||Name       | |WeeklyEmail          ||Email                      ||outletemail                  |
+      | buyerautomated3@gmail.com     | |!123456Zm   ||buyer      | |velumani@zeemart.asia||lingeshsabari2009@gmail.com||velumanieswaran2020@gmail.com| 
       
       

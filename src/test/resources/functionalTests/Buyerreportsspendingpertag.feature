@@ -1,5 +1,5 @@
 Feature: Verify Buyer Reports spending per tag page and test all the page
-@Smoke
+
 Scenario Outline: Verify the Reports spending per tag page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -76,6 +76,11 @@ Scenario Outline: Verify the Reports spending per tag page of Buyer panel
   Examples: 
       | username                          | | password   ||name       |
       | velumanieswaran2020@gmail.com     | |!123456Zm   ||masala     | 
+      
+   @devSecond         
+  Examples: 
+      | username                          | | password   ||name       |
+      | buyerautomated3@gmail.com         | |!123456Zm   ||masala     | 
       
   
       

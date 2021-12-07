@@ -40,7 +40,7 @@ Scenario Outline: Verify the Reports price updates Category page of Buyer panel
       | username                      | | password   ||sku       |
       |velumanieswaran2020@gmail.com  | |!123456Zm   ||100pipers | 
       
-     @naren
+    @devSecond 
      Examples: 
       | username                      | | password   ||sku       |
       |buyerautomated3@gmail.com      | |!123456Zm   ||100pipers | 
