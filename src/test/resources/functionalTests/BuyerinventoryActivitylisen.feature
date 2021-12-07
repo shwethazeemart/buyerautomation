@@ -1,5 +1,5 @@
 Feature: Verify Buyer Inventory Activity lisen page and test all the page
-@Smoke
+
 Scenario Outline: Verify the Inventory Activity lisen page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"

@@ -1,5 +1,5 @@
 Feature: Verify Buyer Reports spending per Category page and test all the page
-@Smoke
+
 Scenario Outline: Verify the Reports spending per Category page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
