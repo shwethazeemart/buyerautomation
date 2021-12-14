@@ -6,7 +6,7 @@ Scenario Outline: Verify the Reports spending per supplier page of Buyer panel
           And User enter exact password"<password>"
           And User is click login button 
           Then User Clicks on Reports in the side navigation menubar 
-          Then User click on spending per supplier icon
+          Then User click on spending per supplier icon 
           And User click on supplier search box
           Then User enter supplier name in search box"<name>"
           Then User select date from calendar
@@ -26,12 +26,13 @@ Scenario Outline: Verify the Reports spending per supplier page of Buyer panel
           Then User click on YTD from calendar
           And User click on filter in supplier
           Then User click on outlets
-          Then User click on check box "<outletname>"
+          Then User click on check box 
           Then User click on Apply button in supplier
+          And User click on filter in supplier
           Then User click on Reset button in supplier
-          Then User click on outside in supplier
+          Then User click on outside in supplier                   
           And User click Export download button
-          Then User click on supplier
+          Then User click on the supplier "<suppliername> " 
           Then User select date from calendar
           And User click on Today date from calendar
           Then User select date from calendar
@@ -53,14 +54,15 @@ Scenario Outline: Verify the Reports spending per supplier page of Buyer panel
           Then User click on back button of reports 
           
              
-     @dev     
+     @dev    
      Examples: 
-      | username                          | | password   ||name     | |outletname     |
-      | velumanieswaran2020@gmail.com     | |!123456Zm   ||sabari250| |velu masala2020|
-      
-    @devSecond     
+      | username                       | | password   ||name     | 
+      | velumanieswaran2020@gmail.com  | |!123456Zm   ||sabari250| 
+   
+     @devSecond   
      Examples: 
-      | username                      | | password   ||name     | |outletname     |
-      | buyerautomated3@gmail.com     | |!123456Zm   ||sabari250| |velu masala2020|
+      | username                       | | password   ||name     | 
+      | buyerautomated3@gmail.com      | |!123456Zm   ||sabari250| 
       
-    
+      
+   

@@ -1,5 +1,5 @@
 Feature: Verify Buyer hub Entire News screen test cases
-
+@Smoke
 Scenario Outline: Verify the News page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -18,8 +18,4 @@ Scenario Outline: Verify the News page of Buyer panel
          |username                            |  |password    |
          |velumanieswaran2020@gmail.com       |  |!123456Zm   |
          
-           @devSecond 
-        Examples:
-         |username                            |  |password    |
-         |buyerautomated3@gmail.com           |  |!123456Zm   |
-          
+       

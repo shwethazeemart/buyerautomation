@@ -78,6 +78,7 @@ public class Buyerreportspenperoutlet {
 	@Then("User click on Reset button")
 	public void user_click_on_Reset_button() {
 	    Buyerreportspenperoutletpage.Clickresetbutton();
+	    
 	}
 
 	@Then("User click on outside")
@@ -213,8 +214,6 @@ public class Buyerreportspenperoutlet {
 	public void user_click_download_button_of_export() throws InterruptedException {
 	    Buyerreportspenperoutletpage.Clickonexportdownloadbutton();
 	}
-
-	
 	
 	@Then("User click on back button of spending report")
 	public void user_click_on_back_button_of_spending_report() throws InterruptedException {
@@ -231,9 +230,9 @@ public class Buyerreportspenperoutlet {
 	    Buyerreportspenperoutletpage.Clickonapplybuttonincustomrange();
 	}
 	
-	@Then("User click on download button {string}")
+	/*@Then("User click on download button")
 	public void user_click_on_download_button(String string) {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new io.cucumber.java.PendingException();
-	}
+	}*/
 }

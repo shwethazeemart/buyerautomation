@@ -16,8 +16,14 @@ Scenario Outline: Verify the Payment transactions page of Buyer panel
           And User click on payments back button
           
           
-          
+     @dev     
      Examples: 
       | username                      | | password   |
       | velumanieswaran2020@gmail.com | |!123456Zm   |      
+      
+       @dev     
+     Examples: 
+      | username                      | | password   |
+      | buyerautomated3@gmail.com     | |!123456Zm   |      
+      
       

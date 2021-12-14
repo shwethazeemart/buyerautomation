@@ -42,7 +42,7 @@ public class Buyeredituserlisenpage {
 	@FindBy(xpath="//h4[text()='Delete selected user(s)?']/following-sibling::button")
 	private static WebElement Buyeredituserlisenpage_Closedeleteicon;	
 
-    @FindBy(xpath="(//div[contains(@class,'datatable-body-cell-label')])[20] ")
+    @FindBy(xpath="//span[@title='velu mani2'] ")
 	private static WebElement Buyeredituserlisenpage_user;	
 
     @FindBy(xpath="(//div[contains(@class,'datatable-body-cell-label')])[26]")

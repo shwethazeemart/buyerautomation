@@ -47,7 +47,7 @@ public class Buyeroutletslisting {
 	    Buyeroutletslistingpage.Clickonmakeinactive();
 	}
 
-	@Then("User Enter in Disable text box{string}")
+	@Then("User Enter in Disable text box {string}")
 	public void user_Enter_in_Disable_text_box(String DISABLE) {
 	    Buyeroutletslistingpage.EntertheDisableintextbox(DISABLE);
 	}
@@ -91,4 +91,6 @@ public class Buyeroutletslisting {
 	public void user_enter_the_outlet_name_in_text_box(String outletname) {
 	    Buyeroutletslistingpage.Entertheoutletname(outletname);
 	}
+	
+	
 }

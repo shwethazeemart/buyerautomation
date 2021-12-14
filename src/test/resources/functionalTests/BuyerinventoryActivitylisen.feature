@@ -5,7 +5,7 @@ Scenario Outline: Verify the Inventory Activity lisen page of Buyer panel
           When User enter exact username"<username>"
           And User enter exact password"<password>"
           And User is click login button 
-          Then User Clicks on Inventory in the side navigation menubar 
+          Then User clicks on Inventory in the side navigation menubar 
           And User click on outlets icon
           Then User ckicks on outlet "<outletname>"
           Then User click on Activity icon

@@ -50,8 +50,7 @@ public class Buyerreportspenpersupplierpage {
 	private static WebElement Buyerreportspenpersupplierpage_Checkboxvelumasala;
 	
 	@FindBy(xpath = "(//a[@class='export-mclr'])[2]")
-	private static WebElement Buyerreportspenpersupplierpage_Exportdownloadbutton;
-	
+	private static WebElement Buyerreportspenpersupplierpage_Exportdownloadbutton;	
 	
 	@FindBy(xpath = "//div[@class='btn-group px-2']")
 	private static WebElement Buyerreportspenpersupplierpage_Filter;
@@ -62,7 +61,7 @@ public class Buyerreportspenpersupplierpage {
 	@FindBy(xpath = "//div[text()='Spending report']") 
 	private static WebElement Buyerreportspenpersupplierpage_Outside;
 	
-	@FindBy(xpath = "(//div[contains(@class,'datatable-body-cell-label')])[10]")
+	@FindBy(xpath = "//span[@title='sabari250']")
 	private static WebElement Buyerreportspenpersupplierpage_Sabaritwofiftysupplier;
 	
 	

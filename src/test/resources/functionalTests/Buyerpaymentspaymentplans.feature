@@ -1,5 +1,5 @@
 Feature: Verify Buyer Payments Payment plans page and test all the page
-@Smoke
+
 Scenario Outline: Verify the Payment plans page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"

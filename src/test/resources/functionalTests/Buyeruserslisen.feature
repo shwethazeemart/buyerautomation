@@ -1,5 +1,5 @@
 Feature: Verify Buyer Users page and test all the page
-@Smoke
+
 Scenario Outline: Verify the Users page of Buyer panel 
   
           Given User is on Login Page
@@ -25,5 +25,11 @@ Scenario Outline: Verify the Users page of Buyer panel
     Examples:
          |username                       ||password    ||First name||Last name ||Job title    ||Email                              ||Mobile phone|
          |velumanieswaran2020@gmail.com  ||!123456Zm   ||velu      ||ganesh    ||ATZ          ||ganeshvelutamil2008@gmail.com      ||+6512345677 |       
+    
+    
+     @devSecond       
+    Examples:
+         |username                   ||password    ||First name||Last name ||Job title    ||Email                              ||Mobile phone|
+         |buyerautomated3@gmail.com  ||!123456Zm   ||velu      ||ganesh    ||ATZ          ||ganeshvelutamil2008@gmail.com      ||+6512345677 |       
     
     
