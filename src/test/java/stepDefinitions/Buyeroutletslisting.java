@@ -47,10 +47,7 @@ public class Buyeroutletslisting {
 		Buyeroutletslistingpage.Clickonmakeinactive();
 	}
 
-	//@Then("User Enter in Disable text box{string}")
-	//public void user_Enter_in_Disable_text_box(String DISABLE) {
-	//  Buyeroutletslistingpage.EntertheDisableintextbox(DISABLE);
-	//}
+
 
 	@Then("User click on yes make inactive button")
 	public void user_click_on_yes_make_inactive_button() {
@@ -93,6 +90,7 @@ public class Buyeroutletslisting {
 	}
 
 
+
 	
 
 	
@@ -107,9 +105,5 @@ public class Buyeroutletslisting {
 		@Then("User enter the confirmation in textbox{string}")
 		public void user_enter_the_confirmation_in_textbox_DISABLE(String disable) {
 			Buyeroutletslistingpage.ConfirmationEnter(disable);
-		}
-
-
-
-
+    }
 }

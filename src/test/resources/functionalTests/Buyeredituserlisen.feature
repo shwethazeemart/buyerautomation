@@ -21,10 +21,10 @@ Scenario Outline: Verify the Edit Users page of Buyer panel
          |username                         |  |password    ||title      ||Email                            ||mobilephone  | |usernameone |
          |velumanieswaran2020@gmail.com    |  |!123456Zm   ||AtoZ test  ||velumanieswaran2020@gmail.com    ||+65122456789 | |velumanitwo  | 
          
+        
      @devSecond    
     Examples:
          |username                     |  |password    ||title      ||Email                            ||mobilephone  | |username     |
          |buyerautomated3@gmail.com    |  |!123456Zm   ||AtoZ test  ||velumanieswaran2020@gmail.com    ||+65122456789 | |velumanitwo  | 
          
-          
          
