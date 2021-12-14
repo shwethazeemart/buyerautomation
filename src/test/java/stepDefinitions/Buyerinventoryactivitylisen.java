@@ -53,7 +53,7 @@ public class Buyerinventoryactivitylisen {
 
 	@Then("User click on download button")
 	public void user_click_on_download_button() {
-	   Buyerinventoryactivitylisenpage.Clickdownloadbutton();
+	   //Buyerinventoryactivitylisenpage.Clickdownloadbutton();
 	}
 
 	@Then("User ckicks on outlet {string}")

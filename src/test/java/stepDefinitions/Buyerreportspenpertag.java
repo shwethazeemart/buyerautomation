@@ -102,8 +102,8 @@ public class Buyerreportspenpertag {
 	   Buyerreportspenpertagpage.Clickonsuppliers();
 	}
 
-	@Then("User click on Check box in tag")
-	public void user_click_on_Check_box_in_tag() {
+	@Then("User click on check box of tag")
+	public void user_click_on_check_box_of_tag() {
 	   Buyerreportspenpertagpage.Clickoncheckboxofsabari();
 	}
 
@@ -112,8 +112,6 @@ public class Buyerreportspenpertag {
 	    Buyerreportspenpertagpage.Clickonexportdownloadbutton();
 	}
  
-	
-
 
 	@Then("User click on food Tag")
 	public void user_click_on_food_Tag() {
@@ -130,16 +128,14 @@ public class Buyerreportspenpertag {
 		Buyerreportspenpertagpage.Clickonfiltertaginmasala();
 		
 	}
-
 	
 	@Then("User click on outside tag")
 	public void user_click_on_outside_tag() {
 		Buyerreportspenpertagpage.Clickonoutsidetaginmasala();
 	
 	}
-	
-	@Then("User click on check box of sabari in tag")
-	public void user_click_on_check_box_of_sabari_in_tag() {
+	@Then("User click on Check box in tag")
+	public void user_click_on_Check_box_in_tag() {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new io.cucumber.java.PendingException();
 	}
@@ -150,49 +146,15 @@ public class Buyerreportspenpertag {
 	    throw new io.cucumber.java.PendingException();
 	}
 
-	@Then("User click on check box  in tag")
+	@Then("User click on Check box in food tag")
+	public void user_click_on_Check_box_in_food_tag() {
+		Buyerreportspenpertagpage.Checkboxofvelumasala();
+	}
+
+	@Then("User click on check box in tag")
 	public void user_click_on_check_box_in_tag() {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new io.cucumber.java.PendingException();
 	}
 
-	@Then("User click on check box of tag")
-	public void user_click_on_check_box_of_tag() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }

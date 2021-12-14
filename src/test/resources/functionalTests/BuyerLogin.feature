@@ -1,5 +1,5 @@
 Feature: verify Buyer page and the test all the page
- 
+
 Scenario Outline: Customer wants to reset password
     Given User is on Login Page
     When User enters exact username "<username>"
