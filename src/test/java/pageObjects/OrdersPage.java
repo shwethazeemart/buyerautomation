@@ -213,8 +213,8 @@ public class OrdersPage {
 	@FindBy(xpath = "//div[text()='VELUMASLA250']")
 	private static WebElement orderspage_Velumasalatwofiftypop;
 	
-	//@FindBy(xpath = "(//button[text()='OK'])[2]")
-	//private static WebElement orderspage_Okbuttonofpop;
+	@FindBy(xpath = "(//button[text()='OK'])[2]")
+	private static WebElement orderspage_Okbutton;
 
 
 
@@ -691,9 +691,9 @@ public class OrdersPage {
 
 	}
 
-	public static void Clickonokbutton() throws InterruptedException {
+	/*public static void Clickonokbutton() throws InterruptedException {
 		Thread.sleep(5000);
-		/*String parentWindow = driver.getWindowHandle();
+		String parentWindow = driver.getWindowHandle();
 		Set<String> windowHandles = driver.getWindowHandles();
 		Iterator<String> iterator = windowHandles.iterator();
 		while (iterator.hasNext()) {
@@ -702,18 +702,11 @@ public class OrdersPage {
 		                    // Switch to popup 
 		                    driver.switchTo().window(handle);
 		   }
-		}*/
-		//orderspage_Okbutton.click();
-		//driver.close();
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
 		}
-		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
-				.executeScript("return document.readyState").equals("complete"));
-		   }
+		orderspage_Okbutton.click();
 		
-	
+		
+	}*/
 
 	public static void Clickonsabaritwofiftysupplier() throws InterruptedException {
 		Thread.sleep(5000);
@@ -781,15 +774,9 @@ public class OrdersPage {
 		   String handle = iterator.next();
 		   if (!handle.contains(parentWindow)) {
 		                    // Switch to popup 
-		                    driver.switchTo().window(handle);
+		driver.switchTo().window(handle);
 		orderspage_Closeiconofokbutton.click();
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
 		}
-		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
-				.executeScript("return document.readyState").equals("complete"));
-		   }
 		} 
 		
 	}
@@ -820,12 +807,7 @@ public class OrdersPage {
 		System.out.println("The display handle1:" +driver.getTitle());
 	
 		orderspage_Velumasalathreeinpop.click();
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-		}
-		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
-				.executeScript("return document.readyState").equals("complete"));		 
+				 
 	}
 	
 	public static void Clickonokbuttoninpop() throws InterruptedException {
@@ -846,7 +828,7 @@ public class OrdersPage {
 		System.out.println("The display handle3:" +driver.getTitle());
 		orderspage_Popmessage.click();
 
-		//driver.close();
+	
 	}
 	public static void Clickcloseiconfirstpop() {
 		orderspage_Closeiconfirstpop.click();
@@ -899,9 +881,7 @@ public class OrdersPage {
 		
 	}
 
-	public static void clickonoutletOne() {
-		//orderspage_SupplierpageOutletOne.click();
-	}
+	
 	public static void click_velumasala2020(String outletname) {
 		//orderspage_velumasala2020.click();
 
@@ -911,6 +891,21 @@ public class OrdersPage {
 		}
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
+	}
+	public static void OkbuttonOutletone() throws InterruptedException {
+		Thread.sleep(5000);
+		String parentWindow = driver.getWindowHandle();
+		Set<String> windowHandles = driver.getWindowHandles();
+		Iterator<String> iterator = windowHandles.iterator();
+		while (iterator.hasNext()) {
+		   String handle = iterator.next();
+		   if (!handle.contains(parentWindow)) {
+		                    // Switch to popup 
+		                    driver.switchTo().window(handle);
+		   }
+		}
+		orderspage_Okbutton.click();
+		
 	}
 }
 

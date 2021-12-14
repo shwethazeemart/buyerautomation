@@ -8,7 +8,7 @@ Scenario Outline: Verify the New Order page of Buyer panel
          And User Clicks Orders in the side navigation menubar
          And User Clicks New order dropdown value
          And User Clicks New order in the dropdown value
-         Then User click on in the supplier page "<outletname>"
+         Then User click on the supplier
          And User Clicks in Add to order of SKU
          Then User Clicks increase the order button
          And User Clicks in Add to order of SKU
@@ -20,7 +20,7 @@ Scenario Outline: Verify the New Order page of Buyer panel
          And User Clicks in Add to order of SKU
          Then User Clicks increase the order button
          And  User Clicks Review order
-         And User Clicks Place Order
+         And User Clicks Place Order 
          And User clicks the Back to Orders button 
          Then User click the newly created order
          Then User Copy the particular order number in newly created 
@@ -32,8 +32,8 @@ Scenario Outline: Verify the New Order page of Buyer panel
           
         @dev 
         Examples:
-             |Order ID       ||username                       | |password    | |outletname      |
-             |202110270051   ||velumanieswaran2020@gmail.com  | |!123456Zm   | |velumasala2020  |
+             |Order ID       ||username                       | |password    |
+             |202110270051   ||velumanieswaran2020@gmail.com  | |!123456Zm   | 
           
           
         @naren  
@@ -42,45 +42,8 @@ Scenario Outline: Verify the New Order page of Buyer panel
              |202110270051   ||buyerautomated3@gmail.com  | |!123456Zm   | |velumasala2020  |
              
          
-   @Smoke
-   Scenario Outline: Verify the New Order outstanding options page of Buyer panel   
-
-         Given User is on Login Page
-         When User enter exact username"<username>"
-         And User enter exact password"<password>"
-         And User is click login button  
-         And User Clicks Orders in the side navigation menubar
-         And User Clicks New order dropdown value
-         And User Clicks New order in the dropdown value
-         Then User click on  in the supplier page "<outletname>"
-         Then User click on ok button of pop message
-         And User Clicks Orders in the side navigation menubar
-         And User Clicks New order dropdown value
-         And User Clicks New order in the dropdown value
-         Then User click on in the supplier page "<outletnameone>"
-         Then User click on ok button of pop message
-         Then User click on close icon first pop message
-         And User Clicks Orders in the side navigation menubar
-         And User Clicks New order dropdown value
-         And User Clicks New order in the dropdown value
-         Then User click on in the supplier page "<outletnametwo>"
-         Then User click on ok button of pop message
-         Then User click on close icon first pop message
-           
-         
-           @dev
-           Examples:
-             |username                         |  |password    |  |outletname      | |outletnameone   |   |outletnametwo      |
-             |velumanieswaran2020@gmail.com    |  |!123456Zm   |  |velumasalathree | |velumasalasix   |   |velumasalatwofifty |
-    
-    
-            @devSecond 
-           Examples:
-             |username                     |  |password    |  |outletname      | |outletnameone   |   |outletnametwo      |
-             |buyerautomated3@gmail.com    |  |!123456Zm   |  |velumasalathree | |velumasalasix   |   |velumasalatwofifty |
-    
-    
-          
+   
 
  
+
 

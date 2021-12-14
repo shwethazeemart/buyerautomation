@@ -48,8 +48,6 @@ public class Buyerinvoicelisenpage {
 
 
 	@FindBy(xpath = "(//img[@src='../assets/zmcore/img/close-blue@22.png'])[2]")
-
-
 	private static WebElement Buyerinvoicelisenpage_payonlinecloseicon;
 	///html/body/ngb-modal-window/div/div/app-pay-invoice-online/div[1]/span/img
 	
@@ -104,7 +102,7 @@ public class Buyerinvoicelisenpage {
 	@FindBy(xpath = "//img[@src='../assets/zmcore/img/left-report-b-icon.svg']")
 	private static WebElement Buyerinvoicelisenpage_clickonreturnvoidedinvoiceicon;
 	
-	@FindBy(xpath = "//a[@class='pull-right export-mclr']")
+	@FindBy(xpath = "//span[@class='filter']//img[1]")
 	private static WebElement Buyerinvoicelisenpage_clickonfiltericon; 
 	
 	@FindBy(xpath = "//input[@formcontrolname='invoiceNumber']")
@@ -161,6 +159,9 @@ public class Buyerinvoicelisenpage {
 	
 	@FindBy(xpath = "//div[text()=' Export status  ']")
 	private static WebElement Buyerinvoicelisenpage_Exportstatusinvoicepage;
+	
+	@FindBy(xpath = "//a[text()='Reset']")
+	private static WebElement Buyerinvoicelisenpage_ResetButton;
 	
 	
 	
@@ -369,7 +370,8 @@ public class Buyerinvoicelisenpage {
 			
 	}
 
-	public void clickonfiltericon() {
+	public void clickonfiltericon() throws InterruptedException {
+		Thread.sleep(5000);
 		Buyerinvoicelisenpage_clickonfiltericon.click();
 		try {
 			Thread.sleep(5000);
@@ -534,6 +536,17 @@ public class Buyerinvoicelisenpage {
 
 	public void ClickonExportstatusininvoicepage() {
 		Buyerinvoicelisenpage_Exportstatusinvoicepage.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}  
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver) 
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public void ResetButtonClick() {
+		Buyerinvoicelisenpage_ResetButton.click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {

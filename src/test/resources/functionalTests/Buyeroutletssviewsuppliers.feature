@@ -24,16 +24,16 @@ Scenario Outline: Verify the Outlets view suppliers page of Buyer panel
           Then User click on ok button
           And User click on options icon
           Then User click on Download marketlist
-          
+           
     @dev       
     Examples: 
       | username                          | | password   ||name      |
-      | velumanieswaran2020@gmail.com     | |!123456Zm   ||classyyy    |            
+      | velumanieswaran2020@gmail.com     | |!123456Zm   ||100pipers   |            
       
    @devSecond        
     Examples: 
       | username                      | | password   ||name      |
-      | buyerautomated3@gmail.com     | |!123456Zm   ||classyyy    |            
+      | buyerautomated3@gmail.com     | |!123456Zm   ||100pipers   |            
     
       
   
