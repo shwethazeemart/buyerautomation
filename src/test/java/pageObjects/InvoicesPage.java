@@ -118,7 +118,7 @@ public class InvoicesPage {
 
 	public static void Clicks_on_upload_the_image() throws InterruptedException {
 		WebElement uploadBox=driver.findElement(By.xpath("//input[@type='file']"));
-		uploadBox.sendKeys("../../src/images/MicrosoftTeams-image.png");
+		uploadBox.sendKeys("E:\\Zeemart All\\Feature file\\download (3).jpg");
 		Thread.sleep(5000);
 		try {
 			Thread.sleep(5000);
@@ -131,7 +131,8 @@ public class InvoicesPage {
 }
 
 
-
+//../../src/images/MicrosoftTeams-image.png
+//E:\\Zeemart All\\Chromedriver91\\Download5mb.jpg
 
 
 

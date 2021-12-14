@@ -56,7 +56,7 @@ public class Buyerdashboardlisen {
 
 	@Then("User click on New order close icon")
 	public void user_click_on_New_order_close_icon() {
-	    //Buyerdashboardlisenpage.ClickonNewordercloseicon();
+	    Buyerdashboardlisenpage.ClickonNewordercloseicon();
 	}
 
 	@Then("User click on upload invoice icon")
@@ -69,13 +69,7 @@ public class Buyerdashboardlisen {
 	    Buyerdashboardlisenpage.Clickonuploadinvoicecloseicon();
 	}
 
-	@Then("User select dropdown spending overview list of {string}")
-	public void user_select_dropdown_spending_overview_list_of(String outletname) {
-		WebElement velumasala2020 = Buyerdashboardlisenpage.getDropDownElementvelumasala();
-		Select select=new Select(velumasala2020);
-		select.selectByIndex(3);
-	}
-
+	
 	
 	@Then("User click on YTD icon")
 	public void user_click_on_YTD_icon() throws InterruptedException {
@@ -102,12 +96,7 @@ public class Buyerdashboardlisen {
 	    Buyerdashboardlisenpage.Clickondashboardsidenavigationmenubar();
 	}
 
-	@Then("User select dropdown top expenditures list of {string}")
-	public void user_select_dropdown_top_expenditures_list_of(String outletname) {
-		WebElement velumasala2020 = Buyerdashboardlisenpage.getDropDownElementvelumasalatwentytwenty();
-		Select select=new Select(velumasala2020);
-		select.selectByIndex(3);
-	}
+	
 
 	
 	@Then("User click on SKU icon")
@@ -121,7 +110,7 @@ public class Buyerdashboardlisen {
 	}
 
 	@Then("User click on the supplier")
-	public void user_click_on_the_supplier() {
+	public void user_click_on_the_supplier() throws InterruptedException {
 	    Buyerdashboardlisenpage.Clickonsuppliericon();
 	}
 
@@ -212,17 +201,11 @@ public class Buyerdashboardlisen {
 	    Buyerdashboardlisenpage.Clickoncloseiconinorderpage();
 	}
 
-
-	@Then("User click on {string}")
-	public void user_click_on(String outletname) {
-		 Buyerdashboardlisenpage.clickonOutletOne();
+	@Then("User click on outletname in dashboard page")
+	public void user_click_on_outletname_in_dashboard_page() {
+		Buyerdashboardlisenpage.OutletnameClick();
 	}
-
- 
-	//@Then("User click on {string}")
-	//public void user_click_on(String outletname) {
-		 //Buyerdashboardlisenpage.Click_velumasala(outletname);
-
+	
 
 	
 	
@@ -250,19 +233,21 @@ public class Buyerdashboardlisen {
  	
 	@Then("User click on supplier tab icon")
 	public void user_click_on_supplier_tab_icon() {
-		Buyerdashboardlisenpage.ClickonSuppliericon(); 
+		Buyerdashboardlisenpage.Clickonsuppliertabicon(); 
 		}
 
-	@Then("User select dropdown spending overview list {string}")
-	public void user_select_dropdown_spending_overview_list(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	@Then("User select dropdown spending overview list outletname")
+	public void user_select_dropdown_spending_overview_list_outletname() {
+		WebElement velumasala2020 = Buyerdashboardlisenpage.getDropDownElementvelumasala();
+		Select select=new Select(velumasala2020);
+		select.selectByIndex(3);
 	}
 
-	@Then("User select dropdown top expenditures list {string}")
-	public void user_select_dropdown_top_expenditures_list(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	@Then("User select dropdown top expenditures list outletname")
+	public void user_select_dropdown_top_expenditures_list_outletname() {
+		WebElement velumasala2020 = Buyerdashboardlisenpage.getDropDownElementvelumasalatwentytwenty();
+		Select select=new Select(velumasala2020);
+		select.selectByIndex(3);
 	}
 
 }

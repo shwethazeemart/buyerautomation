@@ -80,7 +80,7 @@ public class Buyerdashboardlisenpage {
 	@FindBy(xpath = "(//a[@role='tab'])[3]")
 	private static WebElement Buyerdashboardlisenpage_Categoryicon;
 	
-	@FindBy(xpath = "(//a[@role='tab'])[1]")
+	@FindBy(xpath = "(//div[contains(@class,'d-flex justify-content-between')]/following-sibling::div)[3]")
 	private static WebElement Buyerdashboardlisenpage_Suppliericon;
 	
 	@FindBy(xpath = "//label[text()=' This month ']")
@@ -95,7 +95,7 @@ public class Buyerdashboardlisenpage {
 	@FindBy(xpath = "//label[text()=' Last month ']")
 	private static WebElement Buyerdashboardlisenpage_Lastmonthicon;
 	
-	@FindBy(xpath = "(//div[@class='supplier_tab_inner_info']/following-sibling::a)[1]")
+	@FindBy(xpath = "(//a[@class='all_spending_suppliers'])[2]")
 	private static WebElement Buyerdashboardlisenpage_Viewspendingbysupplier; 	
 	
 	@FindBy(xpath = "//h3[text()='Sakthimasala100 ']")
@@ -145,10 +145,15 @@ public class Buyerdashboardlisenpage {
 	@FindBy(xpath = "//button[text()='Apply']")
 	private static WebElement Buyerdashboardlisenpage_Applybutton;
 	
-	@FindBy(xpath = "//a[@class='filter-reset ml-3']")
+	@FindBy(xpath = "//a[text()='Reset']")
 	private static WebElement Buyerdashboardlisenpage_Resetbutton;
 	
 	
+	@FindBy(xpath = "(//div[@class='popup_outlet_item cursor'])[3]")
+	private static WebElement Buyerdashboardlisenpage_Outletname;
+	
+	@FindBy(xpath = "(//a[@class='nav-link active'])[2]")
+	private static WebElement Buyerdashboardlisenpage_SupplierTabIcon;
 
 
 
@@ -311,7 +316,7 @@ public class Buyerdashboardlisenpage {
 
 	}
 
-	public static void ClickonSuppliericon() {
+	/*public static void ClickonSuppliericon() {
 		Buyerdashboardlisenpage_Suppliericon.click();
 		try { 
 			Thread.sleep(5000);
@@ -320,7 +325,7 @@ public class Buyerdashboardlisenpage {
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
 
-	}
+	}*/
 
 	public static void Clickonthismonthicon() {
 		Buyerdashboardlisenpage_Thismonthicon.click();
@@ -368,6 +373,8 @@ public class Buyerdashboardlisenpage {
 	}
 
 	public static void Clickonviewspendingbusupplier() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0, 1000);");
 		Buyerdashboardlisenpage_Viewspendingbysupplier.click();
 		try { 
 			Thread.sleep(5000);
@@ -528,8 +535,8 @@ public class Buyerdashboardlisenpage {
 	}
 
 	public static void Clickonuploadimage() throws InterruptedException {
-		WebElement uploadBox=driver.findElement(By.xpath("//input[@id='file']"));
-		uploadBox.sendKeys("E:\\Download");
+		WebElement uploadBox=driver.findElement(By.xpath("//input[@type='file']"));
+		uploadBox.sendKeys("E:\\Zeemart All\\Feature file\\download (3).jpg");
 		Thread.sleep(5000);
 		try {
 			Thread.sleep(5000);
@@ -590,8 +597,39 @@ public class Buyerdashboardlisenpage {
 
 	}
 
-	public static void Clickonsuppliericon() {
-		// TODO Auto-generated method stub
+	public static void Clickonsuppliericon() throws InterruptedException {
+		Thread.sleep(5000);
+		Buyerdashboardlisenpage_Suppliericon.click();
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+
+		
+	}
+
+	public static void OutletnameClick() {
+		Buyerdashboardlisenpage_Outletname.click();
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+
+		
+	}
+
+	public static void Clickonsuppliertabicon() {
+		Buyerdashboardlisenpage_SupplierTabIcon.click();
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
 		
 	}
 

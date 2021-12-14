@@ -7,7 +7,7 @@ Scenario Outline: Verify the Edit Users page of Buyer panel
           And User enter exact password"<password>"
           And User is click login button 
           And User Clicks on Users in the side navigation menubar 
-          Then User click on user "<username>"
+          Then User click on user "<usernameone>"
           And User clear the job title
           Then User enter the job title"<title>"
           And User clear the Email address
@@ -18,7 +18,7 @@ Scenario Outline: Verify the Edit Users page of Buyer panel
     
     @dev      
     Examples:
-         |username                         |  |password    ||title      ||Email                            ||mobilephone  | |username     |
+         |username                         |  |password    ||title      ||Email                            ||mobilephone  | |usernameone |
          |velumanieswaran2020@gmail.com    |  |!123456Zm   ||AtoZ test  ||velumanieswaran2020@gmail.com    ||+65122456789 | |velumanitwo  | 
          
      @devSecond    

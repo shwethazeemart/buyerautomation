@@ -5,7 +5,7 @@ Scenario Outline: Verify the Invoices upload page of Buyer panel
          When User enter exact username"<username>"
          And User enter exact password"<password>"
          And User is click login button 
-         Then User Clicks on Invoices in the side navigation menubar
+         Then User clicks on Invoices in the side navigation menubar
          And User is Clicks in Uploads 
          Then User is Clicks in Upload invoice
          And User is Clicks on select outlet

@@ -29,16 +29,16 @@ Scenario Outline: Verify the Dashboard lisen page of Buyer panel
           Then User enter sku in search box"<name>"
           Then User click on close icon in order page
           And User click on upload invoice icon
-          Then User click on "<outletname>"
+          Then User click on outletname in dashboard page
           And User click on upload image in drag and dorp filed
           Then User click on Done button in drag and drop filed
-          And User select dropdown spending overview list "<outletname>"
+          And User select dropdown spending overview list outletname
           Then User click on YTD icon
           And User click on Last year icon
           Then User click on Past twelve week icon
           Then User click on view spending report icon
           Then User click on Dashboard side navigation menubar
-          And User select dropdown top expenditures list "<outletname>"
+          And User select dropdown top expenditures list outletname
           Then User click on SKU icon
           Then User click on category icon 
           And User click on supplier tab icon
@@ -50,15 +50,16 @@ Scenario Outline: Verify the Dashboard lisen page of Buyer panel
          
          @dev 
          Examples:
-         |username                            |  |password    ||name     | |outletname  |
-         |velumanieswaran2020@gmail.com       |  |!123456Zm   ||100pipers| |velu masala |
+         |username                            |  |password    ||name     | 
+         |velumanieswaran2020@gmail.com       |  |!123456Zm   ||100pipers| 
          
         @naren 
          Examples:
-         |username                            |  |password    ||name     | |outletname  |
-         |buyerautomated3@gmail.com           |  |!123456Zm   ||100pipers| |velu masala |
+         |username                            |  |password    ||name     | 
+         |buyerautomated3@gmail.com           |  |!123456Zm   ||100pipers|
          
         
+       
        
           
           
@@ -540,6 +541,8 @@ Scenario Outline: Verify the Reports spending per tag page of Buyer panel
       
   
       
+
+
 Scenario Outline: Verify the New Order page of Buyer panel
          Given User is on Login Page
          When User enter exact username"<username>"
@@ -548,7 +551,7 @@ Scenario Outline: Verify the New Order page of Buyer panel
          And User Clicks Orders in the side navigation menubar
          And User Clicks New order dropdown value
          And User Clicks New order in the dropdown value
-         Then User click on in the supplier page "<outletname>"
+         Then User click on the supplier
          And User Clicks in Add to order of SKU
          Then User Clicks increase the order button
          And User Clicks in Add to order of SKU
@@ -560,7 +563,7 @@ Scenario Outline: Verify the New Order page of Buyer panel
          And User Clicks in Add to order of SKU
          Then User Clicks increase the order button
          And  User Clicks Review order
-         And User Clicks Place Order
+         And User Clicks Place Order 
          And User clicks the Back to Orders button 
          Then User click the newly created order
          Then User Copy the particular order number in newly created 
@@ -572,8 +575,8 @@ Scenario Outline: Verify the New Order page of Buyer panel
           
         @dev 
         Examples:
-             |Order ID       ||username                       | |password    | |outletname      |
-             |202110270051   ||velumanieswaran2020@gmail.com  | |!123456Zm   | |velumasala2020  |
+             |Order ID       ||username                       | |password    |
+             |202110270051   ||velumanieswaran2020@gmail.com  | |!123456Zm   | 
           
           
         @naren  
@@ -582,6 +585,7 @@ Scenario Outline: Verify the New Order page of Buyer panel
              |202110270051   ||buyerautomated3@gmail.com  | |!123456Zm   | |velumasala2020  |
              
          
+         
 
 Scenario Outline: Verify the New Order outstanding options page of Buyer panel   
 
@@ -589,36 +593,37 @@ Scenario Outline: Verify the New Order outstanding options page of Buyer panel
          When User enter exact username"<username>"
          And User enter exact password"<password>"
          And User is click login button  
-         And User Clicks Orders in the side navigation menubar
+         And User Clicks Orders in the side navigation menubar 
          And User Clicks New order dropdown value
          And User Clicks New order in the dropdown value
-         Then User click on  in the supplier page "<outletname>"
+         Then User click on  in the supplier page outletname
          Then User click on ok button of pop message
          And User Clicks Orders in the side navigation menubar
          And User Clicks New order dropdown value
          And User Clicks New order in the dropdown value
-         Then User click on in the supplier page "<outletnameone>"
-         Then User click on ok button of pop message
+         Then User click on in the supplier page outletnameone
+         Then User click on ok button of pop message outletone
          Then User click on close icon first pop message
          And User Clicks Orders in the side navigation menubar
          And User Clicks New order dropdown value
          And User Clicks New order in the dropdown value
-         Then User click on in the supplier page "<outletnametwo>"
-         Then User click on ok button of pop message
+         Then User click on in the supplier page outletnametwo
+         Then User click on ok button of pop message outletone
          Then User click on close icon first pop message
            
          
            @dev
            Examples:
-             |username                         |  |password    |  |outletname      | |outletnameone   |   |outletnametwo      |
-             |velumanieswaran2020@gmail.com    |  |!123456Zm   |  |velumasalathree | |velumasalasix   |   |velumasalatwofifty |
+             |username                         |  |password    | 
+             |velumanieswaran2020@gmail.com    |  |!123456Zm   |  
     
     
+
   @naren
   Examples:
-             |username                     |  |password    |  |outletname      | |outletnameone   |   |outletnametwo      |
-             |buyerautomated3@gmail.com    |  |!123456Zm   |  |velumasalathree | |velumasalasix   |   |velumasalatwofifty |
-             
+             |username                     |  |password    | 
+             |buyerautomated3@gmail.com    |  |!123456Zm   | 
+
 Scenario Outline: Verify the New recurring orders page of Buyer panel  
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -652,15 +657,15 @@ Scenario Outline: Verify the New recurring orders page of Buyer panel
           @dev  
           Examples:
              |username                                   |  |password    |
-             |velumanieswaran2020@gmail.com              |  |!123456Zm   |     
+             |velumanieswaran2020@gmail.com              |  |!123456Zm   | 
              
-          @naren 
+          @devSecond 
           Examples:
              |username                               |  |password    |
-             |buyerautomated3@gmail.com              |  |!123456Zm   |     
+             |buyerautomated3@gmail.com              |  |!123456Zm   |       
              
              
- Scenario Outline: Verify the New Weekly Order page of Buyer panel
+Scenario Outline: Verify the New Weekly Order page of Buyer panel
          Given User is on Login Page
          When User enter exact username"<username>"
          And User enter exact password"<password>"
@@ -677,14 +682,15 @@ Scenario Outline: Verify the New recurring orders page of Buyer panel
     
          @dev
          Examples:
-           |username                     |  |password    |
-           |velumanieswaran2020@gmail.com    |  |!123456Zm   |  
+           |username                         |  |password    |
+           |velumanieswaran2020@gmail.com    |  |!123456Zm   |     
            
-         @naren 
-          Examples:
-             |username                               |  |password    |
-             |buyerautomated3@gmail.com              |  |!123456Zm   |    
-             
+          @devSecond 
+         Examples:
+           |username                     |  |password    |
+           |buyerautomated3@gmail.com    |  |!123456Zm   |     
+           
+           
 Scenario Outline: Verify the Orders lisen page of Buyer panel
          Given User is on Login Page
          When User enter exact username"<username>"
@@ -804,7 +810,6 @@ Scenario Outline: Verify the Orders lisen page of Buyer panel
     Then User click on Apply button
     And User click on filter icon
     Then User click on Reset button
-    And User click on outside option
     And User click on filter icon
     Then User click on supplier
     And User click on select all
@@ -837,17 +842,19 @@ Scenario Outline: Verify the Orders lisen page of Buyer panel
     Then User click on search icom in second time
     
     
-    
     @dev
+  
     Examples: 
       | username                         || loginPassword|
       | velumanieswaran2020@gmail.com    || !123456Zm    | 
       
-    @naren
+      
+  
+    @devSecond 
     Examples: 
       | username                         || loginPassword|
-      | buyerautomated1@gmail.com        || !123456Zm    | 
-      
+      | buyerautomated3@gmail.com        || !123456Zm    | 
+
 Scenario Outline: Verify the Invoices upload page of Buyer panel
          Given User is on Login Page
          When User enter exact username"<username>"
@@ -1089,13 +1096,14 @@ Scenario Outline: Verify the Outlets page of Buyer panel
     
     @dev       
     Examples: 
-      | username                      | | password  |
-      | buyerautomated3@gmail.com     | |!123456Zm   |
+      | username                          | | password  |
+      | velumanieswaran2020@gmail.com     | |!123456Zm   |
       
-       @naren      
+      @devSecond       
     Examples: 
       | username                      | | password  |
-      | buyerautomated1@gmail.com     | |!123456Zm   |
+      | buyerautomated3@gmail.com     | |!123456Zm   |
+
 
 
 Scenario Outline: Verify the Outlets listing page of Buyer panel 
@@ -1106,7 +1114,8 @@ Scenario Outline: Verify the Outlets listing page of Buyer panel
           Then User Clicks on outlets in the side navigation menubar
           Then User click on checkbox 
           Then User click on make inactive
-          Then User Enter in Disable text box "<confirm>"
+          Then User click on disable textbox
+          Then User enter the confirmation in textbox"<confirm>"
           Then User click on yes make inactive button
           Then User click on checkbox
           Then User click on make active icon
@@ -1121,17 +1130,17 @@ Scenario Outline: Verify the Outlets listing page of Buyer panel
           Then User click on Actions dropdown 
           Then User click on view suppliers 
           Then User click on back button of outlets icon
-          Then User enter the outlet name in text box "<outletname>"
+          Then User enter the outlet name in text box"<outletname>"
           
     @dev       
     Examples:  
-      | username                      | | password   ||confirm||outletname     |
-      | buyerautomated3@gmail.com     | |!123456Zm   ||DISABLE||velu masala2020|
+      | username                          | | password   ||confirm||outletname     |
+      | velumanieswaran2020@gmail.com     | |!123456Zm   ||disable||velu masala2020|
       
-       @naren      
+     @devSecond       
     Examples:  
       | username                      | | password   ||confirm||outletname     |
-      | buyerautomated1@gmail.com     | |!123456Zm   ||DISABLE||velu masala2020|
+      | buyerautomated3@gmail.com     | |!123456Zm   ||disable||velu masala2020|
       
       
 Scenario Outline: Verify the Outlets manage details page of Buyer panel 
@@ -1150,16 +1159,16 @@ Scenario Outline: Verify the Outlets manage details page of Buyer panel
           Then User click on save button
     @dev       
     Examples: 
-      | username                      | | password   ||Email                      |
-      |buyerautomated3@gmail.com      | |!123456Zm   ||lingeshsabari2009@gmail.com|
+      | username                          | | password   ||Email                      |
+      |velumanieswaran2020@gmail.com      | |!123456Zm   ||lingeshsabari2009@gmail.com|
       
-    @naren       
+   @devSecond       
     Examples: 
       | username                      | | password   ||Email                      |
       |buyerautomated3@gmail.com      | |!123456Zm   ||lingeshsabari2009@gmail.com|
       
       
-Scenario Outline: Verify the Outlets settings page of Buyer panel 
+ Scenario Outline: Verify the Outlets settings page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>" 
           And User enter exact password"<password>"
@@ -1182,11 +1191,17 @@ Scenario Outline: Verify the Outlets settings page of Buyer panel
           Then User clear outlet email
           And User enter the outletemail"<outletemail>"
           Then User click on save button finally
-           
+          
+    @dev       
     Examples: 
       | username                      | | password   ||Name       | |WeeklyEmail          ||Email                      ||outletemail                  |
       | velumanieswaran2020@gmail.com | |!123456Zm   ||buyer      | |velumani@zeemart.asia||lingeshsabari2009@gmail.com||velumanieswaran2020@gmail.com| 
       
+      
+     @devSecond      
+    Examples: 
+      | username                      | | password   ||Name       | |WeeklyEmail          ||Email                      ||outletemail                  |
+      | buyerautomated3@gmail.com     | |!123456Zm   ||buyer      | |velumani@zeemart.asia||lingeshsabari2009@gmail.com||velumanieswaran2020@gmail.com| 
       
       
 Scenario Outline: Verify the Outlets view suppliers page of Buyer panel 
@@ -1213,17 +1228,17 @@ Scenario Outline: Verify the Outlets view suppliers page of Buyer panel
           Then User click on ok button
           And User click on options icon
           Then User click on Download marketlist
-          
+           
     @dev       
     Examples: 
       | username                          | | password   ||name      |
-      | velumanieswaran2020@gmail.com     | |!123456Zm   ||classamit    |            
+      | velumanieswaran2020@gmail.com     | |!123456Zm   ||100pipers   |            
       
-    @naren       
+   @devSecond        
     Examples: 
       | username                      | | password   ||name      |
-      | buyerautomated1@gmail.com     | |!123456Zm   ||classyyy    |   
-      
+      | buyerautomated3@gmail.com     | |!123456Zm   ||100pipers   |            
+    
       
 Scenario Outline: Verify the Users Listing page of Buyer panel 
   
@@ -1335,7 +1350,7 @@ Scenario Outline: Verify the user name page of Buyer panel
              |buyerautomated3@gmail.com    |  |!123456Zm   |       
              
              
- Scenario Outline: Verify the News page of Buyer panel 
+Scenario Outline: Verify the News page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
           And User enter exact password"<password>"
@@ -1351,13 +1366,13 @@ Scenario Outline: Verify the user name page of Buyer panel
         @dev
         Examples:
          |username                            |  |password    |
-         |buyerautomated3@gmail.com           |  |!123456Zm   | 
+         |velumanieswaran2020@gmail.com       |  |!123456Zm   |
          
-            @naren
+           @devSecond 
         Examples:
          |username                            |  |password    |
-         |buyerautomated1@gmail.com           |  |!123456Zm   |
-                                                                                           
+         |buyerautomated3@gmail.com           |  |!123456Zm   |
+                                   
     
 
          
