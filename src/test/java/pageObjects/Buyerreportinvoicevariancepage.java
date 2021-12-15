@@ -118,17 +118,7 @@ public class Buyerreportinvoicevariancepage {
 	}
 	
 	
-	public static void Selectvelumasala() throws InterruptedException {
-		Buyerreportinvoicevariancepage_selectvelumasala.click();
-		Thread.sleep(5000);
-		try { 
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-		}
-		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
-				.executeScript("return document.readyState").equals("complete"));
-
-	}
+	
 		
 	public static void Selectsupplier() throws InterruptedException {
 		Thread.sleep(5000);
@@ -219,9 +209,20 @@ public class Buyerreportinvoicevariancepage {
 					.executeScript("return document.readyState").equals("complete"));
 			
 		}
+		public static void Selectvelumasala() throws InterruptedException {
+			Buyerreportinvoicevariancepage_selectvelumasala.click();
+			Thread.sleep(5000);
+			try { 
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+			}
+			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+					.executeScript("return document.readyState").equals("complete"));
+
+		}
 		
 		public static WebElement getDropDownElementoutletname() {
-			return Buyerreportinvoicevariancepage_selectoutlet;
+			return Buyerreportinvoicevariancepage_selectvelumasala;
 
 		}
 
