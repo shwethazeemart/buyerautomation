@@ -144,8 +144,8 @@ public class Buyerinvoicelisen {
 
 
 	@Then("User click on filter icon")
-	public void user_click_on_filter_icon() {
-		buyerinvoicelisen.clickonfiltericon(); 
+	public void user_click_on_filter_icon() throws InterruptedException {
+		buyerinvoicelisen.clickonfiltericon();  
 	}
 
 	@Then("User clear invoice number in first textbox")
@@ -222,7 +222,7 @@ public class Buyerinvoicelisen {
 
 	@Then("User click on outside option")
 	public void user_click_on_outside_option() {
-		buyerinvoicelisen.Clickonoutsideoption();
+		//buyerinvoicelisen.Clickonoutsideoption();
 	}
 
 	@Then("User click on supplier")
@@ -248,8 +248,7 @@ public class Buyerinvoicelisen {
 
 	@Then("User click on Reset button in order page")
 	public void user_click_on_Reset_button_in_order_page() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		buyerinvoicelisen.ResetButtonClick();
 	}
 
 

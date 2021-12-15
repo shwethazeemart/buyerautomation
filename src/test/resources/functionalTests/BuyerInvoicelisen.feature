@@ -28,7 +28,6 @@ Scenario Outline: Buyer Invoice lisen page verify the all field
     Then User click on Apply button
     And User click on filter icon
     Then User click on Reset button
-    And User click on outside option
     And User click on filter icon
     Then User click on supplier
     And User click on select all
@@ -61,12 +60,14 @@ Scenario Outline: Buyer Invoice lisen page verify the all field
     Then User click on search icom in second time
     
     
-    
     @dev
+  
     Examples: 
       | username                         || loginPassword|
       | velumanieswaran2020@gmail.com    || !123456Zm    | 
       
+      
+  
     @devSecond 
     Examples: 
       | username                         || loginPassword|

@@ -301,8 +301,8 @@ public class OrderspageSteps<txtBoxContent> {
 	}
 
 	@Then("User click on close icon of ok button page")
-	public void user_click_on_close_icon_of_ok_button_page() {
-	    //OrdersPage.Clickoncloseiconofokbutton();
+	public void user_click_on_close_icon_of_ok_button_page() throws InterruptedException {
+	    OrdersPage.Clickoncloseiconofokbutton();
 	}
 
 	
@@ -315,7 +315,7 @@ public class OrderspageSteps<txtBoxContent> {
 	
 	@Then("User click on velu masalathree in the supplier page")
 	public void user_click_on_velu_masalathree_in_the_supplier_page() throws InterruptedException {
-	   OrdersPage.Clickonvelumasalathree();
+	   //OrdersPage.Clickonvelumasalathree();
 	}
 
 	@Then("User click on ok button of pop message")
@@ -330,20 +330,45 @@ public class OrderspageSteps<txtBoxContent> {
 
 	@Then("User click on in the supplier page")
 	public void user_click_on_in_the_supplier_page() throws InterruptedException {
-		  OrdersPage.Clickvelumasalasix();
+		 // OrdersPage.Clickvelumasalasix();
 	}
 
 	@Then("User click on velu masalatwofifty in the supplier page")
 	public void user_click_on_velu_masalatwofifty_in_the_supplier_page() throws InterruptedException {
-		OrdersPage.Clickvelumasalatwofifty();
+		//OrdersPage.Clickvelumasalatwofifty();
 	}
 
 
 
 
+	@Then("User click on  in the supplier page outletname")
+	public void user_click_on_in_the_supplier_page_outletname() throws InterruptedException {
+		OrdersPage.Clickonvelumasalathree();
+	}
 
+	@Then("User click on in the supplier page outletnameone")
+	public void user_click_on_in_the_supplier_page_outletnameone() throws InterruptedException {
+		OrdersPage.Clickvelumasalasix();
 
+	}
 
+	@Then("User click on in the supplier page outletnametwo")
+	public void user_click_on_in_the_supplier_page_outletnametwo() throws InterruptedException {
+		OrdersPage.Clickvelumasalatwofifty();
+	}
+	
+	
+
+	@Then("User click on ok button of pop message outletone")
+	public void user_click_on_ok_button_of_pop_message_outletone() throws InterruptedException {
+		OrdersPage.OkbuttonOutletone();
+	}
+
+	/*@Then("User click on ok button of pop message outlettwo")
+	public void user_click_on_ok_button_of_pop_message_outlettwo() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}*/
 
 
 

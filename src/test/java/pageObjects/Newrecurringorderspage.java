@@ -145,8 +145,8 @@ public class Newrecurringorderspage {
 	}
 	
 	public static void click_Velumasala2020() throws InterruptedException {
-		JavascriptExecutor jse = (JavascriptExecutor)driver;
-		jse.executeScript("window.scrollBy(0,250)");
+		//JavascriptExecutor jse = (JavascriptExecutor)driver;
+		//jse.executeScript("window.scrollBy(0,250)");
 		Thread.sleep(5000);
 		Newrecurringorderspage_Velumasala2020.click();
 		Thread.sleep(5000);

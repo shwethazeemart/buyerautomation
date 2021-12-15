@@ -23,22 +23,22 @@ Scenario Outline: Verify the Dashboard lisen page of Buyer panel
           And User click on Reset button in order page
           Then User click on outside of order page
           And User click on filter in order page
-          Then User click on cretifications
+          Then User click on cretifications 
           Then User click on outside of order page
           And User click on Search box SKU name
           Then User enter sku in search box"<name>"
           Then User click on close icon in order page
           And User click on upload invoice icon
-          Then User click on "<outletname>"
+          Then User click on outletname in dashboard page
           And User click on upload image in drag and dorp filed
           Then User click on Done button in drag and drop filed
-          And User select dropdown spending overview list "<outletname>"
+          And User select dropdown spending overview list outletname
           Then User click on YTD icon
           And User click on Last year icon
           Then User click on Past twelve week icon
           Then User click on view spending report icon
           Then User click on Dashboard side navigation menubar
-          And User select dropdown top expenditures list "<outletname>"
+          And User select dropdown top expenditures list outletname
           Then User click on SKU icon
           Then User click on category icon 
           And User click on supplier tab icon
@@ -50,15 +50,16 @@ Scenario Outline: Verify the Dashboard lisen page of Buyer panel
          
          @dev 
          Examples:
-         |username                            |  |password    ||name     | |outletname  |
-         |velumanieswaran2020@gmail.com       |  |!123456Zm   ||100pipers| |velu masala |
+         |username                            |  |password    ||name     | 
+         |velumanieswaran2020@gmail.com       |  |!123456Zm   ||100pipers| 
          
-       @devSecond  
+        @naren 
          Examples:
-         |username                            |  |password    ||name     | |outletname  |
-         |buyerautomated3@gmail.com           |  |!123456Zm   ||100pipers| |velu masala |
+         |username                            |  |password    ||name     | 
+         |buyerautomated3@gmail.com           |  |!123456Zm   ||100pipers|
          
         
+       
        
           
           

@@ -67,6 +67,9 @@ public class Buyeroutletslistingpage {
 	
 	@FindBy(xpath = "//input[contains(@type,'text')] ")
 	private static WebElement Buyeroutletslistingpage_Entertheoutletname;
+	
+	@FindBy(xpath = "//span[text()='This action cannot be undone']/following::input")
+	private static WebElement Buyeroutletslistingpage_DisableTextbox;
 	 
 	
 	
@@ -92,16 +95,7 @@ public class Buyeroutletslistingpage {
 				.executeScript("return document.readyState").equals("complete"));
 		
 	}
-	public static void EntertheDisableintextbox(String DISABLE) {
-		Buyeroutletslistingpage_EntertheDisableintextbox.sendKeys(DISABLE);
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-		} 
-		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
-				.executeScript("return document.readyState").equals("complete"));
-		
-	}
+	
 	public static void Clickyesmakeinactivebutton() {
 		Buyeroutletslistingpage_Makeinactivebutton.click();
 		try {
@@ -183,6 +177,29 @@ public class Buyeroutletslistingpage {
 		
 		
 	}
+	public static void DisableTextboxClick() {
+		Buyeroutletslistingpage_DisableTextbox.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+		
+		
+	}
+	public static void ConfirmationEnter(String disable) {
+		Buyeroutletslistingpage_EntertheDisableintextbox.sendKeys(disable);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+	
 		
 	
 	
