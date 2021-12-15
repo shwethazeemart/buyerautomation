@@ -24,7 +24,7 @@ Scenario Outline: Verify the Reports invoice variance Category page of Buyer pan
           Then User click on apply in custom range
           Then User select date from calendar
           Then User click on YTD from calendar 
-          Then User select from dropdown value "<outletname>"
+          Then User select from dropdown value
           Then User click on filter in invoice variance
           And User select supplier in dropdown list
           Then User select match status in dropdown list
@@ -36,8 +36,8 @@ Scenario Outline: Verify the Reports invoice variance Category page of Buyer pan
           
      @dev     
      Examples: 
-      | username                      | | password   ||invoice     ||outletname    |
-      |velumanieswaran2020@gmail.com  | |!123456Zm   ||vel-1234567 ||velumasala2020|
+      | username                      | | password   ||invoice     |
+      |velumanieswaran2020@gmail.com  | |!123456Zm   ||vel-1234567 |
       
      @devSecond 
       Examples: 

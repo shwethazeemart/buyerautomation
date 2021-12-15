@@ -70,10 +70,10 @@ public class Buyerreportinvoicevariance {
 	}
 
 
-	@Then("User select from dropdown value {string}")
-	public void user_select_from_dropdown_value(String outletname) {
-		WebElement velumasala2020 = Buyerreportinvoicevariancepage.getDropDownElementoutletname();
-		Select select=new Select(velumasala2020);
+	@Then("User select from dropdown value")
+	public void user_select_from_dropdown_value() {
+		WebElement Outletdropdown = Buyerreportinvoicevariancepage.getDropDownElementoutletname();
+		Select select=new Select(Outletdropdown);
 		select.selectByIndex(3); 
 	}
  
