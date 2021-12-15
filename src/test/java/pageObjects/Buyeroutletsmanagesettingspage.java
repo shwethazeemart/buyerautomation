@@ -51,7 +51,7 @@ public class Buyeroutletsmanagesettingspage {
 	private static WebElement Buyeroutletsmanagesettingspage_Selectusersearchbox;
 	
 
-	@FindBy(xpath = "//label[text()='velu eshwar-velueshwar1980@gmail.com']")
+	@FindBy(xpath = "(//input[@class='ng-star-inserted']/following-sibling::label)[2]")
 	private static WebElement Buyeroutletsmanagesettingspage_Checkboxfirst;
 	
 	//@FindBy(xpath = "(//ul[@class='button_row mt-4']//a)[1]")

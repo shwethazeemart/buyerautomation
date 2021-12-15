@@ -1,4 +1,4 @@
-Feature: Verify Buyer Dashboard lisen page and test all the page
+Feature: Verify Buyer Dashboard listing page and test all the page
 
 Scenario Outline: Verify the Dashboard lisen page of Buyer panel 
           Given User is on Login Page
@@ -14,13 +14,11 @@ Scenario Outline: Verify the Dashboard lisen page of Buyer panel
           Then User click on Tags
           And User click on selectall
           Then User click on Apply button in order page
-          And User click on Reset button in order page
           Then User click on outside of order page
           And User click on filter in order page
           And User click on categories
           And User click on selectall
           Then User click on Apply button in order page
-          And User click on Reset button in order page
           Then User click on outside of order page
           And User click on filter in order page
           Then User click on cretifications 

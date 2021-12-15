@@ -117,8 +117,7 @@ public class Buyerreportinvoicevariancepage {
 		js.executeScript("arguments[0].value='01Jan2021-31Aug2021';", DateBox);
 	}
 	
-	
-	
+
 	public static void Selectsupplier() throws InterruptedException {
 		Thread.sleep(5000);
 		Buyerreportinvoicevariancepage_selectsupplier.click();
@@ -208,7 +207,6 @@ public class Buyerreportinvoicevariancepage {
 					.executeScript("return document.readyState").equals("complete"));
 			
 		}
-		
 		public static void Selectvelumasala() throws InterruptedException {
 			Buyerreportinvoicevariancepage_selectvelumasala.click();
 			Thread.sleep(5000);
@@ -219,7 +217,8 @@ public class Buyerreportinvoicevariancepage {
 			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 					.executeScript("return document.readyState").equals("complete"));
 
-		}			
+		}
+							
 		public static WebElement getDropDownElementoutletname() {
 			return Buyerreportinvoicevariancepage_selectvelumasala;
 
