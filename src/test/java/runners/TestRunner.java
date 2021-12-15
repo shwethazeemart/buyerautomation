@@ -13,10 +13,10 @@ import io.cucumber.junit.CucumberOptions;
 
  
 
-@CucumberOptions(strict = true, features = "src/test/resources/functionalTests/BuyerNews.feature",
 
+@CucumberOptions(strict = true, features = "src/test/resources/functionalTests/Buyerreportsspendingperoutlet.feature",
 
-tags ="@dev",
+tags ="@Smoke",
  
    
 
