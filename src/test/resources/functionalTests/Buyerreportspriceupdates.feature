@@ -33,7 +33,7 @@ Scenario Outline: Verify the Reports price updates Category page of Buyer panel
           Then User click on Download button first page
           Then User click on export download button in price updates
           Then User click on Reports back button in price updates
-          Then User click on Reports back button in sku page
+         
             
      @dev 
      Examples: 
