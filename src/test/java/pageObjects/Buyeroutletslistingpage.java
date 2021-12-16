@@ -96,7 +96,8 @@ public class Buyeroutletslistingpage {
 		
 	}
 	
-	public static void Clickyesmakeinactivebutton() {
+	public static void Clickyesmakeinactivebutton() throws InterruptedException {
+		Thread.sleep(5000);
 		Buyeroutletslistingpage_Makeinactivebutton.click();
 		try {
 			Thread.sleep(5000);

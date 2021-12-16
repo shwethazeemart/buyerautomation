@@ -32,7 +32,7 @@ public class Buyeredituserlisenpage {
 	
 
 
-	@FindBy(xpath="(//div[@class='datatable-body-cell-label']//label)[5]")
+	@FindBy(xpath="(//div[@class='datatable-body-cell-label']//label)[3]")
 	private static WebElement Buyeredituserlisenpage_Checkboxofuser;
 
 
