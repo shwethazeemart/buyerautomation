@@ -11,9 +11,9 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)  
 
 
-@CucumberOptions(strict = true, features = "src/test/resources/functionalTests/BuyerOrderDeliveryFilter.feature",
+@CucumberOptions(strict = true, features = "src/test/resources/functionalTests/Buyerhuballlatestcode.feature",
 
- tags="@dev",
+ tags="@Smoke",
  
 
 glue = { "stepDefinitions" },monochrome=true,dryRun=false,
