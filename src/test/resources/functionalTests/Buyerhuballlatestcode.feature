@@ -58,10 +58,7 @@ Scenario Outline: Verify the Dashboard lisen page of Buyer panel
          
         
                
-       
-       
-          
-          
+
 
 Scenario Outline: Verify the Reports invoice variance Category page of Buyer panel 
           Given User is on Login Page
@@ -109,7 +106,7 @@ Scenario Outline: Verify the Reports invoice variance Category page of Buyer pan
       
       
       
-      
+    
  Scenario Outline: Verify the Reports price updates Category page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -127,7 +124,7 @@ Scenario Outline: Verify the Reports invoice variance Category page of Buyer pan
           And User click on This week date from calendar
           Then User select date from calendar
           Then User click on This month from calendar
-          Then User select date from calendar
+          Then User select date from calendar 
           And User click on Last year from calendar
           Then User select date from calendar
           Then User click on Custom range from calendar
@@ -143,7 +140,7 @@ Scenario Outline: Verify the Reports invoice variance Category page of Buyer pan
           Then User click on Download button first page
           Then User click on export download button in price updates
           Then User click on Reports back button in price updates
-          Then User click on Reports back button in sku page
+         
             
      @dev 
      Examples: 
@@ -202,6 +199,7 @@ Scenario Outline: Verify the Reports spending per Category page of Buyer panel
   Examples: 
       |username                          | | password   ||name     |
       |velumanieswaran2020@gmail.com     | |!123456Zm   ||Beer     | 
+      
       
   @naren       
   Examples: 
@@ -869,16 +867,17 @@ Scenario Outline: Verify the Invoices upload page of Buyer panel
          Then User is Clicks on upload the image
          And User is Clicks on Upload button
          
-    @dev
-    Examples: 
-      | username                         || loginPassword|
-      | velumanieswaran2020@gmail.com    || !123456Zm    | 
-      
-    @naren    
+      @dev     
+     Examples:
+             |username                         |  |password    |
+             |velumanieswaran2020@gmail.com    |  |!123456Zm   |
+ 
+         
+     @devSecond      
      Examples:
              |username                     |  |password    |
-             |buyerautomated3@gmail.com    |  |!123456Zm   |      
-             
+             |buyerautomated3@gmail.com    |  |!123456Zm   |
+ 
              
 Scenario Outline: Verify the Payment plans page of Buyer panel 
           Given User is on Login Page
@@ -989,7 +988,7 @@ Scenario Outline: Verify the Inventory Outlets lisen page of Buyer panel
          |username                       |  |password    ||outletname     ||outletnameone | |outletnametwo |
          |buyerautomated3@gmail.com      |  |!123456Zm   ||velu masala2020||sstmasala     | |sstmasala2020 |
          
-                                              
+@Smoke                                              
 Scenario Outline: Verify the Inventory Record adjustment page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -999,7 +998,7 @@ Scenario Outline: Verify the Inventory Record adjustment page of Buyer panel
           Then User is Clicks in  outlet
           And User are Clicks in Lists
           Then User are Clicks the list
-          Then User are Click Record adjusment button
+          And User click on Record Adjustment
           When User is Select Reason drodown value of found 
           When User is Select item in the items name dropdown
           Then User are type the value of Quantity box field"<Quantity>"
@@ -1291,7 +1290,7 @@ Scenario Outline: Verify the Users page of Buyer panel
     @dev      
     Examples:
          |username                       ||password    ||First name||Last name ||Job title    ||Email                              ||Mobile phone|
-         |velumanieswaran2020@gmail.com  ||!123456Zm   ||velumani  ||ganesh    ||ATZ          ||ganeshvelutamil20092008@gmail.com      ||+6512345677 |       
+         |velumanieswaran2020@gmail.com  ||!123456Zm   ||velumani  ||ganesh    ||ATZ          ||ganeshvelumettur120092008@gmail.com      ||+6512345677 |       
                                                     
    @naren     
     Examples:
