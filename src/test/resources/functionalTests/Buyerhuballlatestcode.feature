@@ -988,7 +988,7 @@ Scenario Outline: Verify the Inventory Outlets lisen page of Buyer panel
          |username                       |  |password    ||outletname     ||outletnameone | |outletnametwo |
          |buyerautomated3@gmail.com      |  |!123456Zm   ||velu masala2020||sstmasala     | |sstmasala2020 |
          
-@Smoke                                              
+                                             
 Scenario Outline: Verify the Inventory Record adjustment page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -1136,12 +1136,12 @@ Scenario Outline: Verify the Outlets listing page of Buyer panel
     @dev       
     Examples:  
       | username                          | | password   ||confirm||outletname     |
-      | velumanieswaran2020@gmail.com     | |!123456Zm   ||disable||velu masala2020|
+      | velumanieswaran2020@gmail.com     | |!123456Zm   ||DISABLE||velu masala2020|
       
      @devSecond       
     Examples:  
       | username                      | | password   ||confirm||outletname     |
-      | buyerautomated3@gmail.com     | |!123456Zm   ||disable||velu masala2020|
+      | buyerautomated3@gmail.com     | |!123456Zm   ||DISABLE||velu masala2020|
       
       
 Scenario Outline: Verify the Outlets manage details page of Buyer panel 
@@ -1181,7 +1181,7 @@ Scenario Outline: Verify the Outlets manage details page of Buyer panel
           Then User Enter the name in search box"<Name>"
           And User click on Add member button
           Then User click on select user search box
-          Then User click on check box 
+          Then User click on check box in outlet setting
           Then User click on outside section
           And User click on Add button
           Then User Clear on weekly email
@@ -1290,12 +1290,12 @@ Scenario Outline: Verify the Users page of Buyer panel
     @dev      
     Examples:
          |username                       ||password    ||First name||Last name ||Job title    ||Email                              ||Mobile phone|
-         |velumanieswaran2020@gmail.com  ||!123456Zm   ||velumani  ||ganesh    ||ATZ          ||ganeshvelumettur120092008@gmail.com      ||+6512345677 |       
+         |velumanieswaran2020@gmail.com  ||!123456Zm   ||velumani  ||ganeshtamil    ||ATZ          ||ganestamilhvelumettur1110092008@gmail.com      ||+6512345677 |       
                                                     
    @naren     
     Examples:
          |username                       ||password    ||First name||Last name ||Job title    ||Email                              ||Mobile phone|
-         |buyerautomated3@gmail.com  ||!123456Zm   ||velueshwar ||ganesh    ||ATZ          ||ganeshvelutamil20102008@gmail.com      ||+6512345677 |       
+         |buyerautomated3@gmail.com  ||!123456Zm   ||velueshwar ||ganeshtamil    ||ATZ          ||ganeshtamilvelutamil11120102008@gmail.com      ||+6512345677 |       
                                                     
              
 Scenario Outline: Verify the Edit Users page of Buyer panel 

@@ -6,14 +6,14 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
  
  
-  
+   
 
 @RunWith(Cucumber.class)  
 
 
 @CucumberOptions(strict = true, features = "src/test/resources/functionalTests/Buyerhuballlatestcode.feature",
 
- tags="@Smoke",
+ tags="@dev", 
  
 
 glue = { "stepDefinitions" },monochrome=true,dryRun=false,
@@ -24,6 +24,6 @@ public class TestRunner {
 	  
 }                                                 
     
-   
+    
                                                 
       
