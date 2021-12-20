@@ -6,12 +6,12 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
  
  
-   
+    
 
 @RunWith(Cucumber.class)  
 
 
-@CucumberOptions(strict = true, features = "src/test/resources/functionalTests/Buyerhuballlatestcode.feature",
+@CucumberOptions(strict = true, features = "src/test/resources/functionalTests/BuyerInventoryTag.feature",
 
  tags="@dev", 
  
