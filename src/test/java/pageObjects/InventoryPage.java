@@ -150,6 +150,10 @@ public class InventoryPage {
 	@FindBy(xpath = "//div[text()='vsla']")
 	private static WebElement InventoryPage_vslalist;
 	
+	
+	@FindBy(xpath = "//div[text()='velu masala2020']")
+	private static WebElement InventoryPage_OutletRecordadjustment;
+	
 	 
 	
 
@@ -587,6 +591,17 @@ public class InventoryPage {
 
 	public void Clickvslalist() {
 		InventoryPage_vslalist.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public void OutletRecordadjustmentClick() {
+		InventoryPage_OutletRecordadjustment.click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {

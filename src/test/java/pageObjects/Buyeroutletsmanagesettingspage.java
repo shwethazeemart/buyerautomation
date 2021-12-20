@@ -51,7 +51,7 @@ public class Buyeroutletsmanagesettingspage {
 	private static WebElement Buyeroutletsmanagesettingspage_Selectusersearchbox;
 	
 
-	@FindBy(xpath = "(//input[@class='ng-star-inserted']/following-sibling::label)[2]")
+	@FindBy(xpath = "//label[text()='velumani ganesh-ganeshvelumettur120092008@gmail.com']")
 	private static WebElement Buyeroutletsmanagesettingspage_Checkboxfirst;
 	
 	//@FindBy(xpath = "(//ul[@class='button_row mt-4']//a)[1]")
@@ -142,8 +142,8 @@ public class Buyeroutletsmanagesettingspage {
 				.executeScript("return document.readyState").equals("complete"));
 	}
 	public static void Clickcheckboxfirst() {	
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0, 1000);");
+		//JavascriptExecutor js = (JavascriptExecutor) driver;
+		//js.executeScript("window.scrollBy(0, 1000);");
 		//WebElement buyerAutom = driver.findElement(By.xpath("//label[text()='Buyer test-shwetha51@gmail.com']"));
 		//buyerAutom.click();
 		Buyeroutletsmanagesettingspage_Checkboxfirst.click();
@@ -241,7 +241,7 @@ public class Buyeroutletsmanagesettingspage {
 				.executeScript("return document.readyState").equals("complete"));
 		
 	}
-	public static void Clearoutletemail() {
+	public static void Clearoutletemail() { 
 		Buyeroutletsmanagesettingspage_Outletemail.clear();
 		try { 
 			Thread.sleep(5000);

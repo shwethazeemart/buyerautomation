@@ -47,8 +47,8 @@ public class Buyerusernamesettingspage {
 	private static WebElement Buyerusernamesettingspage_Linkedcompanies;
 	
 
-	//@FindBy(xpath = "(//div[@class='ng-star-inserted'])[2]")
-	//private static WebElement Buyerusernamesettingspage_Velumasaladropdownicon;
+	@FindBy(xpath = "//a[@class='zmdropDownBtn']")
+	private static WebElement Buyerusernamesettingspage_Velumasaladropdownicon;
 	
 	
 	@FindBy(xpath = "(//a[@class='dropdown-item'])[2]") 
@@ -105,9 +105,9 @@ public class Buyerusernamesettingspage {
 		
 	}
 	public static void Clickonvelumasaladropdownicon() {
-		WebElement actions = driver.findElement(By.linkText("Actions"));
-		actions.click();
-		//Buyerusernamesettingspage_Velumasaladropdownicon.click();
+		//WebElement actions = driver.findElement(By.linkText("Actions"));
+		//actions.click();
+		Buyerusernamesettingspage_Velumasaladropdownicon.click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
