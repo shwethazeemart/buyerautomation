@@ -13,7 +13,7 @@ import io.cucumber.junit.CucumberOptions;
 
 @CucumberOptions(strict = true, features = "src/test/resources/functionalTests/Buyerhuballlatestcode.feature",
 
- tags="@dev", 
+ tags="@Smoke", 
  
 
 glue = { "stepDefinitions" },monochrome=true,dryRun=false,
@@ -23,7 +23,7 @@ public class TestRunner {
 	  
 	  
 }                                                 
-    
+      
     
                                                 
-      
+         
