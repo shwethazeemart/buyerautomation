@@ -57,8 +57,6 @@ Scenario Outline: Verify the Dashboard lisen page of Buyer panel
          |buyerautomated3@gmail.com           |  |!123456Zm   ||100pipers|
          
         
-               
-
 
 Scenario Outline: Verify the Reports invoice variance Category page of Buyer panel 
           Given User is on Login Page
@@ -96,7 +94,7 @@ Scenario Outline: Verify the Reports invoice variance Category page of Buyer pan
           
      @dev     
      Examples: 
-      | username                      | | password   ||invoice     |
+      |username                      | | password   ||invoice     |
       |velumanieswaran2020@gmail.com  | |!123456Zm   ||vel-1234567 |
       
      @devSecond 
@@ -106,7 +104,7 @@ Scenario Outline: Verify the Reports invoice variance Category page of Buyer pan
       
       
       
-    
+   
  Scenario Outline: Verify the Reports price updates Category page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -153,7 +151,7 @@ Scenario Outline: Verify the Reports invoice variance Category page of Buyer pan
       |buyerautomated3@gmail.com      | |!123456Zm   ||100pipers | 
       
       
-      
+    
 Scenario Outline: Verify the Reports spending per Category page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -988,14 +986,14 @@ Scenario Outline: Verify the Inventory Outlets lisen page of Buyer panel
          |username                       |  |password    ||outletname     ||outletnameone | |outletnametwo |
          |buyerautomated3@gmail.com      |  |!123456Zm   ||velu masala2020||sstmasala     | |sstmasala2020 |
          
-@Smoke                                              
+                                             
 Scenario Outline: Verify the Inventory Record adjustment page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
           And User enter exact password"<password>"
           And User is click login button 
           Then User Clicks on Inventory in the side navigation menubar 
-          Then User is Clicks in  outlet
+          Then User Clicks on outlet in recordadjusment page
           And User are Clicks in Lists
           Then User are Clicks the list
           And User click on Record Adjustment
@@ -1036,12 +1034,12 @@ Scenario Outline: Verify the Inventory Record adjustment page of Buyer panel
          |username                            |  |password    ||Quantity||Notes              ||Quantityone||Notesone         ||Quantitytwo||Notestwo         ||Notesthree|     |Notesfour|       |Notesfive|
          |velumanieswaran2020@gmail.com       |  |!123456Zm   ||   10   ||eswaranvelufound10  ||10     |   |velumanimissing10||10         ||velupromotions10||velutrnasferin10||velutransferout10||veluwastage10|
          
-          
-    @naren     
+       @naren     
     Examples:
          |username                            |  |password    ||Quantity||Notes              ||Quantityone||Notesone         ||Quantitytwo||Notestwo         ||Notesthree|     |Notesfour|       |Notesfive|
          |buyerautomated3@gmail.com           |  |!123456Zm   ||   10   ||eswaranvelufound10  ||10     |   |velumanimissing10||10         ||velupromotions10||velutrnasferin10||velutransferout10||veluwastage10|
-        
+           
+  
           
 Scenario Outline: Verify the Inventory SKU lisen page of Buyer panel 
           Given User is on Login Page
@@ -1136,12 +1134,12 @@ Scenario Outline: Verify the Outlets listing page of Buyer panel
     @dev       
     Examples:  
       | username                          | | password   ||confirm||outletname     |
-      | velumanieswaran2020@gmail.com     | |!123456Zm   ||disable||velu masala2020|
+      | velumanieswaran2020@gmail.com     | |!123456Zm   ||DISABLE||velu masala2020|
       
      @devSecond       
     Examples:  
       | username                      | | password   ||confirm||outletname     |
-      | buyerautomated3@gmail.com     | |!123456Zm   ||disable||velu masala2020|
+      | buyerautomated3@gmail.com     | |!123456Zm   ||DISABLE||velu masala2020|
       
       
 Scenario Outline: Verify the Outlets manage details page of Buyer panel 
@@ -1181,7 +1179,7 @@ Scenario Outline: Verify the Outlets manage details page of Buyer panel
           Then User Enter the name in search box"<Name>"
           And User click on Add member button
           Then User click on select user search box
-          Then User click on check box 
+          Then User click on check box in outlet setting
           Then User click on outside section
           And User click on Add button
           Then User Clear on weekly email
@@ -1290,21 +1288,21 @@ Scenario Outline: Verify the Users page of Buyer panel
     @dev      
     Examples:
          |username                       ||password    ||First name||Last name ||Job title    ||Email                              ||Mobile phone|
-         |velumanieswaran2020@gmail.com  ||!123456Zm   ||velumani  ||ganesh    ||ATZ          ||ganeshvelumettur120092008@gmail.com      ||+6512345677 |       
+         |velumanieswaran2020@gmail.com  ||!123456Zm   ||velumani  ||ganeshtamil    ||ATZ          ||ganestamilhvelumettur1110092008@gmail.com      ||+6512345677 |       
                                                     
    @naren     
     Examples:
          |username                       ||password    ||First name||Last name ||Job title    ||Email                              ||Mobile phone|
-         |buyerautomated3@gmail.com  ||!123456Zm   ||velueshwar ||ganesh    ||ATZ          ||ganeshvelutamil20102008@gmail.com      ||+6512345677 |       
+         |buyerautomated3@gmail.com  ||!123456Zm   ||velueshwar ||ganeshtamil    ||ATZ          ||ganeshtamilvelutamil11120102008@gmail.com      ||+6512345677 |       
                                                     
-             
+                                                                 
 Scenario Outline: Verify the Edit Users page of Buyer panel 
   
           Given User is on Login Page
           When User enter exact username"<username>"
           And User enter exact password"<password>"
           And User is click login button 
-          And User Clicks on Users in the side navigation menubar 
+          And User Clicks on Users in the side navigation menubar  
           Then User click on user "<usernameone>"
           And User clear the job title
           Then User enter the job title"<title>"
@@ -1325,7 +1323,7 @@ Scenario Outline: Verify the Edit Users page of Buyer panel
          |username                     |  |password    ||title      ||Email                            ||mobilephone  | |username     |
          |buyerautomated3@gmail.com    |  |!123456Zm   ||AtoZ test  ||velumanieswaran2020@gmail.com    ||+65122456789 | |velumanitwo  | 
          
-               
+@Smoke               
 Scenario Outline: Verify the user name page of Buyer panel
          Given User is on Login Page
          When User enter exact username"<username>"

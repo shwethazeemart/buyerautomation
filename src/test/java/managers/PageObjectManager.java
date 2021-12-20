@@ -63,7 +63,9 @@ import pageObjects.Adminnewsupplieruserpage;
 import pageObjects.Adminsupplierpage;
 import pageObjects.Adminsuppliersviewoutletspage;
 import pageObjects.Automationtestingpage;
+import pageObjects.BuyerInventoryTagpage;
 import pageObjects.BuyerNewslistingpage;
+import pageObjects.BuyerOrderDeliveryFilterpage;
 //import pageObjects.BuyerPNF7797page;
 import pageObjects.Buyerdashboardlisenpage;
 import pageObjects.Buyeredituserlisenpage;
@@ -169,6 +171,8 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private SupplierReportAgeingPage SupplierReportAgeing;
     private SupplierPaymentPlansPage SupplierPaymentPlans;
     private SupplierCompanySettingsPage SupplierCompanySettings;
+    private BuyerOrderDeliveryFilterpage BuyerOrderDeliveryFilter;
+    private BuyerInventoryTagpage BuyerInventoryTag;
 
 
 
@@ -544,13 +548,25 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 	}
 
 
-	
-	
 
 
 	public SupplierDirectorySettingPage getSupplierDirectorySettingPage() {
 		return (supplierdirectorysetting == null) ? (supplierdirectorysetting = new SupplierDirectorySettingPage(driver)) : supplierdirectorysetting;
 	
+	}
+
+
+	public BuyerOrderDeliveryFilterpage getBuyerOrderDeliveryFilterpage() {
+		return (BuyerOrderDeliveryFilter == null) ? (BuyerOrderDeliveryFilter = new BuyerOrderDeliveryFilterpage(driver)) : BuyerOrderDeliveryFilter;
+		
+
+	}
+
+
+	public BuyerInventoryTagpage getBuyerInventoryTagpage() {
+		return (BuyerInventoryTag == null) ? (BuyerInventoryTag = new BuyerInventoryTagpage(driver)) : BuyerInventoryTag;
+		
+
 	} 
 
 

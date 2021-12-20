@@ -64,11 +64,7 @@ public class Buyeroutletsmanagesettings {
 	    Buyeroutletsmanagesettingspage.Clickonselectuserserachbox();
 	}
 
-	@Then("User click on check box ")
-	public void user_click_on_check_box() {
-	    Buyeroutletsmanagesettingspage.Clickcheckboxfirst();
-	}
-
+	
 	@Then("User click on cancel button")
 	public void user_click_on_cancel_button() throws InterruptedException {
 	    //Buyeroutletsmanagesettingspage.Clickcancelbutton();
@@ -127,7 +123,11 @@ public class Buyeroutletsmanagesettings {
 	    Buyeroutletsmanagesettingspage.Clickonoutsidesection();
 	}
 
-	
+	@Then("User click on check box in outlet setting")
+	public void user_click_on_check_box_in_outlet_setting() {
+		 Buyeroutletsmanagesettingspage.Clickcheckboxfirst();
+	}
+
 	
 	
 	
