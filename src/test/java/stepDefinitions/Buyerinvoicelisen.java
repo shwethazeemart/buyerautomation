@@ -15,29 +15,24 @@ public class Buyerinvoicelisen {
 
 	private TestContext testContext;
 	private OrdersPage orderspage;
-	//private txtBoxContent txtBoxContent;
+	// private txtBoxContent txtBoxContent;
 	private Object OrderID;
 	private LogInPage logInPage;
 	private InvoicesPage invoicespage;
-	private InvoiceprocessPage invoiceProcessPage; 
+	private InvoiceprocessPage invoiceProcessPage;
 	private DashboardPage dashboradpage;
 	private Buyerinvoicelisenpage buyerinvoicelisen;
-
-
-
 
 	public Buyerinvoicelisen(TestContext testContext) {
 		super();
 		this.testContext = testContext;
 		this.orderspage = testContext.getPageObjectManager().getOrdersPage();
 		this.logInPage = (LogInPage) testContext.getPageObjectManager().getLogInPage2();
-		this.invoicespage = (InvoicesPage) testContext.getPageObjectManager().getInvoicesPage(); 
+		this.invoicespage = (InvoicesPage) testContext.getPageObjectManager().getInvoicesPage();
 		this.dashboradpage = testContext.getPageObjectManager().getDashboardPage();
-		this.invoiceProcessPage = (InvoiceprocessPage)testContext.getPageObjectManager().getInvoiceprocesspage();
-		this.buyerinvoicelisen=testContext.getPageObjectManager().getBuyerinvoicelisen();
+		this.invoiceProcessPage = (InvoiceprocessPage) testContext.getPageObjectManager().getInvoiceprocesspage();
+		this.buyerinvoicelisen = testContext.getPageObjectManager().getBuyerinvoicelisen();
 	}
-
-
 
 	@When("User enters exact password{string}")
 	public void user_enters_exact_password_123456Zm(String loginPassword) {
@@ -61,10 +56,10 @@ public class Buyerinvoicelisen {
 
 	@Then("User clicks on pay online close icon")
 	public void user_clicks_on_pay_online_close_icon() {
-		buyerinvoicelisen.clickpayonlinecloseicon(); 
+		buyerinvoicelisen.clickpayonlinecloseicon();
 	}
 
-	@Then("User clicks on upload invoice") 
+	@Then("User clicks on upload invoice")
 	public void user_clicks_on_upload_invoice() {
 		buyerinvoicelisen.clickuploadinvoice();
 	}
@@ -74,10 +69,10 @@ public class Buyerinvoicelisen {
 		buyerinvoicelisen.clickuploadinvoicecloseicon();
 	}
 
-	//@Then("User Enter invoice number in first textbox")
-	//public void user_type_invoice_number_in_first_textbox() {
-	//	buyerinvoicelisen.Enterinvoicenumber();
-	//}
+	// @Then("User Enter invoice number in first textbox")
+	// public void user_type_invoice_number_in_first_textbox() {
+	// buyerinvoicelisen.Enterinvoicenumber();
+	// }
 
 	@Then("User click on search icon")
 	public void user_click_on_search_icon() {
@@ -114,74 +109,68 @@ public class Buyerinvoicelisen {
 
 	@Then("User click on invoice")
 	public void user_click_on_invoice() {
-		buyerinvoicelisen.clickoninvoice();   
+		buyerinvoicelisen.clickoninvoice();
 	}
 
 	@Then("User click on return invoice icon")
 	public void user_click_on_return_invoice_icon() {
-		buyerinvoicelisen.clickonreturninvoiceicon();  
+		buyerinvoicelisen.clickonreturninvoiceicon();
 	}
 
 	@Then("User click on credit note invoice")
 	public void user_click_on_credit_note_invoice() {
-		buyerinvoicelisen.clickoncreditnoteinvoice();  
+		buyerinvoicelisen.clickoncreditnoteinvoice();
 	}
 
 	@Then("User click on credit note return invoice icon")
 	public void user_click_on_credit_note_return_invoice_icon() {
-		buyerinvoicelisen.clickoncreditnotereturninvoiceicon(); 
+		buyerinvoicelisen.clickoncreditnotereturninvoiceicon();
 	}
 
 	@Then("User click on voided invoice")
 	public void user_click_on_voided_invoice() {
-		buyerinvoicelisen.clickonvoidedinvoice(); 
+		buyerinvoicelisen.clickonvoidedinvoice();
 	}
 
 	@Then("User click on voided return invoice icon")
 	public void user_click_on_voided_return_invoice_icon() {
-		buyerinvoicelisen.clickonreturnviodedinvoiceicon(); 
+		buyerinvoicelisen.clickonreturnviodedinvoiceicon();
 	}
-
 
 	@Then("User click on filter icon")
 	public void user_click_on_filter_icon() throws InterruptedException {
-		buyerinvoicelisen.clickonfiltericon();  
+		buyerinvoicelisen.clickonfiltericon();
 	}
 
 	@Then("User clear invoice number in first textbox")
 	public void user_clear_invoice_number_in_first_textbox() {
-		buyerinvoicelisen.clearinvoicenumber();  
+		buyerinvoicelisen.clearinvoicenumber();
 	}
 
 	@Then("User click on second time search icon")
 	public void user_click_on_second_time_search_icon() {
-		buyerinvoicelisen.clicksecondtimesearchicon(); 
+		buyerinvoicelisen.clicksecondtimesearchicon();
 	}
-
-
 
 	@Then("User enter credit note invoice number in first textbox")
 	public void user_enter_credit_note_invoice_number_in_first_textbox() {
-		buyerinvoicelisen.Entercreditnoteinvoicenumber();	
+		buyerinvoicelisen.Entercreditnoteinvoicenumber();
 	}
 
 	@Then("User click search icon")
 	public void user_click_search_icon() {
-		buyerinvoicelisen.clickthirdtimesearchicon(); 
+		buyerinvoicelisen.clickthirdtimesearchicon();
 	}
 
 	@Then("User enter voided invoice number in first textbox")
 	public void user_enter_voided_invoice_number_in_first_textbox() {
-		buyerinvoicelisen.Entervoidedinvoicenumber();	
+		buyerinvoicelisen.Entervoidedinvoicenumber();
 	}
-
-
 
 	@Then("User enter invoice number in first textbox")
 	public void user_enter_invoice_number_in_first_textbox() {
 		buyerinvoicelisen.Enterinvoicenumber();
 	}
-
 
 	@Then("User clear on invoice number in first time first textbox")
 	public void user_clear_on_invoice_number_in_first_time_first_textbox() {
@@ -193,10 +182,6 @@ public class Buyerinvoicelisen {
 		buyerinvoicelisen.clicksearcchiconinsecondtime();
 	}
 
-
-
-
-
 	@Then("User click on calendar from date")
 	public void user_click_on_calendar_from_date() {
 		buyerinvoicelisen.clickoncalendarfromdate();
@@ -204,12 +189,9 @@ public class Buyerinvoicelisen {
 
 	@Then("User click on calendar to date")
 	public void user_click_on_calendar_to_date() {
-		//buyerinvoicelisen.clickoncalendartodate();
+		// buyerinvoicelisen.clickoncalendartodate();
 	}
 
-
-
-	
 	@Then("User click on outlet")
 	public void user_click_on_outlet() {
 		buyerinvoicelisen.Clickonoutlet();
@@ -222,7 +204,7 @@ public class Buyerinvoicelisen {
 
 	@Then("User click on outside option")
 	public void user_click_on_outside_option() {
-		//buyerinvoicelisen.Clickonoutsideoption();
+		// buyerinvoicelisen.Clickonoutsideoption();
 	}
 
 	@Then("User click on supplier")
@@ -238,7 +220,7 @@ public class Buyerinvoicelisen {
 	@Then("User click on payments status")
 	public void user_click_on_payments_status() {
 		buyerinvoicelisen.Clickonpaymentsstatus();
-		
+
 	}
 
 	@Then("User click on Export status in invoice page")
@@ -250,43 +232,5 @@ public class Buyerinvoicelisen {
 	public void user_click_on_Reset_button_in_order_page() {
 		buyerinvoicelisen.ResetButtonClick();
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
