@@ -71,7 +71,7 @@ public class Buyerreportpriceupdatespage {
 	@FindBy(xpath = "//div[@class='pl-2']//a[1]")
 	private static WebElement Buyerreportpriceupdatespage_Exportdownloadbutton;
 
-	@FindBy(xpath = "//p[text()='Spending report']")
+	@FindBy(xpath = "//p[text()='Price updates']")
 	private static WebElement Buyerreportpriceupdatespage_Reportsbackbutton;
 
 	@FindBy(xpath = "//img[@src='../assets/zmcore/img/left-report-b-icon.svg']/following-sibling::p[1]")

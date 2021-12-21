@@ -137,6 +137,8 @@ public class BuyerinventorySKUlisenpage {
 	}
 
 	public static void clickrecordadjustment() {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("scroll(0, -250);");
 		BuyerinventorySKUlisenpage_Recordadjustment.click();
 		try {
 			Thread.sleep(5000);

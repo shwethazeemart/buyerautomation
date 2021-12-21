@@ -13,8 +13,9 @@ import pageObjects.InvoicesPage;
 import pageObjects.LogInPage;
 import pageObjects.OrdersPage;
 
-public class Buyerinventoryactivitylisen {
+public class BuyerInventoryTag {
 
+	
 	private TestContext testContext;
 	private OrdersPage orderspage;
 	//private txtBoxContent txtBoxContent;
@@ -27,9 +28,8 @@ public class Buyerinventoryactivitylisen {
 	private Buyerinventoryoutletslisenpage buyerinventoryoutletslisen;
     private Buyerdashboardlisenpage buyerdashboardlisen;
     private Buyerinventoryactivitylisenpage buyerinventoryactivitylisen;
-    private BuyerInventoryTagpage buyerInventoryTag;
 
-	public Buyerinventoryactivitylisen(TestContext testContext) {
+	public BuyerInventoryTag(TestContext testContext) {
 		super();
 		this.testContext = testContext;
 		this.orderspage = testContext.getPageObjectManager().getOrdersPage();
@@ -41,56 +41,42 @@ public class Buyerinventoryactivitylisen {
 		this.buyerinventoryoutletslisen=testContext.getPageObjectManager().getBuyerinventoryoutletslisenpage();
 		this.buyerdashboardlisen=testContext.getPageObjectManager().getBuyerdashboardlisenpage();
 		this.buyerinventoryactivitylisen=testContext.getPageObjectManager().getBuyerinventoryactivitylisenpage();
-		this.buyerInventoryTag=testContext.getPageObjectManager().getBuyerInventoryTagpage();
 	}
 	
-	@Then("User click on Activity icon")
-	public void user_click_on_Activity_icon() {
-	    Buyerinventoryactivitylisenpage.Clickactivityicon();
-	}
-
-	@Then("User select the calendar this month from date to To date")
-	public void user_select_the_calendar_this_month_from_date_to_To_date() {
-	   Buyerinventoryactivitylisenpage.Selectcalendardate();
+		
+	
+	
+	@Then("User clicks on Inventory in the side navigation menubar")
+	public void user_clicks_on_Inventory_in_the_side_navigation_menubar() {
+		dashboradpage.clickInventory();
 	}
 
-	@Then("User click on download button")
-	public void user_click_on_download_button() {
-	   //Buyerinventoryactivitylisenpage.Clickdownloadbutton();
+	@Then("User click on first count")
+	public void user_click_on_first_count() {
+	    BuyerInventoryTagpage.FirstStockcountClick();
 	}
 
-	@Then("User ckicks on outlet {string}")
-	public void user_ckicks_on_outlet(String outletname) {
-		Buyerinventoryactivitylisenpage.ClickonOutlet();
+	@Then("User click on add tag button in stockcount")
+	public void user_click_on_add_tag_button_in_stockcount() {
+	    BuyerInventoryTagpage.AddTagButtonClick();
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+	@Then("User click on save button in stockcount")
+	public void user_click_on_save_button_in_stockcount() throws InterruptedException {
+	    BuyerInventoryTagpage.SaveButtonClick();
+		
+	}
+
+	@Then("User click on back button in stockcount")
+	public void user_click_on_back_button_in_stockcount() throws InterruptedException {
+	    BuyerInventoryTagpage.BackButtonClick();
+	}
+
+	@Then("User click on consumption report in activity page")
+	public void user_click_on_consumption_report_in_activity_page() throws InterruptedException {
+	    BuyerInventoryTagpage.ConsumptionReportClick();
+	}
+
 	
 	
 	

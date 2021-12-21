@@ -133,7 +133,7 @@ public class Buyerreportpriceupdates {
 	
 	@Then("User click on Reports back button in sku page")
 	public void user_click_on_Reports_back_button_in_sku_page() {
-	  Buyerreportpriceupdatespage.Clickreportbackbuttoninsku();
+	  //Buyerreportpriceupdatespage.Clickreportbackbuttoninsku();
 	}	
 	
 	

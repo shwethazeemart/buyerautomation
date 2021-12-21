@@ -50,7 +50,7 @@ public class Buyeroutletslisting {
 
 
 	@Then("User click on yes make inactive button")
-	public void user_click_on_yes_make_inactive_button() {
+	public void user_click_on_yes_make_inactive_button() throws InterruptedException {
 		Buyeroutletslistingpage.Clickyesmakeinactivebutton();
 	}
 

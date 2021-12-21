@@ -276,7 +276,10 @@ public class InventorypageSteps {
 	
 
 	
-
+	@Then("User Clicks on outlet in recordadjusment page")
+	public void user_Clicks_on_outlet_in_recordadjusment_page() {
+		inventorypage.OutletRecordadjustmentClick();
+	}
 
 	
 
