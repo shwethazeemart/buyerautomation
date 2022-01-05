@@ -118,7 +118,7 @@ public class Buyerreportspenperoutletpage {
 	//@FindBy(xpath = "//span[contains(@name,'daterange')]")
 	//private static WebElement Buyerreportspenperoutletpage_Velumasalalistinvoicesbutton;
 	
-	@FindBy(xpath = "(//div[contains(@class,'datatable-body-cell-label')])[10]")
+	@FindBy(xpath = "//span[text()='velu masala2020']")
 	private static WebElement Buyerreportspenperoutletpage_Outleticon;
 	
 	@FindBy(xpath = "//div[@class='d-flex']//a[1]")
@@ -466,6 +466,8 @@ public class Buyerreportspenperoutletpage {
 	}
 	public static void Clickonoutleticon() throws InterruptedException {
 		Thread.sleep(5000);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0, 1000);");
 		Buyerreportspenperoutletpage_Outleticon.click();
 		try {
 			Thread.sleep(5000);

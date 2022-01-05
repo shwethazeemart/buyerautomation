@@ -15,7 +15,7 @@ import io.cucumber.junit.CucumberOptions;
  
 
 
-@CucumberOptions(strict = true, features = "src/test/resources/functionalTests/Buyerreportinvoicevariance.feature",
+@CucumberOptions(strict = true, features = "src/test/resources/functionalTests/Buyerhuballlatestcode.feature",
 
 tags ="@Smoke",
 

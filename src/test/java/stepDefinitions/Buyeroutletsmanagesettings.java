@@ -89,7 +89,7 @@ public class Buyeroutletsmanagesettings {
 	public void user_select_dropdown_list_in_wednesday() {
 		WebElement wednesday = Buyeroutletsmanagesettingspage.getDropDownElementcutofday();
 		Select select=new Select(wednesday);
-		select.selectByIndex(3);
+		select.selectByIndex(2);
 	}
 
 	@Then("User clear the Email list")

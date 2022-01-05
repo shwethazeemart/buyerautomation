@@ -445,7 +445,7 @@ public class Buyerdashboardlisenpage {
 
 	public static void Clickonselectiocn() {
 		//Buyerdashboardlisenpage_Selecticon.click();
-		WebElement selectAll = driver.findElement(By.linkText("Select All"));
+		WebElement selectAll = driver.findElement(By.xpath("//a[text()='Select all']"));
 		selectAll.click();
 		try { 
 			Thread.sleep(5000);
