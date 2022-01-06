@@ -8,14 +8,10 @@ import io.cucumber.junit.CucumberOptions;
  
     
 
-@RunWith(Cucumber.class)  
+@RunWith(Cucumber.class)   
 
 
-
- 
-
-
-@CucumberOptions(strict = true, features = "src/test/resources/functionalTests/Buyerhuballlatestcode.feature",
+@CucumberOptions(strict = true, features = "src/test/resources/functionalTests/AdminLogin.feature",
 
 tags ="@Smoke",
 
