@@ -116,7 +116,7 @@ public class Buyernewweeklyorderpage {
 	public static void Uploadtheexcelfile() throws InterruptedException {
 		WebElement uploadexcel=driver.findElement(By.xpath("//input[@id='file']"));
 
-		uploadexcel.sendKeys("E:\\Zeemart All\\Feature file\\Weeklyorder_20211225_20211231 (1).xlsx");
+		uploadexcel.sendKeys("E:/Zeemart/Weeklyorder_20220112_20220118 (3).xlsx");
 		Thread.sleep(5000);
 						try {
 			Thread.sleep(5000);
