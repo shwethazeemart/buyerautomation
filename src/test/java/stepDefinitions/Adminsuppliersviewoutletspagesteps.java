@@ -57,7 +57,7 @@ public class Adminsuppliersviewoutletspagesteps {
 	}
 
 	@And("User is Enter name supplier search box in the suppliers page{string}")
-	public void user_is_Enter_name_supplier_search_box_in_the_suppliers_page_VENKAT_MASALA(String suppliername) {
+	public void user_is_Enter_name_supplier_search_box_in_the_suppliers_page(String suppliername) {
 	    adminsuppliersviewoutletspage.Enter_namesuppliersearchbox(suppliername);
 	}
 
@@ -76,8 +76,8 @@ public class Adminsuppliersviewoutletspagesteps {
 	    adminsuppliersviewoutletspage.Clicks_Viewoutlets();
 	}
 
-	@And("User is Clicks Link outlets in the venkat masala page")
-	public void user_is_Clicks_Link_outlets_in_the_venkat_masala_page() {
+	@And("User is Clicks Link outlets in the outlet page")
+	public void user_is_Clicks_Link_outlets_in_the_page() throws InterruptedException {
 	    adminsuppliersviewoutletspage.Clicks_Linkoutlets();
 	}
 
@@ -96,20 +96,7 @@ public class Adminsuppliersviewoutletspagesteps {
 	    adminsuppliersviewoutletspage.Clicks_thecheckbox();
 	}
 
-	@And("User are Enter Email in the Email address field{string}")
-	public void user_are_Enter_Email_in_the_Email_address_field_velumani_zeemart_asia(String Email) {
-	    adminsuppliersviewoutletspage.Enter_EmailintheEmailaddressfield(Email);
-	}
-
-	@Then("User is Enter mobile number in the SMS field{string}")
-	public void user_is_Enter_mobile_number_in_the_SMS_field_Mobilenumbersms(String mobilenumbersms) throws InterruptedException {
-	    adminsuppliersviewoutletspage.Enter_mobilenumberintheSMSfield(mobilenumbersms);
-	}
-
-	@And("User are Enter mobile number whatsapp field{string}")
-	public void user_are_Enter_mobile_number_whatsapp_field(String mobilenumberwhatsapp) {
-	    adminsuppliersviewoutletspage.Enter_mobile_number_whatsapp_field(mobilenumberwhatsapp);
-	}
+	
 
 	@Then("User is Enter amount in minium order field{string}")
 	public void user_is_Enter_amount_in_minium_order_field(String minimumamount) {
@@ -255,73 +242,17 @@ public class Adminsuppliersviewoutletspagesteps {
 		System.out.println("page title: " + pageTitle);
 	}
 
+	@Then("User is Clicks the checkbox in Disable ordering function")
+	public void user_is_Clicks_the_checkbox_in_Disable_ordering_function() {
+		adminsuppliersviewoutletspage.ClicksCheckboxOfDisableOrdering();
+	}
+	
+	@Then("User is Select reason in dropdown field")
+	public void user_is_Select_reason_in_dropdown_field() {
+		WebElement reason = Adminsuppliersviewoutletspage.getEntertheReason();
+		Select select=new Select(reason);
+		select.selectByIndex(2);	
+	}
 
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 }
