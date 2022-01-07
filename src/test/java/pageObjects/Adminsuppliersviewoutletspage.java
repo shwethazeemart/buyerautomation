@@ -60,6 +60,9 @@ public class Adminsuppliersviewoutletspage {
 	@FindBy(xpath = "(//label[@class='custom-control custom-checkbox custom_control_small_txt zmart m-0'])[1]")
 	private static WebElement Adminsuppliersviewoutletspage_Checkbox;
 	
+	@FindBy(xpath = "//input[@formcontrolname='orderDisabled']")
+	private static WebElement Adminsuppliersviewoutletspage_CheckboxofDisable;
+		
 	@FindBy(xpath = "//input[@formcontrolname='newOrderNotifyEmail']")
 	private static WebElement Adminsuppliersviewoutletspage_EnterEmail;
 	
@@ -96,10 +99,10 @@ public class Adminsuppliersviewoutletspage {
 	@FindBy(xpath = "//input[@formcontrolname='cutOffTimesMondayDays']")
 	private static WebElement Adminsuppliersviewoutletspage_Entermondaycutofftime;
 	
-	@FindBy(xpath = "//input[@ng-reflect-name='cutOffTimesMondayTime']")
+	@FindBy(xpath = "(//span[text()='Monday']/following::input)[2]")
 	private static WebElement Adminsuppliersviewoutletspage_Clickmondaytimefield;
 	
-	@FindBy(xpath = "//span[text()='Set']")
+	@FindBy(xpath = "(//span[contains(@class,'owl-dt-control-content owl-dt-control-button-content')])[2]")
 	private static WebElement Adminsuppliersviewoutletspage_ClickmondayPOPmessage;
 	
 	@FindBy(xpath = "(//label[@class='custom-control custom-checkbox custom_control_small_txt zmart m-0'])[7]")
@@ -135,6 +138,8 @@ public class Adminsuppliersviewoutletspage {
 	@FindBy(xpath = "//span[text()=' Save changes ']")
 	private static WebElement Adminsuppliersviewoutletspage_Savechangesbutton;
 	
+	@FindBy(xpath = "//select[@id='country']")
+	private static WebElement Adminsuppliersviewoutletspage_Reason;
 	
 	
 	
@@ -192,7 +197,8 @@ public class Adminsuppliersviewoutletspage {
 				.executeScript("return document.readyState").equals("complete"));
 	}
 
-	public void Clicks_Linkoutlets() {
+	public void Clicks_Linkoutlets() throws InterruptedException {
+		Thread.sleep(5000);
 		Adminsuppliersviewoutletspage_Linkoutlets.click();
 		try {
 			Thread.sleep(5000);
@@ -205,7 +211,7 @@ public class Adminsuppliersviewoutletspage {
 	
 	public static void Select_Company() throws InterruptedException { 
 		Thread.sleep(5000);
-		driver.findElement(By.xpath("//div[@role='combobox']//input[1]")).sendKeys("venkatmasala220",Keys.ENTER); 
+		driver.findElement(By.xpath("//div[@role='combobox']//input[1]")).sendKeys("Sakthimasala120",Keys.ENTER); 
 		Thread.sleep(5000);
 		try {
 			Thread.sleep(5000);
@@ -249,42 +255,7 @@ public class Adminsuppliersviewoutletspage {
 		
 	}
 
-	public void Enter_EmailintheEmailaddressfield(String Email) {
-		Adminsuppliersviewoutletspage_EnterEmail.sendKeys(Email);
-		
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-		} 
-		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
-				.executeScript("return document.readyState").equals("complete"));
-		
-	}
-
-	public void Enter_mobilenumberintheSMSfield(String mobilenumbersms) throws InterruptedException {
-		Adminsuppliersviewoutletspage_Entermobilenumbersms.sendKeys(mobilenumbersms);
-		Thread.sleep(5000);
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-		} 
-		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
-				.executeScript("return document.readyState").equals("complete"));
-		
-		
-	}
-
-	public void Enter_mobile_number_whatsapp_field(String mobilenumberwhatsapp) {
-		Adminsuppliersviewoutletspage_Entermobilenumberwhatsapp.sendKeys(mobilenumberwhatsapp);
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-		} 
-		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
-				.executeScript("return document.readyState").equals("complete"));
-		
-	}
-
+	
 	public void Enter_minimumamount(String minimumamount) {
 		Adminsuppliersviewoutletspage_Enterminimumamount.sendKeys(minimumamount);
 		try {
@@ -551,72 +522,33 @@ public class Adminsuppliersviewoutletspage {
 	public static String getPageTitle() {
 		return driver.getTitle();   
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+	public void ClicksCheckboxOfDisableOrdering() {
+		Adminsuppliersviewoutletspage_CheckboxofDisable.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+	
+	public static void clickEnterReason() throws InterruptedException {
+		Adminsuppliersviewoutletspage_Reason.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+	public static WebElement getEntertheReason() {
+		return Adminsuppliersviewoutletspage_Reason;
+	
+	}
+
 	
 	
 	
