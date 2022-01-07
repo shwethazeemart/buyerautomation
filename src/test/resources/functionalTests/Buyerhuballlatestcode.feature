@@ -51,7 +51,7 @@ Scenario Outline: Verify the Dashboard lisen page of Buyer panel
          |username                            |  |password    ||name     | 
          |velumanieswaran2020@gmail.com       |  |!123456Zm   ||100pipers| 
          
-        @naren 
+        @devSecond  
          Examples:
          |username                            |  |password    ||name     | 
          |buyerautomated3@gmail.com           |  |!123456Zm   ||100pipers|
@@ -145,7 +145,7 @@ Scenario Outline: Verify the Reports invoice variance Category page of Buyer pan
       | username                      | | password   ||sku       |
       |velumanieswaran2020@gmail.com  | |!123456Zm   ||100pipers | 
       
-     @naren
+     @devSecond
      Examples: 
       | username                      | | password   ||sku       |
       |buyerautomated3@gmail.com      | |!123456Zm   ||100pipers | 
@@ -204,7 +204,7 @@ Scenario Outline: Verify the Reports spending per Category page of Buyer panel
       |username                      | | password   ||name     |
       |buyerautomated1@gmail.com     | |!123456Zm   ||Beer     | 
       
-    
+     
 Scenario Outline: Verify the Reports spending per outlet page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -392,7 +392,7 @@ Scenario Outline: Verify the Reports spending per SKU page of Buyer panel
       | username                      | | password   ||name     |
       | buyerautomated3@gmail.com     | |!123456Zm   ||100pipers|   
       
-       
+      
 Scenario Outline: Verify the Reports spending per supplier page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -411,12 +411,12 @@ Scenario Outline: Verify the Reports spending per supplier page of Buyer panel
           Then User select date from calendar
           Then User click on This month from calendar
           Then User select date from calendar
-          And User click on Last year from calendar
+          Then User click on YTD from calendar          
           Then User select date from calendar
           Then User click on Custom range from calendar
           Then User click on apply in custom range
           Then User select date from calendar
-          Then User click on YTD from calendar
+          And User click on Last year from calendar
           And User click on filter in supplier
           Then User click on outlets
           Then User click on check box 
@@ -452,11 +452,11 @@ Scenario Outline: Verify the Reports spending per supplier page of Buyer panel
       | username                       | | password   ||name     | |suppliername |
       | velumanieswaran2020@gmail.com  | |!123456Zm   ||sabari250| |sabari250    |
       
-      @devSecond   
+    @devSecond    
      Examples: 
       | username                       | | password   ||name     | |suppliername |
       | buyerautomated3@gmail.com      | |!123456Zm   ||sabari250| |sabari250    |
-      
+    
    
     
 Scenario Outline: Verify the Reports spending per tag page of Buyer panel 
@@ -536,7 +536,11 @@ Scenario Outline: Verify the Reports spending per tag page of Buyer panel
       | username                          | | password   ||name       |
       | velumanieswaran2020@gmail.com     | |!123456Zm   ||masala     | 
       
-  
+   @devSecond       
+  Examples: 
+      | username                          | | password   ||name       |
+      | buyerautomated3@gmail.com         | |!123456Zm   ||masala     | 
+      
       
 
 
@@ -661,7 +665,7 @@ Scenario Outline: Verify the New recurring orders page of Buyer panel
              |username                               |  |password    |
              |buyerautomated3@gmail.com              |  |!123456Zm   |       
              
-             
+              
 Scenario Outline: Verify the New Weekly Order page of Buyer panel
          Given User is on Login Page
          When User enter exact username"<username>"
@@ -844,13 +848,13 @@ Scenario Outline: Verify the Orders lisen page of Buyer panel
     Examples: 
       | username                         || loginPassword|
       | velumanieswaran2020@gmail.com    || !123456Zm    | 
-      
-      
+   
   
     @devSecond 
     Examples: 
       | username                         || loginPassword|
       | buyerautomated3@gmail.com        || !123456Zm    | 
+
 
 Scenario Outline: Verify the Invoices upload page of Buyer panel
          Given User is on Login Page
@@ -922,7 +926,7 @@ Scenario Outline: Verify the Payment transactions page of Buyer panel
       | velumanieswaran2020@gmail.com | |!123456Zm   |     
       
       
-      
+   
  Scenario Outline: Verify the Inventory Activity lisen page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -945,7 +949,7 @@ Scenario Outline: Verify the Payment transactions page of Buyer panel
          |velumanieswaran2020@gmail.com       |  |!123456Zm   | |velu masala |
      
       
-    @naren   
+    @devSecond   
      Examples:
          |username                            |  |password    | |outletname  |
          |buyerautomated3@gmail.com           |  |!123456Zm   | |velu masala |
@@ -1195,9 +1199,12 @@ Scenario Outline: Verify the Outlets manage details page of Buyer panel
       | username                      | | password   ||Name       | |WeeklyEmail          ||Email                      ||outletemail                  |
       | velumanieswaran2020@gmail.com | |!123456Zm   ||buyer      | |velumani@zeemart.asia||lingeshsabari2009@gmail.com||velumanieswaran2020@gmail.com| 
       
+      @devSecond       
+    Examples: 
+      | username                      | | password   ||Name       | |WeeklyEmail          ||Email                      ||outletemail                  |
+      | buyerautomated3@gmail.com     | |!123456Zm   ||buyer      | |velumani@zeemart.asia||lingeshsabari2009@gmail.com||velumanieswaran2020@gmail.com| 
       
-    
-      
+       
 Scenario Outline: Verify the Outlets view suppliers page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>" 
@@ -1318,7 +1325,7 @@ Scenario Outline: Verify the Edit Users page of Buyer panel
          |username                     |  |password    ||title      ||Email                            ||mobilephone  | |username     |
          |buyerautomated3@gmail.com    |  |!123456Zm   ||AtoZ test  ||velumanieswaran2020@gmail.com    ||+65122456789 | |velumanitwo  | 
          
-@Smoke              
+               
 Scenario Outline: Verify the user name page of Buyer panel
          Given User is on Login Page
          When User enter exact username"<username>"

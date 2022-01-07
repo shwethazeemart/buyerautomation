@@ -65,7 +65,7 @@ public class Buyeroutletsviewsupplierspage {
 	//@FindBy(xpath = "(//div[@class='datatable-body-cell-label']//div)[3]")
 	//private static WebElement Buyeroutletsviewsupplierspage_Copyanotheroutlet;
 	
-	@FindBy(xpath = "//button[text()='Select All']")
+	@FindBy(xpath = "//button[contains(@class,'btn btn-clear-blue')]")
 	private static WebElement Buyeroutletsviewsupplierspage_Selectallicon;
 	
 	@FindBy(xpath = "//button[text()=' OK ']")

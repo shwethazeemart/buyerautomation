@@ -7,9 +7,13 @@ import io.cucumber.junit.CucumberOptions;
  
     
 
-@RunWith(Cucumber.class)  
+@RunWith(Cucumber.class)   
 
-@CucumberOptions(strict = true, features = "src/test/resources/functionalTests/BuyerInventoryTag.feature",
+
+
+@CucumberOptions(strict = true, features = "src/test/resources/functionalTests/Buyerhuballlatestcode.feature",
+
+
 tags ="@Smoke",
 glue = { "stepDefinitions" },monochrome=true,dryRun=false,
 plugin = {"json:target/cucumber.json"})

@@ -536,7 +536,7 @@ public class Buyerdashboardlisenpage {
 
 	public static void Clickonuploadimage() throws InterruptedException {
 		WebElement uploadBox=driver.findElement(By.xpath("//input[@type='file']"));
-		uploadBox.sendKeys("E:\\Zeemart All\\Feature file\\download (3).jpg");
+		uploadBox.sendKeys("E:/Zeemart/download (1).jpg");
 		Thread.sleep(5000);
 		try {
 			Thread.sleep(5000);
