@@ -1,6 +1,6 @@
 Feature: verify Admin panel and test all the page
 
-
+@Smoke
 Scenario Outline: Verify the Suppliers page in view outlets Admin hub    
   
           Given User are available in login page
@@ -14,21 +14,20 @@ Scenario Outline: Verify the Suppliers page in view outlets Admin hub
           Then User are Clicks Search button in the suppliers page
           And User is Clicks Actions dropdown in the suppliers page
           Then User are Clicks View outlets in the dropdown field
-          And User is Clicks Link outlets in the venkat masala page
+          And User is Clicks Link outlets in the outlet page
           When User are Select outlet in the autocomplete textbox
           Then User is Enter the custom outletID"<outletid>"
           And User are Enter custom billingID"<billingid>" 
           Then User is Clicks the checkbox in default settings 
-          And User are Enter Email in the Email address field"<Email>"
-          Then User is Enter mobile number in the SMS field"<Mobilenumbersms>"  
-          And User are Enter mobile number whatsapp field"<mobilenumberwhatsapp>"
+          Then User is Clicks the checkbox in Disable ordering function
+          Then User is Select reason in dropdown field
           Then User is Enter amount in minium order field"<minimumamount>"
           And User are Clicks checkbox in block order field 
           Then User is Click Radio button in apply delivery fees
-          And User is Clicks the increase counted Quantity of apply fees
+          And User is Clicks the increase counted Quantity of apply fees 
           And User are Enter the value in increment and decrement field
           Then User is First time Clicks in increment field
-          When User is Select orders in the dropdown field
+          When User is Select orders in the dropdown field          
           Then User are Clicks monday checkbox
           And User is Enter monday cutoff time"<mondaycutofftime>"
           Then User is Clicks monday time field
@@ -46,9 +45,10 @@ Scenario Outline: Verify the Suppliers page in view outlets Admin hub
           And User are Clicks save changes button 
           Then It should display in the Buyer outlets page
           
+    @dev    
     Examples:
-         |username         |  |password    ||suppliername ||outletid  ||billingid ||Email                 ||mobilenumbersms ||mobilenumberwhatsapp||minimumamount||mondaycutofftime||tuesdaycutofftime||vehiclenumber||recipientEmail   ||salespersonname| |phonenumber   ||notesfield                              |
-         |guna@zeemart.asia|  |2p$2s?QU    ||VENKAT MASALA||CGP_12345 ||ZM-456    ||velumani@zeemart.asia ||+65123456789    ||+65123456789        ||100          ||1               ||1                ||SIN-4178   ||velumani@zeemart.asia||velumani     | |+65123456789 ||In our company sales only masala product|
+         |username                     |  |password    ||suppliername ||outletid   ||billingid ||minimumamount||mondaycutofftime||tuesdaycutofftime||vehiclenumber ||recipientEmail   ||salespersonname| |phonenumber   ||notesfield                              |
+         |velumanisabari2009@gmail.com |  |#f=6T7uX    ||VELU MASALA1 ||Masala-12  ||ZM-456    ||100          ||1               ||1                ||SIN-4178      ||velumani@zeemart.asia||velumani     | |+65123456789 ||In our company sales only masala product|
 
 
  

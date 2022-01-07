@@ -51,7 +51,7 @@ public class Buyeroutletsmanagesettingspage {
 	private static WebElement Buyeroutletsmanagesettingspage_Selectusersearchbox;
 	
 
-	@FindBy(xpath = "//label[text()='velumani ganesh-ganeshvelumettur120092008@gmail.com']")
+	@FindBy(xpath = "//label[text()='Velu Naren-dolly@gmail.com']")
 	private static WebElement Buyeroutletsmanagesettingspage_Checkboxfirst;
 	
 	//@FindBy(xpath = "(//ul[@class='button_row mt-4']//a)[1]")
@@ -66,7 +66,7 @@ public class Buyeroutletsmanagesettingspage {
 	@FindBy(xpath = "(//input[@type='email'])[1]")
 	private static WebElement Buyeroutletsmanagesettingspage_Enterweeklyemail;
 	
-	@FindBy(xpath = "//select[@class='custom-select weekdays']")
+	@FindBy(xpath = "(//div[@class='form-group']//select)[3]")
 	private static WebElement Buyeroutletsmanagesettingspage_Selectcutofday;
 	
 	@FindBy(xpath = "(//input[@type='email'])[2]")
@@ -208,6 +208,8 @@ public class Buyeroutletsmanagesettingspage {
 	
 
 	public static void Selectcutofday()  {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,250)");
 		Buyeroutletsmanagesettingspage_Selectcutofday.click();
 		try { 
 			Thread.sleep(5000);
