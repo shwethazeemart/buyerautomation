@@ -98,8 +98,11 @@ public class Buyeroutletsviewsuppliers {
 	public void user_click_on_Download_marketlist() {
 	    Buyeroutletsviewsupplierspage.Clickondownloadmarketlist();
 	} 
-
-
+	
+	@Then("User click on below select all icon")
+	public void user_click_on_below_select_all_icon() {
+		Buyeroutletsviewsupplierspage.Clickonbelowselectallicon();
+	}
 
 	@Then("User click on check box clear button")
 	public void user_click_on_check_box_clear_button() {

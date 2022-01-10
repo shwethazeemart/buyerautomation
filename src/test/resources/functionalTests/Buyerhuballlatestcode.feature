@@ -204,7 +204,7 @@ Scenario Outline: Verify the Reports spending per Category page of Buyer panel
       |username                      | | password   ||name     |
       |buyerautomated1@gmail.com     | |!123456Zm   ||Beer     | 
       
-     
+      
 Scenario Outline: Verify the Reports spending per outlet page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -221,12 +221,12 @@ Scenario Outline: Verify the Reports spending per outlet page of Buyer panel
           Then User select date from calendar
           Then User click on This month from calendar
           Then User select date from calendar
-          And User click on Last year from calendar
+          Then User click on YTD from calendar          
           Then User select date from calendar
           Then User click on Custom range from calendar
           Then User click on apply in custom range
           Then User select date from calendar
-          Then User click on YTD from calendar
+          And User click on Last year from calendar
           And User click on filter
           Then User click on suppliers
           And User click on check box  
@@ -289,10 +289,6 @@ Scenario Outline: Verify the Reports spending per outlet page of Buyer panel
       | username                      | | password   |  |outletname      |
       | velumanieswaran2020@gmail.com | |!123456Zm   |  |velu masala2020 |
       
-      @devSecond   
-      Examples: 
-      | username                      | | password   |  |outletname      |
-      | buyerautomated3@gmail.com     | |!123456Zm   |  |velu masala2020 |
       
             
 Scenario Outline: Verify the Reports spending per SKU page of Buyer panel 
@@ -1043,7 +1039,7 @@ Scenario Outline: Verify the Inventory Record adjustment page of Buyer panel
          |buyerautomated3@gmail.com           |  |!123456Zm   ||   10   ||eswaranvelufound10  ||10     |   |velumanimissing10||10         ||velupromotions10||velutrnasferin10||velutransferout10||veluwastage10|
            
   
-          
+         
 Scenario Outline: Verify the Inventory SKU lisen page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -1204,7 +1200,7 @@ Scenario Outline: Verify the Outlets manage details page of Buyer panel
       | username                      | | password   ||Name       | |WeeklyEmail          ||Email                      ||outletemail                  |
       | buyerautomated3@gmail.com     | |!123456Zm   ||buyer      | |velumani@zeemart.asia||lingeshsabari2009@gmail.com||velumanieswaran2020@gmail.com| 
       
-       
+@Smoke       
 Scenario Outline: Verify the Outlets view suppliers page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>" 
@@ -1226,6 +1222,7 @@ Scenario Outline: Verify the Outlets view suppliers page of Buyer panel
           And User click on options icon
           Then User click on copy to another outlet
           And User click on select all icon
+          Then User click on below select all icon
           Then User click on ok button
           And User click on options icon
           Then User click on Download marketlist
@@ -1235,11 +1232,7 @@ Scenario Outline: Verify the Outlets view suppliers page of Buyer panel
       | username                          | | password   ||name      |
       | velumanieswaran2020@gmail.com     | |!123456Zm   ||100pipers   |            
       
-   @devSecond        
-    Examples: 
-      | username                      | | password   ||name      |
-      | buyerautomated3@gmail.com     | |!123456Zm   ||100pipers   |            
-    
+   
       
 Scenario Outline: Verify the Users Listing page of Buyer panel 
   
