@@ -265,9 +265,10 @@ public class DashboardPage {
 	}
 
 	public void clickBuyersnewuser() throws InterruptedException {
-		driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
+		Thread.sleep(7000);
 		button_Adminnewbuyeruser.click();
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -288,8 +289,9 @@ public class DashboardPage {
 				.executeScript("return document.readyState").equals("complete"));
 	}
 	
-	public void clickSuppliernewuser()  {
-		driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
+	public void clickSuppliernewuser() throws InterruptedException  {
+		//driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
+		Thread.sleep(7000);
 		button_Adminnewsupplieruser.click();
 		try {
 			Thread.sleep(5000);

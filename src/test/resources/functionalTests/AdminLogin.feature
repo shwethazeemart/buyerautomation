@@ -1,6 +1,6 @@
 Feature: verify Admin panel and test all the page
 
-@Smoke
+
 Scenario Outline: Verify the Suppliers page in view outlets Admin hub    
   
           Given User are available in login page
@@ -51,7 +51,6 @@ Scenario Outline: Verify the Suppliers page in view outlets Admin hub
          |velumanisabari2009@gmail.com |  |#f=6T7uX    ||VELU MASALA1 ||Masala-12  ||ZM-456    ||100          ||1               ||1                ||SIN-4178      ||velumani@zeemart.asia||velumani     | |+65123456789 ||In our company sales only masala product|
 
 
- 
 Scenario Outline: Verify the Users page new admin user in Admin panel    
   
           Given User are available in login page
@@ -80,11 +79,11 @@ Scenario Outline: Verify the Users page new admin user in Admin panel
          
           
     Examples:
-         |username         |  |password    ||firstname      ||lastname ||jobtitle ||Email                     ||mobilenumber|
-         |guna@zeemart.asia|  |2p$2s?QU    ||lingeshsabari  ||velumani ||ATZ test ||velumani20101978@gmail.com||+65123456789|
+         |username                       |  |password    ||firstname      ||lastname ||jobtitle ||Email                     ||mobilenumber|
+         |velumanisabari2009@gmail.com   |  |#f=6T7uX    ||lingeshsabari  ||velumani ||ATZ test ||velumani20101978@gmail.com||+65123456789|
 
 
-
+@Smoke
 Scenario Outline: Verify the Suppliers Link to the Buyer company in Admin panel    
   
           Given User are available in login page
@@ -102,8 +101,8 @@ Scenario Outline: Verify the Suppliers Link to the Buyer company in Admin panel
           
           
  Examples:
-         |username         |  |password    ||companyid|
-         |guna@zeemart.asia|  |2p$2s?QU    ||CGP123   |
+         |username                    |  |password    ||companyid|
+         |velumanisabari2009@gmail.com|  |#f=6T7uX    ||CGP123   |
 
 
 Scenario Outline: Verify the Suppliers page new supplier user in Admin panel    
@@ -128,8 +127,8 @@ Scenario Outline: Verify the Suppliers page new supplier user in Admin panel
           Then It should display in the Users Suppliers page
           
     Examples:
-         |username         |  |password    ||firstname      ||lastname ||Email                     ||mobilenumber   ||jobtitle |
-         |guna@zeemart.asia|  |2p$2s?QU    ||lingeshsabari  ||velumani ||velumani20101978@gmail.com||+65123456789   ||ATZ test |
+         |username                    |  |password    ||firstname      ||lastname ||Email                     ||mobilenumber   ||jobtitle |
+         |velumanisabari2009@gmail.com|  |#f=6T7uX   ||lingeshsabari  ||velumani ||velumani20101978@gmail.com||+65123456789   ||ATZ test |
 
 
 
