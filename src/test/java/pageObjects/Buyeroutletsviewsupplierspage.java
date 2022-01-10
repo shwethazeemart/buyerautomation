@@ -65,7 +65,7 @@ public class Buyeroutletsviewsupplierspage {
 	//@FindBy(xpath = "(//div[@class='datatable-body-cell-label']//div)[3]")
 	//private static WebElement Buyeroutletsviewsupplierspage_Copyanotheroutlet;
 	
-	@FindBy(xpath = "//button[text()='Select All']")
+	@FindBy(xpath = "//button[contains(@class,'btn btn-clear-blue')]")
 	private static WebElement Buyeroutletsviewsupplierspage_Selectallicon;
 	
 	@FindBy(xpath = "//button[text()=' OK ']")
@@ -74,6 +74,8 @@ public class Buyeroutletsviewsupplierspage {
 	//@FindBy(xpath = "(//div[@class='datatable-body-cell-label']//div)[3]")
 	//private static WebElement Buyeroutletsviewsupplierspage_Doenloadmarketlist;
 	
+	@FindBy(xpath = "//button[text()='Select all']")
+	private static WebElement Buyeroutletsviewsupplierspage_BelowSelectallicon;
 	 
 	
 	
@@ -223,19 +225,16 @@ public class Buyeroutletsviewsupplierspage {
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	public static void Clickonbelowselectallicon() {
+		Buyeroutletsviewsupplierspage_BelowSelectallicon.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
 	
 	
 	
