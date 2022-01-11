@@ -65,34 +65,34 @@ public class Adminbuyersoutletpage {
 	@FindBy(xpath = "//select[@formcontrolname='businessType']")
 	private static WebElement Adminbuyersoutletpage_FineDining;
 
-	@FindBy(xpath = "(//label[contains(@class,'custom-control custom-checkbox')])[1]")
+	@FindBy(xpath = "(//input[@type='checkbox'])[3]")
 	private static WebElement Adminbuyersoutletpage_American;
 
-	@FindBy(xpath = "(//label[contains(@class,'custom-control custom-checkbox')])[3]")
+	@FindBy(xpath = "(//span[text()=' Australia / New Zealand']/following::input)[1]")
 	private static WebElement Adminbuyersoutletpage_Bakery;
 
-	@FindBy(xpath = "(//label[contains(@class,'custom-control custom-checkbox')])[5]")
+	@FindBy(xpath = "(//span[text()=' Australia / New Zealand']/following::input)[3]")
 	private static WebElement Adminbuyersoutletpage_BBQ;
 
-	@FindBy(xpath = "(//div[@class='mb-2 col-md-6 ng-star-inserted'])[25]")
+	@FindBy(xpath = "(//span[text()=' Others']/following::input)[2]")
 	private static WebElement Adminbuyersoutletpage_Peranakan;
 
-	@FindBy(xpath = "(//div[@class='mb-2 col-md-6 ng-star-inserted'])[27]")
+	@FindBy(xpath = "(//span[text()=' Others']/following::input)[4]")
 	private static WebElement Adminbuyersoutletpage_SaladHealthy;
 
-	@FindBy(xpath = "(//div[@class='mb-2 col-md-6 ng-star-inserted'])[33]")
+	@FindBy(xpath = "(//span[text()=' Thai']/following::input)[1]")
 	private static WebElement Adminbuyersoutletpage_Vegetarian;
 
-	@FindBy(xpath = "(//div[@class='mb-2 col-md-6 ng-star-inserted'])[35]")
+	@FindBy(xpath = "(//span[text()=' Vietnamese']/following::input)[1]")
 	private static WebElement Adminbuyersoutletpage_Halal;
 
-	@FindBy(xpath = "(//div[@class='mb-2 col-md-6 ng-star-inserted'])[37]")
+	@FindBy(xpath = "(//span[text()=' Vietnamese']/following::input)[3]")
 	private static WebElement Adminbuyersoutletpage_Vegetarianfriendly;
 
 	//@FindBy(xpath = "//input[@formcontrolname='name']")
 	//private static WebElement Adminbuyersoutletpage_Tagfield;
 
-	@FindBy(xpath = "//a[@class='text-primary mr-5']")
+	@FindBy(xpath = "//a[text()='Save outlet only']")
 	private static WebElement Adminbuyersoutletpage_Saveoutlet;
 
 	@FindBy(xpath = "//a[@class='tab active']")
@@ -105,9 +105,6 @@ public class Adminbuyersoutletpage {
 	private static WebElement Adminbuyersoutletpage_Searchbutton;
 	
 	
-
-
-
 	public void Clicks_in_Add_new_by_dropdown() {
 		Adminbuyersoutletpage_Addnewbdropdown.click();
 		try {
@@ -130,24 +127,7 @@ public class Adminbuyersoutletpage {
 
 	}
 
-	/*public static void click_VENKATMASALA() {
-		Adminbuyersoutletpage_VENKATMASALA.click();
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-		}
-		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
-				.executeScript("return document.readyState").equals("complete"));
-
-	}
-	public static WebElement getDropDownOwnerElement() {
-		return Adminbuyersoutletpage_VENKATMASALA;
-	}*/
-
-
-
-
-	public static void Select_Company() throws InterruptedException {
+		public static void Select_Company() throws InterruptedException {
 		driver.findElement(By.xpath("//select[@id='companyId']")).sendKeys("VELU MASALA",Keys.ENTER);
 		Thread.sleep(5000);
 		try {
@@ -207,7 +187,7 @@ public class Adminbuyersoutletpage {
 
 	public void upload_the_image() throws InterruptedException {
 		WebElement uploadBox=driver.findElement(By.xpath("//input[@name='file[]']"));
-		uploadBox.sendKeys("E:\\Zeemart All\\LIC Bill\\file_example_JPG_5mb.jpg");
+		uploadBox.sendKeys("E:/Zeemart/download (1).jpg");
 		Thread.sleep(5000);
 		try {
 			Thread.sleep(5000);
@@ -309,6 +289,8 @@ public class Adminbuyersoutletpage {
 	}
 
 	public void checkbox_of_Peranakan_other_cuisine_type() {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,1000)");
 		Adminbuyersoutletpage_Peranakan.click();
 		try {
 			Thread.sleep(5000);
@@ -363,7 +345,7 @@ public class Adminbuyersoutletpage {
 	}
 
 	public void Tag_field() {
-		driver.findElement(By.xpath("(//input[@role='combobox'])[1]")).sendKeys("Velu",Keys.ENTER);
+		driver.findElement(By.xpath("//div[@role='combobox']//input[1]")).sendKeys("Velu",Keys.ENTER);
 		/*Adminbuyersoutletpage_Tagfield.sendKeys(tagname);*/
 		try {
 			Thread.sleep(5000);

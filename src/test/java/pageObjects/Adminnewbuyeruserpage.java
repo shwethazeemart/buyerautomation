@@ -96,7 +96,7 @@ public class Adminnewbuyeruserpage {
 				.executeScript("return document.readyState").equals("complete"));
 	}
 	public static void Select_Company() throws InterruptedException {
-		driver.findElement(By.xpath("//input[@role='combobox']")).sendKeys("VENKAT MASALA",Keys.ENTER);
+		driver.findElement(By.xpath("//div[@role='combobox']//input")).sendKeys("VELU MASALA",Keys.ENTER);
 		Thread.sleep(5000);
 		try {
 			Thread.sleep(5000);
@@ -108,7 +108,7 @@ public class Adminnewbuyeruserpage {
 	}
 
 	public static void Select_Outlet() throws InterruptedException {
-		driver.findElement(By.xpath("(//input[@role='combobox'])[2]")).sendKeys("venkatmasala220",Keys.ENTER);
+		driver.findElement(By.xpath("(//div[@role='combobox']//input)[2]")).sendKeys("Sakthimasala100",Keys.ENTER);
 		Thread.sleep(5000);
 		try {
 			Thread.sleep(5000);
@@ -199,7 +199,7 @@ public class Adminnewbuyeruserpage {
 
 	public void upload_the_profilephoto() throws InterruptedException {
 		WebElement uploadBox=driver.findElement(By.xpath("//input[@name='file']"));
-		uploadBox.sendKeys("E:\\Zeemart All\\LIC Bill\\file_example_JPG_5mb.jpg");
+		uploadBox.sendKeys("E:/Zeemart/download (1).jpg");
 		Thread.sleep(5000);
 		try {
 			Thread.sleep(5000);

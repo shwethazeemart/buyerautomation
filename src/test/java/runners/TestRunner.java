@@ -11,10 +11,11 @@ import io.cucumber.junit.CucumberOptions;
 
 
 
-@CucumberOptions(strict = true, features = "src/test/resources/functionalTests/Buyerhuballlatestcode.feature",
+@CucumberOptions(strict = true, features = "src/test/resources/functionalTests/AdminLogin.feature",
 
 
-tags ="@dev",
+tags ="@Smoke",
+
 glue = { "stepDefinitions" },monochrome=true,dryRun=false,
 plugin = {"json:target/cucumber.json"})
  

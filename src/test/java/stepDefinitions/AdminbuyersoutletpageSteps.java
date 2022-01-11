@@ -55,12 +55,7 @@ public class AdminbuyersoutletpageSteps {
 	@Then("User User are Select Company in the autocomplete text box")
 	public void user_User_are_Select_Company_in_the_autocomplete_text_box() throws InterruptedException {
 		Adminbuyersoutletpage.Select_Company();
-		//WebElement VENKATMASALA = Adminbuyersoutletpage.getDropDownOwnerElement();
-		//Select selectcompany=new Select(VENKATMASALA); 
-		//selectcompany.selectByVisibleText("VENKATMASALA");
-	
-		//Select drpCountry = new Select(driver.findElement(By.name("country")));
-		//drpCountry.selectByVisibleText("ANTARCTICA")
+		
 	}
 
 	@Then("User is Enter Outlet name in the Outlet field{string}")

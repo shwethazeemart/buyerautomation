@@ -187,8 +187,8 @@ Scenario Outline: Verify the Suppliers subscription page in Admin panel
           Then It should display in the supplier home page field
           
     Examples:
-         |username         |  |password    ||companyname    ||tradingname   ||registernumber  ||postcode ||addressline1             ||addressline2 ||supplierEmail              ||supplierphone||shortdescription  ||longdescription                                     ||enter email||GSTvalue||reportEmail                  ||upcomingEmail              ||percentage||fixedfees||activityEmail              |
-         |guna@zeemart.asia|  |2p$2s?QU    ||VENKAT MASALA  ||Masala product||1234567         ||638312   ||261,madheswarankoilstreet||Singapore    ||lingeshsabari2009@gmail.com||+65123456789 ||Masala distributor||Venkat masala company manufacture only masala product||velumani@zeemart.asia||7       ||velumanieswaran2020@gmail.com||lingeshsabari2009@gmail.com||2         ||100      ||lingeshsabari2009@gmail.com|
+         |username                    |  |password   ||companyname ||tradingname   ||registernumber  ||postcode ||addressline1             ||addressline2 ||supplierEmail              ||supplierphone||shortdescription  ||longdescription                                     ||enter email||GSTvalue||reportEmail                  ||upcomingEmail              ||percentage||fixedfees||activityEmail              |
+         |velumanisabari2009@gmail.com|  |#f=6T7uX   ||Naga        ||Masala product||1234567         ||638312   ||261,madheswarankoilstreet||Singapore    ||lingeshsabari2009@gmail.com||+65123456789 ||Masala distributor||Venkat masala company manufacture only masala product||velumani@zeemart.asia||7       ||velumanieswaran2020@gmail.com||lingeshsabari2009@gmail.com||2         ||100      ||lingeshsabari2009@gmail.com|
 
 
 Scenario Outline: Verify the Users page of New Buyer user in Admin panel    
@@ -216,11 +216,11 @@ Scenario Outline: Verify the Users page of New Buyer user in Admin panel
           
           
     Examples:
-         |username         |  |password    ||firstname ||lastname ||jobtitle  ||Email                     ||mobilenumber|               
-         |guna@zeemart.asia|  |2p$2s?QU    ||velumani  ||eswaran  ||ATZ       ||velumani201978@gmail.com  ||+6512345678 |
+         |username                     |  |password    ||firstname ||lastname ||jobtitle  ||Email                     ||mobilenumber|               
+         |velumanisabari2009@gmail.com |  |#f=6T7uX    ||Shwetha   ||RM       ||ATZ       ||velumani201978@gmail.com  ||+6512345678 |
 
   
-   
+@Smoke 
 Scenario Outline: Verify the Buyers outlets page of Admin panel   
   
           Given User are available in login page
@@ -257,8 +257,8 @@ Scenario Outline: Verify the Buyers outlets page of Admin panel
           
           
     Examples:
-         |username         |  |password    ||outletname     ||postcode ||addressline1         ||addressline2||outletEmail                 ||mobilenumber||outlet       |
-         |guna@zeemart.asia|  |2p$2s?QU    ||venkatmasala250||638327   ||madheswarankoilstreet||singapore   ||lingeshsabari2009@gmail.com ||+6512345679 ||venkatmasal250|
+         |username                     |  |password    ||outletname     ||postcode ||addressline1         ||addressline2||outletEmail                 ||mobilenumber||outlet       |
+         |velumanisabari2009@gmail.com |  |#f=6T7uX    ||venkatmasala250||638327   ||madheswarankoilstreet||singapore   ||lingeshsabari2009@gmail.com ||+6512345679 ||venkatmasal250|
 
 
 
@@ -288,7 +288,7 @@ Scenario Outline: Verify the Invoice Process page of Admin panel
           
     Examples:
          |username                     |  |password    ||ordernumber ||invoicenumber||deliveryfess|
-         |guna@zeemart.asia            |  |2p$2s?QU    ||202012010002||INV-2020120  ||10          | 
+         |velumanisabari2009@gmail.com |  |#f=6T7uX    ||202012010002||INV-2020120  ||10          | 
 
 
    
