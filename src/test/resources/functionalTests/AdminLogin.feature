@@ -83,7 +83,7 @@ Scenario Outline: Verify the Users page new admin user in Admin panel
          |velumanisabari2009@gmail.com   |  |#f=6T7uX    ||lingeshsabari  ||velumani ||ATZ test ||velumani20101978@gmail.com||+65123456789|
 
 
-@Smoke
+
 Scenario Outline: Verify the Suppliers Link to the Buyer company in Admin panel    
   
           Given User are available in login page
