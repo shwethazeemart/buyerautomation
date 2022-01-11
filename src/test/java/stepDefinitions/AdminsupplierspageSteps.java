@@ -170,7 +170,7 @@ public class AdminsupplierspageSteps {
 	}
 
 	@And("User is Clicks set in the POP message in the Negative Report frequency field")
-	public void user_is_Clicks_set_in_the_POP_message_in_the_Negative_Report_frequency_field() {
+	public void user_is_Clicks_set_in_the_POP_message_in_the_Negative_Report_frequency_field() throws InterruptedException {
 	    adminsupplierspage.Clicks_setinthePOPmessageintheNegativeReport();    
 	}
 

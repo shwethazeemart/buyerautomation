@@ -59,7 +59,7 @@ public class DashboardPage {
 	@FindBy(xpath = "//span[@id='sideMenu_Invoices']")
 	private  WebElement button_AdminInvoices;
 
-	@FindBy(xpath = "//a[@ng-reflect-router-link='/buyers']//span[1]")
+	@FindBy(xpath = "//span[@id='sideMenu_Buyers']")
 	private static WebElement button_AdminBuyers;
 
 	@FindBy(xpath = "//span[@id='sideMenu_Users']")
@@ -253,9 +253,9 @@ public class DashboardPage {
 	}
 
 	public void click_AdminBuyers() throws InterruptedException {
-		driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
-		button_AdminBuyers.click();
+		//driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
 		Thread.sleep(5000);
+		button_AdminBuyers.click();		
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -265,9 +265,10 @@ public class DashboardPage {
 	}
 
 	public void clickBuyersnewuser() throws InterruptedException {
-		driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
+		Thread.sleep(7000);
 		button_Adminnewbuyeruser.click();
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -288,8 +289,9 @@ public class DashboardPage {
 				.executeScript("return document.readyState").equals("complete"));
 	}
 	
-	public void clickSuppliernewuser()  {
-		driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
+	public void clickSuppliernewuser() throws InterruptedException  {
+		//driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
+		Thread.sleep(5000);
 		button_Adminnewsupplieruser.click();
 		try {
 			Thread.sleep(5000);

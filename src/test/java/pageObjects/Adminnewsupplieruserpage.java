@@ -167,7 +167,7 @@ public class Adminnewsupplieruserpage {
 
 	public void upload_the_profilephoto() throws InterruptedException {
 		WebElement uploadBox=driver.findElement(By.xpath("//input[@name='file[]']"));
-		uploadBox.sendKeys("E:\\Zeemart All\\LIC Bill\\file_example_JPG_5mb.jpg");
+		uploadBox.sendKeys("E:/Zeemart/download (1).jpg");
 		Thread.sleep(5000);
 		try {
 			Thread.sleep(5000);

@@ -62,9 +62,9 @@ public class Adminnewsupplierusersteps {
 
 	@When("User are Select supplier in the supplier dropdown")
 	public void user_are_Select_supplier_in_the_supplier_dropdown() {
-		WebElement VENKATMASALA = Adminnewsupplieruserpage.getDropDownsupplierElement();
-		Select select=new Select(VENKATMASALA);
-		select.selectByVisibleText("VENKAT MASALA");
+		WebElement VELUMASALA2 = Adminnewsupplieruserpage.getDropDownsupplierElement();
+		Select select=new Select(VELUMASALA2);
+		select.selectByVisibleText("VELU MASALA2");
 	}
 
 	@Then("User is Enter First name in the new supplier user page{string}")
