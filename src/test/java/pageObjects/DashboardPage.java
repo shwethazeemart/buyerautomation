@@ -241,9 +241,10 @@ public class DashboardPage {
 	}
 	
 	public void clickAdminInvoices() throws InterruptedException {
-		driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
-		button_AdminInvoices.click();
+		//driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
 		Thread.sleep(5000);
+		button_AdminInvoices.click();
+		
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -254,7 +255,7 @@ public class DashboardPage {
 
 	public void click_AdminBuyers() throws InterruptedException {
 		//driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
-		Thread.sleep(5000);
+		Thread.sleep(7000);
 		button_AdminBuyers.click();		
 		try {
 			Thread.sleep(5000);

@@ -35,7 +35,7 @@ import org.openqa.selenium.By;
 
 		}
 		
-		@FindBy(xpath = "(//div[@class='form-check pato-2']//label)[1]")
+		@FindBy(xpath = "//input[@formcontrolname='sgGovtGrant']")
 		private static WebElement Adminbuyeroutletsubscriptionpage_sg_government_grant_check_box;
 
 	
@@ -66,7 +66,7 @@ import org.openqa.selenium.By;
 		@FindBy(xpath = "(//a[contains(@class,'zmdropDownBtn')])[1]")
 		private static WebElement Adminbuyeroutletsubscriptionpage_Action_dropdown;
 		
-		@FindBy(xpath = "//div[@ng-reflect-click-outside-enabled='true']//a[1]")
+		@FindBy(xpath = "//a[text()='Edit']")
 		private static WebElement Adminbuyeroutletsubscriptionpage_Edit_button;
 		
 		@FindBy(xpath = "//button[@type='submit']")
@@ -74,6 +74,8 @@ import org.openqa.selenium.By;
 		
 		
 		public void click_on_the_sg_government_grant_check_box() {
+			JavascriptExecutor jse = (JavascriptExecutor)driver;
+			jse.executeScript("window.scrollBy(0,250)");
 			Adminbuyeroutletsubscriptionpage_sg_government_grant_check_box.click();
 			try {
 				Thread.sleep(5000);
@@ -207,7 +209,9 @@ import org.openqa.selenium.By;
 		}
 
 		public void Enter_outlet_name_in_autocomplete_text_box() throws InterruptedException {
-			driver.findElement(By.xpath("(//input[@role='combobox'])[2]")).sendKeys("sstmasala20",Keys.ENTER);
+			JavascriptExecutor jse = (JavascriptExecutor)driver;
+			jse.executeScript("window.scrollBy(0,250)");
+			driver.findElement(By.xpath("(//div[@role='combobox']//input)[2]")).sendKeys("sstmasala20",Keys.ENTER);
 			Thread.sleep(5000);
 			try {
 				Thread.sleep(5000);

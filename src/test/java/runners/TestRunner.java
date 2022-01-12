@@ -11,7 +11,7 @@ import io.cucumber.junit.CucumberOptions;
 
 
 
-@CucumberOptions(strict = true, features = "src/test/resources/functionalTests/Buyerhuballlatestcode.feature",
+@CucumberOptions(strict = true, features = "src/test/resources/functionalTests/AdminLogin.feature",
 
 
 tags ="@Smoke",

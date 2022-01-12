@@ -220,7 +220,7 @@ Scenario Outline: Verify the Users page of New Buyer user in Admin panel
          |velumanisabari2009@gmail.com |  |#f=6T7uX    ||Shwetha   ||RM       ||ATZ       ||velumani201978@gmail.com  ||+6512345678 |
 
   
-@Smoke 
+ 
 Scenario Outline: Verify the Buyers outlets page of Admin panel   
   
           Given User are available in login page
@@ -273,7 +273,7 @@ Scenario Outline: Verify the Invoice Process page of Admin panel
           And User Clicks on Admin Invoices in the side navigation menubar 
           Then User is Clicks in Sort by dropdown
           And User are Clicks in Newest first
-          Then User is Clicks the Zeewebteseroutlet of process button
+          Then User is Clicks the outlet process button
           Then User is Enter Order number in the Order number field"<ordernumber>"
           And User are Clicks Use data button
           Then User is Clicks Yes processed POPUP message
@@ -304,14 +304,13 @@ Scenario Outline: Verify the Upload Invoice page of Admin panel
           Then User is Clicks in Upload invoice
           And User are Select outlet in the autocomplete text box
           Then User is Clicks the upload file
-          Then User is Clicks the Upload button
-          Then It should display the particular image in invoices Pending icon  
+          Then User is Clicks the Done button
           
     Examples:
          |username                     |  |password    |
-         |guna@zeemart.asia            |  |2p$2s?QU    |
+         |velumanisabari2009@gmail.com |  |#f=6T7uX    |
 
-
+@Smoke
 Scenario Outline: Verify the Buyers outlets subscripiton page of Admin panel   
   
           Given User are available in login page
@@ -362,5 +361,5 @@ Scenario Outline: Verify the Buyers outlets subscripiton page of Admin panel
           Then User Clicks on Inventory in the side navigation menubar
           
   Examples:
-         |username         |  |password    ||outletname      ||postcode ||addressline1         ||addressline2||outletEmail                 ||mobilenumber||outlet       ||entername      ||enter email|          |Buyerusername                ||Buyerpassword |
-         |guna@zeemart.asia|  |2p$2s?QU    ||sstmasala20   ||638327   ||madheswarankoilstreet||singapore   ||lingeshsabari2009@gmail.com ||+6512345679 ||SST250       ||velu mani2     ||velumani@zeemart.asia||velumanieswaran2020@gmail.com||!123456Zm     |
+         |username                     |  |password    ||outletname      ||postcode ||addressline1         ||addressline2||outletEmail                 ||mobilenumber||outlet       ||entername      ||enter email|          |Buyerusername                ||Buyerpassword |
+         |velumanisabari2009@gmail.com |  |#f=6T7uX    ||sstmasala20   ||638327     ||madheswarankoilstreet||singapore   ||lingeshsabari2009@gmail.com ||+6512345679 ||SST250       ||velu mani2     ||velumani@zeemart.asia||velumanieswaran2020@gmail.com||!123456Zm     |

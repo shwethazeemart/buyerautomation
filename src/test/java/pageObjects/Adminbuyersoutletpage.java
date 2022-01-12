@@ -256,6 +256,8 @@ public class Adminbuyersoutletpage {
 	}
 
 	public void checkbox_of_American_type_of_cuisine() {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,250)");
 		Adminbuyersoutletpage_American.click();
 		try {
 			Thread.sleep(5000);
