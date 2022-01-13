@@ -58,6 +58,9 @@ public class DashboardPage {
 
 	@FindBy(xpath = "//span[@id='sideMenu_Invoices']")
 	private  WebElement button_AdminInvoices;
+	
+	@FindBy(xpath = "//span[@id='sideMenu_Orders']")
+	private  WebElement button_AdminOrders;	
 
 	@FindBy(xpath = "//span[@id='sideMenu_Buyers']")
 	private static WebElement button_AdminBuyers;
@@ -253,6 +256,19 @@ public class DashboardPage {
 				.executeScript("return document.readyState").equals("complete"));
 	}
 
+	public void clickAdminOrders() throws InterruptedException {
+		//driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
+		Thread.sleep(5000);
+		button_AdminOrders.click();
+		
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 50).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+	
 	public void click_AdminBuyers() throws InterruptedException {
 		//driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
 		Thread.sleep(7000);

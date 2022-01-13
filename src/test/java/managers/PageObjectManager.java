@@ -53,6 +53,7 @@ import stepDefinitions.SucessfullyLoginPage;
 import stepDefinitions.SupplierDirectoryProduct;
 import stepDefinitions.UserspageSteps;
 import pageObjects.AdminInvoiceuploadpage;
+import pageObjects.AdminOrderListingPage;
 import pageObjects.Adminbuyerlinktothecompanypage;
 import pageObjects.Adminbuyeroutletsubscriptionpage;
 import pageObjects.Adminbuyersoutletpage;
@@ -173,6 +174,7 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private SupplierCompanySettingsPage SupplierCompanySettings;
     private BuyerOrderDeliveryFilterpage BuyerOrderDeliveryFilter;
     private BuyerInventoryTagpage BuyerInventoryTag;
+    private AdminOrderListingPage AdminOrderListing;
 
 
 
@@ -567,6 +569,11 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 		return (BuyerInventoryTag == null) ? (BuyerInventoryTag = new BuyerInventoryTagpage(driver)) : BuyerInventoryTag;
 		
 
+	}
+
+
+	public AdminOrderListingPage getAdminOrderListingPage() {
+		return (AdminOrderListing == null) ? (AdminOrderListing = new AdminOrderListingPage(driver)) : AdminOrderListing;
 	} 
 
 

@@ -310,7 +310,7 @@ Scenario Outline: Verify the Upload Invoice page of Admin panel
          |username                     |  |password    |
          |velumanisabari2009@gmail.com |  |#f=6T7uX    |
 
-@Smoke
+
 Scenario Outline: Verify the Buyers outlets subscripiton page of Admin panel   
   
           Given User are available in login page
@@ -363,3 +363,70 @@ Scenario Outline: Verify the Buyers outlets subscripiton page of Admin panel
   Examples:
          |username                     |  |password    ||outletname      ||postcode ||addressline1         ||addressline2||outletEmail                 ||mobilenumber||outlet       ||entername      ||enter email|          |Buyerusername                ||Buyerpassword |
          |velumanisabari2009@gmail.com |  |#f=6T7uX    ||sstmasala20   ||638327     ||madheswarankoilstreet||singapore   ||lingeshsabari2009@gmail.com ||+6512345679 ||SST250       ||velu mani2     ||velumani@zeemart.asia||velumanieswaran2020@gmail.com||!123456Zm     |
+
+
+@Smoke   
+Scenario Outline: Verify the Order listing page
+  
+          Given User are available in login page
+          When User is enter exact username"<username>"
+          And User is enter exact password"<password>"
+          When User are Select country in the autocomplete text box
+          And User is press the Admin login button 
+          When User Clicks on Admin Orders in the side navigation menubar
+          Then User Clicks on the order ID
+          Then User Enter the order ID"<orderid>"
+          Then User select Delivery date from the calendar
+          Then User select the Placed on from the calendar
+          Then User Click on the Search icon
+          Then User Click on the first checkbox
+          Then User Click on the Clear button
+          Then User Click on Filter icon
+          Then User click the Oultet
+          And User click the Select All option
+          Then User click on the Apply button
+          Then User click on Filter icon
+          Then User click the Reset button
+          Then User click on Filter icon
+          Then User click the Supplier
+          And User click the Select All option
+          Then User click on the Apply button
+          Then User click on Filter icon
+          Then User click the Reset button
+          Then User Click on Filter icon
+          Then User click the Order status
+          And User click the Select All option
+          Then User click on the Apply button
+          Then User click on Filter icon
+          Then User click the Reset button
+          Then User click on Filter icon
+          Then User click the Invoicing status
+          And User click the Select All option
+          Then User click on the Apply button
+          Then User click on Filter icon
+          Then User click the Reset button
+          Then User Click on Filter icon
+          Then User click the Order type
+          And User click the Select All option
+          Then User click on the Apply button
+          Then User click on Filter icon
+          Then User click the Reset button
+          
+          
+          Examples:
+         |username                     |  |password    | |orderid       |
+         |velumanisabari2009@gmail.com |  |#f=6T7uX    | |202201130007  |
+
+          
+          
+
+          
+          
+          
+          
+          
+          
+          
+     
+         
+         
