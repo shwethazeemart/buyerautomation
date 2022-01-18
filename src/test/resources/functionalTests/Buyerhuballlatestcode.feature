@@ -1,5 +1,6 @@
 Feature: Verify Buyer hub Entire screen latest test cases
 
+
 Scenario Outline: Verify the Dashboard lisen page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -44,7 +45,6 @@ Scenario Outline: Verify the Dashboard lisen page of Buyer panel
           And User click on This week icon
           Then User click on Last week icon
           And User click on Last month icon
-          Then User click on view all spending by supplier
          
          @dev 
          Examples:
@@ -539,7 +539,7 @@ Scenario Outline: Verify the Reports spending per tag page of Buyer panel
       
       
 
-@Smoke 
+
 Scenario Outline: Verify the New Order page of Buyer panel
          Given User is on Login Page
          When User enter exact username"<username>"
@@ -1076,7 +1076,7 @@ Scenario Outline: Verify the Inventory SKU lisen page of Buyer panel
          |username                        |  |password    | 
          |buyerautomated3@gmail.com       |  |!123456Zm   |
          
-      
+@Smoke      
 Scenario Outline: Verify the Outlets page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>" 
@@ -1093,11 +1093,7 @@ Scenario Outline: Verify the Outlets page of Buyer panel
       | username                          | | password  |
       | velumanieswaran2020@gmail.com     | |!123456Zm   |
       
-      @devSecond       
-    Examples: 
-      | username                      | | password  |
-      | buyerautomated3@gmail.com     | |!123456Zm   |
-
+    
 
 
 Scenario Outline: Verify the Outlets listing page of Buyer panel 

@@ -385,9 +385,6 @@ public class Buyerdashboardlisenpage {
 		
 	}
 	
-	
-	
-	
 
 	public static void Clickonsupplier() {
 		Buyerdashboardlisenpage_supplier.click();
