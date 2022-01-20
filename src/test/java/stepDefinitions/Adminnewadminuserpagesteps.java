@@ -44,7 +44,7 @@ public class Adminnewadminuserpagesteps {
 	
 	
 	@When("User Clicks in Admin panel users in the side navigation menubar")
-	public void user_Clicks_in_Admin_panel_users_in_the_side_navigation_menubar()  {
+	public void user_Clicks_in_Admin_panel_users_in_the_side_navigation_menubar() throws InterruptedException  {
 	    dashboradpage.clickSuppliernewuser();
 	}
 

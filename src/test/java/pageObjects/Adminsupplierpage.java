@@ -91,10 +91,10 @@ public class Adminsupplierpage {
 	@FindBy(xpath = "(//div[@class='male-1 width_130px']//label)[1]")
 	private static WebElement Adminsupplierpage_Checkboxdailyat;
 	
-	@FindBy(xpath = "//input[@ng-reflect-name='reportReorderDailyAt']")
+	@FindBy(xpath = "//div[contains(@class,'mari-5 apply_fee_input')]//input[1]")
 	private static WebElement Adminsupplierpage_textboxdailyat; 
 	
-	@FindBy(xpath = "//span[text()='Set']")
+	@FindBy(xpath = "(//span[contains(@class,'owl-dt-control-content owl-dt-control-button-content')])[2]")
 	private static WebElement Adminsupplierpage_setinthePOPmessageintheNegativeReport;
 	
 	@FindBy(xpath = "(//div[@class='male-1 width_130px']//label)[2]")
@@ -103,10 +103,10 @@ public class Adminsupplierpage {
 	@FindBy(xpath = "//select[@formcontrolname='reportReorderWeeklyOn']")
 	private static WebElement Adminsupplierpage_Day;
 	
-	@FindBy(xpath = "//input[@ng-reflect-name='reportReorderWeeklyAt']")
+	@FindBy(xpath = "(//div[contains(@class,'apply_fee_input time_col_4')]//input)[2]")
 	private static WebElement Adminsupplierpage_textboxdayfield;
 	
-	@FindBy(xpath = "//span[text()='Set']")
+	@FindBy(xpath = "(//span[contains(@class,'owl-dt-control-content owl-dt-control-button-content')])[2]")
 	private static WebElement Adminsupplierpage_setinthePOPmessage;
 	
 	@FindBy(xpath = "//input[@formcontrolname='reportDeliveryEmails']")
@@ -121,10 +121,10 @@ public class Adminsupplierpage {
 	@FindBy(xpath = "//select[@formcontrolname='reportDeliveryWeeklyOn']")
 	private static WebElement Adminsupplierpage_Monday;
 	
-	@FindBy(xpath = "//input[@ng-reflect-name='reportDeliveryWeeklyAt']")
+	@FindBy(xpath = "(//div[contains(@class,'mari-1 apply_fee_input')]//input)[2]")
 	private static WebElement Adminsupplierpage_Text_box_in_the_day_field;
 	
-	@FindBy(xpath = "//span[text()='Set']")
+	@FindBy(xpath = "(//span[contains(@class,'owl-dt-control-content owl-dt-control-button-content')])[2]")
 	private static WebElement Adminsupplierpage_set_in_the_POP_message;
 	
 	@FindBy(xpath = "(//div[@class='form-check'])[8] ")
@@ -248,7 +248,7 @@ public class Adminsupplierpage {
 	
 	public void upload_the_profileimage() throws InterruptedException {
 		WebElement uploadBox=driver.findElement(By.xpath("//input[@name='file[]']"));
-		uploadBox.sendKeys("E:\\Zeemart All\\LIC Bill\\file_example_JPG_5mb.jpg");
+		uploadBox.sendKeys("E:/Zeemart/download (1).jpg");
 		Thread.sleep(5000);
 		try {
 			Thread.sleep(5000);
@@ -413,7 +413,8 @@ public class Adminsupplierpage {
 				.executeScript("return document.readyState").equals("complete"));
 	}
 
-	public void Clicks_setinthePOPmessageintheNegativeReport() {
+	public void Clicks_setinthePOPmessageintheNegativeReport() throws InterruptedException {
+		Thread.sleep(5000);
 		Adminsupplierpage_setinthePOPmessageintheNegativeReport.click();
 		try {
 			Thread.sleep(5000);
