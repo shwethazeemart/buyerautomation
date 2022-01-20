@@ -835,18 +835,13 @@ Scenario Outline: Verify the Orders lisen page of Buyer panel
     Then User click on search icom in second time
     
     
-    @dev
-  
+    @dev  
     Examples: 
       | username                         || loginPassword|
       | velumanieswaran2020@gmail.com    || !123456Zm    | 
    
   
-   @devSecond 
-    Examples: 
-      | username                         || loginPassword|
-      | buyerautomated3@gmail.com        || !123456Zm    | 
-
+  
 
 Scenario Outline: Verify the Invoices upload page of Buyer panel
          Given User is on Login Page
@@ -1076,7 +1071,7 @@ Scenario Outline: Verify the Inventory SKU lisen page of Buyer panel
          |username                        |  |password    | 
          |buyerautomated3@gmail.com       |  |!123456Zm   |
          
-@Smoke      
+      
 Scenario Outline: Verify the Outlets page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>" 
@@ -1132,7 +1127,7 @@ Scenario Outline: Verify the Outlets listing page of Buyer panel
       | username                      | | password   ||confirm||outletname     |
       | buyerautomated3@gmail.com     | |!123456Zm   ||DISABLE||velu masala2020|
       
-      
+     
 Scenario Outline: Verify the Outlets manage details page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>" 
@@ -1152,10 +1147,6 @@ Scenario Outline: Verify the Outlets manage details page of Buyer panel
       | username                          | | password   ||Email                      |
       |velumanieswaran2020@gmail.com      | |!123456Zm   ||lingeshsabari2009@gmail.com|
       
-   @devSecond       
-    Examples: 
-      | username                      | | password   ||Email                      |
-      |buyerautomated3@gmail.com      | |!123456Zm   ||lingeshsabari2009@gmail.com|
       
        
  Scenario Outline: Verify the Outlets settings page of Buyer panel 
@@ -1192,7 +1183,7 @@ Scenario Outline: Verify the Outlets manage details page of Buyer panel
       | username                      | | password   ||Name       | |WeeklyEmail          ||Email                      ||outletemail                  |
       | buyerautomated3@gmail.com     | |!123456Zm   ||buyer      | |velumani@zeemart.asia||lingeshsabari2009@gmail.com||velumanieswaran2020@gmail.com| 
       
-      
+     
 Scenario Outline: Verify the Outlets view suppliers page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>" 
