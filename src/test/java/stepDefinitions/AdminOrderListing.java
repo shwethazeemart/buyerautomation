@@ -50,105 +50,89 @@ public class AdminOrderListing {
 
 	@Then("User Clicks on the order ID")
 	public void user_Clicks_on_the_order_ID() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
+		AdminOrderListingPage.ClickOrderID();
+		}
 
-	@Then("User Enter the order ID\"{int}\"")
-	public void user_Enter_the_order_ID(Integer int1) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
+	@Then("User Enter the order ID{string}")
+	public void user_Enter_the_order_ID(String orderid) {
+		AdminOrderListingPage.EnterOrderID(orderid);
+   }
 
 	@Then("User select Delivery date from the calendar")
 	public void user_select_Delivery_date_from_the_calendar() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
+		AdminOrderListingPage.SelectDatefromCalendar();
+		
+}
 
 	@Then("User select the Placed on from the calendar")
 	public void user_select_the_Placed_on_from_the_calendar() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		AdminOrderListingPage.SelectPlacedOnfromCalendar();
 	}
 
 	@Then("User Click on the Search icon")
 	public void user_Click_on_the_Search_icon() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		AdminOrderListingPage.ClickSearchIcon();
 	}
 
 	@Then("User Click on the first checkbox")
 	public void user_Click_on_the_first_checkbox() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
+		AdminOrderListingPage.FirstCheckboxClick();
+}
 
 	@Then("User Click on the Clear button")
-	public void user_Click_on_the_Clear_button() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
+	public void user_Click_on_the_Clear_button() throws InterruptedException {
+		AdminOrderListingPage.ClickClearbtn();
+}
 
 	@Then("User Click on Filter icon")
-	public void user_Click_on_Filter_icon() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	public void user_Click_on_Filter_icon() throws InterruptedException {
+		AdminOrderListingPage.ClickFiltericon();
 	}
 
 	@Then("User click the Oultet")
 	public void user_click_the_Oultet() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
+		AdminOrderListingPage.OutletClick();
+}
 
 	@Then("User click the Select All option")
 	public void user_click_the_Select_All_option() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		AdminOrderListingPage.ClicktheSelectAll();
 	}
 
 	@Then("User click on the Apply button")
 	public void user_click_on_the_Apply_button() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		AdminOrderListingPage.ClickApplybtn();
 	}
 
 	@Then("User click on Filter icon")
-	public void user_click_on_Filter_icon() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	public void user_click_on_Filter_icon() throws InterruptedException {
+		AdminOrderListingPage.FiltericonClick();
 	}
 
 	@Then("User click the Reset button")
 	public void user_click_the_Reset_button() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		AdminOrderListingPage.ClickResetbtn();
 	}
 
 	@Then("User click the Supplier")
 	public void user_click_the_Supplier() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
+		AdminOrderListingPage.ClicktheSupplier();
+}
 
 	@Then("User click the Order status")
 	public void user_click_the_Order_status() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		AdminOrderListingPage.ClicktheOrderStatus();
 	}
 
 	@Then("User click the Invoicing status")
 	public void user_click_the_Invoicing_status() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		AdminOrderListingPage.ClicktheInvoiceStatus();
 	}
 
 	@Then("User click the Order type")
 	public void user_click_the_Order_type() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
+		AdminOrderListingPage.ClicktheOrderType();
+}
 
 
 

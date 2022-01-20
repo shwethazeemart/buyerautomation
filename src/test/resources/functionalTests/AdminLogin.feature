@@ -379,38 +379,15 @@ Scenario Outline: Verify the Order listing page
           Then User select Delivery date from the calendar
           Then User select the Placed on from the calendar
           Then User Click on the Search icon
-          Then User Click on the first checkbox
-          Then User Click on the Clear button
-          Then User Click on Filter icon
-          Then User click the Oultet
-          And User click the Select All option
-          Then User click on the Apply button
-          Then User click on Filter icon
-          Then User click the Reset button
-          Then User click on Filter icon
-          Then User click the Supplier
-          And User click the Select All option
-          Then User click on the Apply button
-          Then User click on Filter icon
-          Then User click the Reset button
-          Then User Click on Filter icon
-          Then User click the Order status
-          And User click the Select All option
-          Then User click on the Apply button
-          Then User click on Filter icon
-          Then User click the Reset button
-          Then User click on Filter icon
-          Then User click the Invoicing status
-          And User click the Select All option
-          Then User click on the Apply button
-          Then User click on Filter icon
-          Then User click the Reset button
           Then User Click on Filter icon
           Then User click the Order type
           And User click the Select All option
           Then User click on the Apply button
           Then User click on Filter icon
           Then User click the Reset button
+          Then User Click on the first checkbox
+          Then User Click on the Clear button
+          
           
           
           Examples:
