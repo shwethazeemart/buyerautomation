@@ -1,5 +1,6 @@
 Feature: Verify Buyer hub Entire screen latest test cases
 
+
 Scenario Outline: Verify the Dashboard lisen page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -44,7 +45,6 @@ Scenario Outline: Verify the Dashboard lisen page of Buyer panel
           And User click on This week icon
           Then User click on Last week icon
           And User click on Last month icon
-          Then User click on view all spending by supplier
          
          @dev 
          Examples:
@@ -199,12 +199,12 @@ Scenario Outline: Verify the Reports spending per Category page of Buyer panel
       |velumanieswaran2020@gmail.com     | |!123456Zm   ||Beer     | 
       
       
-  @naren       
+  @devSecond       
   Examples: 
       |username                      | | password   ||name     |
       |buyerautomated1@gmail.com     | |!123456Zm   ||Beer     | 
       
-      
+     
 Scenario Outline: Verify the Reports spending per outlet page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -383,7 +383,7 @@ Scenario Outline: Verify the Reports spending per SKU page of Buyer panel
       | username                          | | password   ||name     |
       | velumanieswaran2020@gmail.com     | |!123456Zm   ||100pipers|     
       
-     @naren      
+     @devSecond      
      Examples: 
       | username                      | | password   ||name     |
       | buyerautomated3@gmail.com     | |!123456Zm   ||100pipers|   
@@ -576,11 +576,7 @@ Scenario Outline: Verify the New Order page of Buyer panel
              |202110270051   ||velumanieswaran2020@gmail.com  | |!123456Zm   | 
           
           
-        @naren  
-        Examples:
-             |Order ID       ||username                   | |password    | |outletname      |
-             |202110270051   ||buyerautomated3@gmail.com  | |!123456Zm   | |velumasala2020  |
-             
+           
          
          
 
@@ -616,8 +612,8 @@ Scenario Outline: Verify the New Order outstanding options page of Buyer panel
     
     
 
-  @naren
-  Examples:
+          @devSecond
+           Examples:
              |username                     |  |password    | 
              |buyerautomated3@gmail.com    |  |!123456Zm   | 
 
@@ -773,7 +769,7 @@ Scenario Outline: Verify the Orders lisen page of Buyer panel
              |username                     |  |password    ||orderid     | |suppliername   |
              |velumanieswaran2020@gmail.com    |  |!123456Zm   ||202109090012| |sabari     |
              
-        @naren 
+        @devSecond 
         Examples:
              |username                     |  |password    ||orderid     | |suppliername   |
              |buyerautomated3@gmail.com    |  |!123456Zm   ||202109090012| |sabari         |
@@ -839,18 +835,13 @@ Scenario Outline: Verify the Orders lisen page of Buyer panel
     Then User click on search icom in second time
     
     
-    @dev
-  
+    @dev  
     Examples: 
       | username                         || loginPassword|
       | velumanieswaran2020@gmail.com    || !123456Zm    | 
    
   
-    @devSecond 
-    Examples: 
-      | username                         || loginPassword|
-      | buyerautomated3@gmail.com        || !123456Zm    | 
-
+  
 
 Scenario Outline: Verify the Invoices upload page of Buyer panel
          Given User is on Login Page
@@ -980,7 +971,7 @@ Scenario Outline: Verify the Inventory Outlets lisen page of Buyer panel
          |username                       |  |password    ||outletname     ||outletnameone | |outletnametwo |
          |velumanieswaran2020@gmail.com  |  |!123456Zm   ||velu masala2020||sstmasala     | |sstmasala2020 |
          
-           @naren
+          @devSecond
           Examples:
          |username                       |  |password    ||outletname     ||outletnameone | |outletnametwo |
          |buyerautomated3@gmail.com      |  |!123456Zm   ||velu masala2020||sstmasala     | |sstmasala2020 |
@@ -1033,7 +1024,7 @@ Scenario Outline: Verify the Inventory Record adjustment page of Buyer panel
          |username                            |  |password    ||Quantity||Notes              ||Quantityone||Notesone         ||Quantitytwo||Notestwo         ||Notesthree|     |Notesfour|       |Notesfive|
          |velumanieswaran2020@gmail.com       |  |!123456Zm   ||   10   ||eswaranvelufound10  ||10     |   |velumanimissing10||10         ||velupromotions10||velutrnasferin10||velutransferout10||veluwastage10|
          
-       @naren     
+       @devSecond     
     Examples:
          |username                            |  |password    ||Quantity||Notes              ||Quantityone||Notesone         ||Quantitytwo||Notestwo         ||Notesthree|     |Notesfour|       |Notesfive|
          |buyerautomated3@gmail.com           |  |!123456Zm   ||   10   ||eswaranvelufound10  ||10     |   |velumanimissing10||10         ||velupromotions10||velutrnasferin10||velutransferout10||veluwastage10|
@@ -1075,7 +1066,7 @@ Scenario Outline: Verify the Inventory SKU lisen page of Buyer panel
          |velumanieswaran2020@gmail.com   |  |!123456Zm   |
          
               
-     @naren    
+     @devSecond  
      Examples:
          |username                        |  |password    | 
          |buyerautomated3@gmail.com       |  |!123456Zm   |
@@ -1097,11 +1088,7 @@ Scenario Outline: Verify the Outlets page of Buyer panel
       | username                          | | password  |
       | velumanieswaran2020@gmail.com     | |!123456Zm   |
       
-      @devSecond       
-    Examples: 
-      | username                      | | password  |
-      | buyerautomated3@gmail.com     | |!123456Zm   |
-
+    
 
 
 Scenario Outline: Verify the Outlets listing page of Buyer panel 
@@ -1140,7 +1127,7 @@ Scenario Outline: Verify the Outlets listing page of Buyer panel
       | username                      | | password   ||confirm||outletname     |
       | buyerautomated3@gmail.com     | |!123456Zm   ||DISABLE||velu masala2020|
       
-      
+     
 Scenario Outline: Verify the Outlets manage details page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>" 
@@ -1160,10 +1147,6 @@ Scenario Outline: Verify the Outlets manage details page of Buyer panel
       | username                          | | password   ||Email                      |
       |velumanieswaran2020@gmail.com      | |!123456Zm   ||lingeshsabari2009@gmail.com|
       
-   @devSecond       
-    Examples: 
-      | username                      | | password   ||Email                      |
-      |buyerautomated3@gmail.com      | |!123456Zm   ||lingeshsabari2009@gmail.com|
       
        
  Scenario Outline: Verify the Outlets settings page of Buyer panel 
@@ -1200,7 +1183,7 @@ Scenario Outline: Verify the Outlets manage details page of Buyer panel
       | username                      | | password   ||Name       | |WeeklyEmail          ||Email                      ||outletemail                  |
       | buyerautomated3@gmail.com     | |!123456Zm   ||buyer      | |velumani@zeemart.asia||lingeshsabari2009@gmail.com||velumanieswaran2020@gmail.com| 
       
-@Smoke       
+     
 Scenario Outline: Verify the Outlets view suppliers page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>" 
@@ -1253,7 +1236,8 @@ Scenario Outline: Verify the Users Listing page of Buyer panel
     Examples:
          |username                         |  |password    ||name      |  |username  |
          |velumanieswaran2020@gmail.com    |  |!123456Zm   ||velu mani2|  |velu mani2|   
-    @naren   
+         
+   @devSecond  
     Examples:
          |username                         |  |password    ||name      |  |username  |
          |buyerautomated3@gmail.com    |  |!123456Zm   ||velu mani2    |  |velu mani2|  
@@ -1285,7 +1269,7 @@ Scenario Outline: Verify the Users page of Buyer panel
          |username                       ||password    ||First name||Last name ||Job title    ||Email                              ||Mobile phone|
          |velumanieswaran2020@gmail.com  ||!123456Zm   ||velumani  ||ganeshtamil    ||ATZ          ||ganestamilhvelumettur1110092008@gmail.com      ||+6512345677 |       
                                                     
-   @naren     
+   @devSecond    
     Examples:
          |username                       ||password    ||First name||Last name ||Job title    ||Email                              ||Mobile phone|
          |buyerautomated3@gmail.com  ||!123456Zm   ||velueshwar ||ganeshtamil    ||ATZ          ||ganeshtamilvelutamil11120102008@gmail.com      ||+6512345677 |       
@@ -1339,7 +1323,7 @@ Scenario Outline: Verify the user name page of Buyer panel
              |username                     |  |password    |
              |velumanieswaran2020@gmail.com | |!123456Zm   |     
              
-     @dev      
+     @devSecond      
      Examples:
              |username                     |  |password    |
              |buyerautomated3@gmail.com    |  |!123456Zm   |       
@@ -1363,7 +1347,7 @@ Scenario Outline: Verify the News page of Buyer panel
          |username                            |  |password    |
          |velumanieswaran2020@gmail.com       |  |!123456Zm   |
          
-           @devSecond 
+        @devSecond 
         Examples:
          |username                            |  |password    |
          |buyerautomated3@gmail.com           |  |!123456Zm   |

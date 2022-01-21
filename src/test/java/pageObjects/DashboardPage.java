@@ -316,7 +316,7 @@ public class DashboardPage {
 		button_Outlets.click();
 		//Thread.sleep(5000);
 		try {
-			Thread.sleep(5000);
+			Thread.sleep(7000);
 		} catch (InterruptedException e) {
 		}
 		new WebDriverWait(driver, 50).until(webDriver -> ((JavascriptExecutor) webDriver)
