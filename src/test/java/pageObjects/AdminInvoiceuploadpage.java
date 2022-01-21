@@ -48,6 +48,9 @@ public class AdminInvoiceuploadpage {
 
 	@FindBy(xpath = "//button[text()=' Upload ']") 
 	private static WebElement btn_Uploadbtn;
+ 
+	@FindBy(xpath = "//button[text()='Done']") 
+	private static WebElement AdminInvoiceuploadpage_DoneButton;
 
 
 	public void Clicks_in_Upload_invoice() throws InterruptedException {
@@ -62,7 +65,7 @@ public class AdminInvoiceuploadpage {
 	}
 
 	public static void Select_Outlet() throws InterruptedException {
-		driver.findElement(By.xpath("(//input[@role='combobox'])[1]")).sendKeys("ZEEWEBTESTEROUTLET",Keys.ENTER);
+		driver.findElement(By.xpath("//div[@role='combobox']//input[1]")).sendKeys("Sakthimasala100",Keys.ENTER);
 		Thread.sleep(5000);
 		try {
 			Thread.sleep(5000);
@@ -75,7 +78,7 @@ public class AdminInvoiceuploadpage {
 
 	public void Clicks_the_upload_file() {
 		WebElement uploadBox=driver.findElement(By.xpath("//input[@id='file']"));
-		uploadBox.sendKeys("E:\\Zeemart All\\LIC Bill\\download10mb.jpg");
+		uploadBox.sendKeys("E:/Zeemart/download.jpg");
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -85,6 +88,7 @@ public class AdminInvoiceuploadpage {
 	}
 
 	public void Clicks_the_Upload_button() throws InterruptedException {
+		
 		btn_Uploadbtn.click();
 		Thread.sleep(5000);
 		try {
@@ -144,7 +148,17 @@ public class AdminInvoiceuploadpage {
 				.executeScript("return document.readyState").equals("complete"));
 
 	}
-	
+
+	public void ClickDoneButton() {
+		AdminInvoiceuploadpage_DoneButton.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+
+	}
 
 
 }

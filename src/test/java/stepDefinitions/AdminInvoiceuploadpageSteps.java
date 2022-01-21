@@ -90,18 +90,10 @@ public class AdminInvoiceuploadpageSteps {
 	   admininvoiceuploadpage.Clicks_the_upload_file();
 	}
 
-	@Then("User is Clicks the Upload button")
-	public void user_is_Clicks_the_Upload_button() throws InterruptedException {
-	   admininvoiceuploadpage.Clicks_the_Upload_button();
-	}
-
-	@Then("It should display the particular image in invoices Pending icon")
-	public void it_should_display_the_particular_image_in_invoices_Pending_icon() {
-		String displayinvoicependingicon =AdminInvoiceuploadpage.getPageTitle();
-		String pageTitle = displayinvoicependingicon;
-		System.out.println("page title: " + pageTitle);
-	}
-
+	@Then("User is Clicks the Done button")
+	public void user_is_Clicks_the_Done_button() {
+		admininvoiceuploadpage.ClickDoneButton();
+		}
 
 
 }
