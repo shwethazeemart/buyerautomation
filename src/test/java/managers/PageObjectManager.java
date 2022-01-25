@@ -53,7 +53,9 @@ import stepDefinitions.SucessfullyLoginPage;
 import stepDefinitions.SupplierDirectoryProduct;
 import stepDefinitions.UserspageSteps;
 import pageObjects.AdminInvoiceuploadpage;
+import pageObjects.AdminOrderDetailsPage;
 import pageObjects.AdminOrderListingPage;
+import pageObjects.AdminPromotionListingPage;
 import pageObjects.Adminbuyerlinktothecompanypage;
 import pageObjects.Adminbuyeroutletsubscriptionpage;
 import pageObjects.Adminbuyersoutletpage;
@@ -94,6 +96,7 @@ import pageObjects.DashboardPage;
 import pageObjects.InventoryPage;
 import pageObjects.InvoiceprocessPage;
 import pageObjects.InvoicesPage;
+import pageObjects.AdminOrderDetailsPage;
 
 
 public class PageObjectManager<admininvoiceuploadpageSteps> {
@@ -175,6 +178,9 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private BuyerOrderDeliveryFilterpage BuyerOrderDeliveryFilter;
     private BuyerInventoryTagpage BuyerInventoryTag;
     private AdminOrderListingPage AdminOrderListing;
+    private AdminOrderDetailsPage AdminOrderDetails;
+    private AdminPromotionListingPage AdminPromotionListing;
+
 
 
 
@@ -574,6 +580,16 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 
 	public AdminOrderListingPage getAdminOrderListingPage() {
 		return (AdminOrderListing == null) ? (AdminOrderListing = new AdminOrderListingPage(driver)) : AdminOrderListing;
+	}
+
+
+	public AdminOrderDetailsPage getAdminOrderDetailsPage() {
+		return (AdminOrderDetails == null) ? (AdminOrderDetails = new AdminOrderDetailsPage(driver)) : AdminOrderDetails;
+	}
+
+
+	public AdminPromotionListingPage getAdminPromotionListingPage() {
+		return (AdminPromotionListing == null) ? (AdminPromotionListing = new AdminPromotionListingPage(driver)) : AdminPromotionListing;
 	} 
 
 
