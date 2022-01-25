@@ -43,7 +43,7 @@ public class AdminOrderListingPage {
 	@FindBy(xpath = "(//input[@type='checkbox'])[2]")
 	private static WebElement AdminOrderListingPage_FirstCheckbox;
 
-	@FindBy(xpath = "//button[contains(@class,'btn clear_order_btn')]")
+	@FindBy(xpath = "(//button[text()='1 selected']/following-sibling::button)[1]")
 	private static WebElement AdminOrderListingPage_Checkbox;
 
 	@FindBy(xpath = "//a[contains(@class,'pull-right btn-clear-blue')]")
@@ -137,7 +137,7 @@ public class AdminOrderListingPage {
 
 	public static void ClickClearbtn() throws InterruptedException {
 		Thread.sleep(5000);
-		AdminOrderListingPage_Checkbox.clear();
+		AdminOrderListingPage_Checkbox.click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {

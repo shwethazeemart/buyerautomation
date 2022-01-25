@@ -365,7 +365,7 @@ Scenario Outline: Verify the Buyers outlets subscripiton page of Admin panel
          |velumanisabari2009@gmail.com |  |#f=6T7uX    ||sstmasala20   ||638327     ||madheswarankoilstreet||singapore   ||lingeshsabari2009@gmail.com ||+6512345679 ||SST250       ||velu mani2     ||velumani@zeemart.asia||velumanieswaran2020@gmail.com||!123456Zm     |
 
 
-@Smoke   
+   
 Scenario Outline: Verify the Order listing page
   
           Given User are available in login page
@@ -393,7 +393,57 @@ Scenario Outline: Verify the Order listing page
           Examples:
          |username                     |  |password    | |orderid       |
          |velumanisabari2009@gmail.com |  |#f=6T7uX    | |202201130007  |
-
+         
+       
+Scenario Outline: Verify the Order Details page
+  
+          Given User are available in login page
+          When User is enter exact username"<username>"
+          And User is enter exact password"<password>"
+          When User are Select country in the autocomplete text box
+          And User is press the Admin login button 
+          When User Clicks on Admin Orders in the side navigation menubar 
+          Then User click on particular order detail page
+          Then User click on Details tab
+          Then User click on Activity tab
+          Then User click on Cancel order button
+          Then User enter the reason in Others text box "<reason>"
+          Then User click on the Cancel order final button 
+                
+          
+       Examples:
+       |username                     |  |password    | |reason              |
+       |velumanisabari2009@gmail.com |  |#f=6T7uX    | |Available in order  |
+         
+@Smoke  
+Scenario Outline: Verify the Promotion Deals page
+  
+          Given User are available in login page
+          When User is enter exact username"<username>"
+          And User is enter exact password"<password>"
+          When User are Select country in the autocomplete text box
+          And User is press the Admin login button 
+          When User Clicks on Admin Promotions in the side navigation menubar 
+          Then User click on Deals Tab
+          Then User clicks Search box
+          Then User Enter the Search Deal "<Deal>" 
+          Then User Select the dropdown status
+          Then User Select the Supplier in dropdown list 
+          Then User Clicks Search icon
+          Then User click on the Organise deals
+          Then User click on Close icon of Organise deals
+          Then User click the Actions dropdown
+          Then User click New deal icon
+          Then User click Back button of promotion
+          Then User click on New Promo Code
+          Then User click Back button of promo codes
+          
+      Examples:
+       |username                     |  |password    | |Deal     |
+       |velumanisabari2009@gmail.com |  |#f=6T7uX    | |Bug test |
+         
+          
+          
           
           
 
