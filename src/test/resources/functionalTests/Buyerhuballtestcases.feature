@@ -834,8 +834,7 @@ Scenario Outline: Verify the Payment transactions page of Buyer panel
       | username                      | | password   |
       | velumanieswaran2020@gmail.com | |!123456Zm   |      
       
-      
-     
+@Smoke    
 Scenario Outline: Verify the Inventory Outlets lisen page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"

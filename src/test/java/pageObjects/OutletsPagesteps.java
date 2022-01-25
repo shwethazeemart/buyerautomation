@@ -34,15 +34,13 @@ public class OutletsPagesteps {
 	
 	
 
-	//@FindBy(xpath = "(//a[@class='zmdropDownBtn'])[2]")
-	//private static WebElement OutletsPagesteps_actions_dropdown;  
-	
-	//@FindBy(xpath = "(//div[@class='zmDropDown']//a)[3]")
-
 	@FindBy(xpath = "(//a[@class='zmdropDownBtn'])[4]")
 	private static WebElement OutletsPagesteps_actions_dropdown;  
 	
-	//@FindBy(xpath = "(//a[@class='dropdown-item'])[3]")
+	//@FindBy(xpath = "(//div[@class='zmDropDown']//a)[3]")
+
+	
+	//@FindBy(xpath = "(//a[@class='dropdown-item'])[4]")
 	//private static WebElement OutletsPagesteps_View_suppliers;
 	
 	//@FindBy(xpath = "//div[@class='ng-star-inserted']//a[1]")

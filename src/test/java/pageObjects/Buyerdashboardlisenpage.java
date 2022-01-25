@@ -372,7 +372,21 @@ public class Buyerdashboardlisenpage {
 		
 	}
 
-		public static void Clickonsupplier() {
+	public static void Clickonviewspendingbusupplier() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0, 1000);");
+		Buyerdashboardlisenpage_Viewspendingbysupplier.click();
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+	
+
+	public static void Clickonsupplier() {
 		Buyerdashboardlisenpage_supplier.click();
 		try { 
 			Thread.sleep(5000);
@@ -616,7 +630,7 @@ public class Buyerdashboardlisenpage {
 		
 	}
 
-	public static void Clickonviewspendingbusupplier() throws InterruptedException {
+	public static void Clickonviewspendingbusupplier1() throws InterruptedException {
 		Thread.sleep(5000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0, 1000);");
