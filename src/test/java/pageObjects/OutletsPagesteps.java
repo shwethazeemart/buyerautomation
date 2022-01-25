@@ -39,8 +39,6 @@ public class OutletsPagesteps {
 	
 	//@FindBy(xpath = "(//div[@class='zmDropDown']//a)[3]")
 
-	//@FindBy(xpath = "(//a[@class='zmdropDownBtn'])[3]")
-	//private static WebElement OutletsPagesteps_actions_dropdown;  
 	
 	//@FindBy(xpath = "(//a[@class='dropdown-item'])[4]")
 	//private static WebElement OutletsPagesteps_View_suppliers;

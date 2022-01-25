@@ -135,7 +135,7 @@ public class Buyerdashboardlisen {
 	}
 
 	@Then("User click on view all spending by supplier")
-	public void user_click_on_view_all_spending_by_supplier() {
+	public void user_click_on_view_all_spending_by_supplier() throws InterruptedException {
 	    Buyerdashboardlisenpage.Clickonviewspendingbusupplier();
 	}
 	
@@ -247,7 +247,7 @@ public class Buyerdashboardlisen {
 	public void user_select_dropdown_top_expenditures_list_outletname() {
 		WebElement velumasala2020 = Buyerdashboardlisenpage.getDropDownElementvelumasalatwentytwenty();
 		Select select=new Select(velumasala2020);
-		select.selectByIndex(3);
+		select.selectByIndex(4);
 	}
 
 }
