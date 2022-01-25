@@ -95,7 +95,7 @@ public class Buyerdashboardlisenpage {
 	@FindBy(xpath = "//label[text()=' Last month ']")
 	private static WebElement Buyerdashboardlisenpage_Lastmonthicon;
 	
-	@FindBy(xpath = "(//a[@class='all_spending_suppliers'])[2]")
+	@FindBy(xpath = "//div[@class='supplier_tab_inner']//a[1]")
 	private static WebElement Buyerdashboardlisenpage_Viewspendingbysupplier; 	
 	
 	@FindBy(xpath = "//h3[text()='Sakthimasala100 ']")
@@ -372,24 +372,7 @@ public class Buyerdashboardlisenpage {
 		
 	}
 
-	public static void Clickonviewspendingbusupplier() {
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0, 1000);");
-		Buyerdashboardlisenpage_Viewspendingbysupplier.click();
-		try { 
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-		}
-		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
-				.executeScript("return document.readyState").equals("complete"));
-		
-	}
-	
-	
-	
-	
-
-	public static void Clickonsupplier() {
+		public static void Clickonsupplier() {
 		Buyerdashboardlisenpage_supplier.click();
 		try { 
 			Thread.sleep(5000);
@@ -633,5 +616,17 @@ public class Buyerdashboardlisenpage {
 		
 	}
 
-
+	public static void Clickonviewspendingbusupplier() throws InterruptedException {
+		Thread.sleep(5000);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0, 1000);");
+		Buyerdashboardlisenpage_Viewspendingbysupplier.click();
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
 	}
+		}

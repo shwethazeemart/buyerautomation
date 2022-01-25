@@ -44,7 +44,6 @@ Scenario Outline: Verify the Dashboard lisen page of Buyer panel
           And User click on This week icon
           Then User click on Last week icon
           And User click on Last month icon
-          Then User click on view all spending by supplier
          
          @dev 
          Examples:
@@ -614,12 +613,11 @@ Scenario Outline: Verify the New Order outstanding options page of Buyer panel
              |username                         |  |password    | 
              |velumanieswaran2020@gmail.com    |  |!123456Zm   |  
     
-    
-
-  @naren
-  Examples:
+      @naren
+       Examples:
              |username                     |  |password    | 
              |buyerautomated3@gmail.com    |  |!123456Zm   | 
+
 
 Scenario Outline: Verify the New recurring orders page of Buyer panel  
           Given User is on Login Page
@@ -1339,12 +1337,12 @@ Scenario Outline: Verify the user name page of Buyer panel
              |username                     |  |password    |
              |velumanieswaran2020@gmail.com | |!123456Zm   |     
              
-     @dev      
+     @devSecond      
      Examples:
              |username                     |  |password    |
              |buyerautomated3@gmail.com    |  |!123456Zm   |       
              
-             
+@Smoke             
 Scenario Outline: Verify the News page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -1354,19 +1352,13 @@ Scenario Outline: Verify the News page of Buyer panel
           Then User is Clicks in the test notification  
           Then user click on the close icon for test notification
           Then User Clicks on News in the side navigation menubar 
-          Then User is Clicks in the test notification  
-          And User are Clicks on the Whatsapp link
-               
+              
           
         @dev
         Examples:
          |username                            |  |password    |
          |velumanieswaran2020@gmail.com       |  |!123456Zm   |
          
-           @devSecond 
-        Examples:
-         |username                            |  |password    |
-         |buyerautomated3@gmail.com           |  |!123456Zm   |
                                    
     
 
