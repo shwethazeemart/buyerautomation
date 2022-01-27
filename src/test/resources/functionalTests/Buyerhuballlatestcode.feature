@@ -610,15 +610,10 @@ Scenario Outline: Verify the New Order outstanding options page of Buyer panel
              |username                         |  |password    | 
              |velumanieswaran2020@gmail.com    |  |!123456Zm   |  
     
-<<<<<<< HEAD
-      @naren
-       Examples:
-=======
     
 
           @devSecond
            Examples:
->>>>>>> 3a31b06b14af1da4d53a3f3757f872c4c7f4a992
              |username                     |  |password    | 
              |buyerautomated3@gmail.com    |  |!123456Zm   | 
 
@@ -1334,7 +1329,7 @@ Scenario Outline: Verify the user name page of Buyer panel
              |username                     |  |password    |
              |buyerautomated3@gmail.com    |  |!123456Zm   |       
              
-@Smoke             
+        
 Scenario Outline: Verify the News page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -1351,13 +1346,10 @@ Scenario Outline: Verify the News page of Buyer panel
          |username                            |  |password    |
          |velumanieswaran2020@gmail.com       |  |!123456Zm   |
          
-<<<<<<< HEAD
-=======
         @devSecond 
         Examples:
          |username                            |  |password    |
          |buyerautomated3@gmail.com           |  |!123456Zm   |
->>>>>>> 3a31b06b14af1da4d53a3f3757f872c4c7f4a992
                                    
     
 
