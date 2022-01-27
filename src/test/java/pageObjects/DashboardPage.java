@@ -171,7 +171,6 @@ public class DashboardPage {
 	}
 
 	public void clickNews() throws InterruptedException {
-
 		button_News.click();
 		Thread.sleep(5000);
 		try {

@@ -1184,7 +1184,7 @@ Scenario Outline: Verify the Outlets manage details page of Buyer panel
       | username                      | | password   ||Name       | |WeeklyEmail          ||Email                      ||outletemail                  |
       | buyerautomated3@gmail.com     | |!123456Zm   ||buyer      | |velumani@zeemart.asia||lingeshsabari2009@gmail.com||velumanieswaran2020@gmail.com| 
       
-     
+   
 Scenario Outline: Verify the Outlets view suppliers page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>" 
@@ -1303,7 +1303,7 @@ Scenario Outline: Verify the Edit Users page of Buyer panel
          |username                     |  |password    ||title      ||Email                            ||mobilephone  | |username     |
          |buyerautomated3@gmail.com    |  |!123456Zm   ||AtoZ test  ||velumanieswaran2020@gmail.com    ||+65122456789 | |velumanitwo  | 
          
-               
+              
 Scenario Outline: Verify the user name page of Buyer panel
          Given User is on Login Page
          When User enter exact username"<username>"
@@ -1329,7 +1329,7 @@ Scenario Outline: Verify the user name page of Buyer panel
              |username                     |  |password    |
              |buyerautomated3@gmail.com    |  |!123456Zm   |       
              
-        
+       
 Scenario Outline: Verify the News page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
