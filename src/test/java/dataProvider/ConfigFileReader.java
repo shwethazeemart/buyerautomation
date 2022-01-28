@@ -44,10 +44,10 @@ public class ConfigFileReader {
 	public long getImplicitlyWait() {
 		String implicitlyWait = properties.getProperty("implicitlyWait");
 		if (implicitlyWait != null)
-			return Long.parseLong(implicitlyWait);
+		return Long.parseLong(implicitlyWait);
 		else
-			throw new RuntimeException("implicitlyWait not specified in the Configuration.properties file.");
-	}
+		throw new RuntimeException("implicitlyWait not specified in the Configuration.properties file.");
+		}
 
 	public String getApplicationUrl(boolean getAdmin, boolean getbuyer, boolean getorchid,boolean getSupplier) {
 		String url = "";
