@@ -1,6 +1,5 @@
 Feature: Verify Buyer hub Entire screen latest test cases
 
-
 Scenario Outline: Verify the Dashboard lisen page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -608,17 +607,12 @@ Scenario Outline: Verify the New Order outstanding options page of Buyer panel
            @dev
            Examples:
              |username                         |  |password    | 
-             |velumanieswaran2020@gmail.com    |  |!123456Zm   |  
-    
-<<<<<<< HEAD
-      @naren
-       Examples:
-=======
+             |velumanieswaran2020@gmail.com    |  |!123456Zm   | 
     
 
           @devSecond
            Examples:
->>>>>>> 3a31b06b14af1da4d53a3f3757f872c4c7f4a992
+
              |username                     |  |password    | 
              |buyerautomated3@gmail.com    |  |!123456Zm   | 
 
@@ -746,6 +740,12 @@ Scenario Outline: Verify the Orders lisen page of Buyer panel
          Then User click on Apply button in order in first page
          And User click on filter in order first page
          Then User click on Reset button in order in first page
+         And User click on filter in order first page
+         Then User click on delivery status
+         Then User click on select all in delivery status
+         Then User click on apply button in delivery status
+         And User click on filter in order first page
+         Then User click on reset button in delivery status
          And User click on filter in order first page
          Then User click on order type in order page
          And User click on select all icon in order page
@@ -1154,7 +1154,7 @@ Scenario Outline: Verify the Outlets manage details page of Buyer panel
       |velumanieswaran2020@gmail.com      | |!123456Zm   ||lingeshsabari2009@gmail.com|
       
       
-       
+@Smoke       
  Scenario Outline: Verify the Outlets settings page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>" 
@@ -1170,6 +1170,8 @@ Scenario Outline: Verify the Outlets manage details page of Buyer panel
           Then User click on check box in outlet setting
           Then User click on outside section
           And User click on Add button
+          Then User select dropdown on wednesday send every
+          Then User select dropdown on weeky starts on monday
           Then User Clear on weekly email
           And User enter on weekly email"<WeeklyEmail>"
           Then User select dropdown list in wednesday
@@ -1179,16 +1181,12 @@ Scenario Outline: Verify the Outlets manage details page of Buyer panel
           And User enter the outletemail"<outletemail>"
           Then User click on save button finally
           
-    @dev       
+           
     Examples: 
       | username                      | | password   ||Name       | |WeeklyEmail          ||Email                      ||outletemail                  |
       | velumanieswaran2020@gmail.com | |!123456Zm   ||buyer      | |velumani@zeemart.asia||lingeshsabari2009@gmail.com||velumanieswaran2020@gmail.com| 
       
-      @devSecond       
-    Examples: 
-      | username                      | | password   ||Name       | |WeeklyEmail          ||Email                      ||outletemail                  |
-      | buyerautomated3@gmail.com     | |!123456Zm   ||buyer      | |velumani@zeemart.asia||lingeshsabari2009@gmail.com||velumanieswaran2020@gmail.com| 
-      
+     
      
 Scenario Outline: Verify the Outlets view suppliers page of Buyer panel 
           Given User is on Login Page
@@ -1213,7 +1211,7 @@ Scenario Outline: Verify the Outlets view suppliers page of Buyer panel
           And User click on select all icon
           Then User click on below select all icon
           Then User click on ok button
-          And User click on options icon
+          And User click on options icon 
           Then User click on Download marketlist
            
     @dev       
@@ -1334,7 +1332,7 @@ Scenario Outline: Verify the user name page of Buyer panel
              |username                     |  |password    |
              |buyerautomated3@gmail.com    |  |!123456Zm   |       
              
-@Smoke             
+            
 Scenario Outline: Verify the News page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -1350,14 +1348,12 @@ Scenario Outline: Verify the News page of Buyer panel
         Examples:
          |username                            |  |password    |
          |velumanieswaran2020@gmail.com       |  |!123456Zm   |
-         
-<<<<<<< HEAD
-=======
+    
         @devSecond 
         Examples:
          |username                            |  |password    |
          |buyerautomated3@gmail.com           |  |!123456Zm   |
->>>>>>> 3a31b06b14af1da4d53a3f3757f872c4c7f4a992
+
                                    
     
 
