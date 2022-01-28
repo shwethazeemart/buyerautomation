@@ -22,9 +22,9 @@ public class Buyeroutletsmanagesettings {
 	private DashboardPage dashboradpage;
 	private Object outletspage;
 	private Newrecurringorderspage newrecurringorderspage;
-    private Buyeroutletsmanagedetailspage buyeroutletsmanagedetails;
-    private Buyeroutletsmanagesettingspage buyeroutletsmanagesettings;
-    
+	private Buyeroutletsmanagedetailspage buyeroutletsmanagedetails;
+	private Buyeroutletsmanagesettingspage buyeroutletsmanagesettings;
+
 	public Buyeroutletsmanagesettings(TestContext testContext) {
 		super();
 		this.testContext = testContext;
@@ -35,54 +35,54 @@ public class Buyeroutletsmanagesettings {
 		this.newrecurringorderspage=(Newrecurringorderspage)testContext.getPageObjectManager().getNewRecurringOrderspageSteps();
 		this.buyeroutletsmanagedetails = testContext.getPageObjectManager().getBuyeroutletsmanagedetailspage();
 		this.buyeroutletsmanagesettings = testContext.getPageObjectManager().getBuyeroutletsmanagesettingspage();
-		
+
 	}
-	
-	
+
+
 	@Then("User clicks on Manage settings")
 	public void user_clicks_on_Manage_settings() {
-	    Buyeroutletsmanagesettingspage.Clickmanagesettings();
+		Buyeroutletsmanagesettingspage.Clickmanagesettings();
 	}
 
 	@Then("User click on search box")
 	public void user_click_on_search_box() {
-	    Buyeroutletsmanagesettingspage.Clicksearchbox();
+		Buyeroutletsmanagesettingspage.Clicksearchbox();
 	}
 
 	@Then("User Enter the name in search box{string}")
 	public void user_Enter_the_name_in_search_box_Name(String Name) {
-	    Buyeroutletsmanagesettingspage.Enterthename(Name);
+		Buyeroutletsmanagesettingspage.Enterthename(Name);
 	}
 
 	@Then("User click on Add member button")
 	public void user_click_on_Add_member_button() {
-	    Buyeroutletsmanagesettingspage.Clickaddmeemberbutton();
+		Buyeroutletsmanagesettingspage.Clickaddmeemberbutton();
 	}
 
 	@Then("User click on select user search box")
 	public void user_click_on_select_user_search_box() {
-	    Buyeroutletsmanagesettingspage.Clickonselectuserserachbox();
+		Buyeroutletsmanagesettingspage.Clickonselectuserserachbox();
 	}
 
-	
+
 	@Then("User click on cancel button")
 	public void user_click_on_cancel_button() throws InterruptedException {
-	    //Buyeroutletsmanagesettingspage.Clickcancelbutton();
+		//Buyeroutletsmanagesettingspage.Clickcancelbutton();
 	}
 
 	@Then("User click on Add button")
 	public void user_click_on_Add_button() throws InterruptedException {
-	    Buyeroutletsmanagesettingspage.Clickaddbutton();
+		Buyeroutletsmanagesettingspage.Clickaddbutton();
 	}
 
 	@Then("User Clear on weekly email")
 	public void user_Clear_on_weekly_email() {
-	    Buyeroutletsmanagesettingspage.Clearweeklyemail();
+		Buyeroutletsmanagesettingspage.Clearweeklyemail();
 	}
 
 	@Then("User enter on weekly email{string}")
 	public void user_enter_on_weekly_email_velumani_zeemart_asia(String WeeklyEmail) {
-	    Buyeroutletsmanagesettingspage.Enterweeklyemail(WeeklyEmail);
+		Buyeroutletsmanagesettingspage.Enterweeklyemail(WeeklyEmail);
 	}
 
 	@Then("User select dropdown list in wednesday")
@@ -94,57 +94,77 @@ public class Buyeroutletsmanagesettings {
 
 	@Then("User clear the Email list")
 	public void user_clear_the_Email_list() {
-	    Buyeroutletsmanagesettingspage.Clearemaillist();
+		Buyeroutletsmanagesettingspage.Clearemaillist();
 	}
 
 	@Then("User enter on Email list{string}")
 	public void user_enter_on_Email_list_lingeshsabari2009_gmail_com(String Email) {
-	   Buyeroutletsmanagesettingspage.Enteremaillist(Email);
+		Buyeroutletsmanagesettingspage.Enteremaillist(Email);
 	}
 
 	@Then("User clear outlet email")
 	public void user_clear_outlet_email() {
-	    Buyeroutletsmanagesettingspage.Clearoutletemail();
+		Buyeroutletsmanagesettingspage.Clearoutletemail();
 	}
 
 	@Then("User enter the outletemail{string}")
 	public void user_enter_the_outletemail_velumanieswaran2020_gmail_com(String outletemail) {
-	    Buyeroutletsmanagesettingspage.Enteroutletemail(outletemail);
+		Buyeroutletsmanagesettingspage.Enteroutletemail(outletemail);
 	}
 
 	@Then("User click on save button finally")
 	public void user_click_on_save_button_finally() {
-	    Buyeroutletsmanagesettingspage.Clicksavebutton();
+		Buyeroutletsmanagesettingspage.Clicksavebutton();
 	}
 
-	
+
 	@Then("User click on outside section")
 	public void user_click_on_outside_section() {
-	    Buyeroutletsmanagesettingspage.Clickonoutsidesection();
+		Buyeroutletsmanagesettingspage.Clickonoutsidesection();
 	}
 
 	@Then("User click on check box in outlet setting")
 	public void user_click_on_check_box_in_outlet_setting() {
-		 Buyeroutletsmanagesettingspage.Clickcheckboxfirst();
+		Buyeroutletsmanagesettingspage.Clickcheckboxfirst();
 	}
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+	@Then("User select dropdown on wednesday send every")
+	public void user_select_dropdown_on_wednesday_send_every() {
+		WebElement wednesday = Buyeroutletsmanagesettingspage.getDropDownElementsendwednesday();
+		Select select=new Select(wednesday);
+		select.selectByVisibleText("WEDNESDAY");
+	}
+
+
+
+	@Then("User select dropdown on weeky starts on monday")
+	public void user_select_dropdown_on_weeky_starts_on_monday() {
+		WebElement monday = Buyeroutletsmanagesettingspage.getDropDownElementweekstartmonday();
+		Select select=new Select(monday);
+		select.selectByVisibleText("MONDAY");
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
