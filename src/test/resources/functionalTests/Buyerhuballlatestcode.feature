@@ -684,7 +684,7 @@ Scenario Outline: Verify the New Weekly Order page of Buyer panel
            |username                     |  |password    |
            |buyerautomated3@gmail.com    |  |!123456Zm   |     
            
-           
+          
 Scenario Outline: Verify the Orders lisen page of Buyer panel
          Given User is on Login Page
          When User enter exact username"<username>"
@@ -742,6 +742,11 @@ Scenario Outline: Verify the Orders lisen page of Buyer panel
          And User click on filter in order first page
          Then User click on Reset button in order in first page
          And User click on filter in order first page
+         Then User click on delivery status
+         Then User click on select all in delivery status
+         Then User click on apply button in delivery status
+         And User click on filter in order first page
+         Then User click on reset button in delivery status
          Then User click on order type in order page
          And User click on select all icon in order page
          Then User click on Apply button in order in first page
@@ -767,14 +772,10 @@ Scenario Outline: Verify the Orders lisen page of Buyer panel
 
         @dev  
         Examples:
-             |username                     |  |password    ||orderid     | |suppliername   |
-             |velumanieswaran2020@gmail.com    |  |!123456Zm   ||202109090012| |sabari     |
+             |username                         |  |password    ||orderid     | |suppliername   |
+             |velumanieswaran2020@gmail.com    |  |!123456Zm   ||202109090012| |sabari         |
              
-        @devSecond 
-        Examples:
-             |username                     |  |password    ||orderid     | |suppliername   |
-             |buyerautomated3@gmail.com    |  |!123456Zm   ||202109090012| |sabari         |
-             
+         
              
  Scenario Outline: Buyer Invoice lisen page verify the all field 
 
