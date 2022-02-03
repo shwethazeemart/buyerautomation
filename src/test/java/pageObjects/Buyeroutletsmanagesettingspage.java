@@ -90,6 +90,12 @@ public class Buyeroutletsmanagesettingspage {
 	@FindBy(xpath = "//h4[text()='Add member']")
 	private static WebElement Buyeroutletsmanagesettingspage_Outsidesection;
 	
+	@FindBy(xpath = "(//select[contains(@class,'custom-select weekdays')])[1] ")
+	private static WebElement Buyeroutletsmanagesettingspage_Selectsendwednesday;
+	
+	@FindBy(xpath = "(//select[contains(@class,'custom-select weekdays')])[2] ")
+	private static WebElement Buyeroutletsmanagesettingspage_Selectweekstartmonday;
+	
 	
 	
 
@@ -287,4 +293,35 @@ public class Buyeroutletsmanagesettingspage {
 		
 	}
 	
+	
+	public static void Selectcutofsendwednesday()  {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,250)");
+		Buyeroutletsmanagesettingspage_Selectsendwednesday.click();
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+
+	}
+	public static WebElement getDropDownElementsendwednesday() {
+		return Buyeroutletsmanagesettingspage_Selectsendwednesday;
+	}
+	
+	
+	public static void Selectcutofweekstartmonday()  {
+		Buyeroutletsmanagesettingspage_Selectweekstartmonday.click();
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+
+	}
+	public static WebElement getDropDownElementweekstartmonday() {
+		return Buyeroutletsmanagesettingspage_Selectweekstartmonday;
+	}
 }
