@@ -41,14 +41,17 @@ public class ConfigFileReader {
 			throw new RuntimeException("driverPath not specified in the Configuration.properties file.");
 	}
 
-	public long getImplicitlyWait() {
+	public Long getImplicitlyWait() {
+		try {
 		String implicitlyWait = properties.getProperty("implicitlyWait");
-		if (implicitlyWait != null)
-			return Long.parseLong(implicitlyWait);
-		else
-			throw new RuntimeException("implicitlyWait not specified in the Configuration.properties file.");
-	}
 
+		Long parsedLong = Long.parseLong(implicitlyWait.toString());
+		return parsedLong;
+		} catch (Exception e) {
+		throw new RuntimeException("An exception occured" + e);
+		}
+		}
+	
 	public String getApplicationUrl(boolean getAdmin, boolean getbuyer, boolean getorchid,boolean getSupplier) {
 		String url = "";
 		String[] urls = properties.getProperty("url").split(",");

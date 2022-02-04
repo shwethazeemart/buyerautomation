@@ -36,7 +36,7 @@ public class BuyerOrderDeliveryFilterpage {
 
 	
 
-	@FindBy(xpath = "//div[text()=' Delivery status  ']")
+	@FindBy(xpath = "//div[text()=' Receiving status  ']")
 	private static WebElement BuyerOrderDeliveryFilterpage_DeliveryStatus;
 	
 

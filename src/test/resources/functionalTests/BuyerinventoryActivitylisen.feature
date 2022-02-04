@@ -11,6 +11,7 @@ Scenario Outline: Verify the Inventory Activity lisen page of Buyer panel
           Then User click on Activity icon
           And User click on New stock count
           Then User click on New stock count close icon
+          
           And User click on Record Adjustment
           Then User click on Record Adjustment close icon
           And User select the calendar this month from date to To date
