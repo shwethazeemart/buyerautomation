@@ -415,7 +415,7 @@ Scenario Outline: Verify the Order Details page
        |username                     |  |password    | |reason              |
        |velumanisabari2009@gmail.com |  |#f=6T7uX    | |Available in order  |
          
-@Smoke  
+  
 Scenario Outline: Verify the Promotion Deals page
   
           Given User are available in login page
@@ -439,11 +439,67 @@ Scenario Outline: Verify the Promotion Deals page
           Then User click Back button of promo codes
           
       Examples:
-       |username                     |  |password    | |Deal     |
-       |velumanisabari2009@gmail.com |  |#f=6T7uX    | |Bug test |
+       |username                     |  |password    | |Deal        |
+       |velumanisabari2009@gmail.com |  |#f=6T7uX    | |Bug testing |
          
+ @Smoke         
+ Scenario Outline: Verify the Promotion New deal page
+  
+          Given User are available in login page
+          When User is enter exact username"<username>"
+          And User is enter exact password"<password>"
+          When User are Select country in the autocomplete text box
+          And User is press the Admin login button 
+          When User Clicks on Admin Promotions in the side navigation menubar 
+          Then User click on New deal
+          Then User Select the Supplier in the dropdown list
+          Then User Enter on the Title "<Title>"
+          Then User Enter the Descripton "<Description>"   
+          Then User Select the Carousel banner
+          Then User Click on the Drag and dropdown field
+          Then User Save the Carousel banner
+          Then User Select the Landing banner
+          Then User Click on the Landing banner of Drag and dropdown field
+          Then User Save the Landing banner
+          Then User select the Calendar From date of Validity field
+          Then User select the Calendar Until date of Validity field
+          Then User Enter the value of Minimum order field"<Minimumorder>"
+          Then User Click on radio button of Apply fee
+          Then User Enter the value of CutOff time"<CutOfftime>"
+          Then User click on Apply fee Dropdown 
+          Then User select the to all Orders
+          Then User click on Checkbox of Monday
+          Then User Enter the CutOff time"<MondayCutOfftime>"
+          Then User Click on the Time field
+          Then User Click on Set button 
+          Then User click on Checkbox of Wednesday
+          Then User Enter the Wednesday CutOff time"<WedCutOfftime>"
+          Then User Click on the Time field of Wednesday
+          Then User Click on Set button of Wednesday
+          Then User click on Checkbox of Friday
+          Then User Enter the Friday CutOff time"<FridayCutOfftime>"
+          Then User Click on the Time field of Friday
+          Then User Click on Set button of Friday
+          Then User Click on Radio button of All outlets
+          Then User Enter the Email of By email field"<Byemail>"
+          Then User Click the Next SKU
+          Then User click the Add SKU
+          Then User click the First checkbox
+          Then User click on the UOM options dropdown
+          Then User Clear the Block option field
+          Then User Clear the Deal price option field          
+          Then User Enter the Deal price field "<Dealprice>"
+          Then User Enter the Original price field "<Originalprice>"
+          Then User Clear the MOQ option field          
+          Then User Enter the MOQ field "<MOQ>"
+          Then User Enter the Shelf life "<Shelflife>"                  
+          Then User click on the Save changes
           
-          
+    
+         Examples:
+         |username                     |  |password    | |Title   | |Description  | |Minimumorder | |CutOfftime | |MondayCutOfftime | |WedCutOfftime | |FridayCutOfftime| |Byemail           | |Dealprice | |Originalprice | |MOQ | |Shelflife |
+         |velumanisabari2009@gmail.com |  |#f=6T7uX    | |Omicron | |New Virus    | |100          | |3          | |2                | |1             | |1               | |shwetha@gmail.com | |20        | | 15            | |10  | |1           |
+        
           
           
 
