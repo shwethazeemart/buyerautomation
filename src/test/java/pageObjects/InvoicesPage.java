@@ -32,7 +32,7 @@ public class InvoicesPage {
 		WebElement tosterMsg = driver.findElement(By.xpath("//*[text()='" + msg + "']"));
 
 	}
-
+	
 	//@FindBy(xpath="//span[contains(text(),'Invoices')]") 
 	//private static WebElement menubar_Invoices;  
 

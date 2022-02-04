@@ -488,17 +488,17 @@ Scenario Outline: Verify the Promotion Deals page
           Then User click on the UOM options dropdown
           Then User Clear the Block option field
           Then User Clear the Deal price option field          
-          Then User Enter the Deal price field "<Dealprice>"
-          Then User Enter the Original price field "<Originalprice>"
+          Then User Enter the Deal price field"<Dealprice>"
+          Then User Enter the Original price field"<Originalprice>"
           Then User Clear the MOQ option field          
-          Then User Enter the MOQ field "<MOQ>"
-          Then User Enter the Shelf life "<Shelflife>"                  
+          Then User Enter the MOQ field"<MOQ>"
+          Then User Enter the Shelf life"<Shelflife>"                  
           Then User click on the Save changes
           
     
          Examples:
          |username                     |  |password    | |Title   | |Description  | |Minimumorder | |CutOfftime | |MondayCutOfftime | |WedCutOfftime | |FridayCutOfftime| |Byemail           | |Dealprice | |Originalprice | |MOQ | |Shelflife |
-         |velumanisabari2009@gmail.com |  |#f=6T7uX    | |Omicron | |New Virus    | |100          | |3          | |2                | |1             | |1               | |shwetha@gmail.com | |20        | | 15            | |10  | |1           |
+         |velumanisabari2009@gmail.com |  |#f=6T7uX    | |Omicron | |New Virus    | |5            | |3          | |2                | |1             | |1               | |shwetha@gmail.com | |20        | | 15           | |10  | |1           |
         
           
           

@@ -82,7 +82,7 @@ public class AdminPromotionNewDeal {
 	}
 
 	@Then("User Click on the Drag and dropdown field")
-	public void user_Click_on_the_Drag_and_dropdown_field() {
+	public void user_Click_on_the_Drag_and_dropdown_field() throws InterruptedException {
 		AdminPromotionNewDealPage.ClickOnUploadfile();
 	}
 
@@ -97,9 +97,9 @@ public class AdminPromotionNewDeal {
 	}
 
 	@Then("User Click on the Landing banner of Drag and dropdown field")
-	public void user_Click_on_the_Landing_banner_of_Drag_and_dropdown_field() {
+	public void user_Click_on_the_Landing_banner_of_Drag_and_dropdown_field() throws InterruptedException {
 		AdminPromotionNewDealPage.ClickOnUploadLandingFile();
-	}
+			}
 
 	@Then("User Save the Landing banner")
 	public void user_Save_the_Landing_banner() {
@@ -112,12 +112,12 @@ public class AdminPromotionNewDeal {
 	}
 
 	@Then("User select the Calendar Until date of Validity field")
-	public void user_select_the_Calendar_Until_date_of_Validity_field() {
+	public void user_select_the_Calendar_Until_date_of_Validity_field() throws InterruptedException {
 		AdminPromotionNewDealPage.SelectcalendarByJSendDate(); 
 	}
 
-	@Then("User Enter the value of Minimum order field {string}")
-	public void user_Enter_the_value_of_Minimum_order_field(String Minimumorder) {
+	@Then("User Enter the value of Minimum order field{string}")
+	public void user_Enter_the_value_of_Minimum_order_field(String Minimumorder) throws InterruptedException {
 		AdminPromotionNewDealPage.EnterValueOfMinimumOrder(Minimumorder);
 	}
 
@@ -215,75 +215,100 @@ public class AdminPromotionNewDeal {
 
 	@Then("User Click the Next SKU")
 	public void user_Click_the_Next_SKU() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		AdminPromotionNewDealPage.ClicktheNextSku();
 	}
 
 	@Then("User click the Add SKU")
 	public void user_click_the_Add_SKU() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		AdminPromotionNewDealPage.ClickAddSKU();
 	}
 
 	@Then("User click the First checkbox")
 	public void user_click_the_First_checkbox() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		AdminPromotionNewDealPage.FirstCheckbox();
 	}
 
 	@Then("User click on the UOM options dropdown")
 	public void user_click_on_the_UOM_options_dropdown() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		AdminPromotionNewDealPage.ClickUOMOptions();
 	}
 
 	@Then("User Clear the Block option field")
 	public void user_Clear_the_Block_option_field() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		//AdminPromotionNewDealPage.ClearBlockField();
 	}
 
 	@Then("User Clear the Deal price option field")
 	public void user_Clear_the_Deal_price_option_field() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		AdminPromotionNewDealPage.ClearDealPriceOption();
 	}
 
 	@Then("User Enter the Deal price field {string}")
-	public void user_Enter_the_Deal_price_field(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	public void user_Enter_the_Deal_price_field(String Dealprice) {
+		AdminPromotionNewDealPage.DealPriceEnter(Dealprice);
 	}
 
 	@Then("User Enter the Original price field {string}")
-	public void user_Enter_the_Original_price_field(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	public void user_Enter_the_Original_price_field(String Originalprice) {
+		AdminPromotionNewDealPage.OriginalPriceEnter(Originalprice);
 	}
 
 	@Then("User Clear the MOQ option field")
 	public void user_Clear_the_MOQ_option_field() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		AdminPromotionNewDealPage.ClearMOQOption();
 	}
 
 	@Then("User Enter the MOQ field {string}")
-	public void user_Enter_the_MOQ_field(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	public void user_Enter_the_MOQ_field(String MOQ) {
+		AdminPromotionNewDealPage.MOQFieldEnter(MOQ);
 	}
 
 	@Then("User Enter the Shelf life {string}")
-	public void user_Enter_the_Shelf_life(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	public void user_Enter_the_Shelf_life(String Shelflife) {
+		AdminPromotionNewDealPage.EnterShelfLife(Shelflife);
 	}
 
 	@Then("User click on the Save changes")
 	public void user_click_on_the_Save_changes() {
+		AdminPromotionNewDealPage.ClickSaveChanges();
+	}
+
+	@Then("User Enter the Friday CutOff time\"{int}\"")
+	public void user_Enter_the_Friday_CutOff_time(Integer int1) {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new io.cucumber.java.PendingException();
 	}
+
+	@Then("User Enter the Email of By email field\"shwetha@gmail.com\"")
+	public void user_Enter_the_Email_of_By_email_field_shwetha_gmail_com() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("User Enter the Deal price field\"{int}\"")
+	public void user_Enter_the_Deal_price_field(Integer int1) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("User Enter the Original price field\"{int}\"")
+	public void user_Enter_the_Original_price_field(Integer int1) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("User Enter the MOQ field\"{int}\"")
+	public void user_Enter_the_MOQ_field(Integer int1) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+
+	@Then("User Enter the Shelf life\"{int}\"")
+	public void user_Enter_the_Shelf_life(Integer int1) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
+	
 
 
 

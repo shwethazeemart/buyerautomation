@@ -31,83 +31,111 @@ public class AdminPromotionNewDealPage {
 	}
 
 
-	@FindBy(xpath = "//a[text()=' Deals ']")
+	@FindBy(xpath = "//button[text()=' New deal ']")
 	private static WebElement AdminPromotionListingPage_NewDeal;
 
-	@FindBy(xpath = "//a[text()=' Deals ']")
+	@FindBy(xpath = "//select[@formcontrolname='supplierId']")
 	private static WebElement AdminPromotionListingPage_Supplier;
 
-	@FindBy(xpath = "//a[text()=' Deals ']")
+	@FindBy(xpath = "//input[@formcontrolname='title']")
 	private static WebElement AdminPromotionListingPage_EntertheTitle;
 
-	@FindBy(xpath = "//a[text()=' Deals ']")
+	@FindBy(xpath = "//textarea[@formcontrolname='description']")
 	private static WebElement AdminPromotionListingPage_EntertheDescription;
 
-	@FindBy(xpath = "//a[text()=' Deals ']")
-	private static WebElement AdminPromotionListingPage_CarouselBanner;
-
-	@FindBy(xpath = "//a[text()=' Deals ']")
+	@FindBy(xpath = "//button[text()='Save']")
 	private static WebElement AdminPromotionListingPage_SaveCarouselBanner;
 
-	@FindBy(xpath = "//a[text()=' Deals ']")
-	private static WebElement AdminPromotionListingPage_LandingBanner;
-
-	@FindBy(xpath = "//a[text()=' Deals ']")
+	@FindBy(xpath = "//button[text()='Save']")
 	private static WebElement AdminPromotionListingPage_SaveLandingBanner;
 
-	@FindBy(xpath = "//a[text()=' Deals ']")
+	@FindBy(xpath = "//input[@formcontrolname='deliveryFeePolicyMinOrderAmount']")
 	private static WebElement AdminPromotionListingPage_ValueMinimumOrder;
 
-	@FindBy(xpath = "//a[text()=' Deals ']")
+	@FindBy(xpath = "(//input[@name='deliveryFeePolicyType'])[2]")
 	private static WebElement AdminPromotionListingPage_Radiobutton;
 
-	@FindBy(xpath = "//a[text()=' Deals ']")
+	@FindBy(xpath = "//input[@formcontrolname='deliveryFeePolicyFeeAmount']")
 	private static WebElement AdminPromotionListingPage_CutOffTime;
 
-	@FindBy(xpath = "//a[text()=' Deals ']")
+	@FindBy(xpath = "//select[@formcontrolname='deliveryFeePolicyCondition']")
 	private static WebElement AdminPromotionListingPage_Applyfee;
 
-	@FindBy(xpath = "//a[text()=' Deals ']")
+	@FindBy(xpath = "(//input[@type='checkbox'])[2]")
 	private static WebElement AdminPromotionListingPage_CheckBoxMonday;
 
-	@FindBy(xpath = "//a[text()=' Deals ']")
+	@FindBy(xpath = "//input[contains(@class,'form-control ng-pristine')]")
 	private static WebElement AdminPromotionListingPage_EnterCutOfftime;
 
-	@FindBy(xpath = "//a[text()=' Deals ']")
+	@FindBy(xpath = "(//input[contains(@class,'form-control ng-pristine')])[2]")
 	private static WebElement AdminPromotionListingPage_TimeField;
 
-	@FindBy(xpath = "//a[text()=' Deals ']")
+	@FindBy(xpath = "//span[text()=' Set ']")
 	private static WebElement AdminPromotionListingPage_SetButton;
 
-	@FindBy(xpath = "//a[text()=' Deals ']")
+	@FindBy(xpath = "//input[contains(@class,'custom-control-input ng-pristine')]")
 	private static WebElement AdminPromotionListingPage_WednesdayCheckbox;
 
-	@FindBy(xpath = "//a[text()=' Deals ']")
+	@FindBy(xpath = "(//input[@formcontrolname='days'])[3]")
 	private static WebElement AdminPromotionListingPage_WednesdayCutOff;
 
-	@FindBy(xpath = "//a[text()=' Deals ']")
+	@FindBy(xpath = "(//input[contains(@class,'form-control ng-pristine')])[4]")
 	private static WebElement AdminPromotionListingPage_WedTimeField;
 
-	@FindBy(xpath = "//a[text()=' Deals ']")
+	@FindBy(xpath = "//span[text()=' Set ']")
 	private static WebElement AdminPromotionListingPage_WedSetBtn;
 	
-	@FindBy(xpath = "//a[text()=' Deals ']")
+	@FindBy(xpath = "//input[contains(@class,'custom-control-input ng-pristine')]")
 	private static WebElement AdminPromotionListingPage_FridayCheckbox;
 
-	@FindBy(xpath = "//a[text()=' Deals ']")
+	@FindBy(xpath = "(//input[@formcontrolname='days'])[5]")
 	private static WebElement AdminPromotionListingPage_FridayCutOffTime;
 	
-	@FindBy(xpath = "//a[text()=' Deals ']")
+	@FindBy(xpath = "(//input[contains(@class,'form-control ng-pristine')])[6]")
 	private static WebElement AdminPromotionListingPage_FridayTimeField;
 
-	@FindBy(xpath = "//a[text()=' Deals ']")
+	@FindBy(xpath = "//span[text()=' Set ']")
 	private static WebElement AdminPromotionListingPage_FridaySetButton;
 
-	@FindBy(xpath = "//a[text()=' Deals ']")
+	@FindBy(xpath = "(//input[@formcontrolname='allOutlets'])[1]")
 	private static WebElement AdminPromotionListingPage_AllOutletsRadioBtn;
 
-	@FindBy(xpath = "//a[text()=' Deals ']")
+	@FindBy(xpath = "//input[@formcontrolname='notifyEmail']")
 	private static WebElement AdminPromotionListingPage_ByEmail;
+
+	@FindBy(xpath = "//button[@type='submit']")
+	private static WebElement AdminPromotionListingPage_NextSKU;
+	
+	@FindBy(xpath = "//button[text()=' Add SKU ']")
+	private static WebElement AdminPromotionListingPage_AddSKU;
+
+	@FindBy(xpath = "(//input[@type='checkbox'])[2]")
+	private static WebElement AdminPromotionListingPage_FirstCheckbox;
+	
+	@FindBy(xpath = "(//a[@class='optional'])[1]")
+	private static WebElement AdminPromotionListingPage_UOMOptions;
+	
+	@FindBy(xpath = "(//input[@class='form-control'])[1]")
+	private static WebElement AdminPromotionListingPage_DealPriceOption;
+
+	@FindBy(xpath = "(//input[@class='form-control'])[1]")
+	private static WebElement AdminPromotionListingPage_DealPrice;
+	
+	@FindBy(xpath = "(//input[@class='form-control'])[2]")
+	private static WebElement AdminPromotionListingPage_OriginalPrice;
+
+	@FindBy(xpath = "(//input[@class='form-control'])[3]")
+	private static WebElement AdminPromotionListingPage_MOQOption;
+	
+	@FindBy(xpath = "(//input[@class='form-control'])[3]")
+	private static WebElement AdminPromotionListingPage_MOQField;
+	
+	@FindBy(xpath = "//input[contains(@class,'form-control ng-pristine')]")
+	private static WebElement AdminPromotionListingPage_ShelfLife;
+
+	@FindBy(xpath = "//a[text()=' Save changes ']")
+	private static WebElement AdminPromotionListingPage_SaveChanges;
+
 
 	public static void ClickNewDeal() {
 		AdminPromotionListingPage_NewDeal.click();
@@ -157,7 +185,7 @@ public class AdminPromotionNewDealPage {
 	}
 
 	public static void CarouselBannerClick() {
-		AdminPromotionListingPage_CarouselBanner.click();
+		//AdminPromotionListingPage_CarouselBanner.click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -166,9 +194,15 @@ public class AdminPromotionNewDealPage {
 				.executeScript("return document.readyState").equals("complete"));
 	}
 
-	public static void ClickOnUploadfile() {
-		WebElement uploadBox=driver.findElement(By.xpath("(//input[@class='custom-file-input'])[1]"));
-		uploadBox.sendKeys("E://Zeemart//employers-750x300.jpg");
+	public static void ClickOnUploadfile() throws InterruptedException {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,250)");
+		Thread.sleep(5000);
+		WebElement bannerone=driver.findElement(By.xpath("(//input[@class='custom-file-input'])[1]"));
+	    bannerone.click();
+		Thread.sleep(5000);
+		WebElement uploadBox=driver.findElement(By.xpath("//input[@class='ngx-file-drop__file-input']"));
+		uploadBox.sendKeys("E:/Zeemart/employers-750x300.jpg");
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -188,7 +222,7 @@ public class AdminPromotionNewDealPage {
 	}
 
 	public static void ClickLandingBanner() {
-		AdminPromotionListingPage_LandingBanner.click();
+		//AdminPromotionListingPage_LandingBanner.click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -197,9 +231,14 @@ public class AdminPromotionNewDealPage {
 				.executeScript("return document.readyState").equals("complete"));
 	}
 
-	public static void ClickOnUploadLandingFile() {
-		WebElement uploadBox=driver.findElement(By.xpath("((//input[@class='custom-file-input'])[2]"));
-		uploadBox.sendKeys("E://Zeemart//employers-750x300.jpg");
+	
+	public static void ClickOnUploadLandingFile() throws InterruptedException {
+		Thread.sleep(5000);
+		WebElement bannertwo=driver.findElement(By.xpath("(//input[@class='custom-file-input'])[2]"));
+	    bannertwo.click();
+		Thread.sleep(5000);
+		WebElement uploadBox=driver.findElement(By.xpath("//input[@class='ngx-file-drop__file-input']"));
+		uploadBox.sendKeys("E:/Zeemart/employers-750x300.jpg");
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -219,6 +258,8 @@ public class AdminPromotionNewDealPage {
 	}
 
 	public static void SelectcalendarByJS() {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,250)");
 		WebElement DateBox=driver.findElement(By.xpath("//input[@placeholder='From']"));
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -227,17 +268,21 @@ public class AdminPromotionNewDealPage {
 
 
 	}
-	public static void SelectcalendarByJSendDate() {
-		WebElement DateBox=driver.findElement(By.xpath("//input[@placeholder='Until']"));
+	public static void SelectcalendarByJSendDate() throws InterruptedException {
+		Thread.sleep(5000);
+		WebElement DateBoxtwo=driver.findElement(By.xpath("//input[@placeholder='Until']"));
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 
-		js.executeScript("arguments[0].value='22 Feb 2022';", DateBox);
+		js.executeScript("arguments[0].value='22 Feb 2022';", DateBoxtwo);
 
 	}
 
-	public static void EnterValueOfMinimumOrder(String minimumorder) {
-		AdminPromotionListingPage_ValueMinimumOrder.sendKeys(minimumorder);
+	public static void EnterValueOfMinimumOrder(String Minimumorder) throws InterruptedException {
+		Thread.sleep(5000);
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,250)");
+		AdminPromotionListingPage_ValueMinimumOrder.sendKeys(Minimumorder);
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -438,6 +483,129 @@ public class AdminPromotionNewDealPage {
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
 	}
+
+	public static void ClicktheNextSku() {
+		AdminPromotionListingPage_NextSKU.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	public static void ClickAddSKU() {
+		AdminPromotionListingPage_AddSKU.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	public static void FirstCheckbox() {
+		AdminPromotionListingPage_FirstCheckbox.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	public static void ClickUOMOptions() {
+		AdminPromotionListingPage_UOMOptions.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	public static void ClearBlockField() {
+		//AdminPromotionListingPage_BlockField.clear();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	public static void ClearDealPriceOption() {
+		AdminPromotionListingPage_DealPriceOption.clear();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	public static void DealPriceEnter(String dealprice) {
+		AdminPromotionListingPage_DealPrice.sendKeys(dealprice);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	public static void OriginalPriceEnter(String originalprice) {
+		AdminPromotionListingPage_OriginalPrice.sendKeys(originalprice);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	public static void ClearMOQOption() {
+		AdminPromotionListingPage_MOQOption.clear();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public static void MOQFieldEnter(String mOQ) {
+		AdminPromotionListingPage_MOQField.sendKeys(mOQ);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	public static void EnterShelfLife(String shelflife) {
+		AdminPromotionListingPage_ShelfLife.sendKeys(shelflife);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	public static void ClickSaveChanges() {
+		AdminPromotionListingPage_SaveChanges.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	
 	}
 	
 
