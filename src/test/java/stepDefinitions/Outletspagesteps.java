@@ -33,7 +33,7 @@ public class Outletspagesteps {
 	}
 
 	@Then("User Clicks on outlets in the side navigation menubar")
-	public void user_Clicks_on_outlets_in_the_side_navigation_menubar()  {
+	public void user_Clicks_on_outlets_in_the_side_navigation_menubar() throws InterruptedException  {
 		dashboradpage.clickOutlets();
 	}
 

@@ -1146,7 +1146,7 @@ Scenario Outline: Verify the Outlets listing page of Buyer panel
       | username                      | | password   ||confirm||outletname     |
       | buyerautomated3@gmail.com     | |!123456Zm   ||DISABLE||velu masala2020|
       
-     
+    
 Scenario Outline: Verify the Outlets manage details page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>" 
@@ -1211,7 +1211,7 @@ Scenario Outline: Verify the Outlets manage details page of Buyer panel
       | buyerautomated3@gmail.com     | |!123456Zm   ||buyer      | |velumani@zeemart.asia||lingeshsabari2009@gmail.com||velumanieswaran2020@gmail.com| 
       
    
-
+ 
 Scenario Outline: Verify the Outlets view suppliers page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>" 

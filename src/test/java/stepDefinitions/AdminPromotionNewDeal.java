@@ -188,7 +188,7 @@ public class AdminPromotionNewDeal {
 		AdminPromotionNewDealPage.FridayCheckbox();
 	}
 
-	@Then("User Enter the Friday CutOff time {string}")
+	@Then("User Enter the Friday CutOff time{string}")
 	public void user_Enter_the_Friday_CutOff_time(String FridayCutOfftime) {
 		AdminPromotionNewDealPage.FridayCutOffTime(FridayCutOfftime);
 	}
@@ -208,7 +208,7 @@ public class AdminPromotionNewDeal {
 		AdminPromotionNewDealPage.RadioBtnofAllOutlets();
 	}
 
-	@Then("User Enter the Email of By email field {string}")
+	@Then("User Enter the Email of By email field{string}")
 	public void user_Enter_the_Email_of_By_email_field_shwetha_gmail_com(String Byemail) {
 		AdminPromotionNewDealPage.EnterByemail(Byemail);
 	}
@@ -219,7 +219,7 @@ public class AdminPromotionNewDeal {
 	}
 
 	@Then("User click the Add SKU")
-	public void user_click_the_Add_SKU() {
+	public void user_click_the_Add_SKU() throws InterruptedException {
 		AdminPromotionNewDealPage.ClickAddSKU();
 	}
 
@@ -243,12 +243,12 @@ public class AdminPromotionNewDeal {
 		AdminPromotionNewDealPage.ClearDealPriceOption();
 	}
 
-	@Then("User Enter the Deal price field {string}")
+	@Then("User Enter the Deal price field{string}")
 	public void user_Enter_the_Deal_price_field(String Dealprice) {
 		AdminPromotionNewDealPage.DealPriceEnter(Dealprice);
 	}
 
-	@Then("User Enter the Original price field {string}")
+	@Then("User Enter the Original price field{string}")
 	public void user_Enter_the_Original_price_field(String Originalprice) {
 		AdminPromotionNewDealPage.OriginalPriceEnter(Originalprice);
 	}
@@ -258,12 +258,12 @@ public class AdminPromotionNewDeal {
 		AdminPromotionNewDealPage.ClearMOQOption();
 	}
 
-	@Then("User Enter the MOQ field {string}")
+	@Then("User Enter the MOQ field{string}")
 	public void user_Enter_the_MOQ_field(String MOQ) {
 		AdminPromotionNewDealPage.MOQFieldEnter(MOQ);
 	}
 
-	@Then("User Enter the Shelf life {string}")
+	@Then("User Enter the Shelf life{string}")
 	public void user_Enter_the_Shelf_life(String Shelflife) {
 		AdminPromotionNewDealPage.EnterShelfLife(Shelflife);
 	}
@@ -272,45 +272,5 @@ public class AdminPromotionNewDeal {
 	public void user_click_on_the_Save_changes() {
 		AdminPromotionNewDealPage.ClickSaveChanges();
 	}
-
-	@Then("User Enter the Friday CutOff time\"{int}\"")
-	public void user_Enter_the_Friday_CutOff_time(Integer int1) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
-
-	@Then("User Enter the Email of By email field\"shwetha@gmail.com\"")
-	public void user_Enter_the_Email_of_By_email_field_shwetha_gmail_com() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
-
-	@Then("User Enter the Deal price field\"{int}\"")
-	public void user_Enter_the_Deal_price_field(Integer int1) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
-
-	@Then("User Enter the Original price field\"{int}\"")
-	public void user_Enter_the_Original_price_field(Integer int1) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
-
-	@Then("User Enter the MOQ field\"{int}\"")
-	public void user_Enter_the_MOQ_field(Integer int1) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
-
-	@Then("User Enter the Shelf life\"{int}\"")
-	public void user_Enter_the_Shelf_life(Integer int1) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
-	
-
-
-
 
 }

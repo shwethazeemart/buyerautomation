@@ -345,9 +345,9 @@ public class DashboardPage {
 				.executeScript("return document.readyState").equals("complete"));
 	}
 
-	public void clickOutlets()  {
+	public void clickOutlets() throws InterruptedException  {
 		button_Outlets.click();
-		//Thread.sleep(5000);
+		Thread.sleep(5000);
 		try {
 			Thread.sleep(7000);
 		} catch (InterruptedException e) {

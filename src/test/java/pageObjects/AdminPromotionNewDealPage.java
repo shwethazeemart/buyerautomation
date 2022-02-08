@@ -60,38 +60,41 @@ public class AdminPromotionNewDealPage {
 
 	@FindBy(xpath = "//select[@formcontrolname='deliveryFeePolicyCondition']")
 	private static WebElement AdminPromotionListingPage_Applyfee;
+	
+	@FindBy(xpath = "//select[@formcontrolname='deliveryFeePolicyCondition']")
+	private static WebElement AdminPromotionListingPage_ToallOrders;
 
 	@FindBy(xpath = "(//input[@type='checkbox'])[2]")
 	private static WebElement AdminPromotionListingPage_CheckBoxMonday;
 
-	@FindBy(xpath = "//input[contains(@class,'form-control ng-pristine')]")
+	@FindBy(xpath = "(//input[@formcontrolname='days'])[1]")
 	private static WebElement AdminPromotionListingPage_EnterCutOfftime;
 
-	@FindBy(xpath = "(//input[contains(@class,'form-control ng-pristine')])[2]")
+	@FindBy(xpath = "(//div[@class='d-inline-flex']//input)[3]")
 	private static WebElement AdminPromotionListingPage_TimeField;
 
 	@FindBy(xpath = "//span[text()=' Set ']")
 	private static WebElement AdminPromotionListingPage_SetButton;
 
-	@FindBy(xpath = "//input[contains(@class,'custom-control-input ng-pristine')]")
+	@FindBy(xpath = "(//input[@formcontrolname='status'])[3]")
 	private static WebElement AdminPromotionListingPage_WednesdayCheckbox;
 
 	@FindBy(xpath = "(//input[@formcontrolname='days'])[3]")
 	private static WebElement AdminPromotionListingPage_WednesdayCutOff;
 
-	@FindBy(xpath = "(//input[contains(@class,'form-control ng-pristine')])[4]")
+	@FindBy(xpath = "(//div[@class='d-inline-flex']//input)[7]")
 	private static WebElement AdminPromotionListingPage_WedTimeField;
 
 	@FindBy(xpath = "//span[text()=' Set ']")
 	private static WebElement AdminPromotionListingPage_WedSetBtn;
 	
-	@FindBy(xpath = "//input[contains(@class,'custom-control-input ng-pristine')]")
+	@FindBy(xpath = "(//input[@formcontrolname='status'])[5]")
 	private static WebElement AdminPromotionListingPage_FridayCheckbox;
 
 	@FindBy(xpath = "(//input[@formcontrolname='days'])[5]")
 	private static WebElement AdminPromotionListingPage_FridayCutOffTime;
 	
-	@FindBy(xpath = "(//input[contains(@class,'form-control ng-pristine')])[6]")
+	@FindBy(xpath = "(//div[@class='d-inline-flex']//input)[11]")
 	private static WebElement AdminPromotionListingPage_FridayTimeField;
 
 	@FindBy(xpath = "//span[text()=' Set ']")
@@ -103,7 +106,7 @@ public class AdminPromotionNewDealPage {
 	@FindBy(xpath = "//input[@formcontrolname='notifyEmail']")
 	private static WebElement AdminPromotionListingPage_ByEmail;
 
-	@FindBy(xpath = "//button[@type='submit']")
+	@FindBy(xpath = "//button[text()=' Next: SKU']")
 	private static WebElement AdminPromotionListingPage_NextSKU;
 	
 	@FindBy(xpath = "//button[text()=' Add SKU ']")
@@ -326,7 +329,7 @@ public class AdminPromotionNewDealPage {
 	}
 
 	public static void SelectToallOrders() {
-		//AdminPromotionListingPage_ToallOrders.click();
+		AdminPromotionListingPage_ToallOrders.click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -336,6 +339,8 @@ public class AdminPromotionNewDealPage {
 
 	}
 	public static void CheckboxMonday() {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,250)");
 		AdminPromotionListingPage_CheckBoxMonday.click();
 		try {
 			Thread.sleep(5000);
@@ -345,9 +350,8 @@ public class AdminPromotionNewDealPage {
 				.executeScript("return document.readyState").equals("complete"));
 
 	}
-
-	public static void EnterCutOfftime(String mondayCutOfftime) {
-		AdminPromotionListingPage_EnterCutOfftime.sendKeys();
+	public static void EnterCutOfftime(String MondayCutOfftime) {
+		AdminPromotionListingPage_EnterCutOfftime.sendKeys(MondayCutOfftime);
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -391,8 +395,8 @@ public class AdminPromotionNewDealPage {
 
 	}
 
-	public static void WednesdayCutOfftime(String wedCutOfftime) {
-		AdminPromotionListingPage_WednesdayCutOff.sendKeys();
+	public static void WednesdayCutOfftime(String WedCutOfftime) {
+		AdminPromotionListingPage_WednesdayCutOff.sendKeys(WedCutOfftime);
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -425,6 +429,8 @@ public class AdminPromotionNewDealPage {
 	}
 
 	public static void FridayCheckbox() {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,250)");
 		AdminPromotionListingPage_FridayCheckbox.click();
 		try {
 			Thread.sleep(5000);
@@ -434,8 +440,8 @@ public class AdminPromotionNewDealPage {
 				.executeScript("return document.readyState").equals("complete"));
 	}
 
-	public static void FridayCutOffTime(String fridayCutOfftime) {
-		AdminPromotionListingPage_FridayCutOffTime.sendKeys();
+	public static void FridayCutOffTime(String FridayCutOfftime) {
+		AdminPromotionListingPage_FridayCutOffTime.sendKeys(FridayCutOfftime);
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -474,8 +480,10 @@ public class AdminPromotionNewDealPage {
 				.executeScript("return document.readyState").equals("complete"));
 	}
 
-	public static void EnterByemail(String byemail) {
-		AdminPromotionListingPage_ByEmail.sendKeys();
+	public static void EnterByemail(String Byemail) {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,250)");
+		AdminPromotionListingPage_ByEmail.sendKeys(Byemail);
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -485,6 +493,8 @@ public class AdminPromotionNewDealPage {
 	}
 
 	public static void ClicktheNextSku() {
+		WebElement element = driver.findElement(By.xpath("//div[@class='form-group col-md-12 pt-2']"));
+		element.click();
 		AdminPromotionListingPage_NextSKU.click();
 		try {
 			Thread.sleep(5000);
@@ -494,7 +504,8 @@ public class AdminPromotionNewDealPage {
 				.executeScript("return document.readyState").equals("complete"));
 	}
 
-	public static void ClickAddSKU() {
+	public static void ClickAddSKU() throws InterruptedException {
+		Thread.sleep(5000);
 		AdminPromotionListingPage_AddSKU.click();
 		try {
 			Thread.sleep(5000);
