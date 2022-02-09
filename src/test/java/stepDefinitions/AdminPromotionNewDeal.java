@@ -209,7 +209,7 @@ public class AdminPromotionNewDeal {
 	}
 
 	@Then("User Enter the Email of By email field{string}")
-	public void user_Enter_the_Email_of_By_email_field_shwetha_gmail_com(String Byemail) {
+	public void user_Enter_the_Email_of_By_email_field_shwetha_gmail_com(String Byemail) throws InterruptedException {
 		AdminPromotionNewDealPage.EnterByemail(Byemail);
 	}
 

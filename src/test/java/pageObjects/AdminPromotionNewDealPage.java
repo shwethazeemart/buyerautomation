@@ -106,7 +106,7 @@ public class AdminPromotionNewDealPage {
 	@FindBy(xpath = "//input[@formcontrolname='notifyEmail']")
 	private static WebElement AdminPromotionListingPage_ByEmail;
 
-	@FindBy(xpath = "//button[text()=' Next: SKU']")
+	@FindBy(xpath = "//div[contains(@class,'form-group col-md-12')]//button[1]")
 	private static WebElement AdminPromotionListingPage_NextSKU;
 	
 	@FindBy(xpath = "//button[text()=' Add SKU ']")
@@ -263,7 +263,7 @@ public class AdminPromotionNewDealPage {
 	public static void SelectcalendarByJS() {
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		jse.executeScript("window.scrollBy(0,250)");
-		WebElement DateBox=driver.findElement(By.xpath("//input[@placeholder='From']"));
+		WebElement DateBox=driver.findElement(By.xpath("//input[@formcontrolname='startDate']"));
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 
@@ -273,7 +273,7 @@ public class AdminPromotionNewDealPage {
 	}
 	public static void SelectcalendarByJSendDate() throws InterruptedException {
 		Thread.sleep(5000);
-		WebElement DateBoxtwo=driver.findElement(By.xpath("//input[@placeholder='Until']"));
+		WebElement DateBoxtwo=driver.findElement(By.xpath("//input[@formcontrolname='endDate']"));
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 
@@ -480,9 +480,10 @@ public class AdminPromotionNewDealPage {
 				.executeScript("return document.readyState").equals("complete"));
 	}
 
-	public static void EnterByemail(String Byemail) {
+	public static void EnterByemail(String Byemail) throws InterruptedException {
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		jse.executeScript("window.scrollBy(0,250)");
+		Thread.sleep(5000);
 		AdminPromotionListingPage_ByEmail.sendKeys(Byemail);
 		try {
 			Thread.sleep(5000);
@@ -493,8 +494,8 @@ public class AdminPromotionNewDealPage {
 	}
 
 	public static void ClicktheNextSku() {
-		WebElement element = driver.findElement(By.xpath("//div[@class='form-group col-md-12 pt-2']"));
-		element.click();
+		//WebElement element = driver.findElement(By.xpath("//form[@class='ng-dirty ng-touched ng-valid']/child::div[2]/child::div/child::div/button[text()=' Next: SKU']"));
+		//element.click();
 		AdminPromotionListingPage_NextSKU.click();
 		try {
 			Thread.sleep(5000);

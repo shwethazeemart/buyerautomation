@@ -442,7 +442,7 @@ Scenario Outline: Verify the Promotion Deals page
        |username                     |  |password    | |Deal        |
        |velumanisabari2009@gmail.com |  |#f=6T7uX    | |Bug testing |
          
- @Smoke         
+         
  Scenario Outline: Verify the Promotion New deal page
   
           Given User are available in login page
@@ -500,10 +500,33 @@ Scenario Outline: Verify the Promotion Deals page
          |username                     |  |password    | |Title   | |Description  | |Minimumorder | |CutOfftime | |MondayCutOfftime | |WedCutOfftime | |FridayCutOfftime| |Byemail           | |Dealprice | |Originalprice | |MOQ | |Shelflife |
          |velumanisabari2009@gmail.com |  |#f=6T7uX    | |Omicron | |New Virus    | |5            | |3          | |2                | |1             | |1               | |shwetha@gmail.com | |20        | | 15           | |10  | |1           |
         
+@Smoke         
+ Scenario Outline: Verify the Promo code page
+  
+          Given User are available in login page
+          When User is enter exact username"<username>"
+          And User is enter exact password"<password>"
+          When User are Select country in the autocomplete text box
+          And User is press the Admin login button 
+          When User Clicks on Admin Promotions in the side navigation menubar    
+          Then User Click on the New promo code
+          Then User Enter the Promo code"<promocode>"   
+          Then User Enter the Promo name"<promoname>"
+          Then User Enter the Promo description"<promodescription>"
+          Then User clicks the Profile photo
+          Then User select the Calendar From date of Validity 
+          Then User select the Calendar Until date of Validity
+          Then User Click Applies to dropdown
+          Then User click Discount type dropdown
+          Then User Enter the Discount value percentage"<discountpercentage>"
+          Then User Enter the Min order value"<minorder>"
+          Then User Enter Usage restrictions overall quota"<overallquota>"
+          Then User Click the Save
           
           
-
-          
+           Examples:
+         |username                     |  |password    | |promocode | |promoname | |promodescription |  |discountpercentage | |minorder  | |overallquota | 
+         |velumanisabari2009@gmail.com |  |#f=6T7uX    | |COD101    | |kinley    | |Hii Kinley       |  |5                  | |15        | |150          |
           
           
           
