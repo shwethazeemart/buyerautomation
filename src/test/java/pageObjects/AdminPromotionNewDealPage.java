@@ -29,6 +29,7 @@ public class AdminPromotionNewDealPage {
 		WebElement tosterMsg = driver.findElement(By.xpath("//*[text()='" + msg + "']"));
 
 	}
+	
 
 
 	@FindBy(xpath = "//button[text()=' New deal ']")

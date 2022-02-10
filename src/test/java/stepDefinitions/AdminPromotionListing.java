@@ -51,6 +51,7 @@ public class AdminPromotionListing {
 		    this.adminOrderDetails=testContext.getPageObjectManager().getAdminOrderDetailsPage();
 		    this.adminPromotionListing=testContext.getPageObjectManager().getAdminPromotionListingPage();
 		}
+		
 
 @When("User Clicks on Admin Promotions in the side navigation menubar")
 public void user_Clicks_on_Admin_Promotions_in_the_side_navigation_menubar() throws InterruptedException {

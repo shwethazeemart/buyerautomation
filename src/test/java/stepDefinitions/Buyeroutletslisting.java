@@ -34,6 +34,7 @@ public class Buyeroutletslisting {
 		this.buyeroutletslisting = testContext.getPageObjectManager().getBuyeroutletslistingpage();
 
 	}
+	
 
 
 

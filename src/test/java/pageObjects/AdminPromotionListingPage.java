@@ -30,7 +30,7 @@ public class AdminPromotionListingPage {
 			WebElement tosterMsg = driver.findElement(By.xpath("//*[text()='" + msg + "']"));
 
 		}
-		
+				
 		
 		@FindBy(xpath = "//a[text()=' Deals ']")
 		private static WebElement AdminPromotionListingPage_Deals;

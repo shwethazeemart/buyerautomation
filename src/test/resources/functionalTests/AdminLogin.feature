@@ -390,7 +390,7 @@ Scenario Outline: Verify the Order listing page
           
           
           
-          Examples:
+       Examples:
          |username                     |  |password    | |orderid       |
          |velumanisabari2009@gmail.com |  |#f=6T7uX    | |202201130007  |
          
@@ -415,11 +415,6 @@ Scenario Outline: Verify the Order Details page
        |username                     |  |password    | |reason              |
        |velumanisabari2009@gmail.com |  |#f=6T7uX    | |Available in order  |
          
-<<<<<<< HEAD
-  
-=======
- 
->>>>>>> 22f3c52483a4edb5c65f94402707c6a9476e51c0
 Scenario Outline: Verify the Promotion Deals page
   
           Given User are available in login page
@@ -499,7 +494,6 @@ Scenario Outline: Verify the Promotion Deals page
           Then User Enter the Shelf life"<Shelflife>"                  
           Then User click on the Save changes
           
-<<<<<<< HEAD
     
          Examples:
          |username                     |  |password    | |Title   | |Description  | |Minimumorder | |CutOfftime | |MondayCutOfftime | |WedCutOfftime | |FridayCutOfftime| |Byemail           | |Dealprice | |Originalprice | |MOQ | |Shelflife |
@@ -507,16 +501,12 @@ Scenario Outline: Verify the Promotion Deals page
         
          
  Scenario Outline: Verify the Promo code page
-=======
-Scenario Outline: Verify the Reports outlets page
->>>>>>> 22f3c52483a4edb5c65f94402707c6a9476e51c0
   
           Given User are available in login page
           When User is enter exact username"<username>"
           And User is enter exact password"<password>"
           When User are Select country in the autocomplete text box
           And User is press the Admin login button 
-<<<<<<< HEAD
           When User Clicks on Admin Promotions in the side navigation menubar    
           Then User Click on the New promo code
           Then User Enter the Promo code"<promocode>"   
@@ -531,7 +521,6 @@ Scenario Outline: Verify the Reports outlets page
           Then User Enter the Min order value"<minorder>"
           Then User Enter Usage restrictions overall quota"<overallquota>"
           Then User Click the Save
-=======
           When User Clicks on Admin Reports in the side navigation menubar 
           Then User click on By outlet option 
           Then User select date from calendar field
@@ -550,20 +539,12 @@ Scenario Outline: Verify the Reports outlets page
           Then User select user in dropdown field
           Then User click on reset button in filter field
           
->>>>>>> 22f3c52483a4edb5c65f94402707c6a9476e51c0
-          
-     Examples:
-       |username                     |  |password    | 
-       |velumanisabari2009@gmail.com |  |#f=6T7uX    |             
-          
-<<<<<<< HEAD
-           Examples:
+       Examples:
          |username                     |  |password    | |promocode | |promoname | |promodescription |  |discountpercentage | |minorder  | |overallquota | 
          |velumanisabari2009@gmail.com |  |#f=6T7uX    | |COD101    | |kinley    | |Hii Kinley       |  |5                  | |15        | |150          |
-=======
           
 
-@Smoke          
+         
 Scenario Outline: Verify the Reports users page
   
           Given User are available in login page
@@ -587,7 +568,6 @@ Scenario Outline: Verify the Reports users page
      Examples:
        |username                     |  |password    | 
        |velumanisabari2009@gmail.com |  |#f=6T7uX    |                 
->>>>>>> 22f3c52483a4edb5c65f94402707c6a9476e51c0
           
           
 @Smoke         
@@ -600,19 +580,19 @@ Scenario Outline: Verify the Reports users page
           And User is press the Admin login button 
           When User Clicks on Admin Promotions in the side navigation menubar    
           Then User Click on the Promo codes tab
-          Then User clicks Search box
+          Then User clicks SEARCH CODE
           Then User Enter the SEARCH CODE"<code>" 
-          Then User Select the dropdown status
+          Then User Select the dropdown status of promo codes
           Then User select the Calendar Validity period 
-          Then User Clicks Search icon
+          Then User Clicks Search icon of promocodes
           Then User Click the Actions dropdown of Promocodes
           Then User Click the View settings
           Then User Enter the Promo code in View settings"<promocode>"
           Then User Click on the Save button
-          Then User Click the Actions dropdown of Promocodes
+          Then User Click the Actions dropdown Promocodes
           Then User Click the View details usage
           Then User Click return back to Promo codes
-          Then User Click the Actions dropdown of Promocodes
+          Then User Click the Actions dropdown the Promocodes
           Then User Click the End promo
           Then User Click the Close icon
           
