@@ -29,6 +29,7 @@ public class Supplierdashboard {
 	        this.suppliercustomerlocationlisting=testContext.getPageObjectManager().getSuppliercustomerlocationlistingpage();
             this.supplierdashboard=	testContext.getPageObjectManager().getSupplierdashboardpage();	
 		}
+		
 
 
 		@Then("User click on Dashboard side navigation list menubar")

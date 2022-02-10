@@ -55,7 +55,9 @@ import stepDefinitions.UserspageSteps;
 import pageObjects.AdminInvoiceuploadpage;
 import pageObjects.AdminOrderDetailsPage;
 import pageObjects.AdminOrderListingPage;
+import pageObjects.AdminPromoCodePage;
 import pageObjects.AdminPromotionListingPage;
+import pageObjects.AdminPromotionNewDealPage;
 import pageObjects.AdminReportsOutletspage;
 import pageObjects.AdminReportsUserspage;
 import pageObjects.Adminbuyerlinktothecompanypage;
@@ -182,6 +184,8 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private AdminOrderListingPage AdminOrderListing;
     private AdminOrderDetailsPage AdminOrderDetails;
     private AdminPromotionListingPage AdminPromotionListing;
+    private AdminPromotionNewDealPage AdminPromotionNewDeal;
+    private AdminPromoCodePage AdminPromoCode;
     private AdminReportsOutletspage AdminReportsOutlets;
     private AdminReportsUserspage AdminReportsUsers;
 
@@ -596,6 +600,10 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 	}
 
 
+	public AdminPromotionNewDealPage getAdminPromotionNewDealPage() {
+		return (AdminPromotionNewDeal == null) ? (AdminPromotionNewDeal = new AdminPromotionNewDealPage(driver)) : AdminPromotionNewDeal;
+	}
+
 	public AdminReportsOutletspage getAdminReportsOutletspage() {
 		return (AdminReportsOutlets == null) ? (AdminReportsOutlets = new AdminReportsOutletspage(driver)) : AdminReportsOutlets;
 	}
@@ -603,9 +611,17 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 
 	public AdminReportsUserspage getAdminReportsUserspage() {
 		return (AdminReportsUsers == null) ? (AdminReportsUsers = new AdminReportsUserspage(driver)) : AdminReportsUsers;
+
 	}
 
 
+	public AdminPromoCodePage getAdminPromoCodePage() {
+		return (AdminPromoCode == null) ? (AdminPromoCode = new AdminPromoCodePage(driver)) : AdminPromoCode;
+
+	}
+
+
+	
 
 
 }
