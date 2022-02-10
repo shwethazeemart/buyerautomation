@@ -31,34 +31,34 @@ public class AdminPromoCodePage {
 		}
 
 
-		@FindBy(xpath = "//input[@formcontrolname='promoCode']")
+		@FindBy(xpath = "//button[text()=' New promo code ']")
 		private static WebElement AdminPromoCodePage_PromoCode;
 
 		@FindBy(xpath = "//input[@formcontrolname='promoCode']")
 		private static WebElement AdminPromoCodePage_EnterPromoCode;
 		
-		@FindBy(xpath = "//button[text()=' New deal ']")
+		@FindBy(xpath = "//input[@formcontrolname='title']")
 		private static WebElement AdminPromoCodePage_EnterPromoName;
 
-		@FindBy(xpath = "//button[text()=' New deal ']")
+		@FindBy(xpath = "//textarea[@formcontrolname='description']")
 		private static WebElement AdminPromoCodePage_EnterPromoDescription;
 		
-		@FindBy(xpath = "//button[text()=' New deal ']")
+		@FindBy(xpath = "//select[@formcontrolname='applyTo']")
 		private static WebElement AdminPromoCodePage_ApplyTo;
 
-		@FindBy(xpath = "//button[text()=' New deal ']")
+		@FindBy(xpath = "//select[@formcontrolname='discountType']")
 		private static WebElement AdminPromoCodePage_DiscountType;
 
-		@FindBy(xpath = "//button[text()=' New deal ']")
+		@FindBy(xpath = "//input[@formcontrolname='discountPercentage']")
 		private static WebElement AdminPromoCodePage_EnterDiscountPercentage;
 
-		@FindBy(xpath = "//button[text()=' New deal ']")
+		@FindBy(xpath = "//input[@formcontrolname='minOrderAmount']")
 		private static WebElement AdminPromoCodePage_EnterMinOrder;
 
-		@FindBy(xpath = "//button[text()=' New deal ']")
+		@FindBy(xpath = "//input[@formcontrolname='noOfUsages']")
 		private static WebElement AdminPromoCodePage_EnterOverallQuota;
 
-		@FindBy(xpath = "//button[text()=' New deal ']")
+		@FindBy(xpath = "//button[text()='Save']")
 		private static WebElement AdminPromoCodePage_Save;
 		
 

@@ -500,7 +500,7 @@ Scenario Outline: Verify the Promotion Deals page
          |username                     |  |password    | |Title   | |Description  | |Minimumorder | |CutOfftime | |MondayCutOfftime | |WedCutOfftime | |FridayCutOfftime| |Byemail           | |Dealprice | |Originalprice | |MOQ | |Shelflife |
          |velumanisabari2009@gmail.com |  |#f=6T7uX    | |Omicron | |New Virus    | |5            | |3          | |2                | |1             | |1               | |shwetha@gmail.com | |20        | | 15           | |10  | |1           |
         
-@Smoke         
+         
  Scenario Outline: Verify the Promo code page
   
           Given User are available in login page
@@ -529,8 +529,37 @@ Scenario Outline: Verify the Promotion Deals page
          |velumanisabari2009@gmail.com |  |#f=6T7uX    | |COD101    | |kinley    | |Hii Kinley       |  |5                  | |15        | |150          |
           
           
+@Smoke         
+ Scenario Outline: Verify the Promo codes listing page
+  
+          Given User are available in login page
+          When User is enter exact username"<username>"
+          And User is enter exact password"<password>"
+          When User are Select country in the autocomplete text box
+          And User is press the Admin login button 
+          When User Clicks on Admin Promotions in the side navigation menubar    
+          Then User Click on the Promo codes tab
+          Then User clicks Search box
+          Then User Enter the SEARCH CODE"<code>" 
+          Then User Select the dropdown status
+          Then User select the Calendar Validity period 
+          Then User Clicks Search icon
+          Then User Click the Actions dropdown of Promocodes
+          Then User Click the View settings
+          Then User Enter the Promo code in View settings"<promocode>"
+          Then User Click on the Save button
+          Then User Click the Actions dropdown of Promocodes
+          Then User Click the View details usage
+          Then User Click return back to Promo codes
+          Then User Click the Actions dropdown of Promocodes
+          Then User Click the End promo
+          Then User Click the Close icon
           
-          
+        Examples:
+         |username                     |  |password    | |code  |  |promocode  |
+         |velumanisabari2009@gmail.com |  |#f=6T7uX    | |1234  |  |1234newcode|
+               
+                 
           
           
      

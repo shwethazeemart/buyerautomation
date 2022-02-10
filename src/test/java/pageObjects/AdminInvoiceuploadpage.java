@@ -77,14 +77,8 @@ public class AdminInvoiceuploadpage {
 	}
 
 	public void Clicks_the_upload_file() {
-		WebElement uploadBox=driver.findElement(By.xpath("//input[@id='file']"));
-		uploadBox.sendKeys("E:/Zeemart/download.jpg");
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-		}
-		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
-				.executeScript("return document.readyState").equals("complete"));	
+
+
 	}
 
 	public void Clicks_the_Upload_button() throws InterruptedException {		

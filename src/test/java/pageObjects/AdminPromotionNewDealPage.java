@@ -263,7 +263,8 @@ public class AdminPromotionNewDealPage {
 	public static void SelectcalendarByJS() {
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		jse.executeScript("window.scrollBy(0,250)");
-		WebElement DateBox=driver.findElement(By.xpath("//input[@formcontrolname='startDate']"));
+		WebElement DateBox=driver.findElement(By.xpath("//input[@formcontrolname='startDate"
+				+ "']"));
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 
