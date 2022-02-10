@@ -46,7 +46,7 @@ public class WebDriverManager {
     private WebDriver createLocalDriver() {
         switch (driverType) {
         case FIREFOX:
-            driver = new FirefoxDriver();
+            driver = new FirefoxDriver(); 
             break;
         case CHROME:
             System.setProperty(CHROME_DRIVER_PROPERTY,
@@ -63,7 +63,7 @@ public class WebDriverManager {
         driver.manage().timeouts().implicitlyWait(FileReaderManager.getInstance().getConfigReader().getImplicitlyWait(),
                 TimeUnit.SECONDS);
         return driver;
-    }
+    } 
 
     public void closeDriver() {
         driver.close();

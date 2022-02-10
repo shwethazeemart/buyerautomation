@@ -51,14 +51,14 @@ public class Supplierinvoicesaddcreditnote {
 
 	@Then("User click on mark as paid button in that invoice page")
 	public void user_click_on_mark_as_paid_button_in_that_invoice_page() {
-		Supplierinvoicesaddcreditnotepage.Clickonmarkaspaid();
+		//Supplierinvoicesaddcreditnotepage.Clickonmarkaspaid();
 	}
 	@Then("User click on options dropdown in the invoice page")
 	public void user_click_on_options_dropdown_in_the_invoice_page() {
 		Supplierinvoicesaddcreditnotepage.Clickononoptionsdropdownicon();
 	}
 	@Then("User click on add credit note in the invoice page")
-	public void user_click_on_add_credit_note_in_the_invoice_page() {
+	public void user_click_on_add_credit_note_in_the_invoice_page() throws InterruptedException {
 		Supplierinvoicesaddcreditnotepage.Clickonaddcreditnote();
 	}
 	@Then("User click on quantity field in credit note page")
@@ -95,22 +95,22 @@ public class Supplierinvoicesaddcreditnote {
 	}
 	@Then("User click on void link in invoice page")
 	public void user_click_on_void_link_in_invoice_page() {
-		Supplierinvoicesaddcreditnotepage.Clickonvoidlinkininvoicepage();
+		//Supplierinvoicesaddcreditnotepage.Clickonvoidlinkininvoicepage();
 	}
 	@Then("User click on reason in invoice field popup message")
 	public void user_click_on_reason_in_invoice_field_popup_message() {
-		Supplierinvoicesaddcreditnotepage.Clickonreasonpopupmessagefield();
+		//Supplierinvoicesaddcreditnotepage.Clickonreasonpopupmessagefield();
 	}
 	
 	
 	@Then("User click on download DO in options dropdown field")
 	public void user_click_on_download_DO_in_options_dropdown_field() {
-		Supplierinvoicesaddcreditnotepage.ClickondownloadDOinoptionsfield();
+		//Supplierinvoicesaddcreditnotepage.ClickondownloadDOinoptionsfield();
 	}
 
     @Then("User click on yes mark as paid in popup message in the invoice page")
     public void user_click_on_yes_mark_as_paid_in_popup_message_in_the_invoice_page() {
-    	Supplierinvoicesaddcreditnotepage.Clickonyesmarkpaidpopup(); 
+    	//Supplierinvoicesaddcreditnotepage.Clickonyesmarkpaidpopup(); 
 
 	}
 
@@ -119,7 +119,7 @@ public class Supplierinvoicesaddcreditnote {
 
     @Then("User enter on reason in invoice field popup message{string}")
 	public void user_enter_on_reason_in_invoice_field_popup_message_reason(String reason) {
-		Supplierinvoicesaddcreditnotepage.Enteronreasoninopoup(reason);
+		//Supplierinvoicesaddcreditnotepage.Enteronreasoninopoup(reason);
 	}
 
 

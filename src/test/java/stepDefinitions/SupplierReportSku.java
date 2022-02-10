@@ -73,7 +73,7 @@ public class SupplierReportSku {
 	public void user_select_on_outlets_in_dropdown_list() {
 		WebElement Outlet =supplierReportSku.getDropDownElementOutlet();
 		Select select=new Select(Outlet);
-		select.selectByIndex(3);
+		select.selectByVisibleText("Sakthimasala100");
 	}
 	@Then("User click on search icon in orders received sku page")
 	public void user_click_on_search_icon_in_orders_received_sku_page() throws InterruptedException {

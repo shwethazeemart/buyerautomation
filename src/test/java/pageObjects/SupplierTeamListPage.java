@@ -73,7 +73,7 @@ public class SupplierTeamListPage {
 	@FindBy(xpath = "//button[@class='btn btn-success']")
 	private static WebElement SupplierTeamListPage_Save;
 	
-	@FindBy(xpath = "//div[@role='option']")
+	@FindBy(xpath = "(//div[@role='option'])[2]")
 	private static WebElement SupplierTeamListPage_FirstDropdown;
 	
 	//@FindBy(xpath = "//button[text()=' Add new']")
@@ -150,6 +150,8 @@ public class SupplierTeamListPage {
 	
 
 	public static void Savebuttonclick() {
+		WebElement selectOutlet = driver.findElement(By.xpath("//h4[text()='Select outlet']"));
+		selectOutlet.click();
 		SupplierTeamListPage_Savebutton.click();
 		try {
 			Thread.sleep(5000);

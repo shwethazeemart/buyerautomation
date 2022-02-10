@@ -89,7 +89,7 @@ public class SupplierCompanySettings {
 	}
 	@Then("User click on view priceing options in subscription")
 	public void user_click_on_view_priceing_options_in_subscription() {
-		SupplierCompanySettingsPage.ViewPricingoptionsClick();
+		//SupplierCompanySettingsPage.ViewPricingoptionsClick();
 	}
 
 

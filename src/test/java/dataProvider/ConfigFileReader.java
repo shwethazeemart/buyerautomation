@@ -9,7 +9,6 @@ import java.util.Properties;
 import enums.DriverType;
 import enums.EnvironmentType;
 
-
 public class ConfigFileReader {
 	private Properties properties;
 
@@ -43,14 +42,17 @@ public class ConfigFileReader {
 
 	public Long getImplicitlyWait() {
 		try {
-		String implicitlyWait = properties.getProperty("implicitlyWait");
 
-		Long parsedLong = Long.parseLong(implicitlyWait.toString());
-		return parsedLong;
+			String implicitlyWait = properties.getProperty("implicitlyWait");
+
+			Long parsedLong = Long.parseLong(implicitlyWait.toString());
+			return parsedLong;
 		} catch (Exception e) {
-		throw new RuntimeException("An exception occured" + e);
+			throw new RuntimeException("An exception occured" + e);
 		}
-		}
+	}
+
+	
 	
 	public String getApplicationUrl(boolean getAdmin, boolean getbuyer, boolean getorchid,boolean getSupplier) {
 		String url = "";
@@ -65,8 +67,8 @@ public class ConfigFileReader {
 			url = buyerurl;
 		} else if (getorchid) {
 			url = orchid;
-		}else if (getSupplier) {
-			url = supplierurl; 
+		} else if (getSupplier) {
+			url = supplierurl;
 		}
 
 		return url;

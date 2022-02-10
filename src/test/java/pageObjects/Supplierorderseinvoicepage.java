@@ -36,7 +36,7 @@ public class Supplierorderseinvoicepage {
 
 
 
-	@FindBy(xpath = "(//datatable-body-cell[contains(@class,'datatable-body-cell sort-active')]/following-sibling::datatable-body-cell)[3] ")
+	@FindBy(xpath = "(//datatable-body-cell[contains(@class,'datatable-body-cell sort-active')]/following-sibling::datatable-body-cell)[11] ")
 	private static WebElement Supplierorderseinvoicepage_Firstorderinorderlist;
 	
 	@FindBy(xpath = "//button[text()='Acknowledge ']")

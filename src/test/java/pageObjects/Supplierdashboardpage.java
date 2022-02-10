@@ -250,8 +250,8 @@ public class Supplierdashboardpage {
 	}
 
 	public static void Clickonallcategories() {
-		//JavascriptExecutor  = (JavascriptExecutor)driver;
-		//jse.executeScript("window.scrollBy(0,250)");
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,250)");
 		Supplierdashboardpage_Allcategories.click();
 		try {
 			Thread.sleep(5000);

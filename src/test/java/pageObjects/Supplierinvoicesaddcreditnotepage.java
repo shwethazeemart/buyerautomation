@@ -50,7 +50,7 @@ public class Supplierinvoicesaddcreditnotepage {
 	//@FindBy(xpath = "//button[text()=' New invoice ']")
 	//private static WebElement Supplierinvoicesaddcreditnotepage_Addcreditnotelink;
 	
-	@FindBy(xpath = "(//input[contains(@class,'form-control b-none')])[2]")
+	@FindBy(xpath = "(//input[contains(@class,'form-control b-none')])[2]") 
 	private static WebElement Supplierinvoicesaddcreditnotepage_Quantityfield;
 	
 	@FindBy(xpath = "(//input[contains(@class,'form-control b-none')])[2]")
@@ -65,7 +65,7 @@ public class Supplierinvoicesaddcreditnotepage {
 	//@FindBy(xpath = "//button[text()=' New invoice ']")
 	//private static WebElement Supplierinvoicesaddcreditnotepage_Duplicateoptions;
 	
-	@FindBy(xpath = "(//button[contains(@class,'btn btn-success')])[3]")
+	@FindBy(xpath = "//button[text()=' Save and issue ']")
 	private static WebElement Supplierinvoicesaddcreditnotepage_Saveandissuebuttoninduplicate;
 	
 	@FindBy(xpath = "//a[@class='dropdown-item pink-text']")
@@ -120,8 +120,9 @@ public class Supplierinvoicesaddcreditnotepage {
 		
 	}
 
-	public static void Clickonaddcreditnote() {
-		WebElement addCreditNote = driver.findElement(By.linkText("Add credit note"));
+	public static void Clickonaddcreditnote() throws InterruptedException {
+		Thread.sleep(5000);
+		WebElement addCreditNote = driver.findElement(By.xpath("//a[text()='Add credit note']"));
 		addCreditNote.click();
 		//Supplierinvoicesaddcreditnotepage_Addcreditnotelink.click();
 		try {
