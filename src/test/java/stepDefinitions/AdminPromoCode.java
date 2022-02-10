@@ -82,14 +82,12 @@ public class AdminPromoCode {
 
 		@Then("User select the Calendar From date of Validity")
 		public void user_select_the_Calendar_From_date_of_Validity() {
-		    // Write code here that turns the phrase above into concrete actions
-		    throw new io.cucumber.java.PendingException();
+			AdminPromoCodePage.SelectcalendarFromDate(); 
 		}
 
 		@Then("User select the Calendar Until date of Validity")
 		public void user_select_the_Calendar_Until_date_of_Validity() {
-		    // Write code here that turns the phrase above into concrete actions
-		    throw new io.cucumber.java.PendingException();
+			AdminPromoCodePage.SelectcalendarUntilDate(); 
 		}
 
 		@Then("User Click Applies to dropdown")

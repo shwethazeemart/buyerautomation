@@ -1109,7 +1109,6 @@ Scenario Outline: Verify the Outlets page of Buyer panel
     
     
 
-
 Scenario Outline: Verify the Outlets listing page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>" 

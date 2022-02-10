@@ -87,8 +87,7 @@ public class AdminInvoiceuploadpage {
 				.executeScript("return document.readyState").equals("complete"));	
 	}
 
-	public void Clicks_the_Upload_button() throws InterruptedException {
-		
+	public void Clicks_the_Upload_button() throws InterruptedException {		
 		btn_Uploadbtn.click();
 		Thread.sleep(5000);
 		try {

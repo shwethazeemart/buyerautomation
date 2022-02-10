@@ -70,7 +70,6 @@ public class AdminInvoiceuploadpageSteps {
 	}
 
 
-
 	@When("User Clicks on Admin Invoices in the side navigation menubar")
 	public void user_Clicks_on_Admin_Invoices_in_the_side_navigation_menubar() throws InterruptedException {
 		dashboradpage.clickAdminInvoices();

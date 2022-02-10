@@ -31,10 +31,10 @@ public class AdminPromoCodePage {
 		}
 
 
-		@FindBy(xpath = "//button[text()=' New deal ']")
+		@FindBy(xpath = "//input[@formcontrolname='promoCode']")
 		private static WebElement AdminPromoCodePage_PromoCode;
 
-		@FindBy(xpath = "//button[text()=' New deal ']")
+		@FindBy(xpath = "//input[@formcontrolname='promoCode']")
 		private static WebElement AdminPromoCodePage_EnterPromoCode;
 		
 		@FindBy(xpath = "//button[text()=' New deal ']")
@@ -104,6 +104,37 @@ public class AdminPromoCodePage {
 					.executeScript("return document.readyState").equals("complete"));
 
 		}
+		
+		public static void Click_Profile_Photo() {
+			WebElement profilephoto=driver.findElement(By.xpath("//input[@type='file']"));
+			profilephoto.sendKeys("E:/Zeemart/download.jpg");
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+			}
+			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+					.executeScript("return document.readyState").equals("complete"));	
+		}
+
+		public static void SelectcalendarFromDate() {
+			JavascriptExecutor jse = (JavascriptExecutor)driver;
+			jse.executeScript("window.scrollBy(0,250)");
+			WebElement DateBox=driver.findElement(By.xpath("//input[@placeholder='Validity period']"));
+
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+
+			js.executeScript("arguments[0].value='1 Feb 2022';", DateBox);
+
+		}
+		
+		public static void SelectcalendarUntilDate() {
+			WebElement DateBox=driver.findElement(By.xpath("//input[@placeholder='Validity period']"));
+
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+
+			js.executeScript("arguments[0].value='9 Feb 2022';", DateBox);
+
+		}		
 		
 		public static void clickApplyTo() {
 			AdminPromoCodePage_ApplyTo.click();
@@ -175,36 +206,7 @@ public class AdminPromoCodePage {
 					.executeScript("return document.readyState").equals("complete"));
 		}
 
-		public static void Click_Profile_Photo() {
-			WebElement profilephoto=driver.findElement(By.xpath("//input[@type='file']"));
-			profilephoto.sendKeys("E:/Zeemart/download.jpg");
-			try {
-				Thread.sleep(5000);
-			} catch (InterruptedException e) {
-			}
-			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
-					.executeScript("return document.readyState").equals("complete"));	
-		}
-
-		public static void SelectcalendarFromDate() {
-			JavascriptExecutor jse = (JavascriptExecutor)driver;
-			jse.executeScript("window.scrollBy(0,250)");
-			WebElement DateBox=driver.findElement(By.xpath("//input[@placeholder='Validity period']"));
-
-			JavascriptExecutor js = (JavascriptExecutor) driver;
-
-			js.executeScript("arguments[0].value='1 Feb 2022';", DateBox);
-
-		}
-
-		public static void SelectcalendarUntilDate() {
-			WebElement DateBox=driver.findElement(By.xpath("//input[@placeholder='Validity period']"));
-
-			JavascriptExecutor js = (JavascriptExecutor) driver;
-
-			js.executeScript("arguments[0].value='9 Feb 2022';", DateBox);
-
-		}		
+		
 		
 		
 
