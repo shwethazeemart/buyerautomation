@@ -83,7 +83,7 @@ public class SupplierReportOutletPage {
 
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
 
-		jse.executeScript("arguments[0].value='1 Nov 2021 - 18 Nov 2021';", DateBox);
+		jse.executeScript("arguments[0].value='1 Jan 2022 - 31 Jan 2022';", DateBox);
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {

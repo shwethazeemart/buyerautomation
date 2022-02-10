@@ -9,7 +9,6 @@ import java.util.Properties;
 import enums.DriverType;
 import enums.EnvironmentType;
 
-
 public class ConfigFileReader {
 	private Properties properties;
 
@@ -43,6 +42,17 @@ public class ConfigFileReader {
 
 	public Long getImplicitlyWait() {
 		try {
+
+			String implicitlyWait = properties.getProperty("implicitlyWait");
+
+			Long parsedLong = Long.parseLong(implicitlyWait.toString());
+			return parsedLong;
+		} catch (Exception e) {
+			throw new RuntimeException("An exception occured" + e);
+		}
+	}
+
+	public String getApplicationUrl(boolean getAdmin, boolean getbuyer, boolean getorchid, boolean getSupplier)
 		String implicitlyWait = properties.getProperty("implicitlyWait");
 
 		Long parsedLong = Long.parseLong(implicitlyWait.toString());
@@ -52,7 +62,7 @@ public class ConfigFileReader {
 		}
 		}
 	
-	public String getApplicationUrl(boolean getAdmin, boolean getbuyer, boolean getorchid,boolean getSupplier) {
+	public String getApplicationUrl(boolean getAdmin, boolean getbuyer, boolean getorchid,boolean getSupplier) 
 		String url = "";
 		String[] urls = properties.getProperty("url").split(",");
 		String adminurl = urls[0];
@@ -65,8 +75,8 @@ public class ConfigFileReader {
 			url = buyerurl;
 		} else if (getorchid) {
 			url = orchid;
-		}else if (getSupplier) {
-			url = supplierurl; 
+		} else if (getSupplier) {
+			url = supplierurl;
 		}
 
 		return url;

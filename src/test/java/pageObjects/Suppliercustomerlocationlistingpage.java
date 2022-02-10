@@ -62,25 +62,25 @@ public class Suppliercustomerlocationlistingpage {
 	@FindBy(xpath = "(//a[@routerlinkactive='active'])[2]")
 	private static WebElement Suppliercustomerlocationlistingpage_Managesetting;
 	
-	@FindBy(xpath = "//p[text()='Customers']")
+	@FindBy(xpath = "//img[@src='../assets/zmcore/img/left-report-b-icon.svg']/following-sibling::p[1]")
 	private static WebElement Suppliercustomerlocationlistingpage_Customersbackbutton;
 	
 	@FindBy(xpath = "(//a[@routerlinkactive='active'])[3]")
 	private static WebElement Suppliercustomerlocationlistingpage_Managemarketlist;
 	
-	@FindBy(xpath = "//p[text()='Customers']")
+	@FindBy(xpath = "//img[@src='../assets/zmcore/img/left-report-b-icon.svg']/following-sibling::p[1]")
 	private static WebElement Suppliercustomerlocationlistingpage_Cutomerbackbuttoninmanagemarket;
 	
 	@FindBy(xpath = "//span[text()='Default settings']")
 	private static WebElement Suppliercustomerlocationlistingpage_Defaultsetting;
 	
-	@FindBy(xpath = "//p[text()='Customers']")
+	@FindBy(xpath = "//img[@src='assets/zmcore/img/left-report-b-icon.svg']/following-sibling::p[1]")
 	private static WebElement Suppliercustomerlocationlistingpage_Backbuttonindefaultsetting;
 	
 	@FindBy(xpath = "//button[text()=' New customer ']")
 	private static WebElement Suppliercustomerlocationlistingpage_Newcustomers;
 	
-	@FindBy(xpath = "//p[text()='Customers']")
+	@FindBy(xpath = "//img[@src='assets/zmcore/img/left-report-b-icon.svg']/following-sibling::p[1]")
 	private static WebElement Suppliercustomerlocationlistingpage_Customerbackbuttonnewcutomerpage;
 
 

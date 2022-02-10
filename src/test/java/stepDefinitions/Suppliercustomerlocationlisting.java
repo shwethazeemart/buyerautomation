@@ -46,7 +46,7 @@ public class Suppliercustomerlocationlisting {
 
 	@Then("User enter name in search box sakthimasala {string}")
 	public void user_enter_name_in_search_box_sakthimasala(String Sakthimasala100) {
-	    Suppliercustomerlocationlistingpage.Enterthenameinsearchbox(Sakthimasala100);
+	    //Suppliercustomerlocationlistingpage.Enterthenameinsearchbox(Sakthimasala100);
 	}
 
 	@Then("User click on checkbox in location page")

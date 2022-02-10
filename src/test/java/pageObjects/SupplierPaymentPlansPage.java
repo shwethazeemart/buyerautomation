@@ -73,8 +73,8 @@ public class SupplierPaymentPlansPage {
 
 	public static void PaymentFailedStatusSelect() throws InterruptedException {
 		Thread.sleep(5000);
-		driver.findElement(By.xpath("//div[@class='container-fluid flex__pad']")).click();
-		List<WebElement> list =driver.findElements(By.xpath("//div[@class='container-fluid flex__pad']//select/option"));
+		driver.findElement(By.xpath("//select[@formcontrolname='paymentStatus']")).click();
+		List<WebElement> list =driver.findElements(By.xpath("//select[@formcontrolname='paymentStatus']/option"));
 
 		
         System.out.println("Total number of item  : "+list.size() );
@@ -92,8 +92,8 @@ public class SupplierPaymentPlansPage {
 
 	public static void PaymentUnpaidStatusSelect() throws InterruptedException  {
 		Thread.sleep(5000);
-		driver.findElement(By.xpath("//div[@class='container-fluid flex__pad']")).click();
-		List<WebElement> list =driver.findElements(By.xpath("//div[@class='container-fluid flex__pad']//select/option"));
+		driver.findElement(By.xpath("//select[@formcontrolname='paymentStatus']")).click();
+		List<WebElement> list =driver.findElements(By.xpath("//select[@formcontrolname='paymentStatus']/option"));
 
 		
         System.out.println("Total number of item  : "+list.size() );
@@ -112,8 +112,8 @@ public class SupplierPaymentPlansPage {
 
 	public static void PaymentPaidStatusSelect() throws InterruptedException{
 		Thread.sleep(5000);
-		driver.findElement(By.xpath("//div[@class='container-fluid flex__pad']")).click();
-		List<WebElement> list =driver.findElements(By.xpath("//div[@class='container-fluid flex__pad']//select/option"));
+		driver.findElement(By.xpath("//select[@formcontrolname='paymentStatus']")).click();
+		List<WebElement> list =driver.findElements(By.xpath("//select[@formcontrolname='paymentStatus']/option"));
 	
 		
         System.out.println("Total number of item  : "+list.size() );

@@ -1,4 +1,4 @@
-Feature: verify Admin panel and test all the page
+Feature: verify Admin panel Entier test all the page
 
 
 Scenario Outline: Verify the Suppliers page in view outlets Admin hub    
@@ -415,7 +415,7 @@ Scenario Outline: Verify the Order Details page
        |username                     |  |password    | |reason              |
        |velumanisabari2009@gmail.com |  |#f=6T7uX    | |Available in order  |
          
-@Smoke  
+ 
 Scenario Outline: Verify the Promotion Deals page
   
           Given User are available in login page
@@ -443,12 +443,62 @@ Scenario Outline: Verify the Promotion Deals page
        |velumanisabari2009@gmail.com |  |#f=6T7uX    | |Bug test |
          
           
+Scenario Outline: Verify the Reports outlets page
+  
+          Given User are available in login page
+          When User is enter exact username"<username>"
+          And User is enter exact password"<password>"
+          When User are Select country in the autocomplete text box
+          And User is press the Admin login button 
+          When User Clicks on Admin Reports in the side navigation menubar 
+          Then User click on By outlet option 
+          Then User select date from calendar field
+          Then User click on search icon in outlet field
+          Then User click on export download button
+          Then User click on filter in outlet field
+          Then User click on outlet in filter field
+          Then User click on select all option in filter field
+          Then User click on apply button in filter field
+          Then User click on processing time in filter field
+          Then User click on select all option in filter field
+          Then User click on apply button in filter field
+          Then User click on number of line items
+          Then User click on select all option in filter field
+          Then User click on apply button in filter field
+          Then User select user in dropdown field
+          Then User click on reset button in filter field
           
+          
+     Examples:
+       |username                     |  |password    | 
+       |velumanisabari2009@gmail.com |  |#f=6T7uX    |             
           
           
 
           
+Scenario Outline: Verify the Reports users page
+  
+          Given User are available in login page
+          When User is enter exact username"<username>"
+          And User is enter exact password"<password>"
+          When User are Select country in the autocomplete text box
+          And User is press the Admin login button 
+          When User Clicks on Admin Reports in the side navigation menubar 
+          Then User click on By processor user option 
+          Then User click on users icon in admin reports 
+          Then User select date from calendar field in user field
+          Then User click on search icon in users field
+          Then User click on export download button users field
+          Then User click on filter in users field
+          Then User click on processed user in users field
+          Then User click on select all option in users field
+          Then User click on apply button in users field
+          Then User click on reset button in users field
           
+          
+     Examples:
+       |username                     |  |password    | 
+       |velumanisabari2009@gmail.com |  |#f=6T7uX    |                 
           
           
           

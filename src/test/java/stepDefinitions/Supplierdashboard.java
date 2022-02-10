@@ -38,22 +38,22 @@ public class Supplierdashboard {
 
 		@Then("User clickon welcome back icon is displayed")
 		public void user_checking_welcome_back_icon_is_displayed() {
-		    Supplierdashboardpage.Clickonwelcomebackicon();
+		    //Supplierdashboardpage.Clickonwelcomebackicon();
 		}
 
 		@Then("User clickon total orders icon is dispalyed")
 		public void user_checking_total_orders_icon_is_dispalyed() {
-		    Supplierdashboardpage.Clickontotalordersicon();
+		    //Supplierdashboardpage.Clickontotalordersicon();
 		}
 
 		@Then("User clickon number of orders icon is dispalyed")
 		public void user_checking_number_of_orders_icon_is_dispalyed() {
-		    Supplierdashboardpage.Clickonnumberofordersicon();
+		   // Supplierdashboardpage.Clickonnumberofordersicon();
 		}
 
 		@Then("User clickon delivery orders icon is dispalyed")
 		public void user_checking_delivery_orders_icon_is_dispalyed() {
-		    Supplierdashboardpage.Clickondeliveryordersicon();
+		   // Supplierdashboardpage.Clickondeliveryordersicon();
 		}
 
 		@Then("User click on this month in total order page")
