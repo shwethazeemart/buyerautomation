@@ -1154,7 +1154,7 @@ Scenario Outline: Verify the Outlets manage details page of Buyer panel
       |velumanieswaran2020@gmail.com      | |!123456Zm   ||lingeshsabari2009@gmail.com|
       
       
-@Smoke       
+     
  Scenario Outline: Verify the Outlets settings page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>" 

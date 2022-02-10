@@ -46,7 +46,7 @@ public class Supplierorderseinvoice {
 
 	@Then("User click on acknowledge button in first order")
 	public void user_click_on_acknowledge_button_in_first_order() {
-		Supplierorderseinvoicepage.Clickonacknowledgebutton();
+		//Supplierorderseinvoicepage.Clickonacknowledgebutton();
 	}
 	@Then("User click on create einvoice icon in first order")
 	public void user_click_on_create_einvoice_icon_in_first_order() {
@@ -121,7 +121,7 @@ public class Supplierorderseinvoice {
 
 	@Then("User click on ok button of popmessage")
 	public void user_click_on_ok_button_of_popmessage() {
-		Supplierorderseinvoicepage.Clickokbuttonofpopmessage();
+		//Supplierorderseinvoicepage.Clickokbuttonofpopmessage();
 	}
 
 

@@ -79,7 +79,7 @@ public class SupplierReportAgeing {
 	public void user_select_outlet_in_dropdown_lists_in_ageing() {
 		WebElement AllOutlets =supplierReportAgeing.getDropDownElementOutlet();
 		Select select=new Select(AllOutlets);
-		select.selectByIndex(3);
+		select.selectByVisibleText("Sakthimasala100");
 	}
 
 	@Then("User click on first invoice number in ageing")

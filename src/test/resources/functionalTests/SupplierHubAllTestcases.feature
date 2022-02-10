@@ -13,7 +13,7 @@ Scenario Outline: Verify the Supplier Dashboard listing page
           Then User click on this month in total order page
           Then User click on this week in total order page
           Then User click on this month in total order page
-          Then User click on this quarter in total order page
+          Then User click on this quarter in total order page  
           Then User click on this month in total order page
           Then User click on YTD in total order page
           Then User click on By Team in dashboard page
@@ -243,7 +243,7 @@ Scenario Outline: Verify the Supplier Invoices listing page
          |username                              ||password    ||email                ||ordernumber ||personname||mobilenumber||quantityvalue||unitprice||reason                          |
          |supplierautomated2@gmail.com          ||!123456Zm   ||velumani@zeemart.asia||202110270048||velu      ||65123456789 ||10           ||18       ||already available in stock count|
          
-         
+        
 Scenario Outline: Verify the Supplier Invoices Add Credit Note page
          Given User is on available Login Page
           When User enter exact username"<username>"
@@ -253,7 +253,6 @@ Scenario Outline: Verify the Supplier Invoices Add Credit Note page
           Then User click on first invoice in the invoices list page
           Then User click on mark as paid button in that invoice page
           Then User click on yes mark as paid in popup message in the invoice page
-          Then User click on first invoice in the invoices list page
           Then User click on options dropdown in the invoice page
           Then User click on add credit note in the invoice page 
           Then User click on quantity field in credit note page
@@ -266,23 +265,14 @@ Scenario Outline: Verify the Supplier Invoices Add Credit Note page
           Then User click on duplicate options dropdown field
           Then User click on scroll down in duplicate page
           Then User click on save and issue button in duplicate page
-          Then User click on first invoice in the invoices list page
-          Then User click on options dropdown in the invoice page
-          Then User click on void link in invoice page
-          Then User click on reason in invoice field popup message
-          Then User enter on reason in invoice field popup message"<reason>"
-          Then User click on void button in popup message
-          Then User click on first invoice in the invoices list page
-          Then User click on options dropdown in the invoice page
-          Then User click on download DO in options dropdown field
-    
+          
     
      Examples:
          |username                              ||password    |quantityvalue||reason         |
          |supplierautomated2@gmail.com          ||!123456Zm   |1            ||stock available|
          
          
-        
+                 
 Scenario Outline: Verify the Supplier Payments Plans list 
          Given User is on available Login Page
           When User enter exact username"<username>"
@@ -330,7 +320,7 @@ Scenario Outline: Verify the Supplier Payments Transaction list
          
          
          
-         
+       
 Scenario Outline: Verify the Supplier customers location listing page
          Given User is on available Login Page
           When User enter exact username"<username>"
@@ -359,7 +349,7 @@ Scenario Outline: Verify the Supplier customers location listing page
 
          Examples:
          |username                              ||password    ||name           |
-         |supplierautomated2@gmail.com          ||!123456Zm   ||Sakthimasala200|  
+         |supplierautomated2@gmail.com          ||!123456Zm   ||Sakthimasala100|  
          
          
          
@@ -387,7 +377,7 @@ Scenario Outline: Verify the Supplier customers location listing page
           
    Examples:
          |username                      |  |password   ||UENNumber||CompanyName ||PostCode||AddressLineOne           ||AddressLineTwo||CompanyEmail         |
-         |supplierautomated2@gmail.com  |  |!123456Zm  ||UEN-2021  ||saisairammasala||638312  ||19,Murugan temple street ||Singapore     ||velusai2032@gmail.com|
+         |supplierautomated2@gmail.com  |  |!123456Zm  ||UEN-2029099  ||saisaramsairammasala||638312  ||19,Murugan temple street ||Singapore     ||velusai2032@gmail.com|
  
  
  
@@ -584,7 +574,7 @@ Scenario Outline: Verify the Supplier Reports Planning list
          |mrmanager@gmail.com       ||!123456Zm   ||10        |
          
          
-         
+        
 Scenario Outline: Verify the Supplier SKU list 
          Given User is on available Login Page
           When User enter exact username"<username>"
@@ -618,15 +608,16 @@ Scenario Outline: Verify the Supplier SKU list
           Then User click on bch quantity order
           Then User click on blk quantity order
           Then User click on box quantity order
+          Then User click on export icon in sku apge
           Then User click on filter in sku page
           Then User select outlet in dropdown list in sku page
           Then User click on apply button in sku page
           Then User click on filter in sku page
-          Then User click on export icon in sku apge
+          
           
   Examples:
          |username                              ||password    ||skuname        |
-         |supplierautomated2@gmail.com          ||!123456Zm   ||Sakthimasala100|  
+         |supplierautomated2@gmail.com          ||!123456Zm   ||500pipers      |  
          
          
 Scenario Outline: Verify the Supplier Directory manage products page
@@ -704,7 +695,7 @@ Scenario Outline: Verify the Supplier Teams List page
           
  Examples:
          |username                              ||password    ||TeamName        |
-         |supplierautomated2@gmail.com          ||!123456Zm   ||Saisabarisaitesting|
+         |supplierautomated2@gmail.com          ||!123456Zm   ||Saisaramvelusaitesting|
          
          
          
@@ -747,6 +738,6 @@ Scenario Outline: Verify the Supplier Users Listing page
          
  Examples:
          |username                              ||password    ||firstname||lastname||jobtitle||email                 ||mobilenumber||whatsappnumber|     |name     |
-         |supplierautomated2@gmail.com          ||!123456Zm   ||shridi   ||sairam  ||AtoZtest||velusairam201202010@gmail.com||+65123456789||+65234567890  ||velu mani|         
+         |supplierautomated2@gmail.com          ||!123456Zm   ||shridisaram   ||sairamsaram  ||AtoZtest||velusaisaram202992020@gmail.com||+6512345678||+6512345678  ||velu mani|         
          
                                                                                        

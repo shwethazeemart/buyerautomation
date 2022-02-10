@@ -56,6 +56,7 @@ import pageObjects.AdminInvoiceuploadpage;
 import pageObjects.AdminOrderDetailsPage;
 import pageObjects.AdminOrderListingPage;
 import pageObjects.AdminPromotionListingPage;
+import pageObjects.AdminReportsOutletspage;
 import pageObjects.Adminbuyerlinktothecompanypage;
 import pageObjects.Adminbuyeroutletsubscriptionpage;
 import pageObjects.Adminbuyersoutletpage;
@@ -180,7 +181,7 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private AdminOrderListingPage AdminOrderListing;
     private AdminOrderDetailsPage AdminOrderDetails;
     private AdminPromotionListingPage AdminPromotionListing;
-
+    private AdminReportsOutletspage AdminReportsOutlets;
 
 
 
@@ -590,7 +591,12 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 
 	public AdminPromotionListingPage getAdminPromotionListingPage() {
 		return (AdminPromotionListing == null) ? (AdminPromotionListing = new AdminPromotionListingPage(driver)) : AdminPromotionListing;
-	} 
+	}
+
+
+	public AdminReportsOutletspage getAdminReportsOutletspage() {
+		return (AdminReportsOutlets == null) ? (AdminReportsOutlets = new AdminReportsOutletspage(driver)) : AdminReportsOutlets;
+	}
 
 
 

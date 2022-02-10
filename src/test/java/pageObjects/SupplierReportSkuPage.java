@@ -59,16 +59,16 @@ public class SupplierReportSkuPage {
 	@FindBy(xpath = "(//datatable-body-cell[contains(@class,'datatable-body-cell sort-active ng-star-inserted')])[4]")
 	private static WebElement SupplierReportSkuPage_SkuOrder;
 	
-	@FindBy(xpath = "//label[text()=' bdl ']")
+	@FindBy(xpath = "//label[text()=' btl ']")
 	private static WebElement SupplierReportSkuPage_BdlIcon;
 	
-	@FindBy(xpath = "//label[text()=' bch ']")
+	@FindBy(xpath = "//label[text()=' bkt ']")
 	private static WebElement SupplierReportSkuPage_BchIcon;
 	
-	@FindBy(xpath = "//label[text()=' blk ']")
+	@FindBy(xpath = "//label[text()=' bag ']")
 	private static WebElement SupplierReportSkuPage_BlkIcon;
 	
-	@FindBy(xpath = "//label[text()=' box ']")
+	@FindBy(xpath = "//label[text()=' blk ']")
 	private static WebElement SupplierReportSkuPage_BoxIcon;
 	
 	@FindBy(xpath = "//a[@class='pull-right export-mclr']")
@@ -126,7 +126,7 @@ public class SupplierReportSkuPage {
 
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
 
-		jse.executeScript("arguments[0].value='1 Nov 2021 - 18 Nov 2021';", DateBox);
+		jse.executeScript("arguments[0].value='1 Jan 2022 - 31 Jan 2022';", DateBox);
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {

@@ -71,13 +71,13 @@ public class SupplierReportOutlet {
 	public void user_select_customer_in_dropdown_list() {
 		WebElement Allcustomer =supplierReportOutlet.getDropDownElementAllCustomer();
 		Select select=new Select(Allcustomer);
-		select.selectByIndex(1);
+		select.selectByVisibleText("VELU MASALA");
 	}
 	@Then("User select team in dropdown list")
 	public void user_select_team_in_dropdown_list() {
 		WebElement Team =supplierReportOutlet.getDropDownElementTeam();
 		Select select=new Select(Team);
-		select.selectByIndex(1);
+		select.selectByVisibleText("VeluTesting");
 	}
 	@Then("User click on apply button in recevied outlet page")
 	public void user_click_on_apply_button_in_recevied_outlet_page() {
