@@ -52,17 +52,9 @@ public class ConfigFileReader {
 		}
 	}
 
-	public String getApplicationUrl(boolean getAdmin, boolean getbuyer, boolean getorchid, boolean getSupplier)
-		String implicitlyWait = properties.getProperty("implicitlyWait");
-
-		Long parsedLong = Long.parseLong(implicitlyWait.toString());
-		return parsedLong;
-		} catch (Exception e) {
-		throw new RuntimeException("An exception occured" + e);
-		}
-		}
 	
-	public String getApplicationUrl(boolean getAdmin, boolean getbuyer, boolean getorchid,boolean getSupplier) 
+	
+	public String getApplicationUrl(boolean getAdmin, boolean getbuyer, boolean getorchid,boolean getSupplier) {
 		String url = "";
 		String[] urls = properties.getProperty("url").split(",");
 		String adminurl = urls[0];

@@ -475,7 +475,7 @@ Scenario Outline: Verify the Reports outlets page
           
           
 
-          
+@Smoke          
 Scenario Outline: Verify the Reports users page
   
           Given User are available in login page
@@ -490,7 +490,7 @@ Scenario Outline: Verify the Reports users page
           Then User click on search icon in users field
           Then User click on export download button users field
           Then User click on filter in users field
-          Then User click on processed user in users field
+          Then User click on processed user in users field 
           Then User click on select all option in users field
           Then User click on apply button in users field
           Then User click on reset button in users field
