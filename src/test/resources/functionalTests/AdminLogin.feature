@@ -415,11 +415,7 @@ Scenario Outline: Verify the Order Details page
        |username                     |  |password    | |reason              |
        |velumanisabari2009@gmail.com |  |#f=6T7uX    | |Available in order  |
          
-<<<<<<< HEAD
-  
-=======
- 
->>>>>>> 22f3c52483a4edb5c65f94402707c6a9476e51c0
+
 Scenario Outline: Verify the Promotion Deals page
   
           Given User are available in login page
@@ -499,7 +495,6 @@ Scenario Outline: Verify the Promotion Deals page
           Then User Enter the Shelf life"<Shelflife>"                  
           Then User click on the Save changes
           
-<<<<<<< HEAD
     
          Examples:
          |username                     |  |password    | |Title   | |Description  | |Minimumorder | |CutOfftime | |MondayCutOfftime | |WedCutOfftime | |FridayCutOfftime| |Byemail           | |Dealprice | |Originalprice | |MOQ | |Shelflife |
@@ -507,16 +502,12 @@ Scenario Outline: Verify the Promotion Deals page
         
          
  Scenario Outline: Verify the Promo code page
-=======
-Scenario Outline: Verify the Reports outlets page
->>>>>>> 22f3c52483a4edb5c65f94402707c6a9476e51c0
-  
+
           Given User are available in login page
           When User is enter exact username"<username>"
           And User is enter exact password"<password>"
           When User are Select country in the autocomplete text box
           And User is press the Admin login button 
-<<<<<<< HEAD
           When User Clicks on Admin Promotions in the side navigation menubar    
           Then User Click on the New promo code
           Then User Enter the Promo code"<promocode>"   
@@ -531,7 +522,21 @@ Scenario Outline: Verify the Reports outlets page
           Then User Enter the Min order value"<minorder>"
           Then User Enter Usage restrictions overall quota"<overallquota>"
           Then User Click the Save
-=======
+          
+          
+             Examples:
+         |username                     |  |password    | |promocode | |promoname | |promodescription |  |discountpercentage | |minorder  | |overallquota | 
+         |velumanisabari2009@gmail.com |  |#f=6T7uX    | |COD101    | |kinley    | |Hii Kinley       |  |5                  | |15        | |150          |
+
+          
+          
+Scenario Outline: Verify the Reports outlets page
+
+          Given User are available in login page
+          When User is enter exact username"<username>"
+          And User is enter exact password"<password>"
+          When User are Select country in the autocomplete text box
+          And User is press the Admin login button 
           When User Clicks on Admin Reports in the side navigation menubar 
           Then User click on By outlet option 
           Then User select date from calendar field
@@ -557,10 +562,7 @@ Scenario Outline: Verify the Reports outlets page
        |velumanisabari2009@gmail.com |  |#f=6T7uX    |             
           
 <<<<<<< HEAD
-           Examples:
-         |username                     |  |password    | |promocode | |promoname | |promodescription |  |discountpercentage | |minorder  | |overallquota | 
-         |velumanisabari2009@gmail.com |  |#f=6T7uX    | |COD101    | |kinley    | |Hii Kinley       |  |5                  | |15        | |150          |
-=======
+        
           
 
 @Smoke          
@@ -587,8 +589,7 @@ Scenario Outline: Verify the Reports users page
      Examples:
        |username                     |  |password    | 
        |velumanisabari2009@gmail.com |  |#f=6T7uX    |                 
->>>>>>> 22f3c52483a4edb5c65f94402707c6a9476e51c0
-          
+
           
 @Smoke         
  Scenario Outline: Verify the Promo codes listing page
