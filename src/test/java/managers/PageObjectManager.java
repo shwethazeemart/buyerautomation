@@ -52,6 +52,7 @@ import stepDefinitions.Reportspagesteps;
 import stepDefinitions.SucessfullyLoginPage;
 import stepDefinitions.SupplierDirectoryProduct;
 import stepDefinitions.UserspageSteps;
+import pageObjects.AdminBuyerNewCompanypage;
 import pageObjects.AdminInvoiceuploadpage;
 import pageObjects.AdminOrderDetailsPage;
 import pageObjects.AdminOrderListingPage;
@@ -188,6 +189,7 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private AdminPromoCodePage AdminPromoCode;
     private AdminReportsOutletspage AdminReportsOutlets;
     private AdminReportsUserspage AdminReportsUsers;
+    private AdminBuyerNewCompanypage AdminBuyerNewCompany;
 
 
 
@@ -617,6 +619,12 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 
 	public AdminPromoCodePage getAdminPromoCodePage() {
 		return (AdminPromoCode == null) ? (AdminPromoCode = new AdminPromoCodePage(driver)) : AdminPromoCode;
+
+	}
+
+
+	public AdminBuyerNewCompanypage getAdminBuyerNewCompanypage() {
+		return (AdminBuyerNewCompany == null) ? (AdminBuyerNewCompany = new AdminBuyerNewCompanypage(driver)) : AdminBuyerNewCompany;
 
 	}
 
