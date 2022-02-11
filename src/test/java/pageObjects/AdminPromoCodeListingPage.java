@@ -43,13 +43,22 @@ public class AdminPromoCodeListingPage {
 		private static WebElement AdminPromoCodeListingPage_SearchIcon;
 
 		@FindBy(xpath = "(//a[@class='zmdropDownBtn'])[1]")
-		private static WebElement AdminPromoCodeListingPage_Actions;
+		private static WebElement AdminPromoCodeListingPage_ActionsDropdown;
+
+		@FindBy(xpath = "//input[@formcontrolname='promoCode']")
+		private static WebElement AdminPromoCodeListingPage_PromoCodeClear;
+		
+		@FindBy(xpath = "//div[@class='zmDropDown']//a[1]")
+		private static WebElement AdminPromoCodeListingPage_ViewSettings;
 
 		@FindBy(xpath = "//input[@formcontrolname='promoCode']")
 		private static WebElement AdminPromoCodeListingPage_ViewPromocode;
 
-		@FindBy(xpath = "//button[text()='Save']")
+		@FindBy(xpath = "(//button[contains(@class,'btn btn-primary')])[2]")
 		private static WebElement AdminPromoCodeListingPage_Save;
+		
+		@FindBy(xpath = "(//a[@class='zmdropDownBtn'])[3]")
+		private static WebElement AdminPromoCodeListingPage_Action123promocode;
 		
 		@FindBy(xpath = "(//a[@class='dropdown-item'])[2]")
 		private static WebElement AdminPromoCodeListingPage_ViewDetails;
@@ -57,7 +66,10 @@ public class AdminPromoCodeListingPage {
 		@FindBy(xpath = "//p[text()='Promo codes']")
 		private static WebElement AdminPromoCodeListingPage_BackToPromocodes;
 
-		@FindBy(xpath = "(//a[@class='dropdown-item'])[3]")
+		@FindBy(xpath = "(//a[@class='zmdropDownBtn'])[4]")
+		private static WebElement AdminPromoCodeListingPage_ActionABCDpromocode;
+
+		@FindBy(xpath = "(//a[@routerlinkactive='active'])[3]")
 		private static WebElement AdminPromoCodeListingPage_EndPromo;
 		
 		@FindBy(xpath = "//button[@class='close']//img[1]")
@@ -84,7 +96,8 @@ public class AdminPromoCodeListingPage {
 					.executeScript("return document.readyState").equals("complete"));
 		}
 
-		public static void EnterSearchCode(String code) {
+		public static void EnterSearchCode(String code) throws InterruptedException {
+			Thread.sleep(5000);
 			AdminPromoCodeListingPage_SearchCode.sendKeys(code);
 			try {
 				Thread.sleep(5000);
@@ -94,7 +107,8 @@ public class AdminPromoCodeListingPage {
 					.executeScript("return document.readyState").equals("complete"));
 		}
 		
-		public static void clickStatus() {
+		public static void clickStatusIcon() throws InterruptedException {
+			Thread.sleep(7000);
 			AdminPromoCodeListingPage_Status.click();
 			try {
 				Thread.sleep(5000);
@@ -104,22 +118,20 @@ public class AdminPromoCodeListingPage {
 					.executeScript("return document.readyState").equals("complete"));
 
 		}
-		public static WebElement getDropDownstatusElement() {
+		public static WebElement getDropDownstatusoneElement() {
 			return AdminPromoCodeListingPage_Status;
 		}
 		
 		public static void SelectcalendaValidity() {
-			JavascriptExecutor jse = (JavascriptExecutor)driver;
-			jse.executeScript("window.scrollBy(0,250)");
 			WebElement DateBox=driver.findElement(By.xpath("//input[@placeholder='Validity period']"));
 
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 
-			js.executeScript("arguments[0].value='1 Feb 2022';", DateBox);
-
+			js.executeScript("arguments[0].value='1 Feb 2022-18 Feb 2022';", DateBox);
 		}
 		
-		public static void ClicktheSearchIcon() {
+		public static void ClicktheSearchIcon() throws InterruptedException {
+			Thread.sleep(5000);
 			AdminPromoCodeListingPage_SearchIcon.click();
 			try {
 				Thread.sleep(5000);
@@ -130,22 +142,37 @@ public class AdminPromoCodeListingPage {
 			
 		}
 		
-			public static void clickActionsDropdown() {
-			AdminPromoCodeListingPage_Actions.click();
+		public static void ClicktheActionsDropdown() {
+			AdminPromoCodeListingPage_ActionsDropdown.click();
 			try {
 				Thread.sleep(5000);
 			} catch (InterruptedException e) {
 			}
 			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 					.executeScript("return document.readyState").equals("complete"));
-
 		}
 
-		public static WebElement getDropDownActionsElement() {
-			return AdminPromoCodeListingPage_Actions;
+		public static void ClickViewSettings() {
+			AdminPromoCodeListingPage_ViewSettings.click();
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+			}
+			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+					.executeScript("return document.readyState").equals("complete"));
+		}
+		
+		public static void ClearPromoCode() {
+			AdminPromoCodeListingPage_PromoCodeClear.clear();
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+			}
+			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+					.executeScript("return document.readyState").equals("complete"));
 		}
 
-		public static void ViewPromocode(String promocode) {
+			public static void ViewPromocode(String promocode) {
 			AdminPromoCodeListingPage_ViewPromocode.sendKeys(promocode);
 			try {
 				Thread.sleep(5000);
@@ -155,8 +182,14 @@ public class AdminPromoCodeListingPage {
 					.executeScript("return document.readyState").equals("complete"));
 		}
 
-		public static void ClickSaveBtn() {
-			AdminPromoCodeListingPage_Save.click();
+		public static void ClickSaveBtn() throws InterruptedException {
+			JavascriptExecutor jse = (JavascriptExecutor)driver;
+			jse.executeScript("window.scrollBy(0,1000)");
+			Thread.sleep(7000);
+			WebElement ele = driver.findElement(By.xpath("//form[@class='ng-untouched ng-pristine ng-valid']/child::div[5]/descendant::button[text()='Save']"));
+			JavascriptExecutor executor = (JavascriptExecutor)driver;
+			executor.executeScript("arguments[0].click();", ele);
+			//AdminPromoCodeListingPage_Save.click();
 			try {
 				Thread.sleep(5000);
 			} catch (InterruptedException e) {
@@ -164,6 +197,16 @@ public class AdminPromoCodeListingPage {
 			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 					.executeScript("return document.readyState").equals("complete"));
 
+		}
+		public static void Clickaction123promocode() throws InterruptedException {
+			Thread.sleep(5000);
+			AdminPromoCodeListingPage_Action123promocode.click();
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+			}
+			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+					.executeScript("return document.readyState").equals("complete"));
 		}
 
 		public static void ViewDetailsClick() {
@@ -178,6 +221,19 @@ public class AdminPromoCodeListingPage {
 
 		public static void BackToPromocodes() {
 			AdminPromoCodeListingPage_BackToPromocodes.click();
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+			}
+			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+					.executeScript("return document.readyState").equals("complete"));
+		}
+		
+		public static void ClickActionABCDpromocode() throws InterruptedException {
+			JavascriptExecutor jse = (JavascriptExecutor)driver;
+			jse.executeScript("window.scrollBy(0,250)");
+			Thread.sleep(5000);
+			AdminPromoCodeListingPage_ActionABCDpromocode.click();
 			try {
 				Thread.sleep(5000);
 			} catch (InterruptedException e) {
@@ -206,6 +262,14 @@ public class AdminPromoCodeListingPage {
 					.executeScript("return document.readyState").equals("complete"));
 		}
 
+		
+
+		
+		
+		
+		
+		
+		
 		
 
 		

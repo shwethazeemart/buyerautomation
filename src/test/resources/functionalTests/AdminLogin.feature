@@ -521,6 +521,20 @@ Scenario Outline: Verify the Promotion Deals page
           Then User Enter the Min order value"<minorder>"
           Then User Enter Usage restrictions overall quota"<overallquota>"
           Then User Click the Save
+     
+      Examples:
+         |username                     |  |password    | |promocode | |promoname | |promodescription |  |discountpercentage | |minorder  | |overallquota | 
+         |velumanisabari2009@gmail.com |  |#f=6T7uX    | |COD101    | |kinley    | |Hii Kinley       |  |5                  | |15        | |150          |
+          
+          
+          
+Scenario Outline: Verify the Reports outlets page
+  
+          Given User are available in login page
+          When User is enter exact username"<username>"
+          And User is enter exact password"<password>"
+          When User are Select country in the autocomplete text box
+          And User is press the Admin login button           
           When User Clicks on Admin Reports in the side navigation menubar 
           Then User click on By outlet option 
           Then User select date from calendar field
@@ -539,11 +553,10 @@ Scenario Outline: Verify the Promotion Deals page
           Then User select user in dropdown field
           Then User click on reset button in filter field
           
-       Examples:
-         |username                     |  |password    | |promocode | |promoname | |promodescription |  |discountpercentage | |minorder  | |overallquota | 
-         |velumanisabari2009@gmail.com |  |#f=6T7uX    | |COD101    | |kinley    | |Hii Kinley       |  |5                  | |15        | |150          |
-          
-
+      Examples:
+       |username                     |  |password    | 
+       |velumanisabari2009@gmail.com |  |#f=6T7uX    |                 
+     
          
 Scenario Outline: Verify the Reports users page
   
@@ -570,8 +583,8 @@ Scenario Outline: Verify the Reports users page
        |velumanisabari2009@gmail.com |  |#f=6T7uX    |                 
           
           
-@Smoke         
- Scenario Outline: Verify the Promo codes listing page
+@Smoke        
+Scenario Outline: Verify the Promo codes listing page
   
           Given User are available in login page
           When User is enter exact username"<username>"
@@ -587,12 +600,13 @@ Scenario Outline: Verify the Reports users page
           Then User Clicks Search icon of promocodes
           Then User Click the Actions dropdown of Promocodes
           Then User Click the View settings
+          Then User Clear the Promo code
           Then User Enter the Promo code in View settings"<promocode>"
           Then User Click on the Save button
-          Then User Click the Actions dropdown Promocodes
+          Then User Click on action icon of 123promocode
           Then User Click the View details usage
           Then User Click return back to Promo codes
-          Then User Click the Actions dropdown the Promocodes
+          Then User Click on Action icon of ABCDpromocode
           Then User Click the End promo
           Then User Click the Close icon
           

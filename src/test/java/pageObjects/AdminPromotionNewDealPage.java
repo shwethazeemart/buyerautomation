@@ -30,8 +30,6 @@ public class AdminPromotionNewDealPage {
 
 	}
 	
-
-
 	@FindBy(xpath = "//button[text()=' New deal ']")
 	private static WebElement AdminPromotionListingPage_NewDeal;
 
@@ -107,7 +105,7 @@ public class AdminPromotionNewDealPage {
 	@FindBy(xpath = "//input[@formcontrolname='notifyEmail']")
 	private static WebElement AdminPromotionListingPage_ByEmail;
 
-	@FindBy(xpath = "//div[contains(@class,'form-group col-md-12')]//button[1]")
+	@FindBy(xpath = "//form[@class='ng-dirty ng-touched ng-valid']/child::div[2]/descendant::button[text()=' Next: SKU']")
 	private static WebElement AdminPromotionListingPage_NextSKU;
 	
 	@FindBy(xpath = "//button[text()=' Add SKU ']")
@@ -264,18 +262,16 @@ public class AdminPromotionNewDealPage {
 	public static void SelectcalendarByJS() {
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		jse.executeScript("window.scrollBy(0,250)");
-		WebElement DateBox=driver.findElement(By.xpath("//input[@formcontrolname='startDate"
-				+ "']"));
+		WebElement DateBox=driver.findElement(By.xpath("//input[@formcontrolname='startTime']"));
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 
 		js.executeScript("arguments[0].value='1 Feb 2022';", DateBox);
 
-
 	}
 	public static void SelectcalendarByJSendDate() throws InterruptedException {
 		Thread.sleep(5000);
-		WebElement DateBoxtwo=driver.findElement(By.xpath("//input[@formcontrolname='endDate']"));
+		WebElement DateBoxtwo=driver.findElement(By.xpath("//input[@formcontrolname='endTime']"));
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 

@@ -70,14 +70,14 @@ public class AdminPromoCodeListing {
 		}
 
 		@Then("User Enter the SEARCH CODE{string}")
-		public void user_Enter_the_SEARCH_CODE(String code) {
+		public void user_Enter_the_SEARCH_CODE(String code) throws InterruptedException {
 			AdminPromoCodeListingPage.EnterSearchCode(code);
 		}
 		
 		@Then("User Select the dropdown status of promo codes")
 		public void user_Select_the_dropdown_status_of_promo_codes() {
-			WebElement status = AdminPromoCodeListingPage.getDropDownstatusElement();
-			Select select=new Select(status);
+			WebElement statusone = AdminPromoCodeListingPage.getDropDownstatusoneElement();
+			Select select=new Select(statusone);
 			select.selectByIndex(3);
 		}
 
@@ -88,21 +88,23 @@ public class AdminPromoCodeListing {
 		}
 		
 		@Then("User Clicks Search icon of promocodes")
-		public void user_Clicks_Search_icon_of_promocodes() {
+		public void user_Clicks_Search_icon_of_promocodes() throws InterruptedException {
 			AdminPromoCodeListingPage.ClicktheSearchIcon();
 		}
 
 		@Then("User Click the Actions dropdown of Promocodes")
 		public void user_Click_the_Actions_dropdown_of_Promocodes() {
-			WebElement Actions = AdminPromoCodeListingPage.getDropDownActionsElement();
-			Select select=new Select(Actions);
-			select.selectByIndex(0);
+			AdminPromoCodeListingPage.ClicktheActionsDropdown();
 		}
 
 		@Then("User Click the View settings")
 		public void user_Click_the_View_settings() {
-		    // Write code here that turns the phrase above into concrete actions
-		    throw new io.cucumber.java.PendingException();
+			AdminPromoCodeListingPage.ClickViewSettings();
+		}
+		
+		@Then("User Clear the Promo code")
+		public void user_Clear_the_Promo_code() {
+			AdminPromoCodeListingPage.ClearPromoCode();
 		}
 
 		@Then("User Enter the Promo code in View settings{string}")
@@ -111,15 +113,13 @@ public class AdminPromoCodeListing {
 		}
 
 		@Then("User Click on the Save button")
-		public void user_Click_on_the_Save_button() {
+		public void user_Click_on_the_Save_button() throws InterruptedException {
 			AdminPromoCodeListingPage.ClickSaveBtn();
 		}
 
-		@Then("User Click the Actions dropdown Promocodes")
-		public void user_Click_the_Actions_dropdown_Promocodes() {
-			WebElement Actions = AdminPromoCodeListingPage.getDropDownActionsElement();
-			Select select=new Select(Actions);
-			select.selectByIndex(1);
+		@Then("User Click on action icon of 123promocode")
+		public void user_Click_on_action_icon_of_123promocode() throws InterruptedException {
+			AdminPromoCodeListingPage.Clickaction123promocode();
 		}
 		
 		@Then("User Click the View details usage")
@@ -132,11 +132,9 @@ public class AdminPromoCodeListing {
 			AdminPromoCodeListingPage.BackToPromocodes();
 		}
 
-		@Then("User Click the Actions dropdown the Promocodes")
-		public void user_Click_the_Actions_dropdown_the_Promocodes() {
-			WebElement Actions = AdminPromoCodeListingPage.getDropDownActionsElement();
-			Select select=new Select(Actions);
-			select.selectByIndex(2);
+		@Then("User Click on Action icon of ABCDpromocode")
+		public void user_Click_on_Action_icon_of_ABCDpromocode() throws InterruptedException {
+			AdminPromoCodeListingPage.ClickActionABCDpromocode();
 		}
 		
 		@Then("User Click the End promo")
