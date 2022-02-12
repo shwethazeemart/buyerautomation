@@ -555,17 +555,12 @@ Scenario Outline: Verify the Reports outlets page
           Then User select user in dropdown field
           Then User click on reset button in filter field
           
->>>>>>> 22f3c52483a4edb5c65f94402707c6a9476e51c0
           
      Examples:
        |username                     |  |password    | 
        |velumanisabari2009@gmail.com |  |#f=6T7uX    |             
-          
-<<<<<<< HEAD
-        
-          
 
-@Smoke          
+         
 Scenario Outline: Verify the Reports users page
   
           Given User are available in login page
@@ -622,8 +617,60 @@ Scenario Outline: Verify the Reports users page
          |velumanisabari2009@gmail.com |  |#f=6T7uX    | |1234  |  |1234newcode|
                
                  
-          
-          
-     
+Scenario Outline: Verify the Essentials page in Admin hub    
+  
+          Given User are available in login page
+          When User is enter exact username"<username>"  
+          And User is enter exact password"<password>"
+          When User are Select country in the autocomplete text box
+          And User is press the Admin login button 
+          When User Clicks in Admin panel Suppliers in the side navigation menubar     
+          Then User click the Essentials Tab
+          And User Enter name in Search supplier box in the Essentials page"<suppliername>"
+          Then user select the status of the dropdown
+          Then User are Clicks Search button in the Essentials page 
+          Then User Click the Actions dropdown of Essentials
+          Then User Click on the View settings
+          Then User Select Supplier in the dropdown list
+          Then User Enter the short Descripton"<Descrip>"
+          Then User Enter in the Descripton"<Description>"   
+          Then User Click the Landing banner of Drag and dropdown field
+          Then User Save the Landing banner of Essentials
+          Then User Enter the Rebate percent"<percentvalue>"
+          Then User Click on the Drag and dropdown field of Essentials
+          Then User Save the Carousel banner of Essentials
+          Then User select the Calendar From date of Validity field
+          Then User select the Calendar Until date of Validity field
+          Then User Enter the value of Minimum order field"<Minimumorder>"
+          Then User Click on radio button of Apply fee
+          Then User Enter the value of CutOff time"<CutOfftime>"
+          Then User click on Apply fee Dropdown 
+          Then User select the to all Orders
+          Then User click on Checkbox of Monday
+          Then User Enter the CutOff time"<MondayCutOfftime>"
+          Then User Click on the Time field
+          Then User Click on Set button 
+          Then User click on Checkbox of Wednesday
+          Then User Enter the Wednesday CutOff time"<WedCutOfftime>"
+          Then User Click on the Time field of Wednesday
+          Then User Click on Set button of Wednesday
+          Then User Click on Radio button of All outlets
+          Then User Enter the Email of By email field"<Byemail>"
+          Then User Click the Update Settings
          
+       Examples:
+         |username                     |  |password    |  |Descrip | |Description |  |percentvalue | |Minimumorder | |CutOfftime | |MondayCutOfftime | |WedCutOfftime | |Byemail          |  
+         |velumanisabari2009@gmail.com |  |#f=6T7uX    |  |Hello   | |Testing     |  |5            | |5            | |3          | |2                | |1             | |shwetha@gmail.com|
+
+                  
+          
+          
+          
+          
+          
+          
+          
+          
+          
+    
          
