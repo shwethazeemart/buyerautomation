@@ -76,62 +76,54 @@ public class AdminEssentials {
 
 		@Then("User Click the Actions dropdown of Essentials")
 		public void user_Click_the_Actions_dropdown_of_Essentials() {
-		    // Write code here that turns the phrase above into concrete actions
-		    throw new io.cucumber.java.PendingException();
+			AdminEssentialsPage.ClickActions();
 		}
 
 		@Then("User Click on the View settings")
 		public void user_Click_on_the_View_settings() {
-		    // Write code here that turns the phrase above into concrete actions
-		    throw new io.cucumber.java.PendingException();
+			AdminEssentialsPage.ViewSettingsClick();
 		}
 
 		@Then("User Select Supplier in the dropdown list")
 		public void user_Select_Supplier_in_the_dropdown_list() {
-		    // Write code here that turns the phrase above into concrete actions
-		    throw new io.cucumber.java.PendingException();
+			WebElement supplier = AdminEssentialsPage.getDropDownsupplierElement();
+			Select select=new Select(supplier);
+			select.selectByIndex(2);
 		}
 
-		@Then("User Enter the short Descripton\"Hello\"")
-		public void user_Enter_the_short_Descripton_Hello() {
-		    // Write code here that turns the phrase above into concrete actions
-		    throw new io.cucumber.java.PendingException();
+		@Then("User Enter the short Descripton{string}")
+		public void user_Enter_the_short_Descripton_Hello(String descrip) {
+			AdminEssentialsPage.EnterShortDescrip(descrip);
 		}
 
-		@Then("User Enter in the Descripton\"Testing\"")
-		public void user_Enter_in_the_Descripton_Testing() {
-		    // Write code here that turns the phrase above into concrete actions
-		    throw new io.cucumber.java.PendingException();
+		@Then("User Enter in the Descripton{string}")
+		public void user_Enter_in_the_Descripton_Testing(String description) {
+			AdminEssentialsPage.EnterDescription(description);
 		}
 
 		@Then("User Click the Landing banner of Drag and dropdown field")
 		public void user_Click_the_Landing_banner_of_Drag_and_dropdown_field() {
-		    // Write code here that turns the phrase above into concrete actions
-		    throw new io.cucumber.java.PendingException();
+			AdminEssentialsPage.ClickLandingBanner();
 		}
 
 		@Then("User Save the Landing banner of Essentials")
 		public void user_Save_the_Landing_banner_of_Essentials() {
-		    // Write code here that turns the phrase above into concrete actions
-		    throw new io.cucumber.java.PendingException();
+			AdminEssentialsPage.ClickSaveLandingBanner();
 		}
 
-		@Then("User Enter the Rebate percent\"{int}\"")
-		public void user_Enter_the_Rebate_percent(Integer int1) {
-		    // Write code here that turns the phrase above into concrete actions
-		    throw new io.cucumber.java.PendingException();
+		@Then("User Enter the Rebate percent{string}")
+		public void user_Enter_the_Rebate_percent(String rebate) {
+			AdminEssentialsPage.EnterRebatePercent(rebate);
 		}
 
 		@Then("User Click on the Drag and dropdown field of Essentials")
 		public void user_Click_on_the_Drag_and_dropdown_field_of_Essentials() {
-		    // Write code here that turns the phrase above into concrete actions
-		    throw new io.cucumber.java.PendingException();
+			AdminEssentialsPage.ClickCarousebanner();
 		}
 
 		@Then("User Save the Carousel banner of Essentials")
 		public void user_Save_the_Carousel_banner_of_Essentials() {
-		    // Write code here that turns the phrase above into concrete actions
-		    throw new io.cucumber.java.PendingException();
+			AdminEssentialsPage.ClickSaveCarousebanner();
 		}
 
 		@Then("User Click the Update Settings")
