@@ -586,7 +586,7 @@ Scenario Outline: Verify the Reports users page
        |velumanisabari2009@gmail.com |  |#f=6T7uX    |                 
 
           
-@Smoke         
+         
  Scenario Outline: Verify the Promo codes listing page
   
           Given User are available in login page
@@ -616,7 +616,7 @@ Scenario Outline: Verify the Reports users page
          |username                     |  |password    | |code  |  |promocode  |
          |velumanisabari2009@gmail.com |  |#f=6T7uX    | |1234  |  |1234newcode|
                
-                 
+@Smoke                 
 Scenario Outline: Verify the Essentials page in Admin hub    
   
           Given User are available in login page
@@ -659,8 +659,8 @@ Scenario Outline: Verify the Essentials page in Admin hub
           Then User Click the Update Settings
          
        Examples:
-         |username                     |  |password    |  |Descrip | |Description |  |percentvalue | |Minimumorder | |CutOfftime | |MondayCutOfftime | |WedCutOfftime | |Byemail          |  
-         |velumanisabari2009@gmail.com |  |#f=6T7uX    |  |Hello   | |Testing     |  |5            | |5            | |3          | |2                | |1             | |shwetha@gmail.com|
+         |username                     |  |password    ||suppliername    |  |Descrip | |Description |  |percentvalue | |Minimumorder | |CutOfftime | |MondayCutOfftime | |WedCutOfftime | |Byemail          |  
+         |velumanisabari2009@gmail.com |  |#f=6T7uX    ||supplietesting |  |Hello   | |Testing     |  |5            | |5            | |3          | |2                | |1             | |shwetha@gmail.com|
 
                   
           
