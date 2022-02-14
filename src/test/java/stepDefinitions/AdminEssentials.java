@@ -75,12 +75,12 @@ public class AdminEssentials {
 		}
 
 		@Then("User Click the Actions dropdown of Essentials")
-		public void user_Click_the_Actions_dropdown_of_Essentials() {
+		public void user_Click_the_Actions_dropdown_of_Essentials() throws InterruptedException {
 			AdminEssentialsPage.ClickActions();
 		}
 
 		@Then("User Click on the View settings")
-		public void user_Click_on_the_View_settings() {
+		public void user_Click_on_the_View_settings() throws InterruptedException {
 			AdminEssentialsPage.ViewSettingsClick();
 		}
 
@@ -158,11 +158,11 @@ public class AdminEssentials {
 			select.selectByIndex(1);	
 		}
 
-		@Then("User select the to all Orders of Essentials")
-		public void user_select_the_to_all_Orders_of_Essentials() {
+		//@Then("User select the to all Orders of Essentials")
+		//public void user_select_the_to_all_Orders_of_Essentials() {
 		    // Write code here that turns the phrase above into concrete actions
-		    throw new io.cucumber.java.PendingException();
-		}
+		    //throw new io.cucumber.java.PendingException();
+		//}
 
 		@Then("User click on Essentials Checkbox of Monday")
 		public void user_click_on_Essentials_Checkbox_of_Monday() {

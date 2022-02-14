@@ -42,10 +42,10 @@ public class AdminEssentialsPage {
 		@FindBy(xpath = "//button[text()='Search']")
 		private static WebElement AdminEssentialsPage_SearchBtn;
 
-		@FindBy(xpath = "(//a[@class='zmdropDownBtn'])[2]")
+		@FindBy(xpath = "(//a[@class='zmdropDownBtn'])[1]")
 		private static WebElement AdminEssentialsPage_Actions;
 		
-		@FindBy(xpath = "//div[@class='zmDropDown']//a[1]")
+		@FindBy(xpath = "(//a[@class='dropdown-item'])[1]")
 		private static WebElement AdminEssentialsPage_ViewSettings;
 		
 		@FindBy(xpath = "//select[@formcontrolname='supplierId']")
@@ -155,7 +155,8 @@ public class AdminEssentialsPage {
 						.executeScript("return document.readyState").equals("complete"));
 			}
 
-			public static void ClickActions() {
+			public static void ClickActions() throws InterruptedException {
+				Thread.sleep(5000);
 				AdminEssentialsPage_Actions.click();
 				try {
 					Thread.sleep(5000);
@@ -165,7 +166,8 @@ public class AdminEssentialsPage {
 						.executeScript("return document.readyState").equals("complete"));
 			}
 
-			public static void ViewSettingsClick() {
+			public static void ViewSettingsClick() throws InterruptedException {
+				Thread.sleep(5000);
 				AdminEssentialsPage_ViewSettings.click();
 				try {
 					Thread.sleep(5000);
@@ -200,6 +202,8 @@ public class AdminEssentialsPage {
 			}
 
 			public static void EnterDescription(String description) {
+				JavascriptExecutor jse = (JavascriptExecutor)driver;
+				jse.executeScript("window.scrollBy(0,250)");
 				AdminEssentialsPage_Description.sendKeys(description);
 				try {
 					Thread.sleep(5000);
@@ -210,10 +214,13 @@ public class AdminEssentialsPage {
 			}
 
 			public static void ClickLandingBanner() throws InterruptedException {
+				JavascriptExecutor jse = (JavascriptExecutor)driver;
+				jse.executeScript("window.scrollBy(0,250)");
+				
 				WebElement bannertwo=driver.findElement(By.xpath("(//input[@class='custom-file-input'])[1]"));
 			    bannertwo.click();
 				Thread.sleep(5000);
-				WebElement uploadBox=driver.findElement(By.xpath("//div[@class='ngx-file-drop__drop-zone']//div[1]"));
+				WebElement uploadBox=driver.findElement(By.xpath("//input[@class='ngx-file-drop__file-input']"));
 				uploadBox.sendKeys("E:/Zeemart/employers-750x300.jpg");
 				try {
 					Thread.sleep(5000);
@@ -246,7 +253,7 @@ public class AdminEssentialsPage {
 				WebElement bannertwo=driver.findElement(By.xpath("(//input[@class='custom-file-input'])[2]"));
 			    bannertwo.click();
 				Thread.sleep(5000);
-				WebElement uploadBox=driver.findElement(By.xpath("//div[@class='ngx-file-drop__drop-zone']//div[1]"));
+				WebElement uploadBox=driver.findElement(By.xpath("//input[@class='ngx-file-drop__file-input']"));
 				uploadBox.sendKeys("E:/Zeemart/employers-750x300.jpg");
 				try {
 					Thread.sleep(5000);
@@ -267,11 +274,10 @@ public class AdminEssentialsPage {
 						.executeScript("return document.readyState").equals("complete"));
 			}
 
-				public static void SelectCalendarFromdate() {
+			public static void SelectCalendarFromdate() {
 				JavascriptExecutor jse = (JavascriptExecutor)driver;
 				jse.executeScript("window.scrollBy(0,250)");
-				WebElement DateBox=driver.findElement(By.xpath("//input[@formcontrolname='startDate"
-						+ "']"));
+				WebElement DateBox=driver.findElement(By.xpath("//input[@formcontrolname='startTime']"));
 
 				JavascriptExecutor js = (JavascriptExecutor) driver;
 
@@ -280,7 +286,7 @@ public class AdminEssentialsPage {
 
 			public static void SelectCalendarUntildate() throws InterruptedException {
 				Thread.sleep(5000);
-				WebElement DateBoxtwo=driver.findElement(By.xpath("//input[@formcontrolname='endDate']"));
+				WebElement DateBoxtwo=driver.findElement(By.xpath("//input[@formcontrolname='endTime']"));
 
 				JavascriptExecutor js = (JavascriptExecutor) driver;
 
@@ -299,6 +305,8 @@ public class AdminEssentialsPage {
 			}
 
 			public static void ClickonRadioBtn() {
+				JavascriptExecutor jse = (JavascriptExecutor)driver;
+				jse.executeScript("window.scrollBy(0,250)");
 				AdminEssentialsPage_RadioButton.click();
 				try {
 					Thread.sleep(5000);
@@ -318,7 +326,8 @@ public class AdminEssentialsPage {
 						.executeScript("return document.readyState").equals("complete"));
 			}
 			    
-			public static void clickOnApplyFee() {
+			public static void clickOnApplyFee() throws InterruptedException {
+				Thread.sleep(5000);
 				AdminEssentialsPage_Applyfee.click();
 				try {
 					Thread.sleep(5000);
@@ -333,6 +342,8 @@ public class AdminEssentialsPage {
 			}
 
 			public static void CheckboxofMonday() {
+				JavascriptExecutor jse = (JavascriptExecutor)driver;
+				jse.executeScript("window.scrollBy(0,250)");
 				AdminEssentialsPage_CheckboxofMonday.click();
 				try {
 					Thread.sleep(5000);
@@ -414,6 +425,8 @@ public class AdminEssentialsPage {
 			}
 
 			public static void ClickAllOutletsRadioBtn() {
+				JavascriptExecutor jse = (JavascriptExecutor)driver;
+				jse.executeScript("window.scrollBy(0,250)");
 				AdminEssentialsPage_AllOutletsRadioBtn.click();
 				try {
 					Thread.sleep(5000);
@@ -434,6 +447,8 @@ public class AdminEssentialsPage {
 			}
 			
 			public static void ClickUpdateSettings() {
+				JavascriptExecutor jse = (JavascriptExecutor)driver;
+				jse.executeScript("window.scrollBy(0,250)");
 				AdminEssentialsPage_UpdateSettings.click();
 				try {
 					Thread.sleep(5000);

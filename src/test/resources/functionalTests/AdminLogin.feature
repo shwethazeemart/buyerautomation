@@ -645,7 +645,6 @@ Scenario Outline: Verify the Essentials page in Admin hub
           Then User Click on radio button of Apply fee of Essentials
           Then User Enter the value of CutOff time of Essentials"<CutOfftime>"
           Then User click on Apply fee Dropdown of Essentials
-          Then User select the to all Orders of Essentials
           Then User click on Essentials Checkbox of Monday
           Then User Enter the CutOff time of Essentials"<MondayCutOfftime>"
           Then User Click on the Time field of Essentials
