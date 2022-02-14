@@ -61,6 +61,7 @@ import pageObjects.AdminPromotionListingPage;
 import pageObjects.AdminPromotionNewDealPage;
 import pageObjects.AdminReportsOutletspage;
 import pageObjects.AdminReportsUserspage;
+import pageObjects.AdminSupplierEditCompanypage;
 import pageObjects.Adminbuyerlinktothecompanypage;
 import pageObjects.Adminbuyeroutletsubscriptionpage;
 import pageObjects.Adminbuyersoutletpage;
@@ -190,6 +191,7 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private AdminReportsOutletspage AdminReportsOutlets;
     private AdminReportsUserspage AdminReportsUsers;
     private AdminEssentialsPage AdminEssentials;
+    private AdminSupplierEditCompanypage AdminSupplierEditCompany;
 
 
 	public PageObjectManager(WebDriver driver) {
@@ -622,42 +624,14 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 	}
 
 
+
 	public AdminEssentialsPage getAdminEssentialsPage() {
 		return (AdminEssentials == null) ? (AdminEssentials = new AdminEssentialsPage(driver)) : AdminEssentials;
 	}
 
+	public AdminSupplierEditCompanypage getAdminSupplierEditCompanypage() {
+		return (AdminSupplierEditCompany == null) ? (AdminSupplierEditCompany = new AdminSupplierEditCompanypage(driver)) : AdminSupplierEditCompany;
 
-	
-
-
+	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

@@ -416,6 +416,7 @@ Scenario Outline: Verify the Order Details page
        |velumanisabari2009@gmail.com |  |#f=6T7uX    | |Available in order  |
          
 
+
 Scenario Outline: Verify the Promotion Deals page
   
           Given User are available in login page
@@ -522,9 +523,8 @@ Scenario Outline: Verify the Promotion Deals page
           Then User Enter the Min order value"<minorder>"
           Then User Enter Usage restrictions overall quota"<overallquota>"
           Then User Click the Save
-          
-          
-             Examples:
+         
+        Examples:
          |username                     |  |password    | |promocode | |promoname | |promodescription |  |discountpercentage | |minorder  | |overallquota | 
          |velumanisabari2009@gmail.com |  |#f=6T7uX    | |COD101    | |kinley    | |Hii Kinley       |  |5                  | |15        | |150          |
 
@@ -585,8 +585,6 @@ Scenario Outline: Verify the Reports users page
        |username                     |  |password    | 
        |velumanisabari2009@gmail.com |  |#f=6T7uX    |                 
 
-          
-         
  Scenario Outline: Verify the Promo codes listing page
   
           Given User are available in login page
@@ -615,8 +613,31 @@ Scenario Outline: Verify the Reports users page
         Examples:
          |username                     |  |password    | |code  |  |promocode  |
          |velumanisabari2009@gmail.com |  |#f=6T7uX    | |1234  |  |1234newcode|
+         
+          
+       
+Scenario Outline: Verify the Admin supplier Edit Company 
+  
+          Given User are available in login page
+          When User is enter exact username"<username>"  
+          And User is enter exact password"<password>"
+          When User are Select country in the autocomplete text box
+          And User is press the Admin login button 
+          When User Clicks in Admin panel Suppliers in the side navigation menubar          
+          Then User click on action bootstrap dropdown
+          Then User click on edit company details
+          Then User clear on also know as field
+          Then User enter on also know as field"<knowas>"
+          Then User clear on company registration number
+          Then User enter on company registration number"<companyregistrationnumber>"
+          Then User click on update button in edit company
+          
+          
+  Examples:
+         |username                     |  |password    | |knowas      |  |companyregistrationnumber  |
+         |velumanisabari2009@gmail.com |  |#f=6T7uX    | |AtoZ Test   |  |LS-9087                |
                
-@Smoke                 
+                
 Scenario Outline: Verify the Essentials page in Admin hub    
   
           Given User are available in login page
