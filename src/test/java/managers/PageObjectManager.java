@@ -60,6 +60,7 @@ import pageObjects.AdminPromotionListingPage;
 import pageObjects.AdminPromotionNewDealPage;
 import pageObjects.AdminReportsOutletspage;
 import pageObjects.AdminReportsUserspage;
+import pageObjects.AdminSupplierEditCompanypage;
 import pageObjects.Adminbuyerlinktothecompanypage;
 import pageObjects.Adminbuyeroutletsubscriptionpage;
 import pageObjects.Adminbuyersoutletpage;
@@ -188,7 +189,7 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private AdminPromoCodePage AdminPromoCode;
     private AdminReportsOutletspage AdminReportsOutlets;
     private AdminReportsUserspage AdminReportsUsers;
-
+    private AdminSupplierEditCompanypage AdminSupplierEditCompany;
 
 
 	public PageObjectManager(WebDriver driver) {
@@ -617,6 +618,12 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 
 	public AdminPromoCodePage getAdminPromoCodePage() {
 		return (AdminPromoCode == null) ? (AdminPromoCode = new AdminPromoCodePage(driver)) : AdminPromoCode;
+
+	}
+
+
+	public AdminSupplierEditCompanypage getAdminSupplierEditCompanypage() {
+		return (AdminSupplierEditCompany == null) ? (AdminSupplierEditCompany = new AdminSupplierEditCompanypage(driver)) : AdminSupplierEditCompany;
 
 	}
 
