@@ -128,8 +128,7 @@ public class AdminEssentials {
 
 		@Then("User Click the Update Settings")
 		public void user_Click_the_Update_Settings() {
-		    // Write code here that turns the phrase above into concrete actions
-		    throw new io.cucumber.java.PendingException();
+			AdminEssentialsPage.ClickUpdateSettings();
 		}
 	
 	    
