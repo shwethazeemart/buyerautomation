@@ -102,7 +102,7 @@ public class AdminEssentials {
 		}
 
 		@Then("User Click the Landing banner of Drag and dropdown field")
-		public void user_Click_the_Landing_banner_of_Drag_and_dropdown_field() {
+		public void user_Click_the_Landing_banner_of_Drag_and_dropdown_field() throws InterruptedException {
 			AdminEssentialsPage.ClickLandingBanner();
 		}
 
@@ -112,18 +112,106 @@ public class AdminEssentials {
 		}
 
 		@Then("User Enter the Rebate percent{string}")
-		public void user_Enter_the_Rebate_percent(String rebate) {
-			AdminEssentialsPage.EnterRebatePercent(rebate);
+		public void user_Enter_the_Rebate_percent(String percentvalue) {
+			AdminEssentialsPage.EnterRebatePercent(percentvalue);
 		}
 
 		@Then("User Click on the Drag and dropdown field of Essentials")
-		public void user_Click_on_the_Drag_and_dropdown_field_of_Essentials() {
+		public void user_Click_on_the_Drag_and_dropdown_field_of_Essentials() throws InterruptedException {
 			AdminEssentialsPage.ClickCarousebanner();
 		}
 
 		@Then("User Save the Carousel banner of Essentials")
 		public void user_Save_the_Carousel_banner_of_Essentials() {
 			AdminEssentialsPage.ClickSaveCarousebanner();
+		}
+
+		@Then("User select the Calendar From date of Validity field of Essentials")
+		public void user_select_the_Calendar_From_date_of_Validity_field_of_Essentials() {
+			AdminEssentialsPage.SelectCalendarFromdate();
+		}
+
+		@Then("User select the Calendar Until date of Validity field of Essentials")
+		public void user_select_the_Calendar_Until_date_of_Validity_field_of_Essentials() throws InterruptedException {
+			AdminEssentialsPage.SelectCalendarUntildate();
+		}
+
+		@Then("User Enter the value of Minimum order field of Essentials{string}")
+		public void user_Enter_the_value_of_Minimum_order_field_of_Essentials(String minimumorder) {
+			AdminEssentialsPage.EnterMinimumOrder(minimumorder);
+		}
+
+		@Then("User Click on radio button of Apply fee of Essentials")
+		public void user_Click_on_radio_button_of_Apply_fee_of_Essentials() {
+			AdminEssentialsPage.ClickonRadioBtn();
+		}
+
+		@Then("User Enter the value of CutOff time of Essentials{string}")
+		public void user_Enter_the_value_of_CutOff_time_of_Essentials(String CutOffTime) {
+			AdminEssentialsPage.EnterCutOffTime(CutOffTime);
+		}
+
+		@Then("User click on Apply fee Dropdown of Essentials")
+		public void user_click_on_Apply_fee_Dropdown_of_Essentials() {
+			WebElement Applyfee = AdminEssentialsPage.getDropDownApplyfeeElement();
+			Select select=new Select(Applyfee);
+			select.selectByIndex(1);	
+		}
+
+		@Then("User select the to all Orders of Essentials")
+		public void user_select_the_to_all_Orders_of_Essentials() {
+		    // Write code here that turns the phrase above into concrete actions
+		    throw new io.cucumber.java.PendingException();
+		}
+
+		@Then("User click on Essentials Checkbox of Monday")
+		public void user_click_on_Essentials_Checkbox_of_Monday() {
+			AdminEssentialsPage.CheckboxofMonday();
+		}
+
+		@Then("User Enter the CutOff time of Essentials{string}")
+		public void user_Enter_the_CutOff_time_of_Essentials(String mondaycutoff) {
+			AdminEssentialsPage.EnterCutOffTimeMonday(mondaycutoff);
+		}
+
+		@Then("User Click on the Time field of Essentials")
+		public void user_Click_on_the_Time_field_of_Essentials() {
+			AdminEssentialsPage.ClicktheTime();
+		}
+
+		@Then("User Click on Set button of Essentials")
+		public void user_Click_on_Set_button_of_Essentials() {
+			AdminEssentialsPage.clickOnSetBtn();
+		}
+
+		@Then("User click on Essentials Checkbox of Wednesday")
+		public void user_click_on_Essentials_Checkbox_of_Wednesday() {
+			AdminEssentialsPage.ClickCheckboxWednes();
+		}
+
+		@Then("User Enter the Wednesday CutOff time of Essentials{string}")
+		public void user_Enter_the_Wednesday_CutOff_time_of_Essentials(String wednescutoff) {
+			AdminEssentialsPage.EnterCutOffTimeWednes(wednescutoff);
+		}
+
+		@Then("User Click on the Time field of Wednesday of Essentials")
+		public void user_Click_on_the_Time_field_of_Wednesday_of_Essentials() {
+			AdminEssentialsPage.ClickWednesTime();
+		}
+
+		@Then("User Click on Set button of Wednesday of Essentials")
+		public void user_Click_on_Set_button_of_Wednesday_of_Essentials() {
+			AdminEssentialsPage.ClickSet();
+		}
+
+		@Then("User Click on Radio button of All outlets of Essentials")
+		public void user_Click_on_Radio_button_of_All_outlets_of_Essentials() {
+			AdminEssentialsPage.ClickAllOutletsRadioBtn();
+		}
+
+		@Then("User Enter the Email of By email field of Essentials{string}")
+		public void user_Enter_the_Email_of_By_email_field_of_Essentials_shwetha_gmail_com(String byemail) {
+			AdminEssentialsPage.EnterByEmail(byemail);
 		}
 
 		@Then("User Click the Update Settings")

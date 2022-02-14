@@ -30,51 +30,87 @@ public class AdminEssentialsPage {
 
 		}
 
-		@FindBy(xpath = "//button[text()=' New deal ']")
+		@FindBy(xpath = "//a[@href='/sg/pages/suppliers/essentials-list']")
 		private static WebElement AdminEssentialsPage_EssentialsTab;
 		
-		@FindBy(xpath = "//button[text()=' New deal ']")
+		@FindBy(xpath = "//input[@placeholder='Search supplier']")
 		private static WebElement AdminEssentialsPage_SupplierName;
 
-		@FindBy(xpath = "//button[text()=' New deal ']")
+		@FindBy(xpath = "//select[@formcontrolname='status']")
 		private static WebElement AdminEssentialsPage_Status;
 		
-		@FindBy(xpath = "//button[text()=' New deal ']")
+		@FindBy(xpath = "//button[text()='Search']")
 		private static WebElement AdminEssentialsPage_SearchBtn;
 
-		@FindBy(xpath = "//button[text()=' New deal ']")
+		@FindBy(xpath = "(//a[@class='zmdropDownBtn'])[2]")
 		private static WebElement AdminEssentialsPage_Actions;
 		
-		@FindBy(xpath = "//button[text()=' New deal ']")
+		@FindBy(xpath = "//div[@class='zmDropDown']//a[1]")
 		private static WebElement AdminEssentialsPage_ViewSettings;
 		
-		@FindBy(xpath = "//button[text()=' New deal ']")
+		@FindBy(xpath = "//select[@formcontrolname='supplierId']")
 		private static WebElement AdminEssentialsPage_SupplierDropdown;
 		
-		@FindBy(xpath = "//button[text()=' New deal ']")
+		@FindBy(xpath = "//input[@formcontrolname='shortDesc']")
 		private static WebElement AdminEssentialsPage_ShortDescrip;
 		
-		@FindBy(xpath = "//button[text()=' New deal ']")
+		@FindBy(xpath = "//textarea[@formcontrolname='description']")
 		private static WebElement AdminEssentialsPage_Description;
 		
-		@FindBy(xpath = "//button[text()=' New deal ']")
-		private static WebElement AdminEssentialsPage_LandingBanner;
-		
-		@FindBy(xpath = "//button[text()=' New deal ']")
+		@FindBy(xpath = "//button[text()='Save']")
 		private static WebElement AdminEssentialsPage_SaveLandingBanner;
 		
-		@FindBy(xpath = "//button[text()=' New deal ']")
+		@FindBy(xpath = "//input[@formcontrolname='rebatePercentage']")
 		private static WebElement AdminEssentialsPage_RebatePercent;
-		
-		@FindBy(xpath = "//button[text()=' New deal ']")
-		private static WebElement AdminEssentialsPage_Carousebanner;
-		
-		@FindBy(xpath = "//button[text()=' New deal ']")
+			
+		@FindBy(xpath = "//button[text()='Save']")
 		private static WebElement AdminEssentialsPage_SaveCarousebanner;
+				
+		@FindBy(xpath = "//input[@formcontrolname='deliveryFeePolicyMinOrderAmount']")
+		private static WebElement AdminEssentialsPage_MinimumOrder;
 		
-		@FindBy(xpath = "//button[text()=' New deal ']")
+		@FindBy(xpath = "(//input[@formcontrolname='deliveryFeePolicyType'])[2]")
+		private static WebElement AdminEssentialsPage_RadioButton;
+		
+		@FindBy(xpath = "//input[@formcontrolname='deliveryFeePolicyFeeAmount']")
+		private static WebElement AdminEssentialsPage_CutOffTime;
+		
+		@FindBy(xpath = "//select[@formcontrolname='deliveryFeePolicyCondition']")
+		private static WebElement AdminEssentialsPage_Applyfee;
+		
+		@FindBy(xpath = "(//input[@type='checkbox'])[3]")
+		private static WebElement AdminEssentialsPage_CheckboxofMonday;
+		
+		@FindBy(xpath = "//input[@formcontrolname='days']")
+		private static WebElement AdminEssentialsPage_CutOffTimeMonday;
+		
+		@FindBy(xpath = "(//div[@class='d-inline-flex']//input)[3]")
+		private static WebElement AdminEssentialsPage_Time;
+		
+		@FindBy(xpath = "//span[text()=' Set ']")
+		private static WebElement AdminEssentialsPage_SetButton;
+		
+		@FindBy(xpath = "(//input[@type='checkbox'])[5]")
+		private static WebElement AdminEssentialsPage_CheckboxWednesday;
+		
+		@FindBy(xpath = "(//input[@formcontrolname='days'])[3]")
+		private static WebElement AdminEssentialsPage_CutOffTimeWednes;
+		
+		@FindBy(xpath = "(//div[@class='d-inline-flex']//input)[7]")
+		private static WebElement AdminEssentialsPage_WednesTime;
+		
+		@FindBy(xpath = "//span[text()=' Set ']")
+		private static WebElement AdminEssentialsPage_WednesSetBtn;
+		
+		@FindBy(xpath = "(//input[@formcontrolname='allOutlets'])[1]")
+		private static WebElement AdminEssentialsPage_AllOutletsRadioBtn;
+		
+		@FindBy(xpath = "//input[@formcontrolname='notifyEmail']")
+		private static WebElement AdminEssentialsPage_ByEmail;
+		
+		@FindBy(xpath = "//button[@class='btn btn-primary pull-right']")
 		private static WebElement AdminEssentialsPage_UpdateSettings;
-		
+				
 		public static void ClickEssentialsTab() {
 			AdminEssentialsPage_EssentialsTab.click();
 			try {
@@ -173,16 +209,19 @@ public class AdminEssentialsPage {
 						.executeScript("return document.readyState").equals("complete"));
 			}
 
-			public static void ClickLandingBanner() {
-				AdminEssentialsPage_LandingBanner.click();
+			public static void ClickLandingBanner() throws InterruptedException {
+				WebElement bannertwo=driver.findElement(By.xpath("(//input[@class='custom-file-input'])[1]"));
+			    bannertwo.click();
+				Thread.sleep(5000);
+				WebElement uploadBox=driver.findElement(By.xpath("//div[@class='ngx-file-drop__drop-zone']//div[1]"));
+				uploadBox.sendKeys("E:/Zeemart/employers-750x300.jpg");
 				try {
 					Thread.sleep(5000);
 				} catch (InterruptedException e) {
 				}
 				new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
-						.executeScript("return document.readyState").equals("complete"));
+						.executeScript("return document.readyState").equals("complete"));	
 			}
-
 			public static void ClickSaveLandingBanner() {
 				AdminEssentialsPage_SaveLandingBanner.click();
 				try {
@@ -193,8 +232,8 @@ public class AdminEssentialsPage {
 						.executeScript("return document.readyState").equals("complete"));
 			}
 
-			public static void EnterRebatePercent(String rebate) {
-				AdminEssentialsPage_RebatePercent.sendKeys(rebate);
+			public static void EnterRebatePercent(String percentvalue) {
+				AdminEssentialsPage_RebatePercent.sendKeys(percentvalue);
 				try {
 					Thread.sleep(5000);
 				} catch (InterruptedException e) {
@@ -203,14 +242,19 @@ public class AdminEssentialsPage {
 						.executeScript("return document.readyState").equals("complete"));
 			}
 
-			public static void ClickCarousebanner() {
-				AdminEssentialsPage_Carousebanner.click();
+			public static void ClickCarousebanner() throws InterruptedException {
+				WebElement bannertwo=driver.findElement(By.xpath("(//input[@class='custom-file-input'])[2]"));
+			    bannertwo.click();
+				Thread.sleep(5000);
+				WebElement uploadBox=driver.findElement(By.xpath("//div[@class='ngx-file-drop__drop-zone']//div[1]"));
+				uploadBox.sendKeys("E:/Zeemart/employers-750x300.jpg");
 				try {
 					Thread.sleep(5000);
 				} catch (InterruptedException e) {
 				}
 				new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
-						.executeScript("return document.readyState").equals("complete"));
+						.executeScript("return document.readyState").equals("complete"));	
+			
 			}
 
 			public static void ClickSaveCarousebanner() {
@@ -223,6 +267,172 @@ public class AdminEssentialsPage {
 						.executeScript("return document.readyState").equals("complete"));
 			}
 
+				public static void SelectCalendarFromdate() {
+				JavascriptExecutor jse = (JavascriptExecutor)driver;
+				jse.executeScript("window.scrollBy(0,250)");
+				WebElement DateBox=driver.findElement(By.xpath("//input[@formcontrolname='startDate"
+						+ "']"));
+
+				JavascriptExecutor js = (JavascriptExecutor) driver;
+
+				js.executeScript("arguments[0].value='1 Feb 2022';", DateBox);
+			}
+
+			public static void SelectCalendarUntildate() throws InterruptedException {
+				Thread.sleep(5000);
+				WebElement DateBoxtwo=driver.findElement(By.xpath("//input[@formcontrolname='endDate']"));
+
+				JavascriptExecutor js = (JavascriptExecutor) driver;
+
+				js.executeScript("arguments[0].value='22 Feb 2022';", DateBoxtwo);
+
+			}
+
+			public static void EnterMinimumOrder(String minimumorder) {
+				AdminEssentialsPage_MinimumOrder.sendKeys(minimumorder);
+				try {
+					Thread.sleep(5000);
+				} catch (InterruptedException e) {
+				}
+				new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+						.executeScript("return document.readyState").equals("complete"));
+			}
+
+			public static void ClickonRadioBtn() {
+				AdminEssentialsPage_RadioButton.click();
+				try {
+					Thread.sleep(5000);
+				} catch (InterruptedException e) {
+				}
+				new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+						.executeScript("return document.readyState").equals("complete"));
+			}
+
+			public static void EnterCutOffTime(String cutOffTime) {
+				AdminEssentialsPage_CutOffTime.sendKeys(cutOffTime);
+				try {
+					Thread.sleep(5000);
+				} catch (InterruptedException e) {
+				}
+				new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+						.executeScript("return document.readyState").equals("complete"));
+			}
+			    
+			public static void clickOnApplyFee() {
+				AdminEssentialsPage_Applyfee.click();
+				try {
+					Thread.sleep(5000);
+				} catch (InterruptedException e) {
+				}
+				new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+						.executeScript("return document.readyState").equals("complete"));
+
+			}
+			public static WebElement getDropDownApplyfeeElement() {
+				return AdminEssentialsPage_Applyfee;
+			}
+
+			public static void CheckboxofMonday() {
+				AdminEssentialsPage_CheckboxofMonday.click();
+				try {
+					Thread.sleep(5000);
+				} catch (InterruptedException e) {
+				}
+				new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+						.executeScript("return document.readyState").equals("complete"));
+
+			}
+
+			public static void EnterCutOffTimeMonday(String mondaycutoff) {
+				AdminEssentialsPage_CutOffTimeMonday.sendKeys(mondaycutoff);
+				try {
+					Thread.sleep(5000);
+				} catch (InterruptedException e) {
+				}
+				new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+						.executeScript("return document.readyState").equals("complete"));
+			}
+
+			public static void ClicktheTime() {
+				AdminEssentialsPage_Time.click();
+				try {
+					Thread.sleep(5000);
+				} catch (InterruptedException e) {
+				}
+				new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+						.executeScript("return document.readyState").equals("complete"));
+			}
+
+			public static void clickOnSetBtn() {
+				AdminEssentialsPage_SetButton.click();
+				try {
+					Thread.sleep(5000);
+				} catch (InterruptedException e) {
+				}
+				new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+						.executeScript("return document.readyState").equals("complete"));
+			}
+
+			public static void ClickCheckboxWednes() {
+				AdminEssentialsPage_CheckboxWednesday.click();
+				try {
+					Thread.sleep(5000);
+				} catch (InterruptedException e) {
+				}
+				new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+						.executeScript("return document.readyState").equals("complete"));
+			}
+
+			public static void EnterCutOffTimeWednes(String wednescutoff) {
+				AdminEssentialsPage_CutOffTimeWednes.sendKeys(wednescutoff);
+				try {
+					Thread.sleep(5000);
+				} catch (InterruptedException e) {
+				}
+				new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+						.executeScript("return document.readyState").equals("complete"));
+			}
+
+			public static void ClickWednesTime() {
+				AdminEssentialsPage_WednesTime.click();
+				try {
+					Thread.sleep(5000);
+				} catch (InterruptedException e) {
+				}
+				new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+						.executeScript("return document.readyState").equals("complete"));
+			}
+
+			public static void ClickSet() {
+				AdminEssentialsPage_WednesSetBtn.click();
+				try {
+					Thread.sleep(5000);
+				} catch (InterruptedException e) {
+				}
+				new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+						.executeScript("return document.readyState").equals("complete"));
+			}
+
+			public static void ClickAllOutletsRadioBtn() {
+				AdminEssentialsPage_AllOutletsRadioBtn.click();
+				try {
+					Thread.sleep(5000);
+				} catch (InterruptedException e) {
+				}
+				new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+						.executeScript("return document.readyState").equals("complete"));
+			}
+
+			public static void EnterByEmail(String byemail) {
+				AdminEssentialsPage_ByEmail.sendKeys(byemail);
+				try {
+					Thread.sleep(5000);
+				} catch (InterruptedException e) {
+				}
+				new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+						.executeScript("return document.readyState").equals("complete"));
+			}
+			
 			public static void ClickUpdateSettings() {
 				AdminEssentialsPage_UpdateSettings.click();
 				try {
@@ -232,8 +442,6 @@ public class AdminEssentialsPage {
 				new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 						.executeScript("return document.readyState").equals("complete"));
 			}
-		    
-		    
-		    
+
 }
 		

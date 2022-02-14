@@ -639,28 +639,28 @@ Scenario Outline: Verify the Essentials page in Admin hub
           Then User Enter the Rebate percent"<percentvalue>"
           Then User Click on the Drag and dropdown field of Essentials
           Then User Save the Carousel banner of Essentials
-          Then User select the Calendar From date of Validity field
-          Then User select the Calendar Until date of Validity field
-          Then User Enter the value of Minimum order field"<Minimumorder>"
-          Then User Click on radio button of Apply fee
-          Then User Enter the value of CutOff time"<CutOfftime>"
-          Then User click on Apply fee Dropdown 
-          Then User select the to all Orders
-          Then User click on Checkbox of Monday
-          Then User Enter the CutOff time"<MondayCutOfftime>"
-          Then User Click on the Time field
-          Then User Click on Set button 
-          Then User click on Checkbox of Wednesday
-          Then User Enter the Wednesday CutOff time"<WedCutOfftime>"
-          Then User Click on the Time field of Wednesday
-          Then User Click on Set button of Wednesday
-          Then User Click on Radio button of All outlets
-          Then User Enter the Email of By email field"<Byemail>"
+          Then User select the Calendar From date of Validity field of Essentials
+          Then User select the Calendar Until date of Validity field of Essentials
+          Then User Enter the value of Minimum order field of Essentials"<Minimumorder>"
+          Then User Click on radio button of Apply fee of Essentials
+          Then User Enter the value of CutOff time of Essentials"<CutOfftime>"
+          Then User click on Apply fee Dropdown of Essentials
+          Then User select the to all Orders of Essentials
+          Then User click on Essentials Checkbox of Monday
+          Then User Enter the CutOff time of Essentials"<MondayCutOfftime>"
+          Then User Click on the Time field of Essentials
+          Then User Click on Set button of Essentials
+          Then User click on Essentials Checkbox of Wednesday
+          Then User Enter the Wednesday CutOff time of Essentials"<WedCutOfftime>"
+          Then User Click on the Time field of Wednesday of Essentials
+          Then User Click on Set button of Wednesday of Essentials
+          Then User Click on Radio button of All outlets of Essentials
+          Then User Enter the Email of By email field of Essentials"<Byemail>"
           Then User Click the Update Settings
          
        Examples:
          |username                     |  |password    ||suppliername    |  |Descrip | |Description |  |percentvalue | |Minimumorder | |CutOfftime | |MondayCutOfftime | |WedCutOfftime | |Byemail          |  
-         |velumanisabari2009@gmail.com |  |#f=6T7uX    ||supplietesting |  |Hello   | |Testing     |  |5            | |5            | |3          | |2                | |1             | |shwetha@gmail.com|
+         |velumanisabari2009@gmail.com |  |#f=6T7uX    ||Supplie testing |  |Hello   | |Testing     |  |5            | |5            | |3          | |2                | |1             | |shwetha@gmail.com|
 
                   
           
