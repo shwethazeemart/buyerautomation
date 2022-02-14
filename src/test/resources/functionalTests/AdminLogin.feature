@@ -416,7 +416,7 @@ Scenario Outline: Verify the Order Details page
        |velumanisabari2009@gmail.com |  |#f=6T7uX    | |Available in order  |
          
 
- 
+
 Scenario Outline: Verify the Promotion Deals page
   
           Given User are available in login page
@@ -504,7 +504,6 @@ Scenario Outline: Verify the Promotion Deals page
          
  Scenario Outline: Verify the Promo code page
 
-  
           Given User are available in login page
           When User is enter exact username"<username>"
           And User is enter exact password"<password>"
@@ -524,6 +523,20 @@ Scenario Outline: Verify the Promotion Deals page
           Then User Enter the Min order value"<minorder>"
           Then User Enter Usage restrictions overall quota"<overallquota>"
           Then User Click the Save
+         
+        Examples:
+         |username                     |  |password    | |promocode | |promoname | |promodescription |  |discountpercentage | |minorder  | |overallquota | 
+         |velumanisabari2009@gmail.com |  |#f=6T7uX    | |COD101    | |kinley    | |Hii Kinley       |  |5                  | |15        | |150          |
+
+          
+          
+Scenario Outline: Verify the Reports outlets page
+
+          Given User are available in login page
+          When User is enter exact username"<username>"
+          And User is enter exact password"<password>"
+          When User are Select country in the autocomplete text box
+          And User is press the Admin login button 
           When User Clicks on Admin Reports in the side navigation menubar 
           Then User click on By outlet option 
           Then User select date from calendar field
@@ -542,10 +555,10 @@ Scenario Outline: Verify the Promotion Deals page
           Then User select user in dropdown field
           Then User click on reset button in filter field
           
-           Examples:
-         |username                     |  |password    | |promocode | |promoname | |promodescription |  |discountpercentage | |minorder  | |overallquota | 
-         |velumanisabari2009@gmail.com |  |#f=6T7uX    | |COD101    | |kinley    | |Hii Kinley       |  |5                  | |15        | |150          |
           
+     Examples:
+       |username                     |  |password    | 
+       |velumanisabari2009@gmail.com |  |#f=6T7uX    |             
 
          
 Scenario Outline: Verify the Reports users page
@@ -572,8 +585,6 @@ Scenario Outline: Verify the Reports users page
        |username                     |  |password    | 
        |velumanisabari2009@gmail.com |  |#f=6T7uX    |                 
 
-
-        
  Scenario Outline: Verify the Promo codes listing page
   
           Given User are available in login page
@@ -604,7 +615,7 @@ Scenario Outline: Verify the Reports users page
          |velumanisabari2009@gmail.com |  |#f=6T7uX    | |1234  |  |1234newcode|
          
           
-@Smoke        
+       
 Scenario Outline: Verify the Admin supplier Edit Company 
   
           Given User are available in login page
@@ -626,9 +637,60 @@ Scenario Outline: Verify the Admin supplier Edit Company
          |username                     |  |password    | |knowas      |  |companyregistrationnumber  |
          |velumanisabari2009@gmail.com |  |#f=6T7uX    | |AtoZ Test   |  |LS-9087                |
                
-                 
-          
-          
-     
+                
+Scenario Outline: Verify the Essentials page in Admin hub    
+  
+          Given User are available in login page
+          When User is enter exact username"<username>"  
+          And User is enter exact password"<password>"
+          When User are Select country in the autocomplete text box
+          And User is press the Admin login button 
+          When User Clicks in Admin panel Suppliers in the side navigation menubar     
+          Then User click the Essentials Tab
+          And User Enter name in Search supplier box in the Essentials page"<suppliername>"
+          Then user select the status of the dropdown
+          Then User are Clicks Search button in the Essentials page 
+          Then User Click the Actions dropdown of Essentials
+          Then User Click on the View settings
+          Then User Select Supplier in the dropdown list
+          Then User Enter the short Descripton"<Descrip>"
+          Then User Enter in the Descripton"<Description>"   
+          Then User Click the Landing banner of Drag and dropdown field
+          Then User Save the Landing banner of Essentials
+          Then User Enter the Rebate percent"<percentvalue>"
+          Then User Click on the Drag and dropdown field of Essentials
+          Then User Save the Carousel banner of Essentials
+          Then User select the Calendar From date of Validity field of Essentials
+          Then User select the Calendar Until date of Validity field of Essentials
+          Then User Enter the value of Minimum order field of Essentials"<Minimumorder>"
+          Then User Click on radio button of Apply fee of Essentials
+          Then User Enter the value of CutOff time of Essentials"<CutOfftime>"
+          Then User click on Apply fee Dropdown of Essentials
+          Then User click on Essentials Checkbox of Monday
+          Then User Enter the CutOff time of Essentials"<MondayCutOfftime>"
+          Then User Click on the Time field of Essentials
+          Then User Click on Set button of Essentials
+          Then User click on Essentials Checkbox of Wednesday
+          Then User Enter the Wednesday CutOff time of Essentials"<WedCutOfftime>"
+          Then User Click on the Time field of Wednesday of Essentials
+          Then User Click on Set button of Wednesday of Essentials
+          Then User Click on Radio button of All outlets of Essentials
+          Then User Enter the Email of By email field of Essentials"<Byemail>"
+          Then User Click the Update Settings
          
+       Examples:
+         |username                     |  |password    ||suppliername    |  |Descrip | |Description |  |percentvalue | |Minimumorder | |CutOfftime | |MondayCutOfftime | |WedCutOfftime | |Byemail          |  
+         |velumanisabari2009@gmail.com |  |#f=6T7uX    ||Supplie testing |  |Hello   | |Testing     |  |5            | |5            | |3          | |2                | |1             | |shwetha@gmail.com|
+
+                  
+          
+          
+          
+          
+          
+          
+          
+          
+          
+    
          

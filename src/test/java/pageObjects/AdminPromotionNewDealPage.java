@@ -160,7 +160,6 @@ public class AdminPromotionNewDealPage {
 				.executeScript("return document.readyState").equals("complete"));
 
 	}
-
 	public static WebElement getDropDownSupplierElement() {
 		return AdminPromotionListingPage_Supplier;
 	}
