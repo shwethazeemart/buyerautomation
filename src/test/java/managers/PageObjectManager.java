@@ -52,6 +52,7 @@ import stepDefinitions.Reportspagesteps;
 import stepDefinitions.SucessfullyLoginPage;
 import stepDefinitions.SupplierDirectoryProduct;
 import stepDefinitions.UserspageSteps;
+import pageObjects.AdminEssentialsPage;
 import pageObjects.AdminInvoiceuploadpage;
 import pageObjects.AdminOrderDetailsPage;
 import pageObjects.AdminOrderListingPage;
@@ -60,6 +61,8 @@ import pageObjects.AdminPromotionListingPage;
 import pageObjects.AdminPromotionNewDealPage;
 import pageObjects.AdminReportsOutletspage;
 import pageObjects.AdminReportsUserspage;
+import pageObjects.AdminSupplierEditCompanypage;
+import pageObjects.AdminSupplierEditDefaultpage;
 import pageObjects.Adminbuyerlinktothecompanypage;
 import pageObjects.Adminbuyeroutletsubscriptionpage;
 import pageObjects.Adminbuyersoutletpage;
@@ -188,8 +191,9 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private AdminPromoCodePage AdminPromoCode;
     private AdminReportsOutletspage AdminReportsOutlets;
     private AdminReportsUserspage AdminReportsUsers;
-
-
+    private AdminEssentialsPage AdminEssentials;
+    private AdminSupplierEditCompanypage AdminSupplierEditCompany;
+    private AdminSupplierEditDefaultpage AdminSupplierEditDefault;
 
 	public PageObjectManager(WebDriver driver) {
 		this.driver = driver;
@@ -621,37 +625,26 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 	}
 
 
+
+	public AdminEssentialsPage getAdminEssentialsPage() {
+		return (AdminEssentials == null) ? (AdminEssentials = new AdminEssentialsPage(driver)) : AdminEssentials;
+	}
+
+	public AdminSupplierEditCompanypage getAdminSupplierEditCompanypage() {
+		return (AdminSupplierEditCompany == null) ? (AdminSupplierEditCompany = new AdminSupplierEditCompanypage(driver)) : AdminSupplierEditCompany;
+
+	}
+
+
+	public AdminSupplierEditDefaultpage getAdminSupplierEditDefaultpage() {
+		return (AdminSupplierEditDefault == null) ? (AdminSupplierEditDefault = new AdminSupplierEditDefaultpage(driver)) : AdminSupplierEditDefault;
+
+	}
 	
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	
+	
+	
+	
+	}
 
 

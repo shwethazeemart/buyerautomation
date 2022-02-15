@@ -16,7 +16,7 @@ import pageObjects.OrdersPage;
 
 public class AdminPromoCodeListing {
 
-
+ 
 		private TestContext testContext;
 		private OrdersPage orderspage;
 		//private txtBoxContent txtBoxContent;
@@ -34,7 +34,7 @@ public class AdminPromoCodeListing {
 	    private AdminPromotionNewDealPage adminPromotionNewDeal;
 	    private AdminPromoCodePage adminPromoCode;
 	     
-		public AdminPromoCode(TestContext testContext) {
+		public AdminPromoCodeListing(TestContext testContext) {
 			super();
 			this.testContext = testContext;
 			this.admininvoiceuploadpage=(AdminInvoiceuploadpage)testContext.getPageObjectManager().getAdminInvoiceuploadpageSteps();
