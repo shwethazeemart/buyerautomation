@@ -682,8 +682,30 @@ Scenario Outline: Verify the Essentials page in Admin hub
          |username                     |  |password    ||suppliername    |  |Descrip | |Description |  |percentvalue | |Minimumorder | |CutOfftime | |MondayCutOfftime | |WedCutOfftime | |Byemail          |  
          |velumanisabari2009@gmail.com |  |#f=6T7uX    ||Supplie testing |  |Hello   | |Testing     |  |5            | |5            | |3          | |2                | |1             | |shwetha@gmail.com|
 
-                  
+
+@Smoke                  
+Scenario Outline: Verify the Admin supplier Edit Default Setting 
+  
+          Given User are available in login page
+          When User is enter exact username"<username>"  
+          And User is enter exact password"<password>"
+          When User are Select country in the autocomplete text box
+          And User is press the Admin login button 
+          When User Clicks in Admin panel Suppliers in the side navigation menubar          
+          Then User click on action bootstrap dropdown
+          Then User click on edit edit default setting
+          Then User clear on minimum order field
+          Then User enter on minimum order field"<minimumorder>"
+          Then User clear on sales person field
+          Then User enter on sales person field"<salesperson>"
+          Then User clear on sales person phone field
+          Then User enter on sales person phone field"<phonenumber>"
+          Then User click on update button in edit default setting
           
+          
+  Examples:
+         |username                     |  |password    | |salesperson     |  |minimumorder||phonenumber  |
+         |velumanisabari2009@gmail.com |  |#f=6T7uX    | |lingeshsabarisai   |  |102         ||+65345678929 |          
           
           
           
