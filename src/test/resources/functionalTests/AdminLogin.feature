@@ -443,7 +443,7 @@ Scenario Outline: Verify the Promotion Deals page
        |username                     |  |password    | |Deal        |
        |velumanisabari2009@gmail.com |  |#f=6T7uX    | |Bug testing |
          
-         
+ @Smoke        
  Scenario Outline: Verify the Promotion New deal page
   
           Given User are available in login page
@@ -683,7 +683,7 @@ Scenario Outline: Verify the Essentials page in Admin hub
          |velumanisabari2009@gmail.com |  |#f=6T7uX    ||Supplie testing |  |Hello   | |Testing     |  |5            | |5            | |3          | |2                | |1             | |shwetha@gmail.com|
 
 
-@Smoke                  
+                 
 Scenario Outline: Verify the Admin supplier Edit Default Setting 
   
           Given User are available in login page
