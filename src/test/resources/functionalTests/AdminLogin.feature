@@ -1,6 +1,6 @@
 Feature: verify Admin panel Entier test all the page
 
-
+ 
 Scenario Outline: Verify the Suppliers page in view outlets Admin hub    
   
           Given User are available in login page
@@ -683,7 +683,7 @@ Scenario Outline: Verify the Essentials page in Admin hub
          |velumanisabari2009@gmail.com |  |#f=6T7uX    ||Supplie testing |  |Hello   | |Testing     |  |5            | |5            | |3          | |2                | |1             | |shwetha@gmail.com|
 
 
-@Smoke                  
+                  
 Scenario Outline: Verify the Admin supplier Edit Default Setting 
   
           Given User are available in login page
@@ -708,7 +708,30 @@ Scenario Outline: Verify the Admin supplier Edit Default Setting
          |velumanisabari2009@gmail.com |  |#f=6T7uX    | |lingeshsabarisai   |  |102         ||+65345678929 |          
           
           
+         
+@Smoke
+Scenario Outline: Verify the Admin supplier Edit Blackout Dates 
+  
+          Given User are available in login page
+          When User is enter exact username"<username>"  
+          And User is enter exact password"<password>"
+          When User are Select country in the autocomplete text box
+          And User is press the Admin login button 
+          When User Clicks in Admin panel Suppliers in the side navigation menubar
+          Then User clear on search textbox in supplier filed
+          Then User enter on supplier name in search textbox"<suppliername>"  
+          Then User click on search button in supplier field        
+          Then User click on action bootstrap dropdown 
+          Then User click on edit blockout dates for delivery
+          Then User select date form calendar in blackout field
+          Then User click on add button in blackout field
+          Then User click on close icon in blackout field
           
+          
+          
+   Examples:
+         |username                     |  |password    | |suppliername     |  
+         |velumanisabari2009@gmail.com |  |#f=6T7uX    | |VELU             |            
           
           
           
