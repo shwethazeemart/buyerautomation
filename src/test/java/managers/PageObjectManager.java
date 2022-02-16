@@ -54,6 +54,7 @@ import stepDefinitions.SupplierDirectoryProduct;
 import stepDefinitions.UserspageSteps;
 import pageObjects.AdminEssentialsPage;
 import pageObjects.AdminInvoiceuploadpage;
+import pageObjects.AdminNewEssentialsPage;
 import pageObjects.AdminOrderDetailsPage;
 import pageObjects.AdminOrderListingPage;
 import pageObjects.AdminPromoCodePage;
@@ -194,6 +195,7 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private AdminEssentialsPage AdminEssentials;
     private AdminSupplierEditCompanypage AdminSupplierEditCompany;
     private AdminSupplierEditDefaultpage AdminSupplierEditDefault;
+    private AdminNewEssentialsPage AdminNewEssentials;
 
 	public PageObjectManager(WebDriver driver) {
 		this.driver = driver;
@@ -639,6 +641,11 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 	public AdminSupplierEditDefaultpage getAdminSupplierEditDefaultpage() {
 		return (AdminSupplierEditDefault == null) ? (AdminSupplierEditDefault = new AdminSupplierEditDefaultpage(driver)) : AdminSupplierEditDefault;
 
+	}
+
+
+	public AdminNewEssentialsPage getAdminNewEssentialsPage() {
+		return (AdminNewEssentials == null) ? (AdminNewEssentials = new AdminNewEssentialsPage(driver)) : AdminNewEssentials;
 	}
 	
 	
