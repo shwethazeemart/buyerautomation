@@ -30,6 +30,7 @@ public class AdminPromotionNewDealPage {
 		WebElement tosterMsg = driver.findElement(By.xpath("//*[text()='" + msg + "']"));
 
 	}
+	
 
 
 	@FindBy(xpath = "//button[text()=' New deal ']")
@@ -134,7 +135,7 @@ public class AdminPromotionNewDealPage {
 	@FindBy(xpath = "(//input[@class='form-control'])[3]")
 	private static WebElement AdminPromotionListingPage_MOQField;
 	
-	@FindBy(xpath = "//input[contains(@class,'form-control ng-pristine')]")
+	@FindBy(xpath = "(//input[@type='text'])[5]")
 	private static WebElement AdminPromotionListingPage_ShelfLife;
 
 	@FindBy(xpath = "//a[text()=' Save changes ']")
@@ -600,7 +601,8 @@ public class AdminPromotionNewDealPage {
 				.executeScript("return document.readyState").equals("complete"));
 	}
 
-	public static void EnterShelfLife(String shelflife) {
+	public static void EnterShelfLife(String shelflife) throws InterruptedException {
+		Thread.sleep(5000);
 		AdminPromotionListingPage_ShelfLife.sendKeys(shelflife);
 		try {
 			Thread.sleep(5000);
@@ -619,7 +621,6 @@ public class AdminPromotionNewDealPage {
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
 	}
-
 	
 	}
 	

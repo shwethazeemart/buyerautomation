@@ -747,8 +747,8 @@ Scenario Outline: Verify the New Essentials listing page in Admin hub
           Then User click the First checkbox
           Then User click on the UOM options dropdown
           Then User Clear the Block option field
-          Then User Clear the Price option field          
-          Then User Enter the Price field"<price>"
+          Then User Clear the Price option field of Essentials          
+          Then User Enter the Price field of Essentials"<price>"
           Then User Enter the Original price field"<Originalprice>"
           Then User Clear the MOQ option field          
           Then User Enter the MOQ field"<MOQ>"
@@ -756,8 +756,8 @@ Scenario Outline: Verify the New Essentials listing page in Admin hub
           Then User click on the Add to listing 
                     
    Examples:
-         |username                     |  |password    | |Descrip | |Description |  |percentvalue | |Minimumorder | |CutOfftime | |MondayCutOfftime | |WedCutOfftime | |Byemail          |  |price | |Originalprice | |MOQ | |Shelflife |
-         |velumanisabari2009@gmail.com |  |#f=6T7uX    | |Hello   | |Testing     |  |5            | |5            | |3          | |2                | |1             | |shwetha@gmail.com|  |20    | | 15           | |10  | |1           |
+         |username                     |  |password    | |Descrip | |Description |  |percentvalue | |Minimumorder | |CutOfftime | |MondayCutOfftime | |WedCutOfftime | |Byemail          |  | Price | |Originalprice | |MOQ | |Shelflife |
+         |velumanisabari2009@gmail.com |  |#f=6T7uX    | |Hello   | |Testing     |  |5            | |5            | |3          | |2                | |1             | |shwetha@gmail.com|  | 10    | | 15           | |5  | |1         |
           
           
           

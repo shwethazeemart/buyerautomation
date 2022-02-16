@@ -265,7 +265,7 @@ public class AdminPromotionNewDeal {
 	}
 
 	@Then("User Enter the Shelf life{string}")
-	public void user_Enter_the_Shelf_life(String Shelflife) {
+	public void user_Enter_the_Shelf_life(String Shelflife) throws InterruptedException {
 		AdminPromotionNewDealPage.EnterShelfLife(Shelflife);
 	}
 

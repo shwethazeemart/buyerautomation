@@ -47,34 +47,31 @@ public class AdminNewEssentials {
 					this.adminNewEssentialsPage=testContext.getPageObjectManager().getAdminNewEssentialsPage();
 				}
 			
+			
 			@Then("User click on the New Essentials listing")
 			public void user_click_on_the_New_Essentials_listing() {
-			    // Write code here that turns the phrase above into concrete actions
-			    throw new io.cucumber.java.PendingException();
+				AdminNewEssentialsPage.ClickNewEssentialsListing();
 			}
 
 			@Then("User Click on the Next SKU")
 			public void user_Click_on_the_Next_SKU() {
-			    // Write code here that turns the phrase above into concrete actions
-			    throw new io.cucumber.java.PendingException();
+				AdminNewEssentialsPage.ClickOnNextSKU();
 			}
 
-			@Then("User Clear the Price option field")
-			public void user_Clear_the_Price_option_field() {
-			    // Write code here that turns the phrase above into concrete actions
-			    throw new io.cucumber.java.PendingException();
+			@Then("User Clear the Price option field of Essentials")
+			public void user_Clear_the_Price_option_field_of_Essentials() throws InterruptedException {
+				AdminNewEssentialsPage.ClearPriceOptionField();
 			}
 
-			@Then("User Enter the Price field\"{int}\"")
-			public void user_Enter_the_Price_field(Integer int1) {
-			    // Write code here that turns the phrase above into concrete actions
-			    throw new io.cucumber.java.PendingException();
+			@Then("User Enter the Price field of Essentials{string}")
+			public void user_Enter_the_Price_field_of_Essentials(String price) throws InterruptedException {
+				AdminNewEssentialsPage.EnterPriceField(price);
 			}
-
+			
+								
 			@Then("User click on the Add to listing")
 			public void user_click_on_the_Add_to_listing() {
-			    // Write code here that turns the phrase above into concrete actions
-			    throw new io.cucumber.java.PendingException();
+				AdminNewEssentialsPage.ClickonAddToListing();
 			}
  
 }
