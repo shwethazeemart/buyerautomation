@@ -62,6 +62,7 @@ import pageObjects.AdminPromotionListingPage;
 import pageObjects.AdminPromotionNewDealPage;
 import pageObjects.AdminReportsOutletspage;
 import pageObjects.AdminReportsUserspage;
+import pageObjects.AdminSupplierEditBlackoutpage;
 import pageObjects.AdminSupplierEditCompanypage;
 import pageObjects.AdminSupplierEditDefaultpage;
 import pageObjects.Adminbuyerlinktothecompanypage;
@@ -196,6 +197,7 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private AdminSupplierEditCompanypage AdminSupplierEditCompany;
     private AdminSupplierEditDefaultpage AdminSupplierEditDefault;
     private AdminNewEssentialsPage AdminNewEssentials;
+    private AdminSupplierEditBlackoutpage AdminSupplierEditBlackout;
 
 	public PageObjectManager(WebDriver driver) {
 		this.driver = driver;
@@ -643,9 +645,13 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 
 	}
 
-
 	public AdminNewEssentialsPage getAdminNewEssentialsPage() {
 		return (AdminNewEssentials == null) ? (AdminNewEssentials = new AdminNewEssentialsPage(driver)) : AdminNewEssentials;
+	}
+	
+	public AdminSupplierEditBlackoutpage getAdminSupplierEditBlackoutpage() {
+		return (AdminSupplierEditBlackout == null) ? (AdminSupplierEditBlackout = new AdminSupplierEditBlackoutpage(driver)) : AdminSupplierEditBlackout;
+
 	}
 	
 	
