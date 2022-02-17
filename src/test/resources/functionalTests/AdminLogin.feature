@@ -443,7 +443,7 @@ Scenario Outline: Verify the Promotion Deals page
        |username                     |  |password    | |Deal        |
        |velumanisabari2009@gmail.com |  |#f=6T7uX    | |Bug testing |
          
-         
+       
  Scenario Outline: Verify the Promotion New deal page
   
           Given User are available in login page
@@ -686,7 +686,6 @@ Scenario Outline: Verify the Essentials page in Admin hub
          |velumanisabari2009@gmail.com |  |#f=6T7uX    ||Supplie testing |  |Hello   | |Testing     |  |5            | |5            | |3          | |2                | |1             | |shwetha@gmail.com|
 
 
-                  
 Scenario Outline: Verify the Admin supplier Edit Default Setting 
   
           Given User are available in login page
@@ -710,14 +709,66 @@ Scenario Outline: Verify the Admin supplier Edit Default Setting
           
           
   Examples:
-         |username                     |  |password    | |salesperson     |  |minimumorder||phonenumber     ||suppliername|
-         |velumanisabari2009@gmail.com |  |#f=6T7uX    | |lingeshsabarisai   |  |102         ||+65345678929 ||VELU       |          
+
+         |username                     |  |password    | |salesperson        |  |minimumorder||phonenumber  |
+         |velumanisabari2009@gmail.com |  |#f=6T7uX    | |lingeshsabarisai   |  |102         ||+65345678929 |          
           
-          
-         
+                  
+Scenario Outline: Verify the New Essentials listing page in Admin hub    
+        
+          Given User are available in login page
+          When User is enter exact username"<username>"  
+          And User is enter exact password"<password>"
+          When User are Select country in the autocomplete text box
+          And User is press the Admin login button 
+          When User Clicks in Admin panel Suppliers in the side navigation menubar     
+          Then User click the Essentials Tab
+          Then User click on the New Essentials listing 
+          Then User Select Supplier in the dropdown list
+          Then User Enter the short Descripton"<Descrip>"
+          Then User Enter in the Descripton"<Description>"   
+          Then User Click the Landing banner of Drag and dropdown field
+          Then User Save the Landing banner of Essentials
+          Then User Enter the Rebate percent"<percentvalue>"
+          Then User Click on the Drag and dropdown field of Essentials
+          Then User Save the Carousel banner of Essentials
+          Then User select the Calendar From date of Validity field of Essentials
+          Then User select the Calendar Until date of Validity field of Essentials
+          Then User Enter the value of Minimum order field of Essentials"<Minimumorder>"
+          Then User Click on radio button of Apply fee of Essentials
+          Then User Enter the value of CutOff time of Essentials"<CutOfftime>"
+          Then User click on Apply fee Dropdown of Essentials
+          Then User click on Essentials Checkbox of Monday
+          Then User Enter the CutOff time of Essentials"<MondayCutOfftime>"
+          Then User Click on the Time field of Essentials
+          Then User Click on Set button of Essentials
+          Then User click on Essentials Checkbox of Wednesday
+          Then User Enter the Wednesday CutOff time of Essentials"<WedCutOfftime>"
+          Then User Click on the Time field of Wednesday of Essentials
+          Then User Click on Set button of Wednesday of Essentials
+          Then User Click on Radio button of All outlets of Essentials
+          Then User Enter the Email of By email field of Essentials"<Byemail>"
+          Then User Click on the Next SKU
+          Then User click the Add SKU
+          Then User click the First checkbox
+          Then User click on the UOM options dropdown
+          Then User Clear the Block option field
+          Then User Clear the Price option field of Essentials          
+          Then User Enter the Price field of Essentials"<price>"
+          Then User Enter the Original price field"<Originalprice>"
+          Then User Clear the MOQ option field          
+          Then User Enter the MOQ field"<MOQ>"
+          Then User Enter the Shelf life"<Shelflife>"                  
+          Then User click on the Add to listing 
+                    
+   Examples:
+         |username                     |  |password    | |Descrip | |Description |  |percentvalue | |Minimumorder | |CutOfftime | |MondayCutOfftime | |WedCutOfftime | |Byemail          |  | Price | |Originalprice | |MOQ | |Shelflife |
+         |velumanisabari2009@gmail.com |  |#f=6T7uX    | |Hello   | |Testing     |  |5            | |5            | |3          | |2                | |1             | |shwetha@gmail.com|  | 10    | | 15           | |5  | |1         |
+
+
 
 Scenario Outline: Verify the Admin supplier Edit Blackout Dates 
-  
+
           Given User are available in login page
           When User is enter exact username"<username>"  
           And User is enter exact password"<password>"
@@ -739,6 +790,7 @@ Scenario Outline: Verify the Admin supplier Edit Blackout Dates
          |username                     |  |password    | |suppliername     |  
          |velumanisabari2009@gmail.com |  |#f=6T7uX    | |VELU             |            
           
+
           
 
 Scenario Outline: Verify the Admin supplier Edit Directory Setting 

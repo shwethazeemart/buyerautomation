@@ -130,6 +130,7 @@ public class AdminEssentialsPage {
 			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 					.executeScript("return document.readyState").equals("complete"));
 		}
+		
 
 		    public static void clickOnStatus() {
 			AdminEssentialsPage_Status.click();

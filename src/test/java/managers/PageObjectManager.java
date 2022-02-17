@@ -54,6 +54,7 @@ import stepDefinitions.SupplierDirectoryProduct;
 import stepDefinitions.UserspageSteps;
 import pageObjects.AdminEssentialsPage;
 import pageObjects.AdminInvoiceuploadpage;
+import pageObjects.AdminNewEssentialsPage;
 import pageObjects.AdminOrderDetailsPage;
 import pageObjects.AdminOrderListingPage;
 import pageObjects.AdminPromoCodePage;
@@ -197,6 +198,7 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private AdminEssentialsPage AdminEssentials;
     private AdminSupplierEditCompanypage AdminSupplierEditCompany;
     private AdminSupplierEditDefaultpage AdminSupplierEditDefault;
+    private AdminNewEssentialsPage AdminNewEssentials;
     private AdminSupplierEditBlackoutpage AdminSupplierEditBlackout;
     private AdminSupplierEditDirectorypage AdminSupplierEditDirectory;
     private AdminSupplierEditManageSettingpage AdminSupplierEditManageSetting;
@@ -648,7 +650,10 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 
 	}
 
-
+	public AdminNewEssentialsPage getAdminNewEssentialsPage() {
+		return (AdminNewEssentials == null) ? (AdminNewEssentials = new AdminNewEssentialsPage(driver)) : AdminNewEssentials;
+	}
+	
 	public AdminSupplierEditBlackoutpage getAdminSupplierEditBlackoutpage() {
 		return (AdminSupplierEditBlackout == null) ? (AdminSupplierEditBlackout = new AdminSupplierEditBlackoutpage(driver)) : AdminSupplierEditBlackout;
 

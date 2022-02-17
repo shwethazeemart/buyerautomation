@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -29,6 +30,7 @@ public class AdminPromotionNewDealPage {
 		WebElement tosterMsg = driver.findElement(By.xpath("//*[text()='" + msg + "']"));
 
 	}
+	
 
 
 	@FindBy(xpath = "//button[text()=' New deal ']")
@@ -106,8 +108,8 @@ public class AdminPromotionNewDealPage {
 	@FindBy(xpath = "//input[@formcontrolname='notifyEmail']")
 	private static WebElement AdminPromotionListingPage_ByEmail;
 
-	@FindBy(xpath = "//div[contains(@class,'form-group col-md-12')]//button[1]")
-	private static WebElement AdminPromotionListingPage_NextSKU;
+	//@FindBy(xpath = "//div[contains(@class,'form-group col-md-12')]//button[1]")
+	///private static WebElement AdminPromotionListingPage_NextSKU;
 	
 	@FindBy(xpath = "//button[text()=' Add SKU ']")
 	private static WebElement AdminPromotionListingPage_AddSKU;
@@ -133,7 +135,7 @@ public class AdminPromotionNewDealPage {
 	@FindBy(xpath = "(//input[@class='form-control'])[3]")
 	private static WebElement AdminPromotionListingPage_MOQField;
 	
-	@FindBy(xpath = "//input[contains(@class,'form-control ng-pristine')]")
+	@FindBy(xpath = "(//input[@type='text'])[5]")
 	private static WebElement AdminPromotionListingPage_ShelfLife;
 
 	@FindBy(xpath = "//a[text()=' Save changes ']")
@@ -262,18 +264,17 @@ public class AdminPromotionNewDealPage {
 	public static void SelectcalendarByJS() {
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		jse.executeScript("window.scrollBy(0,250)");
-		WebElement DateBox=driver.findElement(By.xpath("//input[@formcontrolname='startDate"
-				+ "']"));
+		WebElement DateBox=driver.findElement(By.xpath("//input[@formcontrolname='startTime']"));
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 
-		js.executeScript("arguments[0].value='1 Feb 2022';", DateBox);
+		js.executeScript("arguments[0].value='15 Feb 2022';", DateBox);
 
 
 	}
 	public static void SelectcalendarByJSendDate() throws InterruptedException {
 		Thread.sleep(5000);
-		WebElement DateBoxtwo=driver.findElement(By.xpath("//input[@formcontrolname='endDate']"));
+		WebElement DateBoxtwo=driver.findElement(By.xpath("//input[@formcontrolname='endTime']"));
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 
@@ -494,9 +495,12 @@ public class AdminPromotionNewDealPage {
 	}
 
 	public static void ClicktheNextSku() {
-		//WebElement element = driver.findElement(By.xpath("//form[@class='ng-dirty ng-touched ng-valid']/child::div[2]/child::div/child::div/button[text()=' Next: SKU']"));
-		//element.click();
-		AdminPromotionListingPage_NextSKU.click();
+		WebElement shw = driver.findElement(By.xpath("//div[@class='form-group col-md-12 pt-2']"));
+		shw.click();
+		WebElement ele = driver.findElement(By.xpath("//form[@class='ng-dirty ng-touched ng-valid']/child::div[2]/descendant::button[text()=' Next: SKU']"));
+		JavascriptExecutor executor = (JavascriptExecutor)driver;
+		executor.executeScript("arguments[0].click();", ele);		
+		//AdminPromotionListingPage_NextSKU.click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -597,7 +601,8 @@ public class AdminPromotionNewDealPage {
 				.executeScript("return document.readyState").equals("complete"));
 	}
 
-	public static void EnterShelfLife(String shelflife) {
+	public static void EnterShelfLife(String shelflife) throws InterruptedException {
+		Thread.sleep(5000);
 		AdminPromotionListingPage_ShelfLife.sendKeys(shelflife);
 		try {
 			Thread.sleep(5000);
@@ -616,7 +621,6 @@ public class AdminPromotionNewDealPage {
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
 	}
-
 	
 	}
 	
