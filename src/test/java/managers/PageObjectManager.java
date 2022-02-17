@@ -52,7 +52,11 @@ import stepDefinitions.Reportspagesteps;
 import stepDefinitions.SucessfullyLoginPage;
 import stepDefinitions.SupplierDirectoryProduct;
 import stepDefinitions.UserspageSteps;
+
+import pageObjects.AdminBuyerNewCompanypage;
+
 import pageObjects.AdminEssentialsPage;
+
 import pageObjects.AdminInvoiceuploadpage;
 import pageObjects.AdminNewEssentialsPage;
 import pageObjects.AdminOrderDetailsPage;
@@ -196,6 +200,9 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private AdminPromoCodePage AdminPromoCode;
     private AdminReportsOutletspage AdminReportsOutlets;
     private AdminReportsUserspage AdminReportsUsers;
+
+    private AdminBuyerNewCompanypage AdminBuyerNewCompany;
+
     private AdminPromoCodeListingPage AdminPromoCodeListing;
     private AdminEssentialsPage AdminEssentials;
     private AdminSupplierEditCompanypage AdminSupplierEditCompany;
@@ -204,6 +211,7 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private AdminSupplierEditBlackoutpage AdminSupplierEditBlackout;
     private AdminSupplierEditDirectorypage AdminSupplierEditDirectory;
     private AdminSupplierEditManageSettingpage AdminSupplierEditManageSetting;
+
 
 
 	public PageObjectManager(WebDriver driver) {
@@ -636,9 +644,18 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 	}
 
 
+
+	public AdminBuyerNewCompanypage getAdminBuyerNewCompanypage() {
+		return (AdminBuyerNewCompany == null) ? (AdminBuyerNewCompany = new AdminBuyerNewCompanypage(driver)) : AdminBuyerNewCompany;
+
+	}
+
+
+
 	public AdminPromoCodeListingPage getAdminPromoCodeListingPage() {
 		return (AdminPromoCodeListing == null) ? (AdminPromoCodeListing = new AdminPromoCodeListingPage(driver)) : AdminPromoCodeListing;
 	}
+
 	
 	public AdminEssentialsPage getAdminEssentialsPage() {
 		return (AdminEssentials == null) ? (AdminEssentials = new AdminEssentialsPage(driver)) : AdminEssentials;
