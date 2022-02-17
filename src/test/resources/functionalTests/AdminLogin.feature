@@ -623,7 +623,10 @@ Scenario Outline: Verify the Admin supplier Edit Company
           And User is enter exact password"<password>"
           When User are Select country in the autocomplete text box
           And User is press the Admin login button 
-          When User Clicks in Admin panel Suppliers in the side navigation menubar          
+          When User Clicks in Admin panel Suppliers in the side navigation menubar 
+          Then User clear on search textbox in supplier filed
+          Then User enter on supplier name in search textbox"<suppliername>"  
+          Then User click on search button in supplier field          
           Then User click on action bootstrap dropdown
           Then User click on edit company details
           Then User clear on also know as field
@@ -634,8 +637,8 @@ Scenario Outline: Verify the Admin supplier Edit Company
           
           
   Examples:
-         |username                     |  |password    | |knowas      |  |companyregistrationnumber  |
-         |velumanisabari2009@gmail.com |  |#f=6T7uX    | |AtoZ Test   |  |LS-9087                |
+         |username                     |  |password    | |knowas      |  |companyregistrationnumber  ||suppliername|
+         |velumanisabari2009@gmail.com |  |#f=6T7uX    | |AtoZ Test   |  |LS-9087                    ||VELU        |
                
                 
 Scenario Outline: Verify the Essentials page in Admin hub    
@@ -691,7 +694,10 @@ Scenario Outline: Verify the Admin supplier Edit Default Setting
           And User is enter exact password"<password>"
           When User are Select country in the autocomplete text box
           And User is press the Admin login button 
-          When User Clicks in Admin panel Suppliers in the side navigation menubar          
+          When User Clicks in Admin panel Suppliers in the side navigation menubar
+          Then User clear on search textbox in supplier filed
+          Then User enter on supplier name in search textbox"<suppliername>"  
+          Then User click on search button in supplier field           
           Then User click on action bootstrap dropdown
           Then User click on edit edit default setting
           Then User clear on minimum order field
@@ -704,12 +710,12 @@ Scenario Outline: Verify the Admin supplier Edit Default Setting
           
           
   Examples:
-         |username                     |  |password    | |salesperson     |  |minimumorder||phonenumber  |
-         |velumanisabari2009@gmail.com |  |#f=6T7uX    | |lingeshsabarisai   |  |102         ||+65345678929 |          
+         |username                     |  |password    | |salesperson     |  |minimumorder||phonenumber     ||suppliername|
+         |velumanisabari2009@gmail.com |  |#f=6T7uX    | |lingeshsabarisai   |  |102         ||+65345678929 ||VELU       |          
           
           
          
-@Smoke
+
 Scenario Outline: Verify the Admin supplier Edit Blackout Dates 
   
           Given User are available in login page
@@ -734,8 +740,72 @@ Scenario Outline: Verify the Admin supplier Edit Blackout Dates
          |velumanisabari2009@gmail.com |  |#f=6T7uX    | |VELU             |            
           
           
+
+Scenario Outline: Verify the Admin supplier Edit Directory Setting 
+  
+          Given User are available in login page
+          When User is enter exact username"<username>"  
+          And User is enter exact password"<password>"
+          When User are Select country in the autocomplete text box
+          And User is press the Admin login button 
+          When User Clicks in Admin panel Suppliers in the side navigation menubar
+          Then User clear on search textbox in supplier filed
+          Then User enter on supplier name in search textbox"<suppliername>"  
+          Then User click on search button in supplier field        
+          Then User click on action bootstrap dropdown 
+          Then User click on edit directory setting
+          Then User click on manage products in directory field
+          Then User enter on search name in search textbox field"<searchname>"
+          Then User click on search icon in directory field
+          Then User clear on search name in directory field
+          Then User click on search icon in directory field
+          Then User select on unlisted option in dropdown field
+          Then User click on search icon in directory field
+          Then User select on all sku option in dropdown field
+          Then User click on search icon in directory field
+          Then User select on listed option in dropdown filed
+          Then User click on search icon in directory field
+          Then User click on actions dropdown in directory field
+          Then User click on unlist in dropdown field
+          Then User click on actions dropdown in directory field
+          Then User click on list in dropdown field
+          Then User click on actions dropdown in directory field
+          Then User click on edit in dropdown field
+          Then User clear on supplier product code
+          Then User enter on value in supplier product code"<productcode>"
+          Then User click on done update cataglogue button
+          
+                   
+          
+          
+  Examples:
+         |username                     |  |password    | |suppliername     | |searchname||productcode| 
+         |velumanisabari2009@gmail.com |  |#f=6T7uX    | |VELU             | | 100pipers||298        |
+         
+         
+@Smoke
+Scenario Outline: Verify the Admin supplier Edit Directory Manage Setting
+  
+          Given User are available in login page
+          When User is enter exact username"<username>"  
+          And User is enter exact password"<password>"
+          When User are Select country in the autocomplete text box
+          And User is press the Admin login button 
+          When User Clicks in Admin panel Suppliers in the side navigation menubar
+          Then User clear on search textbox in supplier filed
+          Then User enter on supplier name in search textbox"<suppliername>"  
+          Then User click on search button in supplier field        
+          Then User click on action bootstrap dropdown 
+          Then User click on edit directory setting
+          Then User click on manage setting in supplier field
+          Then User clear on minimum order filed
+          Then User enter on value in minimum order filed"<minimumorder>" 
+          Then User click on save button in general setting field    
           
           
           
-    
+     Examples:
+         |username                     |  |password    | |suppliername     | |searchname| |minimumorder|
+         |velumanisabari2009@gmail.com |  |#f=6T7uX    | |VELU             | | 100pipers| |5           |   
+            
          
