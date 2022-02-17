@@ -32,6 +32,7 @@ public class Buyeroutletsmanagedetails {
 		
 	}
 	
+	
 	@Then("User clicks on Manage details")
 	public void user_clicks_on_Manage_details() {
 	   Buyeroutletsmanagedetailspage.Clickonmanagedetails();

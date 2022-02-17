@@ -31,6 +31,7 @@ public class Buyeroutletslistingpage {
 	public void isTosterMessageFound(String msg) {
 		WebElement tosterMsg = driver.findElement(By.xpath("//*[text()='" + msg + "']"));
 	}
+	
 
 
 	

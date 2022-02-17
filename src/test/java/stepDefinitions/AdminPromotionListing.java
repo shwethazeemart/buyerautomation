@@ -37,6 +37,7 @@ public class AdminPromotionListing {
 	    private AdminPromotionListingPage adminPromotionListing;
 	     
 		public AdminPromotionListing(TestContext testContext) {
+			
 			super();
 			this.testContext = testContext;
 			this.admininvoiceuploadpage=(AdminInvoiceuploadpage)testContext.getPageObjectManager().getAdminInvoiceuploadpageSteps();
@@ -51,6 +52,7 @@ public class AdminPromotionListing {
 		    this.adminOrderDetails=testContext.getPageObjectManager().getAdminOrderDetailsPage();
 		    this.adminPromotionListing=testContext.getPageObjectManager().getAdminPromotionListingPage();
 		}
+		
 
 @When("User Clicks on Admin Promotions in the side navigation menubar")
 public void user_Clicks_on_Admin_Promotions_in_the_side_navigation_menubar() throws InterruptedException {
@@ -65,7 +67,7 @@ public void user_click_on_Deals_Tab() {
 @Then("User clicks Search box")
 public void user_clicks_Search_box() {
 	AdminPromotionListingPage.ClickSearchBox();
-}
+	}
 
 @Then("User Enter the Search Deal {string}")
 public void user_Enter_the_Search_Deal(String Deal) {

@@ -3,9 +3,11 @@ package runners;
 import org.junit.runner.RunWith;
 
 import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
+import io.cucumber.junit.CucumberOptions; 
  
     
+
+
 
 @RunWith(Cucumber.class)   
 
@@ -13,18 +15,18 @@ import io.cucumber.junit.CucumberOptions;
 
 @CucumberOptions(strict = true, features = "src/test/resources/functionalTests/AdminLogin.feature",
 
+tags="@Smoke",
 
-
-tags ="@Smoke",
-glue = { "stepDefinitions" },monochrome=true,dryRun=false,
+glue = { "stepDefinitions" },monochrome=true,dryRun=false, 
 plugin = {"json:target/cucumber.json"})
  
-public class TestRunner {
+
+
+public class TestRunner { 
 	
-	  
+		  
 }                                                 
-      
-    
+         
                                                 
            
  
