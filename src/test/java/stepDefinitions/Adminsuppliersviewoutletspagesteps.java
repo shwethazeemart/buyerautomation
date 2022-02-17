@@ -49,7 +49,7 @@ public class Adminsuppliersviewoutletspagesteps {
 	@When("User Clicks in Admin panel Suppliers in the side navigation menubar")
 	public void user_Clicks_in_Admin_panel_Suppliers_in_the_side_navigation_menubar() throws InterruptedException {
 	    dashboradpage.clickAdminSuppliers();
-	}
+	    	}
 
 	@Then("User are Clicks Suppliers icon in the suppliers page")
 	public void user_are_Clicks_Suppliers_icon_in_the_suppliers_page() {

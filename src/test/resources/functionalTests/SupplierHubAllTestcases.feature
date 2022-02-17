@@ -377,7 +377,7 @@ Scenario Outline: Verify the Supplier customers location listing page
           
    Examples:
          |username                      |  |password   ||UENNumber||CompanyName ||PostCode||AddressLineOne           ||AddressLineTwo||CompanyEmail         |
-         |supplierautomated2@gmail.com  |  |!123456Zm  ||UEN-2029099  ||saisaramsairammasala||638312  ||19,Murugan temple street ||Singapore     ||velusai2032@gmail.com|
+         |supplierautomated2@gmail.com  |  |!123456Zm  ||UEN-2029979  ||saisivamsairammasala||638312  ||19,Murugan temple street ||Singapore     ||velusai2032@gmail.com|
  
  
  
@@ -695,7 +695,7 @@ Scenario Outline: Verify the Supplier Teams List page
           
  Examples:
          |username                              ||password    ||TeamName        |
-         |supplierautomated2@gmail.com          ||!123456Zm   ||Saisaramvelusaitesting|
+         |supplierautomated2@gmail.com          ||!123456Zm   ||Saisivamvelusaitesting|
          
          
          
@@ -738,6 +738,6 @@ Scenario Outline: Verify the Supplier Users Listing page
          
  Examples:
          |username                              ||password    ||firstname||lastname||jobtitle||email                 ||mobilenumber||whatsappnumber|     |name     |
-         |supplierautomated2@gmail.com          ||!123456Zm   ||shridisaram   ||sairamsaram  ||AtoZtest||velusaisaram202992020@gmail.com||+6512345678||+6512345678  ||velu mani|         
+         |supplierautomated2@gmail.com          ||!123456Zm   ||shridsivam   ||sairamsivam  ||AtoZtest||velusaisivam20992020@gmail.com||+6512345678||+6512345678  ||velu mani|         
          
                                                                                        

@@ -21,7 +21,7 @@ import pageObjects.OrdersPage;
 
 public class AdminPromoCodeListing {
 
-
+ 
 		private TestContext testContext;
 		private OrdersPage orderspage;
 		//private txtBoxContent txtBoxContent;
@@ -38,8 +38,10 @@ public class AdminPromoCodeListing {
 	    private AdminPromotionListingPage adminPromotionListing;
 	    private AdminPromotionNewDealPage adminPromotionNewDeal;
 	    private AdminPromoCodePage adminPromoCode;
+
 	    private AdminPromoCodeListingPage adminPromoCodeListing;
 	    
+
 		public AdminPromoCodeListing(TestContext testContext) {
 			super();
 			this.testContext = testContext;
