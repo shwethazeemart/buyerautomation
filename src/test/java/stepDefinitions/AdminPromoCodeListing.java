@@ -25,7 +25,7 @@ public class AdminPromoCodeListing {
 		private TestContext testContext;
 		private OrdersPage orderspage;
 		//private txtBoxContent txtBoxContent;
-		private Object OrderID;
+		private Object OrderID; 
 		private LogInPage logInPage;
 		private DashboardPage dashboradpage;
 		private AdminInvoiceuploadpage admininvoiceuploadpage;
@@ -39,9 +39,9 @@ public class AdminPromoCodeListing {
 	    private AdminPromotionNewDealPage adminPromotionNewDeal;
 	    private AdminPromoCodePage adminPromoCode;
 
-	    private AdminPromoCodeListingPage adminPromoCodeListing;
-	    
 
+	    private AdminPromoCodeListingPage adminPromoCodeListing;
+  
 		public AdminPromoCodeListing(TestContext testContext) {
 			super();
 			this.testContext = testContext;

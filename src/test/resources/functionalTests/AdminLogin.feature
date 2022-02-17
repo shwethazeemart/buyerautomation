@@ -439,6 +439,14 @@ Scenario Outline: Verify the Promotion Deals page
           Then User click Back button of promo codes
           
       Examples:
+
+       |username                     |  |password    | |Deal     |
+       |velumanisabari2009@gmail.com |  |#f=6T7uX    | |Bug test |
+         
+          
+Scenario Outline: Verify the Reports outlets page
+  
+
        |username                     |  |password    | |Deal        |
        |velumanisabari2009@gmail.com |  |#f=6T7uX    | |Bug testing |
          
@@ -503,6 +511,7 @@ Scenario Outline: Verify the Promotion Deals page
          
  Scenario Outline: Verify the Promo code page
 
+
           Given User are available in login page
           When User is enter exact username"<username>"
           And User is enter exact password"<password>"
@@ -544,7 +553,7 @@ Scenario Outline: Verify the Reports outlets page
           When User is enter exact username"<username>"
           And User is enter exact password"<password>"
           When User are Select country in the autocomplete text box
-          And User is press the Admin login button 
+          And User is press the Admin login button
           When User Clicks on Admin Reports in the side navigation menubar 
           Then User click on By outlet option 
           Then User select date from calendar field
@@ -569,7 +578,12 @@ Scenario Outline: Verify the Reports outlets page
        |username                     |  |password    | 
        |velumanisabari2009@gmail.com |  |#f=6T7uX    |             
 
-         
+          
+          
+
+          
+
+       
 Scenario Outline: Verify the Reports users page
   
           Given User are available in login page
@@ -584,7 +598,7 @@ Scenario Outline: Verify the Reports users page
           Then User click on search icon in users field
           Then User click on export download button users field
           Then User click on filter in users field
-          Then User click on processed user in users field 
+          Then User click on processed user in users field
           Then User click on select all option in users field
           Then User click on apply button in users field
           Then User click on reset button in users field
@@ -594,8 +608,45 @@ Scenario Outline: Verify the Reports users page
        |username                     |  |password    | 
        |velumanisabari2009@gmail.com |  |#f=6T7uX    |                 
 
- Scenario Outline: Verify the Promo codes listing page
+          
+          
 
+Scenario Outline: Verify the Buyers New Company page of Admin panel   
+
+ 
+          Given User are available in login page
+          When User is enter exact username"<username>"
+          And User is enter exact password"<password>"
+          When User are Select country in the autocomplete text box
+          And User is press the Admin login button 
+          When User Clicks on Admin Buyers in the side navigation menubar
+          Then User is Clicks in Add new by dropdown  
+          Then User click on new company in buyer
+          Then User enter registered name in create buyer company"<registeredname>"
+          Then User enter alias name in create buyer company"<aliasname>"
+          Then User enter post code in create buyer company"<postcode>"
+          Then User enter address line one in create buyer company"<addresslineone>"
+          Then User enter address line two in create buyer comapny"<addresslinetwo>"
+          Then User enter company registration number in create buyer company"<companyregistrationnumber>"
+          Then User enter tax registration number in create buyer company"<taxregistrationnumber>"
+          Then User click on acra certificate browse button
+          Then User click on logo browse button
+          Then User enter company email in create buyer company"<companyemail>"
+          Then User clear company phone number in create buyer company
+          Then User enter company phone number in create buyer company"<companyphonenumber>"
+          Then User click on finaxarpay checkbox in create buyer company
+          Then User click on save company in create buyer company
+          
+    Examples:
+       |username                     |  |password    | |registeredname||aliasname||postcode||addresslineone               ||addresslinetwo||companyregistrationnumber||taxregistrationnumber||companyemail         ||companyphonenumber|
+       |velumanisabari2009@gmail.com |  |#f=6T7uX    | |VELU MASALA9 ||AtoZ Test||600041  ||261,Madheswaran temple street||singapore     | |AZ789                   | |tax-897             ||velumani@zeemart.asia||+6512345678       | 
+          
+          
+          
+          
+                  
+          
+Scenario Outline: Verify the Promo codes listing page
   
           Given User are available in login page
           When User is enter exact username"<username>"
