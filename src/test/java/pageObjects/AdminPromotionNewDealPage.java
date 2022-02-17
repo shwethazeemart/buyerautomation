@@ -32,7 +32,6 @@ public class AdminPromotionNewDealPage {
 	}
 	
 
-
 	@FindBy(xpath = "//button[text()=' New deal ']")
 	private static WebElement AdminPromotionListingPage_NewDeal;
 
@@ -107,6 +106,10 @@ public class AdminPromotionNewDealPage {
 
 	@FindBy(xpath = "//input[@formcontrolname='notifyEmail']")
 	private static WebElement AdminPromotionListingPage_ByEmail;
+
+
+	@FindBy(xpath = "//form[@class='ng-dirty ng-touched ng-valid']/child::div[2]/descendant::button[text()=' Next: SKU']")
+	private static WebElement AdminPromotionListingPage_NextSKU;
 
 	//@FindBy(xpath = "//div[contains(@class,'form-group col-md-12')]//button[1]")
 	///private static WebElement AdminPromotionListingPage_NextSKU;
@@ -269,7 +272,6 @@ public class AdminPromotionNewDealPage {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 
 		js.executeScript("arguments[0].value='15 Feb 2022';", DateBox);
-
 
 	}
 	public static void SelectcalendarByJSendDate() throws InterruptedException {

@@ -38,6 +38,7 @@ public class AdminPromoCode {
 	    private AdminPromoCodePage adminPromoCode;
 	     
 		public AdminPromoCode(TestContext testContext) {
+						
 			super();
 			this.testContext = testContext;
 			this.admininvoiceuploadpage=(AdminInvoiceuploadpage)testContext.getPageObjectManager().getAdminInvoiceuploadpageSteps();
@@ -123,6 +124,8 @@ public class AdminPromoCode {
 		public void user_Click_the_Save() {
 			AdminPromoCodePage.ClicktheSave();
 		}
+		
+		
 		
 		
 

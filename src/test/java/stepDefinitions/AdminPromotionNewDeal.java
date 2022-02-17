@@ -110,6 +110,7 @@ public class AdminPromotionNewDeal {
 	public void user_select_the_Calendar_From_date_of_Validity_field() {
 		AdminPromotionNewDealPage.SelectcalendarByJS(); 
 	}
+	
 
 	@Then("User select the Calendar Until date of Validity field")
 	public void user_select_the_Calendar_Until_date_of_Validity_field() throws InterruptedException {
