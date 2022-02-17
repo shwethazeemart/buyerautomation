@@ -846,7 +846,7 @@ Scenario Outline: Verify the Admin supplier Edit Directory Setting
          |velumanisabari2009@gmail.com |  |#f=6T7uX    | |VELU             | | 100pipers||298        |
          
          
-@Smoke
+
 Scenario Outline: Verify the Admin supplier Edit Directory Manage Setting
   
           Given User are available in login page
@@ -870,5 +870,39 @@ Scenario Outline: Verify the Admin supplier Edit Directory Manage Setting
      Examples:
          |username                     |  |password    | |suppliername     | |searchname| |minimumorder|
          |velumanisabari2009@gmail.com |  |#f=6T7uX    | |VELU             | | 100pipers| |5           |   
+         
+ @Smoke        
+ Scenario Outline: Verify the Buyers Outlets listing page of Admin
+ 
+         Given User are available in login page
+          When User is enter exact username"<username>"
+          And User is enter exact password"<password>"
+          When User are Select country in the autocomplete text box
+          And User is press the Admin login button 
+          When User Clicks on Admin Buyers in the side navigation menubar 
+          Then User click on checkbox 
+          Then User click on Disable
+          Then User click on Disable button
+          Then User click on checkbox
+          Then User click on Enable icon
+          Then User click on Enable button
+          Then User click on checkbox
+          Then User click on clear icon
+          Then User click on Actions dropdown 
+          Then User click on Edit details 
+          Then User click on back button of Buyers icon
+          Then User click on Actions dropdown 
+          Then User click on Edit settings 
+          Then User click on back button of Buyers icon
+          Then User click on Actions dropdown 
+          Then User click on View suppliers 
+          Then User click on back button of Buyers icon
+          Then User enter the outlet name in text box"<outletname>"
+          
+         
+    Examples:  
+      | username                         | | password   |  |outletname     |
+      | velumanisabari2009@gmail.com     | |#f=6T7uX    |  |velu masala2020|
+      
             
          

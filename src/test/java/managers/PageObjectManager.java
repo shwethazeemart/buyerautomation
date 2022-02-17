@@ -52,6 +52,7 @@ import stepDefinitions.Reportspagesteps;
 import stepDefinitions.SucessfullyLoginPage;
 import stepDefinitions.SupplierDirectoryProduct;
 import stepDefinitions.UserspageSteps;
+import pageObjects.AdminBuyersListingPage;
 import pageObjects.AdminEssentialsPage;
 import pageObjects.AdminInvoiceuploadpage;
 import pageObjects.AdminNewEssentialsPage;
@@ -204,6 +205,7 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private AdminSupplierEditBlackoutpage AdminSupplierEditBlackout;
     private AdminSupplierEditDirectorypage AdminSupplierEditDirectory;
     private AdminSupplierEditManageSettingpage AdminSupplierEditManageSetting;
+    private AdminBuyersListingPage AdminBuyersListing;
 
 
 	public PageObjectManager(WebDriver driver) {
@@ -673,6 +675,12 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 
 	public AdminSupplierEditManageSettingpage getAdminSupplierEditManageSettingpage() {
 		return (AdminSupplierEditManageSetting == null) ? (AdminSupplierEditManageSetting = new AdminSupplierEditManageSettingpage(driver)) : AdminSupplierEditManageSetting;
+
+	}
+
+
+	public AdminBuyersListingPage getAdminBuyersListingPage() {
+		return (AdminBuyersListing == null) ? (AdminBuyersListing = new AdminBuyersListingPage(driver)) : AdminBuyersListing;
 
 	}
 	
