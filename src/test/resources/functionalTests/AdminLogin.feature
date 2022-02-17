@@ -444,13 +444,7 @@ Scenario Outline: Verify the Promotion Deals page
        |velumanisabari2009@gmail.com |  |#f=6T7uX    | |Bug test |
          
           
-Scenario Outline: Verify the Reports outlets page
-  
-
-       |username                     |  |password    | |Deal        |
-       |velumanisabari2009@gmail.com |  |#f=6T7uX    | |Bug testing |
-         
-       
+      
  Scenario Outline: Verify the Promotion New deal page
   
           Given User are available in login page
@@ -539,13 +533,6 @@ Scenario Outline: Verify the Reports outlets page
           
           
           
-Scenario Outline: Verify the Reports outlets page
-  
-        Examples:
-         |username                     |  |password    | |promocode | |promoname | |promodescription |  |discountpercentage | |minorder  | |overallquota | 
-         |velumanisabari2009@gmail.com |  |#f=6T7uX    | |COD101    | |kinley    | |Hii Kinley       |  |5                  | |15        | |150          |
-
-          
           
 Scenario Outline: Verify the Reports outlets page
 
@@ -579,11 +566,6 @@ Scenario Outline: Verify the Reports outlets page
        |velumanisabari2009@gmail.com |  |#f=6T7uX    |             
 
           
-          
-
-          
-
-       
 Scenario Outline: Verify the Reports users page
   
           Given User are available in login page
@@ -922,7 +904,7 @@ Scenario Outline: Verify the Admin supplier Edit Directory Manage Setting
          |username                     |  |password    | |suppliername     | |searchname| |minimumorder|
          |velumanisabari2009@gmail.com |  |#f=6T7uX    | |VELU             | | 100pipers| |5           |   
          
- @Smoke        
+       
  Scenario Outline: Verify the Buyers Outlets listing page of Admin
  
          Given User are available in login page
@@ -954,6 +936,28 @@ Scenario Outline: Verify the Admin supplier Edit Directory Manage Setting
     Examples:  
       | username                         | | password   |  |outletname     |
       | velumanisabari2009@gmail.com     | |#f=6T7uX    |  |velu masala2020|
+      
+@Smoke        
+ Scenario Outline: Verify the Buyers Outlets listing page of Admin
+ 
+         Given User are available in login page
+          When User is enter exact username"<username>"
+          And User is enter exact password"<password>"
+          When User are Select country in the autocomplete text box
+          And User is press the Admin login button 
+          When User Clicks on Admin Buyers in the side navigation menubar 
+          Then User click on Actions dropdown 
+          Then User clicks on Edit details
+          And User clear on Outlet email
+          Then User enter the new email id"<Email>"
+          Then User click on the Tags
+          Then User Enter the Tags"<tags>"         
+          Then User click on save button
+           
+    Examples: 
+      | username                         | | password   ||Email                 ||tags  |
+      |velumanisabari2009@gmail.com      | |#f=6T7uX    ||shwetha11@gmail.com   ||Party |
+      
       
             
          

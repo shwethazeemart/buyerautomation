@@ -48,7 +48,7 @@ public class Buyeroutletsmanagedetailspage {
 	@FindBy(xpath = "(//img[@src='/assets/zmcore/img/close-blue.svg'])[1]")
 	private static WebElement Buyeroutletsmanagedetailspage_Managesubscriptioncloseicon;
 	
-	@FindBy(xpath = "(//button[@type='submit'])[1]") 
+	@FindBy(xpath = "//button[text()=' Save ']") 
 	private static WebElement Buyeroutletsmanagedetailspage_Savebutton;
 	
 	@FindBy(xpath = "(//h1[text()='Zeemart subscription']/following-sibling::div)[1]") 
