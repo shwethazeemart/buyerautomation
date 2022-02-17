@@ -783,7 +783,7 @@ Scenario Outline: Verify the Admin supplier Edit Directory Setting
          |velumanisabari2009@gmail.com |  |#f=6T7uX    | |VELU             | | 100pipers||298        |
          
          
-@Smoke
+
 Scenario Outline: Verify the Admin supplier Edit Directory Manage Setting
   
           Given User are available in login page
@@ -807,5 +807,36 @@ Scenario Outline: Verify the Admin supplier Edit Directory Manage Setting
      Examples:
          |username                     |  |password    | |suppliername     | |searchname| |minimumorder|
          |velumanisabari2009@gmail.com |  |#f=6T7uX    | |VELU             | | 100pipers| |5           |   
+         
+         
+@Smoke
+Scenario Outline: Verify the Admin Supplier Screen Supplier Teams 
+  
+          Given User are available in login page
+          When User is enter exact username"<username>"  
+          And User is enter exact password"<password>"
+          When User are Select country in the autocomplete text box
+          And User is press the Admin login button 
+          When User Clicks in Admin panel Suppliers in the side navigation menubar
+          Then User clear on search textbox in supplier filed
+          Then User enter on supplier name in search textbox"<suppliername>"  
+          Then User click on search button in supplier field        
+          Then User click on action bootstrap dropdown 
+          Then User click on supplier teams in action dropdown field
+          Then User click on add new button in supplier teams
+          Then User enter name on team name field"<teamname>"
+          Then User click on next link to outlet in add team field
+          Then User click on add new in link outlet field
+          Then User click on select outlet in link outlet field
+          Then User click on second outlet in select outlet field
+          Then User click on select outlet icon
+          Then User click on save button in select outlet field
+          Then User click on action dropdown in edit field
+     
+                  
+     Examples:
+         |username                     |  |password    | |suppliername    | |teamname     |
+         |velumanisabari2009@gmail.com |  |#f=6T7uX    | |VELU            | |palanimurugansai|   
+                    
             
          
