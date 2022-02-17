@@ -71,6 +71,7 @@ public class AdminPromoCodePage {
 			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 					.executeScript("return document.readyState").equals("complete"));
 		}
+				
 
 		public static void EnterPromoCode(String promocode) {
 			AdminPromoCodePage_EnterPromoCode.sendKeys(promocode);
@@ -206,6 +207,14 @@ public class AdminPromoCodePage {
 					.executeScript("return document.readyState").equals("complete"));
 		}
 
+		
+		
+		
+		
+		
+		
+
+		
 		
 		
 		

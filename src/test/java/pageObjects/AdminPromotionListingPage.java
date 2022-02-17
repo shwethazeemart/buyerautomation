@@ -30,7 +30,7 @@ public class AdminPromotionListingPage {
 			WebElement tosterMsg = driver.findElement(By.xpath("//*[text()='" + msg + "']"));
 
 		}
-		
+						
 		
 		@FindBy(xpath = "//a[text()=' Deals ']")
 		private static WebElement AdminPromotionListingPage_Deals;
@@ -141,6 +141,7 @@ public class AdminPromotionListingPage {
 			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 					.executeScript("return document.readyState").equals("complete"));
 		}
+		
 
 		public static void ClickOrganiseDeal() {
 			AdminPromotionListingPage_OrganiseDeal.click();
