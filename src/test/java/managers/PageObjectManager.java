@@ -52,17 +52,28 @@ import stepDefinitions.Reportspagesteps;
 import stepDefinitions.SucessfullyLoginPage;
 import stepDefinitions.SupplierDirectoryProduct;
 import stepDefinitions.UserspageSteps;
+import pageObjects.AdminBuyersListingPage;
+import pageObjects.AdminBuyerNewCompanypage;
+import pageObjects.AdminBuyersEditDetailsPage;
 import pageObjects.AdminEssentialsPage;
+
 import pageObjects.AdminInvoiceuploadpage;
+import pageObjects.AdminNewEssentialsPage;
 import pageObjects.AdminOrderDetailsPage;
 import pageObjects.AdminOrderListingPage;
+import pageObjects.AdminPromoCodeListingPage;
 import pageObjects.AdminPromoCodePage;
 import pageObjects.AdminPromotionListingPage;
 import pageObjects.AdminPromotionNewDealPage;
 import pageObjects.AdminReportsOutletspage;
 import pageObjects.AdminReportsUserspage;
+import pageObjects.AdminSupplierBuyerCompaniespage;
+import pageObjects.AdminSupplierEditBlackoutpage;
 import pageObjects.AdminSupplierEditCompanypage;
 import pageObjects.AdminSupplierEditDefaultpage;
+import pageObjects.AdminSupplierEditDirectorypage;
+import pageObjects.AdminSupplierEditManageSettingpage;
+import pageObjects.AdminSupplierTeamspage;
 import pageObjects.Adminbuyerlinktothecompanypage;
 import pageObjects.Adminbuyeroutletsubscriptionpage;
 import pageObjects.Adminbuyersoutletpage;
@@ -191,9 +202,21 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private AdminPromoCodePage AdminPromoCode;
     private AdminReportsOutletspage AdminReportsOutlets;
     private AdminReportsUserspage AdminReportsUsers;
+    private AdminBuyerNewCompanypage AdminBuyerNewCompany;
+    private AdminPromoCodeListingPage AdminPromoCodeListing;
     private AdminEssentialsPage AdminEssentials;
     private AdminSupplierEditCompanypage AdminSupplierEditCompany;
     private AdminSupplierEditDefaultpage AdminSupplierEditDefault;
+    private AdminNewEssentialsPage AdminNewEssentials;
+    private AdminSupplierEditBlackoutpage AdminSupplierEditBlackout;
+    private AdminSupplierEditDirectorypage AdminSupplierEditDirectory;
+    private AdminSupplierEditManageSettingpage AdminSupplierEditManageSetting;
+    private AdminSupplierTeamspage AdminSupplierTeams;
+    private AdminSupplierBuyerCompaniespage AdminSupplierBuyerCompanies;
+    private AdminBuyersListingPage AdminBuyersListing;
+    private AdminBuyersEditDetailsPage AdminBuyersEditDetails;
+
+
 
 	public PageObjectManager(WebDriver driver) {
 		this.driver = driver;
@@ -626,6 +649,18 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 
 
 
+	public AdminBuyerNewCompanypage getAdminBuyerNewCompanypage() {
+		return (AdminBuyerNewCompany == null) ? (AdminBuyerNewCompany = new AdminBuyerNewCompanypage(driver)) : AdminBuyerNewCompany;
+
+	}
+
+
+
+	public AdminPromoCodeListingPage getAdminPromoCodeListingPage() {
+		return (AdminPromoCodeListing == null) ? (AdminPromoCodeListing = new AdminPromoCodeListingPage(driver)) : AdminPromoCodeListing;
+	}
+
+	
 	public AdminEssentialsPage getAdminEssentialsPage() {
 		return (AdminEssentials == null) ? (AdminEssentials = new AdminEssentialsPage(driver)) : AdminEssentials;
 	}
@@ -640,9 +675,50 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 		return (AdminSupplierEditDefault == null) ? (AdminSupplierEditDefault = new AdminSupplierEditDefaultpage(driver)) : AdminSupplierEditDefault;
 
 	}
+
+	public AdminNewEssentialsPage getAdminNewEssentialsPage() {
+		return (AdminNewEssentials == null) ? (AdminNewEssentials = new AdminNewEssentialsPage(driver)) : AdminNewEssentials;
+	}
 	
+	public AdminSupplierEditBlackoutpage getAdminSupplierEditBlackoutpage() {
+		return (AdminSupplierEditBlackout == null) ? (AdminSupplierEditBlackout = new AdminSupplierEditBlackoutpage(driver)) : AdminSupplierEditBlackout;
+
+	}
+
+
+	public AdminSupplierEditDirectorypage getAdminSupplierEditDirectorypage() {
+		return (AdminSupplierEditDirectory == null) ? (AdminSupplierEditDirectory = new AdminSupplierEditDirectorypage(driver)) : AdminSupplierEditDirectory;
+
+	}
+
+
+	public AdminSupplierEditManageSettingpage getAdminSupplierEditManageSettingpage() {
+		return (AdminSupplierEditManageSetting == null) ? (AdminSupplierEditManageSetting = new AdminSupplierEditManageSettingpage(driver)) : AdminSupplierEditManageSetting;
+
+	}
+
+	public AdminSupplierTeamspage getAdminSupplierTeamspage() {
+		return (AdminSupplierTeams == null) ? (AdminSupplierTeams = new AdminSupplierTeamspage(driver)) : AdminSupplierTeams;
+
+	}
+
+
+
+	public AdminSupplierBuyerCompaniespage getAdminSupplierBuyerCompaniespage() {
+		return (AdminSupplierBuyerCompanies == null) ? (AdminSupplierBuyerCompanies = new AdminSupplierBuyerCompaniespage(driver)) : AdminSupplierBuyerCompanies;
+
+	}
 	
-	
+	public AdminBuyersListingPage getAdminBuyersListingPage() {
+		return (AdminBuyersListing == null) ? (AdminBuyersListing = new AdminBuyersListingPage(driver)) : AdminBuyersListing;
+
+	}
+
+
+	public AdminBuyersEditDetailsPage getAdminBuyersEditDetailsPage() {
+		return (AdminBuyersEditDetails == null) ? (AdminBuyersEditDetails = new AdminBuyersEditDetailsPage(driver)) : AdminBuyersEditDetails;
+	}
+
 	
 	
 	}

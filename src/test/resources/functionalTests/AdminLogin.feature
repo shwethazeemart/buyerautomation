@@ -1,6 +1,6 @@
 Feature: verify Admin panel Entier test all the page
 
-
+ 
 Scenario Outline: Verify the Suppliers page in view outlets Admin hub    
   
           Given User are available in login page
@@ -390,7 +390,7 @@ Scenario Outline: Verify the Order listing page
           
           
           
-          Examples:
+       Examples:
          |username                     |  |password    | |orderid       |
          |velumanisabari2009@gmail.com |  |#f=6T7uX    | |202201130007  |
          
@@ -416,7 +416,6 @@ Scenario Outline: Verify the Order Details page
        |velumanisabari2009@gmail.com |  |#f=6T7uX    | |Available in order  |
          
 
-
 Scenario Outline: Verify the Promotion Deals page
   
           Given User are available in login page
@@ -440,10 +439,12 @@ Scenario Outline: Verify the Promotion Deals page
           Then User click Back button of promo codes
           
       Examples:
-       |username                     |  |password    | |Deal        |
-       |velumanisabari2009@gmail.com |  |#f=6T7uX    | |Bug testing |
+
+       |username                     |  |password    | |Deal     |
+       |velumanisabari2009@gmail.com |  |#f=6T7uX    | |Bug test |
          
-         
+          
+      
  Scenario Outline: Verify the Promotion New deal page
   
           Given User are available in login page
@@ -504,6 +505,7 @@ Scenario Outline: Verify the Promotion Deals page
          
  Scenario Outline: Verify the Promo code page
 
+
           Given User are available in login page
           When User is enter exact username"<username>"
           And User is enter exact password"<password>"
@@ -523,11 +525,13 @@ Scenario Outline: Verify the Promotion Deals page
           Then User Enter the Min order value"<minorder>"
           Then User Enter Usage restrictions overall quota"<overallquota>"
           Then User Click the Save
-         
-        Examples:
+
+     
+      Examples:
          |username                     |  |password    | |promocode | |promoname | |promodescription |  |discountpercentage | |minorder  | |overallquota | 
          |velumanisabari2009@gmail.com |  |#f=6T7uX    | |COD101    | |kinley    | |Hii Kinley       |  |5                  | |15        | |150          |
-
+          
+          
           
           
 Scenario Outline: Verify the Reports outlets page
@@ -536,7 +540,11 @@ Scenario Outline: Verify the Reports outlets page
           When User is enter exact username"<username>"
           And User is enter exact password"<password>"
           When User are Select country in the autocomplete text box
+<<<<<<< HEAD
           And User is press the Admin login button 
+=======
+          And User is press the Admin login button
+>>>>>>> 1e3c92de72236fd079b0976d247dcfbe1243e36f
           When User Clicks on Admin Reports in the side navigation menubar 
           Then User click on By outlet option 
           Then User select date from calendar field
@@ -555,12 +563,13 @@ Scenario Outline: Verify the Reports outlets page
           Then User select user in dropdown field
           Then User click on reset button in filter field
           
+
           
      Examples:
        |username                     |  |password    | 
        |velumanisabari2009@gmail.com |  |#f=6T7uX    |             
 
-         
+          
 Scenario Outline: Verify the Reports users page
   
           Given User are available in login page
@@ -575,7 +584,7 @@ Scenario Outline: Verify the Reports users page
           Then User click on search icon in users field
           Then User click on export download button users field
           Then User click on filter in users field
-          Then User click on processed user in users field 
+          Then User click on processed user in users field
           Then User click on select all option in users field
           Then User click on apply button in users field
           Then User click on reset button in users field
@@ -585,28 +594,83 @@ Scenario Outline: Verify the Reports users page
        |username                     |  |password    | 
        |velumanisabari2009@gmail.com |  |#f=6T7uX    |                 
 
- Scenario Outline: Verify the Promo codes listing page
-  
+          
+          
+<<<<<<< HEAD
+ 
+Scenario Outline: Verify the Buyers New Company page of Admin panel   
+=======
+
+Scenario Outline: Verify the Buyers New Company page of Admin panel   
+
+ 
+>>>>>>> 1e3c92de72236fd079b0976d247dcfbe1243e36f
           Given User are available in login page
           When User is enter exact username"<username>"
           And User is enter exact password"<password>"
           When User are Select country in the autocomplete text box
           And User is press the Admin login button 
+          When User Clicks on Admin Buyers in the side navigation menubar
+          Then User is Clicks in Add new by dropdown  
+          Then User click on new company in buyer
+          Then User enter registered name in create buyer company"<registeredname>"
+          Then User enter alias name in create buyer company"<aliasname>"
+          Then User enter post code in create buyer company"<postcode>"
+          Then User enter address line one in create buyer company"<addresslineone>"
+          Then User enter address line two in create buyer comapny"<addresslinetwo>"
+          Then User enter company registration number in create buyer company"<companyregistrationnumber>"
+          Then User enter tax registration number in create buyer company"<taxregistrationnumber>"
+          Then User click on acra certificate browse button
+          Then User click on logo browse button
+          Then User enter company email in create buyer company"<companyemail>"
+          Then User clear company phone number in create buyer company
+          Then User enter company phone number in create buyer company"<companyphonenumber>"
+          Then User click on finaxarpay checkbox in create buyer company
+          Then User click on save company in create buyer company
+          
+    Examples:
+       |username                     |  |password    | |registeredname||aliasname||postcode||addresslineone               ||addresslinetwo||companyregistrationnumber||taxregistrationnumber||companyemail         ||companyphonenumber|
+       |velumanisabari2009@gmail.com |  |#f=6T7uX    | |VELU MASALA9 ||AtoZ Test||600041  ||261,Madheswaran temple street||singapore     | |AZ789                   | |tax-897             ||velumani@zeemart.asia||+6512345678       | 
+          
+    
+    
+          
+<<<<<<< HEAD
+Scenario Outline: Verify the Promo codes listing page
+
+=======
+          
+          
+                  
+          
+Scenario Outline: Verify the Promo codes listing page
+  
+>>>>>>> 1e3c92de72236fd079b0976d247dcfbe1243e36f
+          Given User are available in login page
+          When User is enter exact username"<username>"
+          And User is enter exact password"<password>"
+          When User are Select country in the autocomplete text box
+<<<<<<< HEAD
+          And User is press the Admin login button         
+=======
+          And User is press the Admin login button 
+>>>>>>> 1e3c92de72236fd079b0976d247dcfbe1243e36f
           When User Clicks on Admin Promotions in the side navigation menubar    
           Then User Click on the Promo codes tab
-          Then User clicks Search box
+          Then User clicks SEARCH CODE
           Then User Enter the SEARCH CODE"<code>" 
-          Then User Select the dropdown status
+          Then User Select the dropdown status of promo codes
           Then User select the Calendar Validity period 
-          Then User Clicks Search icon
+          Then User Clicks Search icon of promocodes
           Then User Click the Actions dropdown of Promocodes
           Then User Click the View settings
+          Then User Clear the Promo code
           Then User Enter the Promo code in View settings"<promocode>"
           Then User Click on the Save button
-          Then User Click the Actions dropdown of Promocodes
+          Then User Click on action icon of 123promocode
           Then User Click the View details usage
           Then User Click return back to Promo codes
-          Then User Click the Actions dropdown of Promocodes
+          Then User Click on Action icon of ABCDpromocode
           Then User Click the End promo
           Then User Click the Close icon
           
@@ -623,7 +687,10 @@ Scenario Outline: Verify the Admin supplier Edit Company
           And User is enter exact password"<password>"
           When User are Select country in the autocomplete text box
           And User is press the Admin login button 
-          When User Clicks in Admin panel Suppliers in the side navigation menubar          
+          When User Clicks in Admin panel Suppliers in the side navigation menubar 
+          Then User clear on search textbox in supplier filed
+          Then User enter on supplier name in search textbox"<suppliername>"  
+          Then User click on search button in supplier field          
           Then User click on action bootstrap dropdown
           Then User click on edit company details
           Then User clear on also know as field
@@ -634,8 +701,8 @@ Scenario Outline: Verify the Admin supplier Edit Company
           
           
   Examples:
-         |username                     |  |password    | |knowas      |  |companyregistrationnumber  |
-         |velumanisabari2009@gmail.com |  |#f=6T7uX    | |AtoZ Test   |  |LS-9087                |
+         |username                     |  |password    | |knowas      |  |companyregistrationnumber  ||suppliername|
+         |velumanisabari2009@gmail.com |  |#f=6T7uX    | |AtoZ Test   |  |LS-9087                    ||VELU        |
                
                 
 Scenario Outline: Verify the Essentials page in Admin hub    
@@ -683,7 +750,6 @@ Scenario Outline: Verify the Essentials page in Admin hub
          |velumanisabari2009@gmail.com |  |#f=6T7uX    ||Supplie testing |  |Hello   | |Testing     |  |5            | |5            | |3          | |2                | |1             | |shwetha@gmail.com|
 
 
-@Smoke                  
 Scenario Outline: Verify the Admin supplier Edit Default Setting 
   
           Given User are available in login page
@@ -691,7 +757,10 @@ Scenario Outline: Verify the Admin supplier Edit Default Setting
           And User is enter exact password"<password>"
           When User are Select country in the autocomplete text box
           And User is press the Admin login button 
-          When User Clicks in Admin panel Suppliers in the side navigation menubar          
+          When User Clicks in Admin panel Suppliers in the side navigation menubar
+          Then User clear on search textbox in supplier filed
+          Then User enter on supplier name in search textbox"<suppliername>"  
+          Then User click on search button in supplier field           
           Then User click on action bootstrap dropdown
           Then User click on edit edit default setting
           Then User clear on minimum order field
@@ -704,15 +773,268 @@ Scenario Outline: Verify the Admin supplier Edit Default Setting
           
           
   Examples:
-         |username                     |  |password    | |salesperson     |  |minimumorder||phonenumber  |
+
+         |username                     |  |password    | |salesperson        |  |minimumorder||phonenumber  |
          |velumanisabari2009@gmail.com |  |#f=6T7uX    | |lingeshsabarisai   |  |102         ||+65345678929 |          
           
+                  
+Scenario Outline: Verify the New Essentials listing page in Admin hub    
+        
+          Given User are available in login page
+          When User is enter exact username"<username>"  
+          And User is enter exact password"<password>"
+          When User are Select country in the autocomplete text box
+          And User is press the Admin login button 
+          When User Clicks in Admin panel Suppliers in the side navigation menubar     
+          Then User click the Essentials Tab
+          Then User click on the New Essentials listing 
+          Then User Select Supplier in the dropdown list
+          Then User Enter the short Descripton"<Descrip>"
+          Then User Enter in the Descripton"<Description>"   
+          Then User Click the Landing banner of Drag and dropdown field
+          Then User Save the Landing banner of Essentials
+          Then User Enter the Rebate percent"<percentvalue>"
+          Then User Click on the Drag and dropdown field of Essentials
+          Then User Save the Carousel banner of Essentials
+          Then User select the Calendar From date of Validity field of Essentials
+          Then User select the Calendar Until date of Validity field of Essentials
+          Then User Enter the value of Minimum order field of Essentials"<Minimumorder>"
+          Then User Click on radio button of Apply fee of Essentials
+          Then User Enter the value of CutOff time of Essentials"<CutOfftime>"
+          Then User click on Apply fee Dropdown of Essentials
+          Then User click on Essentials Checkbox of Monday
+          Then User Enter the CutOff time of Essentials"<MondayCutOfftime>"
+          Then User Click on the Time field of Essentials
+          Then User Click on Set button of Essentials
+          Then User click on Essentials Checkbox of Wednesday
+          Then User Enter the Wednesday CutOff time of Essentials"<WedCutOfftime>"
+          Then User Click on the Time field of Wednesday of Essentials
+          Then User Click on Set button of Wednesday of Essentials
+          Then User Click on Radio button of All outlets of Essentials
+          Then User Enter the Email of By email field of Essentials"<Byemail>"
+          Then User Click on the Next SKU
+          Then User click the Add SKU
+          Then User click the First checkbox
+          Then User click on the UOM options dropdown
+          Then User Clear the Block option field
+          Then User Clear the Price option field of Essentials          
+          Then User Enter the Price field of Essentials"<price>"
+          Then User Enter the Original price field"<Originalprice>"
+          Then User Clear the MOQ option field          
+          Then User Enter the MOQ field"<MOQ>"
+          Then User Enter the Shelf life"<Shelflife>"                  
+          Then User click on the Add to listing 
+                    
+   Examples:
+         |username                     |  |password    | |Descrip | |Description |  |percentvalue | |Minimumorder | |CutOfftime | |MondayCutOfftime | |WedCutOfftime | |Byemail          |  | Price | |Originalprice | |MOQ | |Shelflife |
+         |velumanisabari2009@gmail.com |  |#f=6T7uX    | |Hello   | |Testing     |  |5            | |5            | |3          | |2                | |1             | |shwetha@gmail.com|  | 10    | | 15           | |5  | |1         |
+
+
+
+Scenario Outline: Verify the Admin supplier Edit Blackout Dates 
+
+          Given User are available in login page
+          When User is enter exact username"<username>"  
+          And User is enter exact password"<password>"
+          When User are Select country in the autocomplete text box
+          And User is press the Admin login button 
+          When User Clicks in Admin panel Suppliers in the side navigation menubar
+          Then User clear on search textbox in supplier filed
+          Then User enter on supplier name in search textbox"<suppliername>"  
+          Then User click on search button in supplier field        
+          Then User click on action bootstrap dropdown 
+          Then User click on edit blockout dates for delivery
+          Then User select date form calendar in blackout field
+          Then User click on add button in blackout field
+          Then User click on close icon in blackout field
           
           
           
+   Examples:
+         |username                     |  |password    | |suppliername     |  
+         |velumanisabari2009@gmail.com |  |#f=6T7uX    | |VELU             |            
+          
+
+          
+
+Scenario Outline: Verify the Admin supplier Edit Directory Setting 
+  
+          Given User are available in login page
+          When User is enter exact username"<username>"  
+          And User is enter exact password"<password>"
+          When User are Select country in the autocomplete text box
+          And User is press the Admin login button 
+          When User Clicks in Admin panel Suppliers in the side navigation menubar
+          Then User clear on search textbox in supplier filed
+          Then User enter on supplier name in search textbox"<suppliername>"  
+          Then User click on search button in supplier field        
+          Then User click on action bootstrap dropdown 
+          Then User click on edit directory setting
+          Then User click on manage products in directory field
+          Then User enter on search name in search textbox field"<searchname>"
+          Then User click on search icon in directory field
+          Then User clear on search name in directory field
+          Then User click on search icon in directory field
+          Then User select on unlisted option in dropdown field
+          Then User click on search icon in directory field
+          Then User select on all sku option in dropdown field
+          Then User click on search icon in directory field
+          Then User select on listed option in dropdown filed
+          Then User click on search icon in directory field
+          Then User click on actions dropdown in directory field
+          Then User click on unlist in dropdown field
+          Then User click on actions dropdown in directory field
+          Then User click on list in dropdown field
+          Then User click on actions dropdown in directory field
+          Then User click on edit in dropdown field
+          Then User clear on supplier product code
+          Then User enter on value in supplier product code"<productcode>"
+          Then User click on done update cataglogue button
+          
+                   
+          
+          
+  Examples:
+         |username                     |  |password    | |suppliername     | |searchname||productcode| 
+         |velumanisabari2009@gmail.com |  |#f=6T7uX    | |VELU             | | 100pipers||298        |
+         
+         
+
+Scenario Outline: Verify the Admin supplier Edit Directory Manage Setting
+  
+          Given User are available in login page
+          When User is enter exact username"<username>"  
+          And User is enter exact password"<password>"
+          When User are Select country in the autocomplete text box
+          And User is press the Admin login button 
+          When User Clicks in Admin panel Suppliers in the side navigation menubar
+          Then User clear on search textbox in supplier filed
+          Then User enter on supplier name in search textbox"<suppliername>"  
+          Then User click on search button in supplier field        
+          Then User click on action bootstrap dropdown 
+          Then User click on edit directory setting
+          Then User click on manage setting in supplier field
+          Then User clear on minimum order filed
+          Then User enter on value in minimum order filed"<minimumorder>" 
+          Then User click on save button in general setting field    
           
           
           
+     Examples:
+         |username                     |  |password    | |suppliername     | |searchname| |minimumorder|
+         |velumanisabari2009@gmail.com |  |#f=6T7uX    | |VELU             | | 100pipers| |5           |   
+         
+         
+
+Scenario Outline: Verify the Admin Supplier Screen Supplier Teams 
+  
+          Given User are available in login page
+          When User is enter exact username"<username>"  
+          And User is enter exact password"<password>"
+          When User are Select country in the autocomplete text box
+          And User is press the Admin login button 
+          When User Clicks in Admin panel Suppliers in the side navigation menubar
+          Then User clear on search textbox in supplier filed
+          Then User enter on supplier name in search textbox"<suppliername>"  
+          Then User click on search button in supplier field        
+          Then User click on action bootstrap dropdown 
+          Then User click on supplier teams in action dropdown field
+          Then User click on add new button in supplier teams
+          Then User enter name on team name field"<teamname>"
+          Then User click on next link to outlet in add team field
+          Then User click on add new in link outlet field
+          Then User click on select outlet in link outlet field
+          Then User click on second outlet in select outlet field
+          Then User click on select outlet icon
+          Then User click on save button in select outlet field
+          Then User click on action dropdown in edit field
+     
+                  
+     Examples:
+         |username                     |  |password    | |suppliername    | |teamname     |
+         |velumanisabari2009@gmail.com |  |#f=6T7uX    | |VELU            | |palanimurugansai|   
+         
+@Smoke
+Scenario Outline: Verify the Admin Supplier Screen Buyers Companies 
+  
+          Given User are available in login page
+          When User is enter exact username"<username>"  
+          And User is enter exact password"<password>"
+          When User are Select country in the autocomplete text box
+          And User is press the Admin login button 
+          When User Clicks in Admin panel Suppliers in the side navigation menubar
+          Then User clear on search textbox in supplier filed
+          Then User enter on supplier name in search textbox"<suppliername>"  
+          Then User click on search button in supplier field        
+          Then User click on action bootstrap dropdown 
+          Then User click on buyers companies in action dropdown field
+          Then User click on link to company in supplier field
+          Then User click on select company in link field
+          Then User click on save settings in link field
+          Then User click on actions icon in supplier field
+          Then User click on edit details in supplier field
+          Then User enter on customer company id number"<companyid>"
+          Then User click on save settings in link field
+                  
+     Examples:
+         |username                     |  |password    | |suppliername    | |companyid|
+         |velumanisabari2009@gmail.com |  |#f=6T7uX    | |VELU            | |592      |
+                             
+                    
+       
+ Scenario Outline: Verify the Buyers Outlets listing page of Admin
+ 
+         Given User are available in login page
+          When User is enter exact username"<username>"
+          And User is enter exact password"<password>"
+          When User are Select country in the autocomplete text box
+          And User is press the Admin login button 
+          When User Clicks on Admin Buyers in the side navigation menubar 
+          Then User click on checkbox 
+          Then User click on Disable
+          Then User click on Disable button
+          Then User click on checkbox
+          Then User click on Enable icon
+          Then User click on Enable button
+          Then User click on checkbox
+          Then User click on clear icon
+          Then User click on Actions dropdown 
+          Then User click on Edit details 
+          Then User click on back button of Buyers icon
+          Then User click on Actions dropdown 
+          Then User click on Edit settings 
+          Then User click on back button of Buyers icon
+          Then User click on Actions dropdown 
+          Then User click on View suppliers 
+          Then User click on back button of Buyers icon
+          Then User enter the outlet name in text box"<outletname>"
           
-    
+         
+    Examples:  
+      | username                         | | password   |  |outletname     |
+      | velumanisabari2009@gmail.com     | |#f=6T7uX    |  |velu masala2020|
+      
+@Smoke        
+ Scenario Outline: Verify the Buyers Outlets listing page of Admin
+ 
+         Given User are available in login page
+          When User is enter exact username"<username>"
+          And User is enter exact password"<password>"
+          When User are Select country in the autocomplete text box
+          And User is press the Admin login button 
+          When User Clicks on Admin Buyers in the side navigation menubar 
+          Then User click on Actions dropdown 
+          Then User clicks on Edit details
+          And User clear on Outlet email
+          Then User enter the new email id"<Email>"
+          Then User click on the Tags
+          Then User Enter the Tags"<tags>"         
+          Then User click on save button
+           
+    Examples: 
+      | username                         | | password   ||Email                 ||tags  |
+      |velumanisabari2009@gmail.com      | |#f=6T7uX    ||shwetha11@gmail.com   ||Party |
+      
+      
+            
          

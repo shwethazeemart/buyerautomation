@@ -31,6 +31,7 @@ public class Buyeroutletslistingpage {
 	public void isTosterMessageFound(String msg) {
 		WebElement tosterMsg = driver.findElement(By.xpath("//*[text()='" + msg + "']"));
 	}
+	
 
 
 	
@@ -69,9 +70,7 @@ public class Buyeroutletslistingpage {
 	private static WebElement Buyeroutletslistingpage_Entertheoutletname;
 	
 	@FindBy(xpath = "//span[text()='This action cannot be undone']/following::input")
-	private static WebElement Buyeroutletslistingpage_DisableTextbox;
-	 
-	
+	private static WebElement Buyeroutletslistingpage_DisableTextbox;	
 	
 	
 	

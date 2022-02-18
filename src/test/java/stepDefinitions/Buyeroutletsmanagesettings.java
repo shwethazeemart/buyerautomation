@@ -37,6 +37,7 @@ public class Buyeroutletsmanagesettings {
 		this.buyeroutletsmanagesettings = testContext.getPageObjectManager().getBuyeroutletsmanagesettingspage();
 
 	}
+	
 
 
 	@Then("User clicks on Manage settings")

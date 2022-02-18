@@ -352,8 +352,7 @@ public class DashboardPage {
 	public void clickAdminPromotion() throws InterruptedException {
 		//driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
 		Thread.sleep(5000);
-		button_AdminPromotion.click();
-		
+		button_AdminPromotion.click();		
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -366,6 +365,7 @@ public class DashboardPage {
 		button_Outlets.click();
 		Thread.sleep(5000);
 		try {
+			
 			Thread.sleep(7000);
 		} catch (InterruptedException e) {
 		}

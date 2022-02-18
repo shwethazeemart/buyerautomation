@@ -51,7 +51,7 @@ public class AdminEssentials {
 				this.dashboradpage = testContext.getPageObjectManager().getDashboardPage();
 				this.adminEssentialsPage=testContext.getPageObjectManager().getAdminEssentialsPage();	
 			}
-			
+					
 		@Then("User click the Essentials Tab")
 		public void user_click_the_Essentials_Tab() {
 			AdminEssentialsPage.ClickEssentialsTab();		
@@ -88,7 +88,7 @@ public class AdminEssentials {
 		public void user_Select_Supplier_in_the_dropdown_list() {
 			WebElement supplier = AdminEssentialsPage.getDropDownsupplierElement();
 			Select select=new Select(supplier);
-			select.selectByIndex(2);
+			select.selectByIndex(1);
 		}
 
 		@Then("User Enter the short Descripton{string}")
