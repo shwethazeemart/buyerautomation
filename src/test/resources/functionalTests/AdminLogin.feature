@@ -540,11 +540,7 @@ Scenario Outline: Verify the Reports outlets page
           When User is enter exact username"<username>"
           And User is enter exact password"<password>"
           When User are Select country in the autocomplete text box
-<<<<<<< HEAD
           And User is press the Admin login button 
-=======
-          And User is press the Admin login button
->>>>>>> 1e3c92de72236fd079b0976d247dcfbe1243e36f
           When User Clicks on Admin Reports in the side navigation menubar 
           Then User click on By outlet option 
           Then User select date from calendar field
@@ -596,15 +592,9 @@ Scenario Outline: Verify the Reports users page
 
           
           
-<<<<<<< HEAD
- 
-Scenario Outline: Verify the Buyers New Company page of Admin panel   
-=======
-
 Scenario Outline: Verify the Buyers New Company page of Admin panel   
 
  
->>>>>>> 1e3c92de72236fd079b0976d247dcfbe1243e36f
           Given User are available in login page
           When User is enter exact username"<username>"
           And User is enter exact password"<password>"
@@ -635,26 +625,13 @@ Scenario Outline: Verify the Buyers New Company page of Admin panel
     
     
           
-<<<<<<< HEAD
-Scenario Outline: Verify the Promo codes listing page
-
-=======
-          
-          
-                  
-          
 Scenario Outline: Verify the Promo codes listing page
   
->>>>>>> 1e3c92de72236fd079b0976d247dcfbe1243e36f
           Given User are available in login page
           When User is enter exact username"<username>"
           And User is enter exact password"<password>"
           When User are Select country in the autocomplete text box
-<<<<<<< HEAD
           And User is press the Admin login button         
-=======
-          And User is press the Admin login button 
->>>>>>> 1e3c92de72236fd079b0976d247dcfbe1243e36f
           When User Clicks on Admin Promotions in the side navigation menubar    
           Then User Click on the Promo codes tab
           Then User clicks SEARCH CODE
@@ -954,7 +931,7 @@ Scenario Outline: Verify the Admin Supplier Screen Supplier Teams
          |username                     |  |password    | |suppliername    | |teamname     |
          |velumanisabari2009@gmail.com |  |#f=6T7uX    | |VELU            | |palanimurugansai|   
          
-@Smoke
+
 Scenario Outline: Verify the Admin Supplier Screen Buyers Companies 
   
           Given User are available in login page
