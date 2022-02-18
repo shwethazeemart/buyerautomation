@@ -930,7 +930,7 @@ Scenario Outline: Verify the Admin Supplier Screen Supplier Teams
          |username                     |  |password    | |suppliername    | |teamname     |
          |velumanisabari2009@gmail.com |  |#f=6T7uX    | |VELU            | |palanimurugansai|   
          
-@Smoke
+
 Scenario Outline: Verify the Admin Supplier Screen Buyers Companies 
   
           Given User are available in login page
@@ -1011,6 +1011,31 @@ Scenario Outline: Verify the Admin Supplier Screen Buyers Companies
     Examples: 
       | username                         | | password   ||Email                 ||tags  |
       |velumanisabari2009@gmail.com      | |#f=6T7uX    ||shwetha11@gmail.com   ||Party |
+      
+      
+@Smoke
+Scenario Outline: Verify the Admin Supplier Screen Upload Subscription Invoice 
+  
+          Given User are available in login page
+          When User is enter exact username"<username>"  
+          And User is enter exact password"<password>"
+          When User are Select country in the autocomplete text box
+          And User is press the Admin login button 
+          When User Clicks in Admin panel Suppliers in the side navigation menubar
+          Then User clear on search textbox in supplier filed
+          Then User enter on supplier name in search textbox"<suppliername>"  
+          Then User click on search button in supplier field        
+          Then User click on action bootstrap dropdown 
+          Then User click on upload subscription invoice in action dropdown field
+          Then User enter on amount in amount field"<amount>"
+          Then User select date from invoice date field
+          Then User select file from choose file field
+          Then User click on upload button in upload invoice field
+          
+                  
+     Examples:
+         |username                     |  |password    | |suppliername    | |amount|
+         |velumanisabari2009@gmail.com |  |#f=6T7uX    | |VELU            | |90    |      
       
       
             

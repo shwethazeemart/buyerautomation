@@ -73,6 +73,7 @@ import pageObjects.AdminSupplierEditCompanypage;
 import pageObjects.AdminSupplierEditDefaultpage;
 import pageObjects.AdminSupplierEditDirectorypage;
 import pageObjects.AdminSupplierEditManageSettingpage;
+import pageObjects.AdminSupplierSubscriptionInvoicepage;
 import pageObjects.AdminSupplierTeamspage;
 import pageObjects.Adminbuyerlinktothecompanypage;
 import pageObjects.Adminbuyeroutletsubscriptionpage;
@@ -215,6 +216,7 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private AdminSupplierBuyerCompaniespage AdminSupplierBuyerCompanies;
     private AdminBuyersListingPage AdminBuyersListing;
     private AdminBuyersEditDetailsPage AdminBuyersEditDetails;
+    private AdminSupplierSubscriptionInvoicepage AdminSupplierSubscriptionInvoice;
 
 
 
@@ -717,6 +719,11 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 
 	public AdminBuyersEditDetailsPage getAdminBuyersEditDetailsPage() {
 		return (AdminBuyersEditDetails == null) ? (AdminBuyersEditDetails = new AdminBuyersEditDetailsPage(driver)) : AdminBuyersEditDetails;
+	}
+
+
+	public AdminSupplierSubscriptionInvoicepage getAdminSupplierSubscriptionInvoicepage() {
+		return (AdminSupplierSubscriptionInvoice == null) ? (AdminSupplierSubscriptionInvoice = new AdminSupplierSubscriptionInvoicepage(driver)) : AdminSupplierSubscriptionInvoice;
 	}
 
 	
