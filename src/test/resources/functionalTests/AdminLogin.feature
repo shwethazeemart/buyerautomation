@@ -934,7 +934,7 @@ Scenario Outline: Verify the Admin Supplier Screen Supplier Teams
          |username                     |  |password    | |suppliername    | |teamname     |
          |velumanisabari2009@gmail.com |  |#f=6T7uX    | |VELU            | |palanimurugansai|   
          
-@Smoke
+
 Scenario Outline: Verify the Admin Supplier Screen Buyers Companies 
   
           Given User are available in login page
@@ -1017,7 +1017,7 @@ Scenario Outline: Verify the Admin Supplier Screen Buyers Companies
       
       
 @Smoke        
- Scenario Outline: Verify the Buyers Outlets listing page of Admin
+ Scenario Outline: Verify the Buyers Outlets Edit settings page of Admin
  
           Given User are available in login page
           When User is enter exact username"<username>"
@@ -1027,17 +1027,17 @@ Scenario Outline: Verify the Admin Supplier Screen Buyers Companies
           When User Clicks on Admin Buyers in the side navigation menubar 
           Then User click on Actions dropdown           
           Then User clicks on Edit settings
-          And User click on search box of Edit Details
-          Then User Enter the name in search box of Edit Details"<Name>"
+          And User click on search box of Edit setings
+          Then User Enter the name in search box of Edit setings"<Name>"
           And User click on Add member button
           Then User click on select user search box
           Then User click on check box in Edit settings page
-          Then User click on outside section
+          Then User click on outside section of Edit settings
           And User click on Add button
           Then User Clear on weekly email
           And User enter on weekly email"<WeeklyEmail>"          
           Then User select dropdown on wednesday send every
-          Then User click on save button in details
+          Then User click on save button setings
           
           
           
