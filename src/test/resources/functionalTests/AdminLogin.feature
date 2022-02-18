@@ -540,7 +540,11 @@ Scenario Outline: Verify the Reports outlets page
           When User is enter exact username"<username>"
           And User is enter exact password"<password>"
           When User are Select country in the autocomplete text box
+<<<<<<< HEAD
+          And User is press the Admin login button 
+=======
           And User is press the Admin login button
+>>>>>>> 1e3c92de72236fd079b0976d247dcfbe1243e36f
           When User Clicks on Admin Reports in the side navigation menubar 
           Then User click on By outlet option 
           Then User select date from calendar field
@@ -592,10 +596,15 @@ Scenario Outline: Verify the Reports users page
 
           
           
+<<<<<<< HEAD
+ 
+Scenario Outline: Verify the Buyers New Company page of Admin panel   
+=======
 
 Scenario Outline: Verify the Buyers New Company page of Admin panel   
 
  
+>>>>>>> 1e3c92de72236fd079b0976d247dcfbe1243e36f
           Given User are available in login page
           When User is enter exact username"<username>"
           And User is enter exact password"<password>"
@@ -623,18 +632,29 @@ Scenario Outline: Verify the Buyers New Company page of Admin panel
        |username                     |  |password    | |registeredname||aliasname||postcode||addresslineone               ||addresslinetwo||companyregistrationnumber||taxregistrationnumber||companyemail         ||companyphonenumber|
        |velumanisabari2009@gmail.com |  |#f=6T7uX    | |VELU MASALA9 ||AtoZ Test||600041  ||261,Madheswaran temple street||singapore     | |AZ789                   | |tax-897             ||velumani@zeemart.asia||+6512345678       | 
           
+    
+    
           
+<<<<<<< HEAD
+Scenario Outline: Verify the Promo codes listing page
+
+=======
           
           
                   
           
 Scenario Outline: Verify the Promo codes listing page
   
+>>>>>>> 1e3c92de72236fd079b0976d247dcfbe1243e36f
           Given User are available in login page
           When User is enter exact username"<username>"
           And User is enter exact password"<password>"
           When User are Select country in the autocomplete text box
+<<<<<<< HEAD
+          And User is press the Admin login button         
+=======
           And User is press the Admin login button 
+>>>>>>> 1e3c92de72236fd079b0976d247dcfbe1243e36f
           When User Clicks on Admin Promotions in the side navigation menubar    
           Then User Click on the Promo codes tab
           Then User clicks SEARCH CODE
@@ -905,7 +925,7 @@ Scenario Outline: Verify the Admin supplier Edit Directory Manage Setting
          |velumanisabari2009@gmail.com |  |#f=6T7uX    | |VELU             | | 100pipers| |5           |   
          
          
-@Smoke
+
 Scenario Outline: Verify the Admin Supplier Screen Supplier Teams 
   
           Given User are available in login page
@@ -933,6 +953,33 @@ Scenario Outline: Verify the Admin Supplier Screen Supplier Teams
      Examples:
          |username                     |  |password    | |suppliername    | |teamname     |
          |velumanisabari2009@gmail.com |  |#f=6T7uX    | |VELU            | |palanimurugansai|   
+         
+@Smoke
+Scenario Outline: Verify the Admin Supplier Screen Buyers Companies 
+  
+          Given User are available in login page
+          When User is enter exact username"<username>"  
+          And User is enter exact password"<password>"
+          When User are Select country in the autocomplete text box
+          And User is press the Admin login button 
+          When User Clicks in Admin panel Suppliers in the side navigation menubar
+          Then User clear on search textbox in supplier filed
+          Then User enter on supplier name in search textbox"<suppliername>"  
+          Then User click on search button in supplier field        
+          Then User click on action bootstrap dropdown 
+          Then User click on buyers companies in action dropdown field
+          Then User click on link to company in supplier field
+          Then User click on select company in link field
+          Then User click on save settings in link field
+          Then User click on actions icon in supplier field
+          Then User click on edit details in supplier field
+          Then User enter on customer company id number"<companyid>"
+          Then User click on save settings in link field
+                  
+     Examples:
+         |username                     |  |password    | |suppliername    | |companyid|
+         |velumanisabari2009@gmail.com |  |#f=6T7uX    | |VELU            | |592      |
+                             
                     
        
  Scenario Outline: Verify the Buyers Outlets listing page of Admin
