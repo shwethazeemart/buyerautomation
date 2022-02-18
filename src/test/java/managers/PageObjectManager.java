@@ -68,11 +68,13 @@ import pageObjects.AdminPromotionListingPage;
 import pageObjects.AdminPromotionNewDealPage;
 import pageObjects.AdminReportsOutletspage;
 import pageObjects.AdminReportsUserspage;
+import pageObjects.AdminSupplierBuyerCompaniespage;
 import pageObjects.AdminSupplierEditBlackoutpage;
 import pageObjects.AdminSupplierEditCompanypage;
 import pageObjects.AdminSupplierEditDefaultpage;
 import pageObjects.AdminSupplierEditDirectorypage;
 import pageObjects.AdminSupplierEditManageSettingpage;
+import pageObjects.AdminSupplierTeamspage;
 import pageObjects.Adminbuyerlinktothecompanypage;
 import pageObjects.Adminbuyeroutletsubscriptionpage;
 import pageObjects.Adminbuyersoutletpage;
@@ -210,9 +212,12 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private AdminSupplierEditBlackoutpage AdminSupplierEditBlackout;
     private AdminSupplierEditDirectorypage AdminSupplierEditDirectory;
     private AdminSupplierEditManageSettingpage AdminSupplierEditManageSetting;
+    private AdminSupplierTeamspage AdminSupplierTeams;
+    private AdminSupplierBuyerCompaniespage AdminSupplierBuyerCompanies;
     private AdminBuyersListingPage AdminBuyersListing;
     private AdminBuyersEditDetailsPage AdminBuyersEditDetails;
     private AdminBuyerEditSettingsPage AdminBuyerEditSettings;
+
 
 
 	public PageObjectManager(WebDriver driver) {
@@ -694,7 +699,18 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 
 	}
 
+	public AdminSupplierTeamspage getAdminSupplierTeamspage() {
+		return (AdminSupplierTeams == null) ? (AdminSupplierTeams = new AdminSupplierTeamspage(driver)) : AdminSupplierTeams;
 
+	}
+
+
+
+	public AdminSupplierBuyerCompaniespage getAdminSupplierBuyerCompaniespage() {
+		return (AdminSupplierBuyerCompanies == null) ? (AdminSupplierBuyerCompanies = new AdminSupplierBuyerCompaniespage(driver)) : AdminSupplierBuyerCompanies;
+
+	}
+	
 	public AdminBuyersListingPage getAdminBuyersListingPage() {
 		return (AdminBuyersListing == null) ? (AdminBuyersListing = new AdminBuyersListingPage(driver)) : AdminBuyersListing;
 
@@ -706,12 +722,13 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 	}
 
 
+
 	public AdminBuyerEditSettingsPage getAdminBuyerEditSettingsPage() {
 		return (AdminBuyerEditSettings == null) ? (AdminBuyerEditSettings = new AdminBuyerEditSettingsPage(driver)) : AdminBuyerEditSettings;
 	}
 	
 	
-	
+
 	
 	}
 
