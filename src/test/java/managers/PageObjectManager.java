@@ -52,9 +52,9 @@ import stepDefinitions.Reportspagesteps;
 import stepDefinitions.SucessfullyLoginPage;
 import stepDefinitions.SupplierDirectoryProduct;
 import stepDefinitions.UserspageSteps;
-
+import pageObjects.AdminBuyersListingPage;
 import pageObjects.AdminBuyerNewCompanypage;
-
+import pageObjects.AdminBuyersEditDetailsPage;
 import pageObjects.AdminEssentialsPage;
 
 import pageObjects.AdminInvoiceuploadpage;
@@ -212,11 +212,16 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private AdminSupplierEditDirectorypage AdminSupplierEditDirectory;
     private AdminSupplierEditManageSettingpage AdminSupplierEditManageSetting;
     private AdminSupplierTeamspage AdminSupplierTeams;
+<<<<<<< HEAD
     private AdminSupplierBuyerCompaniespage AdminSupplierBuyerCompanies;
     
 
 
 
+=======
+    private AdminBuyersListingPage AdminBuyersListing;
+    private AdminBuyersEditDetailsPage AdminBuyersEditDetails;
+>>>>>>> 1e3c92de72236fd079b0976d247dcfbe1243e36f
 
 
 	public PageObjectManager(WebDriver driver) {
@@ -698,11 +703,11 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 
 	}
 
-
 	public AdminSupplierTeamspage getAdminSupplierTeamspage() {
 		return (AdminSupplierTeams == null) ? (AdminSupplierTeams = new AdminSupplierTeamspage(driver)) : AdminSupplierTeams;
 
 	}
+<<<<<<< HEAD
 
 
 	public AdminSupplierBuyerCompaniespage getAdminSupplierBuyerCompaniespage() {
@@ -711,6 +716,17 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 	}
 	
 	
+=======
+	public AdminBuyersListingPage getAdminBuyersListingPage() {
+		return (AdminBuyersListing == null) ? (AdminBuyersListing = new AdminBuyersListingPage(driver)) : AdminBuyersListing;
+
+	}
+
+
+	public AdminBuyersEditDetailsPage getAdminBuyersEditDetailsPage() {
+		return (AdminBuyersEditDetails == null) ? (AdminBuyersEditDetails = new AdminBuyersEditDetailsPage(driver)) : AdminBuyersEditDetails;
+	}
+>>>>>>> 1e3c92de72236fd079b0976d247dcfbe1243e36f
 	
 	
 	}
