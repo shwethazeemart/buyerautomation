@@ -79,37 +79,33 @@ public class AdminSupplierBuyerCompanies {
 
 	@Then("User click on save settings in link field")
 	public void user_click_on_save_settings_in_link_field() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    AdminSupplierBuyerCompaniespage.saveSettingsButtonClick();
 	}
 
 	@Then("User click on actions icon in supplier field")
-	public void user_click_on_actions_icon_in_supplier_field() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	public void user_click_on_actions_icon_in_supplier_field() throws InterruptedException {
+	    AdminSupplierBuyerCompaniespage.actionIconClick();
 	}
 
 	@Then("User click on edit details in supplier field")
 	public void user_click_on_edit_details_in_supplier_field() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    AdminSupplierBuyerCompaniespage.editDetailsClick();
 	}
 
-	@Then("User enter on customer company id number\"{int}\"")
-	public void user_enter_on_customer_company_id_number(Integer int1) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	@Then("User enter on customer company id number{string}")
+	public void user_enter_on_customer_company_id_number(String companyid) throws InterruptedException {
+	    AdminSupplierBuyerCompaniespage.enterComapnyid(companyid); 
 	}
 
 
-
 	
 	
 	
 	
 	
 	
-	
+	        
+	    
 	
 	
 	
