@@ -55,6 +55,7 @@ import stepDefinitions.UserspageSteps;
 import pageObjects.AdminBuyersListingPage;
 import pageObjects.AdminBuyerEditSettingsPage;
 import pageObjects.AdminBuyerNewCompanypage;
+import pageObjects.AdminBuyerViewSuppliersPage;
 import pageObjects.AdminBuyersEditDetailsPage;
 import pageObjects.AdminEssentialsPage;
 
@@ -217,6 +218,7 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private AdminBuyersListingPage AdminBuyersListing;
     private AdminBuyersEditDetailsPage AdminBuyersEditDetails;
     private AdminBuyerEditSettingsPage AdminBuyerEditSettings;
+    private AdminBuyerViewSuppliersPage AdminBuyerViewSuppliers;
 
 
 
@@ -725,6 +727,11 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 
 	public AdminBuyerEditSettingsPage getAdminBuyerEditSettingsPage() {
 		return (AdminBuyerEditSettings == null) ? (AdminBuyerEditSettings = new AdminBuyerEditSettingsPage(driver)) : AdminBuyerEditSettings;
+	}
+
+
+	public AdminBuyerViewSuppliersPage getAdminBuyerViewSuppliersPage() {
+		return (AdminBuyerViewSuppliers == null) ? (AdminBuyerViewSuppliers = new AdminBuyerViewSuppliersPage(driver)) : AdminBuyerViewSuppliers;
 	}
 	
 	

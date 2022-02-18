@@ -1016,7 +1016,7 @@ Scenario Outline: Verify the Admin Supplier Screen Buyers Companies
       |velumanisabari2009@gmail.com      | |#f=6T7uX    ||shwetha11@gmail.com   ||Party |
       
       
-@Smoke        
+        
  Scenario Outline: Verify the Buyers Outlets Edit settings page of Admin
  
           Given User are available in login page
@@ -1045,5 +1045,25 @@ Scenario Outline: Verify the Admin Supplier Screen Buyers Companies
       | username                     | | password  ||Name       | |WeeklyEmail          |
       | velumanisabari2009@gmail.com | |#f=6T7uX   ||buyer      | |shwetha@gmail.com    |          
       
+      
+@Smoke        
+ Scenario Outline: Verify the Buyers Outlets View Suppliers page of Admin
+ 
+          Given User are available in login page
+          When User is enter exact username"<username>"
+          And User is enter exact password"<password>"
+          When User are Select country in the autocomplete text box
+          And User is press the Admin login button 
+          When User Clicks on Admin Buyers in the side navigation menubar 
+          Then User click on Actions dropdown   
+          Then User clicks on View suppliers
+          Then User click on back to return page          
+         
+           
+        
+    Examples: 
+      | username                         | | password   |
+      | velumanisabari2009@gmail.com     | |#f=6T7uX    |           
+             
             
          
