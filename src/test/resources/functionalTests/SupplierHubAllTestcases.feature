@@ -15,7 +15,7 @@ Scenario Outline: Verify the Supplier Dashboard listing page
           Then User click on this month in total order page
           Then User click on this quarter in total order page  
           Then User click on this month in total order page
-          Then User click on YTD in total order page
+          Then User click on YTD in total order page 
           Then User click on By Team in dashboard page
           Then User click on show all in dashboard page
           Then User click on outstanding invoice
@@ -377,7 +377,7 @@ Scenario Outline: Verify the Supplier customers location listing page
           
    Examples:
          |username                      |  |password   ||UENNumber||CompanyName ||PostCode||AddressLineOne           ||AddressLineTwo||CompanyEmail         |
-         |supplierautomated2@gmail.com  |  |!123456Zm  ||UEN-2029979  ||saisivamsairammasala||638312  ||19,Murugan temple street ||Singapore     ||velusai2032@gmail.com|
+         |supplierautomated2@gmail.com  |  |!123456Zm  ||UEN-2029899  ||saiommurugasairammasala||638312  ||19,Murugan temple street ||Singapore     ||velusai2032@gmail.com|
  
  
  
@@ -695,7 +695,7 @@ Scenario Outline: Verify the Supplier Teams List page
           
  Examples:
          |username                              ||password    ||TeamName        |
-         |supplierautomated2@gmail.com          ||!123456Zm   ||Saisivamvelusaitesting|
+         |supplierautomated2@gmail.com          ||!123456Zm   ||Saiommurugavelusaitesting|
          
          
          
@@ -738,6 +738,6 @@ Scenario Outline: Verify the Supplier Users Listing page
          
  Examples:
          |username                              ||password    ||firstname||lastname||jobtitle||email                 ||mobilenumber||whatsappnumber|     |name     |
-         |supplierautomated2@gmail.com          ||!123456Zm   ||shridsivam   ||sairamsivam  ||AtoZtest||velusaisivam20992020@gmail.com||+6512345678||+6512345678  ||velu mani|         
+         |supplierautomated2@gmail.com          ||!123456Zm   ||shridommuruga   ||sairamommuruga  ||AtoZtest||velusaiommuruga20982020@gmail.com||+6512345678||+6512345678  ||velu mani|         
          
                                                                                        

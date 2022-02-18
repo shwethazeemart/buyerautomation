@@ -67,6 +67,7 @@ import pageObjects.AdminPromotionListingPage;
 import pageObjects.AdminPromotionNewDealPage;
 import pageObjects.AdminReportsOutletspage;
 import pageObjects.AdminReportsUserspage;
+import pageObjects.AdminSupplierBuyerCompaniespage;
 import pageObjects.AdminSupplierEditBlackoutpage;
 import pageObjects.AdminSupplierEditCompanypage;
 import pageObjects.AdminSupplierEditDefaultpage;
@@ -201,9 +202,7 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private AdminPromoCodePage AdminPromoCode;
     private AdminReportsOutletspage AdminReportsOutlets;
     private AdminReportsUserspage AdminReportsUsers;
-
     private AdminBuyerNewCompanypage AdminBuyerNewCompany;
-
     private AdminPromoCodeListingPage AdminPromoCodeListing;
     private AdminEssentialsPage AdminEssentials;
     private AdminSupplierEditCompanypage AdminSupplierEditCompany;
@@ -213,6 +212,7 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private AdminSupplierEditDirectorypage AdminSupplierEditDirectory;
     private AdminSupplierEditManageSettingpage AdminSupplierEditManageSetting;
     private AdminSupplierTeamspage AdminSupplierTeams;
+    private AdminSupplierBuyerCompaniespage AdminSupplierBuyerCompanies;
     
 
 
@@ -701,6 +701,12 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 
 	public AdminSupplierTeamspage getAdminSupplierTeamspage() {
 		return (AdminSupplierTeams == null) ? (AdminSupplierTeams = new AdminSupplierTeamspage(driver)) : AdminSupplierTeams;
+
+	}
+
+
+	public AdminSupplierBuyerCompaniespage getAdminSupplierBuyerCompaniespage() {
+		return (AdminSupplierBuyerCompanies == null) ? (AdminSupplierBuyerCompanies = new AdminSupplierBuyerCompaniespage(driver)) : AdminSupplierBuyerCompanies;
 
 	}
 	
