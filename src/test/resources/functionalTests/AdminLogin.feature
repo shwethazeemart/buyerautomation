@@ -937,8 +937,8 @@ Scenario Outline: Verify the Admin supplier Edit Directory Manage Setting
       | username                         | | password   |  |outletname     |
       | velumanisabari2009@gmail.com     | |#f=6T7uX    |  |velu masala2020|
       
-@Smoke        
- Scenario Outline: Verify the Buyers Outlets listing page of Admin
+        
+ Scenario Outline: Verify the Outlets Edit Details page of Admin
  
          Given User are available in login page
           When User is enter exact username"<username>"
@@ -958,6 +958,35 @@ Scenario Outline: Verify the Admin supplier Edit Directory Manage Setting
       | username                         | | password   ||Email                 ||tags  |
       |velumanisabari2009@gmail.com      | |#f=6T7uX    ||shwetha11@gmail.com   ||Party |
       
+      
+@Smoke        
+ Scenario Outline: Verify the Buyers Outlets listing page of Admin
+ 
+          Given User are available in login page
+          When User is enter exact username"<username>"
+          And User is enter exact password"<password>"
+          When User are Select country in the autocomplete text box
+          And User is press the Admin login button 
+          When User Clicks on Admin Buyers in the side navigation menubar 
+          Then User click on Actions dropdown           
+          Then User clicks on Edit settings
+          And User click on search box of Edit Details
+          Then User Enter the name in search box of Edit Details"<Name>"
+          And User click on Add member button
+          Then User click on select user search box
+          Then User click on check box in Edit settings page
+          Then User click on outside section
+          And User click on Add button
+          Then User Clear on weekly email
+          And User enter on weekly email"<WeeklyEmail>"          
+          Then User select dropdown on wednesday send every
+          Then User click on save button in details
+          
+          
+          
+    Examples: 
+      | username                     | | password  ||Name       | |WeeklyEmail          |
+      | velumanisabari2009@gmail.com | |#f=6T7uX   ||buyer      | |shwetha@gmail.com    |          
       
             
          

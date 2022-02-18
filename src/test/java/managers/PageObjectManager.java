@@ -53,6 +53,7 @@ import stepDefinitions.SucessfullyLoginPage;
 import stepDefinitions.SupplierDirectoryProduct;
 import stepDefinitions.UserspageSteps;
 import pageObjects.AdminBuyersListingPage;
+import pageObjects.AdminBuyerEditSettingsPage;
 import pageObjects.AdminBuyerNewCompanypage;
 import pageObjects.AdminBuyersEditDetailsPage;
 import pageObjects.AdminEssentialsPage;
@@ -200,9 +201,7 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private AdminPromoCodePage AdminPromoCode;
     private AdminReportsOutletspage AdminReportsOutlets;
     private AdminReportsUserspage AdminReportsUsers;
-
     private AdminBuyerNewCompanypage AdminBuyerNewCompany;
-
     private AdminPromoCodeListingPage AdminPromoCodeListing;
     private AdminEssentialsPage AdminEssentials;
     private AdminSupplierEditCompanypage AdminSupplierEditCompany;
@@ -213,6 +212,7 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private AdminSupplierEditManageSettingpage AdminSupplierEditManageSetting;
     private AdminBuyersListingPage AdminBuyersListing;
     private AdminBuyersEditDetailsPage AdminBuyersEditDetails;
+    private AdminBuyerEditSettingsPage AdminBuyerEditSettings;
 
 
 	public PageObjectManager(WebDriver driver) {
@@ -703,6 +703,11 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 
 	public AdminBuyersEditDetailsPage getAdminBuyersEditDetailsPage() {
 		return (AdminBuyersEditDetails == null) ? (AdminBuyersEditDetails = new AdminBuyersEditDetailsPage(driver)) : AdminBuyersEditDetails;
+	}
+
+
+	public AdminBuyerEditSettingsPage getAdminBuyerEditSettingsPage() {
+		return (AdminBuyerEditSettings == null) ? (AdminBuyerEditSettings = new AdminBuyerEditSettingsPage(driver)) : AdminBuyerEditSettings;
 	}
 	
 	
