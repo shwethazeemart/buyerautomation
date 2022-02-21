@@ -1066,7 +1066,7 @@ Scenario Outline: Verify the Admin Supplier Screen Buyers Companies
       | velumanisabari2009@gmail.com     | |#f=6T7uX    |    
       
              
-@Smoke        
+        
  Scenario Outline: Verify the Notification Edit page of Admin
  
           Given User are available in login page
@@ -1100,7 +1100,24 @@ Scenario Outline: Verify the Admin Supplier Screen Buyers Companies
       | velumanisabari2009@gmail.com     | | #f=6T7uX   | |Notifie Test | |PNG testing  |  
             
             
+@Smoke        
+ Scenario Outline: Verify the New Notification page of Admin
+ 
+          Given User are available in login page
+          When User is enter exact username"<username>"
+          And User is enter exact password"<password>"
+          When User are Select country in the autocomplete text box
+          And User is press the Admin login button 
+          When User Clicks on Admin Notification in the side navigation menubar
+          Then User click on the New notification                  
+          Then User Enter the Title"<title>"  
+          Then User Enter the Short description"<shortdescrip>"
+          Then User Enter the Full description"<fulldescrip>"
+          Then User click on the Image
+          Then User Click on the Save button of Notification       
             
             
-            
-         
+      Examples: 
+      | username                         | | password   | |title         | |shortdescrip | |fulldescrip                  |
+      | velumanisabari2009@gmail.com     | | #f=6T7uX   | |Zm Automation | |Hiiii        | |Have to create a notification|
+               
