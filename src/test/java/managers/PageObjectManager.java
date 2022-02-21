@@ -53,12 +53,15 @@ import stepDefinitions.SucessfullyLoginPage;
 import stepDefinitions.SupplierDirectoryProduct;
 import stepDefinitions.UserspageSteps;
 import pageObjects.AdminBuyersListingPage;
+import pageObjects.AdminBuyerEditSettingsPage;
 import pageObjects.AdminBuyerNewCompanypage;
+import pageObjects.AdminBuyerViewSuppliersPage;
 import pageObjects.AdminBuyersEditDetailsPage;
 import pageObjects.AdminEssentialsPage;
 
 import pageObjects.AdminInvoiceuploadpage;
 import pageObjects.AdminNewEssentialsPage;
+import pageObjects.AdminNotificationEditPage;
 import pageObjects.AdminOrderDetailsPage;
 import pageObjects.AdminOrderListingPage;
 import pageObjects.AdminPromoCodeListingPage;
@@ -215,7 +218,9 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private AdminSupplierBuyerCompaniespage AdminSupplierBuyerCompanies;
     private AdminBuyersListingPage AdminBuyersListing;
     private AdminBuyersEditDetailsPage AdminBuyersEditDetails;
-
+    private AdminBuyerEditSettingsPage AdminBuyerEditSettings;
+    private AdminBuyerViewSuppliersPage AdminBuyerViewSuppliers;
+    private AdminNotificationEditPage AdminNotificationEdit;
 
 
 	public PageObjectManager(WebDriver driver) {
@@ -719,7 +724,24 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 		return (AdminBuyersEditDetails == null) ? (AdminBuyersEditDetails = new AdminBuyersEditDetailsPage(driver)) : AdminBuyersEditDetails;
 	}
 
+
+
+	public AdminBuyerEditSettingsPage getAdminBuyerEditSettingsPage() {
+		return (AdminBuyerEditSettings == null) ? (AdminBuyerEditSettings = new AdminBuyerEditSettingsPage(driver)) : AdminBuyerEditSettings;
+	}
+
+
+	public AdminBuyerViewSuppliersPage getAdminBuyerViewSuppliersPage() {
+		return (AdminBuyerViewSuppliers == null) ? (AdminBuyerViewSuppliers = new AdminBuyerViewSuppliersPage(driver)) : AdminBuyerViewSuppliers;
+	}
+
+
+	public AdminNotificationEditPage getAdminNotificationEditPage() {
+		return (AdminNotificationEdit == null) ? (AdminNotificationEdit = new AdminNotificationEditPage(driver)) : AdminNotificationEdit;
+	}
 	
+	
+
 	
 	}
 
