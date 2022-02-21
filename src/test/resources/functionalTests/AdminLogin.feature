@@ -1067,7 +1067,7 @@ Scenario Outline: Verify the Admin Supplier Screen Buyers Companies
       
              
 @Smoke        
- Scenario Outline: Verify the Notification listing page of Admin
+ Scenario Outline: Verify the Notification Edit page of Admin
  
           Given User are available in login page
           When User is enter exact username"<username>"
