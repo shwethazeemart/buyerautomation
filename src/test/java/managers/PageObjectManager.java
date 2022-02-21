@@ -61,6 +61,7 @@ import pageObjects.AdminEssentialsPage;
 
 import pageObjects.AdminInvoiceuploadpage;
 import pageObjects.AdminNewEssentialsPage;
+import pageObjects.AdminNotificationEditPage;
 import pageObjects.AdminOrderDetailsPage;
 import pageObjects.AdminOrderListingPage;
 import pageObjects.AdminPromoCodeListingPage;
@@ -219,7 +220,7 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private AdminBuyersEditDetailsPage AdminBuyersEditDetails;
     private AdminBuyerEditSettingsPage AdminBuyerEditSettings;
     private AdminBuyerViewSuppliersPage AdminBuyerViewSuppliers;
-
+    private AdminNotificationEditPage AdminNotificationEdit;
 
 
 	public PageObjectManager(WebDriver driver) {
@@ -732,6 +733,11 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 
 	public AdminBuyerViewSuppliersPage getAdminBuyerViewSuppliersPage() {
 		return (AdminBuyerViewSuppliers == null) ? (AdminBuyerViewSuppliers = new AdminBuyerViewSuppliersPage(driver)) : AdminBuyerViewSuppliers;
+	}
+
+
+	public AdminNotificationEditPage getAdminNotificationEditPage() {
+		return (AdminNotificationEdit == null) ? (AdminNotificationEdit = new AdminNotificationEditPage(driver)) : AdminNotificationEdit;
 	}
 	
 	

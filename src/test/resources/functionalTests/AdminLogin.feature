@@ -1046,7 +1046,7 @@ Scenario Outline: Verify the Admin Supplier Screen Buyers Companies
       | velumanisabari2009@gmail.com | |#f=6T7uX   ||buyer      | |shwetha@gmail.com    |          
       
       
-@Smoke        
+       
  Scenario Outline: Verify the Buyers Outlets View Suppliers page of Admin
  
           Given User are available in login page
@@ -1063,7 +1063,44 @@ Scenario Outline: Verify the Admin Supplier Screen Buyers Companies
         
     Examples: 
       | username                         | | password   |
-      | velumanisabari2009@gmail.com     | |#f=6T7uX    |           
+      | velumanisabari2009@gmail.com     | |#f=6T7uX    |    
+      
              
+@Smoke        
+ Scenario Outline: Verify the Notification listing page of Admin
+ 
+          Given User are available in login page
+          When User is enter exact username"<username>"
+          And User is enter exact password"<password>"
+          When User are Select country in the autocomplete text box
+          And User is press the Admin login button 
+          When User Clicks on Admin Notification in the side navigation menubar
+          Then User clicks Search Title of Notificaion
+          Then User Enter Search Title of Notificaion"<searchtitle>"
+          Then User Select the dropdown Status of Notification 
+          Then User Clicks Search icon of Notification             
+          Then User Click the Actions dropdown of Notification
+          Then User Click the Edit          
+          Then User Clear the Title
+          Then User Enter the Title"<title>"
+          Then User Click on the Save button of Notification
+          Then User Click the Actions dropdown of Notification
+          Then User Click the Delete
+          Then User Click the Close icon 
+          Then User clicks on the Clear selection
+          Then User click first checkbox
+          Then User click Delete option
+          Then User Click the Close icon 
+          Then User clicks on the Clear selection       
+                    
+            
+            
+     Examples: 
+      | username                         | | password   | |title        | |searchtitle  |
+      | velumanisabari2009@gmail.com     | | #f=6T7uX   | |Notifie Test | |PNG testing  |  
+            
+            
+            
+            
             
          
