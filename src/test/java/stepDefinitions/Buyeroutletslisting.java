@@ -34,7 +34,7 @@ public class Buyeroutletslisting {
 		this.buyeroutletslisting = testContext.getPageObjectManager().getBuyeroutletslistingpage();
 
 	}
-	
+
 
 
 
@@ -91,20 +91,13 @@ public class Buyeroutletslisting {
 	}
 
 
+	@Then("User click on disable textbox")
+	public void user_click_on_disable_textbox() {
+		Buyeroutletslistingpage.DisableTextboxClick();
+	}
 
-	
-
-	
-		@Then("User click on disable textbox")
-		public void user_click_on_disable_textbox() {
-			Buyeroutletslistingpage.DisableTextboxClick();
-		}
-
-
-		
-
-		@Then("User enter the confirmation in textbox{string}")
-		public void user_enter_the_confirmation_in_textbox_DISABLE(String disable) {
-			Buyeroutletslistingpage.ConfirmationEnter(disable);
-    }
+	@Then("User enter the confirmation in textbox{string}")
+	public void user_enter_the_confirmation_in_textbox_DISABLE(String disable) {
+		Buyeroutletslistingpage.ConfirmationEnter(disable);
+	}
 }

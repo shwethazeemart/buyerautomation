@@ -69,14 +69,14 @@ public class NewRecurrOrderspageSteps {
 	public void user_select_outlet_in_the_dropdown_list() {
 		WebElement velumasala2020 = Newrecurringorderspage.getDropDownOwnerElement();
 		Select select=new Select(velumasala2020);
-		select.selectByIndex(4);
+		select.selectByIndex(7);
 	}
 
 	@When("User select supplier in the dropdown list")
 	public void user_select_supplier_in_the_dropdown_list() {
-		WebElement sabari250 = Newrecurringorderspage.getDropDownElementsupplier();
-		Select select=new Select(sabari250);
-		select.selectByVisibleText("sabari250");
+		WebElement VELUMASLA250 = Newrecurringorderspage.getDropDownElementsupplier();
+		Select select=new Select(VELUMASLA250);
+		select.selectByVisibleText("VELUMASLA250");
 	}
 
 	@When("User Clicks on deliver date in tuesday")

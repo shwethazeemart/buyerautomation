@@ -80,7 +80,7 @@ public class Buyerdashboardlisenpage {
 	@FindBy(xpath = "(//a[@role='tab'])[3]")
 	private static WebElement Buyerdashboardlisenpage_Categoryicon;
 	
-	@FindBy(xpath = "(//div[contains(@class,'d-flex justify-content-between')]/following-sibling::div)[3]")
+	@FindBy(xpath = "(//div[contains(@class,'d-flex justify-content-between')]/following-sibling::div)[1]")
 	private static WebElement Buyerdashboardlisenpage_Suppliericon;
 	
 	@FindBy(xpath = "//label[text()=' This month ']")
@@ -455,7 +455,7 @@ public class Buyerdashboardlisenpage {
 
 	public static void Clickonoutsideoforderpage() throws InterruptedException {
 		Thread.sleep(5000);
-		Buyerdashboardlisenpage_Outsideorderpage.click();
+		//Buyerdashboardlisenpage_Outsideorderpage.click();
 		try { 
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
