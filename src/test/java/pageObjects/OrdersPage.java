@@ -210,7 +210,7 @@ public class OrdersPage {
 	@FindBy(xpath = "//div[text()='VELU MASALA6']")
 	private static WebElement orderspage_Velumasalatsixpop;
 	
-	@FindBy(xpath = "//div[text()='VELUMASLA250']")
+	@FindBy(xpath = "//div[text()='VELU MASALA4']")
 	private static WebElement orderspage_Velumasalatwofiftypop;
 	
 	@FindBy(xpath = "(//button[text()='OK'])[2]")

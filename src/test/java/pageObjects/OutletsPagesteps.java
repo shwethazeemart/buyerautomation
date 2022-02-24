@@ -34,7 +34,7 @@ public class OutletsPagesteps {
 	
 	
 
-	@FindBy(xpath = "(//a[@class='zmdropDownBtn'])[4]")
+	@FindBy(xpath = "(//a[@class='zmdropDownBtn'])[3]")
 	private static WebElement OutletsPagesteps_actions_dropdown;  
 	
 	//@FindBy(xpath = "(//div[@class='zmDropDown']//a)[3]")
