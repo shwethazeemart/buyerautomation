@@ -51,13 +51,24 @@ Scenario Outline: Verify the Supplier Dashboard listing page
          |username                              ||password    |
          |supplierautomated2@gmail.com          ||!123456Zm   |
          
-         
+@Smoke         
 Scenario Outline: Verify the Supplier Orders listing page
           Given User is on available Login Page
           When User enter exact username"<username>"
           And User enter exact password"<password>"
           And User is click login button 
           Then User click on Orders side navigation list menubar
+          Then User click on create order in order page
+          Then User click on search box in order page
+          Then User enter on outlet name in search box"<outletname>" 
+          Then User click on outlet name in order page
+          Then User click on add to order first time
+          Then User click on add to order second time
+          Then User click on add to order Third time
+          Then User click on add to order fourth time
+          Then User click on add to order fifth time
+          Then User click on order items amount
+          Then User click on place order
           Then User click on download button in orders page
           Then User click on download pick list button
           Then User select date on download pick list
@@ -120,8 +131,8 @@ Scenario Outline: Verify the Supplier Orders listing page
           
           
           Examples:
-         |username                              ||password    ||ordernumber |
-         |supplierautomated2@gmail.com          ||!123456Zm   ||202110220001|    
+         |username                              ||password    ||ordernumber ||outletname|
+         |supplierautomated2@gmail.com          ||!123456Zm   ||202110220001||Sakthimasala100|    
          
          
          
@@ -377,7 +388,7 @@ Scenario Outline: Verify the Supplier customers location listing page
           
    Examples:
          |username                      |  |password   ||UENNumber||CompanyName ||PostCode||AddressLineOne           ||AddressLineTwo||CompanyEmail         |
-         |supplierautomated2@gmail.com  |  |!123456Zm  ||UEN-2029899  ||saiommurugasairammasala||638312  ||19,Murugan temple street ||Singapore     ||velusai2032@gmail.com|
+         |supplierautomated2@gmail.com  |  |!123456Zm  ||UEN-208999  ||saimanisairammasala||638312  ||19,Murugan temple street ||Singapore     ||velusai2032@gmail.com|
  
  
  
@@ -413,7 +424,7 @@ Scenario Outline: Verify the Supplier Catalogue list
           Then User click on clear icon in catalogue list
           Then User click on checkbox in catalogue list
           Then User click on hide from customers
-          Then User click on checkbox in catalogue list
+          Then User click on  second checkbox in catalogue list
           Then User click on unhide
           Then User click on add new sku
           Then User click on backbutton of catalogue
@@ -695,7 +706,7 @@ Scenario Outline: Verify the Supplier Teams List page
           
  Examples:
          |username                              ||password    ||TeamName        |
-         |supplierautomated2@gmail.com          ||!123456Zm   ||Saiommurugavelusaitesting|
+         |supplierautomated2@gmail.com          ||!123456Zm   ||Saimanisaitesting|
          
          
          
@@ -738,6 +749,6 @@ Scenario Outline: Verify the Supplier Users Listing page
          
  Examples:
          |username                              ||password    ||firstname||lastname||jobtitle||email                 ||mobilenumber||whatsappnumber|     |name     |
-         |supplierautomated2@gmail.com          ||!123456Zm   ||shridommuruga   ||sairamommuruga  ||AtoZtest||velusaiommuruga20982020@gmail.com||+6512345678||+6512345678  ||velu mani|         
+         |supplierautomated2@gmail.com          ||!123456Zm   ||shrimani   ||saimani  ||AtoZtest||velumani20092020@gmail.com||+6512345678||+6512345678  ||velu mani|         
          
                                                                                        

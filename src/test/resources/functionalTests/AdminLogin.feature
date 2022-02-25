@@ -444,7 +444,7 @@ Scenario Outline: Verify the Promotion Deals page
        |velumanisabari2009@gmail.com |  |#f=6T7uX    | |Bug test |
          
           
-      
+ @Smoke     
  Scenario Outline: Verify the Promotion New deal page
   
           Given User are available in login page
@@ -1013,7 +1013,7 @@ Scenario Outline: Verify the Admin Supplier Screen Buyers Companies
       |velumanisabari2009@gmail.com      | |#f=6T7uX    ||shwetha11@gmail.com   ||Party |
       
       
-@Smoke
+
 Scenario Outline: Verify the Admin Supplier Screen Upload Subscription Invoice 
   
           Given User are available in login page

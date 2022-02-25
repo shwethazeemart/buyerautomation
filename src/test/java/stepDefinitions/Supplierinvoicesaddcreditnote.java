@@ -44,7 +44,7 @@ public class Supplierinvoicesaddcreditnote {
 
 
 	@Then("User click on first invoice in the invoices list page")
-	public void user_click_on_first_invoice_in_the_invoices_list_page() {
+	public void user_click_on_first_invoice_in_the_invoices_list_page() throws InterruptedException {
 		Supplierinvoicesaddcreditnotepage.Clickonfirstinvoiceinlists();
 	}
 

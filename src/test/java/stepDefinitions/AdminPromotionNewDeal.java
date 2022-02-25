@@ -99,12 +99,12 @@ public class AdminPromotionNewDeal {
 	@Then("User Click on the Landing banner of Drag and dropdown field")
 	public void user_Click_on_the_Landing_banner_of_Drag_and_dropdown_field() throws InterruptedException {
 		AdminPromotionNewDealPage.ClickOnUploadLandingFile();
-			}
+	}
 
 	@Then("User Save the Landing banner")
 	public void user_Save_the_Landing_banner() {
 		AdminPromotionNewDealPage.SaveLandingBanner();
-		}
+	}
 
 	@Then("User select the Calendar From date of Validity field")
 	public void user_select_the_Calendar_From_date_of_Validity_field() {
