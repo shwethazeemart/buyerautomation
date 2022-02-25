@@ -110,8 +110,6 @@ public class Buyerreportspenpercategory {
 	public void user_click_on_search_icon_in_category() {
 	    Buyerreportspenpercategorypage.Clicksearchicon();
 	}
-
-	
 	
 	
 	@Then("User click on Beer category")
@@ -128,7 +126,7 @@ public class Buyerreportspenpercategory {
 	public void user_select_dropdown_in_month_Beer() {
 		WebElement ViewbyDay = Buyerreportspenpercategorypage.getDropDownElementmonth();
 		Select select=new Select(ViewbyDay);
-		select.selectByIndex(1);
+		select.selectByIndex(0);
 	} 
 
 	@Then("User click on outside in category in Beer")
@@ -136,10 +134,9 @@ public class Buyerreportspenpercategory {
 		Buyerreportspenpercategorypage.Clickonoutsidecategoryinbeer();
 	}
 
-	@Then("User click on check box of category")
-	public void user_click_on_check_box_of_category() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	@Then("User click on check box in category")
+	public void user_click_on_check_box_in_category() {
+		Buyerreportspenpercategorypage.ClickCheckbox();
 	}
 
 	@Then("User click on Check box")

@@ -592,6 +592,7 @@ Scenario Outline: Verify the Reports users page
 
           
           
+
 Scenario Outline: Verify the Buyers New Company page of Admin panel   
 
  
@@ -625,6 +626,7 @@ Scenario Outline: Verify the Buyers New Company page of Admin panel
     
     
           
+
 Scenario Outline: Verify the Promo codes listing page
   
           Given User are available in login page
@@ -991,8 +993,8 @@ Scenario Outline: Verify the Admin Supplier Screen Buyers Companies
       | username                         | | password   |  |outletname     |
       | velumanisabari2009@gmail.com     | |#f=6T7uX    |  |velu masala2020|
       
-@Smoke        
- Scenario Outline: Verify the Buyers Outlets listing page of Admin
+        
+ Scenario Outline: Verify the Outlets Edit Details page of Admin
  
          Given User are available in login page
           When User is enter exact username"<username>"
@@ -1013,5 +1015,108 @@ Scenario Outline: Verify the Admin Supplier Screen Buyers Companies
       |velumanisabari2009@gmail.com      | |#f=6T7uX    ||shwetha11@gmail.com   ||Party |
       
       
-            
+        
+ Scenario Outline: Verify the Buyers Outlets Edit settings page of Admin
+ 
+          Given User are available in login page
+          When User is enter exact username"<username>"
+          And User is enter exact password"<password>"
+          When User are Select country in the autocomplete text box
+          And User is press the Admin login button 
+          When User Clicks on Admin Buyers in the side navigation menubar 
+          Then User click on Actions dropdown           
+          Then User clicks on Edit settings
+          And User click on search box of Edit setings
+          Then User Enter the name in search box of Edit setings"<Name>"
+          And User click on Add member button
+          Then User click on select user search box
+          Then User click on check box in Edit settings page
+          Then User click on outside section of Edit settings
+          And User click on Add button
+          Then User Clear on weekly email
+          And User enter on weekly email"<WeeklyEmail>"          
+          Then User select dropdown on wednesday send every
+          Then User click on save button setings
+          
+          
+          
+    Examples: 
+      | username                     | | password  ||Name       | |WeeklyEmail          |
+      | velumanisabari2009@gmail.com | |#f=6T7uX   ||buyer      | |shwetha@gmail.com    |          
+      
+      
+       
+ Scenario Outline: Verify the Buyers Outlets View Suppliers page of Admin
+ 
+          Given User are available in login page
+          When User is enter exact username"<username>"
+          And User is enter exact password"<password>"
+          When User are Select country in the autocomplete text box
+          And User is press the Admin login button 
+          When User Clicks on Admin Buyers in the side navigation menubar 
+          Then User click on Actions dropdown   
+          Then User clicks on View suppliers
+          Then User click on back to return page          
          
+           
+        
+    Examples: 
+      | username                         | | password   |
+      | velumanisabari2009@gmail.com     | |#f=6T7uX    |    
+      
+             
+        
+ Scenario Outline: Verify the Notification Edit page of Admin
+ 
+          Given User are available in login page
+          When User is enter exact username"<username>"
+          And User is enter exact password"<password>"
+          When User are Select country in the autocomplete text box
+          And User is press the Admin login button 
+          When User Clicks on Admin Notification in the side navigation menubar
+          Then User clicks Search Title of Notificaion
+          Then User Enter Search Title of Notificaion"<searchtitle>"
+          Then User Select the dropdown Status of Notification 
+          Then User Clicks Search icon of Notification             
+          Then User Click the Actions dropdown of Notification
+          Then User Click the Edit          
+          Then User Clear the Title
+          Then User Enter the Title"<title>"
+          Then User Click on the Save button of Notification
+          Then User Click the Actions dropdown of Notification
+          Then User Click the Delete
+          Then User Click the Close icon 
+          Then User clicks on the Clear selection
+          Then User click first checkbox
+          Then User click Delete option
+          Then User Click the Close icon 
+          Then User clicks on the Clear selection       
+                    
+            
+            
+     Examples: 
+      | username                         | | password   | |title        | |searchtitle  |
+      | velumanisabari2009@gmail.com     | | #f=6T7uX   | |Notifie Test | |PNG testing  |  
+            
+            
+@Smoke        
+ Scenario Outline: Verify the New Notification page of Admin
+ 
+          Given User are available in login page
+          When User is enter exact username"<username>"
+          And User is enter exact password"<password>"
+          When User are Select country in the autocomplete text box
+          And User is press the Admin login button 
+          When User Clicks on Admin Notification in the side navigation menubar
+          Then User click on the New notification                  
+          Then User Enter the Title"<title>"  
+          Then User Enter the Short description"<shortdescrip>"
+          Then User Enter the Full description"<fulldescrip>"
+          Then User click on the Image
+          Then User Click on the Save button of Notification       
+            
+            
+      Examples: 
+      | username                         | | password   | |title         | |shortdescrip | |fulldescrip                  |
+      | velumanisabari2009@gmail.com     | | #f=6T7uX   | |Zm Automation | |Hiiii        | |Have to create a notification|
+               

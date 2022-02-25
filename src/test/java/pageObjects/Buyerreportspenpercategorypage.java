@@ -66,9 +66,11 @@ public class Buyerreportspenpercategorypage {
 	@FindBy(xpath = "//input[@type='checkbox']")
 	private static WebElement Buyerreportspenpercategorypage_Checkboxofsabari;
 	
+	@FindBy(xpath = "(//input[@type='checkbox'])[2]")
+	private static WebElement Buyerreportspenpercategorypage_Checkbox;
+	
 	@FindBy(xpath = "//button[text()='Search']")
 	private static WebElement Buyerreportspenpercategorypage_Searchicon;
-	
 	
 	
 	@FindBy(xpath = "(//div[contains(@class,'datatable-body-cell-label')])[3]")
@@ -93,7 +95,18 @@ public class Buyerreportspenpercategorypage {
 		} 
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
+		
+			}
+	
+public static void Selectdatefromcalendar() {
+		
+		WebElement DateBox=driver.findElement(By.xpath("//input[@placeholder='Select date']"));
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].value='4 Oct 2021 - 22 Feb 2022';", DateBox);
+		
 	}
+
 	public static void Clicksearchboxincategory() {
 		 Buyerreportspenpercategorypage_Searchboxincategory.click();
 			try {
@@ -114,13 +127,17 @@ public class Buyerreportspenpercategorypage {
 				.executeScript("return document.readyState").equals("complete"));
 		
 	}
-	public static void Selectdatefromcalendar() {
-		
-		WebElement DateBox=driver.findElement(By.xpath("//input[@formcontrolname='categoryDateRange']"));
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].value='1 Nov 2021 - 9 Nov 2021';", DateBox);
+	public static void Clicksearchicon() {
+		Buyerreportspenpercategorypage_Searchicon.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
 		
 	}
+	
 	public static void Clickfilter() throws InterruptedException {
 		Thread.sleep(5000);
 		 Buyerreportspenpercategorypage_Filter.click();
@@ -206,21 +223,13 @@ public class Buyerreportspenpercategorypage {
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
 		
+	}		
+	public static void Selectdatefromcalendarinbeer() throws InterruptedException {
+		Thread.sleep(5000);
+		WebElement DateBox=driver.findElement(By.xpath("//input[@placeholder='Select date']"));
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].value='4 Oct 2021 - 22 Feb 2022';", DateBox);
 	}
-	public static void Clicksearchicon() {
-		Buyerreportspenpercategorypage_Searchicon.click();
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-		} 
-		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
-				.executeScript("return document.readyState").equals("complete"));
-		
-	}
-	
-	
-	
-	
 	
 	public static void ClickonBeercategory() {
 		Buyerreportspenpercategorypage_Beercategory.click();
@@ -232,14 +241,7 @@ public class Buyerreportspenpercategorypage {
 				.executeScript("return document.readyState").equals("complete"));
 		
 	}
-	public static void Selectdatefromcalendarinbeer() throws InterruptedException {
-		Thread.sleep(5000);
-		WebElement DateBox=driver.findElement(By.xpath("//span[@name='daterange']"));
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].value='07Sep2020-07Sep2021';", DateBox);
-	}
-	
-	
+		
 	public static void Selectsoutletmonth() throws InterruptedException {
 		Thread.sleep(5000);
 		Buyerreportspenpercategorypage_Selectmonthdropdown.click();
@@ -275,6 +277,15 @@ public class Buyerreportspenpercategorypage {
 				.executeScript("return document.readyState").equals("complete"));
 		
 		
+	}
+	public static void ClickCheckbox() {
+		Buyerreportspenpercategorypage_Checkbox.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
 	}
 	
 	
