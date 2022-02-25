@@ -51,7 +51,7 @@ public class Supplierinvoiceslisting {
 	}
 
 	@Then("User click new invoice button")
-	public void user_click_new_invoice_button() {
+	public void user_click_new_invoice_button() throws InterruptedException {
 		Supplierinvoiceslistingpage.Clickoninnewinvoice();
 	}
 
