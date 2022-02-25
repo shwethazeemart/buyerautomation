@@ -94,7 +94,7 @@ public class Supplierdashboard {
 
 		@Then("User click on all categories")
 		public void user_click_on_all_categories() {
-		    Supplierdashboardpage.Clickonallcategories();
+		   // Supplierdashboardpage.Clickonallcategories(); 
 		}
 
 		@Then("User click on this month in sales by category")
