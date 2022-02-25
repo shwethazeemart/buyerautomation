@@ -924,7 +924,7 @@ Scenario Outline: Verify the Payment transactions page of Buyer panel
       | velumanieswaran2020@gmail.com | |!123456Zm   |     
       
       
-   
+  
  Scenario Outline: Verify the Inventory Activity lisen page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -987,7 +987,7 @@ Scenario Outline: Verify the Inventory Outlets lisen page of Buyer panel
          |username                       |  |password    ||outletname     ||outletnameone | |outletnametwo |
          |buyerautomated3@gmail.com      |  |!123456Zm   ||velu masala2020||sstmasala     | |sstmasala2020 |
          
-                                             
+                                              
 Scenario Outline: Verify the Inventory Record adjustment page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -1200,8 +1200,7 @@ Scenario Outline: Verify the Outlets manage details page of Buyer panel
       | velumanieswaran2020@gmail.com | |!123456Zm   ||buyer      | |velumani@zeemart.asia||lingeshsabari2009@gmail.com||velumanieswaran2020@gmail.com| 
       
 
-   
-@Smoke
+@Smoke   
 Scenario Outline: Verify the Outlets view suppliers page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>" 
@@ -1210,7 +1209,7 @@ Scenario Outline: Verify the Outlets view suppliers page of Buyer panel
           Then User Clicks on outlets in the side navigation menubar
           And User clicks actions dropdown
           Then User clicks on View suppliers
-          And User clicks on the actions dropdown
+          And User clicks on the actions dropdown of Edit outletpage
           Then User Click on view market list
           And User click on name search box
           Then User Enter on name in name searchbox field"<name>"
