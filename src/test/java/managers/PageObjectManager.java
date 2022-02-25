@@ -53,12 +53,16 @@ import stepDefinitions.SucessfullyLoginPage;
 import stepDefinitions.SupplierDirectoryProduct;
 import stepDefinitions.UserspageSteps;
 import pageObjects.AdminBuyersListingPage;
+import pageObjects.AdminBuyerEditSettingsPage;
 import pageObjects.AdminBuyerNewCompanypage;
+import pageObjects.AdminBuyerViewSuppliersPage;
 import pageObjects.AdminBuyersEditDetailsPage;
 import pageObjects.AdminEssentialsPage;
 
 import pageObjects.AdminInvoiceuploadpage;
 import pageObjects.AdminNewEssentialsPage;
+import pageObjects.AdminNewNotificationPage;
+import pageObjects.AdminNotificationEditPage;
 import pageObjects.AdminOrderDetailsPage;
 import pageObjects.AdminOrderListingPage;
 import pageObjects.AdminPromoCodeListingPage;
@@ -216,8 +220,15 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private AdminSupplierBuyerCompaniespage AdminSupplierBuyerCompanies;
     private AdminBuyersListingPage AdminBuyersListing;
     private AdminBuyersEditDetailsPage AdminBuyersEditDetails;
+<<<<<<< HEAD
     private AdminSupplierSubscriptionInvoicepage AdminSupplierSubscriptionInvoice;
 
+=======
+    private AdminBuyerEditSettingsPage AdminBuyerEditSettings;
+    private AdminBuyerViewSuppliersPage AdminBuyerViewSuppliers;
+    private AdminNotificationEditPage AdminNotificationEdit;
+    private AdminNewNotificationPage AdminNewNotification;
+>>>>>>> f3e9142c4bd3a3ecdf0fc881f013f9bbef52b125
 
 
 	public PageObjectManager(WebDriver driver) {
@@ -722,11 +733,35 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 	}
 
 
+<<<<<<< HEAD
 	public AdminSupplierSubscriptionInvoicepage getAdminSupplierSubscriptionInvoicepage() {
 		return (AdminSupplierSubscriptionInvoice == null) ? (AdminSupplierSubscriptionInvoice = new AdminSupplierSubscriptionInvoicepage(driver)) : AdminSupplierSubscriptionInvoice;
 	}
 
+=======
+
+	public AdminBuyerEditSettingsPage getAdminBuyerEditSettingsPage() {
+		return (AdminBuyerEditSettings == null) ? (AdminBuyerEditSettings = new AdminBuyerEditSettingsPage(driver)) : AdminBuyerEditSettings;
+	}
+
+
+	public AdminBuyerViewSuppliersPage getAdminBuyerViewSuppliersPage() {
+		return (AdminBuyerViewSuppliers == null) ? (AdminBuyerViewSuppliers = new AdminBuyerViewSuppliersPage(driver)) : AdminBuyerViewSuppliers;
+	}
+
+
+	public AdminNotificationEditPage getAdminNotificationEditPage() {
+		return (AdminNotificationEdit == null) ? (AdminNotificationEdit = new AdminNotificationEditPage(driver)) : AdminNotificationEdit;
+	}
+
+
+	public AdminNewNotificationPage getAdminNewNotificationPage() {
+		return (AdminNewNotification == null) ? (AdminNewNotification = new AdminNewNotificationPage(driver)) : AdminNewNotification;
+	}
 	
+>>>>>>> f3e9142c4bd3a3ecdf0fc881f013f9bbef52b125
+	
+
 	
 	}
 

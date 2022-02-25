@@ -90,7 +90,7 @@ public class Buyeroutletsmanagesettingspage {
 	@FindBy(xpath = "//h4[text()='Add member']")
 	private static WebElement Buyeroutletsmanagesettingspage_Outsidesection;
 	
-	@FindBy(xpath = "(//select[contains(@class,'custom-select weekdays')])[1] ")
+	@FindBy(xpath = "(//select[contains(@class,'custom-select')])[2] ")
 	private static WebElement Buyeroutletsmanagesettingspage_Selectsendwednesday;
 	
 	@FindBy(xpath = "(//select[contains(@class,'custom-select weekdays')])[2] ")
@@ -292,8 +292,7 @@ public class Buyeroutletsmanagesettingspage {
 		
 		
 	}
-	
-	
+		
 	public static void Selectcutofsendwednesday()  {
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		jse.executeScript("window.scrollBy(0,250)");

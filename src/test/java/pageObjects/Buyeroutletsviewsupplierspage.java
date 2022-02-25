@@ -32,7 +32,9 @@ public class Buyeroutletsviewsupplierspage {
 		WebElement tosterMsg = driver.findElement(By.xpath("//*[text()='" + msg + "']"));
 	}
 
-
+	@FindBy(xpath = "(//a[@class='zmdropDownBtn'])[3]")
+	private static WebElement Buyeroutletsviewsupplierspage_ActionsOfEditOutlet;
+	
 	//@FindBy(xpath = "(//div[@class='datatable-body-cell-label']//div)[3]")
 	//private static WebElement Buyeroutletsviewsupplierspage_Viewmarketlist;
 	
@@ -78,9 +80,16 @@ public class Buyeroutletsviewsupplierspage {
 	private static WebElement Buyeroutletsviewsupplierspage_BelowSelectallicon;
 	 
 	
+	public static void ClickActionsOfEditOutlet() {
+		Buyeroutletsviewsupplierspage_ActionsOfEditOutlet.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
 	
-	
-
 	public static void Clickviewmarketlist() {
 		WebElement viewMarketList = driver.findElement(By.linkText("View market list"));
         viewMarketList.click();

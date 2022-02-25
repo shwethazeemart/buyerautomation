@@ -330,16 +330,13 @@ public class OrderspageSteps<txtBoxContent> {
 
 	@Then("User click on in the supplier page")
 	public void user_click_on_in_the_supplier_page() throws InterruptedException {
-		 // OrdersPage.Clickvelumasalasix();
+		 //OrdersPage.Clickvelumasalasix();
 	}
 
 	@Then("User click on velu masalatwofifty in the supplier page")
 	public void user_click_on_velu_masalatwofifty_in_the_supplier_page() throws InterruptedException {
 		//OrdersPage.Clickvelumasalatwofifty();
 	}
-
-
-
 
 	@Then("User click on  in the supplier page outletname")
 	public void user_click_on_in_the_supplier_page_outletname() throws InterruptedException {
@@ -348,15 +345,14 @@ public class OrderspageSteps<txtBoxContent> {
 
 	@Then("User click on in the supplier page outletnameone")
 	public void user_click_on_in_the_supplier_page_outletnameone() throws InterruptedException {
-		OrdersPage.Clickvelumasalasix();
+		OrdersPage.Clickvelumasalatwofifty();
 
 	}
 
 	@Then("User click on in the supplier page outletnametwo")
 	public void user_click_on_in_the_supplier_page_outletnametwo() throws InterruptedException {
-		OrdersPage.Clickvelumasalatwofifty();
+		OrdersPage.Clickvelumasalasix();
 	}
-	
 	
 
 	@Then("User click on ok button of pop message outletone")
