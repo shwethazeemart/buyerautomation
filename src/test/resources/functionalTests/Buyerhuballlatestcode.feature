@@ -56,8 +56,8 @@ Scenario Outline: Verify the Dashboard lisen page of Buyer panel
          |username                            |  |password    ||name     | 
          |buyerautomated3@gmail.com           |  |!123456Zm   ||100pipers|
          
-        
-
+         
+@Smoke
 Scenario Outline: Verify the Reports invoice variance Category page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -65,6 +65,7 @@ Scenario Outline: Verify the Reports invoice variance Category page of Buyer pan
           And User is click login button 
           Then User Clicks on Reports in the side navigation menubar 
           Then User click on Invoice variance icon
+          Then User click on grn icon invoicevariance page
           And User click on search box in invoice variance
           Then User Enter the  invoice number in search box"<invoice>"
           Then User select date from calendar
@@ -97,10 +98,7 @@ Scenario Outline: Verify the Reports invoice variance Category page of Buyer pan
       |username                      | | password   ||invoice     |
       |velumanieswaran2020@gmail.com  | |!123456Zm   ||vel-1234567 |
       
-     @devSecond 
-      Examples: 
-      | username                      | | password   ||invoice     ||outletname    |
-      |buyerautomated3@gmail.com      | |!123456Zm   ||vel-1234567 ||velumasala2020|
+    
       
       
       
@@ -138,6 +136,11 @@ Scenario Outline: Verify the Reports invoice variance Category page of Buyer pan
           Then User click on Download button first page
           Then User click on export download button in price updates
           Then User click on Reports back button in price updates
+          
+     @devSecond 
+      Examples: 
+      | username                      | | password   ||invoice     ||outletname    |
+      |buyerautomated3@gmail.com      | |!123456Zm   ||vel-1234567 ||velumasala2020|
          
             
      @dev 
@@ -1200,7 +1203,7 @@ Scenario Outline: Verify the Outlets manage details page of Buyer panel
       | velumanieswaran2020@gmail.com | |!123456Zm   ||buyer      | |velumani@zeemart.asia||lingeshsabari2009@gmail.com||velumanieswaran2020@gmail.com| 
       
 
-@Smoke   
+ 
 Scenario Outline: Verify the Outlets view suppliers page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>" 
