@@ -1114,10 +1114,14 @@ Scenario Outline: Verify the Admin Supplier Screen Buyers Companies
           Then User Enter the Short description"<shortdescrip>"
           Then User Enter the Full description"<fulldescrip>"
           Then User click on the Image
+          Then User click on intenal link of radio button
+          Then User select go to dropdown of create order
+          Then User click on dropdown of create order
+          Then User enter on button label"<label>"
           Then User Click on the Save button of Notification       
             
             
       Examples: 
-      | username                         | | password   | |title         | |shortdescrip | |fulldescrip                  |
-      | velumanisabari2009@gmail.com     | | #f=6T7uX   | |Zm Automation | |Hiiii        | |Have to create a notification|
+      | username                         | | password   | |title         | |shortdescrip | |fulldescrip                  ||label|
+      | velumanisabari2009@gmail.com     | | #f=6T7uX   | |Zm Automation | |Hiiii        | |Have to create a notification||velu|
                

@@ -8,7 +8,7 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)   
 
-@CucumberOptions(strict = true, features = "src/test/resources/functionalTests/Buyerhuballlatestcode.feature",
+@CucumberOptions(strict = true, features = "src/test/resources/functionalTests/AdminLogin.feature",
 
 tags="@dev",
 
@@ -17,7 +17,7 @@ plugin = {"json:target/cucumber.json"})
  
 
 
-public class TestRunner { 
+public class TestRunner {  
 	
 		  
 }                                                 
