@@ -122,4 +122,9 @@ public class Buyerreportinvoicevariance {
 	    Buyerreportinvoicevariancepage.Clickreportsbackbutton();
 	} 
 
+	@Then("User click on grn icon invoicevariance page")
+	public void user_click_on_grn_icon_invoicevariance_page() throws InterruptedException {
+		Buyerreportinvoicevariancepage.grnIconClick();
+	}
+	
 	}
