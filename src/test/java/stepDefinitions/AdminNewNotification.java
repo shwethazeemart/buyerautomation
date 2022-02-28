@@ -1,5 +1,8 @@
 package stepDefinitions;
 
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+
 import cucumber.TestContext;
 import io.cucumber.java.en.Then;
 import pageObjects.AdminBuyerEditSettingsPage;
@@ -79,9 +82,30 @@ public class AdminNewNotification {
 
 		@Then("User click on the Image")
 		public void user_click_on_the_Image() throws InterruptedException {
-			AdminNewNotificationPage.ClickImage();
+			//AdminNewNotificationPage.ClickImage(); 
 		}
 
+		@Then("User click on intenal link of radio button")
+		public void user_click_on_intenal_link_of_radio_button() throws InterruptedException {
+			AdminNewNotificationPage.internalLinkClick();
+		}
+
+		@Then("User select go to dropdown of create order")
+		public void user_select_go_to_dropdown_of_create_order() {
+			AdminNewNotificationPage.gotoDropdownClick();			
+
+		}
 		
+		@Then("User click on dropdown of create order")
+		public void user_click_on_dropdown_of_create_order() {
+			//AdminNewNotificationPage.createOrderClick();			
+
+		}
+
+		@Then("User enter on button label{string}")
+		public void user_enter_on_button_label_velu(String label) {
+			AdminNewNotificationPage.enterbuttonLabelValue(label);	
+		}
+
 		
 }

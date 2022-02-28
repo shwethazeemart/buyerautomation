@@ -497,7 +497,7 @@ public class DashboardPage {
 	}
 
 	public void clickAdminNotification() throws InterruptedException {
-		Thread.sleep(5000);
+		Thread.sleep(7000);
 		button_AdminNotification.click();
 		try {
 			Thread.sleep(5000);
