@@ -71,6 +71,7 @@ import pageObjects.AdminPromotionListingPage;
 import pageObjects.AdminPromotionNewDealPage;
 import pageObjects.AdminReportsOutletspage;
 import pageObjects.AdminReportsUserspage;
+import pageObjects.AdminSupplierApplyOutletpage;
 import pageObjects.AdminSupplierBuyerCompaniespage;
 import pageObjects.AdminSupplierEditBlackoutpage;
 import pageObjects.AdminSupplierEditCompanypage;
@@ -223,7 +224,7 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private AdminBuyerViewSuppliersPage AdminBuyerViewSuppliers;
     private AdminNotificationEditPage AdminNotificationEdit;
     private AdminNewNotificationPage AdminNewNotification;
-
+    private AdminSupplierApplyOutletpage AdminSupplierApplyOutlet;
 
 	public PageObjectManager(WebDriver driver) {
 		this.driver = driver;
@@ -745,6 +746,11 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 
 	public AdminNewNotificationPage getAdminNewNotificationPage() {
 		return (AdminNewNotification == null) ? (AdminNewNotification = new AdminNewNotificationPage(driver)) : AdminNewNotification;
+	}
+
+
+	public AdminSupplierApplyOutletpage getAdminSupplierApplyOutletpage() {
+		return (AdminSupplierApplyOutlet == null) ? (AdminSupplierApplyOutlet = new AdminSupplierApplyOutletpage(driver)) : AdminSupplierApplyOutlet;
 	}
 	
 	
