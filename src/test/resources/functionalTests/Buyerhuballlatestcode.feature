@@ -56,7 +56,7 @@ Scenario Outline: Verify the Dashboard lisen page of Buyer panel
          |username                            |  |password    ||name     | 
          |buyerautomated3@gmail.com           |  |!123456Zm   ||100pipers|
          
-        
+         
 
 Scenario Outline: Verify the Reports invoice variance Category page of Buyer panel 
           Given User is on Login Page
@@ -65,6 +65,7 @@ Scenario Outline: Verify the Reports invoice variance Category page of Buyer pan
           And User is click login button 
           Then User Clicks on Reports in the side navigation menubar 
           Then User click on Invoice variance icon
+          Then User click on grn icon invoicevariance page
           And User click on search box in invoice variance
           Then User Enter the  invoice number in search box"<invoice>"
           Then User select date from calendar
@@ -97,10 +98,7 @@ Scenario Outline: Verify the Reports invoice variance Category page of Buyer pan
       |username                      | | password   ||invoice     |
       |velumanieswaran2020@gmail.com  | |!123456Zm   ||vel-1234567 |
       
-     @devSecond 
-      Examples: 
-      | username                      | | password   ||invoice     ||outletname    |
-      |buyerautomated3@gmail.com      | |!123456Zm   ||vel-1234567 ||velumasala2020|
+    
       
       
       
@@ -138,6 +136,11 @@ Scenario Outline: Verify the Reports invoice variance Category page of Buyer pan
           Then User click on Download button first page
           Then User click on export download button in price updates
           Then User click on Reports back button in price updates
+          
+     @devSecond 
+      Examples: 
+      | username                      | | password   ||invoice     ||outletname    |
+      |buyerautomated3@gmail.com      | |!123456Zm   ||vel-1234567 ||velumasala2020|
          
             
      @dev 
@@ -924,7 +927,7 @@ Scenario Outline: Verify the Payment transactions page of Buyer panel
       | velumanieswaran2020@gmail.com | |!123456Zm   |     
       
       
-   
+  
  Scenario Outline: Verify the Inventory Activity lisen page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -987,7 +990,7 @@ Scenario Outline: Verify the Inventory Outlets lisen page of Buyer panel
          |username                       |  |password    ||outletname     ||outletnameone | |outletnametwo |
          |buyerautomated3@gmail.com      |  |!123456Zm   ||velu masala2020||sstmasala     | |sstmasala2020 |
          
-                                             
+                                              
 Scenario Outline: Verify the Inventory Record adjustment page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -1200,8 +1203,6 @@ Scenario Outline: Verify the Outlets manage details page of Buyer panel
       | velumanieswaran2020@gmail.com | |!123456Zm   ||buyer      | |velumani@zeemart.asia||lingeshsabari2009@gmail.com||velumanieswaran2020@gmail.com| 
       
 
-   
-@Smoke
 Scenario Outline: Verify the Outlets view suppliers page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>" 
@@ -1210,7 +1211,7 @@ Scenario Outline: Verify the Outlets view suppliers page of Buyer panel
           Then User Clicks on outlets in the side navigation menubar
           And User clicks actions dropdown
           Then User clicks on View suppliers
-          And User clicks on the actions dropdown
+          And User clicks on the actions dropdown of Edit outletpage
           Then User Click on view market list
           And User click on name search box
           Then User Enter on name in name searchbox field"<name>"
@@ -1370,5 +1371,18 @@ Scenario Outline: Verify the News page of Buyer panel
          |username                            |  |password    |
          |buyerautomated3@gmail.com           |  |!123456Zm   |
     
-
-         
+@Smoke
+Scenario Outline: Verify the Outlets page of Final approver Buyer panel 
+          Given User is on Login Page
+          When User enter exact username"<username>" 
+          And User enter exact password"<password>"
+          And User is click login button 
+          Then User Clicks on outlets in the side navigation menubar
+          Then User click on action dropdown in approver
+          Then User click on manage setting in approver 
+          Then User click on check box of approver
+          Then User click final save button in approver
+          
+   Examples:
+         |username                            |  |password    |
+         |velumanieswaran2020@gmail.com       |  |!123456Zm   |       

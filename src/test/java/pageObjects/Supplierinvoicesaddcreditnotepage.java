@@ -86,7 +86,8 @@ public class Supplierinvoicesaddcreditnotepage {
 	
 	
 
-	public static void Clickonfirstinvoiceinlists() {
+	public static void Clickonfirstinvoiceinlists() throws InterruptedException {
+		Thread.sleep(5000);
 		Supplierinvoicesaddcreditnotepage_Firstinvoiceinlists.click();
 		try {
 			Thread.sleep(5000);

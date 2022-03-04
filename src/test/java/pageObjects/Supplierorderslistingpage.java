@@ -132,7 +132,44 @@ public class Supplierorderslistingpage {
 	
 	@FindBy(xpath = "//button[text()='Apply']")
 	private static WebElement Supplierorderslistingpage_Applybutton;
-
+	
+	
+	//Create order
+	
+	@FindBy(xpath = "//button[text()=' Create order ']")
+	private static WebElement Supplierorderslistingpage_CreateOrder;
+	
+	@FindBy(xpath = "//input[contains(@id,'filterOutlet')]")
+	private static WebElement Supplierorderslistingpage_SearchBox;
+	
+	@FindBy(xpath = "//input[contains(@id,'filterOutlet')]")
+	private static WebElement Supplierorderslistingpage_EnterOutletName;
+	
+	@FindBy(xpath = "//div[@class='fw600']")
+	private static WebElement Supplierorderslistingpage_OutletName;
+	
+	@FindBy(xpath = "(//div[text()=' Add to order '])[1]")
+	private static WebElement Supplierorderslistingpage_AddOrderFirstTime;
+	
+	@FindBy(xpath = "//i[@class='fa fa-plus']")
+	private static WebElement Supplierorderslistingpage_AddOrderSecondTime;
+	
+	@FindBy(xpath = "(//div[text()=' Add to order '])[2]")
+	private static WebElement Supplierorderslistingpage_AddOrderThirdTime;
+	
+	@FindBy(xpath = "(//div[text()=' Add to order '])[3]")
+	private static WebElement Supplierorderslistingpage_AddOrderFourthTime;
+	
+	@FindBy(xpath = "(//div[text()=' Add to order '])[4]")
+	private static WebElement Supplierorderslistingpage_AddOrderFifthTime;
+	
+	@FindBy(xpath = "//button[contains(@class,'btn btn-secondary')]")
+	private static WebElement Supplierorderslistingpage_OrderItems;
+	
+	@FindBy(xpath = "//button[contains(text(),' Place order')]")
+	private static WebElement Supplierorderslistingpage_PlaceOrder;
+	
+	
 
 
 
@@ -545,6 +582,126 @@ public class Supplierorderslistingpage {
 
 	public static void Clickonapplybuttoninsupplierorderpage() {
 		Supplierorderslistingpage_Applybutton.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+	
+	//create order
+
+	public static void createOrderClick() {
+		Supplierorderslistingpage_CreateOrder.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public static void searchBoxClick() {
+		Supplierorderslistingpage_SearchBox.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public static void enterOutletName(String outletname) {
+		Supplierorderslistingpage_EnterOutletName.sendKeys(outletname);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	public static void outletNameClick() {
+		Supplierorderslistingpage_OutletName.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public static void addorderFirsttimeClick() {
+		Supplierorderslistingpage_AddOrderFirstTime.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public static void addorderSecondtimeClick() {
+		Supplierorderslistingpage_AddOrderSecondTime.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public static void addorderThirdtimeClick() {
+		Supplierorderslistingpage_AddOrderThirdTime.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public static void addorderFourthtimeClick() {
+		Supplierorderslistingpage_AddOrderFourthTime.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	public static void addorderFifthtimeClick() {
+		Supplierorderslistingpage_AddOrderFifthTime.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	public static void orderItemsClick() {
+		Supplierorderslistingpage_OrderItems.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public static void placeOrderClick() {
+		Supplierorderslistingpage_PlaceOrder.click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {

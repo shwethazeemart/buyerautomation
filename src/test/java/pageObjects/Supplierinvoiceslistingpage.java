@@ -159,7 +159,8 @@ public class Supplierinvoiceslistingpage {
 
 
 
-	public static void Clickoninnewinvoice() {
+	public static void Clickoninnewinvoice() throws InterruptedException {
+		Thread.sleep(5000);
 		Supplierinvoiceslistingpage_Newinvoice.click();
 		try {
 			Thread.sleep(5000);

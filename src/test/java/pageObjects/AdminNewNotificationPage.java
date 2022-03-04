@@ -1,7 +1,10 @@
 package pageObjects;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -38,6 +41,19 @@ public class AdminNewNotificationPage {
 	
 	@FindBy(xpath = "//textarea[@formcontrolname='fullDescription']")
 	private static WebElement AdminNewNotificationPage_FullDescription;
+	
+	@FindBy(xpath = "(//input[contains(@name,'callToAction')])[3]")
+	private static WebElement AdminNewNotificationPage_InternalLink;
+	
+	@FindBy(xpath = "//select[contains(@formcontrolname,'gotoLink')]")
+	private static WebElement AdminNewNotificationPage_InternalLinkDropdown;
+	
+	@FindBy(xpath = "//textarea[@formcontrolname='fullDescription']")
+	private static WebElement AdminNewNotificationPage_EnterButtonValue;
+	
+	@FindBy(xpath = "//input[contains(@formcontrolname,'gotoButtonLabel')]")
+	private static WebElement AdminNewNotificationPage_CreateOrder;
+	
 
 	public static void ClickNewNotification() {
 		AdminNewNotificationPage_NewNotification.click();
@@ -72,8 +88,9 @@ public class AdminNewNotificationPage {
 	public static void ClickImage() throws InterruptedException {
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		jse.executeScript("window.scrollBy(0,250)");
-		WebElement image=driver.findElement(By.xpath("//input[@type='file']"));
-		image.sendKeys("E:/Zeemart/employers-750x300.jpg");
+		Thread.sleep(5000);
+		WebElement image=driver.findElement(By.xpath("//input[contains(@name,'file[]')]"));
+		image.sendKeys("E:\\Zeemart All\\Feature file\\Velu5mb.jpg");
 		Thread.sleep(5000);
 		try {
 			Thread.sleep(5000);
@@ -81,5 +98,53 @@ public class AdminNewNotificationPage {
 		}
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	public static void internalLinkClick() throws InterruptedException {
+		AdminNewNotificationPage_InternalLink.click();
+		//driver.findElement(By.xpath("//select[contains(@formcontrolname,'gotoLink')]")).sendKeys("Create order",Keys.ENTER);
+		Thread.sleep(5000);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));	
+	
+	}
+		
+	
+
+	public static void gotoDropdownClick() {
+		driver.findElement(By.xpath("//select[contains(@formcontrolname,'gotoLink')]")).sendKeys("Create order",Keys.ENTER);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public static void enterbuttonLabelValue(String label) {
+		AdminNewNotificationPage_EnterButtonValue.sendKeys(label);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public static void createOrderClick() {
+		AdminNewNotificationPage_CreateOrder.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
 	}
 }

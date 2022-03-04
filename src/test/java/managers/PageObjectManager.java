@@ -71,12 +71,14 @@ import pageObjects.AdminPromotionListingPage;
 import pageObjects.AdminPromotionNewDealPage;
 import pageObjects.AdminReportsOutletspage;
 import pageObjects.AdminReportsUserspage;
+import pageObjects.AdminSupplierApplyOutletpage;
 import pageObjects.AdminSupplierBuyerCompaniespage;
 import pageObjects.AdminSupplierEditBlackoutpage;
 import pageObjects.AdminSupplierEditCompanypage;
 import pageObjects.AdminSupplierEditDefaultpage;
 import pageObjects.AdminSupplierEditDirectorypage;
 import pageObjects.AdminSupplierEditManageSettingpage;
+import pageObjects.AdminSupplierSubscriptionInvoicepage;
 import pageObjects.AdminSupplierTeamspage;
 import pageObjects.Adminbuyerlinktothecompanypage;
 import pageObjects.Adminbuyeroutletsubscriptionpage;
@@ -91,6 +93,7 @@ import pageObjects.Automationtestingpage;
 import pageObjects.BuyerInventoryTagpage;
 import pageObjects.BuyerNewslistingpage;
 import pageObjects.BuyerOrderDeliveryFilterpage;
+import pageObjects.BuyerOutletApproverpage;
 //import pageObjects.BuyerPNF7797page;
 import pageObjects.Buyerdashboardlisenpage;
 import pageObjects.Buyeredituserlisenpage;
@@ -219,11 +222,17 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private AdminSupplierBuyerCompaniespage AdminSupplierBuyerCompanies;
     private AdminBuyersListingPage AdminBuyersListing;
     private AdminBuyersEditDetailsPage AdminBuyersEditDetails;
+
+    private AdminSupplierSubscriptionInvoicepage AdminSupplierSubscriptionInvoice
     private AdminBuyerEditSettingsPage AdminBuyerEditSettings;
     private AdminBuyerViewSuppliersPage AdminBuyerViewSuppliers;
     private AdminNotificationEditPage AdminNotificationEdit;
     private AdminNewNotificationPage AdminNewNotification;
 
+
+
+    private AdminSupplierApplyOutletpage AdminSupplierApplyOutlet;
+    private BuyerOutletApproverpage BuyerOutletApprover;
 
 	public PageObjectManager(WebDriver driver) {
 		this.driver = driver;
@@ -728,6 +737,11 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 
 
 
+	public AdminSupplierSubscriptionInvoicepage getAdminSupplierSubscriptionInvoicepage() {
+		return (AdminSupplierSubscriptionInvoice == null) ? (AdminSupplierSubscriptionInvoice = new AdminSupplierSubscriptionInvoicepage(driver)) : AdminSupplierSubscriptionInvoice;
+	}
+
+
 	public AdminBuyerEditSettingsPage getAdminBuyerEditSettingsPage() {
 		return (AdminBuyerEditSettings == null) ? (AdminBuyerEditSettings = new AdminBuyerEditSettingsPage(driver)) : AdminBuyerEditSettings;
 	}
@@ -746,7 +760,19 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 	public AdminNewNotificationPage getAdminNewNotificationPage() {
 		return (AdminNewNotification == null) ? (AdminNewNotification = new AdminNewNotificationPage(driver)) : AdminNewNotification;
 	}
+
+
+	public AdminSupplierApplyOutletpage getAdminSupplierApplyOutletpage() {
+		return (AdminSupplierApplyOutlet == null) ? (AdminSupplierApplyOutlet = new AdminSupplierApplyOutletpage(driver)) : AdminSupplierApplyOutlet;
+	}
+
+
+	public BuyerOutletApproverpage getBuyerOutletApproverpage() {
+		return (BuyerOutletApprover == null) ? (BuyerOutletApprover = new BuyerOutletApproverpage(driver)) : BuyerOutletApprover;
+	}
+
 	
+
 	
 
 	

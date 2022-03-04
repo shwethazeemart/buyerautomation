@@ -48,7 +48,7 @@ public class SupplierPaymentPlansPage {
 	@FindBy(xpath = "(//div[contains(@class,'datatable-body-cell-label')])[1]")
 	private static WebElement SupplierPaymentPlansPage_PaidStatusCompany;
 	
-	@FindBy(xpath = "//datatable-body-cell[contains(@class,'actionCol cellAlignCenter')]")
+	@FindBy(xpath = "(//div[contains(@class,'datatable-body-cell-label')])[1]")
 	private static WebElement SupplierPaymentPlansPage_BillAmount;
 	
 	@FindBy(xpath = "(//table[@class='inv-table']//td)[1]")

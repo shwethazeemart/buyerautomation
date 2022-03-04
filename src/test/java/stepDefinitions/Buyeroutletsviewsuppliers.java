@@ -34,6 +34,11 @@ public class Buyeroutletsviewsuppliers {
 		
 	}
 	
+	@Then("User clicks on the actions dropdown of Edit outletpage")
+	public void user_clicks_on_the_actions_dropdown_of_Edit_outletpage() {
+		Buyeroutletsviewsupplierspage.ClickActionsOfEditOutlet();
+	}
+	
 	@Then("User Click on view market list")
 	public void user_Click_on_view_market_list() {
 	   Buyeroutletsviewsupplierspage.Clickviewmarketlist();

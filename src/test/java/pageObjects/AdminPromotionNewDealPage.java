@@ -108,8 +108,8 @@ public class AdminPromotionNewDealPage {
 	private static WebElement AdminPromotionListingPage_ByEmail;
 
 
-	@FindBy(xpath = "//form[@class='ng-dirty ng-touched ng-valid']/child::div[2]/descendant::button[text()=' Next: SKU']")
-	private static WebElement AdminPromotionListingPage_NextSKU;
+	//@FindBy(xpath = "//form[@class='ng-dirty ng-touched ng-valid']/child::div[2]/descendant::button[text()=' Next: SKU']")
+	//private static WebElement AdminPromotionListingPage_NextSKU;
 
 	//@FindBy(xpath = "//div[contains(@class,'form-group col-md-12')]//button[1]")
 	///private static WebElement AdminPromotionListingPage_NextSKU;
@@ -208,8 +208,9 @@ public class AdminPromotionNewDealPage {
 		WebElement bannerone=driver.findElement(By.xpath("(//input[@class='custom-file-input'])[1]"));
 	    bannerone.click();
 		Thread.sleep(5000);
-		WebElement uploadBox=driver.findElement(By.xpath("//input[@class='ngx-file-drop__file-input']"));
-		uploadBox.sendKeys("E:/Zeemart/employers-750x300.jpg");
+		WebElement uploadBox=driver.findElement(By.xpath("(//input[@type='file'])[1]"));
+		uploadBox.sendKeys("E:\\Zeemart All\\Feature file\\Velu5mb.jpg");
+		
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -244,8 +245,8 @@ public class AdminPromotionNewDealPage {
 		WebElement bannertwo=driver.findElement(By.xpath("(//input[@class='custom-file-input'])[2]"));
 	    bannertwo.click();
 		Thread.sleep(5000);
-		WebElement uploadBox=driver.findElement(By.xpath("//input[@class='ngx-file-drop__file-input']"));
-		uploadBox.sendKeys("E:/Zeemart/employers-750x300.jpg");
+		WebElement uploadBoxone=driver.findElement(By.xpath("(//input[@type='file'])[1]"));
+		uploadBoxone.sendKeys("‪E:\\Zeemart All\\1    750x300 5mb.jpg");
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -255,7 +256,7 @@ public class AdminPromotionNewDealPage {
 	}
 
 	public static void SaveLandingBanner() {
-		AdminPromotionListingPage_SaveLandingBanner.click();
+		AdminPromotionListingPage_SaveLandingBanner.click(); 
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -497,8 +498,8 @@ public class AdminPromotionNewDealPage {
 	}
 
 	public static void ClicktheNextSku() {
-		WebElement shw = driver.findElement(By.xpath("//div[@class='form-group col-md-12 pt-2']"));
-		shw.click();
+		//WebElement shw = driver.findElement(By.xpath("//div[@class='form-group col-md-12 pt-2']"));
+		//shw.click();
 		WebElement ele = driver.findElement(By.xpath("//form[@class='ng-dirty ng-touched ng-valid']/child::div[2]/descendant::button[text()=' Next: SKU']"));
 		JavascriptExecutor executor = (JavascriptExecutor)driver;
 		executor.executeScript("arguments[0].click();", ele);		

@@ -235,6 +235,18 @@ public class Buyerreportinvoicevariancepage {
 					.executeScript("return document.readyState").equals("complete"));
 		
 		}
+		public static void grnIconClick() throws InterruptedException {
+			Thread.sleep(5000);
+			boolean buttonPresence=driver.findElement(By.xpath("//span[contains(text(),'GRN match')]")).isDisplayed();
+			System.out.println("The GRN is dispalyed:"+buttonPresence); 
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+			} 
+			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+					.executeScript("return document.readyState").equals("complete"));
+			
+		}
 		
 	
 	}

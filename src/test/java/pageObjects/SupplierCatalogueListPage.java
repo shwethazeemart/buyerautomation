@@ -93,7 +93,7 @@ public class SupplierCatalogueListPage {
 
 	public static void CheckboxClick() {
 		WebElement chkFBPersist = driver.findElement(By.xpath("(//input[contains(@type,'checkbox')])[2]"));					
-        for (int i=0; i<1; i++) {											
+        //for (int i=0; i<2; i++) {											
             chkFBPersist.click (); 			
             //System.out.println("Facebook Persists Checkbox Status is -  "+chkFBPersist.isSelected());
 		
@@ -105,7 +105,7 @@ public class SupplierCatalogueListPage {
 				.executeScript("return document.readyState").equals("complete"));
 		
         }
-	}
+	//}
 	
 	public static void ClearIconClick() {
 		SupplierCatalogueListPage_ClearIcon.click();
@@ -318,6 +318,21 @@ public class SupplierCatalogueListPage {
 		
 	}
 
+	public static void secondCheckboxClick() {
+		WebElement chkFBPersist1 = driver.findElement(By.xpath("(//input[contains(@type,'checkbox')])[3]"));					
+        //for (int i=0; i<2; i++) {											
+            chkFBPersist1.click (); 	
+            try {
+    			Thread.sleep(5000);
+    		} catch (InterruptedException e) {
+    		}
+    		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+    				.executeScript("return document.readyState").equals("complete"));
+    		
+            }
+	
+	}
+
 	
 
 		
@@ -356,4 +371,4 @@ public class SupplierCatalogueListPage {
 	
 	
 	
-}
+

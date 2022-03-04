@@ -9,6 +9,7 @@ import pageObjects.AdminSupplierEditCompanypage;
 import pageObjects.AdminSupplierEditDefaultpage;
 import pageObjects.AdminSupplierEditDirectorypage;
 import pageObjects.AdminSupplierEditManageSettingpage;
+import pageObjects.AdminSupplierSubscriptionInvoicepage;
 import pageObjects.Adminbuyersoutletpage;
 import pageObjects.Admininvoiceprocesspage;
 import pageObjects.Adminnewbuyeruserpage;
@@ -18,8 +19,8 @@ import pageObjects.DashboardPage;
 import pageObjects.LogInPage;
 import pageObjects.OrdersPage;
 
-public class AdminSupplierBuyerCompanies {
-	
+public class AdminSupplierSubscriptionInvoice {
+
 	private TestContext testContext;
 	private OrdersPage orderspage;
 	private Object OrderID;
@@ -37,9 +38,10 @@ public class AdminSupplierBuyerCompanies {
     private AdminSupplierEditDirectorypage adminSupplierEditDirectory;
     private AdminSupplierEditManageSettingpage adminSupplierEditManageSetting;
     private AdminSupplierBuyerCompaniespage adminSupplierBuyerCompanies;
+    private AdminSupplierSubscriptionInvoicepage adminSupplierSubscriptionInvoice;
     
     
-	public AdminSupplierBuyerCompanies(TestContext testContext) {
+	public AdminSupplierSubscriptionInvoice(TestContext testContext) {
 		super();
 		this.testContext = testContext;
 		this.admininvoiceuploadpage=(AdminInvoiceuploadpage)testContext.getPageObjectManager().getAdminInvoiceuploadpageSteps();
@@ -57,55 +59,44 @@ public class AdminSupplierBuyerCompanies {
 		this.adminSupplierEditDirectory = testContext.getPageObjectManager().getAdminSupplierEditDirectorypage();
 		this.adminSupplierEditManageSetting = testContext.getPageObjectManager().getAdminSupplierEditManageSettingpage();
 		this.adminSupplierBuyerCompanies = testContext.getPageObjectManager().getAdminSupplierBuyerCompaniespage();
+		this.adminSupplierSubscriptionInvoice = testContext.getPageObjectManager().getAdminSupplierSubscriptionInvoicepage();
 		
 		
+		
 	}
 	
-
-	@Then("User click on buyers companies in action dropdown field")
-	public void user_click_on_buyers_companies_in_action_dropdown_field() {
-	    AdminSupplierBuyerCompaniespage.buyerCompaniesClick();
+	
+	@Then("User click on upload subscription invoice in action dropdown field")
+	public void user_click_on_upload_subscription_invoice_in_action_dropdown_field() {
+	   AdminSupplierSubscriptionInvoicepage.uploadSubscriptionInvoiceClick();
 	}
 
-	@Then("User click on link to company in supplier field")
-	public void user_click_on_link_to_company_in_supplier_field() {
-	    AdminSupplierBuyerCompaniespage.linkCompanyClick();
+	@Then("User enter on amount in amount field{string}")
+	public void user_enter_on_amount_in_amount_field(String amount) {
+	    AdminSupplierSubscriptionInvoicepage.enterAmount(amount);
 	}
 
-	@Then("User click on select company in link field")
-	public void user_click_on_select_company_in_link_field() {
-	    AdminSupplierBuyerCompaniespage.companySelect(); 
+	@Then("User select date from invoice date field")
+	public void user_select_date_from_invoice_date_field() {
+	    AdminSupplierSubscriptionInvoicepage.selectInvoiceDate();
 	}
 
-	@Then("User click on save settings in link field")
-	public void user_click_on_save_settings_in_link_field() {
-	    AdminSupplierBuyerCompaniespage.saveSettingsButtonClick();
+	@Then("User select file from choose file field")
+	public void user_select_file_from_choose_file_field() throws InterruptedException {
+	    AdminSupplierSubscriptionInvoicepage.selectFile();
 	}
 
-	@Then("User click on actions icon in supplier field")
-	public void user_click_on_actions_icon_in_supplier_field() throws InterruptedException {
-	    AdminSupplierBuyerCompaniespage.actionIconClick();
+	@Then("User click on upload button in upload invoice field")
+	public void user_click_on_upload_button_in_upload_invoice_field() {
+	    AdminSupplierSubscriptionInvoicepage.uploadButtonClick();
 	}
 
-	@Then("User click on edit details in supplier field")
-	public void user_click_on_edit_details_in_supplier_field() {
-	    AdminSupplierBuyerCompaniespage.editDetailsClick();
-	}
-
-	@Then("User enter on customer company id number{string}")
-	public void user_enter_on_customer_company_id_number(String companyid) throws InterruptedException {
-	    AdminSupplierBuyerCompaniespage.enterComapnyid(companyid); 
-	}
-
-
+	
+	  
 	
 	
 	
 	
-	
-	
-	        
-	    
 	
 	
 	
