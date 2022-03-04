@@ -92,6 +92,7 @@ import pageObjects.Automationtestingpage;
 import pageObjects.BuyerInventoryTagpage;
 import pageObjects.BuyerNewslistingpage;
 import pageObjects.BuyerOrderDeliveryFilterpage;
+import pageObjects.BuyerOutletApproverpage;
 //import pageObjects.BuyerPNF7797page;
 import pageObjects.Buyerdashboardlisenpage;
 import pageObjects.Buyeredituserlisenpage;
@@ -225,6 +226,7 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private AdminNotificationEditPage AdminNotificationEdit;
     private AdminNewNotificationPage AdminNewNotification;
     private AdminSupplierApplyOutletpage AdminSupplierApplyOutlet;
+    private BuyerOutletApproverpage BuyerOutletApprover;
 
 	public PageObjectManager(WebDriver driver) {
 		this.driver = driver;
@@ -752,6 +754,12 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 	public AdminSupplierApplyOutletpage getAdminSupplierApplyOutletpage() {
 		return (AdminSupplierApplyOutlet == null) ? (AdminSupplierApplyOutlet = new AdminSupplierApplyOutletpage(driver)) : AdminSupplierApplyOutlet;
 	}
+
+
+	public BuyerOutletApproverpage getBuyerOutletApproverpage() {
+		return (BuyerOutletApprover == null) ? (BuyerOutletApprover = new BuyerOutletApproverpage(driver)) : BuyerOutletApprover;
+	}
+
 	
 	
 
