@@ -122,7 +122,10 @@ public class SupplierCatalogueList {
 	}
 
 
-
+	@Then("User click on  second checkbox in catalogue list")
+	public void user_click_on_second_checkbox_in_catalogue_list() {
+		SupplierCatalogueListPage.secondCheckboxClick();
+	}
 
 
 

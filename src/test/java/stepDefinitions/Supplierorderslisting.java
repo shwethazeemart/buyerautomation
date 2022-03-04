@@ -222,6 +222,66 @@ public class Supplierorderslisting {
 	public void user_click_on_apply_button_in_supplier_order_page() {
 	    Supplierorderslistingpage.Clickonapplybuttoninsupplierorderpage();
 	}
+	
+	
+	//Create order
+	
+	@Then("User click on create order in order page")
+	public void user_click_on_create_order_in_order_page() {
+		Supplierorderslistingpage.createOrderClick();
+	}
+
+	@Then("User click on search box in order page")
+	public void user_click_on_search_box_in_order_page() {
+		Supplierorderslistingpage.searchBoxClick();
+	}
+
+	@Then("User enter on outlet name in search box{string}")
+	public void user_enter_on_outlet_name_in_search_box_Sakthimasala100(String outletname) {
+		Supplierorderslistingpage.enterOutletName(outletname);
+	}
+
+	@Then("User click on outlet name in order page")
+	public void user_click_on_outlet_name_in_order_page() {
+		Supplierorderslistingpage.outletNameClick();
+	}
+
+	@Then("User click on add to order first time")
+	public void user_click_on_add_to_order_first_time() {
+		Supplierorderslistingpage.addorderFirsttimeClick();
+	}
+
+	@Then("User click on add to order second time")
+	public void user_click_on_add_to_order_second_time() {
+		Supplierorderslistingpage.addorderSecondtimeClick();
+	}
+
+	@Then("User click on add to order Third time")
+	public void user_click_on_add_to_order_Third_time() {
+		Supplierorderslistingpage.addorderThirdtimeClick();
+	}
+
+	@Then("User click on add to order fourth time")
+	public void user_click_on_add_to_order_fourth_time() {
+		//Supplierorderslistingpage.addorderFourthtimeClick();
+	}
+
+	@Then("User click on add to order fifth time")
+	public void user_click_on_add_to_order_fifth_time() {
+		//Supplierorderslistingpage.addorderFifthtimeClick();
+	}
+
+	@Then("User click on order items amount")
+	public void user_click_on_order_items_amount() {
+		Supplierorderslistingpage.orderItemsClick();
+	}
+
+	@Then("User click on place order")
+	public void user_click_on_place_order() {
+		Supplierorderslistingpage.placeOrderClick();
+	}
+
+
 }
 	
 	

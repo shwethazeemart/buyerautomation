@@ -224,7 +224,7 @@ public class SupplierAddNewSkuPage {
 
 	public static void PhotoUploadClick() throws InterruptedException {
 		WebElement uploadphoto=driver.findElement(By.xpath("//input[contains(@name,'file[]')]"));
-		uploadphoto.sendKeys("E:\\Zeemart All\\Feature file\\2     750x300 5mb.jpg");
+		uploadphoto.sendKeys("E:\\Zeemart All\\Feature file\\Velu5mb.jpg");
 		Thread.sleep(5000);
 		try {
 			Thread.sleep(5000);
