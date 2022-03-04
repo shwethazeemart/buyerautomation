@@ -223,7 +223,7 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private AdminBuyersListingPage AdminBuyersListing;
     private AdminBuyersEditDetailsPage AdminBuyersEditDetails;
 
-    private AdminSupplierSubscriptionInvoicepage AdminSupplierSubscriptionInvoice
+    private AdminSupplierSubscriptionInvoicepage AdminSupplierSubscriptionInvoice;
     private AdminBuyerEditSettingsPage AdminBuyerEditSettings;
     private AdminBuyerViewSuppliersPage AdminBuyerViewSuppliers;
     private AdminNotificationEditPage AdminNotificationEdit;
