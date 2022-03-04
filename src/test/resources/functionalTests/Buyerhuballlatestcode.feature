@@ -57,7 +57,7 @@ Scenario Outline: Verify the Dashboard lisen page of Buyer panel
          |buyerautomated3@gmail.com           |  |!123456Zm   ||100pipers|
          
          
-@Smoke
+
 Scenario Outline: Verify the Reports invoice variance Category page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -1371,5 +1371,18 @@ Scenario Outline: Verify the News page of Buyer panel
          |username                            |  |password    |
          |buyerautomated3@gmail.com           |  |!123456Zm   |
     
-
-         
+@Smoke
+Scenario Outline: Verify the Outlets page of Final approver Buyer panel 
+          Given User is on Login Page
+          When User enter exact username"<username>" 
+          And User enter exact password"<password>"
+          And User is click login button 
+          Then User Clicks on outlets in the side navigation menubar
+          Then User click on action dropdown in approver
+          Then User click on manage setting in approver 
+          Then User click on check box of approver
+          Then User click final save button in approver
+          
+   Examples:
+         |username                            |  |password    |
+         |velumanieswaran2020@gmail.com       |  |!123456Zm   |       
