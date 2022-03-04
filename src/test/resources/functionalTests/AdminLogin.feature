@@ -48,7 +48,7 @@ Scenario Outline: Verify the Suppliers page in view outlets Admin hub
     @dev    
     Examples:
          |username                     |  |password    ||suppliername ||outletid   ||billingid ||minimumamount||mondaycutofftime||tuesdaycutofftime||vehiclenumber ||recipientEmail   ||salespersonname| |phonenumber   ||notesfield                              |
-         |velumanisabari2009@gmail.com |  |#f=6T7uX    ||VELU MASALA1 ||Masala-12  ||ZM-456    ||100          ||1               ||1                ||SIN-4178      ||velumani@zeemart.asia||velumani     | |+65123456789 ||In our company sales only masala product|
+         |velumanisabari2009@gmail.com |  |#f=6T7uX    ||VELU MASALA10 ||Masala-12  ||ZM-456    ||100          ||1               ||1                ||SIN-4178      ||velumani@zeemart.asia||velumani     | |+65123456789 ||In our company sales only masala product|
 
 
 Scenario Outline: Verify the Users page new admin user in Admin panel    
@@ -1151,7 +1151,7 @@ Scenario Outline: Verify the Admin Supplier Screen Upload Subscription Invoice
       | velumanisabari2009@gmail.com     | | #f=6T7uX   | |Notifie Test | |PNG testing  |  
             
             
-@Smoke        
+       
  Scenario Outline: Verify the New Notification page of Admin
  
           Given User are available in login page
@@ -1165,11 +1165,40 @@ Scenario Outline: Verify the Admin Supplier Screen Upload Subscription Invoice
           Then User Enter the Short description"<shortdescrip>"
           Then User Enter the Full description"<fulldescrip>"
           Then User click on the Image
+          Then User click on intenal link of radio button
+          Then User select go to dropdown of create order
+          Then User click on dropdown of create order
+          Then User enter on button label"<label>"
           Then User Click on the Save button of Notification       
             
 >>>>>>> f3e9142c4bd3a3ecdf0fc881f013f9bbef52b125
             
       Examples: 
-      | username                         | | password   | |title         | |shortdescrip | |fulldescrip                  |
-      | velumanisabari2009@gmail.com     | | #f=6T7uX   | |Zm Automation | |Hiiii        | |Have to create a notification|
+      | username                         | | password   | |title         | |shortdescrip | |fulldescrip                  ||label|
+      | velumanisabari2009@gmail.com     | | #f=6T7uX   | |Zm Automation | |Hiiii        | |Have to create a notification||velu|
+      
+@Smoke     
+Scenario Outline: Verify the Suppliers screen  view outlets copy and apply setting    
+          Given User are available in login page
+          When User is enter exact username"<username>"  
+          And User is enter exact password"<password>"
+          When User are Select country in the autocomplete text box
+          And User is press the Admin login button 
+          When User Clicks in Admin panel Suppliers in the side navigation menubar 
+          Then User are Clicks Suppliers icon in the suppliers page
+          And User is Enter name supplier search box in the suppliers page"<suppliername>"
+          Then User are Clicks Search button in the suppliers page
+          And User is Clicks Actions dropdown in the suppliers page
+          Then User are Clicks View outlets in the dropdown field 
+          Then User click on checkbox of outlet in outlet setting page
+          Then User click on apply outlet settings
+          Then User select source outlet in dropdown list
+          Then User click on select all icon in apply outlet settings page
+          Then User cclick on apply button in apply setings page  
+          
+     
+    Examples:
+         |username                     |  |password    ||suppliername |                            
+         |velumanisabari2009@gmail.com |  |#f=6T7uX    ||VELU MASALA10 |
+            
                
