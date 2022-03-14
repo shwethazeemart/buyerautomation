@@ -540,11 +540,7 @@ Scenario Outline: Verify the Reports outlets page
           When User is enter exact username"<username>"
           And User is enter exact password"<password>"
           When User are Select country in the autocomplete text box
-<<<<<<< HEAD
           And User is press the Admin login button
-=======
-          And User is press the Admin login button 
->>>>>>> f3e9142c4bd3a3ecdf0fc881f013f9bbef52b125
           When User Clicks on Admin Reports in the side navigation menubar 
           Then User click on By outlet option 
           Then User select date from calendar field
@@ -596,15 +592,10 @@ Scenario Outline: Verify the Reports users page
 
           
           
-<<<<<<< HEAD
- 
-Scenario Outline: Verify the Buyers New Company page of Admin panel   
-=======
 
 Scenario Outline: Verify the Buyers New Company page of Admin panel   
 
  
->>>>>>> f3e9142c4bd3a3ecdf0fc881f013f9bbef52b125
           Given User are available in login page
           When User is enter exact username"<username>"
           And User is enter exact password"<password>"
@@ -633,26 +624,14 @@ Scenario Outline: Verify the Buyers New Company page of Admin panel
        |velumanisabari2009@gmail.com |  |#f=6T7uX    | |VELU MASALA9 ||AtoZ Test||600041  ||261,Madheswaran temple street||singapore     | |AZ789                   | |tax-897             ||velumani@zeemart.asia||+6512345678       | 
           
     
-<<<<<<< HEAD
-                
-=======
-    
-          
-         
-          
->>>>>>> f3e9142c4bd3a3ecdf0fc881f013f9bbef52b125
+
 Scenario Outline: Verify the Promo codes listing page
   
           Given User are available in login page
           When User is enter exact username"<username>"
           And User is enter exact password"<password>"
           When User are Select country in the autocomplete text box
-<<<<<<< HEAD
-          And User is press the Admin login button        
-          And User is press the Admin login button 
-=======
           And User is press the Admin login button         
->>>>>>> f3e9142c4bd3a3ecdf0fc881f013f9bbef52b125
           When User Clicks on Admin Promotions in the side navigation menubar    
           Then User Click on the Promo codes tab
           Then User clicks SEARCH CODE
@@ -1012,15 +991,9 @@ Scenario Outline: Verify the Admin Supplier Screen Buyers Companies
       | username                         | | password   |  |outletname     |
       | velumanisabari2009@gmail.com     | |#f=6T7uX    |  |velu masala2020|
       
-<<<<<<< HEAD
-      
-              
- Scenario Outline: Verify the Buyers Outlets listing page of Admin
-=======
         
  Scenario Outline: Verify the Outlets Edit Details page of Admin
->>>>>>> f3e9142c4bd3a3ecdf0fc881f013f9bbef52b125
- 
+
          Given User are available in login page
           When User is enter exact username"<username>"
           And User is enter exact password"<password>"
@@ -1040,7 +1013,6 @@ Scenario Outline: Verify the Admin Supplier Screen Buyers Companies
       |velumanisabari2009@gmail.com      | |#f=6T7uX    ||shwetha11@gmail.com   ||Party |
       
       
-<<<<<<< HEAD
 
 Scenario Outline: Verify the Admin Supplier Screen Upload Subscription Invoice 
   
@@ -1066,7 +1038,6 @@ Scenario Outline: Verify the Admin Supplier Screen Upload Subscription Invoice
          |velumanisabari2009@gmail.com |  |#f=6T7uX    | |VELU            | |90    |      
       
       
-=======
         
  Scenario Outline: Verify the Buyers Outlets Edit settings page of Admin
  
@@ -1171,8 +1142,7 @@ Scenario Outline: Verify the Admin Supplier Screen Upload Subscription Invoice
           Then User enter on button label"<label>"
           Then User Click on the Save button of Notification       
             
->>>>>>> f3e9142c4bd3a3ecdf0fc881f013f9bbef52b125
-            
+
       Examples: 
       | username                         | | password   | |title         | |shortdescrip | |fulldescrip                  ||label|
       | velumanisabari2009@gmail.com     | | #f=6T7uX   | |Zm Automation | |Hiiii        | |Have to create a notification||velu|
