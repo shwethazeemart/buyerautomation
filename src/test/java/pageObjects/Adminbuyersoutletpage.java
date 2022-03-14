@@ -104,6 +104,25 @@ public class Adminbuyersoutletpage {
 	@FindBy(xpath = "//button[@class='btn btn-primary']")
 	private static WebElement Adminbuyersoutletpage_Searchbutton;
 	
+	//Group
+	
+	@FindBy(xpath = "//a[contains(text(),' Group')] ")
+	private static WebElement Adminbuyersoutletpage_NewBuyerGroup;
+	
+	@FindBy(xpath = "//a[contains(text(),'New Buyer group')]")
+	private static WebElement Adminbuyersoutletpage_BuyerGroup;
+	
+	@FindBy(xpath = "//input[contains(@formcontrolname,'companyGroupName')]")
+	private static WebElement Adminbuyersoutletpage_GroupName;
+	
+	@FindBy(xpath = "//button[contains(text(),' Save')] ")
+	private static WebElement Adminbuyersoutletpage_SaveButton;
+	
+	
+	
+	
+	
+	
 	
 	public void Clicks_in_Add_new_by_dropdown() {
 		Adminbuyersoutletpage_Addnewbdropdown.click();
@@ -402,6 +421,65 @@ public class Adminbuyersoutletpage {
  
 	public static String getPageTitle() {
 		return driver.getTitle();   
+	}
+
+	public void newBuyerGroupClick() {
+		Adminbuyersoutletpage_NewBuyerGroup.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public void buyerGroupClick() {
+		Adminbuyersoutletpage_BuyerGroup.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+		
+	}
+
+	public void enterGroupName(String groupname) {
+		Adminbuyersoutletpage_GroupName.sendKeys(groupname);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	public void selectCompanyName() throws InterruptedException {
+		driver.findElement(By.xpath("//label[text()='Select company']/following::input")).sendKeys("VELU MASALA",Keys.ENTER);
+		Thread.sleep(5000);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public void saveButtonClick() throws InterruptedException {
+		WebElement Outsideclick=driver.findElement(By.xpath("//label[text()='Select company']"));
+		Outsideclick.click();
+		Thread.sleep(5000);
+		Adminbuyersoutletpage_SaveButton.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
 	}
 
 

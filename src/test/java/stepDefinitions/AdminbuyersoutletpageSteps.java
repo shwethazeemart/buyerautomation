@@ -182,4 +182,30 @@ public class AdminbuyersoutletpageSteps {
 		//System.out.println("page title: " + pageTitle);
 	}	
 	
+	//New buyer group
+		@Then("User click on group icon in buyer page")
+		public void user_click_on_group_icon_in_buyer_page() {
+			adminbuyersoutletpage.newBuyerGroupClick(); 		}
+
+		@Then("User click on new buyer group in buyer page")
+		public void user_click_on_new_buyer_group_in_buyer_page() {
+			adminbuyersoutletpage.buyerGroupClick();
+		}
+
+		@Then("User enter the group name in buyer group{string}")
+		public void user_enter_the_group_name_in_buyer_group_velu(String groupname) {
+			adminbuyersoutletpage.enterGroupName(groupname);
+		}
+
+		@Then("User select company in buyer group page")
+		public void user_select_company_in_buyer_group_page() throws InterruptedException {
+			adminbuyersoutletpage.selectCompanyName(); 
+		}
+
+		@Then("User click on save button in buyer group page")
+		public void user_click_on_save_button_in_buyer_group_page() throws InterruptedException {
+			adminbuyersoutletpage.saveButtonClick();
+		}
+
+	
 }
