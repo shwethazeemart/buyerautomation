@@ -601,6 +601,7 @@ Scenario Outline: Verify the Reports users page
 
 Scenario Outline: Verify the Buyers New Company page of Admin panel   
 
+
           Given User are available in login page
           When User is enter exact username"<username>"
           And User is enter exact password"<password>"
@@ -628,7 +629,7 @@ Scenario Outline: Verify the Buyers New Company page of Admin panel
        |username                     |  |password    | |registeredname||aliasname||postcode||addresslineone               ||addresslinetwo||companyregistrationnumber||taxregistrationnumber||companyemail         ||companyphonenumber|
        |velumanisabari2009@gmail.com |  |#f=6T7uX    | |VELU MASALA9 ||AtoZ Test||600041  ||261,Madheswaran temple street||singapore     | |AZ789                   | |tax-897             ||velumani@zeemart.asia||+6512345678       | 
           
-          
+
 
 Scenario Outline: Verify the Promo codes listing page
   
@@ -998,9 +999,10 @@ Scenario Outline: Verify the Admin Supplier Screen Buyers Companies
       
 
 
+
         
  Scenario Outline: Verify the Outlets Edit Details page of Admin
- 
+
          Given User are available in login page
           When User is enter exact username"<username>"
           And User is enter exact password"<password>"
@@ -1020,7 +1022,6 @@ Scenario Outline: Verify the Admin Supplier Screen Buyers Companies
       |velumanisabari2009@gmail.com      | |#f=6T7uX    ||shwetha11@gmail.com   ||Party |
       
       
-
 
 Scenario Outline: Verify the Admin Supplier Screen Upload Subscription Invoice 
   
@@ -1150,7 +1151,7 @@ Scenario Outline: Verify the Admin Supplier Screen Upload Subscription Invoice
           Then User enter on button label"<label>"
           Then User Click on the Save button of Notification       
             
-            
+
       Examples: 
       | username                         | | password   | |title         | |shortdescrip | |fulldescrip                  ||label|
       | velumanisabari2009@gmail.com     | | #f=6T7uX   | |Zm Automation | |Hiiii        | |Have to create a notification||velu|
