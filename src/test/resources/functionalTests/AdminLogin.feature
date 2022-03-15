@@ -189,7 +189,7 @@ Scenario Outline: Verify the Suppliers subscription page in Admin panel
     Examples:
          |username                    |  |password   ||companyname ||tradingname   ||registernumber  ||postcode ||addressline1             ||addressline2 ||supplierEmail              ||supplierphone||shortdescription  ||longdescription                                     ||enter email||GSTvalue||reportEmail                  ||upcomingEmail              ||percentage||fixedfees||activityEmail              |
          |velumanisabari2009@gmail.com|  |#f=6T7uX   ||Naga        ||Masala product||1234567         ||638312   ||261,madheswarankoilstreet||Singapore    ||lingeshsabari2009@gmail.com||+65123456789 ||Masala distributor||Venkat masala company manufacture only masala product||velumani@zeemart.asia||7       ||velumanieswaran2020@gmail.com||lingeshsabari2009@gmail.com||2         ||100      ||lingeshsabari2009@gmail.com|
-
+ 
 
 Scenario Outline: Verify the Users page of New Buyer user in Admin panel    
   
@@ -197,7 +197,7 @@ Scenario Outline: Verify the Users page of New Buyer user in Admin panel
           When User is enter exact username"<username>"
           And User is enter exact password"<password>"
           When User are Select country in the autocomplete text box
-          And User is press the Admin login button 
+          And User is press the Admin login button  
           When User Clicks on Admin Users in the side navigation menubar 
           Then User is Clicks in Add new user dropdown
           And User are Clicks in New Buyer user 
@@ -220,7 +220,7 @@ Scenario Outline: Verify the Users page of New Buyer user in Admin panel
          |velumanisabari2009@gmail.com |  |#f=6T7uX    ||Shwetha   ||RM       ||ATZ       ||velumani201978@gmail.com  ||+6512345678 |
 
   
- 
+@Smoke 
 Scenario Outline: Verify the Buyers outlets page of Admin panel   
   
           Given User are available in login page
@@ -228,7 +228,13 @@ Scenario Outline: Verify the Buyers outlets page of Admin panel
           And User is enter exact password"<password>"
           When User are Select country in the autocomplete text box
           And User is press the Admin login button 
-          When User Clicks on Admin Buyers in the side navigation menubar 
+          When User Clicks on Admin Buyers in the side navigation menubar
+          Then User click on group icon in buyer page
+          Then User is Clicks in Add new by dropdown
+          Then User click on new buyer group in buyer page
+          Then User enter the group name in buyer group"<groupname>"
+          Then User select company in buyer group page
+          Then User click on save button in buyer group page 
           Then User is Clicks in Add new by dropdown
           And User are Clicks in New Buyer 
           Then User User are Select Company in the autocomplete text box
@@ -257,8 +263,8 @@ Scenario Outline: Verify the Buyers outlets page of Admin panel
           
           
     Examples:
-         |username                     |  |password    ||outletname     ||postcode ||addressline1         ||addressline2||outletEmail                 ||mobilenumber||outlet       |
-         |velumanisabari2009@gmail.com |  |#f=6T7uX    ||venkatmasala250||638327   ||madheswarankoilstreet||singapore   ||lingeshsabari2009@gmail.com ||+6512345679 ||venkatmasal250|
+         |username                     |  |password    ||groupname||outletname     ||postcode ||addressline1         ||addressline2||outletEmail                 ||mobilenumber||outlet       |
+         |velumanisabari2009@gmail.com |  |#f=6T7uX    ||velumani| |venkatmasala250||638327   ||madheswarankoilstreet||singapore   ||lingeshsabari2009@gmail.com ||+6512345679 ||venkatmasal250|
 
 
 
@@ -444,7 +450,7 @@ Scenario Outline: Verify the Promotion Deals page
        |velumanisabari2009@gmail.com |  |#f=6T7uX    | |Bug test |
          
           
- @Smoke     
+     
  Scenario Outline: Verify the Promotion New deal page
   
           Given User are available in login page
@@ -595,7 +601,7 @@ Scenario Outline: Verify the Reports users page
 
 Scenario Outline: Verify the Buyers New Company page of Admin panel   
 
- 
+
           Given User are available in login page
           When User is enter exact username"<username>"
           And User is enter exact password"<password>"
@@ -623,7 +629,7 @@ Scenario Outline: Verify the Buyers New Company page of Admin panel
        |username                     |  |password    | |registeredname||aliasname||postcode||addresslineone               ||addresslinetwo||companyregistrationnumber||taxregistrationnumber||companyemail         ||companyphonenumber|
        |velumanisabari2009@gmail.com |  |#f=6T7uX    | |VELU MASALA9 ||AtoZ Test||600041  ||261,Madheswaran temple street||singapore     | |AZ789                   | |tax-897             ||velumani@zeemart.asia||+6512345678       | 
           
-    
+
 
 Scenario Outline: Verify the Promo codes listing page
   
@@ -631,7 +637,7 @@ Scenario Outline: Verify the Promo codes listing page
           When User is enter exact username"<username>"
           And User is enter exact password"<password>"
           When User are Select country in the autocomplete text box
-          And User is press the Admin login button         
+          And User is press the Admin login button        
           When User Clicks on Admin Promotions in the side navigation menubar    
           Then User Click on the Promo codes tab
           Then User clicks SEARCH CODE
@@ -991,6 +997,9 @@ Scenario Outline: Verify the Admin Supplier Screen Buyers Companies
       | username                         | | password   |  |outletname     |
       | velumanisabari2009@gmail.com     | |#f=6T7uX    |  |velu masala2020|
       
+
+
+
         
  Scenario Outline: Verify the Outlets Edit Details page of Admin
 
@@ -1147,7 +1156,7 @@ Scenario Outline: Verify the Admin Supplier Screen Upload Subscription Invoice
       | username                         | | password   | |title         | |shortdescrip | |fulldescrip                  ||label|
       | velumanisabari2009@gmail.com     | | #f=6T7uX   | |Zm Automation | |Hiiii        | |Have to create a notification||velu|
       
-@Smoke     
+         
 Scenario Outline: Verify the Suppliers screen  view outlets copy and apply setting    
           Given User are available in login page
           When User is enter exact username"<username>"  

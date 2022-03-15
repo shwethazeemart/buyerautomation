@@ -13,6 +13,7 @@ import pageObjects.SupplierPaymentPlansPage;
 import pageObjects.SupplierPaymentsTransactionPgae;
 import pageObjects.SupplierReportOutletPage;
 import pageObjects.Suppliercustomerlocationlistingpage;
+import pageObjects.Supplierinvoiceslistingpage;
 
 public class SupplierPaymentPlans {
 
@@ -31,6 +32,7 @@ public class SupplierPaymentPlans {
 	private SupplierReportOutletPage supplierReportOutlet;
 	private SupplierPaymentsTransactionPgae supplierPaymentsTransaction;
 	private SupplierPaymentPlansPage supplierPaymentPlans;
+	private Supplierinvoiceslistingpage supplierinvoiceslisting;
 	
 
 	public SupplierPaymentPlans(TestContext testContext) {
@@ -47,7 +49,7 @@ public class SupplierPaymentPlans {
 		this.supplierReportOutlet=testContext.getPageObjectManager().getSupplierReportOutletPage(); 
         this.supplierPaymentsTransaction=testContext.getPageObjectManager().getSupplierPaymentsTransactionPgae();
         this.supplierPaymentPlans=testContext.getPageObjectManager().getSupplierPaymentPlansPage();
-        
+        this.supplierinvoiceslisting=testContext.getPageObjectManager().getSupplierinvoiceslistingpage();
 	}
 
 
@@ -95,8 +97,54 @@ public class SupplierPaymentPlans {
 		SupplierPaymentPlansPage.PaymentPaidStatusSelect();
 	}
 
+	//Export xero
 	
-	
+	@Then("User click on first order in order page")
+	public void user_click_on_first_order_in_order_page() throws InterruptedException {
+		SupplierPaymentPlansPage.firstOrderInvoiceClick();
+	}
+
+	@Then("User click on create einvoice in the particular order")
+	public void user_click_on_create_einvoice_in_the_particular_order() throws InterruptedException {
+		SupplierPaymentPlansPage.createeInvoiceClick(); 
+	}
+
+	@Then("User click on email filed in invoice page")
+	public void user_click_on_email_filed_in_invoice_page() throws InterruptedException {
+		SupplierPaymentPlansPage.emailFieldClick();
+	}
+
+	@Then("User clear the email field in invoice page")
+	public void user_clear_the_email_field_in_invoice_page() {
+		SupplierPaymentPlansPage.emailFieldClear();
+	}
+
+	@Then("User enter the email in invoice page{string}")
+	public void user_enter_the_email_in_invoice_page_velumani_zeemart_asia(String email) {
+		SupplierPaymentPlansPage.emailEnterintheFiled(email);
+	}
+
+	@Then("User click on save and issue button in invoice page")
+	public void user_click_on_save_and_issue_button_in_invoice_page() {
+		SupplierPaymentPlansPage.saveandissueButtonClick();
+	}
+
+	@Then("User click on check box of first invoice")
+	public void user_click_on_check_box_of_first_invoice() throws InterruptedException {
+		SupplierPaymentPlansPage.firstCheckBoxClick();
+	}
+
+	@Then("User click on export xero icon in invoice page")
+	public void user_click_on_export_xero_icon_in_invoice_page() {
+		SupplierPaymentPlansPage.exportXeroIconClick();
+	}
+
+	@Then("User click on yes processed popup message")
+	public void user_click_on_yes_processed_popup_message() throws InterruptedException {
+		SupplierPaymentPlansPage.yesProcessedPopUpClick();
+	}
+
+
 
 
 
