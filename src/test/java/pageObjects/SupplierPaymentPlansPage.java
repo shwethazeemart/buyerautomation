@@ -54,6 +54,35 @@ public class SupplierPaymentPlansPage {
 	@FindBy(xpath = "(//table[@class='inv-table']//td)[1]")
 	private static WebElement SupplierPaymentPlansPage_BillInvoice;
 	
+	//Export xero
+	
+	@FindBy(xpath = "(//datatable-body-cell[contains(@class,'datatable-body-cell sort-active')]/following-sibling::datatable-body-cell)[3]")
+	private static WebElement SupplierPaymentPlansPage_FirstOrder;
+	
+	@FindBy(xpath = "//button[text()='Create e-Invoice ']")
+	private static WebElement SupplierPaymentPlansPage_CreateEInvoice;
+	
+	@FindBy(xpath = "//input[contains(@placeholder,'Email')]")
+	private static WebElement SupplierPaymentPlansPage_EmailField;
+	
+	@FindBy(xpath = "//input[contains(@placeholder,'Email')]")
+	private static WebElement SupplierPaymentPlansPage_EmailofField;
+	
+	@FindBy(xpath = "//input[contains(@placeholder,'Email')]")
+	private static WebElement SupplierPaymentPlansPage_EnterEmail;
+	
+	@FindBy(xpath = "//button[contains(text(),' Save and issue')]")
+	private static WebElement SupplierPaymentPlansPage_SaveandIssueButton;
+	
+	@FindBy(xpath = "(//input[@type='checkbox'])[2]")
+	private static WebElement SupplierPaymentPlansPage_FirstCheckBox;
+	
+	@FindBy(xpath = "//button[contains(text(),' Export to Xero')]")
+	private static WebElement SupplierPaymentPlansPage_ExportXeroIcon;
+	
+	@FindBy(xpath = "//button[contains(text(),'Yes, proceed!')]")
+	private static WebElement SupplierPaymentPlansPage_YesProcessedPopUp;
+	
 	
 	
 
@@ -160,6 +189,114 @@ public class SupplierPaymentPlansPage {
 		}
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	//export xero
+	
+	public static void firstOrderInvoiceClick() throws InterruptedException {
+		Thread.sleep(5000);
+		SupplierPaymentPlansPage_FirstOrder.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public static void createeInvoiceClick() throws InterruptedException {
+		Thread.sleep(7000);
+		SupplierPaymentPlansPage_CreateEInvoice.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public static void emailFieldClick() throws InterruptedException {
+		Thread.sleep(7000);
+		SupplierPaymentPlansPage_EmailField.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public static void emailFieldClear() {
+		SupplierPaymentPlansPage_EmailofField.clear();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public static void emailEnterintheFiled(String email) {
+		SupplierPaymentPlansPage_EnterEmail.sendKeys(email);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public static void saveandissueButtonClick() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0, 1000);");
+		SupplierPaymentPlansPage_SaveandIssueButton.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public static void firstCheckBoxClick() throws InterruptedException {
+		Thread.sleep(7000);
+		SupplierPaymentPlansPage_FirstCheckBox.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	public static void exportXeroIconClick() {
+		SupplierPaymentPlansPage_ExportXeroIcon.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public static void yesProcessedPopUpClick() throws InterruptedException {
+		Thread.sleep(5000);
+		SupplierPaymentPlansPage_YesProcessedPopUp.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
 		
 	}
 	

@@ -51,7 +51,7 @@ Scenario Outline: Verify the Supplier Dashboard listing page
          |username                              ||password    |
          |supplierautomated2@gmail.com          ||!123456Zm   |
          
-@Smoke         
+                 
 Scenario Outline: Verify the Supplier Orders listing page
           Given User is on available Login Page
           When User enter exact username"<username>"
@@ -282,6 +282,28 @@ Scenario Outline: Verify the Supplier Invoices Add Credit Note page
          |username                              ||password    |quantityvalue||reason         |
          |supplierautomated2@gmail.com          ||!123456Zm   |1            ||stock available|
          
+@Smoke         
+Scenario Outline: Verify the Supplier Invoices Export page
+         Given User is on available Login Page
+          When User enter exact username"<username>"
+          And User enter exact password"<password>"
+          And User is click login button 
+          Then User click on Orders side navigation list menubar
+          Then User click on first order in order page
+          Then User click on create einvoice in the particular order
+          Then User click on email filed in invoice page
+          Then User clear the email field in invoice page
+          Then User enter the email in invoice page"<email>"   
+          Then User click on save and issue button in invoice page
+          Then User click on check box of first invoice
+          Then User click on export xero icon in invoice page
+          Then User click on yes processed popup message     
+ 
+ 
+  Examples:
+         |username            ||password    ||email                |
+         |mrmanager@gmail.com ||!123456Zm   ||velumani@zeemart.asia|
+                 
          
                  
 Scenario Outline: Verify the Supplier Payments Plans list 
