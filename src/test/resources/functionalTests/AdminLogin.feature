@@ -220,7 +220,7 @@ Scenario Outline: Verify the Users page of New Buyer user in Admin panel
          |velumanisabari2009@gmail.com |  |#f=6T7uX    ||Shwetha   ||RM       ||ATZ       ||velumani201978@gmail.com  ||+6512345678 |
 
   
-@Smoke 
+ 
 Scenario Outline: Verify the Buyers outlets page of Admin panel   
   
           Given User are available in login page
@@ -298,7 +298,7 @@ Scenario Outline: Verify the Invoice Process page of Admin panel
 
 
    
-
+@Smoke
 Scenario Outline: Verify the Upload Invoice page of Admin panel 
   
           Given User are available in login page

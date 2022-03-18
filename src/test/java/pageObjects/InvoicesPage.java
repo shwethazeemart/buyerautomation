@@ -79,7 +79,8 @@ public class InvoicesPage {
 
 	}
 
-	public static void click_Uploadinvoice() {
+	public static void click_Uploadinvoice() throws InterruptedException {
+		Thread.sleep(7000);
 		Invoicespage_Uploadinvoice.click();
 		try {
 			Thread.sleep(5000);
