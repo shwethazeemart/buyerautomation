@@ -221,15 +221,7 @@ Scenario Outline: Verify the Users page of New Buyer user in Admin panel
          |velumanisabari2009@gmail.com |  |#f=6T7uX    ||Shwetha   ||RM       ||ATZ       ||velumani201978@gmail.com  ||+6512345678 |
 
   
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
- 
-=======
-
->>>>>>> 03d57ebcbaa787d13a61770dc5e6247b855ecac4
->>>>>>> 89ec405032673c69e8d2c47c8425858e55eeedb4
 Scenario Outline: Verify the Buyers outlets page of Admin panel   
   
           Given User are available in login page
