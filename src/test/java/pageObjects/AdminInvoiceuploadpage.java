@@ -43,7 +43,7 @@ public class AdminInvoiceuploadpage {
 	@FindBy(xpath = "//button[contains(@type,'submit')]")
 	private static WebElement AdminInvoiceuploadpage_press_the_Admin_login_button;
 	
-	@FindBy(xpath = "//button[@btncheckboxfalse='0']")
+	@FindBy(xpath = "//button[text()=' Upload invoice ']")
 	private static WebElement btn_Uploadinvoicebtn;
 
 	@FindBy(xpath = "//button[text()=' Upload ']") 
@@ -54,8 +54,8 @@ public class AdminInvoiceuploadpage {
 
 
 	public void Clicks_in_Upload_invoice() throws InterruptedException {
+		Thread.sleep(7000);
 		btn_Uploadinvoicebtn.click();
-		Thread.sleep(5000);
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -65,8 +65,11 @@ public class AdminInvoiceuploadpage {
 	}
 
 	public static void Select_Outlet() throws InterruptedException {
-		driver.findElement(By.xpath("//div[@role='combobox']//input[1]")).sendKeys("Sakthimasala100",Keys.ENTER);
 		Thread.sleep(5000);
+		driver.findElement(By.xpath("//div[@role='combobox']//input[1]")).sendKeys("VADIVELU ND COM",Keys.ENTER);
+		Thread.sleep(5000);
+		//WebElement buttonclick=driver.findElement(By.xpath("//h3[contains(text(),'Upload for VADIVELU ND COM')]"));
+		//buttonclick.click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -76,8 +79,17 @@ public class AdminInvoiceuploadpage {
 
 	}
 
-	public void Clicks_the_upload_file() {
-
+	public void Clicks_the_upload_file() throws InterruptedException {
+		Thread.sleep(5000);
+		WebElement uploadBox=driver.findElement(By.xpath("//input[contains(@type,'file')]"));
+		uploadBox.sendKeys("E:\\Zeemart All\\Feature file\\download (7).jpg");
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) { 
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));	
+		
 
 	}
 
@@ -142,7 +154,8 @@ public class AdminInvoiceuploadpage {
 
 	}
 
-	public void ClickDoneButton() {
+	public void ClickDoneButton() throws InterruptedException {
+		Thread.sleep(9000);
 		AdminInvoiceuploadpage_DoneButton.click();
 		try {
 			Thread.sleep(5000);
