@@ -48,10 +48,10 @@ public class Admininvoiceprocesspage {
 	@FindBy(xpath = "//button[text()='Yes, proceed!']")
 	private static WebElement Admininvoiceprocesspage_Yes_processed_POPUP_message;
 
-	@FindBy(xpath = "(//input[contains(@class,'form-control w-100')])[2]")
+	@FindBy(xpath = "//input[contains(@placeholder,'Enter Invoice No.')]")
 	private static WebElement Admininvoiceprocesspage_Enter_Invoice_number;
 
-	@FindBy(xpath = "(//button[@type='button'])[3]")
+	@FindBy(xpath = "//button[contains(text(),'Validate')] ")
 	private static WebElement Admininvoiceprocesspage_validate_button;
 
 	@FindBy(xpath = "//select[@id='paymentterm']")
@@ -66,6 +66,12 @@ public class Admininvoiceprocesspage {
 	@FindBy(xpath = "//button[text()='Publish this invoice']")
 	private static WebElement Admininvoiceprocesspage_publish_this_invoice_button;
 	
+	@FindBy(xpath = "//button[contains(text(),'Process')]")
+	private static WebElement Admininvoiceprocesspage_OutletsProcess;
+	
+	@FindBy(xpath = "//select[contains(@id,'country')]")
+	private static WebElement Admininvoiceprocesspage_Velumasala2;
+	
 
 
 	
@@ -75,8 +81,8 @@ public class Admininvoiceprocesspage {
 
 
 	public void Clicks_in_Sort_by_dropdown() throws InterruptedException {
-		Admininvoiceprocesspage_Sortbydropdowm.click();
 		Thread.sleep(5000);
+		Admininvoiceprocesspage_Sortbydropdowm.click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -172,12 +178,19 @@ public class Admininvoiceprocesspage {
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 
-		js.executeScript("arguments[0].value='09August2021';", DateBox);
+		js.executeScript("arguments[0].value='18March2022';", DateBox);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
 
 
 	}
 
-	public static void click_NET60() {
+	public static void click_NET60() throws InterruptedException {
+		Thread.sleep(5000);
 		Admininvoiceprocesspage_NET60.click();
 		try {
 			Thread.sleep(5000);
@@ -215,10 +228,43 @@ public class Admininvoiceprocesspage {
 
 	public void Clicks_publish_this_invoice_button() {
 		Admininvoiceprocesspage_publish_this_invoice_button.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	public void outletsProcessClick() throws InterruptedException {
+		Thread.sleep(7000);
+		Admininvoiceprocesspage_OutletsProcess.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
 		
 	}
 
 	
+	
+	public static void click_VELUMASALA2() throws InterruptedException {
+		Thread.sleep(5000);
+		Admininvoiceprocesspage_Velumasala2.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+
+	}
+	public static WebElement getDropDownOwnerElement0fvelumasala2() {
+		return Admininvoiceprocesspage_Velumasala2;
+	}
 	
 
 

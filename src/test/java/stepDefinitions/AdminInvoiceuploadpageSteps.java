@@ -89,14 +89,14 @@ public class AdminInvoiceuploadpageSteps {
 	}
 
 	@Then("User is Clicks the upload file")
-	public void user_is_Clicks_the_upload_file() {
+	public void user_is_Clicks_the_upload_file() throws InterruptedException {
 	   admininvoiceuploadpage.Clicks_the_upload_file();
 	}
 
 	@Then("User is Clicks the Done button")
-	public void user_is_Clicks_the_Done_button() {
+	public void user_is_Clicks_the_Done_button() throws InterruptedException {
 		admininvoiceuploadpage.ClickDoneButton();
-		}
+   }
 
 
 }

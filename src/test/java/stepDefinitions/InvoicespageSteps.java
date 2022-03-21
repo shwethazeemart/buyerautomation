@@ -44,11 +44,11 @@ public class InvoicespageSteps {
 
 	@Given("User is Clicks in Uploads")
 	public void user_is_Clicks_in_Uploads() throws InterruptedException {
-		InvoicesPage.click_Uploads();
+		//InvoicesPage.click_Uploads();
 	}
 
 	@Then("User is Clicks in Upload invoice")
-	public void user_is_Clicks_in_Upload_invoice() {
+	public void user_is_Clicks_in_Upload_invoice() throws InterruptedException {
 		InvoicesPage.click_Uploadinvoice(); 
 	}
 
