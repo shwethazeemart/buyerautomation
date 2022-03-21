@@ -36,7 +36,7 @@ public class Admininvoiceprocesspage {
 	@FindBy(xpath = "(//a[@class='dropdown-item fntcs'])[2]")
 	private static WebElement Admininvoiceprocesspage_Newestfirst;
 
-	@FindBy(xpath = "(//button[text()='Process'])[2]")
+	@FindBy(xpath = "(//button[text()='Process'])")
 	private static WebElement Admininvoiceprocesspage_processbutton;
 
 	@FindBy(xpath = "//input[@placeholder='Enter Order No.']")
@@ -97,7 +97,8 @@ public class Admininvoiceprocesspage {
 
 	}
 
-	public void Clicks_the_Zeewebteseroutlet_of_process_button() {
+	public void ClicksOutlet_process_button() throws InterruptedException {
+		Thread.sleep(5000);
 		Admininvoiceprocesspage_processbutton.click();
 		try {
 			Thread.sleep(5000);
@@ -153,7 +154,6 @@ public class Admininvoiceprocesspage {
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
 
-
 	}
 
 	public void Clicks_validate_button() {
@@ -164,7 +164,6 @@ public class Admininvoiceprocesspage {
 		} 
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
-
 
 	} 
 
@@ -218,6 +217,8 @@ public class Admininvoiceprocesspage {
 		Admininvoiceprocesspage_publish_this_invoice_button.click();
 		
 	}
+
+	
 	
 
 

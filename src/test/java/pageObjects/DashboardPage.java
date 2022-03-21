@@ -253,7 +253,7 @@ public class DashboardPage {
 	
 	public void clickAdminInvoices() throws InterruptedException {
 		//driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		button_AdminInvoices.click();
 		
 		try {
