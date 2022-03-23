@@ -659,7 +659,7 @@ Scenario Outline: Verify the New recurring orders page of Buyer panel
              |username                               |  |password    |
              |buyerautomated3@gmail.com              |  |!123456Zm   |       
              
-             
+
 Scenario Outline: Verify the New Weekly Order page of Buyer panel
          Given User is on Login Page
          When User enter exact username"<username>"
@@ -953,7 +953,8 @@ Scenario Outline: Verify the Payment transactions page of Buyer panel
      Examples:
          |username                            |  |password    | |outletname  |
          |buyerautomated3@gmail.com           |  |!123456Zm   | |velu masala |
-             
+         
+@Smoke             
 Scenario Outline: Verify the Inventory Outlets lisen page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -961,6 +962,13 @@ Scenario Outline: Verify the Inventory Outlets lisen page of Buyer panel
           And User is click login button 
           Then User Clicks on Inventory in the side navigation menubar 
           And User click on outlets icon
+          Then User click on particular outlet in displayed outlet page
+          Then User click consumption report in displayed page
+          Then User select list in inventroy list
+          Then User click date radio button
+          Then User set select date from the calendar
+          Then User click show report icon
+          Then User Clicks on Inventory in the side navigation menubar 
           Then User click on settings
           And User click on settings close icon
           Then User click on Export download icon
@@ -984,10 +992,7 @@ Scenario Outline: Verify the Inventory Outlets lisen page of Buyer panel
          |username                       |  |password    ||outletname     ||outletnameone | |outletnametwo |
          |velumanieswaran2020@gmail.com  |  |!123456Zm   ||velu masala2020||sstmasala     | |sstmasala2020 |
          
-          @devSecond
-          Examples:
-         |username                       |  |password    ||outletname     ||outletnameone | |outletnametwo |
-         |buyerautomated3@gmail.com      |  |!123456Zm   ||velu masala2020||sstmasala     | |sstmasala2020 |
+          
          
                                               
 Scenario Outline: Verify the Inventory Record adjustment page of Buyer panel 
