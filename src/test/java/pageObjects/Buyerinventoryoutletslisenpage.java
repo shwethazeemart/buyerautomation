@@ -96,6 +96,27 @@ public class Buyerinventoryoutletslisenpage {
 	@FindBy(xpath = "(//datatable-body-cell[contains(@class,'datatable-body-cell sort-active')])[2]")
 	private static WebElement Buyerinventoryoutletslisenpage_Outletname;
 	
+	
+	
+	@FindBy(xpath = "//div[contains(text(),'velu masala2020')]")
+	private static WebElement Buyerinventoryoutletslisenpage_ParticularOutlet;
+	
+	@FindBy(xpath = "//button[contains(text(),'Consumption report')]")
+	private static WebElement Buyerinventoryoutletslisenpage_Consumptionreport;
+	
+	@FindBy(xpath = "//div[text()=' sairam ']")
+	private static WebElement Buyerinventoryoutletslisenpage_InventoryList;
+	
+	@FindBy(xpath = "(//input[contains(@formcontrolname,'type')])[1]")
+	private static WebElement Buyerinventoryoutletslisenpage_RadioButton;
+	
+	@FindBy(xpath = "//button[contains(text(),'Show report')] ")
+	private static WebElement Buyerinventoryoutletslisenpage_ShowReport;
+	
+	
+	
+	
+	
 	public static void clickoutletsicon() {
 		Buyerinventoryoutletslisenpage_outletsicon.click();
 		try {
@@ -313,6 +334,89 @@ public class Buyerinventoryoutletslisenpage {
 			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 					.executeScript("return document.readyState").equals("complete"));
 
+		}
+		
+		//Consumption report
+
+		public static void particularOutletClick() throws InterruptedException {
+			Thread.sleep(5000);
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("window.scrollBy(0, 1000);");
+			Buyerinventoryoutletslisenpage_ParticularOutlet.click();
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+			} 
+			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+					.executeScript("return document.readyState").equals("complete"));
+			
+		}
+
+		public static void consumptionRepprtClick() throws InterruptedException {
+			Thread.sleep(5000);
+			JavascriptExecutor jse = (JavascriptExecutor)driver;
+			jse.executeScript("scroll(0, -250);");
+			Buyerinventoryoutletslisenpage_Consumptionreport.click();
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+			} 
+			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+					.executeScript("return document.readyState").equals("complete"));
+
+			
+		}
+
+		public static void selectInventoryList() throws InterruptedException {
+			WebElement list=driver.findElement(By.xpath("//div[@role='combobox']//input[1]"));
+			list.click();
+			Buyerinventoryoutletslisenpage_InventoryList.click();
+			Thread.sleep(5000);
+			WebElement outsidelist=driver.findElement(By.xpath("//label[contains(text(),'Inventory list:')]"));
+			outsidelist.click();
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+			} 
+			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+					.executeScript("return document.readyState").equals("complete"));
+			
+		}
+
+		public static void radioButtonClick() {
+			Buyerinventoryoutletslisenpage_RadioButton.click();
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+			} 
+			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+					.executeScript("return document.readyState").equals("complete"));
+
+		}
+
+		public static void dateSelectfromCalendar() {
+			WebElement DateBox=driver.findElement(By.xpath("//input[contains(@formcontrolname,'stockCountDate')]"));
+			JavascriptExecutor jse = (JavascriptExecutor) driver;
+			jse.executeScript("arguments[0].value='13 Dec 2021 - 17 Dec 2021';", DateBox);
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+			}
+			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+					.executeScript("return document.readyState").equals("complete"));
+			
+		}
+
+		public static void showReportClick() throws InterruptedException {
+			Thread.sleep(5000);
+			Buyerinventoryoutletslisenpage_ShowReport.click();
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+			} 
+			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+					.executeScript("return document.readyState").equals("complete"));
+			
 		}
 		
 	
