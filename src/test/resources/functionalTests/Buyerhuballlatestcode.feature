@@ -659,13 +659,16 @@ Scenario Outline: Verify the New recurring orders page of Buyer panel
              |username                               |  |password    |
              |buyerautomated3@gmail.com              |  |!123456Zm   |       
              
-              
+@Smoke              
 Scenario Outline: Verify the New Weekly Order page of Buyer panel
          Given User is on Login Page
          When User enter exact username"<username>"
          And User enter exact password"<password>"
          And User is click login button  
          And User Clicks Orders in the side navigation menubar
+         Then User click on patricular order in order page
+         Then User verify the display order details
+         Then User click on back button of particular order
          And User Clicks New order dropdown value
          Then User click on New weekly order
          Then User click on dropdown of weekly order
@@ -680,10 +683,6 @@ Scenario Outline: Verify the New Weekly Order page of Buyer panel
            |username                         |  |password    |
            |velumanieswaran2020@gmail.com    |  |!123456Zm   |     
            
-          @devSecond 
-         Examples:
-           |username                     |  |password    |
-           |buyerautomated3@gmail.com    |  |!123456Zm   |     
            
           
 Scenario Outline: Verify the Orders lisen page of Buyer panel
@@ -1371,7 +1370,7 @@ Scenario Outline: Verify the News page of Buyer panel
          |username                            |  |password    |
          |buyerautomated3@gmail.com           |  |!123456Zm   |
     
-@Smoke
+
 Scenario Outline: Verify the Outlets page of Final approver Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>" 
