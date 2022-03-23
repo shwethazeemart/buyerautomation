@@ -1,6 +1,7 @@
 Feature: verify Admin panel Entier test all the page
 
- 
+
+
 Scenario Outline: Verify the Suppliers page in view outlets Admin hub    
   
           Given User are available in login page
@@ -220,11 +221,7 @@ Scenario Outline: Verify the Users page of New Buyer user in Admin panel
          |velumanisabari2009@gmail.com |  |#f=6T7uX    ||Shwetha   ||RM       ||ATZ       ||velumani201978@gmail.com  ||+6512345678 |
 
   
-<<<<<<< HEAD
- 
-=======
 
->>>>>>> 03d57ebcbaa787d13a61770dc5e6247b855ecac4
 Scenario Outline: Verify the Buyers outlets page of Admin panel   
   
           Given User are available in login page
@@ -303,7 +300,7 @@ Scenario Outline: Verify the Invoice Process page of Admin panel
 
 
    
-@Smoke
+
 Scenario Outline: Verify the Upload Invoice page of Admin panel 
   
           Given User are available in login page
@@ -1161,7 +1158,7 @@ Scenario Outline: Verify the Admin Supplier Screen Upload Subscription Invoice
       | username                         | | password   | |title         | |shortdescrip | |fulldescrip                  ||label|
       | velumanisabari2009@gmail.com     | | #f=6T7uX   | |Zm Automation | |Hiiii        | |Have to create a notification||velu|
       
-         
+      
 Scenario Outline: Verify the Suppliers screen  view outlets copy and apply setting    
           Given User are available in login page
           When User is enter exact username"<username>"  

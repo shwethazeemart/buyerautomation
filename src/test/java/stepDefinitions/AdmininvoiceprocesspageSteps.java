@@ -48,11 +48,12 @@ public class AdmininvoiceprocesspageSteps {
 	    admininvoiceprocesspage.Clicks_in_Newest_first();
 	}
 
-	@Then("User is Clicks the Zeewebteseroutlet of process button")
-	public void user_is_Clicks_the_Zeewebteseroutlet_of_process_button() {
-	   admininvoiceprocesspage.Clicks_the_Zeewebteseroutlet_of_process_button();
-	}
-
+	//@Then("User is Clicks the outlet process button")
+	//public void user_is_Clicks_the_outlet_process_button() throws InterruptedException {
+	   //admininvoiceprocesspage.ClicksOutlet_process_button();
+	//}
+	
+	    
 	@Then("User is Enter Order number in the Order number field{string}")
 	public void user_is_Enter_Order_number_in_the_Order_number_field(String ordernumber) throws InterruptedException {
 	    admininvoiceprocesspage.Enter_Order_number_in_the_Order_number_field(ordernumber);
