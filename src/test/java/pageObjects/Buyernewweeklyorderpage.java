@@ -1,5 +1,7 @@
 package pageObjects;
 
+
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -50,13 +52,21 @@ public class Buyernewweeklyorderpage {
 	private static WebElement Buyernewweeklyorderpage_Uploadandreviewbutton;
 	
 	
+	@FindBy(xpath = "//div[text()=' $141.24 ']") 
+	private static WebElement Buyernewweeklyorderpage_ParticularOrder;
+	
+	@FindBy(xpath = "//p[contains(text(),'Orders')]") 
+	private static WebElement Buyernewweeklyorderpage_BackButton;
+	
+	
 	 
 	
 	
 
-	public static void Clickonnewweeklyorder() {
+	public static void Clickonnewweeklyorder() throws InterruptedException {
 		//WebElement newWeeklyOrder = driver.findElement(By.linkText("New weekly order"));
 		//newWeeklyOrder.click();
+		Thread.sleep(5000);
 		Buyernewweeklyorderpage_Newweeklyorder.click();
 		try {
 			Thread.sleep(5000);
@@ -135,6 +145,43 @@ public class Buyernewweeklyorderpage {
 		} 
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
+	}
+	
+	//verify order number
+
+	public static void particularOrderClick() {
+		Buyernewweeklyorderpage_ParticularOrder.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	public static void displayOrderVerify() throws InterruptedException {
+		Thread.sleep(5000);
+		boolean datetitle=driver.findElement(By.xpath("//div[contains(text(),'Placed on 23 Mar 2022')]")).isDisplayed();
+		System.out.println(datetitle);
+		Assert.assertEquals(datetitle,true);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public static void backButtonClick() {
+		Buyernewweeklyorderpage_BackButton.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
 	} 
 	
 	
