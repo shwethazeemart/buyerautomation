@@ -96,6 +96,18 @@ public class BuyerinventorySKUlisenpage {
 	
 	
 	
+	@FindBy(xpath = "(//span[contains(@data-placement,'bottom')])[1]")
+	private static WebElement BuyerinventorySKUlisenpage_FirstSKU;
+	
+	@FindBy(xpath = "//span[contains(text(),'Settings')]")
+	private static WebElement BuyerinventorySKUlisenpage_SettingIcon;
+	
+	@FindBy(xpath = "(//img[contains(@src,'assets/zmcore/img/close-blue@22.png')])[6]")
+	private static WebElement BuyerinventorySKUlisenpage_CloseIcon;
+	
+	
+	
+	
 	
 	 
 
@@ -314,6 +326,43 @@ public class BuyerinventorySKUlisenpage {
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
 		
+		
+	}
+	//Activity
+
+	public static void firstSKUClick() throws InterruptedException {
+		Thread.sleep(5000);
+		BuyerinventorySKUlisenpage_FirstSKU.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+	}
+
+	public static void settingIconClick() throws InterruptedException {
+		Thread.sleep(5000);
+		BuyerinventorySKUlisenpage_SettingIcon.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+		
+	}
+
+	public static void closeIconClick() {
+		BuyerinventorySKUlisenpage_CloseIcon.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
 		
 	}
 
