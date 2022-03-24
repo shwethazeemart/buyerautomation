@@ -127,4 +127,38 @@ public class Buyerreportinvoicevariance {
 		Buyerreportinvoicevariancepage.grnIconClick();
 	}
 	
+	//receving report
+	
+	@Then("User click receving reports")
+	public void user_click_receving_reports() throws InterruptedException {
+		Buyerreportinvoicevariancepage.recevingReportClick();
+	}
+
+	@Then("User select on outlets dropdown list in receving report page")
+	public void user_select_on_outlets_dropdown_list_in_receving_report_page() {
+		WebElement Outlet = Buyerreportinvoicevariancepage.getDropDownElementOutlet();
+		Select select=new Select(Outlet);
+		select.selectByVisibleText("velu masala2020");
+	}
+
+	@Then("User select on supplier in receving report page")
+	public void user_select_on_supplier_in_receving_report_page() {
+		Buyerreportinvoicevariancepage.selectSupplier(); 
+	}
+
+	@Then("User click on radio button order date field")
+	public void user_click_on_radio_button_order_date_field() throws InterruptedException {
+		Buyerreportinvoicevariancepage.radioButtonClick();
+	}
+
+	@Then("User select date from calendar in receving report page")
+	public void user_select_date_from_calendar_in_receving_report_page() {
+		Buyerreportinvoicevariancepage.selectdatefromCalendar();
+	}
+
+	@Then("User click on generate report button in receving report page")
+	public void user_click_on_generate_report_button_in_receving_report_page() {
+		Buyerreportinvoicevariancepage.generateReportClick();
+	}
+	
 	}

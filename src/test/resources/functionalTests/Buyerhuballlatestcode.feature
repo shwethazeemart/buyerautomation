@@ -57,13 +57,20 @@ Scenario Outline: Verify the Dashboard lisen page of Buyer panel
          |buyerautomated3@gmail.com           |  |!123456Zm   ||100pipers|
          
          
-
+@Smoke
 Scenario Outline: Verify the Reports invoice variance Category page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
           And User enter exact password"<password>"
           And User is click login button 
-          Then User Clicks on Reports in the side navigation menubar 
+          Then User Clicks on Reports in the side navigation menubar
+          Then User click receving reports
+          Then User select on outlets dropdown list in receving report page
+          Then User select on supplier in receving report page
+          Then User click on radio button order date field
+          Then User select date from calendar in receving report page
+          Then User click on generate report button in receving report page 
+          Then User Clicks on Reports in the side navigation menubar
           Then User click on Invoice variance icon
           Then User click on grn icon invoicevariance page
           And User click on search box in invoice variance
@@ -954,7 +961,7 @@ Scenario Outline: Verify the Payment transactions page of Buyer panel
          |username                            |  |password    | |outletname  |
          |buyerautomated3@gmail.com           |  |!123456Zm   | |velu masala |
          
-@Smoke             
+             
 Scenario Outline: Verify the Inventory Outlets lisen page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -1048,7 +1055,7 @@ Scenario Outline: Verify the Inventory Record adjustment page of Buyer panel
          |buyerautomated3@gmail.com           |  |!123456Zm   ||   10   ||eswaranvelufound10  ||10     |   |velumanimissing10||10         ||velupromotions10||velutrnasferin10||velutransferout10||veluwastage10|
            
   
-@Smoke         
+       
 Scenario Outline: Verify the Inventory SKU lisen page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"

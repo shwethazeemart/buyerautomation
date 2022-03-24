@@ -2,6 +2,7 @@ package pageObjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -74,13 +75,28 @@ public class Buyerreportinvoicevariancepage {
 	@FindBy(xpath = "//img[@src='../assets/zmcore/img/left-report-b-icon.svg']/following-sibling::p[1]")
 	private static WebElement Buyerreportinvoicevariancepage_Reportsbackbutton;
 	
+	//Receving report
+	
+	@FindBy(xpath = "//h1[contains(text(),'Receiving report')]")
+	private static WebElement Buyerreportinvoicevariancepage_RecevingReport;
+	
+	@FindBy(xpath = "//select[contains(@formcontrolname,'outletId')]")
+	private static WebElement Buyerreportinvoicevariancepage_Outlet;
+	
+	@FindBy(xpath = "(//input[contains(@name,'periodRadio')])[2]")
+	private static WebElement Buyerreportinvoicevariancepage_RadioButton;
+	
+	@FindBy(xpath = "//button[contains(text(),'Generate report')]")
+	private static WebElement Buyerreportinvoicevariancepage_GenerateReport;
+	
 	
 	
 	 
-	public static void Clickinvoicevarianceicon() {
+	public static void Clickinvoicevarianceicon() throws InterruptedException {
+		Thread.sleep(5000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 	    js.executeScript("window.scrollBy(0, 1000);");
-		WebElement invoiceVar = driver.findElement(By.className("violetBox"));
+		WebElement invoiceVar = driver.findElement(By.xpath("//h1[contains(text(),'Invoice variance')]"));
 		invoiceVar.click();
 		//Buyerreportinvoicevariancepage_Invoicevariance.click(); 
 		try {
@@ -247,6 +263,86 @@ public class Buyerreportinvoicevariancepage {
 					.executeScript("return document.readyState").equals("complete"));
 			
 		}
+		
+		//receving report
+		
+		public static void recevingReportClick() throws InterruptedException {
+			Thread.sleep(5000);
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+		    js.executeScript("window.scrollBy(0, 1000);");
+			Buyerreportinvoicevariancepage_RecevingReport.click();
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+			} 
+			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+					.executeScript("return document.readyState").equals("complete"));
+			
+		}
+		
+		public static void SelectOutlet() throws InterruptedException {
+			Thread.sleep(5000);
+			Buyerreportinvoicevariancepage_Outlet.click();
+			Thread.sleep(5000);
+			try { 
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+			}
+			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+					.executeScript("return document.readyState").equals("complete"));
+
+		}
+		public static WebElement getDropDownElementOutlet() {
+			return Buyerreportinvoicevariancepage_Outlet;
+		
+		}
+		public static void selectSupplier() {
+			driver.findElement(By.xpath("//div[@role='combobox']//input[1]")).sendKeys("VELU MASALA",Keys.ENTER);
+			try { 
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+			}
+			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+					.executeScript("return document.readyState").equals("complete"));
+
+			
+		}
+		public static void radioButtonClick() throws InterruptedException {
+			Thread.sleep(5000);
+			Buyerreportinvoicevariancepage_RadioButton.click();
+			try { 
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+			}
+			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+					.executeScript("return document.readyState").equals("complete"));
+			
+		}
+		public static void selectdatefromCalendar() {
+			WebElement DateBox=driver.findElement(By.xpath("//input[contains(@formcontrolname,'periodOrderDate')]"));
+			JavascriptExecutor jse = (JavascriptExecutor) driver;
+			jse.executeScript("arguments[0].value='1 Jan 2022 - 24 Mar 2022';", DateBox);
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+			}
+			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+					.executeScript("return document.readyState").equals("complete"));
+
+			
+		}
+		public static void generateReportClick() {
+			//Thread.sleep(5000);
+			Buyerreportinvoicevariancepage_GenerateReport.click();
+			try { 
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+			}
+			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+					.executeScript("return document.readyState").equals("complete"));
+			
+		}
+		
 		
 	
 	}
