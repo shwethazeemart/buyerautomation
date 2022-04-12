@@ -57,13 +57,20 @@ Scenario Outline: Verify the Dashboard lisen page of Buyer panel
          |buyerautomated3@gmail.com           |  |!123456Zm   ||100pipers|
          
          
-
+@Smoke
 Scenario Outline: Verify the Reports invoice variance Category page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
           And User enter exact password"<password>"
           And User is click login button 
-          Then User Clicks on Reports in the side navigation menubar 
+          Then User Clicks on Reports in the side navigation menubar
+          Then User click receving reports
+          Then User select on outlets dropdown list in receving report page
+          Then User select on supplier in receving report page
+          Then User click on radio button order date field
+          Then User select date from calendar in receving report page
+          Then User click on generate report button in receving report page 
+          Then User Clicks on Reports in the side navigation menubar
           Then User click on Invoice variance icon
           Then User click on grn icon invoicevariance page
           And User click on search box in invoice variance
@@ -659,13 +666,16 @@ Scenario Outline: Verify the New recurring orders page of Buyer panel
              |username                               |  |password    |
              |buyerautomated3@gmail.com              |  |!123456Zm   |       
              
-              
+
 Scenario Outline: Verify the New Weekly Order page of Buyer panel
          Given User is on Login Page
          When User enter exact username"<username>"
          And User enter exact password"<password>"
          And User is click login button  
          And User Clicks Orders in the side navigation menubar
+         Then User click on patricular order in order page
+         Then User verify the display order details
+         Then User click on back button of particular order
          And User Clicks New order dropdown value
          Then User click on New weekly order
          Then User click on dropdown of weekly order
@@ -680,10 +690,6 @@ Scenario Outline: Verify the New Weekly Order page of Buyer panel
            |username                         |  |password    |
            |velumanieswaran2020@gmail.com    |  |!123456Zm   |     
            
-          @devSecond 
-         Examples:
-           |username                     |  |password    |
-           |buyerautomated3@gmail.com    |  |!123456Zm   |     
            
           
 Scenario Outline: Verify the Orders lisen page of Buyer panel
@@ -954,6 +960,7 @@ Scenario Outline: Verify the Payment transactions page of Buyer panel
      Examples:
          |username                            |  |password    | |outletname  |
          |buyerautomated3@gmail.com           |  |!123456Zm   | |velu masala |
+         
              
 Scenario Outline: Verify the Inventory Outlets lisen page of Buyer panel 
           Given User is on Login Page
@@ -962,6 +969,13 @@ Scenario Outline: Verify the Inventory Outlets lisen page of Buyer panel
           And User is click login button 
           Then User Clicks on Inventory in the side navigation menubar 
           And User click on outlets icon
+          Then User click on particular outlet in displayed outlet page
+          Then User click consumption report in displayed page
+          Then User select list in inventroy list
+          Then User click date radio button
+          Then User set select date from the calendar
+          Then User click show report icon
+          Then User Clicks on Inventory in the side navigation menubar 
           Then User click on settings
           And User click on settings close icon
           Then User click on Export download icon
@@ -985,10 +999,7 @@ Scenario Outline: Verify the Inventory Outlets lisen page of Buyer panel
          |username                       |  |password    ||outletname     ||outletnameone | |outletnametwo |
          |velumanieswaran2020@gmail.com  |  |!123456Zm   ||velu masala2020||sstmasala     | |sstmasala2020 |
          
-          @devSecond
-          Examples:
-         |username                       |  |password    ||outletname     ||outletnameone | |outletnametwo |
-         |buyerautomated3@gmail.com      |  |!123456Zm   ||velu masala2020||sstmasala     | |sstmasala2020 |
+          
          
                                               
 Scenario Outline: Verify the Inventory Record adjustment page of Buyer panel 
@@ -1044,7 +1055,7 @@ Scenario Outline: Verify the Inventory Record adjustment page of Buyer panel
          |buyerautomated3@gmail.com           |  |!123456Zm   ||   10   ||eswaranvelufound10  ||10     |   |velumanimissing10||10         ||velupromotions10||velutrnasferin10||velutransferout10||veluwastage10|
            
   
-         
+       
 Scenario Outline: Verify the Inventory SKU lisen page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -1052,7 +1063,10 @@ Scenario Outline: Verify the Inventory SKU lisen page of Buyer panel
           And User is click login button 
           Then User Clicks on Inventory in the side navigation menubar 
           And User click on outlets icon
-          Then User clicks on outlet 
+          Then User clicks on outlet
+          Then User click on first sku in the sku list
+          Then User click on setting icon in sku list
+          Then User click close icon of sku 
           And User click on New stock count
           Then User click on New stock count close icon
           And User click on Record Adjustment
@@ -1080,10 +1094,7 @@ Scenario Outline: Verify the Inventory SKU lisen page of Buyer panel
          |velumanieswaran2020@gmail.com   |  |!123456Zm   |
          
               
-     @devSecond  
-     Examples:
-         |username                        |  |password    | 
-         |buyerautomated3@gmail.com       |  |!123456Zm   |
+     
                
 Scenario Outline: Verify the Outlets page of Buyer panel 
           Given User is on Login Page
@@ -1371,7 +1382,7 @@ Scenario Outline: Verify the News page of Buyer panel
          |username                            |  |password    |
          |buyerautomated3@gmail.com           |  |!123456Zm   |
     
-@Smoke
+
 Scenario Outline: Verify the Outlets page of Final approver Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>" 

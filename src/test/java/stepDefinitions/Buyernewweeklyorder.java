@@ -42,7 +42,7 @@ public class Buyernewweeklyorder {
 	}
 	
 	@Then("User click on New weekly order")
-	public void user_click_on_New_weekly_order() {
+	public void user_click_on_New_weekly_order() throws InterruptedException {
 	    Buyernewweeklyorderpage.Clickonnewweeklyorder();
 	}
 
@@ -76,5 +76,20 @@ public class Buyernewweeklyorder {
 	    Buyernewweeklyorderpage.Clickonuploadandreviewbutton();
 	}
 
+	//verify order number
 	
+	@Then("User click on patricular order in order page")
+	public void user_click_on_patricular_order_in_order_page() {
+		Buyernewweeklyorderpage.particularOrderClick();
+	}
+
+	@Then("User verify the display order details")
+	public void user_verify_the_display_order_details() throws InterruptedException {
+		Buyernewweeklyorderpage.displayOrderVerify();
+	}
+
+	@Then("User click on back button of particular order")
+	public void user_click_on_back_button_of_particular_order() {
+		Buyernewweeklyorderpage.backButtonClick();
+	}
 }

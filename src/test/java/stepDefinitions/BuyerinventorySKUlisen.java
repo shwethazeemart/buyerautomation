@@ -150,6 +150,21 @@ public class BuyerinventorySKUlisen {
 		BuyerinventorySKUlisenpage.clicktheOutlet();
 	}
 
+	//Activity
 	
+	@Then("User click on first sku in the sku list")
+	public void user_click_on_first_sku_in_the_sku_list() throws InterruptedException {
+		BuyerinventorySKUlisenpage.firstSKUClick();
+	}
+
+	@Then("User click on setting icon in sku list")
+	public void user_click_on_setting_icon_in_sku_list() throws InterruptedException {
+		BuyerinventorySKUlisenpage.settingIconClick();
+	}
+
+	@Then("User click close icon of sku")
+	public void user_click_close_icon_of_sku() {
+		BuyerinventorySKUlisenpage.closeIconClick();
+	}
 
 }

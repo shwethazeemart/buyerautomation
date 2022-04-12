@@ -132,6 +132,38 @@ public class Buyerinventoryoutletslisen {
 	}
 
 
+//Consumption report
+	
+	@Then("User click on particular outlet in displayed outlet page")
+	public void user_click_on_particular_outlet_in_displayed_outlet_page() throws InterruptedException {
+		Buyerinventoryoutletslisenpage.particularOutletClick(); 
+	}
+
+	@Then("User click consumption report in displayed page")
+	public void user_click_consumption_report_in_displayed_page() throws InterruptedException {
+		Buyerinventoryoutletslisenpage.consumptionRepprtClick(); 
+	}
+
+	@Then("User select list in inventroy list")
+	public void user_select_list_in_inventroy_list() throws InterruptedException {
+		Buyerinventoryoutletslisenpage.selectInventoryList();
+	}
+
+	@Then("User click date radio button")
+	public void user_click_date_radio_button() {
+		Buyerinventoryoutletslisenpage.radioButtonClick();
+	}
+
+	@Then("User set select date from the calendar")
+	public void user_set_select_date_from_the_calendar() {
+		Buyerinventoryoutletslisenpage.dateSelectfromCalendar(); 
+	}
+
+	@Then("User click show report icon")
+	public void user_click_show_report_icon() throws InterruptedException {
+		//Buyerinventoryoutletslisenpage.showReportClick(); 
+	}
+
 
 
 

@@ -1,6 +1,7 @@
 Feature: verify Admin panel Entier test all the page
 
- 
+
+
 Scenario Outline: Verify the Suppliers page in view outlets Admin hub    
   
           Given User are available in login page
@@ -220,7 +221,7 @@ Scenario Outline: Verify the Users page of New Buyer user in Admin panel
          |velumanisabari2009@gmail.com |  |#f=6T7uX    ||Shwetha   ||RM       ||ATZ       ||velumani201978@gmail.com  ||+6512345678 |
 
   
-@Smoke 
+
 Scenario Outline: Verify the Buyers outlets page of Admin panel   
   
           Given User are available in login page
@@ -268,7 +269,7 @@ Scenario Outline: Verify the Buyers outlets page of Admin panel
 
 
 
-
+@Smoke
 Scenario Outline: Verify the Invoice Process page of Admin panel 
   
           Given User are available in login page
@@ -280,21 +281,22 @@ Scenario Outline: Verify the Invoice Process page of Admin panel
           Then User is Clicks in Sort by dropdown
           And User are Clicks in Newest first
           Then User is Clicks the outlet process button
+          Then User select on supplier in dropdown field
+          When User are Select date in the invoice date field
+          And User are Enter Invoice number in the invoice number field"<invoicenumber>"
+          Then User is Clicks validate button
           Then User is Enter Order number in the Order number field"<ordernumber>"
           And User are Clicks Use data button
           Then User is Clicks Yes processed POPUP message
-          And User are Enter Invoice number in the invoice number field"<invoicenumber>"
-          Then User is Clicks validate button
-          When User are Select date in the invoice date field
           When User is Select payment terms in payment terms dropdown
           And User are Clear the Delivery fee textbox
           Then User is Enter the value in delivery fee field textbox"<deliveryfees>"
           And User are Clicks publish  this invoice button
-          Then It should display the particular invoice in invoices processed icon
+          
           
     Examples:
          |username                     |  |password    ||ordernumber ||invoicenumber||deliveryfess|
-         |velumanisabari2009@gmail.com |  |#f=6T7uX    ||202012010002||INV-2020120  ||10          | 
+         |velumanisabari2009@gmail.com |  |#f=6T7uX    ||202012010002||INV-2020129  ||10          | 
 
 
    
@@ -1156,7 +1158,7 @@ Scenario Outline: Verify the Admin Supplier Screen Upload Subscription Invoice
       | username                         | | password   | |title         | |shortdescrip | |fulldescrip                  ||label|
       | velumanisabari2009@gmail.com     | | #f=6T7uX   | |Zm Automation | |Hiiii        | |Have to create a notification||velu|
       
-         
+      
 Scenario Outline: Verify the Suppliers screen  view outlets copy and apply setting    
           Given User are available in login page
           When User is enter exact username"<username>"  

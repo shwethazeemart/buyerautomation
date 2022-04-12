@@ -48,11 +48,12 @@ public class AdmininvoiceprocesspageSteps {
 	    admininvoiceprocesspage.Clicks_in_Newest_first();
 	}
 
-	@Then("User is Clicks the Zeewebteseroutlet of process button")
-	public void user_is_Clicks_the_Zeewebteseroutlet_of_process_button() {
-	   admininvoiceprocesspage.Clicks_the_Zeewebteseroutlet_of_process_button();
-	}
-
+	//@Then("User is Clicks the outlet process button")
+	//public void user_is_Clicks_the_outlet_process_button() throws InterruptedException {
+	   //admininvoiceprocesspage.ClicksOutlet_process_button();
+	//}
+	
+	    
 	@Then("User is Enter Order number in the Order number field{string}")
 	public void user_is_Enter_Order_number_in_the_Order_number_field(String ordernumber) throws InterruptedException {
 	    admininvoiceprocesspage.Enter_Order_number_in_the_Order_number_field(ordernumber);
@@ -85,9 +86,9 @@ public class AdmininvoiceprocesspageSteps {
 
 	@When("User is Select payment terms in payment terms dropdown")
 	public void user_is_Select_payment_terms_in_payment_terms_dropdown() {
-		WebElement NET60 = Admininvoiceprocesspage.getDropDownOwnerElement();
-		Select select=new Select(NET60);
-		select.selectByIndex(12);
+		WebElement COD = Admininvoiceprocesspage.getDropDownOwnerElement();
+		Select select=new Select(COD);
+		select.selectByVisibleText("COD");
 	}
 
 	@And("User are Clear the Delivery fee textbox")
@@ -102,7 +103,7 @@ public class AdmininvoiceprocesspageSteps {
 
 	@And("User are Clicks publish  this invoice button")
 	public void user_are_Clicks_publish_this_invoice_button() {
-	    //admininvoiceprocesspage.Clicks_publish_this_invoice_button();
+	    admininvoiceprocesspage.Clicks_publish_this_invoice_button();
 	}
 
 	@Then("It should display the particular invoice in invoices processed icon")
@@ -114,7 +115,17 @@ public class AdmininvoiceprocesspageSteps {
 
 
 
-	
+	@Then("User is Clicks the outlet process button")
+	public void user_is_Clicks_the_outlet_process_button() throws InterruptedException {
+		 admininvoiceprocesspage.outletsProcessClick(); 
+	}
+
+	@Then("User select on supplier in dropdown field")
+	public void user_select_on_supplier_in_dropdown_field() {
+		WebElement VELUMASALA2 = Admininvoiceprocesspage.getDropDownOwnerElement0fvelumasala2();
+		Select select=new Select(VELUMASALA2);
+		select.selectByVisibleText("VELU MASALA2");
+	}
 	
 	
 	

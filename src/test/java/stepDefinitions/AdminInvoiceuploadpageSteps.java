@@ -47,6 +47,10 @@ public class AdminInvoiceuploadpageSteps {
     public void user_Clicks_Login_buttonadmin() throws InterruptedException {
         logInPage.click_LoginBtnadmin();
     }*/
+	
+	
+	
+
 	@When("User is enter exact username{string}")
 	public void user_is_enter_exact_username_guna_zeemart_asia(String username) {
 	    admininvoiceuploadpage.enter_exact_username_guna_zeemart_asia(username);
@@ -85,14 +89,14 @@ public class AdminInvoiceuploadpageSteps {
 	}
 
 	@Then("User is Clicks the upload file")
-	public void user_is_Clicks_the_upload_file() {
+	public void user_is_Clicks_the_upload_file() throws InterruptedException {
 	   admininvoiceuploadpage.Clicks_the_upload_file();
 	}
 
 	@Then("User is Clicks the Done button")
-	public void user_is_Clicks_the_Done_button() {
+	public void user_is_Clicks_the_Done_button() throws InterruptedException {
 		admininvoiceuploadpage.ClickDoneButton();
-		}
+   }
 
 
 }
