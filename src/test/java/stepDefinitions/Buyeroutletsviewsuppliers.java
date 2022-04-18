@@ -68,7 +68,17 @@ public class Buyeroutletsviewsuppliers {
 	public void user_click_on_Edit_tags_close_icon() {
 	    Buyeroutletsviewsupplierspage.Clickonedittagscloseicon();
 	}
-
+	
+	@Then("User click on the Disable button")
+	public void user_click_on_the_Disable_button() {
+		Buyeroutletsviewsupplierspage.ClickDisable();
+	}
+	
+	@Then("User click on Disable button close icon")
+	public void user_click_on_Disable_button_close_icon() {
+		Buyeroutletsviewsupplierspage.ClickDisableCloseIcon();
+	}
+	
 	@Then("User click on Delete button")
 	public void user_click_on_Delete_button() {
 	    Buyeroutletsviewsupplierspage.Clickondeletebutton();
@@ -78,15 +88,10 @@ public class Buyeroutletsviewsuppliers {
 	public void user_click_on_Delete_button_close_icon() {
 	    Buyeroutletsviewsupplierspage.Clickondeletebuttoncloseicon();
 	}
-
-	@Then("User click on options icon")
-	public void user_click_on_options_icon() {
-	    Buyeroutletsviewsupplierspage.Clickoptionsicon(); 
-	}
-
-	@Then("User click on copy to another outlet")
-	public void user_click_on_copy_to_another_outlet() {
-	   Buyeroutletsviewsupplierspage.Clickcopytoanotheroutlet();
+	   
+    @Then("User click on copy to other outlets")
+    public void user_click_on_copy_to_other_outlets() {
+	   Buyeroutletsviewsupplierspage.ClickCopytoOtherOutlets();
 	}
 
 	@Then("User click on select all icon")
@@ -94,25 +99,32 @@ public class Buyeroutletsviewsuppliers {
 	   Buyeroutletsviewsupplierspage.Clickonselectallicon();
 	}
 
-	@Then("User click on ok button")
-	public void user_click_on_ok_button() {
-	   Buyeroutletsviewsupplierspage.Clickonokbutton();
-	}
-
-	@Then("User click on Download marketlist")
-	public void user_click_on_Download_marketlist() {
-	    Buyeroutletsviewsupplierspage.Clickondownloadmarketlist();
-	} 
-	
 	@Then("User click on below select all icon")
 	public void user_click_on_below_select_all_icon() {
 		Buyeroutletsviewsupplierspage.Clickonbelowselectallicon();
 	}
 
+	@Then("User click on ok button")
+	public void user_click_on_ok_button() {
+	   Buyeroutletsviewsupplierspage.Clickonokbutton();
+	}
+	
 	@Then("User click on check box clear button")
 	public void user_click_on_check_box_clear_button() {
 	   Buyeroutletsviewsupplierspage.Clickonclearcheckbox();
 	}
+	
+	@Then("User click on options icon")
+	public void user_click_on_options_icon() {
+	    Buyeroutletsviewsupplierspage.Clickoptionsicon(); 
+	}
+	
+	@Then("User click on Download marketlist")
+	public void user_click_on_Download_marketlist() {
+	    Buyeroutletsviewsupplierspage.Clickondownloadmarketlist();
+	} 
+	
+	
 	
 	
 	

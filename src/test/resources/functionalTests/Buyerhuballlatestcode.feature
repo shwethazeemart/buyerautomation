@@ -57,7 +57,6 @@ Scenario Outline: Verify the Dashboard lisen page of Buyer panel
          |buyerautomated3@gmail.com           |  |!123456Zm   ||100pipers|
          
          
-@Smoke
 Scenario Outline: Verify the Reports invoice variance Category page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -1213,7 +1212,7 @@ Scenario Outline: Verify the Outlets manage details page of Buyer panel
       | username                      | | password   ||Name       | |WeeklyEmail          ||Email                      ||outletemail                  |
       | velumanieswaran2020@gmail.com | |!123456Zm   ||buyer      | |velumani@zeemart.asia||lingeshsabari2009@gmail.com||velumanieswaran2020@gmail.com| 
       
-
+@Smoke
 Scenario Outline: Verify the Outlets view suppliers page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>" 
@@ -1231,19 +1230,20 @@ Scenario Outline: Verify the Outlets view suppliers page of Buyer panel
           Then User click on Edit tags close icon
           And User click on Delete button
           Then User click on Delete button close icon
-          Then User click on check box clear button
-          And User click on options icon
-          Then User click on copy to another outlet
+          And User click on the Disable button
+          Then User click on Disable button close icon
+          Then User click on copy to other outlets
           And User click on select all icon
           Then User click on below select all icon
           Then User click on ok button
-          And User click on options icon 
+          Then User click on check box clear button
+          And User click on options icon          
           Then User click on Download marketlist
            
     @dev       
     Examples: 
       | username                          | | password   ||name      |
-      | velumanieswaran2020@gmail.com     | |!123456Zm   ||100pipers   |            
+      | velumanieswaran2020@gmail.com     | |!123456Zm   ||100pipers |            
      
            
       
