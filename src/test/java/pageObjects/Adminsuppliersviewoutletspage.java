@@ -141,8 +141,23 @@ public class Adminsuppliersviewoutletspage {
 	@FindBy(xpath = "//select[@id='country']")
 	private static WebElement Adminsuppliersviewoutletspage_Reason;
 	
+	@FindBy(xpath = "(//a[@class='dropdown-item'])[3]")
+	private static WebElement Adminsuppliersviewoutletspage_OutletTagsCustomName;
 	
+	@FindBy(xpath = "(//input[@type='checkbox'])[2]")
+	private static WebElement Adminsuppliersviewoutletspage_CheckoutOfOutlet;
 	
+	@FindBy(xpath = "//button[text()=' Copy to other outlets ']")
+	private static WebElement Adminsuppliersviewoutletspage_CopyToOtherOutlets;
+	
+	@FindBy(xpath = "(//button[text()='Select All'])[1]")
+	private static WebElement Adminsuppliersviewoutletspage_SelectAll;
+	
+	@FindBy(xpath = "(//button[contains(@class,'btn btn-clear-blue')])[3]")
+	private static WebElement Adminsuppliersviewoutletspage_BelowSelectAll;
+	
+	@FindBy(xpath = "//button[text()=' OK ']")
+	private static WebElement Adminsuppliersviewoutletspage_OkButton;
 	
 	public void Clicks_Suppliersicon() {
 		Adminsuppliersviewoutletspage_Suppliersicon.click();
@@ -547,6 +562,66 @@ public class Adminsuppliersviewoutletspage {
 	public static WebElement getEntertheReason() {
 		return Adminsuppliersviewoutletspage_Reason;
 	
+	}
+
+	public void ClicktheOutletTagsCustomNames() {
+		Adminsuppliersviewoutletspage_OutletTagsCustomName.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	public void ClickCheckoutOfOutlet() {
+		Adminsuppliersviewoutletspage_CheckoutOfOutlet.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	public void ClickCopyToOtherOutlets() {
+		Adminsuppliersviewoutletspage_CopyToOtherOutlets.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	public void ClickSelectAll() {
+		Adminsuppliersviewoutletspage_SelectAll.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	public void ClickBelowSelectAll() {
+		Adminsuppliersviewoutletspage_BelowSelectAll.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	public void ClickOkButton() {
+		Adminsuppliersviewoutletspage_OkButton.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
 	}
 
 	

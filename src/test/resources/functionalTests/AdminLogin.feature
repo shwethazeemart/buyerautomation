@@ -269,7 +269,7 @@ Scenario Outline: Verify the Buyers outlets page of Admin panel
 
 
 
-@Smoke
+
 Scenario Outline: Verify the Invoice Process page of Admin panel 
   
           Given User are available in login page
@@ -1158,7 +1158,7 @@ Scenario Outline: Verify the Admin Supplier Screen Upload Subscription Invoice
       | username                         | | password   | |title         | |shortdescrip | |fulldescrip                  ||label|
       | velumanisabari2009@gmail.com     | | #f=6T7uX   | |Zm Automation | |Hiiii        | |Have to create a notification||velu|
       
-      
+@Smoke      
 Scenario Outline: Verify the Suppliers screen  view outlets copy and apply setting    
           Given User are available in login page
           When User is enter exact username"<username>"  
@@ -1175,11 +1175,18 @@ Scenario Outline: Verify the Suppliers screen  view outlets copy and apply setti
           Then User click on apply outlet settings
           Then User select source outlet in dropdown list
           Then User click on select all icon in apply outlet settings page
-          Then User cclick on apply button in apply setings page  
+          Then User cclick on apply button in apply setings page 
+          And User click the Actions dropdown 
+          Then User click the Outlet tags and Custom names
+          Then User click on the checkox of Outlet tags page
+          Then User click the Copy to other outlets
+          Then User click the Select All 
+          Then User clicks the Below Select All 
+          Then User click the Ok button
           
      
     Examples:
          |username                     |  |password    ||suppliername |                            
-         |velumanisabari2009@gmail.com |  |#f=6T7uX    ||VELU MASALA10 |
+         |velumanisabari2009@gmail.com |  |#f=6T7uX    ||VELU FRUITS  |
             
                

@@ -63,7 +63,7 @@ public class AdminSupplierApplyoutlet {
 	public void user_select_source_outlet_in_dropdown_list() {
 		WebElement sourceoutlet = AdminSupplierApplyOutletpage.getOutletDropdownElement();
 		Select select=new Select(sourceoutlet);
-		select.selectByVisibleText("Sakthimasala100");
+		select.selectByVisibleText("sai fruits 250");
 	}
 	@Then("User click on select all icon in apply outlet settings page")
 	public void user_click_on_select_all_icon_in_apply_outlet_settings_page() {

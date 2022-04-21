@@ -96,8 +96,6 @@ public class Adminsuppliersviewoutletspagesteps {
 	    adminsuppliersviewoutletspage.Clicks_thecheckbox();
 	}
 
-	
-
 	@Then("User is Enter amount in minium order field{string}")
 	public void user_is_Enter_amount_in_minium_order_field(String minimumamount) {
 	    adminsuppliersviewoutletspage.Enter_minimumamount(minimumamount);
@@ -253,6 +251,37 @@ public class Adminsuppliersviewoutletspagesteps {
 		Select select=new Select(reason);
 		select.selectByIndex(2);	
 	}
+
+	@Then("User click the Outlet tags and Custom names")
+	public void user_click_the_Outlet_tags_and_Custom_names() {
+		adminsuppliersviewoutletspage.ClicktheOutletTagsCustomNames();
+	}
+
+	@Then("User click on the checkox of Outlet tags page")
+	public void user_click_on_the_checkox_of_Outlet_tags_page() {
+		adminsuppliersviewoutletspage.ClickCheckoutOfOutlet();
+	}
+
+	@Then("User click the Copy to other outlets")
+	public void user_click_the_Copy_to_other_outlets() {
+		adminsuppliersviewoutletspage.ClickCopyToOtherOutlets();
+	}
+
+	@Then("User click the Select All")
+	public void user_click_the_Select_All() {
+		adminsuppliersviewoutletspage.ClickSelectAll();
+	}
+
+	@Then("User clicks the Below Select All")
+	public void user_clicks_the_Below_Select_All() {
+		adminsuppliersviewoutletspage.ClickBelowSelectAll();
+	}
+
+	@Then("User click the Ok button")
+	public void user_click_the_Ok_button() {
+		adminsuppliersviewoutletspage.ClickOkButton();
+	}
+
 
 	
 }
