@@ -79,12 +79,23 @@ public class SupplierCompanySettings {
 	public void user_click_on_invoicing_in_company_settings() {
 		SupplierCompanySettingsPage.InvoicingIconClick();
 	}
+	
+	@Then("User Click on Default invoice date of Today")
+	public void user_Click_on_Default_invoice_date_of_Today() throws InterruptedException {
+		SupplierCompanySettingsPage.DefaultDateOfTodays();
+	}
+
+	@Then("User Click the Save button")
+	public void user_Click_the_Save_button() {
+		SupplierCompanySettingsPage.SaveBtn();
+	}
+
 	@Then("User click on integration in company settings")
-	public void user_click_on_integration_in_company_settings() {
+	public void user_click_on_integration_in_company_settings() throws InterruptedException {
 		SupplierCompanySettingsPage.IntegrationIconClick();
 	}
 	@Then("User click on subscription in company settings")
-	public void user_click_on_subscription_in_company_settings() {
+	public void user_click_on_subscription_in_company_settings() throws InterruptedException {
 		SupplierCompanySettingsPage.SubscriptionIconClick();
 	}
 	@Then("User click on view priceing options in subscription")

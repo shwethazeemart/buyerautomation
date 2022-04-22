@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)   
 
-@CucumberOptions(strict = true, features = "src/test/resources/functionalTests/AdminLogin.feature",
+@CucumberOptions(strict = true, features = "src/test/resources/functionalTests/SupplierHubAllTestcases.feature",
 
 tags="@Smoke",
 glue = { "stepDefinitions" },monochrome=true,dryRun=false, 
