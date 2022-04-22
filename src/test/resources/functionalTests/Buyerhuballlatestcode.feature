@@ -1212,7 +1212,7 @@ Scenario Outline: Verify the Outlets manage details page of Buyer panel
       | username                      | | password   ||Name       | |WeeklyEmail          ||Email                      ||outletemail                  |
       | velumanieswaran2020@gmail.com | |!123456Zm   ||buyer      | |velumani@zeemart.asia||lingeshsabari2009@gmail.com||velumanieswaran2020@gmail.com| 
       
-@Smoke
+
 Scenario Outline: Verify the Outlets view suppliers page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>" 

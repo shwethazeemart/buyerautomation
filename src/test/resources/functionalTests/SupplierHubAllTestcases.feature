@@ -282,7 +282,7 @@ Scenario Outline: Verify the Supplier Invoices Add Credit Note page
          |username                              ||password    |quantityvalue||reason         |
          |supplierautomated2@gmail.com          ||!123456Zm   |1            ||stock available|
          
-@Smoke         
+         
 Scenario Outline: Verify the Supplier Invoices Export page
          Given User is on available Login Page
           When User enter exact username"<username>"
@@ -413,7 +413,7 @@ Scenario Outline: Verify the Supplier customers location listing page
          |supplierautomated2@gmail.com  |  |!123456Zm  ||UEN-208999  ||saimanisairammasala||638312  ||19,Murugan temple street ||Singapore     ||velusai2032@gmail.com|
  
  
- 
+@Smoke
 Scenario Outline: Verify the Supplier Company Settings list 
          Given User is on available Login Page
           When User enter exact username"<username>"
@@ -424,6 +424,8 @@ Scenario Outline: Verify the Supplier Company Settings list
           Then User click on details in company settings
           Then User click on payments in company settings
           Then User click on invoicing in company settings
+          Then User Click on Default invoice date of Today
+          Then User Click the Save button
           Then User click on integration in company settings
           Then User click on subscription in company settings
           Then User click on view priceing options in subscription

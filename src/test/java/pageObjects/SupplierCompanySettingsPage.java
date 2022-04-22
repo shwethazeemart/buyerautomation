@@ -54,6 +54,12 @@ public class SupplierCompanySettingsPage {
 	//@FindBy(xpath = "(//div[@class='col-4']//div)[2]")
 	//private static WebElement SupplierCompanySettingsPage_InvoicingIcon;
 	
+	@FindBy(xpath = "(//input[@formcontrolname='isOrderDeliveryDate'])[1]")
+	private static WebElement SupplierCompanySettingsPage_DefaultDateOfTodays;
+	
+	@FindBy(xpath = "//button[@type='submit']")
+	private static WebElement SupplierCompanySettingsPage_SaveBtn;
+	
 	//@FindBy(xpath = "(//div[@class='col-4']//div)[2]")
 	//private static WebElement SupplierCompanySettingsPage_IntegrationIcon;
 	
@@ -62,16 +68,10 @@ public class SupplierCompanySettingsPage {
 	
 	//@FindBy(xpath = "(//div[@class='col-4']//div)[2]")
 	//private static WebElement SupplierCompanySettingsPage_ViewPricingOptions;
-	
-	
-	
-	
-	
-	
-	
+
 
 	public static void UserAccountClick() throws InterruptedException {
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		SupplierCompanySettingsPage_UserAccount.click();
 		try {
 			Thread.sleep(5000);
@@ -133,9 +133,36 @@ public class SupplierCompanySettingsPage {
 		
 	}
 
-	public static void IntegrationIconClick() {
+	public static void DefaultDateOfTodays() throws InterruptedException {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,750)");
+		Thread.sleep(5000);
+		SupplierCompanySettingsPage_DefaultDateOfTodays.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	public static void SaveBtn() {
+		SupplierCompanySettingsPage_SaveBtn.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+	
+	
+	public static void IntegrationIconClick() throws InterruptedException {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("scroll(0, -750);");
 		WebElement integration = driver.findElement(By.linkText("Integration"));
 		integration.click();
+		Thread.sleep(5000);
 		//SupplierCompanySettingsPage_IntegrationIcon.click();
 		try {
 			Thread.sleep(5000);
@@ -146,9 +173,10 @@ public class SupplierCompanySettingsPage {
 		
 	}
 
-	public static void SubscriptionIconClick() {
+	public static void SubscriptionIconClick() throws InterruptedException {
 		WebElement subscription = driver.findElement(By.linkText("Subscription"));
 		subscription.click();
+		Thread.sleep(5000);
 		//SupplierCompanySettingsPage_SubscriptionIcon.click();
 		try {
 			Thread.sleep(5000);
@@ -173,46 +201,6 @@ public class SupplierCompanySettingsPage {
 		
 		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+		
 }
