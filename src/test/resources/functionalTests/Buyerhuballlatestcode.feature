@@ -967,7 +967,7 @@ Scenario Outline: Verify the Payment transactions page of Buyer panel
          |username                            |  |password    | |outletname  |
          |buyerautomated3@gmail.com           |  |!123456Zm   | |velu masala |
          
-@Smoke             
+            
 Scenario Outline: Verify the Inventory Outlets lisen page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -1340,14 +1340,17 @@ Scenario Outline: Verify the Edit Users page of Buyer panel
          |username                     |  |password    ||title      ||Email                            ||mobilephone  | |username     |
          |buyerautomated3@gmail.com    |  |!123456Zm   ||AtoZ test  ||velumanieswaran2020@gmail.com    ||+65122456789 | |velumanitwo  | 
          
-              
-Scenario Outline: Verify the user name page of Buyer panel
+@Smoke             
+Scenario Outline: Verify the user name settings page of Buyer panel
          Given User is on Login Page
          When User enter exact username"<username>"
          And User enter exact password"<password>"
          And User is click login button 
          Then User click on user name in settings
          And User click on settings in user page
+         Then User click the Details tab
+         Then User click on the Preferences checkbox
+         Then User click on the Save button
          Then User click on Linked companies in settings page
          Then User click on velu masala actions dropdown in settings page
          Then User click on manage payment settings
@@ -1361,11 +1364,7 @@ Scenario Outline: Verify the user name page of Buyer panel
              |username                     |  |password    |
              |velumanieswaran2020@gmail.com | |!123456Zm   |     
              
-     @devSecond      
-     Examples:
-             |username                     |  |password    |
-             |buyerautomated3@gmail.com    |  |!123456Zm   |       
-             
+     
 Scenario Outline: Verify the News page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"

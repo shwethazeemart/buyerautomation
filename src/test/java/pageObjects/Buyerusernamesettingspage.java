@@ -43,6 +43,15 @@ public class Buyerusernamesettingspage {
 	@FindBy(xpath = "//span[text()=' Settings']")
 	private static WebElement Buyerusernamesettingspage_Settingdropdownicon;
 	
+	@FindBy(xpath = "//a[@class='tab active']")
+	private static WebElement Buyerusernamesettingspage_DetailsTab;
+	
+	@FindBy(xpath = "//input[@formcontrolname='customNameAndCode']")
+	private static WebElement Buyerusernamesettingspage_PerferencesCheckbox;
+	
+	@FindBy(xpath = "//button[text()=' Save ']")
+	private static WebElement Buyerusernamesettingspage_Save;
+	
 	@FindBy(xpath = "//a[text()=' Details ']/following-sibling::a")
 	private static WebElement Buyerusernamesettingspage_Linkedcompanies;
 	
@@ -94,7 +103,42 @@ public class Buyerusernamesettingspage {
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
 	}
+	public static void ClickDetailsTab() {
+		Buyerusernamesettingspage_DetailsTab.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+	
+	public static void ClickPerferencesCheckbox() {
+		 JavascriptExecutor jse = (JavascriptExecutor)driver;
+		 jse.executeScript("window.scrollBy(0,750)");
+		Buyerusernamesettingspage_PerferencesCheckbox.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+	
+	public static void ClickSave() {
+		Buyerusernamesettingspage_Save.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+	
+	
 	public static void Clickonlinkedcompanies() {
+		 JavascriptExecutor jse = (JavascriptExecutor)driver;
+		 jse.executeScript("scroll(0, -750);");
 		Buyerusernamesettingspage_Linkedcompanies.click();
 		try { 
 			Thread.sleep(5000);
@@ -148,53 +192,6 @@ public class Buyerusernamesettingspage {
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 }
