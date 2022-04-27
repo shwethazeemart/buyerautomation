@@ -55,7 +55,7 @@ public class Buyerreportspenpertagpage {
 	@FindBy(xpath = "(//button[@type='button'])[3]")
 	private static WebElement Buyerreportspenpertagpage_Applybutton;
 	
-	@FindBy(xpath = "//a[@class='filter-reset ml-3']")
+	@FindBy(xpath = "//div[@class='dubl-noti-window']//a[1]")
 	private static WebElement Buyerreportspenpertagpage_Resetbutton;
 	
 	@FindBy(xpath = "//div[@class='page__header']/following-sibling::div[1]")
@@ -161,8 +161,9 @@ public class Buyerreportspenpertagpage {
 		
 	}
 	public static void Clickonresetbutton() {
-		WebElement reset = driver.findElement(By.linkText("Reset"));
-		reset.click();
+		Buyerreportspenpertagpage_Resetbutton.click();
+		//WebElement reset = driver.findElement(By.linkText("Reset"));
+		//reset.click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {

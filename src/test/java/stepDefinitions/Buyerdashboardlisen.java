@@ -145,7 +145,7 @@ public class Buyerdashboardlisen {
 	}*/
 
 	@Then("User click on show favourites check box")
-	public void user_click_on_show_favourites_check_box() {
+	public void user_click_on_show_favourites_check_box() throws InterruptedException {
 	    Buyerdashboardlisenpage.Clickshowfavouritescheckbox();
 	}
 
@@ -205,18 +205,15 @@ public class Buyerdashboardlisen {
 	public void user_click_on_outletname_in_dashboard_page() {
 		Buyerdashboardlisenpage.OutletnameClick();
 	}
-	
-
-	
-	
+		
 	@Then("User click on upload image in drag and dorp filed")
 	public void user_click_on_upload_image_in_drag_and_dorp_filed() throws InterruptedException {
 	    Buyerdashboardlisenpage.Clickonuploadimage();
 	}
 
-	@Then("User click on Done button in drag and drop filed")
-	public void user_click_on_Done_button_in_drag_and_drop_filed() throws InterruptedException {
-	    Buyerdashboardlisenpage.ClickDonebutton();
+	@Then("User click the close icon i order page")
+	public void user_click_the_close_icon_i_order_page() {
+		Buyerdashboardlisenpage.ClickCloseIcon();
 	}
 
 

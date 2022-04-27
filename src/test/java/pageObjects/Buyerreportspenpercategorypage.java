@@ -54,8 +54,8 @@ public class Buyerreportspenpercategorypage {
 	@FindBy(xpath = "(//button[@type='button'])[3]")
 	private static WebElement Buyerreportspenpercategorypage_Applybutton;
 	
-	//@FindBy(xpath = "//input[@placeholder='Product code or name']")
-	//private static WebElement Buyerreportspenpercategorypage_Resetbutton;
+	@FindBy(xpath = "//a[@class='filter-reset ml-3']")
+	private static WebElement Buyerreportspenpercategorypage_Resetbutton;
 	
 	@FindBy(xpath = "//div[@class='page__header']/following-sibling::div[1]")
 	private static WebElement Buyerreportspenpercategorypage_Outside;
@@ -73,7 +73,7 @@ public class Buyerreportspenpercategorypage {
 	private static WebElement Buyerreportspenpercategorypage_Searchicon;
 	
 	
-	@FindBy(xpath = "(//div[contains(@class,'datatable-body-cell-label')])[3]")
+	@FindBy(xpath = "//div[text()=' Beer ']")
 	private static WebElement Buyerreportspenpercategorypage_Beercategory;
 	
 	@FindBy(xpath = "//select[contains(@id,'country')]")
@@ -183,8 +183,9 @@ public static void Selectdatefromcalendar() {
 		
 	}
 	public static void Clickresetbutton() {
-		WebElement reset = driver.findElement(By.linkText("Reset"));
-		reset.click();
+		Buyerreportspenpercategorypage_Resetbutton.click();
+		//WebElement reset = driver.findElement(By.linkText("Reset"));
+		//reset.click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {

@@ -40,16 +40,7 @@ public class Buyerinventoryoutletslisen {
 		Buyerinventoryoutletslisenpage.clickoutletsicon();
 	}
 
-	@Then("User click on settings")
-	public void user_click_on_settings() {
-		Buyerinventoryoutletslisenpage.clicksettings();
-	}
-
-	@Then("User click on settings close icon")
-	public void user_click_on_settings_close_icon() {
-		Buyerinventoryoutletslisenpage.clicksettingscloseicon();
-	}
-
+	
 	@Then("User click on Export download icon")
 	public void user_click_on_Export_download_icon() {
 		Buyerinventoryoutletslisenpage.clickexportdownloadicon();

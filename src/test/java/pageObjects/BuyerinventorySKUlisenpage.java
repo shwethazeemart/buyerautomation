@@ -48,7 +48,7 @@ public class BuyerinventorySKUlisenpage {
 	@FindBy(xpath = "//button[text()=' Adjustment ']")
 	private static WebElement BuyerinventorySKUlisenpage_Recordadjustment;
 	
-	@FindBy(xpath = "//h4[text()='Adjustment record']/following-sibling::button")
+	@FindBy(xpath = "(//img[@src='assets/zmcore/img/close-blue@22.png'])[2]")
 	private static WebElement BuyerinventorySKUlisenpage_Recordadjustmentcloseicon;
 	
 	@FindBy(xpath = "(//img[@src='./assets/zmcore/img/download-icon.svg'])[1]")

@@ -8,7 +8,7 @@ Scenario Outline: Verify the Dashboard lisen page of Buyer panel
           And User is click login button 
           Then User Clicks on Dashboard in the side navigation menubar 
           And User click on New order icon
-          Then User click on the supplier
+          Then User click on the supplier          
           And User click on show favourites check box
           Then User click on show favourites uncheck box
           And User click on filter in order page 
@@ -30,7 +30,7 @@ Scenario Outline: Verify the Dashboard lisen page of Buyer panel
           And User click on upload invoice icon
           Then User click on outletname in dashboard page
           And User click on upload image in drag and dorp filed
-          Then User click on Done button in drag and drop filed
+          Then User click the close icon i order page
           And User select dropdown spending overview list outletname
           Then User click on YTD icon
           And User click on Last year icon
@@ -49,15 +49,16 @@ Scenario Outline: Verify the Dashboard lisen page of Buyer panel
          @dev 
          Examples:
          |username                            |  |password    ||name     | 
-         |velumanieswaran2020@gmail.com       |  |!123456Zm   ||100pipers| 
+         |velumanieswaran2020@gmail.com       |  |!123456Zm   ||500pipers| 
          
-        @devSecond  
+         @devSecond
          Examples:
-         |username                            |  |password    ||name     | 
-         |buyerautomated3@gmail.com           |  |!123456Zm   ||100pipers|
+         |username                        |  |password    ||name     | 
+         |buyerautomated3@gmail.com       |  |!123456Zm   ||500pipers| 
          
-         
-Scenario Outline: Verify the Reports invoice variance Category page of Buyer panel 
+        
+      
+Scenario Outline: Verify the Reports invoice variance and Receving reports Category page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
           And User enter exact password"<password>"
@@ -102,10 +103,13 @@ Scenario Outline: Verify the Reports invoice variance Category page of Buyer pan
      @dev     
      Examples: 
       |username                      | | password   ||invoice     |
-      |velumanieswaran2020@gmail.com  | |!123456Zm   ||vel-1234567 |
+      |velumanieswaran2020@gmail.com  | |!123456Zm  ||INV-b789    |
       
     
-      
+      @devSecond     
+     Examples: 
+      |username                      | | password   ||invoice     |
+      |buyerautomated3@gmail.com     | |!123456Zm  ||INV-b789    |
       
       
   
@@ -143,10 +147,7 @@ Scenario Outline: Verify the Reports invoice variance Category page of Buyer pan
           Then User click on export download button in price updates
           Then User click on Reports back button in price updates
           
-     @devSecond 
-      Examples: 
-      | username                      | | password   ||invoice     ||outletname    |
-      |buyerautomated3@gmail.com      | |!123456Zm   ||vel-1234567 ||velumasala2020|
+     
          
             
      @dev 
@@ -160,7 +161,7 @@ Scenario Outline: Verify the Reports invoice variance Category page of Buyer pan
       |buyerautomated3@gmail.com      | |!123456Zm   ||100pipers | 
       
       
-  
+
 Scenario Outline: Verify the Reports spending per Category page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -168,23 +169,24 @@ Scenario Outline: Verify the Reports spending per Category page of Buyer panel
           And User is click login button 
           Then User Clicks on Reports in the side navigation menubar 
           Then User click on spending per category icon
-          And User select date from calendar in category         
-          And User click on search box in category
-          Then User Enter the category name in search box"<name>"          
+          And User select date from calendar in category               
           Then User click on search icon in category          
           Then User click on filter in category
           And User click on outlets in category
           Then User click on Check box in category
           Then User click on apply button in category
+          Then User click on filter in category
           And User click on reset button in category
           Then User click on outside in category
           Then User click on filter in category
           And User click on Suppliers in category
           Then User click on check box in category
           Then User click on apply button in category
+          Then User click on filter in category
           And User click on reset button in category
           Then User click on outside in category
           Then User select date from calendar in Beer
+          Then User click on search icon in category
           And User click on Beer category          
           And User select dropdown in month Beer
           Then User click on filter in category
@@ -458,7 +460,7 @@ Scenario Outline: Verify the Reports spending per supplier page of Buyer panel
       | buyerautomated3@gmail.com      | |!123456Zm   ||sabari250| |sabari250    |
     
    
-    
+     
 Scenario Outline: Verify the Reports spending per tag page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -536,12 +538,10 @@ Scenario Outline: Verify the Reports spending per tag page of Buyer panel
       | username                          | | password   ||name       |
       | velumanieswaran2020@gmail.com     | |!123456Zm   ||masala     | 
       
-   @devSecond       
-  Examples: 
-      | username                          | | password   ||name       |
-      | buyerautomated3@gmail.com         | |!123456Zm   ||masala     | 
-      
-      
+  @devSecond 
+    Examples:
+             |username                               |  |password    ||name       |
+             |buyerautomated3@gmail.com              |  |!123456Zm   ||masala     | 
 
 
 Scenario Outline: Verify the New Order page of Buyer panel
@@ -618,11 +618,13 @@ Scenario Outline: Verify the New Order outstanding options page of Buyer panel
            Examples:
              |username                         |  |password    | 
              |velumanieswaran2020@gmail.com    |  |!123456Zm   |  
-    
-              @devSecond
-           Examples:
-             |username                     |  |password    | 
-             |buyerautomated3@gmail.com    |  |!123456Zm   | 
+           
+           @devSecond 
+          Examples:
+             |username                               |  |password    |
+             |buyerautomated3@gmail.com              |  |!123456Zm   |       
+             
+          
 
 
 Scenario Outline: Verify the New recurring orders page of Buyer panel  
@@ -688,7 +690,12 @@ Scenario Outline: Verify the New Weekly Order page of Buyer panel
          Examples:
            |username                         |  |password    |
            |velumanieswaran2020@gmail.com    |  |!123456Zm   |     
-           
+         
+         @devSecond 
+          Examples:
+             |username                               |  |password    |
+             |buyerautomated3@gmail.com              |  |!123456Zm   |       
+               
            
           
 Scenario Outline: Verify the Orders lisen page of Buyer panel
@@ -872,7 +879,7 @@ Scenario Outline: Verify the Invoices upload page of Buyer panel
          Then User is Clicks in Upload invoice
          And User is Clicks on select outlet
          Then User is Clicks on upload the image
-         And User is Clicks on Upload button
+         
          
       @dev     
      Examples:
@@ -960,7 +967,7 @@ Scenario Outline: Verify the Payment transactions page of Buyer panel
          |username                            |  |password    | |outletname  |
          |buyerautomated3@gmail.com           |  |!123456Zm   | |velu masala |
          
-             
+@Smoke             
 Scenario Outline: Verify the Inventory Outlets lisen page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -975,8 +982,6 @@ Scenario Outline: Verify the Inventory Outlets lisen page of Buyer panel
           Then User set select date from the calendar
           Then User click show report icon
           Then User Clicks on Inventory in the side navigation menubar 
-          Then User click on settings
-          And User click on settings close icon
           Then User click on Export download icon
           And User click on new list "<outletnameone>"
           Then User click on new list close icon
