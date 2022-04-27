@@ -66,7 +66,7 @@ public class Buyerreportinvoicevariancepage {
 	@FindBy(xpath = "//div[@class='filter-apply']//a[1]")
 	private static WebElement Buyerreportinvoicevariancepage_Resetbutton;
 	
-	@FindBy(xpath = "//div[@class='flex__bwn px-r5']/following-sibling::div[1]")
+	@FindBy(xpath = "//div[@class='container-fluid']/following-sibling::div[1]")
 	private static WebElement Buyerreportinvoicevariancepage_Outside;
 	
 	@FindBy(xpath = "//div[@class='pl-2']//a[1]")

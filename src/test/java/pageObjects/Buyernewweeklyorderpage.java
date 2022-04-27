@@ -161,7 +161,7 @@ public class Buyernewweeklyorderpage {
 
 	public static void displayOrderVerify() throws InterruptedException {
 		Thread.sleep(5000);
-		boolean datetitle=driver.findElement(By.xpath("//div[contains(text(),'Placed on 23 Mar 2022')]")).isDisplayed();
+		boolean datetitle=driver.findElement(By.xpath("//div[text()='Placed on 25 Mar 2022 ']")).isDisplayed();
 		System.out.println(datetitle);
 		Assert.assertEquals(datetitle,true);
 		try {

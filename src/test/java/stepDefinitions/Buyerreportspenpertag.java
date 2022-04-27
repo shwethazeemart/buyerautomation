@@ -136,14 +136,12 @@ public class Buyerreportspenpertag {
 	}
 	@Then("User click on Check box in tag")
 	public void user_click_on_Check_box_in_tag() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		Buyerreportspenpertagpage.Clickoncheckboxofsabari();
 	}
 
 	@Then("User click on filter tag")
 	public void user_click_on_filter_tag() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		Buyerreportspenpertagpage.Clickonfiltertaginmasala();
 	}
 
 	@Then("User click on Check box in food tag")
@@ -156,5 +154,6 @@ public class Buyerreportspenpertag {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new io.cucumber.java.PendingException();
 	}
+	
 
 }

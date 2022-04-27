@@ -102,7 +102,7 @@ public class Buyerdashboardlisenpage {
 	private static WebElement Buyerdashboardlisenpage_supplier;
 
 	
-	@FindBy(xpath = "//div[text()=' Tags  ']/following::input[1]")
+	@FindBy(xpath = "//input[@type='checkbox']")
 	private static WebElement Buyerdashboardlisenpage_Showfavouritescheckbox;
 	
 	@FindBy(xpath = "//input[@type='checkbox']")
@@ -141,6 +141,9 @@ public class Buyerdashboardlisenpage {
 	
 	@FindBy(xpath = "//button[text()='Done']")
 	private static WebElement Buyerdashboardlisenpage_Donebutton;
+	
+	@FindBy(xpath = "//img[@src='../assets/zmcore/img/close-blue@22.png']")
+	private static WebElement Buyerdashboardlisenpage_CloseIcon;
 	
 	@FindBy(xpath = "//button[text()='Apply']")
 	private static WebElement Buyerdashboardlisenpage_Applybutton;
@@ -396,7 +399,8 @@ public class Buyerdashboardlisenpage {
 				.executeScript("return document.readyState").equals("complete"));
 	}
 
-	public static void Clickshowfavouritescheckbox() {
+	public static void Clickshowfavouritescheckbox() throws InterruptedException {
+		Thread.sleep(5000);
 		Buyerdashboardlisenpage_Showfavouritescheckbox.click();
 		try { 
 			Thread.sleep(5000);
@@ -642,5 +646,15 @@ public class Buyerdashboardlisenpage {
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
 		
+	}
+
+	public static void ClickCloseIcon() {
+		Buyerdashboardlisenpage_CloseIcon.click();
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
 	}
 		}

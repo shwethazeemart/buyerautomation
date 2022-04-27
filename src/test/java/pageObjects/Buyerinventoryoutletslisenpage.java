@@ -127,28 +127,7 @@ public class Buyerinventoryoutletslisenpage {
 				.executeScript("return document.readyState").equals("complete"));
 	}
 
-	public static void clicksettings() {
-		Buyerinventoryoutletslisenpage_settings.click();
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-		} 
-		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
-				.executeScript("return document.readyState").equals("complete"));
-
-	}
-
-	public static void clicksettingscloseicon() {
-		Buyerinventoryoutletslisenpage_settingscloseicon.click();
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-		} 
-		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
-				.executeScript("return document.readyState").equals("complete"));
-
-	}
-
+	
 	public static void clickexportdownloadicon() {
 		Buyerinventoryoutletslisenpage_exportdownloadicon.click();
 		try {
