@@ -48,6 +48,22 @@ public class Buyerusernamesettings {
 	    Buyerusernamesettingspage.Clcikonsetting();
 	}
 
+	@Then("User click the Details tab")
+	public void user_click_the_Details_tab() {
+		Buyerusernamesettingspage.ClickDetailsTab();
+	}
+
+	@Then("User click on the Preferences checkbox")
+	public void user_click_on_the_Preferences_checkbox() {
+		Buyerusernamesettingspage.ClickPerferencesCheckbox();
+	}
+
+	@Then("User click on the Save button")
+	public void user_click_on_the_Save_button() {
+		Buyerusernamesettingspage.ClickSave();
+	}
+
+	
 	@Then("User click on Linked companies in settings page")
 	public void user_click_on_Linked_companies_in_settings_page() {
 	    Buyerusernamesettingspage.Clickonlinkedcompanies(); 
