@@ -58,6 +58,17 @@ public class Buyerreportspenperoutlet {
 	public void user_click_on_filter() {
 	   Buyerreportspenperoutletpage.Clickonfilter();
 	}
+	
+	@Then("User click on Outlets")
+	public void user_click_on_Outlets() {
+		Buyerreportspenperoutletpage.ClickOutlets();
+	}
+
+	@Then("User click on check box of outlets")
+	public void user_click_on_check_box_of_outlets() {
+		Buyerreportspenperoutletpage.ClickchecboxofOutlets();
+	}
+
 
 	@Then("User click on suppliers")
 	public void user_click_on_suppliers() {

@@ -210,7 +210,7 @@ Scenario Outline: Verify the Reports spending per Category page of Buyer panel
       |velumanieswaran2020@gmail.com     | |!123456Zm   ||Beer     | 
       
  
-           
+@Smoke           
 Scenario Outline: Verify the Reports spending per outlet page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -234,6 +234,12 @@ Scenario Outline: Verify the Reports spending per outlet page of Buyer panel
           Then User select date from calendar
           And User click on Last year from calendar
           And User click on filter
+          Then User click on Outlets
+          And User click on check box of outlets
+          Then User click on Apply button  
+          And User click on filter        
+          Then User click on Reset button          
+          And User click on filter 
           Then User click on suppliers
           And User click on check box  
           Then User click on Apply button  
@@ -1340,7 +1346,7 @@ Scenario Outline: Verify the Edit Users page of Buyer panel
          |username                     |  |password    ||title      ||Email                            ||mobilephone  | |username     |
          |buyerautomated3@gmail.com    |  |!123456Zm   ||AtoZ test  ||velumanieswaran2020@gmail.com    ||+65122456789 | |velumanitwo  | 
          
-@Smoke             
+             
 Scenario Outline: Verify the user name settings page of Buyer panel
          Given User is on Login Page
          When User enter exact username"<username>"

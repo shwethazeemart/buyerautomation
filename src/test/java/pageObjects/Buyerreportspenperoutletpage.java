@@ -40,6 +40,12 @@ public class Buyerreportspenperoutletpage {
 	@FindBy(xpath = "//a[contains(@class,'pull-right export-mclr')]")
 	private static WebElement Buyerreportspenperoutletpage_Filter;
 	
+	@FindBy(xpath = "//div[text()=' Outlets  ']")
+	private static WebElement Buyerreportspenperoutletpage_Outlets;
+	
+	@FindBy(xpath = "//input[@type='checkbox']")
+	private static WebElement Buyerreportspenperoutletpage_CheckoxofOutlets;
+	
 	@FindBy(xpath = "//div[text()=' Suppliers  ']")
 	private static WebElement Buyerreportspenperoutletpage_Suppliers;
 	
@@ -343,15 +349,6 @@ public class Buyerreportspenperoutletpage {
 		
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	public static void Clickontodaydatefromcalendar() throws InterruptedException {
 		Thread.sleep(5000);
 		Buyerreportspenperoutletpage_Todaydatefromcalendar.click();
@@ -550,6 +547,24 @@ public class Buyerreportspenperoutletpage {
 	public static void Clickoncheckbox() {
 		// TODO Auto-generated method stub
 		
+	}
+	public static void ClickOutlets() {
+		Buyerreportspenperoutletpage_Outlets.click();
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+	public static void ClickchecboxofOutlets() {
+		Buyerreportspenperoutletpage_CheckoxofOutlets.click();
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
 	}
 	
 	
