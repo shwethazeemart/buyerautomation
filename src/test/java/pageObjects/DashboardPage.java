@@ -401,8 +401,9 @@ public class DashboardPage {
 	
 		
 	public static void ClickonCustomersinthesidemenu() throws InterruptedException {
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		LogInPage_SupplierCustomers.click();
+		Thread.sleep(5000);
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
