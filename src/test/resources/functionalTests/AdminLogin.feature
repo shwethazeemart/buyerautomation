@@ -1,9 +1,7 @@
 Feature: verify Admin panel Entier test all the page
 
 
-
-Scenario Outline: Verify the Suppliers page in view outlets Admin hub    
-  
+Scenario Outline: Verify the Suppliers page in view outlets Admin hub   
           Given User are available in login page
           When User is enter exact username"<username>"  
           And User is enter exact password"<password>"
@@ -222,7 +220,7 @@ Scenario Outline: Verify the Users page of New Buyer user in Admin panel
 
   
 
-Scenario Outline: Verify the Buyers outlets page of Admin panel   
+Scenario Outline: Verify the Buyer outlets page of Admin panel   
   
           Given User are available in login page
           When User is enter exact username"<username>"
@@ -1159,7 +1157,7 @@ Scenario Outline: Verify the Admin Supplier Screen Upload Subscription Invoice
       | velumanisabari2009@gmail.com     | | #f=6T7uX   | |Zm Automation | |Hiiii        | |Have to create a notification||velu|
       
 @Smoke      
-Scenario Outline: Verify the Suppliers screen  view outlets copy and apply setting    
+Scenario Outline: Verify the Suppliers screen  View outlets copy and apply setting    
           Given User are available in login page
           When User is enter exact username"<username>"  
           And User is enter exact password"<password>"
@@ -1176,7 +1174,7 @@ Scenario Outline: Verify the Suppliers screen  view outlets copy and apply setti
           Then User select source outlet in dropdown list
           Then User click on select all icon in apply outlet settings page
           Then User cclick on apply button in apply setings page 
-          And User click the Actions dropdown 
+          And User click the Actions dropdown of Buyer outlets          
           Then User click the Outlet tags and Custom names
           Then User click on the checkox of Outlet tags page
           Then User click the Copy to other outlets
