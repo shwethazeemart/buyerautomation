@@ -37,7 +37,7 @@ public class AdminSupplierApplyOutletpage {
 	@FindBy(xpath = "//button[text()=' Apply outlet settings from... ']")
 	private static WebElement AdminSupplierApplyOutletpage_ApplyOutletSetting;
 	
-	@FindBy(xpath = "//select[contains(@id,'outletCopyFrom')]")
+	@FindBy(xpath = "//select[@formcontrolname='sourceOutlet']")
 	private static WebElement AdminSupplierApplyOutletpage_OutletDropdown;
 	
 	

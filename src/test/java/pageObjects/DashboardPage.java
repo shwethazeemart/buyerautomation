@@ -305,7 +305,7 @@ public class DashboardPage {
 	}
 
 	public void clickAdminSuppliers() throws InterruptedException {
-		Thread.sleep(7000);
+		Thread.sleep(10000);
 		button_AdminSuppliers.click();
 		Thread.sleep(5000);
 		try {
