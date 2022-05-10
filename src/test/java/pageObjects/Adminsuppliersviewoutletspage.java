@@ -141,6 +141,9 @@ public class Adminsuppliersviewoutletspage {
 	@FindBy(xpath = "//select[@id='country']")
 	private static WebElement Adminsuppliersviewoutletspage_Reason;
 	
+	@FindBy(xpath = "(//a[contains(@class, 'zmdropDownBtn')])[4]")
+	private static WebElement Adminsuppliersviewoutletspage_ActionsDropdown;
+	
 	@FindBy(xpath = "(//a[@class='dropdown-item'])[3]")
 	private static WebElement Adminsuppliersviewoutletspage_OutletTagsCustomName;
 	
@@ -190,7 +193,7 @@ public class Adminsuppliersviewoutletspage {
 		
 	}
 
-	public void Clicks_Actionsdropdown() throws InterruptedException {
+	public void Clicks_Actionsdropdown() throws InterruptedException {		
 		Thread.sleep(5000);
 		Adminsuppliersviewoutletspage_Actionsdropdown.click();
 		try {
@@ -564,6 +567,18 @@ public class Adminsuppliersviewoutletspage {
 	
 	}
 
+	public void ClickActionsDropdown() throws InterruptedException {
+		Thread.sleep(5000);
+		Adminsuppliersviewoutletspage_ActionsDropdown.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	
 	public void ClicktheOutletTagsCustomNames() {
 		Adminsuppliersviewoutletspage_OutletTagsCustomName.click();
 		try {
@@ -624,6 +639,7 @@ public class Adminsuppliersviewoutletspage {
 				.executeScript("return document.readyState").equals("complete"));
 	}
 
+	
 	
 	
 	

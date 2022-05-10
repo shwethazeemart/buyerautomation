@@ -249,8 +249,14 @@ public class Adminsuppliersviewoutletspagesteps {
 	public void user_is_Select_reason_in_dropdown_field() {
 		WebElement reason = Adminsuppliersviewoutletspage.getEntertheReason();
 		Select select=new Select(reason);
-		select.selectByIndex(2);	
+		select.selectByIndex(3);	
 	}
+	
+	@Then("User click the Actions dropdown of Buyer outlets")
+	public void user_click_the_Actions_dropdown_of_Buyer_outlets() throws InterruptedException {
+		adminsuppliersviewoutletspage.ClickActionsDropdown();
+		}
+
 
 	@Then("User click the Outlet tags and Custom names")
 	public void user_click_the_Outlet_tags_and_Custom_names() {

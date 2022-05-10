@@ -56,7 +56,7 @@ public class AdminPromotionListingPage {
 		@FindBy(xpath = "//img[@src='assets/zmcore/img/close-blue.svg']")
 		private static WebElement AdminPromotionListingPage_CloseIcon;
 
-		@FindBy(xpath = "//a[@class='zmdropDownBtn']")
+		@FindBy(xpath = "(//a[@class='zmdropDownBtn'])[3]")
 		private static WebElement AdminPromotionListingPage_Actions;
 		
 		@FindBy(xpath = "//button[text()=' New deal ']")
@@ -164,7 +164,8 @@ public class AdminPromotionListingPage {
 					.executeScript("return document.readyState").equals("complete"));
 		}
 
-		public static void ClickActions() {
+		public static void ClickActions() throws InterruptedException {
+			Thread.sleep(5000);
 			AdminPromotionListingPage_Actions.click();
 			try {
 				Thread.sleep(5000);

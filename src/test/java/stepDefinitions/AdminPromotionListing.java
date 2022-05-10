@@ -105,7 +105,7 @@ public void user_click_on_Close_icon_of_Organise_deals() {
 }
 
 @Then("User click the Actions dropdown")
-public void user_click_the_Actions_dropdown() {
+public void user_click_the_Actions_dropdown() throws InterruptedException {
 	AdminPromotionListingPage.ClickActions();
 }
 
