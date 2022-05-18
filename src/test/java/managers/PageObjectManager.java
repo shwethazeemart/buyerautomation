@@ -94,6 +94,7 @@ import pageObjects.BuyerInventoryTagpage;
 import pageObjects.BuyerNewslistingpage;
 import pageObjects.BuyerOrderDeliveryFilterpage;
 import pageObjects.BuyerOutletApproverpage;
+import pageObjects.BuyerRecipesListingPage;
 //import pageObjects.BuyerPNF7797page;
 import pageObjects.Buyerdashboardlisenpage;
 import pageObjects.Buyeredituserlisenpage;
@@ -172,6 +173,8 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 	private Buyeredituserlisenpage Buyeredituserlisen;
 	private Buyerorderslisenpage Buyerorderslisen;
 	private Buyerusernamesettingspage Buyerusernamesettings;
+	private BuyerRecipesListingPage BuyerRecipesListing;
+
 
 	private LogInPage LogInPage3;
 	private Suppliercustomerlocationlistingpage Suppliercustomerlocationlisting;
@@ -769,6 +772,12 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 
 	public BuyerOutletApproverpage getBuyerOutletApproverpage() {
 		return (BuyerOutletApprover == null) ? (BuyerOutletApprover = new BuyerOutletApproverpage(driver)) : BuyerOutletApprover;
+	}
+
+
+	public BuyerRecipesListingPage getBuyerRecipesListingpage() {
+		return (BuyerRecipesListing == null) ? (BuyerRecipesListing = new BuyerRecipesListingPage(driver)) : BuyerRecipesListing;
+
 	}
 
 	

@@ -210,7 +210,7 @@ Scenario Outline: Verify the Reports spending per Category page of Buyer panel
       |velumanieswaran2020@gmail.com     | |!123456Zm   ||Beer     | 
       
  
-@Smoke           
+           
 Scenario Outline: Verify the Reports spending per outlet page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -301,6 +301,10 @@ Scenario Outline: Verify the Reports spending per outlet page of Buyer panel
       | username                      | | password   |  |outletname      |
       | velumanieswaran2020@gmail.com | |!123456Zm   |  |velu masala2020 |
       
+      @devSecond  
+      Examples: 
+      | username                      | | password   |  |outletname      |
+      | buyerautomated3@gmail.com     | |!123456Zm   |  |velu masala2020 |
       
             
 Scenario Outline: Verify the Reports spending per SKU page of Buyer panel 
@@ -1256,7 +1260,11 @@ Scenario Outline: Verify the Outlets view suppliers page of Buyer panel
       | username                          | | password   ||name      |
       | velumanieswaran2020@gmail.com     | |!123456Zm   ||100pipers |            
      
-           
+     @devSecond       
+    Examples: 
+      | username                      | | password   ||name      |
+      | buyerautomated3@gmail.com     | |!123456Zm   ||100pipers |            
+          
       
     
    
@@ -1404,6 +1412,36 @@ Scenario Outline: Verify the Outlets page of Final approver Buyer panel
           Then User click on check box of approver
           Then User click final save button in approver
           
+          
+   @dev       
    Examples:
          |username                            |  |password    |
          |velumanieswaran2020@gmail.com       |  |!123456Zm   |       
+         
+   @devSecond      
+   Examples:
+         |username                        |  |password    |
+         |buyerautomated3@gmail.com       |  |!123456Zm   |       
+         
+@Smoke         
+Scenario Outline: Verify the Recipes Listing page 
+          Given User is on Login Page
+          When User enter exact username"<username>" 
+          And User enter exact password"<password>"
+          And User is click login button 
+          Then User Clicks on Recipes in the side navigation menubar
+          Then User Click the Search outlet name text box
+          
+          
+
+     @dev
+     Examples:
+         |username                            |  |password    |
+         |velumanieswaran2020@gmail.com       |  |!123456Zm   |       
+            
+         
+         
+         
+         
+         
+         
