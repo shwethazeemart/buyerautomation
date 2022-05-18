@@ -44,20 +44,20 @@ public class Suppliercustomerlocationlistingpage {
 	@FindBy(xpath = "//button[text()=' Apply outlet settings from... ']")
 	private static WebElement Suppliercustomerlocationlistingpage_Applybutton;
 	
-	@FindBy(xpath = "//select[@formcontrolname='outletCopyFrom']")
+	@FindBy(xpath = "//select[@formcontrolname='sourceOutlet']")
 	private static WebElement Suppliercustomerlocationlistingpage_Sakthimasalaoutlet;
 	
 	@FindBy(xpath = "//button[text()='Select all']")
 	private static WebElement Suppliercustomerlocationlistingpage_Selectallbutton;
 	
-	@FindBy(xpath = "//button[text()=' Apply']")
+	@FindBy(xpath = "//button[@class='btn btn-primary']")
 	private static WebElement Suppliercustomerlocationlistingpage_Applybuttonoutletsettingpage;
 	
 	@FindBy(xpath = "//button[text()=' Clear ']")
 	private static WebElement Suppliercustomerlocationlistingpage_Clearbutton;
 	
-	//@FindBy(xpath = "//button[text()=' New customer ']")
-	//private static WebElement Suppliercustomerlocationlistingpage_Actionsdropdown;
+	@FindBy(xpath = "(//a[@class='zmdropDownBtn'])[1]")
+	private static WebElement Suppliercustomerlocationlistingpage_Actionsdropdown;
 	
 	@FindBy(xpath = "(//a[@routerlinkactive='active'])[2]")
 	private static WebElement Suppliercustomerlocationlistingpage_Managesetting;
@@ -82,12 +82,6 @@ public class Suppliercustomerlocationlistingpage {
 	
 	@FindBy(xpath = "//img[@src='assets/zmcore/img/left-report-b-icon.svg']/following-sibling::p[1]")
 	private static WebElement Suppliercustomerlocationlistingpage_Customerbackbuttonnewcutomerpage;
-
-
-
-
-
-
 
 
 
@@ -148,6 +142,8 @@ public class Suppliercustomerlocationlistingpage {
 	}
 
 	public static void Clickonapplybuttonoutletsettingpage() {
+		 JavascriptExecutor jse = (JavascriptExecutor)driver;
+		 jse.executeScript("window.scrollBy(0,250)");
 		Suppliercustomerlocationlistingpage_Applybuttonoutletsettingpage.click();
 		try {
 			Thread.sleep(5000);
@@ -170,9 +166,9 @@ public class Suppliercustomerlocationlistingpage {
 	}
 
 	public static void Clickonactionsdropdown() {
-		WebElement actions = driver.findElement(By.linkText("Actions"));
-		actions.click();
-		//Suppliercustomerlocationlistingpage_Actionsdropdown.click();
+		//WebElement actions = driver.findElement(By.linkText("Actions"));
+		//actions.click();
+		Suppliercustomerlocationlistingpage_Actionsdropdown.click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {

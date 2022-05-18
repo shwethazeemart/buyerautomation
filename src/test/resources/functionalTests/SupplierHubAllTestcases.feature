@@ -353,21 +353,21 @@ Scenario Outline: Verify the Supplier Payments Transaction list
          
          
          
-       
+@Smoke       
 Scenario Outline: Verify the Supplier customers location listing page
          Given User is on available Login Page
           When User enter exact username"<username>"
           And User enter exact password"<password>"
           And User is click login button
           Then User click on Customers side navigation list menubar
-          Then User enter name in search box sakthimasala "<name>" 
+          Then User enter name in search box sakthimasala "<name>"
+           Then User click on checkbox in location page
+          Then User click on clear button in location page  
           Then User click on checkbox in location page
           Then User click on apply outlet setting button
           Then User select on dropdown value of sakthimasala
           Then User click on select all button
-          Then User click on apply button
-          Then User click on checkbox in location page
-          Then User click on clear button in location page 
+          Then User click on apply button         
           Then User click on actions dropdown in location page
           Then User click on Manage settings in location page
           Then User click on customers backbutton 
@@ -413,7 +413,7 @@ Scenario Outline: Verify the Supplier customers location listing page
          |supplierautomated2@gmail.com  |  |!123456Zm  ||UEN-208999  ||saimanisairammasala||638312  ||19,Murugan temple street ||Singapore     ||velusai2032@gmail.com|
  
  
-@Smoke
+
 Scenario Outline: Verify the Supplier Company Settings list 
          Given User is on available Login Page
           When User enter exact username"<username>"
