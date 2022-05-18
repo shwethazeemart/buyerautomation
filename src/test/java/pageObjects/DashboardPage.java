@@ -49,7 +49,6 @@ public class DashboardPage {
 	@FindBy(xpath = "//a[@class='nav-link active']")
 	private WebElement btn_Dashboard;
 
-
 	@FindBy(xpath = "//span[@id='sideMenu_Orders']")
 	private  WebElement button_Orders;
 
@@ -91,6 +90,9 @@ public class DashboardPage {
 	@FindBy(xpath = "//span[contains(@Id,'sideMenu_Inventory')] ")
 	private  WebElement button_Inventory;
 	
+	@FindBy(xpath = "//span[contains(@Id,'sideMenu_Recipes')]")
+	private  WebElement button_Recipes;
+		
 	@FindBy(xpath = "//span[contains(@Id,'sideMenu_Outlets')] ")
 	private  WebElement button_Outlets;
 	
@@ -240,6 +242,17 @@ public class DashboardPage {
 		new WebDriverWait(driver, 50).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
 	}
+		
+	public void ClickRecipes() {
+		button_Recipes.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 50).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+	
 	
 	public void clickPayments() {	
 		button_payments.click();
@@ -509,5 +522,6 @@ public class DashboardPage {
 		new WebDriverWait(driver, 50).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
 	}
+
 	
 }

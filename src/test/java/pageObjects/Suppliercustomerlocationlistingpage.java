@@ -86,12 +86,6 @@ public class Suppliercustomerlocationlistingpage {
 
 
 
-
-
-
-
-
-
 	public static void Enterthenameinsearchbox(String Sakthimasala100) {
 		Suppliercustomerlocationlistingpage_Enterthenamesearchbox.sendKeys(Sakthimasala100);
 		try {
