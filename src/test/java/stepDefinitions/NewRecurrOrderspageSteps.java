@@ -49,7 +49,6 @@ public class NewRecurrOrderspageSteps {
 	}
 	
 	
-	
 	@When("User is Clicks Orders in the side navigation menubar")
 	public void user_is_Clicks_Orders_in_the_side_navigation_menubar() throws InterruptedException {
 	    dashboradpage.clickOrders();
@@ -105,12 +104,19 @@ public class NewRecurrOrderspageSteps {
 		Select select=new Select(velumani2);
 		select.selectByIndex(1);
 	} 
-
-	@When("User Clicks on the Done button")
-	public void user_Clicks_on_the_Done_button() {
-	   newrecurringorderspage.Clicks_on_the_Done_button();
+	
+	@Then("User select on Place order dropdown")
+	public void user_select_on_Place_order_dropdown() {
+		WebElement Placeorder = Newrecurringorderspage.getPlaceorder();
+		Select select=new Select(Placeorder);
+		select.selectByIndex(2);
 	}
 
+	@When("User Clicks on the Next Add SKU")
+	public void user_Clicks_on_the_Next_Add_SKU() throws InterruptedException {
+		newrecurringorderspage.ClickNextAddSKU();
+	}
+	
 	@When("User Clicks on Add to order in the first product")
 	public void user_Clicks_on_Add_to_order_in_the_first_product() {
 	    newrecurringorderspage.Clicks_on_Add_to_order_in_the_first_product();
@@ -189,8 +195,6 @@ public class NewRecurrOrderspageSteps {
 	public void user_Clicks_on_fifteenth_time_increase_the_order_button_in_the_first_product() {
 		 newrecurringorderspage.Clicks_on_fifteenth_time_increase_the_order_button_in_the_first_product();
 	}
-
-
 	
 	@Then("User Clicks on Review Order button")
 	public void user_Clicks_on_Review_Order_button() { 
@@ -202,9 +206,9 @@ public class NewRecurrOrderspageSteps {
 	    newrecurringorderspage.Clicks_on_Review_Oreder_button();
 	}*/
 
-	@Then("User Clicks on Save recurring order")
-	public void user_Clicks_on_Save_recurring_order() {
-	    newrecurringorderspage.Clicks_on_Save_recurring_order(); 
+	@Then("User Clicks on Save")
+	public void user_Clicks_on_Save() {
+		newrecurringorderspage.ClickSave();
 	}
 
 	@Then("It should display the particular order in recurring orders page")

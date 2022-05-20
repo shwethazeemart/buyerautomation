@@ -58,8 +58,11 @@ public class Newrecurringorderspage {
 	@FindBy(xpath = "//select[@formcontrolname='contactPerson']") 
 	private static WebElement Newrecurringorderspage_Contactperson_velumanieswaran2020; 
 	
-	@FindBy(xpath = "//button[text()='Done']") 
-	private static WebElement Newrecurringorderspage_Donebutton; 
+	@FindBy(xpath = "//select[@formcontrolname='daysBeforeCutOff']") 
+	private static WebElement Newrecurringorderspage_PlaceOrder_OneDay; 
+	
+	@FindBy(xpath = "//button[text()='Next: Add SKU ']") 
+	private static WebElement Newrecurringorderspage_NextAddSKU; 
 	
 	@FindBy(xpath = "//div[text()[normalize-space()='Add to order']]") 
 	private static WebElement Newrecurringorderspage_Addtoorder; 
@@ -107,15 +110,13 @@ public class Newrecurringorderspage {
 	private static WebElement Newrecurringorderspage_fourteenthtimeincreaseAddtoorder;
 	
 	@FindBy(xpath = "//button[@data-type='plus']") 
-	private static WebElement Newrecurringorderspage_fifteenthtimeincreaseAddtoorder;
-	
-	
+	private static WebElement Newrecurringorderspage_fifteenthtimeincreaseAddtoorder;	
 	
 	@FindBy(xpath = "//button[text()='Review order']") 
 	private static WebElement Newrecurringorderspage_Revieworderbtn; 
 	
-	@FindBy(xpath = "//button[text()=' Save recurring order ']") 
-	private static WebElement Newrecurringorderspage_Saverecurringorderbtn; 
+	@FindBy(xpath = "//button[text()=' Save ']") 
+	private static WebElement Newrecurringorderspage_SaveBtn; 
 	
 	
 	
@@ -225,6 +226,7 @@ public class Newrecurringorderspage {
 		
 	}
 	public static void click_Contactperson_velumanieswaran2020() throws InterruptedException {
+		Thread.sleep(5000);
 		Newrecurringorderspage_Contactperson_velumanieswaran2020.click();
 		Thread.sleep(5000);
 		try { 
@@ -238,17 +240,34 @@ public class Newrecurringorderspage {
 	public static WebElement getDropDownOwnerElementcontactperson() {
 		return Newrecurringorderspage_Contactperson_velumanieswaran2020;
 	}
-
-	public void Clicks_on_the_Done_button() {
-		Newrecurringorderspage_Donebutton.click();
+		
+	public void ClickPlaceOrder() throws InterruptedException {
+		Thread.sleep(5000);
+		 JavascriptExecutor jse = (JavascriptExecutor)driver;
+		 jse.executeScript("window.scrollBy(0,250)");
+		Newrecurringorderspage_SaveBtn.click();
+		Thread.sleep(5000);
 		try { 
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 		}
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
-		
-		
+	}
+	public static WebElement getPlaceorder() {
+		return Newrecurringorderspage_PlaceOrder_OneDay;
+	}
+	
+	public void ClickNextAddSKU() throws InterruptedException {
+		Thread.sleep(5000);
+		 Newrecurringorderspage_NextAddSKU.click();
+		 Thread.sleep(5000);
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
 	}
 
 	public void Clicks_on_Add_to_order_in_the_first_product() {
@@ -259,8 +278,7 @@ public class Newrecurringorderspage {
 		}
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
-		
-		
+				
 	}
 
 	public void Clicks_on_first_time_increase_the_order_button_in_the_first_product() {
@@ -271,7 +289,6 @@ public class Newrecurringorderspage {
 		}
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
-		
 		
 	}
 
@@ -316,8 +333,7 @@ public class Newrecurringorderspage {
 		}
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
-		
-		
+			
 	}
 
 	public void Clicks_on_sixth_time_increase_the_order_button_in_the_first_product() {
@@ -328,24 +344,11 @@ public class Newrecurringorderspage {
 		}
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
-		
-		
-		
+				
 	}
 
 	public void Clicks_on_Review_Oreder_button() {
 		Newrecurringorderspage_Revieworderbtn.click();
-		try { 
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-		}
-		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
-				.executeScript("return document.readyState").equals("complete"));
-		
-	}
-
-	public void Clicks_on_Save_recurring_order() {
-		Newrecurringorderspage_Saverecurringorderbtn.click();
 		try { 
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -367,8 +370,7 @@ public class Newrecurringorderspage {
 		}
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
-		
-		
+				
 	}
 
 	public void Clicks_on_eight_time_increase_the_order_button_in_the_first_product() {
@@ -457,4 +459,19 @@ public class Newrecurringorderspage {
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
 	}
+
+	public void ClickSave() {
+		Newrecurringorderspage_SaveBtn.click();
+		try { 
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	
+	
+
+	
 }
