@@ -636,7 +636,7 @@ Scenario Outline: Verify the New Order outstanding options page of Buyer panel
              
           
 
-
+@Smoke
 Scenario Outline: Verify the New recurring orders page of Buyer panel  
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -652,7 +652,8 @@ Scenario Outline: Verify the New recurring orders page of Buyer panel
           When User Clicks on checkbox Public holidays
           When User Clicks on Radio button of Never
           When User select contact person in the dropdown list
-          When User Clicks on the Done button 
+          Then User select on Place order dropdown
+          When User Clicks on the Next Add SKU
           When User Clicks on Add to order in the first product
           Then User Clicks on first time increase the order button in the first product
           Then User Clicks on second time increase the order button in the first product
@@ -664,7 +665,7 @@ Scenario Outline: Verify the New recurring orders page of Buyer panel
           Then User Clicks on eight time increase the order button in the first product
           Then User Clicks on nineth time increase the order button in the first product
           Then User Clicks on Review Order button
-          Then User Clicks on Save recurring order
+          Then User Clicks on Save 
          
           
           @dev  
@@ -672,10 +673,7 @@ Scenario Outline: Verify the New recurring orders page of Buyer panel
              |username                                   |  |password    |
              |velumanieswaran2020@gmail.com              |  |!123456Zm   | 
              
-          @devSecond 
-          Examples:
-             |username                               |  |password    |
-             |buyerautomated3@gmail.com              |  |!123456Zm   |       
+          
              
 
 Scenario Outline: Verify the New Weekly Order page of Buyer panel
@@ -1423,7 +1421,7 @@ Scenario Outline: Verify the Outlets page of Final approver Buyer panel
          |username                        |  |password    |
          |buyerautomated3@gmail.com       |  |!123456Zm   |       
          
-@Smoke         
+
 Scenario Outline: Verify the Recipes Listing page 
           Given User is on Login Page
           When User enter exact username"<username>" 
