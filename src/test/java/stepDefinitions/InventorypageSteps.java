@@ -44,7 +44,7 @@ public class InventorypageSteps {
 	
 	
 	@When("User Clicks on Inventory in the side navigation menubar")
-	public void user_Clicks_on_Inventory_in_the_side_navigation_menubar()  {
+	public void user_Clicks_on_Inventory_in_the_side_navigation_menubar() throws InterruptedException  {
 		dashboradpage.clickInventory();
 	} 
 

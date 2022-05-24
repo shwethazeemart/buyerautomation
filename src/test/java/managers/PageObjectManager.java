@@ -39,6 +39,7 @@ import stepDefinitions.AdminbuyersoutletpageSteps;
 //import stepDefinitions.Adminsupplierspage;
 import stepDefinitions.AdminsupplierspageSteps;
 import stepDefinitions.Automationtesting;
+import stepDefinitions.BuyerInventoryNewStockCount;
 import stepDefinitions.Buyerinventoryoutletslisen;
 import stepDefinitions.Buyerinvoicelisen;
 //import stepDefinitions.Invoiceprocesspage;
@@ -90,6 +91,7 @@ import pageObjects.Adminnewsupplieruserpage;
 import pageObjects.Adminsupplierpage;
 import pageObjects.Adminsuppliersviewoutletspage;
 import pageObjects.Automationtestingpage;
+import pageObjects.BuyerInventoryNewStockCountPage;
 import pageObjects.BuyerInventoryTagpage;
 import pageObjects.BuyerNewslistingpage;
 import pageObjects.BuyerOrderDeliveryFilterpage;
@@ -174,6 +176,8 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 	private Buyerorderslisenpage Buyerorderslisen;
 	private Buyerusernamesettingspage Buyerusernamesettings;
 	private BuyerRecipesListingPage BuyerRecipesListing;
+	private BuyerInventoryNewStockCountPage BuyerInventoryNewStockCount;
+
 
 
 	private LogInPage LogInPage3;
@@ -779,6 +783,13 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 		return (BuyerRecipesListing == null) ? (BuyerRecipesListing = new BuyerRecipesListingPage(driver)) : BuyerRecipesListing;
 
 	}
+
+
+	public BuyerInventoryNewStockCountPage getBuyerInventoryNewStockCount() {
+		return (BuyerInventoryNewStockCount == null) ? (BuyerInventoryNewStockCount = new BuyerInventoryNewStockCountPage(driver)) : BuyerInventoryNewStockCount;
+		
+}
+	
 
 	
 

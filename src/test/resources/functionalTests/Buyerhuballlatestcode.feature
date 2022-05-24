@@ -636,7 +636,6 @@ Scenario Outline: Verify the New Order outstanding options page of Buyer panel
              
           
 
-@Smoke
 Scenario Outline: Verify the New recurring orders page of Buyer panel  
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -947,14 +946,14 @@ Scenario Outline: Verify the Payment transactions page of Buyer panel
       | velumanieswaran2020@gmail.com | |!123456Zm   |     
       
       
-  
+
  Scenario Outline: Verify the Inventory Activity lisen page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
           And User enter exact password"<password>"
           And User is click login button 
           Then User Clicks on Inventory in the side navigation menubar 
-          And User click on outlets icon
+          And User click on outlets icon          
           Then User ckicks on outlet "<outletname>"
           Then User click on Activity icon
           And User click on New stock count
@@ -975,6 +974,35 @@ Scenario Outline: Verify the Payment transactions page of Buyer panel
          |username                            |  |password    | |outletname  |
          |buyerautomated3@gmail.com           |  |!123456Zm   | |velu masala |
          
+         
+@Smoke   
+Scenario Outline: Verify the Inventory New stock count page of Buyer panel 
+          Given User is on Login Page
+          When User enter exact username"<username>"
+          And User enter exact password"<password>"
+          And User is click login button 
+          Then User Clicks on Inventory in the side navigation menubar 
+          And User click on outlets icon          
+          Then User ckicks on outlet "<outletname>"
+          And User click on New stock count
+          Then User select the Inventory list dropdown
+          Then User select the Count date
+          Then User Click the Start stock count button
+          And User Enter the Counted QTY
+          Then User click the Save
+          Then User Click the Cancel button
+          Then User click the Save                
+          Then User click the Yes
+      
+     @dev     
+     Examples:
+         |username                            |  |password    | |outletname    |
+         |velumanieswaran2020@gmail.com       |  |!123456Zm   | |Vel masala250 |
+        
+          
+            
+ 
+    
             
 Scenario Outline: Verify the Inventory Outlets lisen page of Buyer panel 
           Given User is on Login Page
