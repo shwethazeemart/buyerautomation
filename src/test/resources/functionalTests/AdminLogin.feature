@@ -131,7 +131,7 @@ Scenario Outline: Verify the Suppliers page new supplier user in Admin panel
 
 
 
-
+@Smoke
 Scenario Outline: Verify the Suppliers subscription page in Admin panel    
   
           Given User are available in login page
@@ -1156,7 +1156,7 @@ Scenario Outline: Verify the Admin Supplier Screen Upload Subscription Invoice
       | username                         | | password   | |title         | |shortdescrip | |fulldescrip                  ||label|
       | velumanisabari2009@gmail.com     | | #f=6T7uX   | |Zm Automation | |Hiiii        | |Have to create a notification||velu|
       
-@Smoke      
+        
 Scenario Outline: Verify the Suppliers screen  View outlets copy and apply setting    
           Given User are available in login page
           When User is enter exact username"<username>"  
