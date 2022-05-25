@@ -60,34 +60,37 @@ public class BuyerInventoryNewStockCount {
 		    // Write code here that turns the phrase above into concrete actions
 		    throw new io.cucumber.java.PendingException();
 		}
-
-
-		@Then("User Select on outlet")
-		public void user_Select_on_outlet() {
-			BuyerInventoryNewStockCountPage.SelectOutlet();
-		}
 		
-
 		@Then("User select the Inventory list dropdown")
 		public void user_select_the_Inventory_list_dropdown() {
-			WebElement shwe = BuyerInventoryNewStockCountPage.getDropDownElementshwe();
-			Select select=new Select(shwe);
-			select.selectByIndex(2);
+			WebElement mani = BuyerInventoryNewStockCountPage.getDropDownElementmani();
+			Select select=new Select(mani);
+			select.selectByIndex(1);
 			}
 
+		@Then("User click thee Count date")
+		public void user_click_thee_Count_date() {
+			BuyerInventoryNewStockCountPage.ClickCountDate();
+		}
+		
 		@Then("User select the Count date")
 		public void user_select_the_Count_date() throws InterruptedException {
 			BuyerInventoryNewStockCountPage.SelectCountDate();
 		}
 
 		@Then("User Click the Start stock count button")
-		public void user_Click_the_Start_stock_count_button() {
+		public void user_Click_the_Start_stock_count_button() throws InterruptedException {
 			BuyerInventoryNewStockCountPage.ClickStartStockCount();
 			}
 
+		@Then("User Click the Counted QTY")
+		public void user_Click_the_Counted_QTY() {
+			BuyerInventoryNewStockCountPage.ClickCountedQTYBox();
+		}
+		
 		@Then("User Enter the Counted QTY{string}")
 		public void user_Enter_the_Counted_QTY(String one) {
-			BuyerInventoryNewStockCountPage.EnterCountedQTY(one);
+	         BuyerInventoryNewStockCountPage.EnterCountedQTY(one);
 		}
 
 		@Then("User click the Save")
@@ -110,7 +113,6 @@ public class BuyerInventoryNewStockCount {
 		    // Write code here that turns the phrase above into concrete actions
 		    throw new io.cucumber.java.PendingException();
 		}
-
 
 
 		

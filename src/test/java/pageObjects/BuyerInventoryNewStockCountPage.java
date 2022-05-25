@@ -41,16 +41,25 @@ public class BuyerInventoryNewStockCountPage {
 		@FindBy(xpath = "//div[text()='VEL MASALA250']")
 		private static WebElement BuyerInventoryNewStockCountPage_Outletname;
 		
-		@FindBy(xpath = "//div[text()='VEL MASALA250']")
+		@FindBy(xpath = "//select[@formcontrolname='outletId']")
 		private static WebElement BuyerInventoryNewStockCountPage_Outlet;
 
+		@FindBy(xpath = "//select[@formcontrolname='outletId']")
+		private static WebElement BuyerInventoryNewStockCountPage_OutletDropdown;
+		
 		@FindBy(xpath = "//select[@formcontrolname='inventoryId']")
 		private static WebElement BuyerInventoryNewStockCountPage_Inventory;
 		
-		@FindBy(xpath = "//button[@type='submit']")
+		@FindBy(xpath = "//input[contains(@class,'form-control calendar-icon')]")
+		private static WebElement BuyerInventoryNewStockCountPage_CalendarCountDate;
+		
+		@FindBy(xpath = "(//button[@class='btn btn-success'])[2]")
 		private static WebElement BuyerInventoryNewStockCountPage_StartStockCount;
-
-		@FindBy(xpath = "(//input[@class='form-control'])[1]")
+		
+		@FindBy(xpath = "(//div[@class='d-flex ng-star-inserted']//input)[1]")
+		private static WebElement BuyerInventoryNewStockCountPage_CountedQTYBox;
+		
+		@FindBy(xpath = "(//div[@class='d-flex ng-star-inserted']//input)[1]")
 		private static WebElement BuyerInventoryNewStockCountPage_CountedQTY;
 
 		@FindBy(xpath = "//button[text()='Save']")
@@ -86,6 +95,21 @@ public class BuyerInventoryNewStockCountPage {
 
 		}
 
+		public static void ClickOutlet() throws InterruptedException {
+			Thread.sleep(5000);
+			BuyerInventoryNewStockCountPage_Outlet.click();
+			try { 
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+			}
+			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+					.executeScript("return document.readyState").equals("complete"));
+
+		}
+		public static WebElement getDropDownElementSSTmasala20() {
+			return BuyerInventoryNewStockCountPage_Outlet;
+		}
+		
 		public static void ClickInventory() {
 			BuyerInventoryNewStockCountPage_Inventory.click();
 			try { 
@@ -96,20 +120,32 @@ public class BuyerInventoryNewStockCountPage {
 					.executeScript("return document.readyState").equals("complete"));
 
 		}
-		public static WebElement getDropDownElementshwe() {
+		public static WebElement getDropDownElementmani() {
 			return BuyerInventoryNewStockCountPage_Inventory;
 		}
-
+		
+		
+				
+		public static void ClickCountDate() {
+			BuyerInventoryNewStockCountPage_CalendarCountDate.click();
+			try { 
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+			}
+			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+					.executeScript("return document.readyState").equals("complete"));
+		}
 		public static void SelectCountDate() throws InterruptedException {
 			Thread.sleep(5000);
-			WebElement DateBox=driver.findElement(By.xpath("(//input[@placeholder='Count date']"));
+			WebElement SelectDate=driver.findElement(By.xpath("//input[@formcontrolname='countDate']"));
 
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].value='23 May 2022';", DateBox);
+			js.executeScript("arguments[0].value='24 May 2022';", SelectDate);
 
 		}
-
-		public static void ClickStartStockCount() {
+		
+		public static void ClickStartStockCount() throws InterruptedException {
+			Thread.sleep(5000);
 			BuyerInventoryNewStockCountPage_StartStockCount.click();
 			try { 
 				Thread.sleep(5000);
@@ -118,6 +154,26 @@ public class BuyerInventoryNewStockCountPage {
 			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 					.executeScript("return document.readyState").equals("complete"));
 
+		}		
+		
+		public static void ClickCountedQTY() {
+			BuyerInventoryNewStockCountPage_CountedQTY.click();
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+			} 
+			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+					.executeScript("return document.readyState").equals("complete"));
+
+		}
+		public static void ClickCountedQTYBox() {
+			BuyerInventoryNewStockCountPage_CountedQTYBox.click();
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+			} 
+			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+					.executeScript("return document.readyState").equals("complete"));
 		}
 
 		public static void EnterCountedQTY(String CountedQTY) {
@@ -165,19 +221,7 @@ public class BuyerInventoryNewStockCountPage {
 
 		}
 
-		public static void SelectOutlet() {
-			BuyerInventoryNewStockCountPage_Outlet.click();
-			try { 
-				Thread.sleep(5000);
-			} catch (InterruptedException e) {
-			}
-			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
-					.executeScript("return document.readyState").equals("complete"));
-		}
-
-		
-		
-		
+			
 		
 	
 	

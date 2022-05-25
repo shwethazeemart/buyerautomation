@@ -984,10 +984,12 @@ Scenario Outline: Verify the Inventory New stock count page of Buyer panel
           Then User Clicks on Inventory in the side navigation menubar 
           And User click on outlets icon          
           Then User ckicks on outlet "<outletname>"
-          And User click on New stock count
+          And User click on New stock count          
           Then User select the Inventory list dropdown
+          Then User click thee Count date
           Then User select the Count date
           Then User Click the Start stock count button
+          Then User Click the Counted QTY
           And User Enter the Counted QTY
           Then User click the Save
           Then User Click the Cancel button
