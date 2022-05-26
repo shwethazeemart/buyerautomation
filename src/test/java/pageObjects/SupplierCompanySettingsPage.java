@@ -54,6 +54,9 @@ public class SupplierCompanySettingsPage {
 	//@FindBy(xpath = "(//div[@class='col-4']//div)[2]")
 	//private static WebElement SupplierCompanySettingsPage_InvoicingIcon;
 	
+	@FindBy(xpath = "//input[@formcontrolname='taxRegNo']")
+	private static WebElement SupplierCompanySettingsPage_InvGSTRegNo;
+	
 	@FindBy(xpath = "(//input[@formcontrolname='isOrderDeliveryDate'])[1]")
 	private static WebElement SupplierCompanySettingsPage_DefaultDateOfTodays;
 	
@@ -133,6 +136,17 @@ public class SupplierCompanySettingsPage {
 		
 	}
 
+	public static void InvGSTRegNo(String GSTno) {
+		SupplierCompanySettingsPage_InvGSTRegNo.sendKeys(GSTno);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	
 	public static void DefaultDateOfTodays() throws InterruptedException {
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		jse.executeScript("window.scrollBy(0,750)");
@@ -202,5 +216,6 @@ public class SupplierCompanySettingsPage {
 		
 	}
 
+	
 		
 }

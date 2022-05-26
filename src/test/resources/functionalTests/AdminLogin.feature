@@ -145,6 +145,7 @@ Scenario Outline: Verify the Suppliers subscription page in Admin panel
           Then User is Enter Company name in the company name field"<companyname>"
           And User is Enter Trading name in the Trading name field"<tradingname>"
           Then User is Enter Company register number"<registernumber>"
+          Then User is Enter GST/Tax Reg number"<GSTnumber>"
           And User are Enter Post code in address field"<postcode>"
           Then User is Enter Address line one in the address field"<addressline1>"
           And User are Enter Address line second in the address field"<addressline2>"
@@ -186,8 +187,8 @@ Scenario Outline: Verify the Suppliers subscription page in Admin panel
           Then It should display in the supplier home page field
           
     Examples:
-         |username                    |  |password   ||companyname ||tradingname   ||registernumber  ||postcode ||addressline1             ||addressline2 ||supplierEmail              ||supplierphone||shortdescription  ||longdescription                                     ||enter email||GSTvalue||reportEmail                  ||upcomingEmail              ||percentage||fixedfees||activityEmail              |
-         |velumanisabari2009@gmail.com|  |#f=6T7uX   ||Naga        ||Masala product||1234567         ||638312   ||261,madheswarankoilstreet||Singapore    ||lingeshsabari2009@gmail.com||+65123456789 ||Masala distributor||Venkat masala company manufacture only masala product||velumani@zeemart.asia||7       ||velumanieswaran2020@gmail.com||lingeshsabari2009@gmail.com||2         ||100      ||lingeshsabari2009@gmail.com|
+         |username                    |  |password   ||companyname ||tradingname   ||registernumber  ||GSTnumber  ||postcode ||addressline1             ||addressline2 ||supplierEmail              ||supplierphone||shortdescription  ||longdescription                                     ||enter email||GSTvalue||reportEmail                  ||upcomingEmail              ||percentage||fixedfees||activityEmail              |
+         |velumanisabari2009@gmail.com|  |#f=6T7uX   ||Naga        ||Masala product||1234567         ||INV9098769 ||638312   ||261,madheswarankoilstreet||Singapore    ||lingeshsabari2009@gmail.com||+6512345678  ||Masala distributor||Venkat masala company manufacture only masala product||velumani@zeemart.asia||7       ||velumanieswaran2020@gmail.com||lingeshsabari2009@gmail.com||2         ||100      ||lingeshsabari2009@gmail.com|
  
 
 Scenario Outline: Verify the Users page of New Buyer user in Admin panel    
