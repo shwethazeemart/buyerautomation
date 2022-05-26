@@ -661,9 +661,10 @@ Scenario Outline: Verify the Reports sales report customer
           And User is click login button
           Then User click on Reports side navigation list menubar
           Then User click on Sales report customer
-          Then User select date from calendar icon
+          Then User Clear the date
+          Then User select date from calendar icon of sales customer
           Then User click on search icon in orders recevied page
-          Then User click on export icon in sku page
+          Then User click on export icon of Sales customer
           Then User click on outlet in recevied outlet page
           
           

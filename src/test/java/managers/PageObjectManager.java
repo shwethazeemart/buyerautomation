@@ -23,6 +23,7 @@ import pageObjects.SupplierPaymentsTransactionPgae;
 import pageObjects.SupplierReportAgeingPage;
 import pageObjects.SupplierReportOutletPage;
 import pageObjects.SupplierReportPlanningPage;
+import pageObjects.SupplierReportSalesCustomerPage;
 import pageObjects.SupplierReportSkuPage;
 import pageObjects.SupplierTeamListPage;
 import pageObjects.Suppliercustomerlocationlistingpage;
@@ -193,6 +194,7 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
     private SupplierCatalogueListPage SupplierCatalogueList;
     private SupplierAddNewSkuPage SupplierAddNewSku;
     private SupplierDirectoryProductPage supplierdirectoryproduct;
+    private SupplierReportSalesCustomerPage SupplierReportSalesCustomer;
 
     private SupplierDirectorySettingPage supplierdirectorysetting;
 
@@ -778,6 +780,11 @@ public class PageObjectManager<admininvoiceuploadpageSteps> {
 	public BuyerRecipesListingPage getBuyerRecipesListingpage() {
 		return (BuyerRecipesListing == null) ? (BuyerRecipesListing = new BuyerRecipesListingPage(driver)) : BuyerRecipesListing;
 
+	}
+
+
+	public SupplierReportSalesCustomerPage getSupplierReportSalesCustomerPage() {
+		return (SupplierReportSalesCustomer == null) ? (SupplierReportSalesCustomer = new SupplierReportSalesCustomerPage(driver)) : SupplierReportSalesCustomer;
 	}
 
 	
