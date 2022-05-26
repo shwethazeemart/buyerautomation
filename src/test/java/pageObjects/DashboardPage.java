@@ -233,7 +233,8 @@ public class DashboardPage {
 				.executeScript("return document.readyState").equals("complete"));
 	}
  
-	public void clickInventory() {
+	public void clickInventory() throws InterruptedException {
+		Thread.sleep(5000);
 		button_Inventory.click();
 		try {
 			Thread.sleep(5000);

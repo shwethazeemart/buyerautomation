@@ -47,7 +47,7 @@ public class BuyerInventoryTag {
 	
 	
 	@Then("User clicks on Inventory in the side navigation menubar")
-	public void user_clicks_on_Inventory_in_the_side_navigation_menubar() {
+	public void user_clicks_on_Inventory_in_the_side_navigation_menubar() throws InterruptedException {
 		dashboradpage.clickInventory();
 	}
 
