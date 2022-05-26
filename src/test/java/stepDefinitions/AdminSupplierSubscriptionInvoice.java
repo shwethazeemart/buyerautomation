@@ -65,6 +65,10 @@ public class AdminSupplierSubscriptionInvoice {
 		
 	}
 	
+	@Then("User is Enter GST\\/Tax Reg number{string}")
+	public void user_is_Enter_GST_Tax_Reg_number_INV9098769(String number) {
+		AdminSupplierSubscriptionInvoicepage.EnterGSTnumber(number);
+	}
 	
 	@Then("User click on upload subscription invoice in action dropdown field")
 	public void user_click_on_upload_subscription_invoice_in_action_dropdown_field() {

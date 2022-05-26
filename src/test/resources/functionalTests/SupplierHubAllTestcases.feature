@@ -352,9 +352,8 @@ Scenario Outline: Verify the Supplier Payments Transaction list
          |mrmanager@gmail.com          ||!123456Zm   |
          
          
-         
-@Smoke       
-Scenario Outline: Verify the Supplier customers location listing page
+  
+   Scenario Outline: Verify the Supplier customers location listing page
          Given User is on available Login Page
           When User enter exact username"<username>"
           And User enter exact password"<password>"
@@ -413,7 +412,6 @@ Scenario Outline: Verify the Supplier customers location listing page
          |supplierautomated2@gmail.com  |  |!123456Zm  ||UEN-208999  ||saimanisairammasala||638312  ||19,Murugan temple street ||Singapore     ||velusai2032@gmail.com|
  
  
-
 Scenario Outline: Verify the Supplier Company Settings list 
          Given User is on available Login Page
           When User enter exact username"<username>"
@@ -424,6 +422,7 @@ Scenario Outline: Verify the Supplier Company Settings list
           Then User click on details in company settings
           Then User click on payments in company settings
           Then User click on invoicing in company settings
+          Then User Enter the GST Registeration number"<GSTnumber>"
           Then User Click on Default invoice date of Today
           Then User Click the Save button
           Then User click on integration in company settings
@@ -433,8 +432,8 @@ Scenario Outline: Verify the Supplier Company Settings list
                  
           
   Examples:
-         |username                     ||password    |
-         |mrmanager@gmail.com          ||!123456Zm   |
+         |username                     ||password    ||GSTnumber  |
+         |mrmanager@gmail.com          ||!123456Zm   ||GST0081    |
          
          
     
@@ -545,8 +544,7 @@ Scenario Outline: Verify the Supplier Reports Ageing list
          |username                       ||password    ||stockcount|
          |supplierautomated2@gmail.com   ||!123456Zm   ||10        |   
          
-         
-         
+                 
 Scenario Outline: Verify the Supplier Reports Outlet list 
          Given User is on available Login Page
           When User enter exact username"<username>"
@@ -610,7 +608,7 @@ Scenario Outline: Verify the Supplier Reports Planning list
          
          
         
-Scenario Outline: Verify the Supplier SKU list 
+Scenario Outline: Verify the Supplier Reports received SKU
          Given User is on available Login Page
           When User enter exact username"<username>"
           And User enter exact password"<password>"
@@ -654,6 +652,28 @@ Scenario Outline: Verify the Supplier SKU list
          |username                              ||password    ||skuname        |
          |supplierautomated2@gmail.com          ||!123456Zm   ||500pipers      |  
          
+         
+@Smoke  
+Scenario Outline: Verify the Reports sales report customer
+         Given User is on available Login Page
+          When User enter exact username"<username>"
+          And User enter exact password"<password>"
+          And User is click login button
+          Then User click on Reports side navigation list menubar
+          Then User click on Sales report customer
+          Then User select date from calendar icon
+          Then User click on search icon in orders recevied page
+          Then User click on export icon in sku page
+          Then User click on outlet in recevied outlet page
+          
+          
+  Examples:
+         |username                              ||password    |
+         |supplierautomated2@gmail.com          ||!123456Zm   |
+          
+          
+          
+          
          
 Scenario Outline: Verify the Supplier Directory manage products page
          Given User is on available Login Page

@@ -80,6 +80,11 @@ public class SupplierCompanySettings {
 		SupplierCompanySettingsPage.InvoicingIconClick();
 	}
 	
+	@Then("User Enter the GST Registeration number{string}")
+	public void user_Enter_the_GST_Registeration_number_INV9098769(String GSTno) {
+		SupplierCompanySettingsPage.InvGSTRegNo(GSTno);
+	}
+	
 	@Then("User Click on Default invoice date of Today")
 	public void user_Click_on_Default_invoice_date_of_Today() throws InterruptedException {
 		SupplierCompanySettingsPage.DefaultDateOfTodays();

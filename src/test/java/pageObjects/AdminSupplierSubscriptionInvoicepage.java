@@ -41,6 +41,9 @@ public class AdminSupplierSubscriptionInvoicepage {
 	@FindBy(xpath = "//button[contains(text(),'Upload')]")
 	private static WebElement AdminSupplierSubscriptionInvoicepage_UploadButton;
 	
+	@FindBy(xpath = "//input[@formcontrolname='taxRegNo']")
+	private static WebElement AdminSupplierSubscriptionInvoicepage_GSTnumber;
+	
 	
 
 	public static void uploadSubscriptionInvoiceClick() {
@@ -91,6 +94,16 @@ public class AdminSupplierSubscriptionInvoicepage {
 
 	public static void uploadButtonClick() {
 		AdminSupplierSubscriptionInvoicepage_UploadButton.click(); 
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		} 
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	public static void EnterGSTnumber(String number) {
+		AdminSupplierSubscriptionInvoicepage_GSTnumber.sendKeys(number); 
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
