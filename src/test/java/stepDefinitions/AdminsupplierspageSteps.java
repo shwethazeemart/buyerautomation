@@ -229,16 +229,16 @@ public class AdminsupplierspageSteps {
 	}
 
 	@Then("User is Clicks check box of Enable supplier payments")
-	public void user_is_Clicks_check_box_of_Enable_supplier_payments() {
-	   // adminsupplierspage.Clicks_checkboxofEnablesupplierpayments();
-		WebElement option1 =Adminsupplierpage.getEnablecheckboxElement();								
-	    option1.click();
-	    if (option1.isSelected()) {					
+	public void user_is_Clicks_check_box_of_Enable_supplier_payments() throws InterruptedException {
+	    adminsupplierspage.Clicks_checkboxofEnablesupplierpayments();
+		//WebElement option1 =Adminsupplierpage.getEnablecheckboxElement();								
+	    //option1.click();
+	    //if (option1.isSelected()) {					
 	        System.out.println("Checkbox is Toggled On");					
 
-	    } else {			
+	    //} else {			
 	        System.out.println("Checkbox is Toggled Off");					
-	    }
+	   //}
 	}
 
 	@And("User are Clicks manual payment Radio button")
@@ -272,9 +272,9 @@ public class AdminsupplierspageSteps {
 	   adminsupplierspage.Enter_Emailsupplieractivityfield(activityEmail);
 	}
 
-	@And("User are Clicks savechanges button")
-	public void user_are_Clicks_savechanges_button() {
-	   //adminsupplierspage.Clicks_savechangesbutton();
+	@Then("User are Clicks Save supplier only button")
+	public void user_are_Clicks_Save_supplier_only_button() {
+		adminsupplierspage.ClickSaveSupplier();
 	}
 
 	@Then("It should display in the supplier home page field")
