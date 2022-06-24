@@ -85,10 +85,10 @@ public class Adminsupplierpage {
 	@FindBy(xpath = "//input[@formcontrolname='reportReorderEmails']")
 	private static WebElement Adminsupplierpage_Emailsendreport;
 	
-	@FindBy(xpath = "//label[text()='Report frequency:']/following-sibling::label")
+	@FindBy(xpath = "//input[@formcontrolname='reportReorderImmediatly']")
 	private static WebElement Adminsupplierpage_Checkboximmediately;
 	
-	@FindBy(xpath = "(//div[@class='male-1 width_130px']//label)[1]")
+	@FindBy(xpath = "//input[@formcontrolname='reportReorderDaily']")
 	private static WebElement Adminsupplierpage_Checkboxdailyat;
 	
 	@FindBy(xpath = "//div[contains(@class,'mari-5 apply_fee_input')]//input[1]")
@@ -97,7 +97,7 @@ public class Adminsupplierpage {
 	@FindBy(xpath = "(//span[contains(@class,'owl-dt-control-content owl-dt-control-button-content')])[2]")
 	private static WebElement Adminsupplierpage_setinthePOPmessageintheNegativeReport;
 	
-	@FindBy(xpath = "(//div[@class='male-1 width_130px']//label)[2]")
+	@FindBy(xpath = "//input[@formcontrolname='reportReorderWeekly']")
 	private static WebElement Adminsupplierpage_Checkboxweeklyon;
 	
 	@FindBy(xpath = "//select[@formcontrolname='reportReorderWeeklyOn']")
@@ -130,6 +130,9 @@ public class Adminsupplierpage {
 	@FindBy(xpath = "(//div[@class='form-check'])[8] ")
 	private static WebElement Adminsupplierpage_Enablecheckbox;
 	
+	@FindBy(xpath = "//input[@formcontrolname='paymentEnabled']")
+	private static WebElement Adminsupplierpage_Enablesupplierpayments;
+	
 	@FindBy(xpath = "(//input[@name='paymentType'])[2]")
 	private static WebElement Adminsupplierpage_Automaticradio;
 	//(//input[@name='paymentType'])[1]
@@ -149,10 +152,10 @@ public class Adminsupplierpage {
 	@FindBy(xpath = "//input[@formcontrolname='regularSummaryEmails']")
 	private static WebElement Adminsupplierpage_Emailsupplieractivityfield;
 	
-	@FindBy(xpath = "//button[contains(@class,'btn btn-success')]")
-	private static WebElement Adminsupplierpage_Savechangesbutton;
+	@FindBy(xpath = "//div[@class='flex__center']//a[1]")
+	private static WebElement Adminsupplierpage_SaveSupplierOnly;
 	
-	@FindBy(xpath = "//div[@class='mari-2']//label[1]")
+	@FindBy(xpath = "//input[@value='Passive']")
 	private static WebElement Adminsupplierpage_subscription_plan_of_radio_button;
 	
 	@FindBy(xpath = "//input[@formcontrolname='subscriptionEmails']")
@@ -382,6 +385,8 @@ public class Adminsupplierpage {
 	}
 
 	public void Clicks_checkboximmediately() {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,250)");
 		Adminsupplierpage_Checkboximmediately.click();
 		try {
 			Thread.sleep(5000);
@@ -426,6 +431,8 @@ public class Adminsupplierpage {
 	}
 
 	public void Clicks_checkboxweeklyon() {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,250)");
 		Adminsupplierpage_Checkboxweeklyon.click();
 		try {
 			Thread.sleep(5000);
@@ -483,6 +490,8 @@ public class Adminsupplierpage {
 	}
 
 	public void Clicks_checkbox_of_daily_at() {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,250)");
 		Adminsupplierpage_checkbox_of_daily_at.click();
 		try {
 			Thread.sleep(5000);
@@ -539,8 +548,25 @@ public class Adminsupplierpage {
 				.executeScript("return document.readyState").equals("complete"));
 		
 	}
+	
+	public void Clicks_checkboxofEnablesupplierpayments() throws InterruptedException {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,250)");
+		Thread.sleep(5000);
+		Adminsupplierpage_Enablesupplierpayments.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
 
-	public static void click_Enablecheckbox() throws InterruptedException {
+	public static void click_Enablecheckbox() throws InterruptedException {	
+		Thread.sleep(5000);
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,1750)");
+		Thread.sleep(5000);
 		Adminsupplierpage_Enablecheckbox.click();
 		try {
 			Thread.sleep(5000);
@@ -555,6 +581,8 @@ public class Adminsupplierpage {
 	}		
 	
 	public static void click_automaticradio() throws InterruptedException {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,250)");	
 		Adminsupplierpage_Automaticradio.click();
 		Thread.sleep(5000);
 		try {
@@ -621,21 +649,14 @@ public class Adminsupplierpage {
 				.executeScript("return document.readyState").equals("complete"));
 	}
 
-	public void Clicks_savechangesbutton() {
-		Adminsupplierpage_Savechangesbutton.click();
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-		}
-		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
-				.executeScript("return document.readyState").equals("complete"));
-	}
 	
 	public static String getPageTitle() {
 		return driver.getTitle();   
 	}
 
 	public void clicks_the_subscription_plan_of_radio_button() {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,250)");
 		Adminsupplierpage_subscription_plan_of_radio_button.click();
 		try {
 			Thread.sleep(5000);
@@ -654,9 +675,20 @@ public class Adminsupplierpage {
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
 	}
+
+	public void ClickSaveSupplier() {
+		Adminsupplierpage_SaveSupplierOnly.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
 	}
+ 
 	
-		
+	
+}
 	
 	
 	

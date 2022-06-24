@@ -140,8 +140,8 @@ Scenario Outline: Verify the Suppliers subscription page in Admin panel
           When User are Select country in the autocomplete text box
           And User is press the Admin login button 
           When User Clicks on Admin Suppliers in the side navigation menubar 
-          Then User is Clicks in New Supplier button 
-          When User is Select Company market in dropdown
+          Then User is Clicks in New Supplier button     
+           When User is Select Company market in dropdown
           Then User is Enter Company name in the company name field"<companyname>"
           And User is Enter Trading name in the Trading name field"<tradingname>"
           Then User is Enter Company register number"<registernumber>"
@@ -182,8 +182,8 @@ Scenario Outline: Verify the Suppliers subscription page in Admin panel
           And User are Enter Percentage value in the percentage field"<percentage>"
           Then User is Clear Fixed fees field
           And User are Enter value of Fixed fees field"<fixedfees>" 
-          Then User is Enter Email supplier activity field"<activityEmail>"
-          And User are Clicks savechanges button
+          Then User is Enter Email supplier activity field"<activityEmail>"               
+          And User are Clicks Save supplier only button
           Then It should display in the supplier home page field
           
     Examples:
