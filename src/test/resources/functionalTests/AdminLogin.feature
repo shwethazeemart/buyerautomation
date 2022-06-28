@@ -131,7 +131,7 @@ Scenario Outline: Verify the Suppliers page new supplier user in Admin panel
 
 
 
-@Smoke
+
 Scenario Outline: Verify the Suppliers subscription page in Admin panel    
   
           Given User are available in login page
@@ -268,7 +268,7 @@ Scenario Outline: Verify the Buyer outlets page of Admin panel
 
 
 
-
+@Smoke
 Scenario Outline: Verify the Invoice Process page of Admin panel 
   
           Given User are available in login page
@@ -277,6 +277,8 @@ Scenario Outline: Verify the Invoice Process page of Admin panel
           When User are Select country in the autocomplete text box
           And User is press the Admin login button 
           And User Clicks on Admin Invoices in the side navigation menubar 
+          Then User Select the Update date calendar
+          Then User Click the Search button
           Then User is Clicks in Sort by dropdown
           And User are Clicks in Newest first
           Then User is Clicks the outlet process button
