@@ -29,7 +29,27 @@ public class Admininvoiceprocesspage {
 
 	}
 
-
+	@FindBy(xpath = "//a[contains(@class,'pull-right export-mclr')]")
+	private static WebElement Admininvoiceprocesspage_Filter;
+	
+	@FindBy(xpath = "//div[text()=' Outlet  ']")
+	private static WebElement Admininvoiceprocesspage_Outlet;
+	
+	@FindBy(xpath = "//input[@placeholder='Search ']")
+	private static WebElement Admininvoiceprocesspage_SearchTextBox;
+	
+	@FindBy(xpath = "//input[@placeholder='Search ']")
+	private static WebElement Admininvoiceprocesspage_EnterOutletName;
+	
+	@FindBy(xpath = "(//input[@type='checkbox'])[2]")
+	private static WebElement Admininvoiceprocesspage_CheckBox;
+	
+	@FindBy(xpath = "//div[text()=' Status  ']")
+	private static WebElement Admininvoiceprocesspage_Status;
+	
+	@FindBy(xpath = "//button[text()='search']")
+	private static WebElement Admininvoiceprocesspage_SearchButton;
+	
 	@FindBy(xpath = "//button[text()=' Oldest first ']")
 	private static WebElement Admininvoiceprocesspage_Sortbydropdowm;
 
@@ -66,7 +86,7 @@ public class Admininvoiceprocesspage {
 	@FindBy(xpath = "//button[text()='Publish this invoice']")
 	private static WebElement Admininvoiceprocesspage_publish_this_invoice_button;
 	
-	@FindBy(xpath = "//button[contains(text(),'Process')]")
+	@FindBy(xpath = "(//button[contains(@class,'btn btn-success')])[1]")
 	private static WebElement Admininvoiceprocesspage_OutletsProcess;
 	
 	@FindBy(xpath = "//select[contains(@id,'country')]")
@@ -78,8 +98,93 @@ public class Admininvoiceprocesspage {
 	public static String getPageTitle() {
 		return driver.getTitle();   
 	}
+	
+	public void ClicktheFilter() {
+		Admininvoiceprocesspage_Filter.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
 
+	public void ClickOutlet() {
+		Admininvoiceprocesspage_Outlet.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
 
+	public void ClickSearchTextBox() {
+		Admininvoiceprocesspage_SearchTextBox.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	public static void EnterOutletName(String outletname) {
+		Admininvoiceprocesspage_EnterOutletName.sendKeys(outletname);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	public void ClickCheckBox() {
+		Admininvoiceprocesspage_CheckBox.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	public void ClickStatus() {
+		Admininvoiceprocesspage_Status.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	
+	public void SelectUpdateDate() {
+		WebElement DateBox=driver.findElement(By.xpath("//input[@placeholder='Upload date']"));
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+
+		js.executeScript("arguments[0].value='1 Jul 2022 ~ 5 Jul 2022';", DateBox);
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+
+	public void ClickSearchButton() throws InterruptedException {
+		Thread.sleep(5000);
+		Admininvoiceprocesspage_SearchButton.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+	}
+	
 	public void Clicks_in_Sort_by_dropdown() throws InterruptedException {
 		Thread.sleep(5000);
 		Admininvoiceprocesspage_Sortbydropdowm.click();
@@ -101,20 +206,34 @@ public class Admininvoiceprocesspage {
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
 
-	}
-
-	public void ClicksOutlet_process_button() throws InterruptedException {
-		Thread.sleep(5000);
-		Admininvoiceprocesspage_processbutton.click();
+	}	
+	public void outletsProcessClick() throws InterruptedException {
+		Thread.sleep(7000);
+		Admininvoiceprocesspage_OutletsProcess.click();
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
-		} 
+		}
+		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+				.executeScript("return document.readyState").equals("complete"));
+		
+		
+	}	
+	public static void click_VELUMASALA2() throws InterruptedException {
+		Thread.sleep(5000);
+		Admininvoiceprocesspage_Velumasala2.click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
 		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 				.executeScript("return document.readyState").equals("complete"));
 
-
 	}
+	public static WebElement getDropDownOwnerElement0fvelumasala2() {
+		return Admininvoiceprocesspage_Velumasala2;
+	}
+
 
 	public void Enter_Order_number_in_the_Order_number_field(String ordernumber) throws InterruptedException {
 		Admininvoiceprocesspage_Enter_Order_number.sendKeys(ordernumber);
@@ -236,35 +355,8 @@ public class Admininvoiceprocesspage {
 				.executeScript("return document.readyState").equals("complete"));
 	}
 
-	public void outletsProcessClick() throws InterruptedException {
-		Thread.sleep(7000);
-		Admininvoiceprocesspage_OutletsProcess.click();
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-		}
-		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
-				.executeScript("return document.readyState").equals("complete"));
-		
-		
-	}
-
 	
 	
-	public static void click_VELUMASALA2() throws InterruptedException {
-		Thread.sleep(5000);
-		Admininvoiceprocesspage_Velumasala2.click();
-		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
-		}
-		new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
-				.executeScript("return document.readyState").equals("complete"));
-
-	}
-	public static WebElement getDropDownOwnerElement0fvelumasala2() {
-		return Admininvoiceprocesspage_Velumasala2;
-	}
 	
 
 

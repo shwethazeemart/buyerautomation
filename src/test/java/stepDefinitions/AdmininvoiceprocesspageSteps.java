@@ -38,6 +38,46 @@ public class AdmininvoiceprocesspageSteps {
 		this.dashboradpage = testContext.getPageObjectManager().getDashboardPage();
 	}
 	
+	@Then("User Click on Filter icon of pending page")
+	public void user_Click_on_Filter_icon_of_pending_page() {
+		admininvoiceprocesspage.ClicktheFilter();
+	}
+
+	@Then("User click the Outlet of pending")
+	public void user_click_the_Outlet_of_pending() {
+		admininvoiceprocesspage.ClickOutlet();
+	}
+
+	@Then("User click the Search text box")
+	public void user_click_the_Search_text_box() {
+		admininvoiceprocesspage.ClickSearchTextBox();
+	}
+
+	@Then("user Enter the Name{string}")
+	public void user_Enter_the_Name_velu_masala2020(String outletname) {
+		admininvoiceprocesspage.EnterOutletName(outletname);
+	}
+
+	@Then("User click the Checkbox")
+	public void user_click_the_Checkbox() {
+		admininvoiceprocesspage.ClickCheckBox();
+	}
+
+	@Then("User click the Status")
+	public void user_click_the_Status() {
+		admininvoiceprocesspage.ClickStatus();
+	}
+	
+	@Then("User Select the Update date calendar")
+	public void user_Select_the_Update_date_calendar() {
+		admininvoiceprocesspage.SelectUpdateDate();
+	}	
+	
+	@Then("User Click the Search button of pending page")
+	public void user_Click_the_Search_button_of_pending_page() throws InterruptedException {
+		admininvoiceprocesspage.ClickSearchButton();
+	}
+	
 	@Then("User is Clicks in Sort by dropdown")
 	public void user_is_Clicks_in_Sort_by_dropdown() throws InterruptedException {
 	    admininvoiceprocesspage.Clicks_in_Sort_by_dropdown();
@@ -47,13 +87,33 @@ public class AdmininvoiceprocesspageSteps {
 	public void user_are_Clicks_in_Newest_first() {
 	    admininvoiceprocesspage.Clicks_in_Newest_first();
 	}
+		
+	@Then("User is Clicks the outlet process button")
+	public void user_is_Clicks_the_outlet_process_button() throws InterruptedException {
+		 admininvoiceprocesspage.outletsProcessClick(); 
+	}
 
-	//@Then("User is Clicks the outlet process button")
-	//public void user_is_Clicks_the_outlet_process_button() throws InterruptedException {
-	   //admininvoiceprocesspage.ClicksOutlet_process_button();
-	//}
-	
+	@Then("User select on supplier in dropdown field")
+	public void user_select_on_supplier_in_dropdown_field() {
+		WebElement VELUMASALA2 = Admininvoiceprocesspage.getDropDownOwnerElement0fvelumasala2();
+		Select select=new Select(VELUMASALA2);
+		select.selectByVisibleText("VELU MASALA2");
+	}
+	@When("User are Select date in the invoice date field")
+	public void user_are_Select_date_in_the_invoice_date_field() {
+	    admininvoiceprocesspage.SelectcalendarByJS();
+	}
 	    
+	@And("User are Enter Invoice number in the invoice number field{string}")
+	public void user_are_Enter_Invoice_number_in_the_invoice_number_field_INV(String invoicenumber) {
+	    admininvoiceprocesspage.Enter_Invoice_number(invoicenumber);
+	}
+
+	@Then("User is Clicks validate button")
+	public void user_is_Clicks_validate_button() {
+	    admininvoiceprocesspage.Clicks_validate_button();
+	}
+	
 	@Then("User is Enter Order number in the Order number field{string}")
 	public void user_is_Enter_Order_number_in_the_Order_number_field(String ordernumber) throws InterruptedException {
 	    admininvoiceprocesspage.Enter_Order_number_in_the_Order_number_field(ordernumber);
@@ -68,22 +128,7 @@ public class AdmininvoiceprocesspageSteps {
 	public void user_is_Clicks_Yes_processed_POPUP_message() {
 	    admininvoiceprocesspage.Clicks_Yes_processed_POPUP_message();
 	}
-
-	@And("User are Enter Invoice number in the invoice number field{string}")
-	public void user_are_Enter_Invoice_number_in_the_invoice_number_field_INV(String invoicenumber) {
-	    admininvoiceprocesspage.Enter_Invoice_number(invoicenumber);
-	}
-
-	@Then("User is Clicks validate button")
-	public void user_is_Clicks_validate_button() {
-	    admininvoiceprocesspage.Clicks_validate_button();
-	}
-
-	@When("User are Select date in the invoice date field")
-	public void user_are_Select_date_in_the_invoice_date_field() {
-	    admininvoiceprocesspage.SelectcalendarByJS();
-	}
-
+		
 	@When("User is Select payment terms in payment terms dropdown")
 	public void user_is_Select_payment_terms_in_payment_terms_dropdown() {
 		WebElement COD = Admininvoiceprocesspage.getDropDownOwnerElement();
@@ -113,19 +158,7 @@ public class AdmininvoiceprocesspageSteps {
 		System.out.println("page title: " + pageTitle);
 	}
 
-
-
-	@Then("User is Clicks the outlet process button")
-	public void user_is_Clicks_the_outlet_process_button() throws InterruptedException {
-		 admininvoiceprocesspage.outletsProcessClick(); 
-	}
-
-	@Then("User select on supplier in dropdown field")
-	public void user_select_on_supplier_in_dropdown_field() {
-		WebElement VELUMASALA2 = Admininvoiceprocesspage.getDropDownOwnerElement0fvelumasala2();
-		Select select=new Select(VELUMASALA2);
-		select.selectByVisibleText("VELU MASALA2");
-	}
+	
 	
 	
 	
