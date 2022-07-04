@@ -277,10 +277,20 @@ Scenario Outline: Verify the Invoice Process page of Admin panel
           When User are Select country in the autocomplete text box
           And User is press the Admin login button 
           And User Clicks on Admin Invoices in the side navigation menubar 
+          Then User Click on Filter icon of pending page
+          Then User click the Outlet of pending 
+          And User click the Search text box
+          Then user Enter the Name"<Outletname>"
+          Then User click the Checkbox
+          Then User click on the Apply button          
+          And User click the Status
+          And User click the Select All option
+          Then User click on the Apply button
+          Then User click the Reset button
           Then User Select the Update date calendar
-          Then User Click the Search button
+          Then User Click the Search button of pending page
           Then User is Clicks in Sort by dropdown
-          And User are Clicks in Newest first
+          And User are Clicks in Newest first                
           Then User is Clicks the outlet process button
           Then User select on supplier in dropdown field
           When User are Select date in the invoice date field
@@ -296,8 +306,8 @@ Scenario Outline: Verify the Invoice Process page of Admin panel
           
           
     Examples:
-         |username                     |  |password    ||ordernumber ||invoicenumber||deliveryfess|
-         |velumanisabari2009@gmail.com |  |#f=6T7uX    ||202012010002||INV-2020129  ||10          | 
+         |username                     |  |password    ||ordernumber  ||invoicenumber ||deliveryfees||Outletname      |
+         |velumanisabari2009@gmail.com |  |#f=6T7uX    ||202012010002 ||INV-2020129   ||10          ||velu masala2020 |
 
 
    
