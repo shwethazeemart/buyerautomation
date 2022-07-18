@@ -975,7 +975,7 @@ Scenario Outline: Verify the Payment transactions page of Buyer panel
          |buyerautomated3@gmail.com           |  |!123456Zm   | |velu masala |
          
          
-@Smoke   
+  
 Scenario Outline: Verify the Inventory New stock count page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -1223,7 +1223,7 @@ Scenario Outline: Verify the Outlets manage details page of Buyer panel
       |buyerautomated3@gmail.com      | |!123456Zm   ||lingeshsabari2009@gmail.com|
     
       
-      
+ @Smoke     
  Scenario Outline: Verify the Outlets settings page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>" 
