@@ -1005,7 +1005,7 @@ Scenario Outline: Verify the Inventory New stock count page of Buyer panel
             
  
     
-            
+@Smoke            
 Scenario Outline: Verify the Inventory Outlets lisen page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -1018,6 +1018,7 @@ Scenario Outline: Verify the Inventory Outlets lisen page of Buyer panel
           Then User select list in inventroy list
           Then User click date radio button
           Then User set select date from the calendar
+          Then User click the Select most recent date range
           Then User click show report icon
           Then User Clicks on Inventory in the side navigation menubar 
           Then User click on Export download icon
@@ -1027,6 +1028,7 @@ Scenario Outline: Verify the Inventory Outlets lisen page of Buyer panel
           Then User click on starter plan close icon
           Then User click on search outlets
           And User send outlet name in search icon"<outletname>"
+          Then User click on the Filter
           Then User click on status icon
           And User click on checkbox of Has items below par
           Then User click on uncheckbox of Has items below par
@@ -1039,7 +1041,7 @@ Scenario Outline: Verify the Inventory Outlets lisen page of Buyer panel
           @dev
           Examples:
          |username                       |  |password    ||outletname     ||outletnameone | |outletnametwo |
-         |velumanieswaran2020@gmail.com  |  |!123456Zm   ||velu masala2020||sstmasala     | |sstmasala2020 |
+         |velumanieswaran2020@gmail.com  |  |!123456Zm   ||sai fruits 250 ||sstmasala     | |sstmasala2020 |
          
           
          
@@ -1223,7 +1225,7 @@ Scenario Outline: Verify the Outlets manage details page of Buyer panel
       |buyerautomated3@gmail.com      | |!123456Zm   ||lingeshsabari2009@gmail.com|
     
       
- @Smoke     
+      
  Scenario Outline: Verify the Outlets settings page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>" 

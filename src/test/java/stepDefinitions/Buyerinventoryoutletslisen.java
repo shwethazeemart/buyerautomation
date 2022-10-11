@@ -39,7 +39,11 @@ public class Buyerinventoryoutletslisen {
 	public void user_click_on_outlets_icon() {
 		Buyerinventoryoutletslisenpage.clickoutletsicon();
 	}
-
+ 
+	@Then("User click the Select most recent date range")
+	public void user_click_the_Select_most_recent_date_range() {
+		Buyerinventoryoutletslisenpage.clickSelectMostRecentDateRange();
+	}
 	
 	@Then("User click on Export download icon")
 	public void user_click_on_Export_download_icon() {
@@ -60,6 +64,11 @@ public class Buyerinventoryoutletslisen {
 	@Then("User send outlet name in search icon{string}")
 	public void user_send_outlet_name_in_search_icon_velu_masala2020(String outletname) {
 		Buyerinventoryoutletslisenpage.enteroutletname(outletname);  
+	}
+	
+	@Then("User click on the Filter")
+	public void user_click_on_the_Filter() {
+		Buyerinventoryoutletslisenpage.clicktheFilter();
 	}
 
 	@Then("User click on status icon") 
