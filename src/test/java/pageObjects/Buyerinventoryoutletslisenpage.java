@@ -45,6 +45,9 @@ public class Buyerinventoryoutletslisenpage {
 
 	@FindBy(xpath = "//h4[text()='Inventory settings']/following-sibling::button")
 	private static WebElement Buyerinventoryoutletslisenpage_settingscloseicon;
+	
+	@FindBy(xpath = "//div[@class='flex__center ml-4']//a[1]")
+	private static WebElement Buyerinventoryoutletslisenpage_SelectMostRecentDateRange;
 
 	@FindBy(xpath = "//img[@src='./assets/zmcore/img/download-icon.svg']")
 	private static WebElement Buyerinventoryoutletslisenpage_exportdownloadicon;
@@ -63,11 +66,14 @@ public class Buyerinventoryoutletslisenpage {
 
 	@FindBy(xpath = "//input[@placeholder='Search outlets']")
 	private static WebElement Buyerinventoryoutletslisenpage_outletname;
+	
+	@FindBy(xpath = "(//a[@class='export-mclr'])[1]") 
+	private static WebElement Buyerinventoryoutletslisenpage_Filter;
 
-	@FindBy(xpath = "//span[text()=' Status ']") 
+	@FindBy(xpath = "//div[text()=' Status  ']") 
 	private static WebElement Buyerinventoryoutletslisenpage_statusicon;
 
-	@FindBy(xpath = "//label[text()=' Has items below par ']")
+	@FindBy(xpath = "(//input[@class='custom-control-input'])[1]")
 	private static WebElement Buyerinventoryoutletslisenpage_checkbox;
 	
 	@FindBy(xpath = "//div[@class='dd-flex']/following-sibling::button[1]")
@@ -79,13 +85,13 @@ public class Buyerinventoryoutletslisenpage {
 	
 	
 	
-	@FindBy(xpath = "//label[text()=' Has items below par ']")
+	@FindBy(xpath = "(//input[@class='custom-control-input'])[1]")
 	private static WebElement Buyerinventoryoutletslisenpage_UncheckboxofHasitem;
 	
-	@FindBy(xpath = "//input[@value='Last count > 31 days ago']")
+	@FindBy(xpath = "(//input[@class='custom-control-input'])[2]")
 	private static WebElement Buyerinventoryoutletslisenpage_CheckboxofLastcount;
 	
-	@FindBy(xpath = "//input[@value='Last count > 31 days ago']")
+	@FindBy(xpath = "(//input[@class='custom-control-input'])[2]")
 	private static WebElement Buyerinventoryoutletslisenpage_UncheckboxofLastcount;
 	
 	//@FindBy(xpath = "//a[contains(@class,'title-clr pl-1 ng-star-inserted')]") 
@@ -98,13 +104,13 @@ public class Buyerinventoryoutletslisenpage {
 	
 	
 	
-	@FindBy(xpath = "//div[contains(text(),'velu masala2020')]")
+	@FindBy(xpath = "(//div[text()='sai fruits 250'])[1]")
 	private static WebElement Buyerinventoryoutletslisenpage_ParticularOutlet;
 	
 	@FindBy(xpath = "//button[contains(text(),'Consumption report')]")
 	private static WebElement Buyerinventoryoutletslisenpage_Consumptionreport;
 	
-	@FindBy(xpath = "//div[text()=' sairam ']")
+	@FindBy(xpath = "//div[text()=' List that works ']")
 	private static WebElement Buyerinventoryoutletslisenpage_InventoryList;
 	
 	@FindBy(xpath = "(//input[contains(@formcontrolname,'type')])[1]")
@@ -319,8 +325,6 @@ public class Buyerinventoryoutletslisenpage {
 
 		public static void particularOutletClick() throws InterruptedException {
 			Thread.sleep(5000);
-			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("window.scrollBy(0, 1000);");
 			Buyerinventoryoutletslisenpage_ParticularOutlet.click();
 			try {
 				Thread.sleep(5000);
@@ -376,7 +380,7 @@ public class Buyerinventoryoutletslisenpage {
 		public static void dateSelectfromCalendar() {
 			WebElement DateBox=driver.findElement(By.xpath("//input[contains(@formcontrolname,'stockCountDate')]"));
 			JavascriptExecutor jse = (JavascriptExecutor) driver;
-			jse.executeScript("arguments[0].value='13 Dec 2021 - 17 Dec 2021';", DateBox);
+			jse.executeScript("arguments[0].value='07 Dec 2021 - 11 May 2022';", DateBox);
 			try {
 				Thread.sleep(5000);
 			} catch (InterruptedException e) {
@@ -396,6 +400,26 @@ public class Buyerinventoryoutletslisenpage {
 			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
 					.executeScript("return document.readyState").equals("complete"));
 			
+		}
+
+		public static void clickSelectMostRecentDateRange() {
+			Buyerinventoryoutletslisenpage_SelectMostRecentDateRange.click();
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+			} 
+			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+					.executeScript("return document.readyState").equals("complete"));
+		}
+
+		public static void clicktheFilter() {
+			Buyerinventoryoutletslisenpage_Filter.click();
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+			} 
+			new WebDriverWait(driver, 30).until(webDriver -> ((JavascriptExecutor) webDriver)
+					.executeScript("return document.readyState").equals("complete"));
 		}
 		
 	
