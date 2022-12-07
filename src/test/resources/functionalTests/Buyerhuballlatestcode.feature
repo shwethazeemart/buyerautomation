@@ -102,14 +102,14 @@ Scenario Outline: Verify the Reports invoice variance and Receving reports Categ
           
      @dev     
      Examples: 
-      |username                      | | password   ||invoice     |
-      |velumanieswaran2020@gmail.com  | |!123456Zm  ||INV-b789    |
+      |username                      | | password   ||invoice    |
+      |velumanieswaran2020@gmail.com | |!123456Zm  ||INV-b789    |
       
     
-      @devSecond     
+     @devSecond     
      Examples: 
-      |username                      | | password   ||invoice     |
-      |buyerautomated3@gmail.com     | |!123456Zm  ||INV-b789    |
+      |username                      | | password  ||invoice    |
+      |buyerautomated3@gmail.com     | |!123456Zm  ||INV-b789   |
       
       
   
@@ -975,7 +975,7 @@ Scenario Outline: Verify the Payment transactions page of Buyer panel
          |buyerautomated3@gmail.com           |  |!123456Zm   | |velu masala |
          
          
-  
+@Smoke  
 Scenario Outline: Verify the Inventory New stock count page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
@@ -1005,7 +1005,7 @@ Scenario Outline: Verify the Inventory New stock count page of Buyer panel
             
  
     
-@Smoke            
+          
 Scenario Outline: Verify the Inventory Outlets lisen page of Buyer panel 
           Given User is on Login Page
           When User enter exact username"<username>"
